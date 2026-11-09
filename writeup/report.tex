@@ -1,0 +1,175 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{caption}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\setlist{itemsep=2pt,topsep=3pt}
+\captionsetup{font=small}
+\graphicspath{{../results/figures/}}
+
+\input{generated/macros.tex}
+
+\title{GKP Decoding under Correlated Displacement Noise:\\
+A Bayesian and Machine-Learning Comparison}
+\author{Experiment report (branch \texttt{experiment/decoder-comparison})}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+
+\input{sections/abstract.tex}
+
+\tableofcontents
+
+%-------------------------------------------------------------------
+\section{Introduction}
+
+The Gottesman--Kitaev--Preskill (GKP) code stores a qubit in an oscillator
+and detects small displacements through syndromes that are periodic in the
+lattice spacing $L=\sqrt\pi$~\cite{gkp,grimsmo}. A single syndrome cannot
+distinguish a shift $u$ from $u+L$, so a decoder that sees only the current
+round must guess. When the displacement noise is correlated in time, earlier
+syndromes carry information about the current error, and a decoder with
+memory can do better~\cite{wan,puviani}.
+
+The proposal asked four questions:
+\begin{enumerate}
+  \item How much does memory help, comparing the nearest-lattice baseline, a
+    sequential Bayesian filter and an LSTM?
+  \item How do the decoders behave as the noise becomes stronger or more
+    correlated?
+  \item What happens when the Bayesian model is wrong, and when the LSTM sees
+    noise it was not trained on?
+  \item When does each method work better, and why?
+\end{enumerate}
+This report answers them with a simplified, validated simulator.
+
+The reinforcement-learning (DQN) decoder and the experimental-data goal were
+explicitly left out of scope for this run (Section~\ref{sec:limits}).
+
+\input{methods.tex}
+
+%-------------------------------------------------------------------
+\section{Validation}\label{sec:validation}
+
+\paragraph{Simulator.} The simulator was validated before this study
+(\texttt{docs/sim\_validation.pdf}). It reproduces:
+\begin{itemize}
+  \item the exact single-round logical error of the square GKP code,
+    including the value $0.110$ at $\sigma=0.555$ quoted by
+    Gottesman, Kitaev and Preskill~\cite{gkp};
+  \item the per-round jump statistics, which in theory do not depend on
+    $\rho$ (checked numerically at $\rho=0$ and $\rho=0.9$);
+  \item the multi-round closed forms at $\rho=0$ and $\rho\to1$.
+\end{itemize}
+The validation script is re-run as experiment E0
+(\texttt{results/E0\_validate\_sim.txt}).
+
+\paragraph{Decoder correctness.} The unit tests in \texttt{tests/test\_core.py}
+check:
+\begin{itemize}
+  \item the reduction~\eqref{eq:z}--\eqref{eq:state};
+  \item that ``cheat'' decoders given the true labels reach exactly zero
+    logical error for every LSTM head;
+  \item that the closed-loop LSTM decoder reproduces open-loop inference bit
+    for bit;
+  \item that the Bayes filter stays finite under severe model mismatch;
+  \item that test-split random streams never coincide with the training,
+    validation or development streams (all splits are disjoint by
+    construction).
+\end{itemize}
+The filter's class probabilities are also approximately calibrated
+(Section~\ref{sec:why}).
+
+\paragraph{Grid convergence.} Table~\ref{tab:e0} compares grid resolutions on
+the same noise. With $n_x=96$ points over $2L$, which is the resolution used
+throughout except for an assumed $\sigma_m'<0.035L$ (where $n_x=192$), the
+decisions differ from $n_x=192$ in at most $10^{-3}$ of trial-rounds, and
+every summary statistic agrees to within its sampling error.
+
+\begin{table}[H]
+\centering\small
+\input{generated/table_e0.tex}
+\caption{E0: grid convergence of the Bayes filter (matched model, 20{,}000
+trials of the development split).}
+\label{tab:e0}
+\end{table}
+
+%-------------------------------------------------------------------
+\section{Results}\label{sec:results}
+
+\input{sections/results.tex}
+
+%-------------------------------------------------------------------
+\section{Why: diagnostics}\label{sec:why}
+
+\input{sections/why.tex}
+
+%-------------------------------------------------------------------
+\section{Discussion: when does each method win?}\label{sec:discussion}
+
+\input{sections/discussion.tex}
+
+%-------------------------------------------------------------------
+\section{Limitations and future work}\label{sec:limits}
+
+\input{sections/limitations.tex}
+
+%-------------------------------------------------------------------
+\appendix
+\section{Reproducing the results}\label{sec:repro}
+
+Everything lives on the local branch \nolinkurl{experiment/decoder-comparison}
+(worktree \nolinkurl{/home/babay/programs/QC/qkp-experiment}). From the repo
+root, with the \texttt{.venv} created by \texttt{uv} (CUDA~12.8 PyTorch):
+\begin{verbatim}
+QKP_MODE=quick .venv/bin/python -m pytest -q        # tests
+.venv/bin/python -m training.train_lstm              # LSTMs -> checkpoints/
+.venv/bin/python -m experiments.run_all              # E0-E8 -> results/cache/
+.venv/bin/python -m experiments.analyze              # CSV, figures, summary.json
+.venv/bin/python -m writeup.make_tables              # tables/macros for this report
+cd writeup && xelatex report.tex && xelatex report.tex
+\end{verbatim}
+\texttt{QKP\_MODE=quick} runs the whole pipeline on small sizes, using only
+the development random streams and writing to \texttt{results/quick/}.
+
+\begin{table}[H]
+\centering\small
+\input{generated/table_training.tex}
+\caption{LSTM training. Training stops at 40 epochs (cosine schedule),
+through early stopping, or at a 30-minute wall-clock guard. Models that hit
+an earlier 10-minute guard while sharing the GPU were retrained so that all
+final models finish their schedule. The head is chosen on validation data.}
+\label{tab:training}
+\end{table}
+
+%-------------------------------------------------------------------
+\begin{thebibliography}{9}
+\bibitem{gkp} D.~Gottesman, A.~Kitaev, J.~Preskill, ``Encoding a qubit in an
+  oscillator,'' \emph{Phys.\ Rev.\ A} \textbf{64}, 012310 (2001).
+  \url{https://arxiv.org/abs/quant-ph/0008040}
+\bibitem{grimsmo} A.~L.~Grimsmo, S.~Puri, ``Quantum error correction with the
+  Gottesman--Kitaev--Preskill code,'' \emph{PRX Quantum} \textbf{2}, 020101
+  (2021). \url{https://arxiv.org/abs/2106.12989}
+\bibitem{wan} K.~H.~Wan, A.~Neville, S.~Kolthammer, ``Memory-assisted decoder
+  for approximate Gottesman--Kitaev--Preskill codes,'' \emph{Phys.\ Rev.\
+  Research} \textbf{2}, 043280 (2020). \url{https://arxiv.org/abs/1912.00829}
+\bibitem{puviani} M.~Puviani \emph{et al.}, ``Non-Markovian feedback for
+  optimized quantum error correction,'' \emph{Phys.\ Rev.\ Lett.}
+  \textbf{134}, 020601 (2025).
+\bibitem{fukui} K.~Fukui, A.~Tomita, A.~Okamoto, K.~Fujii, ``High-threshold
+  fault-tolerant quantum computation with analog quantum error correction,''
+  \emph{Phys.\ Rev.\ X} \textbf{8}, 021054 (2018).
+  \url{https://arxiv.org/abs/1712.00294}
+\bibitem{campagne} P.~Campagne-Ibarcq \emph{et al.}, ``Quantum error
+  correction of a qubit encoded in grid states of an oscillator,''
+  \emph{Nature} \textbf{584}, 368--372 (2020).
+\end{thebibliography}
+
+\end{document}

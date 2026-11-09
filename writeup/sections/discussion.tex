@@ -1,0 +1,77 @@
+\paragraph{Memory helps, and more so the more correlated the noise.}
+Once $\rho\gtrsim0.5$, every decoder in the parameter sweeps (E2--E4) beats
+nearest lattice, by up to two orders of magnitude at $\rho\approx0.9$. Badly
+mis-specified filters (E5) are the exception. The gain follows the
+predictability of the next displacement, $\sigma_q\sqrt{1-\rho^2}$
+(Section~\ref{sec:why}). Much of it, though not most, comes from being able
+to \emph{revise} earlier decisions. At the nominal point, predicting the next
+displacement alone gives a factor of about 13 for Bayes (about 9 for the
+LSTM), and revision adds a further factor of about 7 (about 2.7 for the LSTM).
+
+\paragraph{When the model is right, Bayes wins.}
+With the correct noise model, the grid filter is the optimal syndrome-only
+decoder for this action set, and it was best at every test point. The best
+LSTMs come within 2--17\% of it where logical errors are common (matched
+models at $\rho=0.5$: 2\%; at $\sigma_q=0.26L$: 17\%). They fall 3--4 times
+behind where errors are rare (the nominal point): the decisive rounds are
+rare in the training data, and the network has not learned them.
+
+\paragraph{When the model is moderately wrong, Bayes usually still wins.}
+A filter whose assumed parameters are moderately off loses little: every
+model with $0.8\le\rho'\le0.95$ and $0.75\le\sigma_q'/\sigma_q\le1.5$ stays
+within $1.6\times$ of the matched error. Overestimating $\sigma_q$ is cheap.
+Underestimating the innovation noise, lowering $\rho'$ substantially, or
+ignoring the correlation is expensive, and can be worse than no memory at all
+(E5).
+
+In the parameter sweeps, the fixed nominal filter stayed close to matched
+Bayes over a wide range of $\sigma_q$ and for $\rho\ge0.8$. Averaged over
+LSTM seeds, its error was at or below that of the nominally trained LSTM at
+every sweep point; at $\rho=0$ the two were within the LSTM seed spread.
+
+A Bayesian average over a coarse grid of models (Bayes-broad) matched or beat
+the broadly trained LSTM at most test points, including most of level~B,
+where both are out of distribution. The exceptions are weak-to-moderate
+correlation inside the training box: the LSTM was better at level~A with
+$\rho=0.3$ for all three seeds, and slightly better at $\rho=0.5$.
+
+\paragraph{When the model is structurally wrong, ML helps.}
+Under regime-switching correlation (E6), every fixed-model filter is
+mis-specified, and the LSTM trained on varied noise beat all of them. Only a
+filter that models the switching did better. This is the clearest support in
+our data for the proposal's hypothesis that machine learning helps when the
+Bayesian model is inaccurate. The advantage came from training on varied
+correlations rather than on the switching process itself.
+
+\paragraph{Generalisation needs varied training.}
+\begin{itemize}
+  \item A network trained at one point degrades away from it. At $\rho=0$ it
+    is worse than NL on average over seeds, because it applies memory that is
+    not there.
+  \item Training on a broad box removes most of that failure, at the cost of
+    some in-distribution performance and a larger spread between seeds.
+  \item The same holds for Bayes: a single assumed model is fragile in the
+    same places, and averaging over models removes most of the problem. At
+    $\rho=0$, Bayes-broad is still slightly worse than NL.
+\end{itemize}
+
+\paragraph{Cost.}
+On a GPU, both memory decoders process about $3\times10^5$ trial-rounds per
+second, with a latency of a few milliseconds per round. On a CPU, the
+single-trial latency is similar (about 0.9~ms per round for both), but for
+batched decoding the LSTM's throughput is about 27 times the grid filter's.
+The filter's cost grows with the number of hidden variables, which favours
+learned decoders for richer noise models. The LSTM, in turn, needs training
+data and about 6--11 minutes of GPU time per model.
+
+\paragraph{Answer to the research question.}
+In this setting, machine learning did not outperform a correctly specified
+Bayesian filter, and it rarely outperformed a mildly mis-specified one. The
+exception is a model-averaged filter at weak correlation. A broadly trained
+LSTM is nevertheless a robust, cheap and assumption-light decoder:
+\begin{itemize}
+  \item it beats nearest-lattice decoding by large factors under correlated
+    noise;
+  \item it beats mis-specified filters when the true noise is structurally
+    different from what the filter assumes.
+\end{itemize}

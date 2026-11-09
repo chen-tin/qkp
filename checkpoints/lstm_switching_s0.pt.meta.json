@@ -1,0 +1,32 @@
+{
+  "mode": "full",
+  "digest": "657809cf934f",
+  "git": "fbb408a",
+  "config": {
+    "name": "lstm_switching_s0",
+    "dataset": "switching",
+    "seed": 0,
+    "spec": {
+      "kind": "switching",
+      "sigma_q": 0.3544907701811032,
+      "sigma_m": 0.0886226925452758,
+      "rho_lo": 0.3,
+      "rho_hi": 0.97,
+      "p_switch": 0.05
+    },
+    "n_train": 200000,
+    "n_val": 20000,
+    "hidden": 128,
+    "layers": 2,
+    "batch": 2048,
+    "max_epochs": 40,
+    "patience": 5,
+    "lr": 0.002,
+    "wd": 0.0001,
+    "time_cap": 1800.0
+  },
+  "written": "2026-11-09 05:44:38",
+  "chosen_head": "full",
+  "stop_reason": "max_epochs",
+  "train_seconds": 651.9954969882965
+}

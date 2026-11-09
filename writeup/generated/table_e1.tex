@@ -1,0 +1,20 @@
+\begin{tabular}{lrrrr}
+\toprule
+Decoder & $P_L(10)$ & $P_L(50)$ & time-avg.\ error & paired diff.\ vs Bayes \\
+\midrule
+No correction & $0.501$ & $0.501$ & $0.481$ & $+0.480$ {\scriptsize($\pm1\!\times\!10^{-3}$)} \\
+NL & $0.073$ & $0.242$ & $0.144$ & $+0.142$ {\scriptsize($\pm2\!\times\!10^{-3}$)} \\
+Bayes (matched) & $3.8\!\times\!10^{-4}$ & $8.5\!\times\!10^{-4}$ & $1.5\!\times\!10^{-3}$ & -- \\
+Bayes (per-round) & $2.2\!\times\!10^{-3}$ & $0.012$ & $0.011$ & $+9.2\!\times\!10^{-3}$ {\scriptsize($\pm6\!\times\!10^{-4}$)} \\
+Bayes-broad & $8.7\!\times\!10^{-4}$ & $9.7\!\times\!10^{-4}$ & $1.9\!\times\!10^{-3}$ & $+3.7\!\times\!10^{-4}$ {\scriptsize($\pm1\!\times\!10^{-4}$)} \\
+\textbf{LSTM-nominal (mean of seeds)} & $3.0\!\times\!10^{-3}$ & $6.6\!\times\!10^{-3}$ & $5.5\!\times\!10^{-3}$ & $+4.0\!\times\!10^{-3}$ {\scriptsize($\pm4\!\times\!10^{-4}$)} \\
+LSTM-nominal s0 & $3.7\!\times\!10^{-3}$ & $7.6\!\times\!10^{-3}$ & $6.3\!\times\!10^{-3}$ & $+4.8\!\times\!10^{-3}$ {\scriptsize($\pm4\!\times\!10^{-4}$)} \\
+LSTM-nominal s1 & $3.4\!\times\!10^{-3}$ & $6.3\!\times\!10^{-3}$ & $5.3\!\times\!10^{-3}$ & $+3.8\!\times\!10^{-3}$ {\scriptsize($\pm4\!\times\!10^{-4}$)} \\
+LSTM-nominal s2 & $2.0\!\times\!10^{-3}$ & $6.0\!\times\!10^{-3}$ & $4.9\!\times\!10^{-3}$ & $+3.4\!\times\!10^{-3}$ {\scriptsize($\pm4\!\times\!10^{-4}$)} \\
+LSTM-nominal s0 (per-round head) & $0.014$ & $0.020$ & $0.017$ & $+0.015$ {\scriptsize($\pm9\!\times\!10^{-4}$)} \\
+\textbf{LSTM-broad (mean of seeds)} & $5.8\!\times\!10^{-3}$ & $0.015$ & $0.010$ & $+8.7\!\times\!10^{-3}$ {\scriptsize($\pm4\!\times\!10^{-4}$)} \\
+LSTM-broad s0 & $2.8\!\times\!10^{-3}$ & $6.5\!\times\!10^{-3}$ & $5.4\!\times\!10^{-3}$ & $+3.9\!\times\!10^{-3}$ {\scriptsize($\pm4\!\times\!10^{-4}$)} \\
+LSTM-broad s1 & $9.4\!\times\!10^{-3}$ & $0.028$ & $0.017$ & $+0.016$ {\scriptsize($\pm7\!\times\!10^{-4}$)} \\
+LSTM-broad s2 & $5.2\!\times\!10^{-3}$ & $0.010$ & $8.2\!\times\!10^{-3}$ & $+6.6\!\times\!10^{-3}$ {\scriptsize($\pm4\!\times\!10^{-4}$)} \\
+\bottomrule
+\end{tabular}

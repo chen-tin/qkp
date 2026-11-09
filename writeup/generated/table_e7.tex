@@ -1,0 +1,20 @@
+\begin{tabular}{llrrr}
+\toprule
+Decoder & device & batch & ms / round & trial-rounds / s \\
+\midrule
+Bayes (matched) & cuda & 1 & 3.43 & 292 \\
+Bayes (matched) & cuda & 4096 & 13.3 & 3.08e+05 \\
+Bayes-broad & cuda & 1 & 22.6 & 44.2 \\
+Bayes-broad & cuda & 4096 & 122 & 3.36e+04 \\
+LSTM-nominal s0 & cuda & 1 & 1.5 & 668 \\
+LSTM-nominal s0 & cuda & 4096 & 13 & 3.15e+05 \\
+NL & cpu & 1 & 0.00644 & 1.55e+05 \\
+NL & cpu & 512 & 0.0188 & 2.72e+07 \\
+Bayes (matched) & cpu & 1 & 0.873 & 1.15e+03 \\
+Bayes (matched) & cpu & 512 & 53.1 & 9.65e+03 \\
+Bayes-broad & cpu & 1 & 4.77 & 210 \\
+Bayes-broad & cpu & 512 & 437 & 1.17e+03 \\
+LSTM-nominal s0 & cpu & 1 & 0.944 & 1.06e+03 \\
+LSTM-nominal s0 & cpu & 512 & 1.93 & 2.66e+05 \\
+\bottomrule
+\end{tabular}

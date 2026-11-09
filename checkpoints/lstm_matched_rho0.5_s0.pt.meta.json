@@ -1,0 +1,30 @@
+{
+  "mode": "full",
+  "digest": "a47d1caadfbf",
+  "git": "fbb408a",
+  "config": {
+    "name": "lstm_matched_rho0.5_s0",
+    "dataset": "matched_rho0.5",
+    "seed": 0,
+    "spec": {
+      "kind": "fixed",
+      "sigma_q": 0.3544907701811032,
+      "sigma_m": 0.0886226925452758,
+      "rho": 0.5
+    },
+    "n_train": 200000,
+    "n_val": 20000,
+    "hidden": 128,
+    "layers": 2,
+    "batch": 2048,
+    "max_epochs": 40,
+    "patience": 5,
+    "lr": 0.002,
+    "wd": 0.0001,
+    "time_cap": 1800.0
+  },
+  "written": "2026-11-09 05:22:56",
+  "chosen_head": "full",
+  "stop_reason": "max_epochs",
+  "train_seconds": 667.770993232727
+}

@@ -1,0 +1,31 @@
+\begin{abstract}
+We compare three decoders for the square GKP code under temporally correlated
+(AR(1)) displacement noise with Gaussian measurement noise, in a validated
+simplified simulator of the position quadrature:
+\begin{itemize}
+  \item a memoryless nearest-lattice (NL) decoder;
+  \item a sequential Bayesian grid filter;
+  \item an LSTM trained on simulated syndrome histories.
+\end{itemize}
+Restricting corrections to the syndrome plus a lattice shift makes the
+syndromes independent of the decoder. Decoding then reduces to estimating a
+running parity, which allows paired comparisons on common noise and
+supervised training without distribution shift.
+
+At the nominal point ($\sigma_q=0.2L$, $\sigma_m=0.05L$, $\rho=0.9$), matched
+Bayes reduces the logical error rate after 50 rounds from $\EoneNLLERfifty$
+(NL) to $\EoneBayesLERfifty$. The LSTM trained at that point reaches
+$\EoneLSTMnomLERfifty$. Being able to revise past decisions lowers the time-averaged
+error by a factor of about 3 (LSTM) to 7 (Bayes).
+
+The matched filter is the best decoder at every test point, and a moderately
+mis-specified filter usually stays ahead of the LSTMs. The exception is weak
+correlation ($\rho=0.3$--$0.5$), where the broadly trained LSTM beats the
+model-averaged filter. Matched LSTMs come within 2--17\% of the filter where
+errors are common, and fall behind by 3--4 times where they are rare. Wrong assumptions hurt both: assuming strong correlation
+when there is none is worse than having no memory. Under regime-switching
+noise, a broadly trained LSTM beats every fixed-model filter, and only a
+regime-aware filter does better. We also report generalisation across noise
+strength, correlation and time, sensitivity to model mismatch, and compute
+cost.
+\end{abstract}

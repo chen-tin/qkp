@@ -1,0 +1,1537 @@
+\newcommand{\EoneNLLERfifty}{0.242}
+\newcommand{\EoneNLMean}{0.144}
+\newcommand{\EoneNLTrials}{60{,}000}
+\newcommand{\EoneNLEvents}{14542}
+\newcommand{\EoneBayesLERfifty}{8.5\!\times\!10^{-4}}
+\newcommand{\EoneBayesMean}{1.5\!\times\!10^{-3}}
+\newcommand{\EoneBayesTrials}{60{,}000}
+\newcommand{\EoneBayesEvents}{51}
+\newcommand{\EoneBayesPRLERfifty}{0.012}
+\newcommand{\EoneBayesPRMean}{0.011}
+\newcommand{\EoneBayesPRTrials}{60{,}000}
+\newcommand{\EoneBayesPREvents}{718}
+\newcommand{\EoneBayesBroadLERfifty}{9.7\!\times\!10^{-4}}
+\newcommand{\EoneBayesBroadMean}{1.9\!\times\!10^{-3}}
+\newcommand{\EoneBayesBroadTrials}{60{,}000}
+\newcommand{\EoneBayesBroadEvents}{58}
+\newcommand{\EoneLSTMnomLERfifty}{6.6\!\times\!10^{-3}}
+\newcommand{\EoneLSTMnomMean}{5.5\!\times\!10^{-3}}
+\newcommand{\EoneLSTMnomTrials}{60{,}000}
+\newcommand{\EoneLSTMnomEvents}{1196}
+\newcommand{\EoneLSTMbroadLERfifty}{0.015}
+\newcommand{\EoneLSTMbroadMean}{0.010}
+\newcommand{\EoneLSTMbroadTrials}{60{,}000}
+\newcommand{\EoneLSTMbroadEvents}{2691}
+\newcommand{\EoneLSTMkzeroLERfifty}{0.020}
+\newcommand{\EoneLSTMkzeroMean}{0.017}
+\newcommand{\EoneLSTMkzeroTrials}{60{,}000}
+\newcommand{\EoneLSTMkzeroEvents}{1211}
+\newcommand{\EoneNoneLERfifty}{0.501}
+\newcommand{\EoneNoneMean}{0.481}
+\newcommand{\EoneNoneTrials}{60{,}000}
+\newcommand{\EoneNoneEvents}{30061}
+\newcommand{\EoneGain}{95}
+\newcommand{\EoneLSTMoverBayes}{3.7}
+\newcommand{\EfiveSmHalfMean}{2.0\!\times\!10^{-3}}
+\newcommand{\EfiveSmTwoMean}{3.0\!\times\!10^{-3}}
+\newcommand{\EfiveNLMean}{0.141}
+\newcommand{\EfiveLSTMnomMean}{5.3\!\times\!10^{-3}}
+\newcommand{\EfiveLSTMbroadMean}{0.010}
+\newcommand{\EfiveBayesMean}{1.5\!\times\!10^{-3}}
+\newcommand{\EfiveRhoZeroMean}{0.195}
+\newcommand{\EfiveRhoHalfMean}{7.8\!\times\!10^{-3}}
+\newcommand{\EfiveRhoHighMean}{0.014}
+\newcommand{\EfiveSqTwoMean}{2.2\!\times\!10^{-3}}
+\newcommand{\EfiveSqHalfMean}{4.5\!\times\!10^{-3}}
+\newcommand{\EfiveTrials}{40{,}000}
+\newcommand{\EsixNLMean}{0.195}
+\newcommand{\EsixBayesregimeawareMean}{0.130}
+\newcommand{\EsixBayesrhozeronineMean}{0.162}
+\newcommand{\EsixBayesrhozeroninesevenMean}{0.191}
+\newcommand{\EsixBayesbroadMean}{0.147}
+\newcommand{\EsixLSTMnominalMean}{0.176}
+\newcommand{\EsixLSTMbroadMean}{0.142}
+\newcommand{\EsixLSTMswitchingMean}{0.143}
+\newcommand{\GPUname}{NVIDIA GeForce RTX 5080 Laptop GPU}
+\newcommand{\ErevBayes}{1.5\!\times\!10^{-3}}
+\newcommand{\ErevBayesPR}{0.011}
+\newcommand{\ErevLSTM}{6.3\!\times\!10^{-3}}
+\newcommand{\ErevLSTMkzero}{0.017}
+\newcommand{\EhzNLFifty}{0.240}
+\newcommand{\EhzNLTwohundred}{0.463}
+\newcommand{\EhzBayesFifty}{9.5\!\times\!10^{-4}}
+\newcommand{\EhzBayesTwohundred}{2.6\!\times\!10^{-3}}
+\newcommand{\EhzLSTMnomFifty}{6.8\!\times\!10^{-3}}
+\newcommand{\EhzLSTMnomTwohundred}{0.018}
+\newcommand{\EhzLSTMbroadFifty}{6.0\!\times\!10^{-3}}
+\newcommand{\EhzLSTMbroadTwohundred}{0.016}
+\newcommand{\EpairZero}{0.05}
+\newcommand{\EcancelZero}{0.04}
+\newcommand{\EpairNominal}{0.48}
+\newcommand{\EcancelNominal}{0.29}
+\newcommand{\EpairHigh}{0.55}
+\newcommand{\EcancelHigh}{0.31}
+\newcommand{\EdiagDisagree}{5.9\!\times\!10^{-3}}
+\newcommand{\EdiagBayesRight}{98}
+\makeatletter
+\newcommand{\res}[3]{\@ifundefined{res@#1@#2@#3}{??}{\csname res@#1@#2@#3\endcsname}}
+\newcommand{\resfifty}[3]{\@ifundefined{rfifty@#1@#2@#3}{??}{\csname rfifty@#1@#2@#3\endcsname}}
+\newcommand{\resratio}[3]{\@ifundefined{rratio@#1@#2@#3}{??}{\csname rratio@#1@#2@#3\endcsname}}
+\newcommand{\tim}[4]{\@ifundefined{tim@#1@#2@#3@#4}{??}{\csname tim@#1@#2@#3@#4\endcsname}}
+\makeatother
+\expandafter\def\csname res@E1@nominal@Bayes-broad\endcsname{1.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E1@nominal@Bayes-broad\endcsname{$9.7\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E1@nominal@Bayes-broad\endcsname{1.24}
+\expandafter\def\csname res@E1@nominal@Bayes (matched)\endcsname{1.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E1@nominal@Bayes (matched)\endcsname{$8.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E1@nominal@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E1@nominal@Bayes (per-round)\endcsname{0.011}
+\expandafter\def\csname rfifty@E1@nominal@Bayes (per-round)\endcsname{$0.012$}
+\expandafter\def\csname rratio@E1@nominal@Bayes (per-round)\endcsname{7.07}
+\expandafter\def\csname res@E1@nominal@LSTM-broad s0\endcsname{5.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E1@nominal@LSTM-broad s0\endcsname{$6.5\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E1@nominal@LSTM-broad s0\endcsname{3.58}
+\expandafter\def\csname res@E1@nominal@LSTM-broad s1\endcsname{0.017}
+\expandafter\def\csname rfifty@E1@nominal@LSTM-broad s1\endcsname{$0.028$}
+\expandafter\def\csname rratio@E1@nominal@LSTM-broad s1\endcsname{11.4}
+\expandafter\def\csname res@E1@nominal@LSTM-broad s2\endcsname{8.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E1@nominal@LSTM-broad s2\endcsname{$0.010$}
+\expandafter\def\csname rratio@E1@nominal@LSTM-broad s2\endcsname{5.4}
+\expandafter\def\csname res@E1@nominal@LSTM-nominal s0\endcsname{6.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E1@nominal@LSTM-nominal s0\endcsname{$7.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E1@nominal@LSTM-nominal s0\endcsname{4.19}
+\expandafter\def\csname res@E1@nominal@LSTM-nominal s0 (k0 head)\endcsname{0.017}
+\expandafter\def\csname rfifty@E1@nominal@LSTM-nominal s0 (k0 head)\endcsname{$0.020$}
+\expandafter\def\csname rratio@E1@nominal@LSTM-nominal s0 (k0 head)\endcsname{11.1}
+\expandafter\def\csname res@E1@nominal@LSTM-nominal s1\endcsname{5.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E1@nominal@LSTM-nominal s1\endcsname{$6.3\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E1@nominal@LSTM-nominal s1\endcsname{3.51}
+\expandafter\def\csname res@E1@nominal@LSTM-nominal s2\endcsname{4.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E1@nominal@LSTM-nominal s2\endcsname{$6.0\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E1@nominal@LSTM-nominal s2\endcsname{3.26}
+\expandafter\def\csname res@E1@nominal@NL\endcsname{0.144}
+\expandafter\def\csname rfifty@E1@nominal@NL\endcsname{$0.242$}
+\expandafter\def\csname rratio@E1@nominal@NL\endcsname{95.2}
+\expandafter\def\csname res@E1@nominal@No correction\endcsname{0.481}
+\expandafter\def\csname rfifty@E1@nominal@No correction\endcsname{$0.501$}
+\expandafter\def\csname rratio@E1@nominal@No correction\endcsname{319}
+\expandafter\def\csname res@E1@nominal@LSTM-broad\endcsname{0.010}
+\expandafter\def\csname rfifty@E1@nominal@LSTM-broad\endcsname{$0.015$}
+\expandafter\def\csname rratio@E1@nominal@LSTM-broad\endcsname{6.78}
+\expandafter\def\csname res@E1@nominal@LSTM-nominal\endcsname{5.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E1@nominal@LSTM-nominal\endcsname{$6.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E1@nominal@LSTM-nominal\endcsname{3.65}
+\expandafter\def\csname res@E2@A_rho0.0@Bayes-broad\endcsname{0.289}
+\expandafter\def\csname rfifty@E2@A_rho0.0@Bayes-broad\endcsname{$0.420$}
+\expandafter\def\csname rratio@E2@A_rho0.0@Bayes-broad\endcsname{1.06}
+\expandafter\def\csname res@E2@A_rho0.0@Bayes (matched)\endcsname{0.273}
+\expandafter\def\csname rfifty@E2@A_rho0.0@Bayes (matched)\endcsname{$0.415$}
+\expandafter\def\csname rratio@E2@A_rho0.0@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@A_rho0.0@Bayes (nominal)\endcsname{0.357}
+\expandafter\def\csname rfifty@E2@A_rho0.0@Bayes (nominal)\endcsname{$0.479$}
+\expandafter\def\csname rratio@E2@A_rho0.0@Bayes (nominal)\endcsname{1.31}
+\expandafter\def\csname res@E2@A_rho0.0@LSTM-broad s0\endcsname{0.304}
+\expandafter\def\csname rfifty@E2@A_rho0.0@LSTM-broad s0\endcsname{$0.434$}
+\expandafter\def\csname rratio@E2@A_rho0.0@LSTM-broad s0\endcsname{1.11}
+\expandafter\def\csname res@E2@A_rho0.0@LSTM-broad s1\endcsname{0.304}
+\expandafter\def\csname rfifty@E2@A_rho0.0@LSTM-broad s1\endcsname{$0.434$}
+\expandafter\def\csname rratio@E2@A_rho0.0@LSTM-broad s1\endcsname{1.11}
+\expandafter\def\csname res@E2@A_rho0.0@LSTM-broad s2\endcsname{0.305}
+\expandafter\def\csname rfifty@E2@A_rho0.0@LSTM-broad s2\endcsname{$0.435$}
+\expandafter\def\csname rratio@E2@A_rho0.0@LSTM-broad s2\endcsname{1.12}
+\expandafter\def\csname res@E2@A_rho0.0@LSTM-nominal s0\endcsname{0.357}
+\expandafter\def\csname rfifty@E2@A_rho0.0@LSTM-nominal s0\endcsname{$0.466$}
+\expandafter\def\csname rratio@E2@A_rho0.0@LSTM-nominal s0\endcsname{1.31}
+\expandafter\def\csname res@E2@A_rho0.0@LSTM-nominal s1\endcsname{0.351}
+\expandafter\def\csname rfifty@E2@A_rho0.0@LSTM-nominal s1\endcsname{$0.459$}
+\expandafter\def\csname rratio@E2@A_rho0.0@LSTM-nominal s1\endcsname{1.29}
+\expandafter\def\csname res@E2@A_rho0.0@LSTM-nominal s2\endcsname{0.395}
+\expandafter\def\csname rfifty@E2@A_rho0.0@LSTM-nominal s2\endcsname{$0.503$}
+\expandafter\def\csname rratio@E2@A_rho0.0@LSTM-nominal s2\endcsname{1.45}
+\expandafter\def\csname res@E2@A_rho0.0@NL\endcsname{0.278}
+\expandafter\def\csname rfifty@E2@A_rho0.0@NL\endcsname{$0.421$}
+\expandafter\def\csname rratio@E2@A_rho0.0@NL\endcsname{1.02}
+\expandafter\def\csname res@E2@A_rho0.3@Bayes-broad\endcsname{0.255}
+\expandafter\def\csname rfifty@E2@A_rho0.3@Bayes-broad\endcsname{$0.406$}
+\expandafter\def\csname rratio@E2@A_rho0.3@Bayes-broad\endcsname{1.1}
+\expandafter\def\csname res@E2@A_rho0.3@Bayes (matched)\endcsname{0.231}
+\expandafter\def\csname rfifty@E2@A_rho0.3@Bayes (matched)\endcsname{$0.370$}
+\expandafter\def\csname rratio@E2@A_rho0.3@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@A_rho0.3@Bayes (nominal)\endcsname{0.278}
+\expandafter\def\csname rfifty@E2@A_rho0.3@Bayes (nominal)\endcsname{$0.420$}
+\expandafter\def\csname rratio@E2@A_rho0.3@Bayes (nominal)\endcsname{1.2}
+\expandafter\def\csname res@E2@A_rho0.3@LSTM-broad s0\endcsname{0.242}
+\expandafter\def\csname rfifty@E2@A_rho0.3@LSTM-broad s0\endcsname{$0.382$}
+\expandafter\def\csname rratio@E2@A_rho0.3@LSTM-broad s0\endcsname{1.04}
+\expandafter\def\csname res@E2@A_rho0.3@LSTM-broad s1\endcsname{0.241}
+\expandafter\def\csname rfifty@E2@A_rho0.3@LSTM-broad s1\endcsname{$0.386$}
+\expandafter\def\csname rratio@E2@A_rho0.3@LSTM-broad s1\endcsname{1.04}
+\expandafter\def\csname res@E2@A_rho0.3@LSTM-broad s2\endcsname{0.241}
+\expandafter\def\csname rfifty@E2@A_rho0.3@LSTM-broad s2\endcsname{$0.383$}
+\expandafter\def\csname rratio@E2@A_rho0.3@LSTM-broad s2\endcsname{1.04}
+\expandafter\def\csname res@E2@A_rho0.3@LSTM-nominal s0\endcsname{0.282}
+\expandafter\def\csname rfifty@E2@A_rho0.3@LSTM-nominal s0\endcsname{$0.414$}
+\expandafter\def\csname rratio@E2@A_rho0.3@LSTM-nominal s0\endcsname{1.22}
+\expandafter\def\csname res@E2@A_rho0.3@LSTM-nominal s1\endcsname{0.288}
+\expandafter\def\csname rfifty@E2@A_rho0.3@LSTM-nominal s1\endcsname{$0.423$}
+\expandafter\def\csname rratio@E2@A_rho0.3@LSTM-nominal s1\endcsname{1.24}
+\expandafter\def\csname res@E2@A_rho0.3@LSTM-nominal s2\endcsname{0.307}
+\expandafter\def\csname rfifty@E2@A_rho0.3@LSTM-nominal s2\endcsname{$0.444$}
+\expandafter\def\csname rratio@E2@A_rho0.3@LSTM-nominal s2\endcsname{1.33}
+\expandafter\def\csname res@E2@A_rho0.3@NL\endcsname{0.271}
+\expandafter\def\csname rfifty@E2@A_rho0.3@NL\endcsname{$0.415$}
+\expandafter\def\csname rratio@E2@A_rho0.3@NL\endcsname{1.17}
+\expandafter\def\csname res@E2@A_rho0.5@Bayes-broad\endcsname{0.150}
+\expandafter\def\csname rfifty@E2@A_rho0.5@Bayes-broad\endcsname{$0.253$}
+\expandafter\def\csname rratio@E2@A_rho0.5@Bayes-broad\endcsname{1.12}
+\expandafter\def\csname res@E2@A_rho0.5@Bayes (matched)\endcsname{0.133}
+\expandafter\def\csname rfifty@E2@A_rho0.5@Bayes (matched)\endcsname{$0.235$}
+\expandafter\def\csname rratio@E2@A_rho0.5@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@A_rho0.5@Bayes (nominal)\endcsname{0.172}
+\expandafter\def\csname rfifty@E2@A_rho0.5@Bayes (nominal)\endcsname{$0.293$}
+\expandafter\def\csname rratio@E2@A_rho0.5@Bayes (nominal)\endcsname{1.29}
+\expandafter\def\csname res@E2@A_rho0.5@LSTM-broad s0\endcsname{0.146}
+\expandafter\def\csname rfifty@E2@A_rho0.5@LSTM-broad s0\endcsname{$0.255$}
+\expandafter\def\csname rratio@E2@A_rho0.5@LSTM-broad s0\endcsname{1.1}
+\expandafter\def\csname res@E2@A_rho0.5@LSTM-broad s1\endcsname{0.150}
+\expandafter\def\csname rfifty@E2@A_rho0.5@LSTM-broad s1\endcsname{$0.267$}
+\expandafter\def\csname rratio@E2@A_rho0.5@LSTM-broad s1\endcsname{1.12}
+\expandafter\def\csname res@E2@A_rho0.5@LSTM-broad s2\endcsname{0.146}
+\expandafter\def\csname rfifty@E2@A_rho0.5@LSTM-broad s2\endcsname{$0.259$}
+\expandafter\def\csname rratio@E2@A_rho0.5@LSTM-broad s2\endcsname{1.1}
+\expandafter\def\csname res@E2@A_rho0.5@LSTM-matched\endcsname{0.136}
+\expandafter\def\csname rfifty@E2@A_rho0.5@LSTM-matched\endcsname{$0.242$}
+\expandafter\def\csname rratio@E2@A_rho0.5@LSTM-matched\endcsname{1.02}
+\expandafter\def\csname res@E2@A_rho0.5@LSTM-nominal s0\endcsname{0.190}
+\expandafter\def\csname rfifty@E2@A_rho0.5@LSTM-nominal s0\endcsname{$0.320$}
+\expandafter\def\csname rratio@E2@A_rho0.5@LSTM-nominal s0\endcsname{1.43}
+\expandafter\def\csname res@E2@A_rho0.5@LSTM-nominal s1\endcsname{0.195}
+\expandafter\def\csname rfifty@E2@A_rho0.5@LSTM-nominal s1\endcsname{$0.325$}
+\expandafter\def\csname rratio@E2@A_rho0.5@LSTM-nominal s1\endcsname{1.46}
+\expandafter\def\csname res@E2@A_rho0.5@LSTM-nominal s2\endcsname{0.199}
+\expandafter\def\csname rfifty@E2@A_rho0.5@LSTM-nominal s2\endcsname{$0.331$}
+\expandafter\def\csname rratio@E2@A_rho0.5@LSTM-nominal s2\endcsname{1.49}
+\expandafter\def\csname res@E2@A_rho0.5@NL\endcsname{0.258}
+\expandafter\def\csname rfifty@E2@A_rho0.5@NL\endcsname{$0.403$}
+\expandafter\def\csname rratio@E2@A_rho0.5@NL\endcsname{1.94}
+\expandafter\def\csname res@E2@A_rho0.7@Bayes-broad\endcsname{0.040}
+\expandafter\def\csname rfifty@E2@A_rho0.7@Bayes-broad\endcsname{$0.067$}
+\expandafter\def\csname rratio@E2@A_rho0.7@Bayes-broad\endcsname{1.18}
+\expandafter\def\csname res@E2@A_rho0.7@Bayes (matched)\endcsname{0.033}
+\expandafter\def\csname rfifty@E2@A_rho0.7@Bayes (matched)\endcsname{$0.060$}
+\expandafter\def\csname rratio@E2@A_rho0.7@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@A_rho0.7@Bayes (nominal)\endcsname{0.047}
+\expandafter\def\csname rfifty@E2@A_rho0.7@Bayes (nominal)\endcsname{$0.083$}
+\expandafter\def\csname rratio@E2@A_rho0.7@Bayes (nominal)\endcsname{1.39}
+\expandafter\def\csname res@E2@A_rho0.7@LSTM-broad s0\endcsname{0.045}
+\expandafter\def\csname rfifty@E2@A_rho0.7@LSTM-broad s0\endcsname{$0.080$}
+\expandafter\def\csname rratio@E2@A_rho0.7@LSTM-broad s0\endcsname{1.34}
+\expandafter\def\csname res@E2@A_rho0.7@LSTM-broad s1\endcsname{0.053}
+\expandafter\def\csname rfifty@E2@A_rho0.7@LSTM-broad s1\endcsname{$0.098$}
+\expandafter\def\csname rratio@E2@A_rho0.7@LSTM-broad s1\endcsname{1.59}
+\expandafter\def\csname res@E2@A_rho0.7@LSTM-broad s2\endcsname{0.046}
+\expandafter\def\csname rfifty@E2@A_rho0.7@LSTM-broad s2\endcsname{$0.082$}
+\expandafter\def\csname rratio@E2@A_rho0.7@LSTM-broad s2\endcsname{1.37}
+\expandafter\def\csname res@E2@A_rho0.7@LSTM-nominal s0\endcsname{0.065}
+\expandafter\def\csname rfifty@E2@A_rho0.7@LSTM-nominal s0\endcsname{$0.122$}
+\expandafter\def\csname rratio@E2@A_rho0.7@LSTM-nominal s0\endcsname{1.94}
+\expandafter\def\csname res@E2@A_rho0.7@LSTM-nominal s1\endcsname{0.067}
+\expandafter\def\csname rfifty@E2@A_rho0.7@LSTM-nominal s1\endcsname{$0.127$}
+\expandafter\def\csname rratio@E2@A_rho0.7@LSTM-nominal s1\endcsname{2.01}
+\expandafter\def\csname res@E2@A_rho0.7@LSTM-nominal s2\endcsname{0.066}
+\expandafter\def\csname rfifty@E2@A_rho0.7@LSTM-nominal s2\endcsname{$0.123$}
+\expandafter\def\csname rratio@E2@A_rho0.7@LSTM-nominal s2\endcsname{1.96}
+\expandafter\def\csname res@E2@A_rho0.7@NL\endcsname{0.222}
+\expandafter\def\csname rfifty@E2@A_rho0.7@NL\endcsname{$0.359$}
+\expandafter\def\csname rratio@E2@A_rho0.7@NL\endcsname{6.64}
+\expandafter\def\csname res@E2@A_rho0.8@Bayes-broad\endcsname{0.012}
+\expandafter\def\csname rfifty@E2@A_rho0.8@Bayes-broad\endcsname{$0.018$}
+\expandafter\def\csname rratio@E2@A_rho0.8@Bayes-broad\endcsname{1.19}
+\expandafter\def\csname res@E2@A_rho0.8@Bayes (matched)\endcsname{9.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.8@Bayes (matched)\endcsname{$0.017$}
+\expandafter\def\csname rratio@E2@A_rho0.8@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@A_rho0.8@Bayes (nominal)\endcsname{0.012}
+\expandafter\def\csname rfifty@E2@A_rho0.8@Bayes (nominal)\endcsname{$0.020$}
+\expandafter\def\csname rratio@E2@A_rho0.8@Bayes (nominal)\endcsname{1.17}
+\expandafter\def\csname res@E2@A_rho0.8@LSTM-broad s0\endcsname{0.016}
+\expandafter\def\csname rfifty@E2@A_rho0.8@LSTM-broad s0\endcsname{$0.026$}
+\expandafter\def\csname rratio@E2@A_rho0.8@LSTM-broad s0\endcsname{1.64}
+\expandafter\def\csname res@E2@A_rho0.8@LSTM-broad s1\endcsname{0.026}
+\expandafter\def\csname rfifty@E2@A_rho0.8@LSTM-broad s1\endcsname{$0.045$}
+\expandafter\def\csname rratio@E2@A_rho0.8@LSTM-broad s1\endcsname{2.59}
+\expandafter\def\csname res@E2@A_rho0.8@LSTM-broad s2\endcsname{0.018}
+\expandafter\def\csname rfifty@E2@A_rho0.8@LSTM-broad s2\endcsname{$0.030$}
+\expandafter\def\csname rratio@E2@A_rho0.8@LSTM-broad s2\endcsname{1.85}
+\expandafter\def\csname res@E2@A_rho0.8@LSTM-nominal s0\endcsname{0.020}
+\expandafter\def\csname rfifty@E2@A_rho0.8@LSTM-nominal s0\endcsname{$0.038$}
+\expandafter\def\csname rratio@E2@A_rho0.8@LSTM-nominal s0\endcsname{2.03}
+\expandafter\def\csname res@E2@A_rho0.8@LSTM-nominal s1\endcsname{0.022}
+\expandafter\def\csname rfifty@E2@A_rho0.8@LSTM-nominal s1\endcsname{$0.041$}
+\expandafter\def\csname rratio@E2@A_rho0.8@LSTM-nominal s1\endcsname{2.23}
+\expandafter\def\csname res@E2@A_rho0.8@LSTM-nominal s2\endcsname{0.021}
+\expandafter\def\csname rfifty@E2@A_rho0.8@LSTM-nominal s2\endcsname{$0.039$}
+\expandafter\def\csname rratio@E2@A_rho0.8@LSTM-nominal s2\endcsname{2.13}
+\expandafter\def\csname res@E2@A_rho0.8@NL\endcsname{0.187}
+\expandafter\def\csname rfifty@E2@A_rho0.8@NL\endcsname{$0.309$}
+\expandafter\def\csname rratio@E2@A_rho0.8@NL\endcsname{18.9}
+\expandafter\def\csname res@E2@A_rho0.9@Bayes-broad\endcsname{1.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.9@Bayes-broad\endcsname{$7.2\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E2@A_rho0.9@Bayes-broad\endcsname{1.26}
+\expandafter\def\csname res@E2@A_rho0.9@Bayes (matched)\endcsname{1.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.9@Bayes (matched)\endcsname{$6.0\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E2@A_rho0.9@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@A_rho0.9@Bayes (nominal)\endcsname{1.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.9@Bayes (nominal)\endcsname{$6.0\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E2@A_rho0.9@Bayes (nominal)\endcsname{1}
+\expandafter\def\csname res@E2@A_rho0.9@LSTM-broad s0\endcsname{5.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.9@LSTM-broad s0\endcsname{$5.8\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.9@LSTM-broad s0\endcsname{3.87}
+\expandafter\def\csname res@E2@A_rho0.9@LSTM-broad s1\endcsname{0.017}
+\expandafter\def\csname rfifty@E2@A_rho0.9@LSTM-broad s1\endcsname{$0.028$}
+\expandafter\def\csname rratio@E2@A_rho0.9@LSTM-broad s1\endcsname{12.5}
+\expandafter\def\csname res@E2@A_rho0.9@LSTM-broad s2\endcsname{8.0\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.9@LSTM-broad s2\endcsname{$9.9\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.9@LSTM-broad s2\endcsname{5.95}
+\expandafter\def\csname res@E2@A_rho0.9@LSTM-nominal s0\endcsname{6.0\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.9@LSTM-nominal s0\endcsname{$6.8\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.9@LSTM-nominal s0\endcsname{4.48}
+\expandafter\def\csname res@E2@A_rho0.9@LSTM-nominal s1\endcsname{5.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.9@LSTM-nominal s1\endcsname{$6.8\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.9@LSTM-nominal s1\endcsname{4.08}
+\expandafter\def\csname res@E2@A_rho0.9@LSTM-nominal s2\endcsname{4.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.9@LSTM-nominal s2\endcsname{$5.9\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.9@LSTM-nominal s2\endcsname{3.69}
+\expandafter\def\csname res@E2@A_rho0.9@NL\endcsname{0.142}
+\expandafter\def\csname rfifty@E2@A_rho0.9@NL\endcsname{$0.244$}
+\expandafter\def\csname rratio@E2@A_rho0.9@NL\endcsname{106}
+\expandafter\def\csname res@E2@A_rho0.95@Bayes-broad\endcsname{1.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.95@Bayes-broad\endcsname{$7.5\!\times\!10^{-5}$$^\dagger$}
+\expandafter\def\csname rratio@E2@A_rho0.95@Bayes-broad\endcsname{1.04}
+\expandafter\def\csname res@E2@A_rho0.95@Bayes (matched)\endcsname{1.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.95@Bayes (matched)\endcsname{$7.5\!\times\!10^{-5}$$^\dagger$}
+\expandafter\def\csname rratio@E2@A_rho0.95@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@A_rho0.95@Bayes (nominal)\endcsname{1.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.95@Bayes (nominal)\endcsname{$7.5\!\times\!10^{-5}$$^\dagger$}
+\expandafter\def\csname rratio@E2@A_rho0.95@Bayes (nominal)\endcsname{1.01}
+\expandafter\def\csname res@E2@A_rho0.95@LSTM-broad s0\endcsname{5.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.95@LSTM-broad s0\endcsname{$5.5\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.95@LSTM-broad s0\endcsname{3.19}
+\expandafter\def\csname res@E2@A_rho0.95@LSTM-broad s1\endcsname{0.019}
+\expandafter\def\csname rfifty@E2@A_rho0.95@LSTM-broad s1\endcsname{$0.031$}
+\expandafter\def\csname rratio@E2@A_rho0.95@LSTM-broad s1\endcsname{11.4}
+\expandafter\def\csname res@E2@A_rho0.95@LSTM-broad s2\endcsname{8.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.95@LSTM-broad s2\endcsname{$0.011$}
+\expandafter\def\csname rratio@E2@A_rho0.95@LSTM-broad s2\endcsname{5.24}
+\expandafter\def\csname res@E2@A_rho0.95@LSTM-nominal s0\endcsname{7.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.95@LSTM-nominal s0\endcsname{$7.4\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.95@LSTM-nominal s0\endcsname{4.35}
+\expandafter\def\csname res@E2@A_rho0.95@LSTM-nominal s1\endcsname{5.8\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.95@LSTM-nominal s1\endcsname{$6.0\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.95@LSTM-nominal s1\endcsname{3.52}
+\expandafter\def\csname res@E2@A_rho0.95@LSTM-nominal s2\endcsname{5.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.95@LSTM-nominal s2\endcsname{$5.8\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.95@LSTM-nominal s2\endcsname{3.39}
+\expandafter\def\csname res@E2@A_rho0.95@NL\endcsname{0.107}
+\expandafter\def\csname rfifty@E2@A_rho0.95@NL\endcsname{$0.179$}
+\expandafter\def\csname rratio@E2@A_rho0.95@NL\endcsname{64.9}
+\expandafter\def\csname res@E2@A_rho0.99@Bayes-broad\endcsname{4.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.99@Bayes-broad\endcsname{$<7.5\!\times\!10^{-5}$}
+\expandafter\def\csname rratio@E2@A_rho0.99@Bayes-broad\endcsname{1.02}
+\expandafter\def\csname res@E2@A_rho0.99@Bayes (matched)\endcsname{4.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.99@Bayes (matched)\endcsname{$<7.5\!\times\!10^{-5}$}
+\expandafter\def\csname rratio@E2@A_rho0.99@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@A_rho0.99@Bayes (nominal)\endcsname{4.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.99@Bayes (nominal)\endcsname{$<7.5\!\times\!10^{-5}$}
+\expandafter\def\csname rratio@E2@A_rho0.99@Bayes (nominal)\endcsname{1.03}
+\expandafter\def\csname res@E2@A_rho0.99@LSTM-broad s0\endcsname{6.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.99@LSTM-broad s0\endcsname{$4.8\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.99@LSTM-broad s0\endcsname{1.5}
+\expandafter\def\csname res@E2@A_rho0.99@LSTM-broad s1\endcsname{0.017}
+\expandafter\def\csname rfifty@E2@A_rho0.99@LSTM-broad s1\endcsname{$0.025$}
+\expandafter\def\csname rratio@E2@A_rho0.99@LSTM-broad s1\endcsname{3.87}
+\expandafter\def\csname res@E2@A_rho0.99@LSTM-broad s2\endcsname{9.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.99@LSTM-broad s2\endcsname{$0.011$}
+\expandafter\def\csname rratio@E2@A_rho0.99@LSTM-broad s2\endcsname{2.27}
+\expandafter\def\csname res@E2@A_rho0.99@LSTM-nominal s0\endcsname{8.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.99@LSTM-nominal s0\endcsname{$8.8\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.99@LSTM-nominal s0\endcsname{1.97}
+\expandafter\def\csname res@E2@A_rho0.99@LSTM-nominal s1\endcsname{8.1\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.99@LSTM-nominal s1\endcsname{$8.1\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.99@LSTM-nominal s1\endcsname{1.85}
+\expandafter\def\csname res@E2@A_rho0.99@LSTM-nominal s2\endcsname{7.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.99@LSTM-nominal s2\endcsname{$7.3\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.99@LSTM-nominal s2\endcsname{1.75}
+\expandafter\def\csname res@E2@A_rho0.99@NL\endcsname{0.062}
+\expandafter\def\csname rfifty@E2@A_rho0.99@NL\endcsname{$0.092$}
+\expandafter\def\csname rratio@E2@A_rho0.99@NL\endcsname{14.2}
+\expandafter\def\csname res@E2@A_rho0.995@Bayes-broad\endcsname{5.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.995@Bayes-broad\endcsname{$<7.5\!\times\!10^{-5}$}
+\expandafter\def\csname rratio@E2@A_rho0.995@Bayes-broad\endcsname{1.01}
+\expandafter\def\csname res@E2@A_rho0.995@Bayes (matched)\endcsname{5.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.995@Bayes (matched)\endcsname{$<7.5\!\times\!10^{-5}$}
+\expandafter\def\csname rratio@E2@A_rho0.995@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@A_rho0.995@Bayes (nominal)\endcsname{5.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.995@Bayes (nominal)\endcsname{$<7.5\!\times\!10^{-5}$}
+\expandafter\def\csname rratio@E2@A_rho0.995@Bayes (nominal)\endcsname{1.01}
+\expandafter\def\csname res@E2@A_rho0.995@LSTM-broad s0\endcsname{7.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.995@LSTM-broad s0\endcsname{$5.1\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.995@LSTM-broad s0\endcsname{1.38}
+\expandafter\def\csname res@E2@A_rho0.995@LSTM-broad s1\endcsname{0.016}
+\expandafter\def\csname rfifty@E2@A_rho0.995@LSTM-broad s1\endcsname{$0.022$}
+\expandafter\def\csname rratio@E2@A_rho0.995@LSTM-broad s1\endcsname{2.96}
+\expandafter\def\csname res@E2@A_rho0.995@LSTM-broad s2\endcsname{9.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.995@LSTM-broad s2\endcsname{$0.010$}
+\expandafter\def\csname rratio@E2@A_rho0.995@LSTM-broad s2\endcsname{1.8}
+\expandafter\def\csname res@E2@A_rho0.995@LSTM-nominal s0\endcsname{8.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.995@LSTM-nominal s0\endcsname{$6.7\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.995@LSTM-nominal s0\endcsname{1.55}
+\expandafter\def\csname res@E2@A_rho0.995@LSTM-nominal s1\endcsname{8.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.995@LSTM-nominal s1\endcsname{$6.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.995@LSTM-nominal s1\endcsname{1.51}
+\expandafter\def\csname res@E2@A_rho0.995@LSTM-nominal s2\endcsname{8.0\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.995@LSTM-nominal s2\endcsname{$6.4\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.995@LSTM-nominal s2\endcsname{1.47}
+\expandafter\def\csname res@E2@A_rho0.995@NL\endcsname{0.054}
+\expandafter\def\csname rfifty@E2@A_rho0.995@NL\endcsname{$0.076$}
+\expandafter\def\csname rratio@E2@A_rho0.995@NL\endcsname{10}
+\expandafter\def\csname res@E2@B_rho0.0@Bayes-broad\endcsname{0.469}
+\expandafter\def\csname rfifty@E2@B_rho0.0@Bayes-broad\endcsname{$0.498$}
+\expandafter\def\csname rratio@E2@B_rho0.0@Bayes-broad\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.0@Bayes (matched)\endcsname{0.466}
+\expandafter\def\csname rfifty@E2@B_rho0.0@Bayes (matched)\endcsname{$0.499$}
+\expandafter\def\csname rratio@E2@B_rho0.0@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.0@Bayes (nominal)\endcsname{0.475}
+\expandafter\def\csname rfifty@E2@B_rho0.0@Bayes (nominal)\endcsname{$0.501$}
+\expandafter\def\csname rratio@E2@B_rho0.0@Bayes (nominal)\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.0@LSTM-broad s0\endcsname{0.471}
+\expandafter\def\csname rfifty@E2@B_rho0.0@LSTM-broad s0\endcsname{$0.496$}
+\expandafter\def\csname rratio@E2@B_rho0.0@LSTM-broad s0\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.0@LSTM-broad s1\endcsname{0.470}
+\expandafter\def\csname rfifty@E2@B_rho0.0@LSTM-broad s1\endcsname{$0.502$}
+\expandafter\def\csname rratio@E2@B_rho0.0@LSTM-broad s1\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.0@LSTM-broad s2\endcsname{0.471}
+\expandafter\def\csname rfifty@E2@B_rho0.0@LSTM-broad s2\endcsname{$0.494$}
+\expandafter\def\csname rratio@E2@B_rho0.0@LSTM-broad s2\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.0@LSTM-nominal s0\endcsname{0.478}
+\expandafter\def\csname rfifty@E2@B_rho0.0@LSTM-nominal s0\endcsname{$0.502$}
+\expandafter\def\csname rratio@E2@B_rho0.0@LSTM-nominal s0\endcsname{1.03}
+\expandafter\def\csname res@E2@B_rho0.0@LSTM-nominal s1\endcsname{0.475}
+\expandafter\def\csname rfifty@E2@B_rho0.0@LSTM-nominal s1\endcsname{$0.503$}
+\expandafter\def\csname rratio@E2@B_rho0.0@LSTM-nominal s1\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.0@LSTM-nominal s2\endcsname{0.477}
+\expandafter\def\csname rfifty@E2@B_rho0.0@LSTM-nominal s2\endcsname{$0.494$}
+\expandafter\def\csname rratio@E2@B_rho0.0@LSTM-nominal s2\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.0@NL\endcsname{0.468}
+\expandafter\def\csname rfifty@E2@B_rho0.0@NL\endcsname{$0.503$}
+\expandafter\def\csname rratio@E2@B_rho0.0@NL\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.3@Bayes-broad\endcsname{0.460}
+\expandafter\def\csname rfifty@E2@B_rho0.3@Bayes-broad\endcsname{$0.500$}
+\expandafter\def\csname rratio@E2@B_rho0.3@Bayes-broad\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.3@Bayes (matched)\endcsname{0.457}
+\expandafter\def\csname rfifty@E2@B_rho0.3@Bayes (matched)\endcsname{$0.501$}
+\expandafter\def\csname rratio@E2@B_rho0.3@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.3@Bayes (nominal)\endcsname{0.462}
+\expandafter\def\csname rfifty@E2@B_rho0.3@Bayes (nominal)\endcsname{$0.501$}
+\expandafter\def\csname rratio@E2@B_rho0.3@Bayes (nominal)\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.3@LSTM-broad s0\endcsname{0.458}
+\expandafter\def\csname rfifty@E2@B_rho0.3@LSTM-broad s0\endcsname{$0.492$}
+\expandafter\def\csname rratio@E2@B_rho0.3@LSTM-broad s0\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.3@LSTM-broad s1\endcsname{0.459}
+\expandafter\def\csname rfifty@E2@B_rho0.3@LSTM-broad s1\endcsname{$0.498$}
+\expandafter\def\csname rratio@E2@B_rho0.3@LSTM-broad s1\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.3@LSTM-broad s2\endcsname{0.459}
+\expandafter\def\csname rfifty@E2@B_rho0.3@LSTM-broad s2\endcsname{$0.495$}
+\expandafter\def\csname rratio@E2@B_rho0.3@LSTM-broad s2\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.3@LSTM-nominal s0\endcsname{0.465}
+\expandafter\def\csname rfifty@E2@B_rho0.3@LSTM-nominal s0\endcsname{$0.502$}
+\expandafter\def\csname rratio@E2@B_rho0.3@LSTM-nominal s0\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.3@LSTM-nominal s1\endcsname{0.467}
+\expandafter\def\csname rfifty@E2@B_rho0.3@LSTM-nominal s1\endcsname{$0.497$}
+\expandafter\def\csname rratio@E2@B_rho0.3@LSTM-nominal s1\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.3@LSTM-nominal s2\endcsname{0.468}
+\expandafter\def\csname rfifty@E2@B_rho0.3@LSTM-nominal s2\endcsname{$0.498$}
+\expandafter\def\csname rratio@E2@B_rho0.3@LSTM-nominal s2\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.3@NL\endcsname{0.465}
+\expandafter\def\csname rfifty@E2@B_rho0.3@NL\endcsname{$0.501$}
+\expandafter\def\csname rratio@E2@B_rho0.3@NL\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.5@Bayes-broad\endcsname{0.443}
+\expandafter\def\csname rfifty@E2@B_rho0.5@Bayes-broad\endcsname{$0.496$}
+\expandafter\def\csname rratio@E2@B_rho0.5@Bayes-broad\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.5@Bayes (matched)\endcsname{0.440}
+\expandafter\def\csname rfifty@E2@B_rho0.5@Bayes (matched)\endcsname{$0.500$}
+\expandafter\def\csname rratio@E2@B_rho0.5@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.5@Bayes (nominal)\endcsname{0.446}
+\expandafter\def\csname rfifty@E2@B_rho0.5@Bayes (nominal)\endcsname{$0.492$}
+\expandafter\def\csname rratio@E2@B_rho0.5@Bayes (nominal)\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.5@LSTM-broad s0\endcsname{0.444}
+\expandafter\def\csname rfifty@E2@B_rho0.5@LSTM-broad s0\endcsname{$0.501$}
+\expandafter\def\csname rratio@E2@B_rho0.5@LSTM-broad s0\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.5@LSTM-broad s1\endcsname{0.443}
+\expandafter\def\csname rfifty@E2@B_rho0.5@LSTM-broad s1\endcsname{$0.494$}
+\expandafter\def\csname rratio@E2@B_rho0.5@LSTM-broad s1\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.5@LSTM-broad s2\endcsname{0.443}
+\expandafter\def\csname rfifty@E2@B_rho0.5@LSTM-broad s2\endcsname{$0.496$}
+\expandafter\def\csname rratio@E2@B_rho0.5@LSTM-broad s2\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.5@LSTM-nominal s0\endcsname{0.449}
+\expandafter\def\csname rfifty@E2@B_rho0.5@LSTM-nominal s0\endcsname{$0.507$}
+\expandafter\def\csname rratio@E2@B_rho0.5@LSTM-nominal s0\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.5@LSTM-nominal s1\endcsname{0.449}
+\expandafter\def\csname rfifty@E2@B_rho0.5@LSTM-nominal s1\endcsname{$0.502$}
+\expandafter\def\csname rratio@E2@B_rho0.5@LSTM-nominal s1\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.5@LSTM-nominal s2\endcsname{0.449}
+\expandafter\def\csname rfifty@E2@B_rho0.5@LSTM-nominal s2\endcsname{$0.497$}
+\expandafter\def\csname rratio@E2@B_rho0.5@LSTM-nominal s2\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.5@NL\endcsname{0.457}
+\expandafter\def\csname rfifty@E2@B_rho0.5@NL\endcsname{$0.506$}
+\expandafter\def\csname rratio@E2@B_rho0.5@NL\endcsname{1.04}
+\expandafter\def\csname res@E2@B_rho0.7@Bayes-broad\endcsname{0.388}
+\expandafter\def\csname rfifty@E2@B_rho0.7@Bayes-broad\endcsname{$0.493$}
+\expandafter\def\csname rratio@E2@B_rho0.7@Bayes-broad\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.7@Bayes (matched)\endcsname{0.380}
+\expandafter\def\csname rfifty@E2@B_rho0.7@Bayes (matched)\endcsname{$0.489$}
+\expandafter\def\csname rratio@E2@B_rho0.7@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.7@Bayes (nominal)\endcsname{0.390}
+\expandafter\def\csname rfifty@E2@B_rho0.7@Bayes (nominal)\endcsname{$0.489$}
+\expandafter\def\csname rratio@E2@B_rho0.7@Bayes (nominal)\endcsname{1.03}
+\expandafter\def\csname res@E2@B_rho0.7@LSTM-broad s0\endcsname{0.393}
+\expandafter\def\csname rfifty@E2@B_rho0.7@LSTM-broad s0\endcsname{$0.496$}
+\expandafter\def\csname rratio@E2@B_rho0.7@LSTM-broad s0\endcsname{1.03}
+\expandafter\def\csname res@E2@B_rho0.7@LSTM-broad s1\endcsname{0.402}
+\expandafter\def\csname rfifty@E2@B_rho0.7@LSTM-broad s1\endcsname{$0.497$}
+\expandafter\def\csname rratio@E2@B_rho0.7@LSTM-broad s1\endcsname{1.06}
+\expandafter\def\csname res@E2@B_rho0.7@LSTM-broad s2\endcsname{0.396}
+\expandafter\def\csname rfifty@E2@B_rho0.7@LSTM-broad s2\endcsname{$0.499$}
+\expandafter\def\csname rratio@E2@B_rho0.7@LSTM-broad s2\endcsname{1.04}
+\expandafter\def\csname res@E2@B_rho0.7@LSTM-nominal s0\endcsname{0.407}
+\expandafter\def\csname rfifty@E2@B_rho0.7@LSTM-nominal s0\endcsname{$0.496$}
+\expandafter\def\csname rratio@E2@B_rho0.7@LSTM-nominal s0\endcsname{1.07}
+\expandafter\def\csname res@E2@B_rho0.7@LSTM-nominal s1\endcsname{0.408}
+\expandafter\def\csname rfifty@E2@B_rho0.7@LSTM-nominal s1\endcsname{$0.494$}
+\expandafter\def\csname rratio@E2@B_rho0.7@LSTM-nominal s1\endcsname{1.07}
+\expandafter\def\csname res@E2@B_rho0.7@LSTM-nominal s2\endcsname{0.409}
+\expandafter\def\csname rfifty@E2@B_rho0.7@LSTM-nominal s2\endcsname{$0.500$}
+\expandafter\def\csname rratio@E2@B_rho0.7@LSTM-nominal s2\endcsname{1.07}
+\expandafter\def\csname res@E2@B_rho0.7@NL\endcsname{0.447}
+\expandafter\def\csname rfifty@E2@B_rho0.7@NL\endcsname{$0.501$}
+\expandafter\def\csname rratio@E2@B_rho0.7@NL\endcsname{1.17}
+\expandafter\def\csname res@E2@B_rho0.8@Bayes-broad\endcsname{0.310}
+\expandafter\def\csname rfifty@E2@B_rho0.8@Bayes-broad\endcsname{$0.442$}
+\expandafter\def\csname rratio@E2@B_rho0.8@Bayes-broad\endcsname{1.05}
+\expandafter\def\csname res@E2@B_rho0.8@Bayes (matched)\endcsname{0.296}
+\expandafter\def\csname rfifty@E2@B_rho0.8@Bayes (matched)\endcsname{$0.434$}
+\expandafter\def\csname rratio@E2@B_rho0.8@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.8@Bayes (nominal)\endcsname{0.304}
+\expandafter\def\csname rfifty@E2@B_rho0.8@Bayes (nominal)\endcsname{$0.443$}
+\expandafter\def\csname rratio@E2@B_rho0.8@Bayes (nominal)\endcsname{1.03}
+\expandafter\def\csname res@E2@B_rho0.8@LSTM-broad s0\endcsname{0.329}
+\expandafter\def\csname rfifty@E2@B_rho0.8@LSTM-broad s0\endcsname{$0.462$}
+\expandafter\def\csname rratio@E2@B_rho0.8@LSTM-broad s0\endcsname{1.11}
+\expandafter\def\csname res@E2@B_rho0.8@LSTM-broad s1\endcsname{0.353}
+\expandafter\def\csname rfifty@E2@B_rho0.8@LSTM-broad s1\endcsname{$0.481$}
+\expandafter\def\csname rratio@E2@B_rho0.8@LSTM-broad s1\endcsname{1.19}
+\expandafter\def\csname res@E2@B_rho0.8@LSTM-broad s2\endcsname{0.333}
+\expandafter\def\csname rfifty@E2@B_rho0.8@LSTM-broad s2\endcsname{$0.466$}
+\expandafter\def\csname rratio@E2@B_rho0.8@LSTM-broad s2\endcsname{1.12}
+\expandafter\def\csname res@E2@B_rho0.8@LSTM-nominal s0\endcsname{0.345}
+\expandafter\def\csname rfifty@E2@B_rho0.8@LSTM-nominal s0\endcsname{$0.477$}
+\expandafter\def\csname rratio@E2@B_rho0.8@LSTM-nominal s0\endcsname{1.17}
+\expandafter\def\csname res@E2@B_rho0.8@LSTM-nominal s1\endcsname{0.345}
+\expandafter\def\csname rfifty@E2@B_rho0.8@LSTM-nominal s1\endcsname{$0.475$}
+\expandafter\def\csname rratio@E2@B_rho0.8@LSTM-nominal s1\endcsname{1.17}
+\expandafter\def\csname res@E2@B_rho0.8@LSTM-nominal s2\endcsname{0.347}
+\expandafter\def\csname rfifty@E2@B_rho0.8@LSTM-nominal s2\endcsname{$0.479$}
+\expandafter\def\csname rratio@E2@B_rho0.8@LSTM-nominal s2\endcsname{1.17}
+\expandafter\def\csname res@E2@B_rho0.8@NL\endcsname{0.430}
+\expandafter\def\csname rfifty@E2@B_rho0.8@NL\endcsname{$0.501$}
+\expandafter\def\csname rratio@E2@B_rho0.8@NL\endcsname{1.45}
+\expandafter\def\csname res@E2@B_rho0.9@Bayes-broad\endcsname{0.179}
+\expandafter\def\csname rfifty@E2@B_rho0.9@Bayes-broad\endcsname{$0.269$}
+\expandafter\def\csname rratio@E2@B_rho0.9@Bayes-broad\endcsname{1.27}
+\expandafter\def\csname res@E2@B_rho0.9@Bayes (matched)\endcsname{0.141}
+\expandafter\def\csname rfifty@E2@B_rho0.9@Bayes (matched)\endcsname{$0.222$}
+\expandafter\def\csname rratio@E2@B_rho0.9@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.9@Bayes (nominal)\endcsname{0.142}
+\expandafter\def\csname rfifty@E2@B_rho0.9@Bayes (nominal)\endcsname{$0.222$}
+\expandafter\def\csname rratio@E2@B_rho0.9@Bayes (nominal)\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.9@LSTM-broad s0\endcsname{0.223}
+\expandafter\def\csname rfifty@E2@B_rho0.9@LSTM-broad s0\endcsname{$0.342$}
+\expandafter\def\csname rratio@E2@B_rho0.9@LSTM-broad s0\endcsname{1.58}
+\expandafter\def\csname res@E2@B_rho0.9@LSTM-broad s1\endcsname{0.267}
+\expandafter\def\csname rfifty@E2@B_rho0.9@LSTM-broad s1\endcsname{$0.400$}
+\expandafter\def\csname rratio@E2@B_rho0.9@LSTM-broad s1\endcsname{1.89}
+\expandafter\def\csname res@E2@B_rho0.9@LSTM-broad s2\endcsname{0.233}
+\expandafter\def\csname rfifty@E2@B_rho0.9@LSTM-broad s2\endcsname{$0.351$}
+\expandafter\def\csname rratio@E2@B_rho0.9@LSTM-broad s2\endcsname{1.65}
+\expandafter\def\csname res@E2@B_rho0.9@LSTM-nominal s0\endcsname{0.222}
+\expandafter\def\csname rfifty@E2@B_rho0.9@LSTM-nominal s0\endcsname{$0.349$}
+\expandafter\def\csname rratio@E2@B_rho0.9@LSTM-nominal s0\endcsname{1.58}
+\expandafter\def\csname res@E2@B_rho0.9@LSTM-nominal s1\endcsname{0.220}
+\expandafter\def\csname rfifty@E2@B_rho0.9@LSTM-nominal s1\endcsname{$0.343$}
+\expandafter\def\csname rratio@E2@B_rho0.9@LSTM-nominal s1\endcsname{1.56}
+\expandafter\def\csname res@E2@B_rho0.9@LSTM-nominal s2\endcsname{0.220}
+\expandafter\def\csname rfifty@E2@B_rho0.9@LSTM-nominal s2\endcsname{$0.348$}
+\expandafter\def\csname rratio@E2@B_rho0.9@LSTM-nominal s2\endcsname{1.56}
+\expandafter\def\csname res@E2@B_rho0.9@NL\endcsname{0.395}
+\expandafter\def\csname rfifty@E2@B_rho0.9@NL\endcsname{$0.492$}
+\expandafter\def\csname rratio@E2@B_rho0.9@NL\endcsname{2.8}
+\expandafter\def\csname res@E2@B_rho0.95@Bayes-broad\endcsname{0.099}
+\expandafter\def\csname rfifty@E2@B_rho0.95@Bayes-broad\endcsname{$0.131$}
+\expandafter\def\csname rratio@E2@B_rho0.95@Bayes-broad\endcsname{1.67}
+\expandafter\def\csname res@E2@B_rho0.95@Bayes (matched)\endcsname{0.060}
+\expandafter\def\csname rfifty@E2@B_rho0.95@Bayes (matched)\endcsname{$0.067$}
+\expandafter\def\csname rratio@E2@B_rho0.95@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.95@Bayes (nominal)\endcsname{0.069}
+\expandafter\def\csname rfifty@E2@B_rho0.95@Bayes (nominal)\endcsname{$0.085$}
+\expandafter\def\csname rratio@E2@B_rho0.95@Bayes (nominal)\endcsname{1.15}
+\expandafter\def\csname res@E2@B_rho0.95@LSTM-broad s0\endcsname{0.150}
+\expandafter\def\csname rfifty@E2@B_rho0.95@LSTM-broad s0\endcsname{$0.229$}
+\expandafter\def\csname rratio@E2@B_rho0.95@LSTM-broad s0\endcsname{2.52}
+\expandafter\def\csname res@E2@B_rho0.95@LSTM-broad s1\endcsname{0.206}
+\expandafter\def\csname rfifty@E2@B_rho0.95@LSTM-broad s1\endcsname{$0.322$}
+\expandafter\def\csname rratio@E2@B_rho0.95@LSTM-broad s1\endcsname{3.46}
+\expandafter\def\csname res@E2@B_rho0.95@LSTM-broad s2\endcsname{0.164}
+\expandafter\def\csname rfifty@E2@B_rho0.95@LSTM-broad s2\endcsname{$0.246$}
+\expandafter\def\csname rratio@E2@B_rho0.95@LSTM-broad s2\endcsname{2.76}
+\expandafter\def\csname res@E2@B_rho0.95@LSTM-nominal s0\endcsname{0.141}
+\expandafter\def\csname rfifty@E2@B_rho0.95@LSTM-nominal s0\endcsname{$0.213$}
+\expandafter\def\csname rratio@E2@B_rho0.95@LSTM-nominal s0\endcsname{2.37}
+\expandafter\def\csname res@E2@B_rho0.95@LSTM-nominal s1\endcsname{0.138}
+\expandafter\def\csname rfifty@E2@B_rho0.95@LSTM-nominal s1\endcsname{$0.211$}
+\expandafter\def\csname rratio@E2@B_rho0.95@LSTM-nominal s1\endcsname{2.33}
+\expandafter\def\csname res@E2@B_rho0.95@LSTM-nominal s2\endcsname{0.137}
+\expandafter\def\csname rfifty@E2@B_rho0.95@LSTM-nominal s2\endcsname{$0.207$}
+\expandafter\def\csname rratio@E2@B_rho0.95@LSTM-nominal s2\endcsname{2.3}
+\expandafter\def\csname res@E2@B_rho0.95@NL\endcsname{0.348}
+\expandafter\def\csname rfifty@E2@B_rho0.95@NL\endcsname{$0.462$}
+\expandafter\def\csname rratio@E2@B_rho0.95@NL\endcsname{5.85}
+\expandafter\def\csname res@E2@B_rho0.99@Bayes-broad\endcsname{0.059}
+\expandafter\def\csname rfifty@E2@B_rho0.99@Bayes-broad\endcsname{$0.032$}
+\expandafter\def\csname rratio@E2@B_rho0.99@Bayes-broad\endcsname{1.45}
+\expandafter\def\csname res@E2@B_rho0.99@Bayes (matched)\endcsname{0.041}
+\expandafter\def\csname rfifty@E2@B_rho0.99@Bayes (matched)\endcsname{$2.5\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@B_rho0.99@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.99@Bayes (nominal)\endcsname{0.051}
+\expandafter\def\csname rfifty@E2@B_rho0.99@Bayes (nominal)\endcsname{$0.021$}
+\expandafter\def\csname rratio@E2@B_rho0.99@Bayes (nominal)\endcsname{1.24}
+\expandafter\def\csname res@E2@B_rho0.99@LSTM-broad s0\endcsname{0.087}
+\expandafter\def\csname rfifty@E2@B_rho0.99@LSTM-broad s0\endcsname{$0.103$}
+\expandafter\def\csname rratio@E2@B_rho0.99@LSTM-broad s0\endcsname{2.14}
+\expandafter\def\csname res@E2@B_rho0.99@LSTM-broad s1\endcsname{0.131}
+\expandafter\def\csname rfifty@E2@B_rho0.99@LSTM-broad s1\endcsname{$0.186$}
+\expandafter\def\csname rratio@E2@B_rho0.99@LSTM-broad s1\endcsname{3.21}
+\expandafter\def\csname res@E2@B_rho0.99@LSTM-broad s2\endcsname{0.100}
+\expandafter\def\csname rfifty@E2@B_rho0.99@LSTM-broad s2\endcsname{$0.127$}
+\expandafter\def\csname rratio@E2@B_rho0.99@LSTM-broad s2\endcsname{2.46}
+\expandafter\def\csname res@E2@B_rho0.99@LSTM-nominal s0\endcsname{0.087}
+\expandafter\def\csname rfifty@E2@B_rho0.99@LSTM-nominal s0\endcsname{$0.106$}
+\expandafter\def\csname rratio@E2@B_rho0.99@LSTM-nominal s0\endcsname{2.13}
+\expandafter\def\csname res@E2@B_rho0.99@LSTM-nominal s1\endcsname{0.085}
+\expandafter\def\csname rfifty@E2@B_rho0.99@LSTM-nominal s1\endcsname{$0.102$}
+\expandafter\def\csname rratio@E2@B_rho0.99@LSTM-nominal s1\endcsname{2.08}
+\expandafter\def\csname res@E2@B_rho0.99@LSTM-nominal s2\endcsname{0.083}
+\expandafter\def\csname rfifty@E2@B_rho0.99@LSTM-nominal s2\endcsname{$0.098$}
+\expandafter\def\csname rratio@E2@B_rho0.99@LSTM-nominal s2\endcsname{2.04}
+\expandafter\def\csname res@E2@B_rho0.99@NL\endcsname{0.256}
+\expandafter\def\csname rfifty@E2@B_rho0.99@NL\endcsname{$0.348$}
+\expandafter\def\csname rratio@E2@B_rho0.99@NL\endcsname{6.27}
+\expandafter\def\csname res@E2@B_rho0.995@Bayes-broad\endcsname{0.058}
+\expandafter\def\csname rfifty@E2@B_rho0.995@Bayes-broad\endcsname{$0.022$}
+\expandafter\def\csname rratio@E2@B_rho0.995@Bayes-broad\endcsname{1.35}
+\expandafter\def\csname res@E2@B_rho0.995@Bayes (matched)\endcsname{0.043}
+\expandafter\def\csname rfifty@E2@B_rho0.995@Bayes (matched)\endcsname{$4.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E2@B_rho0.995@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.995@Bayes (nominal)\endcsname{0.052}
+\expandafter\def\csname rfifty@E2@B_rho0.995@Bayes (nominal)\endcsname{$0.016$}
+\expandafter\def\csname rratio@E2@B_rho0.995@Bayes (nominal)\endcsname{1.21}
+\expandafter\def\csname res@E2@B_rho0.995@LSTM-broad s0\endcsname{0.083}
+\expandafter\def\csname rfifty@E2@B_rho0.995@LSTM-broad s0\endcsname{$0.088$}
+\expandafter\def\csname rratio@E2@B_rho0.995@LSTM-broad s0\endcsname{1.92}
+\expandafter\def\csname res@E2@B_rho0.995@LSTM-broad s1\endcsname{0.124}
+\expandafter\def\csname rfifty@E2@B_rho0.995@LSTM-broad s1\endcsname{$0.167$}
+\expandafter\def\csname rratio@E2@B_rho0.995@LSTM-broad s1\endcsname{2.86}
+\expandafter\def\csname res@E2@B_rho0.995@LSTM-broad s2\endcsname{0.095}
+\expandafter\def\csname rfifty@E2@B_rho0.995@LSTM-broad s2\endcsname{$0.111$}
+\expandafter\def\csname rratio@E2@B_rho0.995@LSTM-broad s2\endcsname{2.19}
+\expandafter\def\csname res@E2@B_rho0.995@LSTM-nominal s0\endcsname{0.082}
+\expandafter\def\csname rfifty@E2@B_rho0.995@LSTM-nominal s0\endcsname{$0.089$}
+\expandafter\def\csname rratio@E2@B_rho0.995@LSTM-nominal s0\endcsname{1.9}
+\expandafter\def\csname res@E2@B_rho0.995@LSTM-nominal s1\endcsname{0.081}
+\expandafter\def\csname rfifty@E2@B_rho0.995@LSTM-nominal s1\endcsname{$0.086$}
+\expandafter\def\csname rratio@E2@B_rho0.995@LSTM-nominal s1\endcsname{1.86}
+\expandafter\def\csname res@E2@B_rho0.995@LSTM-nominal s2\endcsname{0.080}
+\expandafter\def\csname rfifty@E2@B_rho0.995@LSTM-nominal s2\endcsname{$0.084$}
+\expandafter\def\csname rratio@E2@B_rho0.995@LSTM-nominal s2\endcsname{1.86}
+\expandafter\def\csname res@E2@B_rho0.995@NL\endcsname{0.231}
+\expandafter\def\csname rfifty@E2@B_rho0.995@NL\endcsname{$0.299$}
+\expandafter\def\csname rratio@E2@B_rho0.995@NL\endcsname{5.33}
+\expandafter\def\csname res@E2@A_rho0.0@LSTM-broad\endcsname{0.304}
+\expandafter\def\csname rfifty@E2@A_rho0.0@LSTM-broad\endcsname{$0.434$}
+\expandafter\def\csname rratio@E2@A_rho0.0@LSTM-broad\endcsname{1.11}
+\expandafter\def\csname res@E2@A_rho0.0@LSTM-nominal\endcsname{0.368}
+\expandafter\def\csname rfifty@E2@A_rho0.0@LSTM-nominal\endcsname{$0.476$}
+\expandafter\def\csname rratio@E2@A_rho0.0@LSTM-nominal\endcsname{1.35}
+\expandafter\def\csname res@E2@A_rho0.3@LSTM-broad\endcsname{0.241}
+\expandafter\def\csname rfifty@E2@A_rho0.3@LSTM-broad\endcsname{$0.384$}
+\expandafter\def\csname rratio@E2@A_rho0.3@LSTM-broad\endcsname{1.04}
+\expandafter\def\csname res@E2@A_rho0.3@LSTM-nominal\endcsname{0.292}
+\expandafter\def\csname rfifty@E2@A_rho0.3@LSTM-nominal\endcsname{$0.427$}
+\expandafter\def\csname rratio@E2@A_rho0.3@LSTM-nominal\endcsname{1.26}
+\expandafter\def\csname res@E2@A_rho0.5@LSTM-broad\endcsname{0.147}
+\expandafter\def\csname rfifty@E2@A_rho0.5@LSTM-broad\endcsname{$0.260$}
+\expandafter\def\csname rratio@E2@A_rho0.5@LSTM-broad\endcsname{1.11}
+\expandafter\def\csname res@E2@A_rho0.5@LSTM-nominal\endcsname{0.195}
+\expandafter\def\csname rfifty@E2@A_rho0.5@LSTM-nominal\endcsname{$0.325$}
+\expandafter\def\csname rratio@E2@A_rho0.5@LSTM-nominal\endcsname{1.46}
+\expandafter\def\csname res@E2@A_rho0.7@LSTM-broad\endcsname{0.048}
+\expandafter\def\csname rfifty@E2@A_rho0.7@LSTM-broad\endcsname{$0.087$}
+\expandafter\def\csname rratio@E2@A_rho0.7@LSTM-broad\endcsname{1.43}
+\expandafter\def\csname res@E2@A_rho0.7@LSTM-nominal\endcsname{0.066}
+\expandafter\def\csname rfifty@E2@A_rho0.7@LSTM-nominal\endcsname{$0.124$}
+\expandafter\def\csname rratio@E2@A_rho0.7@LSTM-nominal\endcsname{1.97}
+\expandafter\def\csname res@E2@A_rho0.8@LSTM-broad\endcsname{0.020}
+\expandafter\def\csname rfifty@E2@A_rho0.8@LSTM-broad\endcsname{$0.034$}
+\expandafter\def\csname rratio@E2@A_rho0.8@LSTM-broad\endcsname{2.03}
+\expandafter\def\csname res@E2@A_rho0.8@LSTM-nominal\endcsname{0.021}
+\expandafter\def\csname rfifty@E2@A_rho0.8@LSTM-nominal\endcsname{$0.039$}
+\expandafter\def\csname rratio@E2@A_rho0.8@LSTM-nominal\endcsname{2.13}
+\expandafter\def\csname res@E2@A_rho0.9@LSTM-broad\endcsname{10.0\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.9@LSTM-broad\endcsname{$0.015$}
+\expandafter\def\csname rratio@E2@A_rho0.9@LSTM-broad\endcsname{7.45}
+\expandafter\def\csname res@E2@A_rho0.9@LSTM-nominal\endcsname{5.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.9@LSTM-nominal\endcsname{$6.5\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.9@LSTM-nominal\endcsname{4.08}
+\expandafter\def\csname res@E2@A_rho0.95@LSTM-broad\endcsname{0.011}
+\expandafter\def\csname rfifty@E2@A_rho0.95@LSTM-broad\endcsname{$0.016$}
+\expandafter\def\csname rratio@E2@A_rho0.95@LSTM-broad\endcsname{6.61}
+\expandafter\def\csname res@E2@A_rho0.95@LSTM-nominal\endcsname{6.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.95@LSTM-nominal\endcsname{$6.4\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.95@LSTM-nominal\endcsname{3.76}
+\expandafter\def\csname res@E2@A_rho0.99@LSTM-broad\endcsname{0.011}
+\expandafter\def\csname rfifty@E2@A_rho0.99@LSTM-broad\endcsname{$0.014$}
+\expandafter\def\csname rratio@E2@A_rho0.99@LSTM-broad\endcsname{2.55}
+\expandafter\def\csname res@E2@A_rho0.99@LSTM-nominal\endcsname{8.1\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.99@LSTM-nominal\endcsname{$8.1\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.99@LSTM-nominal\endcsname{1.85}
+\expandafter\def\csname res@E2@A_rho0.995@LSTM-broad\endcsname{0.011}
+\expandafter\def\csname rfifty@E2@A_rho0.995@LSTM-broad\endcsname{$0.012$}
+\expandafter\def\csname rratio@E2@A_rho0.995@LSTM-broad\endcsname{2.05}
+\expandafter\def\csname res@E2@A_rho0.995@LSTM-nominal\endcsname{8.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E2@A_rho0.995@LSTM-nominal\endcsname{$6.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E2@A_rho0.995@LSTM-nominal\endcsname{1.51}
+\expandafter\def\csname res@E2@B_rho0.0@LSTM-broad\endcsname{0.471}
+\expandafter\def\csname rfifty@E2@B_rho0.0@LSTM-broad\endcsname{$0.497$}
+\expandafter\def\csname rratio@E2@B_rho0.0@LSTM-broad\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.0@LSTM-nominal\endcsname{0.476}
+\expandafter\def\csname rfifty@E2@B_rho0.0@LSTM-nominal\endcsname{$0.500$}
+\expandafter\def\csname rratio@E2@B_rho0.0@LSTM-nominal\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.3@LSTM-broad\endcsname{0.458}
+\expandafter\def\csname rfifty@E2@B_rho0.3@LSTM-broad\endcsname{$0.495$}
+\expandafter\def\csname rratio@E2@B_rho0.3@LSTM-broad\endcsname{1}
+\expandafter\def\csname res@E2@B_rho0.3@LSTM-nominal\endcsname{0.467}
+\expandafter\def\csname rfifty@E2@B_rho0.3@LSTM-nominal\endcsname{$0.499$}
+\expandafter\def\csname rratio@E2@B_rho0.3@LSTM-nominal\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.5@LSTM-broad\endcsname{0.443}
+\expandafter\def\csname rfifty@E2@B_rho0.5@LSTM-broad\endcsname{$0.497$}
+\expandafter\def\csname rratio@E2@B_rho0.5@LSTM-broad\endcsname{1.01}
+\expandafter\def\csname res@E2@B_rho0.5@LSTM-nominal\endcsname{0.449}
+\expandafter\def\csname rfifty@E2@B_rho0.5@LSTM-nominal\endcsname{$0.502$}
+\expandafter\def\csname rratio@E2@B_rho0.5@LSTM-nominal\endcsname{1.02}
+\expandafter\def\csname res@E2@B_rho0.7@LSTM-broad\endcsname{0.397}
+\expandafter\def\csname rfifty@E2@B_rho0.7@LSTM-broad\endcsname{$0.497$}
+\expandafter\def\csname rratio@E2@B_rho0.7@LSTM-broad\endcsname{1.04}
+\expandafter\def\csname res@E2@B_rho0.7@LSTM-nominal\endcsname{0.408}
+\expandafter\def\csname rfifty@E2@B_rho0.7@LSTM-nominal\endcsname{$0.497$}
+\expandafter\def\csname rratio@E2@B_rho0.7@LSTM-nominal\endcsname{1.07}
+\expandafter\def\csname res@E2@B_rho0.8@LSTM-broad\endcsname{0.338}
+\expandafter\def\csname rfifty@E2@B_rho0.8@LSTM-broad\endcsname{$0.470$}
+\expandafter\def\csname rratio@E2@B_rho0.8@LSTM-broad\endcsname{1.14}
+\expandafter\def\csname res@E2@B_rho0.8@LSTM-nominal\endcsname{0.346}
+\expandafter\def\csname rfifty@E2@B_rho0.8@LSTM-nominal\endcsname{$0.477$}
+\expandafter\def\csname rratio@E2@B_rho0.8@LSTM-nominal\endcsname{1.17}
+\expandafter\def\csname res@E2@B_rho0.9@LSTM-broad\endcsname{0.241}
+\expandafter\def\csname rfifty@E2@B_rho0.9@LSTM-broad\endcsname{$0.364$}
+\expandafter\def\csname rratio@E2@B_rho0.9@LSTM-broad\endcsname{1.71}
+\expandafter\def\csname res@E2@B_rho0.9@LSTM-nominal\endcsname{0.221}
+\expandafter\def\csname rfifty@E2@B_rho0.9@LSTM-nominal\endcsname{$0.346$}
+\expandafter\def\csname rratio@E2@B_rho0.9@LSTM-nominal\endcsname{1.56}
+\expandafter\def\csname res@E2@B_rho0.95@LSTM-broad\endcsname{0.173}
+\expandafter\def\csname rfifty@E2@B_rho0.95@LSTM-broad\endcsname{$0.265$}
+\expandafter\def\csname rratio@E2@B_rho0.95@LSTM-broad\endcsname{2.92}
+\expandafter\def\csname res@E2@B_rho0.95@LSTM-nominal\endcsname{0.139}
+\expandafter\def\csname rfifty@E2@B_rho0.95@LSTM-nominal\endcsname{$0.210$}
+\expandafter\def\csname rratio@E2@B_rho0.95@LSTM-nominal\endcsname{2.33}
+\expandafter\def\csname res@E2@B_rho0.99@LSTM-broad\endcsname{0.106}
+\expandafter\def\csname rfifty@E2@B_rho0.99@LSTM-broad\endcsname{$0.139$}
+\expandafter\def\csname rratio@E2@B_rho0.99@LSTM-broad\endcsname{2.6}
+\expandafter\def\csname res@E2@B_rho0.99@LSTM-nominal\endcsname{0.085}
+\expandafter\def\csname rfifty@E2@B_rho0.99@LSTM-nominal\endcsname{$0.102$}
+\expandafter\def\csname rratio@E2@B_rho0.99@LSTM-nominal\endcsname{2.09}
+\expandafter\def\csname res@E2@B_rho0.995@LSTM-broad\endcsname{0.101}
+\expandafter\def\csname rfifty@E2@B_rho0.995@LSTM-broad\endcsname{$0.122$}
+\expandafter\def\csname rratio@E2@B_rho0.995@LSTM-broad\endcsname{2.32}
+\expandafter\def\csname res@E2@B_rho0.995@LSTM-nominal\endcsname{0.081}
+\expandafter\def\csname rfifty@E2@B_rho0.995@LSTM-nominal\endcsname{$0.087$}
+\expandafter\def\csname rratio@E2@B_rho0.995@LSTM-nominal\endcsname{1.87}
+\expandafter\def\csname res@E3@sq0.08@Bayes-broad\endcsname{0}
+\expandafter\def\csname rfifty@E3@sq0.08@Bayes-broad\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.08@Bayes (matched)\endcsname{0}
+\expandafter\def\csname rfifty@E3@sq0.08@Bayes (matched)\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.08@Bayes (nominal)\endcsname{2.0\!\times\!10^{-6}}
+\expandafter\def\csname rfifty@E3@sq0.08@Bayes (nominal)\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.08@LSTM-broad s0\endcsname{1.0\!\times\!10^{-6}}
+\expandafter\def\csname rfifty@E3@sq0.08@LSTM-broad s0\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.08@LSTM-broad s1\endcsname{2.0\!\times\!10^{-6}}
+\expandafter\def\csname rfifty@E3@sq0.08@LSTM-broad s1\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.08@LSTM-broad s2\endcsname{1.0\!\times\!10^{-6}}
+\expandafter\def\csname rfifty@E3@sq0.08@LSTM-broad s2\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.08@LSTM-nominal s0\endcsname{2.6\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.08@LSTM-nominal s0\endcsname{$5.0\!\times\!10^{-5}$$^\dagger$}
+\expandafter\def\csname res@E3@sq0.08@LSTM-nominal s1\endcsname{2.0\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.08@LSTM-nominal s1\endcsname{$5.0\!\times\!10^{-5}$$^\dagger$}
+\expandafter\def\csname res@E3@sq0.08@LSTM-nominal s2\endcsname{2.6\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.08@LSTM-nominal s2\endcsname{$5.0\!\times\!10^{-5}$$^\dagger$}
+\expandafter\def\csname res@E3@sq0.08@NL\endcsname{4.2\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.08@NL\endcsname{$1.5\!\times\!10^{-4}$$^\dagger$}
+\expandafter\def\csname res@E3@sq0.1@Bayes-broad\endcsname{1.0\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.1@Bayes-broad\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.1@Bayes (matched)\endcsname{0}
+\expandafter\def\csname rfifty@E3@sq0.1@Bayes (matched)\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.1@Bayes (nominal)\endcsname{3.0\!\times\!10^{-6}}
+\expandafter\def\csname rfifty@E3@sq0.1@Bayes (nominal)\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.1@LSTM-broad s0\endcsname{7.0\!\times\!10^{-6}}
+\expandafter\def\csname rfifty@E3@sq0.1@LSTM-broad s0\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.1@LSTM-broad s1\endcsname{1.6\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.1@LSTM-broad s1\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.1@LSTM-broad s2\endcsname{1.0\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.1@LSTM-broad s2\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.1@LSTM-nominal s0\endcsname{2.9\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.1@LSTM-nominal s0\endcsname{$1.0\!\times\!10^{-4}$$^\dagger$}
+\expandafter\def\csname res@E3@sq0.1@LSTM-nominal s1\endcsname{5.0\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.1@LSTM-nominal s1\endcsname{$1.0\!\times\!10^{-4}$$^\dagger$}
+\expandafter\def\csname res@E3@sq0.1@LSTM-nominal s2\endcsname{3.6\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.1@LSTM-nominal s2\endcsname{$1.0\!\times\!10^{-4}$$^\dagger$}
+\expandafter\def\csname res@E3@sq0.1@NL\endcsname{1.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.1@NL\endcsname{$2.4\!\times\!10^{-3}$}
+\expandafter\def\csname res@E3@sq0.14@Bayes-broad\endcsname{5.6\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.14@Bayes-broad\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E3@sq0.14@Bayes-broad\endcsname{1.75}
+\expandafter\def\csname res@E3@sq0.14@Bayes (matched)\endcsname{3.2\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.14@Bayes (matched)\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E3@sq0.14@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E3@sq0.14@Bayes (nominal)\endcsname{3.5\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.14@Bayes (nominal)\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E3@sq0.14@Bayes (nominal)\endcsname{1.09}
+\expandafter\def\csname res@E3@sq0.14@LSTM-broad s0\endcsname{1.4\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E3@sq0.14@LSTM-broad s0\endcsname{$1.0\!\times\!10^{-4}$$^\dagger$}
+\expandafter\def\csname rratio@E3@sq0.14@LSTM-broad s0\endcsname{4.28}
+\expandafter\def\csname res@E3@sq0.14@LSTM-broad s1\endcsname{5.0\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E3@sq0.14@LSTM-broad s1\endcsname{$7.0\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E3@sq0.14@LSTM-broad s1\endcsname{15.6}
+\expandafter\def\csname res@E3@sq0.14@LSTM-broad s2\endcsname{2.6\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E3@sq0.14@LSTM-broad s2\endcsname{$2.0\!\times\!10^{-4}$$^\dagger$}
+\expandafter\def\csname rratio@E3@sq0.14@LSTM-broad s2\endcsname{8.06}
+\expandafter\def\csname res@E3@sq0.14@LSTM-nominal s0\endcsname{1.1\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E3@sq0.14@LSTM-nominal s0\endcsname{$1.5\!\times\!10^{-4}$$^\dagger$}
+\expandafter\def\csname rratio@E3@sq0.14@LSTM-nominal s0\endcsname{3.53}
+\expandafter\def\csname res@E3@sq0.14@LSTM-nominal s1\endcsname{1.2\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E3@sq0.14@LSTM-nominal s1\endcsname{$2.0\!\times\!10^{-4}$$^\dagger$}
+\expandafter\def\csname rratio@E3@sq0.14@LSTM-nominal s1\endcsname{3.66}
+\expandafter\def\csname res@E3@sq0.14@LSTM-nominal s2\endcsname{1.5\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E3@sq0.14@LSTM-nominal s2\endcsname{$2.0\!\times\!10^{-4}$$^\dagger$}
+\expandafter\def\csname rratio@E3@sq0.14@LSTM-nominal s2\endcsname{4.78}
+\expandafter\def\csname res@E3@sq0.14@NL\endcsname{0.022}
+\expandafter\def\csname rfifty@E3@sq0.14@NL\endcsname{$0.041$}
+\expandafter\def\csname rratio@E3@sq0.14@NL\endcsname{691}
+\expandafter\def\csname res@E3@sq0.18@Bayes-broad\endcsname{5.9\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E3@sq0.18@Bayes-broad\endcsname{$1.5\!\times\!10^{-4}$$^\dagger$}
+\expandafter\def\csname rratio@E3@sq0.18@Bayes-broad\endcsname{1.33}
+\expandafter\def\csname res@E3@sq0.18@Bayes (matched)\endcsname{4.4\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E3@sq0.18@Bayes (matched)\endcsname{$5.0\!\times\!10^{-5}$$^\dagger$}
+\expandafter\def\csname rratio@E3@sq0.18@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E3@sq0.18@Bayes (nominal)\endcsname{4.8\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E3@sq0.18@Bayes (nominal)\endcsname{$1.0\!\times\!10^{-4}$$^\dagger$}
+\expandafter\def\csname rratio@E3@sq0.18@Bayes (nominal)\endcsname{1.1}
+\expandafter\def\csname res@E3@sq0.18@LSTM-broad s0\endcsname{2.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.18@LSTM-broad s0\endcsname{$2.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.18@LSTM-broad s0\endcsname{5.7}
+\expandafter\def\csname res@E3@sq0.18@LSTM-broad s1\endcsname{8.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.18@LSTM-broad s1\endcsname{$0.013$}
+\expandafter\def\csname rratio@E3@sq0.18@LSTM-broad s1\endcsname{18.6}
+\expandafter\def\csname res@E3@sq0.18@LSTM-broad s2\endcsname{4.0\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.18@LSTM-broad s2\endcsname{$4.8\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.18@LSTM-broad s2\endcsname{9.09}
+\expandafter\def\csname res@E3@sq0.18@LSTM-nominal s0\endcsname{2.1\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.18@LSTM-nominal s0\endcsname{$2.4\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.18@LSTM-nominal s0\endcsname{4.74}
+\expandafter\def\csname res@E3@sq0.18@LSTM-nominal s1\endcsname{1.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.18@LSTM-nominal s1\endcsname{$2.1\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.18@LSTM-nominal s1\endcsname{4.22}
+\expandafter\def\csname res@E3@sq0.18@LSTM-nominal s2\endcsname{1.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.18@LSTM-nominal s2\endcsname{$1.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.18@LSTM-nominal s2\endcsname{3.48}
+\expandafter\def\csname res@E3@sq0.18@NL\endcsname{0.097}
+\expandafter\def\csname rfifty@E3@sq0.18@NL\endcsname{$0.170$}
+\expandafter\def\csname rratio@E3@sq0.18@NL\endcsname{221}
+\expandafter\def\csname res@E3@sq0.2@Bayes-broad\endcsname{1.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.2@Bayes-broad\endcsname{$1.3\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.2@Bayes-broad\endcsname{1.22}
+\expandafter\def\csname res@E3@sq0.2@Bayes (matched)\endcsname{1.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.2@Bayes (matched)\endcsname{$1.1\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.2@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E3@sq0.2@Bayes (nominal)\endcsname{1.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.2@Bayes (nominal)\endcsname{$1.1\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.2@Bayes (nominal)\endcsname{1}
+\expandafter\def\csname res@E3@sq0.2@LSTM-broad s0\endcsname{5.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.2@LSTM-broad s0\endcsname{$6.9\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.2@LSTM-broad s0\endcsname{3.39}
+\expandafter\def\csname res@E3@sq0.2@LSTM-broad s1\endcsname{0.017}
+\expandafter\def\csname rfifty@E3@sq0.2@LSTM-broad s1\endcsname{$0.028$}
+\expandafter\def\csname rratio@E3@sq0.2@LSTM-broad s1\endcsname{10.8}
+\expandafter\def\csname res@E3@sq0.2@LSTM-broad s2\endcsname{7.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.2@LSTM-broad s2\endcsname{$9.8\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.2@LSTM-broad s2\endcsname{4.94}
+\expandafter\def\csname res@E3@sq0.2@LSTM-nominal s0\endcsname{5.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.2@LSTM-nominal s0\endcsname{$8.0\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.2@LSTM-nominal s0\endcsname{3.59}
+\expandafter\def\csname res@E3@sq0.2@LSTM-nominal s1\endcsname{5.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.2@LSTM-nominal s1\endcsname{$6.3\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.2@LSTM-nominal s1\endcsname{3.38}
+\expandafter\def\csname res@E3@sq0.2@LSTM-nominal s2\endcsname{4.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.2@LSTM-nominal s2\endcsname{$5.5\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.2@LSTM-nominal s2\endcsname{2.8}
+\expandafter\def\csname res@E3@sq0.2@NL\endcsname{0.148}
+\expandafter\def\csname rfifty@E3@sq0.2@NL\endcsname{$0.249$}
+\expandafter\def\csname rratio@E3@sq0.2@NL\endcsname{95}
+\expandafter\def\csname res@E3@sq0.22@Bayes-broad\endcsname{3.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.22@Bayes-broad\endcsname{$2.2\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.22@Bayes-broad\endcsname{1.19}
+\expandafter\def\csname res@E3@sq0.22@Bayes (matched)\endcsname{3.1\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.22@Bayes (matched)\endcsname{$2.1\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.22@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E3@sq0.22@Bayes (nominal)\endcsname{3.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.22@Bayes (nominal)\endcsname{$2.3\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.22@Bayes (nominal)\endcsname{1.02}
+\expandafter\def\csname res@E3@sq0.22@LSTM-broad s0\endcsname{0.011}
+\expandafter\def\csname rfifty@E3@sq0.22@LSTM-broad s0\endcsname{$0.014$}
+\expandafter\def\csname rratio@E3@sq0.22@LSTM-broad s0\endcsname{3.59}
+\expandafter\def\csname res@E3@sq0.22@LSTM-broad s1\endcsname{0.033}
+\expandafter\def\csname rfifty@E3@sq0.22@LSTM-broad s1\endcsname{$0.056$}
+\expandafter\def\csname rratio@E3@sq0.22@LSTM-broad s1\endcsname{10.5}
+\expandafter\def\csname res@E3@sq0.22@LSTM-broad s2\endcsname{0.015}
+\expandafter\def\csname rfifty@E3@sq0.22@LSTM-broad s2\endcsname{$0.019$}
+\expandafter\def\csname rratio@E3@sq0.22@LSTM-broad s2\endcsname{4.82}
+\expandafter\def\csname res@E3@sq0.22@LSTM-nominal s0\endcsname{0.012}
+\expandafter\def\csname rfifty@E3@sq0.22@LSTM-nominal s0\endcsname{$0.017$}
+\expandafter\def\csname rratio@E3@sq0.22@LSTM-nominal s0\endcsname{4.02}
+\expandafter\def\csname res@E3@sq0.22@LSTM-nominal s1\endcsname{0.011}
+\expandafter\def\csname rfifty@E3@sq0.22@LSTM-nominal s1\endcsname{$0.014$}
+\expandafter\def\csname rratio@E3@sq0.22@LSTM-nominal s1\endcsname{3.48}
+\expandafter\def\csname res@E3@sq0.22@LSTM-nominal s2\endcsname{0.011}
+\expandafter\def\csname rfifty@E3@sq0.22@LSTM-nominal s2\endcsname{$0.014$}
+\expandafter\def\csname rratio@E3@sq0.22@LSTM-nominal s2\endcsname{3.43}
+\expandafter\def\csname res@E3@sq0.22@NL\endcsname{0.190}
+\expandafter\def\csname rfifty@E3@sq0.22@NL\endcsname{$0.310$}
+\expandafter\def\csname rratio@E3@sq0.22@NL\endcsname{61}
+\expandafter\def\csname res@E3@sq0.26@Bayes-broad\endcsname{0.013}
+\expandafter\def\csname rfifty@E3@sq0.26@Bayes-broad\endcsname{$0.011$}
+\expandafter\def\csname rratio@E3@sq0.26@Bayes-broad\endcsname{1.23}
+\expandafter\def\csname res@E3@sq0.26@Bayes (matched)\endcsname{0.011}
+\expandafter\def\csname rfifty@E3@sq0.26@Bayes (matched)\endcsname{$9.2\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.26@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E3@sq0.26@Bayes (nominal)\endcsname{0.012}
+\expandafter\def\csname rfifty@E3@sq0.26@Bayes (nominal)\endcsname{$0.011$}
+\expandafter\def\csname rratio@E3@sq0.26@Bayes (nominal)\endcsname{1.09}
+\expandafter\def\csname res@E3@sq0.26@LSTM-broad s0\endcsname{0.035}
+\expandafter\def\csname rfifty@E3@sq0.26@LSTM-broad s0\endcsname{$0.045$}
+\expandafter\def\csname rratio@E3@sq0.26@LSTM-broad s0\endcsname{3.16}
+\expandafter\def\csname res@E3@sq0.26@LSTM-broad s1\endcsname{0.081}
+\expandafter\def\csname rfifty@E3@sq0.26@LSTM-broad s1\endcsname{$0.131$}
+\expandafter\def\csname rratio@E3@sq0.26@LSTM-broad s1\endcsname{7.34}
+\expandafter\def\csname res@E3@sq0.26@LSTM-broad s2\endcsname{0.045}
+\expandafter\def\csname rfifty@E3@sq0.26@LSTM-broad s2\endcsname{$0.062$}
+\expandafter\def\csname rratio@E3@sq0.26@LSTM-broad s2\endcsname{4.14}
+\expandafter\def\csname res@E3@sq0.26@LSTM-matched\endcsname{0.013}
+\expandafter\def\csname rfifty@E3@sq0.26@LSTM-matched\endcsname{$0.012$}
+\expandafter\def\csname rratio@E3@sq0.26@LSTM-matched\endcsname{1.17}
+\expandafter\def\csname res@E3@sq0.26@LSTM-nominal s0\endcsname{0.041}
+\expandafter\def\csname rfifty@E3@sq0.26@LSTM-nominal s0\endcsname{$0.061$}
+\expandafter\def\csname rratio@E3@sq0.26@LSTM-nominal s0\endcsname{3.69}
+\expandafter\def\csname res@E3@sq0.26@LSTM-nominal s1\endcsname{0.037}
+\expandafter\def\csname rfifty@E3@sq0.26@LSTM-nominal s1\endcsname{$0.055$}
+\expandafter\def\csname rratio@E3@sq0.26@LSTM-nominal s1\endcsname{3.4}
+\expandafter\def\csname res@E3@sq0.26@LSTM-nominal s2\endcsname{0.036}
+\expandafter\def\csname rfifty@E3@sq0.26@LSTM-nominal s2\endcsname{$0.053$}
+\expandafter\def\csname rratio@E3@sq0.26@LSTM-nominal s2\endcsname{3.31}
+\expandafter\def\csname res@E3@sq0.26@NL\endcsname{0.282}
+\expandafter\def\csname rfifty@E3@sq0.26@NL\endcsname{$0.414$}
+\expandafter\def\csname rratio@E3@sq0.26@NL\endcsname{25.7}
+\expandafter\def\csname res@E3@sq0.3@Bayes-broad\endcsname{0.040}
+\expandafter\def\csname rfifty@E3@sq0.3@Bayes-broad\endcsname{$0.042$}
+\expandafter\def\csname rratio@E3@sq0.3@Bayes-broad\endcsname{1.19}
+\expandafter\def\csname res@E3@sq0.3@Bayes (matched)\endcsname{0.034}
+\expandafter\def\csname rfifty@E3@sq0.3@Bayes (matched)\endcsname{$0.036$}
+\expandafter\def\csname rratio@E3@sq0.3@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E3@sq0.3@Bayes (nominal)\endcsname{0.037}
+\expandafter\def\csname rfifty@E3@sq0.3@Bayes (nominal)\endcsname{$0.043$}
+\expandafter\def\csname rratio@E3@sq0.3@Bayes (nominal)\endcsname{1.1}
+\expandafter\def\csname res@E3@sq0.3@LSTM-broad s0\endcsname{0.084}
+\expandafter\def\csname rfifty@E3@sq0.3@LSTM-broad s0\endcsname{$0.116$}
+\expandafter\def\csname rratio@E3@sq0.3@LSTM-broad s0\endcsname{2.48}
+\expandafter\def\csname res@E3@sq0.3@LSTM-broad s1\endcsname{0.152}
+\expandafter\def\csname rfifty@E3@sq0.3@LSTM-broad s1\endcsname{$0.243$}
+\expandafter\def\csname rratio@E3@sq0.3@LSTM-broad s1\endcsname{4.48}
+\expandafter\def\csname res@E3@sq0.3@LSTM-broad s2\endcsname{0.101}
+\expandafter\def\csname rfifty@E3@sq0.3@LSTM-broad s2\endcsname{$0.146$}
+\expandafter\def\csname rratio@E3@sq0.3@LSTM-broad s2\endcsname{2.97}
+\expandafter\def\csname res@E3@sq0.3@LSTM-nominal s0\endcsname{0.099}
+\expandafter\def\csname rfifty@E3@sq0.3@LSTM-nominal s0\endcsname{$0.148$}
+\expandafter\def\csname rratio@E3@sq0.3@LSTM-nominal s0\endcsname{2.91}
+\expandafter\def\csname res@E3@sq0.3@LSTM-nominal s1\endcsname{0.097}
+\expandafter\def\csname rfifty@E3@sq0.3@LSTM-nominal s1\endcsname{$0.151$}
+\expandafter\def\csname rratio@E3@sq0.3@LSTM-nominal s1\endcsname{2.84}
+\expandafter\def\csname res@E3@sq0.3@LSTM-nominal s2\endcsname{0.095}
+\expandafter\def\csname rfifty@E3@sq0.3@LSTM-nominal s2\endcsname{$0.149$}
+\expandafter\def\csname rratio@E3@sq0.3@LSTM-nominal s2\endcsname{2.79}
+\expandafter\def\csname res@E3@sq0.3@NL\endcsname{0.346}
+\expandafter\def\csname rfifty@E3@sq0.3@NL\endcsname{$0.459$}
+\expandafter\def\csname rratio@E3@sq0.3@NL\endcsname{10.2}
+\expandafter\def\csname res@E3@sq0.34@Bayes-broad\endcsname{0.090}
+\expandafter\def\csname rfifty@E3@sq0.34@Bayes-broad\endcsname{$0.107$}
+\expandafter\def\csname rratio@E3@sq0.34@Bayes-broad\endcsname{1.22}
+\expandafter\def\csname res@E3@sq0.34@Bayes (matched)\endcsname{0.074}
+\expandafter\def\csname rfifty@E3@sq0.34@Bayes (matched)\endcsname{$0.091$}
+\expandafter\def\csname rratio@E3@sq0.34@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E3@sq0.34@Bayes (nominal)\endcsname{0.089}
+\expandafter\def\csname rfifty@E3@sq0.34@Bayes (nominal)\endcsname{$0.117$}
+\expandafter\def\csname rratio@E3@sq0.34@Bayes (nominal)\endcsname{1.2}
+\expandafter\def\csname res@E3@sq0.34@LSTM-broad s0\endcsname{0.150}
+\expandafter\def\csname rfifty@E3@sq0.34@LSTM-broad s0\endcsname{$0.214$}
+\expandafter\def\csname rratio@E3@sq0.34@LSTM-broad s0\endcsname{2.03}
+\expandafter\def\csname res@E3@sq0.34@LSTM-broad s1\endcsname{0.226}
+\expandafter\def\csname rfifty@E3@sq0.34@LSTM-broad s1\endcsname{$0.343$}
+\expandafter\def\csname rratio@E3@sq0.34@LSTM-broad s1\endcsname{3.05}
+\expandafter\def\csname res@E3@sq0.34@LSTM-broad s2\endcsname{0.167}
+\expandafter\def\csname rfifty@E3@sq0.34@LSTM-broad s2\endcsname{$0.245$}
+\expandafter\def\csname rratio@E3@sq0.34@LSTM-broad s2\endcsname{2.26}
+\expandafter\def\csname res@E3@sq0.34@LSTM-nominal s0\endcsname{0.176}
+\expandafter\def\csname rfifty@E3@sq0.34@LSTM-nominal s0\endcsname{$0.268$}
+\expandafter\def\csname rratio@E3@sq0.34@LSTM-nominal s0\endcsname{2.38}
+\expandafter\def\csname res@E3@sq0.34@LSTM-nominal s1\endcsname{0.174}
+\expandafter\def\csname rfifty@E3@sq0.34@LSTM-nominal s1\endcsname{$0.262$}
+\expandafter\def\csname rratio@E3@sq0.34@LSTM-nominal s1\endcsname{2.34}
+\expandafter\def\csname res@E3@sq0.34@LSTM-nominal s2\endcsname{0.174}
+\expandafter\def\csname rfifty@E3@sq0.34@LSTM-nominal s2\endcsname{$0.273$}
+\expandafter\def\csname rratio@E3@sq0.34@LSTM-nominal s2\endcsname{2.35}
+\expandafter\def\csname res@E3@sq0.34@NL\endcsname{0.396}
+\expandafter\def\csname rfifty@E3@sq0.34@NL\endcsname{$0.492$}
+\expandafter\def\csname rratio@E3@sq0.34@NL\endcsname{5.35}
+\expandafter\def\csname res@E3@sq0.08@LSTM-broad\endcsname{1.3\!\times\!10^{-6}}
+\expandafter\def\csname rfifty@E3@sq0.08@LSTM-broad\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.08@LSTM-nominal\endcsname{2.4\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.08@LSTM-nominal\endcsname{$5.0\!\times\!10^{-5}$$^\dagger$}
+\expandafter\def\csname res@E3@sq0.1@LSTM-broad\endcsname{1.1\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.1@LSTM-broad\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname res@E3@sq0.1@LSTM-nominal\endcsname{3.8\!\times\!10^{-5}}
+\expandafter\def\csname rfifty@E3@sq0.1@LSTM-nominal\endcsname{$1.0\!\times\!10^{-4}$$^\dagger$}
+\expandafter\def\csname res@E3@sq0.14@LSTM-broad\endcsname{3.0\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E3@sq0.14@LSTM-broad\endcsname{$3.3\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E3@sq0.14@LSTM-broad\endcsname{9.32}
+\expandafter\def\csname res@E3@sq0.14@LSTM-nominal\endcsname{1.3\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E3@sq0.14@LSTM-nominal\endcsname{$1.8\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E3@sq0.14@LSTM-nominal\endcsname{3.99}
+\expandafter\def\csname res@E3@sq0.18@LSTM-broad\endcsname{4.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.18@LSTM-broad\endcsname{$6.8\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.18@LSTM-broad\endcsname{11.1}
+\expandafter\def\csname res@E3@sq0.18@LSTM-nominal\endcsname{1.8\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.18@LSTM-nominal\endcsname{$2.0\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.18@LSTM-nominal\endcsname{4.15}
+\expandafter\def\csname res@E3@sq0.2@LSTM-broad\endcsname{9.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.2@LSTM-broad\endcsname{$0.015$}
+\expandafter\def\csname rratio@E3@sq0.2@LSTM-broad\endcsname{6.38}
+\expandafter\def\csname res@E3@sq0.2@LSTM-nominal\endcsname{5.1\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E3@sq0.2@LSTM-nominal\endcsname{$6.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E3@sq0.2@LSTM-nominal\endcsname{3.26}
+\expandafter\def\csname res@E3@sq0.22@LSTM-broad\endcsname{0.020}
+\expandafter\def\csname rfifty@E3@sq0.22@LSTM-broad\endcsname{$0.029$}
+\expandafter\def\csname rratio@E3@sq0.22@LSTM-broad\endcsname{6.31}
+\expandafter\def\csname res@E3@sq0.22@LSTM-nominal\endcsname{0.011}
+\expandafter\def\csname rfifty@E3@sq0.22@LSTM-nominal\endcsname{$0.015$}
+\expandafter\def\csname rratio@E3@sq0.22@LSTM-nominal\endcsname{3.64}
+\expandafter\def\csname res@E3@sq0.26@LSTM-broad\endcsname{0.054}
+\expandafter\def\csname rfifty@E3@sq0.26@LSTM-broad\endcsname{$0.079$}
+\expandafter\def\csname rratio@E3@sq0.26@LSTM-broad\endcsname{4.88}
+\expandafter\def\csname res@E3@sq0.26@LSTM-nominal\endcsname{0.038}
+\expandafter\def\csname rfifty@E3@sq0.26@LSTM-nominal\endcsname{$0.056$}
+\expandafter\def\csname rratio@E3@sq0.26@LSTM-nominal\endcsname{3.47}
+\expandafter\def\csname res@E3@sq0.3@LSTM-broad\endcsname{0.113}
+\expandafter\def\csname rfifty@E3@sq0.3@LSTM-broad\endcsname{$0.168$}
+\expandafter\def\csname rratio@E3@sq0.3@LSTM-broad\endcsname{3.31}
+\expandafter\def\csname res@E3@sq0.3@LSTM-nominal\endcsname{0.097}
+\expandafter\def\csname rfifty@E3@sq0.3@LSTM-nominal\endcsname{$0.150$}
+\expandafter\def\csname rratio@E3@sq0.3@LSTM-nominal\endcsname{2.85}
+\expandafter\def\csname res@E3@sq0.34@LSTM-broad\endcsname{0.181}
+\expandafter\def\csname rfifty@E3@sq0.34@LSTM-broad\endcsname{$0.267$}
+\expandafter\def\csname rratio@E3@sq0.34@LSTM-broad\endcsname{2.44}
+\expandafter\def\csname res@E3@sq0.34@LSTM-nominal\endcsname{0.175}
+\expandafter\def\csname rfifty@E3@sq0.34@LSTM-nominal\endcsname{$0.268$}
+\expandafter\def\csname rratio@E3@sq0.34@LSTM-nominal\endcsname{2.36}
+\expandafter\def\csname res@E4@sm0.01@Bayes-broad\endcsname{7.5\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E4@sm0.01@Bayes-broad\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E4@sm0.01@Bayes-broad\endcsname{1.05}
+\expandafter\def\csname res@E4@sm0.01@Bayes (matched)\endcsname{7.2\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E4@sm0.01@Bayes (matched)\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E4@sm0.01@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E4@sm0.01@Bayes (nominal)\endcsname{7.4\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E4@sm0.01@Bayes (nominal)\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E4@sm0.01@Bayes (nominal)\endcsname{1.03}
+\expandafter\def\csname res@E4@sm0.01@LSTM-broad s0\endcsname{3.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.01@LSTM-broad s0\endcsname{$2.9\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.01@LSTM-broad s0\endcsname{4.79}
+\expandafter\def\csname res@E4@sm0.01@LSTM-broad s1\endcsname{9.8\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.01@LSTM-broad s1\endcsname{$0.015$}
+\expandafter\def\csname rratio@E4@sm0.01@LSTM-broad s1\endcsname{13.7}
+\expandafter\def\csname res@E4@sm0.01@LSTM-broad s2\endcsname{5.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.01@LSTM-broad s2\endcsname{$6.2\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.01@LSTM-broad s2\endcsname{7.55}
+\expandafter\def\csname res@E4@sm0.01@LSTM-nominal s0\endcsname{4.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.01@LSTM-nominal s0\endcsname{$4.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.01@LSTM-nominal s0\endcsname{6.29}
+\expandafter\def\csname res@E4@sm0.01@LSTM-nominal s1\endcsname{3.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.01@LSTM-nominal s1\endcsname{$3.3\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.01@LSTM-nominal s1\endcsname{5}
+\expandafter\def\csname res@E4@sm0.01@LSTM-nominal s2\endcsname{3.1\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.01@LSTM-nominal s2\endcsname{$3.0\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.01@LSTM-nominal s2\endcsname{4.25}
+\expandafter\def\csname res@E4@sm0.01@NL\endcsname{0.080}
+\expandafter\def\csname rfifty@E4@sm0.01@NL\endcsname{$0.140$}
+\expandafter\def\csname rratio@E4@sm0.01@NL\endcsname{111}
+\expandafter\def\csname res@E4@sm0.02@Bayes-broad\endcsname{8.3\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E4@sm0.02@Bayes-broad\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E4@sm0.02@Bayes-broad\endcsname{1.02}
+\expandafter\def\csname res@E4@sm0.02@Bayes (matched)\endcsname{8.2\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E4@sm0.02@Bayes (matched)\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E4@sm0.02@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E4@sm0.02@Bayes (nominal)\endcsname{8.3\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E4@sm0.02@Bayes (nominal)\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E4@sm0.02@Bayes (nominal)\endcsname{1.02}
+\expandafter\def\csname res@E4@sm0.02@LSTM-broad s0\endcsname{3.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.02@LSTM-broad s0\endcsname{$3.4\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.02@LSTM-broad s0\endcsname{4.04}
+\expandafter\def\csname res@E4@sm0.02@LSTM-broad s1\endcsname{0.011}
+\expandafter\def\csname rfifty@E4@sm0.02@LSTM-broad s1\endcsname{$0.017$}
+\expandafter\def\csname rratio@E4@sm0.02@LSTM-broad s1\endcsname{13.3}
+\expandafter\def\csname res@E4@sm0.02@LSTM-broad s2\endcsname{5.1\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.02@LSTM-broad s2\endcsname{$5.2\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.02@LSTM-broad s2\endcsname{6.21}
+\expandafter\def\csname res@E4@sm0.02@LSTM-nominal s0\endcsname{4.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.02@LSTM-nominal s0\endcsname{$3.8\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.02@LSTM-nominal s0\endcsname{5.35}
+\expandafter\def\csname res@E4@sm0.02@LSTM-nominal s1\endcsname{3.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.02@LSTM-nominal s1\endcsname{$3.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.02@LSTM-nominal s1\endcsname{4.55}
+\expandafter\def\csname res@E4@sm0.02@LSTM-nominal s2\endcsname{3.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.02@LSTM-nominal s2\endcsname{$2.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.02@LSTM-nominal s2\endcsname{3.9}
+\expandafter\def\csname res@E4@sm0.02@NL\endcsname{0.090}
+\expandafter\def\csname rfifty@E4@sm0.02@NL\endcsname{$0.157$}
+\expandafter\def\csname rratio@E4@sm0.02@NL\endcsname{110}
+\expandafter\def\csname res@E4@sm0.035@Bayes-broad\endcsname{9.9\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E4@sm0.035@Bayes-broad\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E4@sm0.035@Bayes-broad\endcsname{1.06}
+\expandafter\def\csname res@E4@sm0.035@Bayes (matched)\endcsname{9.3\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E4@sm0.035@Bayes (matched)\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E4@sm0.035@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E4@sm0.035@Bayes (nominal)\endcsname{9.4\!\times\!10^{-4}}
+\expandafter\def\csname rfifty@E4@sm0.035@Bayes (nominal)\endcsname{$<1.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E4@sm0.035@Bayes (nominal)\endcsname{1}
+\expandafter\def\csname res@E4@sm0.035@LSTM-broad s0\endcsname{4.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.035@LSTM-broad s0\endcsname{$4.3\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.035@LSTM-broad s0\endcsname{4.52}
+\expandafter\def\csname res@E4@sm0.035@LSTM-broad s1\endcsname{0.014}
+\expandafter\def\csname rfifty@E4@sm0.035@LSTM-broad s1\endcsname{$0.022$}
+\expandafter\def\csname rratio@E4@sm0.035@LSTM-broad s1\endcsname{15}
+\expandafter\def\csname res@E4@sm0.035@LSTM-broad s2\endcsname{7.0\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.035@LSTM-broad s2\endcsname{$8.4\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.035@LSTM-broad s2\endcsname{7.48}
+\expandafter\def\csname res@E4@sm0.035@LSTM-nominal s0\endcsname{4.8\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.035@LSTM-nominal s0\endcsname{$4.9\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.035@LSTM-nominal s0\endcsname{5.17}
+\expandafter\def\csname res@E4@sm0.035@LSTM-nominal s1\endcsname{4.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.035@LSTM-nominal s1\endcsname{$4.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.035@LSTM-nominal s1\endcsname{4.67}
+\expandafter\def\csname res@E4@sm0.035@LSTM-nominal s2\endcsname{3.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.035@LSTM-nominal s2\endcsname{$3.7\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.035@LSTM-nominal s2\endcsname{4.17}
+\expandafter\def\csname res@E4@sm0.035@NL\endcsname{0.113}
+\expandafter\def\csname rfifty@E4@sm0.035@NL\endcsname{$0.196$}
+\expandafter\def\csname rratio@E4@sm0.035@NL\endcsname{122}
+\expandafter\def\csname res@E4@sm0.05@Bayes-broad\endcsname{1.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.05@Bayes-broad\endcsname{$8.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E4@sm0.05@Bayes-broad\endcsname{1.15}
+\expandafter\def\csname res@E4@sm0.05@Bayes (matched)\endcsname{1.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.05@Bayes (matched)\endcsname{$9.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E4@sm0.05@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E4@sm0.05@Bayes (nominal)\endcsname{1.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.05@Bayes (nominal)\endcsname{$9.5\!\times\!10^{-4}$}
+\expandafter\def\csname rratio@E4@sm0.05@Bayes (nominal)\endcsname{1}
+\expandafter\def\csname res@E4@sm0.05@LSTM-broad s0\endcsname{5.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.05@LSTM-broad s0\endcsname{$6.2\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.05@LSTM-broad s0\endcsname{3.65}
+\expandafter\def\csname res@E4@sm0.05@LSTM-broad s1\endcsname{0.016}
+\expandafter\def\csname rfifty@E4@sm0.05@LSTM-broad s1\endcsname{$0.025$}
+\expandafter\def\csname rratio@E4@sm0.05@LSTM-broad s1\endcsname{10.9}
+\expandafter\def\csname res@E4@sm0.05@LSTM-broad s2\endcsname{7.8\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.05@LSTM-broad s2\endcsname{$9.8\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.05@LSTM-broad s2\endcsname{5.44}
+\expandafter\def\csname res@E4@sm0.05@LSTM-nominal s0\endcsname{5.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.05@LSTM-nominal s0\endcsname{$6.9\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.05@LSTM-nominal s0\endcsname{4.16}
+\expandafter\def\csname res@E4@sm0.05@LSTM-nominal s1\endcsname{5.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.05@LSTM-nominal s1\endcsname{$6.9\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.05@LSTM-nominal s1\endcsname{4.02}
+\expandafter\def\csname res@E4@sm0.05@LSTM-nominal s2\endcsname{5.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.05@LSTM-nominal s2\endcsname{$6.2\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.05@LSTM-nominal s2\endcsname{3.62}
+\expandafter\def\csname res@E4@sm0.05@NL\endcsname{0.143}
+\expandafter\def\csname rfifty@E4@sm0.05@NL\endcsname{$0.244$}
+\expandafter\def\csname rratio@E4@sm0.05@NL\endcsname{100}
+\expandafter\def\csname res@E4@sm0.07@Bayes-broad\endcsname{0.021}
+\expandafter\def\csname rfifty@E4@sm0.07@Bayes-broad\endcsname{$0.033$}
+\expandafter\def\csname rratio@E4@sm0.07@Bayes-broad\endcsname{2.03}
+\expandafter\def\csname res@E4@sm0.07@Bayes (matched)\endcsname{0.010}
+\expandafter\def\csname rfifty@E4@sm0.07@Bayes (matched)\endcsname{$0.017$}
+\expandafter\def\csname rratio@E4@sm0.07@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E4@sm0.07@Bayes (nominal)\endcsname{0.012}
+\expandafter\def\csname rfifty@E4@sm0.07@Bayes (nominal)\endcsname{$0.020$}
+\expandafter\def\csname rratio@E4@sm0.07@Bayes (nominal)\endcsname{1.17}
+\expandafter\def\csname res@E4@sm0.07@LSTM-broad s0\endcsname{0.033}
+\expandafter\def\csname rfifty@E4@sm0.07@LSTM-broad s0\endcsname{$0.057$}
+\expandafter\def\csname rratio@E4@sm0.07@LSTM-broad s0\endcsname{3.14}
+\expandafter\def\csname res@E4@sm0.07@LSTM-broad s1\endcsname{0.050}
+\expandafter\def\csname rfifty@E4@sm0.07@LSTM-broad s1\endcsname{$0.089$}
+\expandafter\def\csname rratio@E4@sm0.07@LSTM-broad s1\endcsname{4.85}
+\expandafter\def\csname res@E4@sm0.07@LSTM-broad s2\endcsname{0.036}
+\expandafter\def\csname rfifty@E4@sm0.07@LSTM-broad s2\endcsname{$0.061$}
+\expandafter\def\csname rratio@E4@sm0.07@LSTM-broad s2\endcsname{3.51}
+\expandafter\def\csname res@E4@sm0.07@LSTM-nominal s0\endcsname{0.029}
+\expandafter\def\csname rfifty@E4@sm0.07@LSTM-nominal s0\endcsname{$0.052$}
+\expandafter\def\csname rratio@E4@sm0.07@LSTM-nominal s0\endcsname{2.8}
+\expandafter\def\csname res@E4@sm0.07@LSTM-nominal s1\endcsname{0.030}
+\expandafter\def\csname rfifty@E4@sm0.07@LSTM-nominal s1\endcsname{$0.053$}
+\expandafter\def\csname rratio@E4@sm0.07@LSTM-nominal s1\endcsname{2.87}
+\expandafter\def\csname res@E4@sm0.07@LSTM-nominal s2\endcsname{0.030}
+\expandafter\def\csname rfifty@E4@sm0.07@LSTM-nominal s2\endcsname{$0.053$}
+\expandafter\def\csname rratio@E4@sm0.07@LSTM-nominal s2\endcsname{2.85}
+\expandafter\def\csname res@E4@sm0.07@NL\endcsname{0.203}
+\expandafter\def\csname rfifty@E4@sm0.07@NL\endcsname{$0.327$}
+\expandafter\def\csname rratio@E4@sm0.07@NL\endcsname{19.6}
+\expandafter\def\csname res@E4@sm0.1@Bayes-broad\endcsname{0.203}
+\expandafter\def\csname rfifty@E4@sm0.1@Bayes-broad\endcsname{$0.340$}
+\expandafter\def\csname rratio@E4@sm0.1@Bayes-broad\endcsname{1.92}
+\expandafter\def\csname res@E4@sm0.1@Bayes (matched)\endcsname{0.105}
+\expandafter\def\csname rfifty@E4@sm0.1@Bayes (matched)\endcsname{$0.181$}
+\expandafter\def\csname rratio@E4@sm0.1@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E4@sm0.1@Bayes (nominal)\endcsname{0.150}
+\expandafter\def\csname rfifty@E4@sm0.1@Bayes (nominal)\endcsname{$0.257$}
+\expandafter\def\csname rratio@E4@sm0.1@Bayes (nominal)\endcsname{1.42}
+\expandafter\def\csname res@E4@sm0.1@LSTM-broad s0\endcsname{0.211}
+\expandafter\def\csname rfifty@E4@sm0.1@LSTM-broad s0\endcsname{$0.354$}
+\expandafter\def\csname rratio@E4@sm0.1@LSTM-broad s0\endcsname{2}
+\expandafter\def\csname res@E4@sm0.1@LSTM-broad s1\endcsname{0.226}
+\expandafter\def\csname rfifty@E4@sm0.1@LSTM-broad s1\endcsname{$0.374$}
+\expandafter\def\csname rratio@E4@sm0.1@LSTM-broad s1\endcsname{2.14}
+\expandafter\def\csname res@E4@sm0.1@LSTM-broad s2\endcsname{0.215}
+\expandafter\def\csname rfifty@E4@sm0.1@LSTM-broad s2\endcsname{$0.358$}
+\expandafter\def\csname rratio@E4@sm0.1@LSTM-broad s2\endcsname{2.03}
+\expandafter\def\csname res@E4@sm0.1@LSTM-nominal s0\endcsname{0.212}
+\expandafter\def\csname rfifty@E4@sm0.1@LSTM-nominal s0\endcsname{$0.351$}
+\expandafter\def\csname rratio@E4@sm0.1@LSTM-nominal s0\endcsname{2.01}
+\expandafter\def\csname res@E4@sm0.1@LSTM-nominal s1\endcsname{0.213}
+\expandafter\def\csname rfifty@E4@sm0.1@LSTM-nominal s1\endcsname{$0.349$}
+\expandafter\def\csname rratio@E4@sm0.1@LSTM-nominal s1\endcsname{2.02}
+\expandafter\def\csname res@E4@sm0.1@LSTM-nominal s2\endcsname{0.219}
+\expandafter\def\csname rfifty@E4@sm0.1@LSTM-nominal s2\endcsname{$0.353$}
+\expandafter\def\csname rratio@E4@sm0.1@LSTM-nominal s2\endcsname{2.08}
+\expandafter\def\csname res@E4@sm0.1@NL\endcsname{0.304}
+\expandafter\def\csname rfifty@E4@sm0.1@NL\endcsname{$0.440$}
+\expandafter\def\csname rratio@E4@sm0.1@NL\endcsname{2.88}
+\expandafter\def\csname res@E4@sm0.12@Bayes-broad\endcsname{0.334}
+\expandafter\def\csname rfifty@E4@sm0.12@Bayes-broad\endcsname{$0.468$}
+\expandafter\def\csname rratio@E4@sm0.12@Bayes-broad\endcsname{1.55}
+\expandafter\def\csname res@E4@sm0.12@Bayes (matched)\endcsname{0.216}
+\expandafter\def\csname rfifty@E4@sm0.12@Bayes (matched)\endcsname{$0.339$}
+\expandafter\def\csname rratio@E4@sm0.12@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E4@sm0.12@Bayes (nominal)\endcsname{0.295}
+\expandafter\def\csname rfifty@E4@sm0.12@Bayes (nominal)\endcsname{$0.431$}
+\expandafter\def\csname rratio@E4@sm0.12@Bayes (nominal)\endcsname{1.36}
+\expandafter\def\csname res@E4@sm0.12@LSTM-broad s0\endcsname{0.337}
+\expandafter\def\csname rfifty@E4@sm0.12@LSTM-broad s0\endcsname{$0.473$}
+\expandafter\def\csname rratio@E4@sm0.12@LSTM-broad s0\endcsname{1.56}
+\expandafter\def\csname res@E4@sm0.12@LSTM-broad s1\endcsname{0.345}
+\expandafter\def\csname rfifty@E4@sm0.12@LSTM-broad s1\endcsname{$0.477$}
+\expandafter\def\csname rratio@E4@sm0.12@LSTM-broad s1\endcsname{1.6}
+\expandafter\def\csname res@E4@sm0.12@LSTM-broad s2\endcsname{0.337}
+\expandafter\def\csname rfifty@E4@sm0.12@LSTM-broad s2\endcsname{$0.468$}
+\expandafter\def\csname rratio@E4@sm0.12@LSTM-broad s2\endcsname{1.56}
+\expandafter\def\csname res@E4@sm0.12@LSTM-nominal s0\endcsname{0.342}
+\expandafter\def\csname rfifty@E4@sm0.12@LSTM-nominal s0\endcsname{$0.467$}
+\expandafter\def\csname rratio@E4@sm0.12@LSTM-nominal s0\endcsname{1.58}
+\expandafter\def\csname res@E4@sm0.12@LSTM-nominal s1\endcsname{0.343}
+\expandafter\def\csname rfifty@E4@sm0.12@LSTM-nominal s1\endcsname{$0.466$}
+\expandafter\def\csname rratio@E4@sm0.12@LSTM-nominal s1\endcsname{1.59}
+\expandafter\def\csname res@E4@sm0.12@LSTM-nominal s2\endcsname{0.352}
+\expandafter\def\csname rfifty@E4@sm0.12@LSTM-nominal s2\endcsname{$0.469$}
+\expandafter\def\csname rratio@E4@sm0.12@LSTM-nominal s2\endcsname{1.63}
+\expandafter\def\csname res@E4@sm0.12@NL\endcsname{0.370}
+\expandafter\def\csname rfifty@E4@sm0.12@NL\endcsname{$0.487$}
+\expandafter\def\csname rratio@E4@sm0.12@NL\endcsname{1.71}
+\expandafter\def\csname res@E4@sm0.01@LSTM-broad\endcsname{6.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.01@LSTM-broad\endcsname{$8.0\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.01@LSTM-broad\endcsname{8.68}
+\expandafter\def\csname res@E4@sm0.01@LSTM-nominal\endcsname{3.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.01@LSTM-nominal\endcsname{$3.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.01@LSTM-nominal\endcsname{5.18}
+\expandafter\def\csname res@E4@sm0.02@LSTM-broad\endcsname{6.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.02@LSTM-broad\endcsname{$8.5\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.02@LSTM-broad\endcsname{7.86}
+\expandafter\def\csname res@E4@sm0.02@LSTM-nominal\endcsname{3.8\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.02@LSTM-nominal\endcsname{$3.3\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.02@LSTM-nominal\endcsname{4.6}
+\expandafter\def\csname res@E4@sm0.035@LSTM-broad\endcsname{8.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.035@LSTM-broad\endcsname{$0.012$}
+\expandafter\def\csname rratio@E4@sm0.035@LSTM-broad\endcsname{9.02}
+\expandafter\def\csname res@E4@sm0.035@LSTM-nominal\endcsname{4.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.035@LSTM-nominal\endcsname{$4.4\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.035@LSTM-nominal\endcsname{4.67}
+\expandafter\def\csname res@E4@sm0.05@LSTM-broad\endcsname{9.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.05@LSTM-broad\endcsname{$0.014$}
+\expandafter\def\csname rratio@E4@sm0.05@LSTM-broad\endcsname{6.66}
+\expandafter\def\csname res@E4@sm0.05@LSTM-nominal\endcsname{5.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E4@sm0.05@LSTM-nominal\endcsname{$6.7\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E4@sm0.05@LSTM-nominal\endcsname{3.93}
+\expandafter\def\csname res@E4@sm0.07@LSTM-broad\endcsname{0.040}
+\expandafter\def\csname rfifty@E4@sm0.07@LSTM-broad\endcsname{$0.069$}
+\expandafter\def\csname rratio@E4@sm0.07@LSTM-broad\endcsname{3.83}
+\expandafter\def\csname res@E4@sm0.07@LSTM-nominal\endcsname{0.029}
+\expandafter\def\csname rfifty@E4@sm0.07@LSTM-nominal\endcsname{$0.052$}
+\expandafter\def\csname rratio@E4@sm0.07@LSTM-nominal\endcsname{2.84}
+\expandafter\def\csname res@E4@sm0.1@LSTM-broad\endcsname{0.217}
+\expandafter\def\csname rfifty@E4@sm0.1@LSTM-broad\endcsname{$0.362$}
+\expandafter\def\csname rratio@E4@sm0.1@LSTM-broad\endcsname{2.06}
+\expandafter\def\csname res@E4@sm0.1@LSTM-nominal\endcsname{0.215}
+\expandafter\def\csname rfifty@E4@sm0.1@LSTM-nominal\endcsname{$0.351$}
+\expandafter\def\csname rratio@E4@sm0.1@LSTM-nominal\endcsname{2.04}
+\expandafter\def\csname res@E4@sm0.12@LSTM-broad\endcsname{0.339}
+\expandafter\def\csname rfifty@E4@sm0.12@LSTM-broad\endcsname{$0.473$}
+\expandafter\def\csname rratio@E4@sm0.12@LSTM-broad\endcsname{1.57}
+\expandafter\def\csname res@E4@sm0.12@LSTM-nominal\endcsname{0.346}
+\expandafter\def\csname rfifty@E4@sm0.12@LSTM-nominal\endcsname{$0.467$}
+\expandafter\def\csname rratio@E4@sm0.12@LSTM-nominal\endcsname{1.6}
+\expandafter\def\csname res@E5@nominal@Bayes (matched)\endcsname{1.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes (matched)\endcsname{$1.1\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes (matched)\endcsname{1}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.0 sq'x0.5\endcsname{0.280}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.0 sq'x0.5\endcsname{$0.414$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.0 sq'x0.5\endcsname{184}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.0 sq'x0.75\endcsname{0.217}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.0 sq'x0.75\endcsname{$0.343$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.0 sq'x0.75\endcsname{143}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.0 sq'x1.0\endcsname{0.195}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.0 sq'x1.0\endcsname{$0.316$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.0 sq'x1.0\endcsname{128}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.0 sq'x1.5\endcsname{0.181}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.0 sq'x1.5\endcsname{$0.295$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.0 sq'x1.5\endcsname{119}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.0 sq'x2.0\endcsname{0.242}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.0 sq'x2.0\endcsname{$0.497$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.0 sq'x2.0\endcsname{159}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.5 sq'x0.5\endcsname{0.018}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.5 sq'x0.5\endcsname{$0.029$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.5 sq'x0.5\endcsname{12}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.5 sq'x0.75\endcsname{9.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.5 sq'x0.75\endcsname{$0.014$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.5 sq'x0.75\endcsname{6.17}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.5 sq'x1.0\endcsname{7.8\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.5 sq'x1.0\endcsname{$0.012$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.5 sq'x1.0\endcsname{5.16}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.5 sq'x1.5\endcsname{7.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.5 sq'x1.5\endcsname{$0.011$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.5 sq'x1.5\endcsname{4.98}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.5 sq'x2.0\endcsname{0.010}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.5 sq'x2.0\endcsname{$0.016$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.5 sq'x2.0\endcsname{6.89}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.7 sq'x0.5\endcsname{6.0\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.7 sq'x0.5\endcsname{$8.7\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.7 sq'x0.5\endcsname{3.92}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.7 sq'x0.75\endcsname{2.8\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.7 sq'x0.75\endcsname{$2.9\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.7 sq'x0.75\endcsname{1.82}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.7 sq'x1.0\endcsname{2.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.7 sq'x1.0\endcsname{$2.4\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.7 sq'x1.0\endcsname{1.62}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.7 sq'x1.5\endcsname{3.0\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.7 sq'x1.5\endcsname{$3.5\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.7 sq'x1.5\endcsname{1.96}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.7 sq'x2.0\endcsname{4.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.7 sq'x2.0\endcsname{$5.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.7 sq'x2.0\endcsname{2.83}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.8 sq'x0.5\endcsname{4.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.8 sq'x0.5\endcsname{$6.5\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.8 sq'x0.5\endcsname{2.8}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.8 sq'x0.75\endcsname{1.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.8 sq'x0.75\endcsname{$1.5\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.8 sq'x0.75\endcsname{1.13}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.8 sq'x1.0\endcsname{1.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.8 sq'x1.0\endcsname{$1.4\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.8 sq'x1.0\endcsname{1.11}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.8 sq'x1.5\endcsname{2.1\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.8 sq'x1.5\endcsname{$2.1\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.8 sq'x1.5\endcsname{1.36}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.8 sq'x2.0\endcsname{2.8\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.8 sq'x2.0\endcsname{$2.9\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.8 sq'x2.0\endcsname{1.86}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.95 sq'x0.5\endcsname{9.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.95 sq'x0.5\endcsname{$0.018$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.95 sq'x0.5\endcsname{6.49}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.95 sq'x0.75\endcsname{2.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.95 sq'x0.75\endcsname{$2.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.95 sq'x0.75\endcsname{1.52}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.95 sq'x1.0\endcsname{1.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.95 sq'x1.0\endcsname{$1.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.95 sq'x1.0\endcsname{1.15}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.95 sq'x1.5\endcsname{1.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.95 sq'x1.5\endcsname{$1.2\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.95 sq'x1.5\endcsname{1.05}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.95 sq'x2.0\endcsname{1.8\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.95 sq'x2.0\endcsname{$1.5\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.95 sq'x2.0\endcsname{1.21}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.99 sq'x0.5\endcsname{0.141}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.99 sq'x0.5\endcsname{$0.256$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.99 sq'x0.5\endcsname{92.4}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.99 sq'x0.75\endcsname{0.043}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.99 sq'x0.75\endcsname{$0.083$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.99 sq'x0.75\endcsname{28.3}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.99 sq'x1.0\endcsname{0.014}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.99 sq'x1.0\endcsname{$0.026$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.99 sq'x1.0\endcsname{9.04}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.99 sq'x1.5\endcsname{3.4\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.99 sq'x1.5\endcsname{$4.5\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.99 sq'x1.5\endcsname{2.23}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.99 sq'x2.0\endcsname{2.1\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.99 sq'x2.0\endcsname{$2.2\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.99 sq'x2.0\endcsname{1.39}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.9 sq'x0.5\endcsname{4.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.9 sq'x0.5\endcsname{$7.1\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.9 sq'x0.5\endcsname{2.98}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.9 sq'x0.75\endcsname{1.6\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.9 sq'x0.75\endcsname{$1.4\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.9 sq'x0.75\endcsname{1.07}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.9 sq'x1.5\endcsname{1.7\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.9 sq'x1.5\endcsname{$1.4\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.9 sq'x1.5\endcsname{1.13}
+\expandafter\def\csname res@E5@nominal@Bayes rho'=0.9 sq'x2.0\endcsname{2.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes rho'=0.9 sq'x2.0\endcsname{$2.0\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes rho'=0.9 sq'x2.0\endcsname{1.45}
+\expandafter\def\csname res@E5@nominal@Bayes sm'x0.5\endcsname{2.0\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes sm'x0.5\endcsname{$1.8\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes sm'x0.5\endcsname{1.32}
+\expandafter\def\csname res@E5@nominal@Bayes sm'x2.0\endcsname{3.0\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@Bayes sm'x2.0\endcsname{$3.6\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@Bayes sm'x2.0\endcsname{1.95}
+\expandafter\def\csname res@E5@nominal@LSTM-broad s0\endcsname{5.5\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@LSTM-broad s0\endcsname{$6.9\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@LSTM-broad s0\endcsname{3.64}
+\expandafter\def\csname res@E5@nominal@LSTM-broad s1\endcsname{0.017}
+\expandafter\def\csname rfifty@E5@nominal@LSTM-broad s1\endcsname{$0.028$}
+\expandafter\def\csname rratio@E5@nominal@LSTM-broad s1\endcsname{11.3}
+\expandafter\def\csname res@E5@nominal@LSTM-broad s2\endcsname{8.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@LSTM-broad s2\endcsname{$0.010$}
+\expandafter\def\csname rratio@E5@nominal@LSTM-broad s2\endcsname{5.37}
+\expandafter\def\csname res@E5@nominal@LSTM-nominal s0\endcsname{5.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@LSTM-nominal s0\endcsname{$7.2\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@LSTM-nominal s0\endcsname{3.88}
+\expandafter\def\csname res@E5@nominal@LSTM-nominal s1\endcsname{5.2\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@LSTM-nominal s1\endcsname{$6.2\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@LSTM-nominal s1\endcsname{3.4}
+\expandafter\def\csname res@E5@nominal@LSTM-nominal s2\endcsname{4.9\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@LSTM-nominal s2\endcsname{$5.9\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@LSTM-nominal s2\endcsname{3.24}
+\expandafter\def\csname res@E5@nominal@NL\endcsname{0.141}
+\expandafter\def\csname rfifty@E5@nominal@NL\endcsname{$0.241$}
+\expandafter\def\csname rratio@E5@nominal@NL\endcsname{92.4}
+\expandafter\def\csname res@E5@nominal@LSTM-broad\endcsname{0.010}
+\expandafter\def\csname rfifty@E5@nominal@LSTM-broad\endcsname{$0.015$}
+\expandafter\def\csname rratio@E5@nominal@LSTM-broad\endcsname{6.77}
+\expandafter\def\csname res@E5@nominal@LSTM-nominal\endcsname{5.3\!\times\!10^{-3}}
+\expandafter\def\csname rfifty@E5@nominal@LSTM-nominal\endcsname{$6.4\!\times\!10^{-3}$}
+\expandafter\def\csname rratio@E5@nominal@LSTM-nominal\endcsname{3.51}
+\expandafter\def\csname res@E6@switching@Bayes-broad\endcsname{0.147}
+\expandafter\def\csname rfifty@E6@switching@Bayes-broad\endcsname{$0.251$}
+\expandafter\def\csname rratio@E6@switching@Bayes-broad\endcsname{1.13}
+\expandafter\def\csname res@E6@switching@Bayes (regime-aware)\endcsname{0.130}
+\expandafter\def\csname rfifty@E6@switching@Bayes (regime-aware)\endcsname{$0.226$}
+\expandafter\def\csname rratio@E6@switching@Bayes (regime-aware)\endcsname{1}
+\expandafter\def\csname res@E6@switching@Bayes (rho=0.9)\endcsname{0.162}
+\expandafter\def\csname rfifty@E6@switching@Bayes (rho=0.9)\endcsname{$0.269$}
+\expandafter\def\csname rratio@E6@switching@Bayes (rho=0.9)\endcsname{1.24}
+\expandafter\def\csname res@E6@switching@Bayes (rho=0.97)\endcsname{0.191}
+\expandafter\def\csname rfifty@E6@switching@Bayes (rho=0.97)\endcsname{$0.312$}
+\expandafter\def\csname rratio@E6@switching@Bayes (rho=0.97)\endcsname{1.47}
+\expandafter\def\csname res@E6@switching@LSTM-broad s0\endcsname{0.140}
+\expandafter\def\csname rfifty@E6@switching@LSTM-broad s0\endcsname{$0.244$}
+\expandafter\def\csname rratio@E6@switching@LSTM-broad s0\endcsname{1.07}
+\expandafter\def\csname res@E6@switching@LSTM-broad s1\endcsname{0.144}
+\expandafter\def\csname rfifty@E6@switching@LSTM-broad s1\endcsname{$0.250$}
+\expandafter\def\csname rratio@E6@switching@LSTM-broad s1\endcsname{1.11}
+\expandafter\def\csname res@E6@switching@LSTM-broad s2\endcsname{0.141}
+\expandafter\def\csname rfifty@E6@switching@LSTM-broad s2\endcsname{$0.244$}
+\expandafter\def\csname rratio@E6@switching@LSTM-broad s2\endcsname{1.08}
+\expandafter\def\csname res@E6@switching@LSTM-nominal s0\endcsname{0.171}
+\expandafter\def\csname rfifty@E6@switching@LSTM-nominal s0\endcsname{$0.285$}
+\expandafter\def\csname rratio@E6@switching@LSTM-nominal s0\endcsname{1.31}
+\expandafter\def\csname res@E6@switching@LSTM-nominal s1\endcsname{0.174}
+\expandafter\def\csname rfifty@E6@switching@LSTM-nominal s1\endcsname{$0.287$}
+\expandafter\def\csname rratio@E6@switching@LSTM-nominal s1\endcsname{1.34}
+\expandafter\def\csname res@E6@switching@LSTM-nominal s2\endcsname{0.181}
+\expandafter\def\csname rfifty@E6@switching@LSTM-nominal s2\endcsname{$0.298$}
+\expandafter\def\csname rratio@E6@switching@LSTM-nominal s2\endcsname{1.39}
+\expandafter\def\csname res@E6@switching@LSTM-switching\endcsname{0.143}
+\expandafter\def\csname rfifty@E6@switching@LSTM-switching\endcsname{$0.247$}
+\expandafter\def\csname rratio@E6@switching@LSTM-switching\endcsname{1.1}
+\expandafter\def\csname res@E6@switching@NL\endcsname{0.195}
+\expandafter\def\csname rfifty@E6@switching@NL\endcsname{$0.320$}
+\expandafter\def\csname rratio@E6@switching@NL\endcsname{1.49}
+\expandafter\def\csname res@E6@switching@LSTM-broad\endcsname{0.142}
+\expandafter\def\csname rfifty@E6@switching@LSTM-broad\endcsname{$0.246$}
+\expandafter\def\csname rratio@E6@switching@LSTM-broad\endcsname{1.09}
+\expandafter\def\csname res@E6@switching@LSTM-nominal\endcsname{0.176}
+\expandafter\def\csname rfifty@E6@switching@LSTM-nominal\endcsname{$0.290$}
+\expandafter\def\csname rratio@E6@switching@LSTM-nominal\endcsname{1.35}
+\expandafter\def\csname tim@Bayes (matched)@cuda@1@latency\endcsname{3.43}
+\expandafter\def\csname tim@Bayes (matched)@cuda@1@throughput\endcsname{292}
+\expandafter\def\csname tim@Bayes (matched)@cuda@4096@latency\endcsname{13.3}
+\expandafter\def\csname tim@Bayes (matched)@cuda@4096@throughput\endcsname{3.08e+05}
+\expandafter\def\csname tim@Bayes-broad@cuda@1@latency\endcsname{22.6}
+\expandafter\def\csname tim@Bayes-broad@cuda@1@throughput\endcsname{44.2}
+\expandafter\def\csname tim@Bayes-broad@cuda@4096@latency\endcsname{122}
+\expandafter\def\csname tim@Bayes-broad@cuda@4096@throughput\endcsname{3.36e+04}
+\expandafter\def\csname tim@LSTM-nominal s0@cuda@1@latency\endcsname{1.5}
+\expandafter\def\csname tim@LSTM-nominal s0@cuda@1@throughput\endcsname{668}
+\expandafter\def\csname tim@LSTM-nominal s0@cuda@4096@latency\endcsname{13}
+\expandafter\def\csname tim@LSTM-nominal s0@cuda@4096@throughput\endcsname{3.15e+05}
+\expandafter\def\csname tim@NL@cpu@1@latency\endcsname{0.00644}
+\expandafter\def\csname tim@NL@cpu@1@throughput\endcsname{1.55e+05}
+\expandafter\def\csname tim@NL@cpu@512@latency\endcsname{0.0188}
+\expandafter\def\csname tim@NL@cpu@512@throughput\endcsname{2.72e+07}
+\expandafter\def\csname tim@Bayes (matched)@cpu@1@latency\endcsname{0.873}
+\expandafter\def\csname tim@Bayes (matched)@cpu@1@throughput\endcsname{1.15e+03}
+\expandafter\def\csname tim@Bayes (matched)@cpu@512@latency\endcsname{53.1}
+\expandafter\def\csname tim@Bayes (matched)@cpu@512@throughput\endcsname{9.65e+03}
+\expandafter\def\csname tim@Bayes-broad@cpu@1@latency\endcsname{4.77}
+\expandafter\def\csname tim@Bayes-broad@cpu@1@throughput\endcsname{210}
+\expandafter\def\csname tim@Bayes-broad@cpu@512@latency\endcsname{437}
+\expandafter\def\csname tim@Bayes-broad@cpu@512@throughput\endcsname{1.17e+03}
+\expandafter\def\csname tim@LSTM-nominal s0@cpu@1@latency\endcsname{0.944}
+\expandafter\def\csname tim@LSTM-nominal s0@cpu@1@throughput\endcsname{1.06e+03}
+\expandafter\def\csname tim@LSTM-nominal s0@cpu@512@latency\endcsname{1.93}
+\expandafter\def\csname tim@LSTM-nominal s0@cpu@512@throughput\endcsname{2.66e+05}

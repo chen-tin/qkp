@@ -1,0 +1,57 @@
+\paragraph{Model scope.}
+\begin{itemize}
+  \item \emph{One quadrature, classical shifts.} Everything is in the $q$
+    quadrature with classical shifts on an ideal (infinite-energy) code.
+    Finite-energy envelopes, $p$-quadrature noise, photon loss and ancilla
+    noise inside the syndrome-extraction circuit are not modelled. The
+    finite-$\Delta$ state in \texttt{quantum/encoding.py} is the natural next
+    step for checking the shift model.
+  \item \emph{Discrete corrections.} Decoders choose only the parity $j_t$ of
+    a correction $s_t+j_tL$. A decoder that also estimates $\nu_t$ and applies
+    a continuous fine correction could reduce the residual further. This
+    restriction is what makes the syndrome history independent of the
+    decoder (Section~\ref{sec:model}), so it simplifies training and makes
+    the comparisons paired, but it is a real limitation.
+  \item \emph{One family of correlated noise.} The noise is a stationary
+    Gaussian AR(1), plus one two-regime switching variant. Heavier tails,
+    drifts and non-stationary noise were not tested.
+\end{itemize}
+
+\paragraph{Decoders.}
+\begin{itemize}
+  \item \emph{Architecture search.} The LSTM architecture and training recipe
+    were fixed in advance and not tuned. A larger model, more data or a
+    curriculum could close part of the gap to the Bayes filter.
+  \item \emph{Bayes-broad coverage.} Bayes-broad averages over 8 fixed AR(1)
+    models with $\sigma_m'=0.05L$. It therefore covers the broad box less
+    densely than the broad LSTM's training data, in particular in $\sigma_m$.
+\end{itemize}
+
+\paragraph{Statistics.}
+\begin{itemize}
+  \item \emph{Small error rates.} Where matched Bayes makes almost no errors
+    (high $\rho$ at the nominal noise level), $P_L(50)$ is only bounded from
+    above. Such points are marked in the tables, and the comparisons there
+    rely on the time-averaged error.
+  \item \emph{LSTM seeds.} LSTM-nominal and LSTM-broad have 3 seeds each, so
+    their seed spread is only indicative. The matched and switching LSTMs
+    were trained with a single seed, so their seed-to-seed variation is not
+    measured.
+\end{itemize}
+
+\paragraph{Out of scope for this run.}
+\begin{itemize}
+  \item \emph{Reinforcement learning.} The DQN decoder (proposal, item~4)
+    was not built. With the parity action set used here, actions do not
+    affect future observations, so the decoding problem is a contextual
+    bandit with a known optimal policy (matched Bayes). An RL decoder would
+    become more interesting with continuous corrections or with noise that
+    reacts to the corrections.
+  \item \emph{Experimental data.} Testing on recorded GKP syndrome data
+    (e.g.\ Campagne-Ibarcq \emph{et al.}~\cite{campagne}) was not attempted.
+\end{itemize}
+
+\paragraph{Compute.}
+The run used one laptop RTX~5080. LSTM training and the Bayes evaluations ran
+concurrently on it, so the timings in E7 were measured separately, after
+training finished.

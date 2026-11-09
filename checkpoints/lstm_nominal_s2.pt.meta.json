@@ -1,0 +1,30 @@
+{
+  "mode": "full",
+  "digest": "47b9b33d5599",
+  "git": "ab48b90",
+  "config": {
+    "name": "lstm_nominal_s2",
+    "dataset": "nominal",
+    "seed": 2,
+    "spec": {
+      "kind": "fixed",
+      "sigma_q": 0.3544907701811032,
+      "sigma_m": 0.0886226925452758,
+      "rho": 0.9
+    },
+    "n_train": 200000,
+    "n_val": 20000,
+    "hidden": 128,
+    "layers": 2,
+    "batch": 2048,
+    "max_epochs": 40,
+    "patience": 5,
+    "lr": 0.002,
+    "wd": 0.0001,
+    "time_cap": 600.0
+  },
+  "written": "2026-11-09 03:50:24",
+  "chosen_head": "full",
+  "stop_reason": "max_epochs",
+  "train_seconds": 402.1177866458893
+}

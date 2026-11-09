@@ -1,0 +1,30 @@
+{
+  "mode": "full",
+  "digest": "ec6d9feb5db7",
+  "git": "fbb408a",
+  "config": {
+    "name": "lstm_matched_sq0.26_s0",
+    "dataset": "matched_sq0.26",
+    "seed": 0,
+    "spec": {
+      "kind": "fixed",
+      "sigma_q": 0.46083800123543417,
+      "sigma_m": 0.0886226925452758,
+      "rho": 0.9
+    },
+    "n_train": 200000,
+    "n_val": 20000,
+    "hidden": 128,
+    "layers": 2,
+    "batch": 2048,
+    "max_epochs": 40,
+    "patience": 5,
+    "lr": 0.002,
+    "wd": 0.0001,
+    "time_cap": 1800.0
+  },
+  "written": "2026-11-09 05:33:42",
+  "chosen_head": "full",
+  "stop_reason": "early_stop",
+  "train_seconds": 642.781299829483
+}

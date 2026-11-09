@@ -93,9 +93,11 @@ We use the filter with several assumed models:
   \item \emph{Bayes (nominal)} always assumes the nominal parameters, which
     makes it the counterpart of an LSTM trained only at the nominal point.
   \item \emph{Bayes-broad} is a Bayesian model average over 8 filters with
-    $\rho'\in\{0,0.6,0.85,0.95\}$ and $\sigma_q'\in\{0.15,0.25\}L$, weighted
-    by their marginal likelihood. It is the counterpart of the broadly
-    trained LSTM.
+    $\rho'\in\{0,0.6,0.85,0.95\}$, $\sigma_q'\in\{0.15,0.25\}L$ and a fixed
+    $\sigma_m'=0.05L$. The filters start with equal weights, which are then
+    updated by their marginal likelihood. It is the model-based counterpart
+    of the broadly trained LSTM, except that it does not span the LSTM's
+    $\sigma_m$ range.
   \item \emph{Bayes (regime-aware)} adds the hidden correlation regime to the
     state, for the switching-noise experiment.
   \item \emph{Bayes (per-round)} is an ablation that, after each decision,
@@ -112,9 +114,10 @@ turned into actions through $J_t=\hat W^{(k)}_t\oplus J_{t-k-1}$, with
 $J_t=\hat K_t$ for the full head. The $k=0$ head is the per-round
 (no-revision) ablation.
 
-Training uses 200{,}000 sequences of 50 rounds, summed binary cross-entropy
-over all heads, AdamW with a cosine schedule, at most 40 epochs, and early
-stopping on validation loss. The head used at test time is the one with the
+Training uses 200{,}000 sequences of 50 rounds and binary cross-entropy
+averaged over all heads, rounds and sequences (equal head weights), with
+AdamW, a cosine schedule, at most 40 epochs, and early stopping on
+validation loss. The head used at test time is the one with the
 lowest validation time-averaged logical error, and test data is never used
 for any choice. The training sets are:
 \begin{itemize}
@@ -134,12 +137,15 @@ At test time the LSTM sees only syndromes.
   \item \textbf{Shared test noise.} At each test point all decoders run on
     the same test noise. Random streams are derived from a
     \texttt{SeedSequence} keyed by (split, experiment, point, chunk), so
-    train, validation, development and test streams are disjoint; this is
-    checked by a test.
+    train, validation, development and test streams are disjoint by
+    construction. A test checks, on sample keys, that test streams never
+    coincide with any other split.
   \item \textbf{Test-set size.} The size is set once per point: 20{,}000-trial
-    chunks are added until matched Bayes shows at least 50 errors at round 50,
-    or a cap is reached. The caps are 100{,}000 trials for E1, 60{,}000 for E6,
-    40{,}000 for E2 and E5, and 20{,}000 for E3 and E4.
+    chunks are added until the reference filter (matched Bayes; the
+    regime-aware filter in E6) shows at least 50 errors at round 50, or a cap
+    is reached. The caps are 100{,}000 trials for E1, 60{,}000 for E6,
+    40{,}000 for E2, and 20{,}000 for E3 and E4. E5 uses a fixed 40{,}000
+    trials.
   \item \textbf{Reported quantities.} We report $P_L(10)$ and $P_L(50)$ with
     Wilson 95\% intervals, plus the time-averaged logical error
     $\frac1{50}\sum_{n=1}^{50}P_L(n)$. When no errors are observed we report

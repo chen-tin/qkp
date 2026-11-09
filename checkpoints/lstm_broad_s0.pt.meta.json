@@ -1,0 +1,39 @@
+{
+  "mode": "full",
+  "digest": "52358b39ab3e",
+  "git": "ab48b90",
+  "config": {
+    "name": "lstm_broad_s0",
+    "dataset": "broad",
+    "seed": 0,
+    "spec": {
+      "kind": "broad",
+      "rho": [
+        0.0,
+        0.97
+      ],
+      "sigma_q": [
+        0.21269446210866189,
+        0.4962870782535445
+      ],
+      "sigma_m": [
+        0.03544907701811032,
+        0.14179630807244128
+      ]
+    },
+    "n_train": 200000,
+    "n_val": 20000,
+    "hidden": 128,
+    "layers": 2,
+    "batch": 2048,
+    "max_epochs": 40,
+    "patience": 5,
+    "lr": 0.002,
+    "wd": 0.0001,
+    "time_cap": 600.0
+  },
+  "written": "2026-11-09 03:58:05",
+  "chosen_head": "full",
+  "stop_reason": "max_epochs",
+  "train_seconds": 456.10887908935547
+}

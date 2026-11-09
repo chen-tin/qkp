@@ -1,0 +1,55 @@
+[05:46:11] run_all: mode=full device=cuda budget=Budget(chunk_trials=20000, max_test_trials=100000, min_events=50, diag_trials=2000, n_train=200000, n_val=20000, batch_size=2048, max_epochs=40, patience=5, train_time_cap_s=1800.0, hidden=128, lstm_seeds=3, filter_block_bytes=2000000000.0)
+[05:46:11] === E0 ===
+[05:46:11] === E0 done in 0s ===
+[05:46:11] === E1 ===
+[05:46:22] E1/nominal: LSTM-broad s1          LER50=0.02810 mean=0.01717 (10.8s, resets=0)
+[05:46:32] E1/nominal: LSTM-broad s2          LER50=0.01027 mean=0.00816 (10.2s, resets=0)
+[05:46:32] === E1 done in 21s ===
+[05:46:32] === E5 ===
+[05:46:36] E5/nominal: LSTM-broad s1          LER50=0.02810 mean=0.01719 (6.7s, resets=0)
+[05:46:42] E5/nominal: LSTM-broad s2          LER50=0.01038 mean=0.00816 (6.6s, resets=0)
+[05:46:42] === E5 done in 13s ===
+[05:46:42] === E2 ===
+[05:46:46] E2/A_rho0.0: LSTM-broad s1          LER50=0.43425 mean=0.30397 (3.4s, resets=0)
+[05:46:49] E2/A_rho0.0: LSTM-broad s2          LER50=0.43470 mean=0.30455 (3.2s, resets=0)
+[05:46:53] E2/A_rho0.3: LSTM-broad s1          LER50=0.38590 mean=0.24117 (3.3s, resets=0)
+[05:46:56] E2/A_rho0.3: LSTM-broad s2          LER50=0.38305 mean=0.24142 (3.3s, resets=0)
+[05:46:59] E2/A_rho0.5: LSTM-broad s1          LER50=0.26685 mean=0.14960 (3.2s, resets=0)
+[05:47:00] E2/A_rho0.5: LSTM-broad s2          LER50=0.25860 mean=0.14627 (3.3s, resets=0)
+[05:47:03] E2/A_rho0.5: LSTM-matched           LER50=0.24155 mean=0.13648 (3.2s, resets=0)
+[05:47:06] E2/A_rho0.7: LSTM-broad s1          LER50=0.09825 mean=0.05301 (3.2s, resets=0)
+[05:47:09] E2/A_rho0.7: LSTM-broad s2          LER50=0.08175 mean=0.04595 (3.3s, resets=0)
+[05:47:13] E2/A_rho0.8: LSTM-broad s1          LER50=0.04540 mean=0.02566 (3.2s, resets=0)
+[05:47:16] E2/A_rho0.8: LSTM-broad s2          LER50=0.02965 mean=0.01829 (3.3s, resets=0)
+[05:47:22] E2/A_rho0.9: LSTM-broad s1          LER50=0.02788 mean=0.01676 (6.4s, resets=0)
+[05:47:29] E2/A_rho0.9: LSTM-broad s2          LER50=0.00990 mean=0.00796 (6.4s, resets=0)
+[05:47:32] E2/A_rho0.95: LSTM-broad s1          LER50=0.03127 mean=0.01879 (6.5s, resets=0)
+[05:47:39] E2/A_rho0.95: LSTM-broad s2          LER50=0.01080 mean=0.00863 (6.4s, resets=0)
+[05:47:45] E2/A_rho0.99: LSTM-broad s1          LER50=0.02485 mean=0.01693 (6.4s, resets=0)
+[05:47:52] E2/A_rho0.99: LSTM-broad s2          LER50=0.01125 mean=0.00994 (6.4s, resets=0)
+[05:47:58] E2/A_rho0.995: LSTM-broad s1          LER50=0.02193 mean=0.01604 (6.3s, resets=0)
+[05:48:02] E2/A_rho0.995: LSTM-broad s2          LER50=0.01010 mean=0.00974 (6.5s, resets=0)
+[05:48:05] E2/B_rho0.0: LSTM-broad s1          LER50=0.50160 mean=0.47020 (3.2s, resets=0)
+[05:48:08] E2/B_rho0.0: LSTM-broad s2          LER50=0.49425 mean=0.47129 (3.3s, resets=0)
+[05:48:12] E2/B_rho0.3: LSTM-broad s1          LER50=0.49775 mean=0.45851 (3.2s, resets=0)
+[05:48:15] E2/B_rho0.3: LSTM-broad s2          LER50=0.49550 mean=0.45852 (3.2s, resets=0)
+[05:48:18] E2/B_rho0.5: LSTM-broad s1          LER50=0.49385 mean=0.44273 (3.2s, resets=0)
+[05:48:22] E2/B_rho0.5: LSTM-broad s2          LER50=0.49635 mean=0.44326 (3.3s, resets=0)
+[05:48:25] E2/B_rho0.7: LSTM-broad s2          LER50=0.49880 mean=0.39566 (3.2s, resets=0)
+[05:48:28] E2/B_rho0.8: LSTM-broad s2          LER50=0.46575 mean=0.33327 (3.1s, resets=0)
+[05:48:28] E2/B_rho0.9: LSTM-broad s2          LER50=0.35075 mean=0.23312 (3.2s, resets=0)
+[05:48:32] E2/B_rho0.95: LSTM-broad s2          LER50=0.24590 mean=0.16427 (3.2s, resets=0)
+[05:48:35] E2/B_rho0.99: LSTM-broad s2          LER50=0.12660 mean=0.10043 (3.2s, resets=0)
+[05:48:35] === E2 done in 124s ===
+[05:48:35] === E3 ===
+[05:48:38] E3/sq0.26: LSTM-matched           LER50=0.01200 mean=0.01287 (3.2s, resets=0)
+[05:48:38] === E3 done in 3s ===
+[05:48:38] === E4 ===
+[05:48:38] === E4 done in 0s ===
+[05:48:38] === E6 ===
+[05:48:38] === E6 done in 0s ===
+[05:48:38] === E8 ===
+[05:48:38] === E8 done in 0s ===
+[05:48:38] === E7 ===
+[05:48:38] === E7 done in 0s ===
+[05:48:38] run_all finished; failed experiments: none; failed decoders/points: none

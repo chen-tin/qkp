@@ -1,0 +1,59 @@
+{
+  "mode": "full",
+  "digest": "e60f52a7f5a0",
+  "git": "fbb408a",
+  "config": {
+    "exp": "E7",
+    "budget_hidden": 128,
+    "mode": "full",
+    "code": "71c4a9d3ff4c",
+    "checkpoints": {
+      "lstm_nominal_s0": {
+        "digest": "2a488809f7b0",
+        "written": "2026-11-09 03:36:47",
+        "chosen_head": "full"
+      },
+      "lstm_nominal_s1": {
+        "digest": "45226ba0fdc5",
+        "written": "2026-11-09 03:43:37",
+        "chosen_head": "full"
+      },
+      "lstm_nominal_s2": {
+        "digest": "47b9b33d5599",
+        "written": "2026-11-09 03:50:24",
+        "chosen_head": "full"
+      },
+      "lstm_broad_s0": {
+        "digest": "52358b39ab3e",
+        "written": "2026-11-09 03:58:05",
+        "chosen_head": "full"
+      },
+      "lstm_broad_s1": {
+        "digest": "449d54f9c01f",
+        "written": "2026-11-09 05:00:28",
+        "chosen_head": "full"
+      },
+      "lstm_broad_s2": {
+        "digest": "7c041b780255",
+        "written": "2026-11-09 05:11:45",
+        "chosen_head": "full"
+      },
+      "lstm_matched_rho0.5_s0": {
+        "digest": "a47d1caadfbf",
+        "written": "2026-11-09 05:22:56",
+        "chosen_head": "full"
+      },
+      "lstm_matched_sq0.26_s0": {
+        "digest": "ec6d9feb5db7",
+        "written": "2026-11-09 05:33:42",
+        "chosen_head": "full"
+      },
+      "lstm_switching_s0": {
+        "digest": "657809cf934f",
+        "written": "2026-11-09 05:44:38",
+        "chosen_head": "full"
+      }
+    }
+  },
+  "written": "2026-11-09 05:46:01"
+}

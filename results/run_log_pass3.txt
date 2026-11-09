@@ -1,0 +1,20 @@
+[05:48:49] run_all: mode=full device=cuda budget=Budget(chunk_trials=20000, max_test_trials=100000, min_events=50, diag_trials=2000, n_train=200000, n_val=20000, batch_size=2048, max_epochs=40, patience=5, train_time_cap_s=1800.0, hidden=128, lstm_seeds=3, filter_block_bytes=2000000000.0)
+[05:48:49] === E0 ===
+[05:48:49] === E0 done in 0s ===
+[05:48:49] === E1 ===
+[05:48:49] === E1 done in 0s ===
+[05:48:49] === E5 ===
+[05:48:49] === E5 done in 0s ===
+[05:48:49] === E2 ===
+[05:48:49] === E2 done in 0s ===
+[05:48:49] === E3 ===
+[05:48:49] === E3 done in 0s ===
+[05:48:49] === E4 ===
+[05:48:49] === E4 done in 0s ===
+[05:48:49] === E6 ===
+[05:48:49] === E6 done in 0s ===
+[05:48:49] === E8 ===
+[05:48:49] === E8 done in 0s ===
+[05:48:49] === E7 ===
+[05:48:49] === E7 done in 0s ===
+[05:48:49] run_all finished; failed experiments: none; failed decoders/points: none

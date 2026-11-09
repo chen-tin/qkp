@@ -1,0 +1,33 @@
+GKP Eq. (94) bound at sigma=0.555: 0.1103 (paper: 0.110)
+Exact odd-cell sum at sigma=0.555: 0.1103
+Simulated at sigma=0.555:          0.1108
+B rho=0.0: max |z| over rounds 2-50 = 3.42, Bonferroni p = 0.030
+B rho=0.9: max |z| over rounds 2-50 = 2.32, Bonferroni p = 0.985
+
+| Check | Case | Simulated | Reference | z | Reference type |
+|---|---|---|---|---|---|
+| A single round | sigma=0.200 | 0.00001 | 0.00001 | -0.64 | exact |
+| A single round | sigma=0.300 | 0.00298 | 0.00314 | -1.21 | exact |
+| A single round | sigma=0.400 | 0.02739 | 0.02672 | +1.87 | exact |
+| A single round | sigma=0.500 | 0.07616 | 0.07632 | -0.26 | exact |
+| A single round | sigma=0.555 | 0.11076 | 0.11031 | +0.64 | exact |
+| A single round | sigma=0.600 | 0.13967 | 0.13965 | +0.01 | exact |
+| A single round | sigma=0.700 | 0.20458 | 0.20535 | -0.86 | exact |
+| A single round | sigma=0.800 | 0.26687 | 0.26707 | -0.20 | exact |
+| B per-round flip | rho=0.0, round 1 | 0.01564 | 0.01529 | +0.63 | exact |
+| B per-round flip | rho=0.0, mean of rounds 2-50 | 0.01837 | 0.01842 | -0.66 | exact |
+| B per-round flip | rho=0.9, round 1 | 0.01564 | 0.01529 | +0.63 | exact |
+| B per-round flip | rho=0.9, mean of rounds 2-50 | 0.01834 | 0.01842 | -1.01 | exact |
+| C1 LER, rho=0, sm=0 | worst round (47) | 0.34344 | 0.34669 | -1.53 | exact |
+| C1 LER, rho=0, sm=0 | round 50 | 0.35562 | 0.35783 | -1.03 | exact |
+| C2 LER, rho=0, sm=0.05L | round 50 | 0.42174 | 0.42298 | -0.56 | approx. |
+| D rho->1 limit, sm=0 | rho=0.999, odd rounds (mean) | 0.01330 | 0.01242 | +1.78 | limit |
+| D rho->1 limit, sm=0 | rho=0.999, even rounds (mean) | 0.00561 | 0.00000 | n/a | limit |
+| D rho->1 limit, sm=0 | rho=0.9999, odd rounds (mean) | 0.01230 | 0.01242 | -0.24 | limit |
+| D rho->1 limit, sm=0 | rho=0.9999, even rounds (mean) | 0.00174 | 0.00000 | n/a | limit |
+| D rho->1 limit, sm=0 | rho=0.99999, odd rounds (mean) | 0.01207 | 0.01242 | -0.70 | limit |
+| D rho->1 limit, sm=0 | rho=0.99999, even rounds (mean) | 0.00052 | 0.00000 | n/a | limit |
+| D rho->1 limit, sm=0 | rho=0.999999, odd rounds (mean) | 0.01207 | 0.01242 | -0.71 | limit |
+| D rho->1 limit, sm=0 | rho=0.999999, even rounds (mean) | 0.00015 | 0.00000 | n/a | limit |
+
+Saved docs/figures/sim_validation.png

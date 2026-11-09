@@ -1,0 +1,193 @@
+{
+  "rows": [
+    {
+      "decoder": "Bayes (matched)",
+      "device": "cuda",
+      "batch": 1,
+      "rounds": 50,
+      "seconds": 0.17135674999735784,
+      "latency_ms_per_round": 3.4271349999471568,
+      "throughput_trial_rounds_per_s": 291.7889140682871,
+      "peak_gpu_gb": 0.207546368
+    },
+    {
+      "decoder": "Bayes (matched)",
+      "device": "cuda",
+      "batch": 4096,
+      "rounds": 20,
+      "seconds": 0.26599164299841505,
+      "latency_ms_per_round": 13.299582149920752,
+      "throughput_trial_rounds_per_s": 307979.60069929017,
+      "peak_gpu_gb": 0.671607808
+    },
+    {
+      "decoder": "Bayes-broad",
+      "device": "cuda",
+      "batch": 1,
+      "rounds": 50,
+      "seconds": 1.1318889989925083,
+      "latency_ms_per_round": 22.637779979850166,
+      "throughput_trial_rounds_per_s": 44.17394289060578,
+      "peak_gpu_gb": 0.208658944
+    },
+    {
+      "decoder": "Bayes-broad",
+      "device": "cuda",
+      "batch": 4096,
+      "rounds": 20,
+      "seconds": 2.4406358000123873,
+      "latency_ms_per_round": 122.03179000061937,
+      "throughput_trial_rounds_per_s": 33565.024326687424,
+      "peak_gpu_gb": 1.818722816
+    },
+    {
+      "decoder": "LSTM-nominal s0",
+      "device": "cuda",
+      "batch": 1,
+      "rounds": 50,
+      "seconds": 0.07481674299924634,
+      "latency_ms_per_round": 1.4963348599849269,
+      "throughput_trial_rounds_per_s": 668.2996077562968,
+      "peak_gpu_gb": 0.226515456
+    },
+    {
+      "decoder": "LSTM-nominal s0",
+      "device": "cuda",
+      "batch": 4096,
+      "rounds": 20,
+      "seconds": 0.26005910598905757,
+      "latency_ms_per_round": 13.002955299452879,
+      "throughput_trial_rounds_per_s": 315005.31269013486,
+      "peak_gpu_gb": 0.323911168
+    },
+    {
+      "decoder": "NL",
+      "device": "cpu",
+      "batch": 1,
+      "rounds": 50,
+      "seconds": 0.0003219219943275675,
+      "latency_ms_per_round": 0.00643843988655135,
+      "throughput_trial_rounds_per_s": 155317.1292456742,
+      "peak_gpu_gb": null
+    },
+    {
+      "decoder": "NL",
+      "device": "cpu",
+      "batch": 512,
+      "rounds": 20,
+      "seconds": 0.0003761449916055426,
+      "latency_ms_per_round": 0.01880724958027713,
+      "throughput_trial_rounds_per_s": 27223544.71952807,
+      "peak_gpu_gb": null
+    },
+    {
+      "decoder": "Bayes (matched)",
+      "device": "cpu",
+      "batch": 1,
+      "rounds": 50,
+      "seconds": 0.04362958899582736,
+      "latency_ms_per_round": 0.8725917799165472,
+      "throughput_trial_rounds_per_s": 1146.0112540776372,
+      "peak_gpu_gb": null
+    },
+    {
+      "decoder": "Bayes (matched)",
+      "device": "cpu",
+      "batch": 512,
+      "rounds": 20,
+      "seconds": 1.0611048669961747,
+      "latency_ms_per_round": 53.055243349808734,
+      "throughput_trial_rounds_per_s": 9650.318567464374,
+      "peak_gpu_gb": null
+    },
+    {
+      "decoder": "Bayes-broad",
+      "device": "cpu",
+      "batch": 1,
+      "rounds": 50,
+      "seconds": 0.23850278799363878,
+      "latency_ms_per_round": 4.7700557598727755,
+      "throughput_trial_rounds_per_s": 209.64115522764277,
+      "peak_gpu_gb": null
+    },
+    {
+      "decoder": "Bayes-broad",
+      "device": "cpu",
+      "batch": 512,
+      "rounds": 20,
+      "seconds": 8.730566657992313,
+      "latency_ms_per_round": 436.52833289961563,
+      "throughput_trial_rounds_per_s": 1172.8906497295786,
+      "peak_gpu_gb": null
+    },
+    {
+      "decoder": "LSTM-nominal s0",
+      "device": "cpu",
+      "batch": 1,
+      "rounds": 50,
+      "seconds": 0.047188117998302914,
+      "latency_ms_per_round": 0.9437623599660583,
+      "throughput_trial_rounds_per_s": 1059.58877194039,
+      "peak_gpu_gb": null
+    },
+    {
+      "decoder": "LSTM-nominal s0",
+      "device": "cpu",
+      "batch": 512,
+      "rounds": 20,
+      "seconds": 0.0385675790021196,
+      "latency_ms_per_round": 1.92837895010598,
+      "throughput_trial_rounds_per_s": 265507.98014667263,
+      "peak_gpu_gb": null
+    }
+  ],
+  "training": {
+    "lstm_broad_s0": {
+      "seconds": 456.10887908935547,
+      "stop": "max_epochs",
+      "head": "full"
+    },
+    "lstm_broad_s1": {
+      "seconds": 669.9847011566162,
+      "stop": "max_epochs",
+      "head": "full"
+    },
+    "lstm_broad_s2": {
+      "seconds": 672.9955275058746,
+      "stop": "max_epochs",
+      "head": "full"
+    },
+    "lstm_matched_rho0.5_s0": {
+      "seconds": 667.770993232727,
+      "stop": "max_epochs",
+      "head": "full"
+    },
+    "lstm_matched_sq0.26_s0": {
+      "seconds": 642.781299829483,
+      "stop": "early_stop",
+      "head": "full"
+    },
+    "lstm_nominal_s0": {
+      "seconds": 337.097181558609,
+      "stop": "max_epochs",
+      "head": "full"
+    },
+    "lstm_nominal_s1": {
+      "seconds": 369.4630742073059,
+      "stop": "max_epochs",
+      "head": "full"
+    },
+    "lstm_nominal_s2": {
+      "seconds": 402.1177866458893,
+      "stop": "max_epochs",
+      "head": "full"
+    },
+    "lstm_switching_s0": {
+      "seconds": 651.9954969882965,
+      "stop": "max_epochs",
+      "head": "full"
+    }
+  },
+  "other_gpu_processes": [],
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU"
+}
