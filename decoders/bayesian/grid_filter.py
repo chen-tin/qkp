@@ -111,8 +111,11 @@ class GridFilter:
 
         self.resets = 0
 
+    def belief_bytes_per_trial(self):
+        return self.n_reg * self.n_e * self.n_x * 4
+
     def bytes_per_trial(self):
-        return self.n_reg * self.n_e * self.n_x * 4 * 3  # belief + temporaries
+        return 4 * self.belief_bytes_per_trial()  # belief + step temporaries
 
     def reset(self, trials):
         # belief layout (n_reg, n_e, trials, n_x): the AR(1) prediction is then
@@ -271,7 +274,10 @@ class MultiModelBayesDecoder(ParityDecoder):
         self.device = self.filters[0].device
 
     def bytes_per_trial(self):
-        return sum(f.bytes_per_trial() for f in self.filters)
+        # beliefs of all components persist; step temporaries exist for one
+        # component at a time
+        return (sum(f.belief_bytes_per_trial() for f in self.filters)
+                + max(f.bytes_per_trial() for f in self.filters))
 
     def _reset(self, trials):
         for f in self.filters:

@@ -139,6 +139,9 @@ def train_one(name, dataset, seed, budget, device):
             stop_reason = "time_cap"
             break
 
+    if best[1] is None:
+        log(f"{name}: no finite validation loss in any epoch; not saving a checkpoint")
+        return None
     model.load_state_dict(best[1])
     _, per_head = evaluate_heads(model, s_va, y_va)
     chosen = min(per_head, key=lambda h: per_head[h]["mean_ler"])

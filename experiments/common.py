@@ -66,7 +66,8 @@ class Budget:
 
     chunk_trials: int          # test trials per adaptive chunk
     max_test_trials: int       # cap on adaptive growth per point
-    min_events: int            # stop growing when best decoder has this many flips
+    min_events: int            # stop growing when the reference decoder has this
+                               # many logical errors at the last round
     diag_trials: int           # recorded subset for diagnostics
     n_train: int               # LSTM training sequences
     n_val: int                 # LSTM validation sequences
@@ -81,16 +82,16 @@ class Budget:
 
 BUDGETS = {
     "full": Budget(
-        chunk_trials=20_000, max_test_trials=100_000, min_events=100,
+        chunk_trials=20_000, max_test_trials=100_000, min_events=50,
         diag_trials=2_000, n_train=200_000, n_val=20_000, batch_size=2048,
         max_epochs=40, patience=5, train_time_cap_s=600.0, hidden=128,
-        lstm_seeds=3, filter_block_bytes=0.5e9,
+        lstm_seeds=3, filter_block_bytes=2.0e9,
     ),
     "quick": Budget(
-        chunk_trials=2_000, max_test_trials=4_000, min_events=100,
+        chunk_trials=2_000, max_test_trials=4_000, min_events=50,
         diag_trials=500, n_train=8_000, n_val=2_000, batch_size=1024,
         max_epochs=3, patience=2, train_time_cap_s=60.0, hidden=64,
-        lstm_seeds=1, filter_block_bytes=0.25e9,
+        lstm_seeds=1, filter_block_bytes=1.0e9,
     ),
 }
 

@@ -1,0 +1,153 @@
+%-------------------------------------------------------------------
+\section{Model}\label{sec:model}
+
+\paragraph{Code and noise.}
+We use dimensionless quadratures with $[\hat q,\hat p]=i$ and the square GKP
+code. Its stabilizer $S_q=e^{2i\sqrt\pi\hat q}$ fixes the lattice spacing
+$L=\sqrt\pi$. A shift by $L$ is the logical $\bar X$ and a shift by $2L$ is a
+stabilizer. As in the proposal, we model only the $q$ quadrature and simulate
+classical shifts rather than the oscillator state. For pure displacement
+noise this reproduces the ideal-code quantum dynamics; the simulator itself is
+validated separately in \texttt{docs/sim\_validation.pdf}.
+In round $t=1,\dots,50$ of a trial,
+\begin{align*}
+  x &\leftarrow x+\varepsilon_t, &
+  s_t &= \operatorname{wrap}(x+\nu_t)\in[-L/2,L/2), &
+  x &\leftarrow x-c_t,
+\end{align*}
+where $c_t$ is the decoder's correction. The displacement
+$\varepsilon_t$ follows a stationary AR(1) process,
+$\varepsilon_t=\rho\varepsilon_{t-1}+\eta_t$ with
+$\operatorname{Var}\varepsilon_t=\sigma_q^2$, and $\nu_t\sim\mathcal N(0,\sigma_m^2)$
+is i.i.d.\ measurement noise. The nominal point is $\sigma_q=0.2L$,
+$\sigma_m=0.05L$, $\rho=0.9$. After round $t$ the qubit is in a logical error
+when $\operatorname{round}(x/L)$ is odd. The \emph{logical error rate}
+$P_L(n)$ is the fraction of trials in error after round $n$.
+
+\paragraph{The decoding problem.}
+Every decoder in this study applies $c_t=s_t+j_tL$ with $j_t\in\{0,1\}$; the
+nearest-lattice (NL) decoder always plays $j_t=0$. Under this restriction the
+residual after each round is an integer multiple of $L$ minus $\nu_t$, so
+\begin{equation}
+  s_t=\operatorname{wrap}(z_t),\qquad z_t=\varepsilon_t+\nu_t-\nu_{t-1},
+  \label{eq:z}
+\end{equation}
+\emph{whatever the decoder did earlier}. Let
+$y_t=\operatorname{round}(z_t/L)\bmod 2$ be the parity of the NL decoder's
+jump in round $t$, and $K_t=\sum_{\tau\le t}y_\tau\bmod 2$ the NL decoder's
+logical state. Then any decoder's logical state after round $t$ is
+\begin{equation}
+  K_t\oplus J_t,\qquad J_t=\sum_{\tau\le t}j_\tau\bmod 2 .
+  \label{eq:state}
+\end{equation}
+Decoding therefore amounts to estimating the parity $K_t$ from the wrapped
+history $s_1,\dots,s_t$. The best decoder plays $J_t=\hat K_t$, the MAP
+estimate given all syndromes so far. Because later syndromes do not depend on
+the $j$'s, this greedy rule minimises $P_L(t)$ for every $t$ at once, and it
+lets a decoder \emph{revise} an earlier decision once later syndromes show it
+was wrong. A test in \texttt{tests/test\_core.py} checks
+\eqref{eq:z}--\eqref{eq:state} against the simulator for an arbitrary decision
+sequence.
+
+Two consequences shape the study:
+\begin{itemize}
+  \item Every decoder sees the same syndromes on the same noise, so all
+    comparisons are paired on common random numbers.
+  \item Supervised labels for the LSTM ($y_t$ and $K_t$ from an NL run of the
+    simulator) do not depend on the LSTM's own decisions, so training data
+    and closed-loop testing are not mismatched.
+\end{itemize}
+Continuous fine corrections (estimating $\nu_t$) are deliberately excluded.
+
+%-------------------------------------------------------------------
+\section{Decoders}\label{sec:decoders}
+
+\paragraph{Nearest lattice (NL).} $c_t=s_t$, i.e.\ $j_t=0$. Uses only the
+current syndrome.
+
+\paragraph{Bayesian grid filter.}
+The hidden state is $(X_t \bmod 2L,\ \varepsilon_t)$, where
+$X_t=\sum_{\tau\le t}\varepsilon_\tau$ is the cumulative uncorrected
+displacement. The decoder knows its cumulative correction $C_{t-1}$, and
+$s_t=\operatorname{wrap}(X_t-C_{t-1}+\nu_t)$. This is an exact hidden Markov
+model of the simulator. On a grid with spacing $h$, each round performs:
+\begin{enumerate}
+  \item A bin-integrated Gaussian AR(1) prediction of $\varepsilon_t$ (one
+    matrix product). The innovation variance is floored at $h^2/12$.
+  \item A shear $X_t=X_{t-1}+\varepsilon_t$ (an integer index shift per
+    $\varepsilon$ row).
+  \item Multiplication by the periodic likelihood
+    $\sum_m\phi_{\sigma}\bigl(s_t+C_{t-1}-X+mL\bigr)$, evaluated analytically
+    with $\sigma^2=\sigma_m^2+h^2/12$.
+  \item Normalisation.
+\end{enumerate}
+The correction class $j_t$ is the one whose half of the $2L$ circle around
+$s_t+C_{t-1}+j_tL$ carries more posterior mass. This is the cumulative MAP
+rule above. The filter is batched over trials on the GPU, and its grid
+convergence is shown in Table~\ref{tab:e0}.
+
+We use the filter with several assumed models:
+\begin{itemize}
+  \item \emph{Bayes (matched)} uses the true parameters. It is the
+    syndrome-only optimum up to grid error.
+  \item \emph{Bayes (nominal)} always assumes the nominal parameters, which
+    makes it the counterpart of an LSTM trained only at the nominal point.
+  \item \emph{Bayes-broad} is a Bayesian model average over 8 filters with
+    $\rho'\in\{0,0.6,0.85,0.95\}$ and $\sigma_q'\in\{0.15,0.25\}L$, weighted
+    by their marginal likelihood. It is the counterpart of the broadly
+    trained LSTM.
+  \item \emph{Bayes (regime-aware)} adds the hidden correlation regime to the
+    state, for the switching-noise experiment.
+  \item \emph{Bayes (per-round)} is an ablation that, after each decision,
+    discards the posterior mass of the rejected class, so it never revises a
+    past decision.
+\end{itemize}
+
+\paragraph{LSTM.}
+A two-layer LSTM (hidden size 128) reads $[s_t/L,\ \sin(2\pi s_t/L),\
+\cos(2\pi s_t/L)]$ and has five sigmoid heads. Head ``$k$'' predicts the
+window parity $W^{(k)}_t=y_{t-k}\oplus\dots\oplus y_t$ for
+$k\in\{0,1,2,4\}$, and head ``full'' predicts $K_t$. A head's prediction is
+turned into actions through $J_t=\hat W^{(k)}_t\oplus J_{t-k-1}$, with
+$J_t=\hat K_t$ for the full head. The $k=0$ head is the per-round
+(no-revision) ablation.
+
+Training uses 200{,}000 sequences of 50 rounds, summed binary cross-entropy
+over all heads, AdamW with a cosine schedule, at most 40 epochs, and early
+stopping on validation loss. The head used at test time is the one with the
+lowest validation time-averaged logical error, and test data is never used
+for any choice. The training sets are:
+\begin{itemize}
+  \item \emph{nominal}: the nominal point only, 3 seeds;
+  \item \emph{broad}: per-sequence $\rho\sim U(0,0.97)$,
+    $\sigma_q\sim U(0.12,0.28)L$, $\sigma_m\sim U(0.02,0.08)L$, 3 seeds;
+  \item \emph{matched}: two single-point models at $\rho=0.5$ and at
+    $\sigma_q=0.26L$, used to measure the generalisation gap;
+  \item \emph{switching}: the switching-noise model of E6.
+\end{itemize}
+Labels come from the true errors through an NL run (proposal, Sec.~5).
+At test time the LSTM sees only syndromes.
+
+%-------------------------------------------------------------------
+\section{Evaluation protocol}\label{sec:protocol}
+\begin{itemize}
+  \item \textbf{Shared test noise.} At each test point all decoders run on
+    the same test noise. Random streams are derived from a
+    \texttt{SeedSequence} keyed by (split, experiment, point, chunk), so
+    train, validation, development and test streams are disjoint; this is
+    checked by a test.
+  \item \textbf{Test-set size.} The size is set once per point: 20{,}000-trial
+    chunks are added until matched Bayes shows at least 50 errors at round 50,
+    or a cap is reached. The caps are 100{,}000 trials for E1, 60{,}000 for E6,
+    40{,}000 for E2 and E5, and 20{,}000 for E3 and E4.
+  \item \textbf{Reported quantities.} We report $P_L(10)$ and $P_L(50)$ with
+    Wilson 95\% intervals, plus the time-averaged logical error
+    $\frac1{50}\sum_{n=1}^{50}P_L(n)$. When no errors are observed we report
+    the 95\% upper bound $3/N$.
+  \item \textbf{Paired differences.} Differences between decoders are means
+    of per-trial differences, with their standard errors.
+  \item \textbf{LSTM seeds.} LSTM results are averaged over seeds, and the
+    spread across seeds is given separately from the test-noise error.
+  \item \textbf{In or out of distribution.} Points outside the broad training
+    box are marked (hollow markers in figures, italics in tables).
+\end{itemize}
