@@ -84,7 +84,7 @@ BUDGETS = {
     "full": Budget(
         chunk_trials=20_000, max_test_trials=100_000, min_events=50,
         diag_trials=2_000, n_train=200_000, n_val=20_000, batch_size=2048,
-        max_epochs=40, patience=5, train_time_cap_s=600.0, hidden=128,
+        max_epochs=40, patience=5, train_time_cap_s=1800.0, hidden=128,
         lstm_seeds=3, filter_block_bytes=2.0e9,
     ),
     "quick": Budget(

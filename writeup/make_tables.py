@@ -48,12 +48,21 @@ def sci(x, digits=2):
     return f"{mant:.{digits - 1}f}\\!\\times\\!10^{{{exp}}}"
 
 
+def upper(x):
+    """Upper bound rounded UP to 2 significant figures (never understates)."""
+    exp = int(math.floor(math.log10(x)))
+    mant = math.ceil(x / 10**exp * 10 - 1e-9) / 10
+    if mant >= 10:
+        mant, exp = mant / 10, exp + 1
+    return f"{mant:.1f}\\!\\times\\!10^{{{exp}}}"
+
+
 def ler_cell(r):
     """LER after 50 rounds; upper bound when no errors were seen."""
     if r is None:
         return "--"
     if int(float(r["ler50_events"])) == 0:
-        return f"$<{sci(3.0 / float(r['trials']), 1)}$"
+        return f"$<{upper(3.0 / float(r['trials']))}$"
     s = f"${sci(r['ler50'])}$"
     if int(float(r["ler50_events"])) < 10:
         s += "$^\\dagger$"
@@ -280,6 +289,33 @@ def main():
         if d.get("bayes_right_when_disagree") is not None:
             macros += macro("EdiagBayesRight", f"{100 * d['bayes_right_when_disagree']:.0f}")
 
+    # generic lookups: \res{exp}{point}{decoder} (time-averaged error),
+    # \resfifty{...} (P_L(50) cell), \resratio{exp}{point}{decoder} (ratio to
+    # matched Bayes), \tim{decoder}{device}{batch}{latency|throughput}
+    macros += "\\makeatletter\n"
+    macros += "\\newcommand{\\res}[3]{\\@ifundefined{res@#1@#2@#3}{??}{\\csname res@#1@#2@#3\\endcsname}}\n"
+    macros += "\\newcommand{\\resfifty}[3]{\\@ifundefined{rfifty@#1@#2@#3}{??}{\\csname rfifty@#1@#2@#3\\endcsname}}\n"
+    macros += "\\newcommand{\\resratio}[3]{\\@ifundefined{rratio@#1@#2@#3}{??}{\\csname rratio@#1@#2@#3\\endcsname}}\n"
+    macros += "\\newcommand{\\tim}[4]{\\@ifundefined{tim@#1@#2@#3@#4}{??}{\\csname tim@#1@#2@#3@#4\\endcsname}}\n"
+    macros += "\\makeatother\n"
+    for exp in ("E1", "E2", "E3", "E4", "E5", "E6"):
+        rows = read_csv(f"{exp}_summary.csv")
+        ref = {r["point"]: num(r["mean_ler"]) for r in rows
+               if r["decoder"] in ("Bayes (matched)", "Bayes (regime-aware)")}
+        for r in rows:
+            key = f"{exp}@{r['point']}@{r['decoder']}"
+            macros += f"\\expandafter\\def\\csname res@{key}\\endcsname{{{sci(r['mean_ler'])}}}\n"
+            macros += f"\\expandafter\\def\\csname rfifty@{key}\\endcsname{{{ler_cell(r)}}}\n"
+            b = ref.get(r["point"])
+            if b:
+                macros += (f"\\expandafter\\def\\csname rratio@{key}\\endcsname"
+                           f"{{{num(r["mean_ler"]) / b:.3g}}}\n")
+    if e7:
+        for r in e7["rows"]:
+            k = f"{r['decoder']}@{r['device']}@{r['batch']}"
+            macros += f"\\expandafter\\def\\csname tim@{k}@latency\\endcsname{{{r['latency_ms_per_round']:.3g}}}\n"
+            macros += (f"\\expandafter\\def\\csname tim@{k}@throughput\\endcsname"
+                       f"{{{sci(r['throughput_trial_rounds_per_s'], 2) if r['throughput_trial_rounds_per_s'] < 0.01 else format(r['throughput_trial_rounds_per_s'], '.3g')}}}\n")
     (GEN / "macros.tex").write_text(macros)
     print(f"wrote {len(list(GEN.glob('*.tex')))} files to {GEN}")
 

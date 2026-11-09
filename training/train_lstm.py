@@ -80,6 +80,22 @@ def train_one(name, dataset, seed, budget, device):
     if is_complete(path, config):
         log(f"{name}: checkpoint up to date, skipping")
         return path
+    # The wall-clock cap is a resource guard, not a hyperparameter: a model
+    # trained under a different cap that never hit it is identical to one
+    # trained under this cap, so keep it. Models that hit the cap retrain.
+    meta_path = path.with_name(path.name + ".meta.json")
+    if path.exists() and meta_path.exists():
+        import json
+        info = json.loads(meta_path.read_text())
+        old = dict(info.get("config", {}))
+        if (info.get("mode") == get_mode() and info.get("stop_reason") != "time_cap"
+                and {k: v for k, v in old.items() if k != "time_cap"}
+                == json.loads(json.dumps({k: v for k, v in config.items()
+                                          if k != "time_cap"}, default=float))):
+            log(f"{name}: checkpoint complete (time cap did not bind), skipping")
+            return path
+        if info.get("stop_reason") == "time_cap":
+            log(f"{name}: previous training hit the time cap; retraining")
 
     t0 = time.time()
     train = make_dataset(dataset, "train", budget.n_train, seed=seed)
