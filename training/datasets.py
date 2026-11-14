@@ -11,8 +11,31 @@ import numpy as np
 
 from experiments.common import BROAD_BOX, NOMINAL, ROUNDS, make_rng
 from simulator.noise import L, NoiseModel
+from simulator.nonstationary import sample_mixture
 from simulator.sim import NearestLattice, Simulator
 from simulator.switching import SwitchingNoiseModel, sample_varied
+
+# Training mixture for the drift-trained LSTM (proposal: "gradual drift" and
+# "unexpected changes"). Ranges are drawn per sequence. Held out on purpose,
+# to test generalisation to unseen shapes (experiment E11): ramp,
+# one_over_f, telegraph and burst schedules, and parameter values outside
+# these ranges.
+_SM = 0.05 * L
+DRIFT_TRAIN_MIX = [
+    (1.0, dict(family="stationary", sigma_q=[0.14 * L, 0.26 * L], rho=[0.5, 0.97],
+               sigma_m=_SM)),
+    (2.0, dict(family="sinusoid", target="sigma_q", sigma_q=[0.14 * L, 0.24 * L],
+               amp=[0.1, 0.4], period=[100.0, 1000.0], rho=[0.5, 0.97], sigma_m=_SM)),
+    (1.0, dict(family="sinusoid", target="rho", rho=[0.6, 0.85], amp=[0.05, 0.12],
+               period=[100.0, 1000.0], sigma_q=[0.14 * L, 0.26 * L], sigma_m=_SM)),
+    (2.0, dict(family="step", target="sigma_q", before=[0.14 * L, 0.22 * L],
+               after=[0.18 * L, 0.28 * L], sigma_q=0.2 * L, rho=[0.5, 0.97],
+               sigma_m=_SM)),
+    (1.0, dict(family="step", target="rho", before=[0.6, 0.97], after=[0.2, 0.6],
+               sigma_q=[0.14 * L, 0.26 * L], rho=0.9, sigma_m=_SM)),
+]
+DRIFT_TRAIN_FAMILIES = {("stationary", None), ("sinusoid", "sigma_q"), ("sinusoid", "rho"),
+                        ("step", "sigma_q"), ("step", "rho")}
 
 # training distributions
 DATASETS = {
@@ -25,7 +48,13 @@ DATASETS = {
     "switching": dict(kind="switching", sigma_q=NOMINAL["sigma_q"],
                       sigma_m=NOMINAL["sigma_m"], rho_lo=0.3, rho_hi=0.97,
                       p_switch=0.05),
+    # long sequences (budget.ns_rounds); sizes from the ns_* budget fields
+    "drift": dict(kind="schedule_mix", families=DRIFT_TRAIN_MIX, long=True),
 }
+
+
+def is_long(name):
+    return bool(DATASETS[name].get("long"))
 
 
 def sample_noise(spec, rng, trials, rounds=ROUNDS):
@@ -41,6 +70,9 @@ def sample_noise(spec, rng, trials, rounds=ROUNDS):
         sm = rng.uniform(*spec["sigma_m"], size=trials)
         eps, nu = sample_varied(rng, rho, sq, sm, rounds)
         params = np.stack([rho, sq, sm], axis=1)
+    elif kind == "schedule_mix":
+        eps, nu, _, which = sample_mixture(spec["families"], rng, trials, rounds)
+        params = which[:, None].astype(float)
     elif kind == "switching":
         model = SwitchingNoiseModel(
             spec["sigma_q"], spec["sigma_m"], spec["rho_lo"], spec["rho_hi"],

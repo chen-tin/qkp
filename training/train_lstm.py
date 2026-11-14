@@ -22,15 +22,19 @@ from decoders.LSTM.model import HEADS, ParityLSTM, cumulative_from_head, head_la
 from experiments.common import (
     get_budget, get_mode, is_complete, log, out_dir, torch_device, write_sidecar,
 )
-from training.datasets import DATASETS, make_dataset
+from training.datasets import DATASETS, is_long, make_dataset
 
 LR = 2e-3
 WEIGHT_DECAY = 1e-4
 LAYERS = 2
 
 
-def model_list(budget):
-    """(model name, dataset name, seed) to train, in priority order."""
+def model_list(budget, include_nonstationary=True):
+    """(model name, dataset name, seed) to train, in priority order.
+
+    The drift-trained models (E9-E11) come last; include_nonstationary=False
+    gives the original list (E7 timing is keyed on it).
+    """
     items = [(f"lstm_nominal_s{s}", "nominal", s) for s in range(budget.lstm_seeds)]
     items += [(f"lstm_broad_s{s}", "broad", s) for s in range(budget.lstm_seeds)]
     items += [
@@ -38,17 +42,29 @@ def model_list(budget):
         ("lstm_matched_sq0.26_s0", "matched_sq0.26", 0),
         ("lstm_switching_s0", "switching", 0),   # stretch goal
     ]
+    if include_nonstationary:
+        items += [(f"lstm_drift_s{s}", "drift", s) for s in range(budget.lstm_seeds)]
     return items
 
 
+def sizes(dataset, budget):
+    """(n_train, n_val, batch_size, rounds); long datasets use the ns_* budget."""
+    if is_long(dataset):
+        return budget.ns_n_train, budget.ns_n_val, budget.ns_batch_size, budget.ns_rounds
+    return budget.n_train, budget.n_val, budget.batch_size, None
+
+
 @torch.no_grad()
-def evaluate_heads(model, s, y, batch=8192):
+def evaluate_heads(model, s, y, batch=None):
     """Validation loss and per-head mean logical error (open loop).
 
     Open loop equals closed loop here because syndromes do not depend on
     the decoder's choices (tested in tests/test_lstm.py).
     """
     model.eval()
+    if batch is None:
+        # keep the LSTM activations of one batch around 1e8 values
+        batch = max(64, min(8192, int(1e8 // (s.shape[1] * model.hidden))))
     labels = head_labels(y)
     K = labels[..., [h for h, _ in HEADS].index("full")].to(torch.int64)
     loss_fn = nn.BCEWithLogitsLoss(reduction="sum")
@@ -72,11 +88,17 @@ def evaluate_heads(model, s, y, batch=8192):
 
 def train_one(name, dataset, seed, budget, device):
     path = out_dir("checkpoints") / f"{name}.pt"
+    n_train, n_val, batch_size, rounds = sizes(dataset, budget)
     config = dict(name=name, dataset=dataset, seed=seed, spec=DATASETS[dataset],
-                  n_train=budget.n_train, n_val=budget.n_val, hidden=budget.hidden,
-                  layers=LAYERS, batch=budget.batch_size, max_epochs=budget.max_epochs,
+                  n_train=n_train, n_val=n_val, hidden=budget.hidden,
+                  layers=LAYERS, batch=batch_size, max_epochs=budget.max_epochs,
                   patience=budget.patience, lr=LR, wd=WEIGHT_DECAY,
                   time_cap=budget.train_time_cap_s)
+    if rounds is not None:
+        # only long datasets carry this key, so existing checkpoints keep
+        # their config digest
+        config["rounds"] = rounds
+    data_kw = {} if rounds is None else dict(rounds=rounds)
     if is_complete(path, config):
         log(f"{name}: checkpoint up to date, skipping")
         return path
@@ -98,8 +120,8 @@ def train_one(name, dataset, seed, budget, device):
             log(f"{name}: previous training hit the time cap; retraining")
 
     t0 = time.time()
-    train = make_dataset(dataset, "train", budget.n_train, seed=seed)
-    val = make_dataset(dataset, "val", budget.n_val, seed=seed)
+    train = make_dataset(dataset, "train", n_train, seed=seed, **data_kw)
+    val = make_dataset(dataset, "val", n_val, seed=seed, **data_kw)
     s_tr = torch.tensor(train["syndromes"], device=device)
     y_tr = torch.tensor(train["y"], device=device)
     lab_tr = head_labels(y_tr)
@@ -110,7 +132,7 @@ def train_one(name, dataset, seed, budget, device):
     torch.manual_seed(1000 + seed)
     model = ParityLSTM(budget.hidden, LAYERS).to(device)
     opt = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=WEIGHT_DECAY)
-    steps_per_epoch = math.ceil(budget.n_train / budget.batch_size)
+    steps_per_epoch = math.ceil(n_train / batch_size)
     sched = torch.optim.lr_scheduler.CosineAnnealingLR(
         opt, T_max=budget.max_epochs * steps_per_epoch
     )
@@ -123,10 +145,10 @@ def train_one(name, dataset, seed, budget, device):
     stop_reason = "max_epochs"
     t_train = time.time()
     for epoch in range(budget.max_epochs):
-        perm = torch.randperm(budget.n_train, device=device, generator=gen)
+        perm = torch.randperm(n_train, device=device, generator=gen)
         running = 0.0
         for i in range(steps_per_epoch):
-            idx = perm[i * budget.batch_size:(i + 1) * budget.batch_size]
+            idx = perm[i * batch_size:(i + 1) * batch_size]
             logits, _ = model(s_tr[idx])
             loss = loss_fn(logits, lab_tr[idx])
             opt.zero_grad(set_to_none=True)

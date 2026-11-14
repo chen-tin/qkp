@@ -1,8 +1,7 @@
 # Results: GKP decoding under correlated displacement noise
 
-**Location:** `/home/babay/programs/QC/qkp-experiment`, a git worktree on the local branch
-`experiment/decoder-comparison`. The branch has not been pushed. Your original folder
-`/home/babay/programs/QC/qkp` and `chris-branch` were not modified.
+**Location:** developed on the branch `experiment/decoder-comparison` and merged into `main`
+(14 Nov 2026). `chris-branch` was not modified.
 
 **Start here:**
 - [`writeup/report.pdf`](writeup/report.pdf): the full LaTeX write-up (20 pages).
@@ -24,6 +23,10 @@
 | E6 | Regime-switching noise | complete, including the stretch items (regime-aware Bayes, LSTM trained on switching noise) |
 | E7 | Timing, CPU and GPU (measured on an idle GPU) | complete |
 | E8 | Diagnostics (floors, jump runs, calibration, revision ablations, 200-round horizon) | complete |
+| E9 | Gradual drift (sinusoid, ramp, 1/f; stationary control) | **built and tested, not run** (see `docs/nonstationary.md`) |
+| E10 | Unexpected changes (steps, telegraph switching, bursts) | **built and tested, not run** |
+| E11 | Unseen conditions for the drift-trained LSTM | **built and tested, not run** |
+| B | Benchmarks vs real data (T1 drift, Sivak et al. 2023) and simulation variance | complete (see `docs/benchmarks.md`) |
 | — | DQN / reinforcement learning | **not done** (out of scope by your instruction) |
 | — | Experimental GKP data | **not done** (out of scope) |
 

@@ -78,6 +78,14 @@ class Budget:
     hidden: int
     lstm_seeds: int
     filter_block_bytes: float  # memory per Bayes-filter block
+    # nonstationary experiments (E9-E11) and the drift-trained LSTM
+    ns_rounds: int = 1000          # rounds per sequence
+    ns_chunk_trials: int = 1_000   # test trials per chunk
+    ns_max_test_trials: int = 5_000  # fixed test-set size per point (cost driver:
+                                     # ~30 us per trial-round for the oracle on GPU)
+    ns_n_train: int = 20_000       # drift-LSTM training sequences
+    ns_n_val: int = 2_000
+    ns_batch_size: int = 128
 
 
 BUDGETS = {
@@ -92,6 +100,8 @@ BUDGETS = {
         diag_trials=500, n_train=8_000, n_val=2_000, batch_size=1024,
         max_epochs=3, patience=2, train_time_cap_s=60.0, hidden=64,
         lstm_seeds=1, filter_block_bytes=1.0e9,
+        ns_rounds=120, ns_chunk_trials=300, ns_max_test_trials=600,
+        ns_n_train=1_000, ns_n_val=200, ns_batch_size=64,
     ),
 }
 
@@ -212,16 +222,27 @@ def log(message):
 
 
 # evaluation
-def run_blocked(decoder, displacement_noise, measurement_noise, block):
+def _load_schedule(decoder, schedule, start, stop):
+    """Hand a block's true schedule to decoders that need it (the oracle)."""
+    if getattr(decoder, "needs_schedule", False):
+        if schedule is None:
+            raise ValueError(f"{decoder.name} needs the noise schedule")
+        decoder.set_schedule(schedule.slice(start, stop))
+
+
+def run_blocked(decoder, displacement_noise, measurement_noise, block, schedule=None):
     """Run a decoder over trial blocks and return the logical-error record.
 
     Returns a bool array (trials, rounds). Each block is an independent
     Simulator run, so decoder memory is bounded by the block size.
+    schedule (simulator.nonstationary.Schedule) is passed, block by block,
+    to decoders that declare needs_schedule (the oracle Bayes filter).
     """
     trials, rounds = displacement_noise.shape
     out = np.zeros((trials, rounds), dtype=bool)
     for start in range(0, trials, block):
         stop = min(start + block, trials)
+        _load_schedule(decoder, schedule, start, stop)
         sim = Simulator(trials=stop - start, rounds=rounds)
         result = sim.run(
             decoder, displacement_noise[start:stop], measurement_noise[start:stop]
@@ -230,12 +251,13 @@ def run_blocked(decoder, displacement_noise, measurement_noise, block):
     return out
 
 
-def run_blocked_full(decoder, displacement_noise, measurement_noise, block):
+def run_blocked_full(decoder, displacement_noise, measurement_noise, block, schedule=None):
     """Like run_blocked but returns a full SimResult (for small runs)."""
     trials, rounds = displacement_noise.shape
     parts = []
     for start in range(0, trials, block):
         stop = min(start + block, trials)
+        _load_schedule(decoder, schedule, start, stop)
         sim = Simulator(trials=stop - start, rounds=rounds)
         parts.append(sim.run(
             decoder, displacement_noise[start:stop], measurement_noise[start:stop]
@@ -291,6 +313,43 @@ def paired_difference(flips_a, flips_b, rounds):
     d = (flips_a.astype(float) - flips_b.astype(float)) / rounds
     n = len(d)
     return d.mean(), d.std(ddof=1) / np.sqrt(n) if n > 1 else np.nan
+
+
+def windowed_flip_rate(logical_errors, window):
+    """Per-round logical-flip rate in consecutive windows of `window` rounds.
+
+    Returns (window_starts, rate, se) with rate[k] the mean number of
+    logical-state changes per round in rounds [start_k, start_k + window).
+    """
+    trials, rounds = logical_errors.shape
+    prev = np.concatenate([np.zeros((trials, 1), dtype=bool), logical_errors[:, :-1]], axis=1)
+    flips = (logical_errors ^ prev).astype(float)
+    starts = np.arange(0, rounds - window + 1, window)
+    per = np.stack([flips[:, s:s + window].mean(axis=1) for s in starts], axis=1)
+    se = per.std(axis=0, ddof=1) / np.sqrt(trials) if trials > 1 else np.full(len(starts), np.nan)
+    return starts, per.mean(axis=0), se
+
+
+def aligned_flip_rate(logical_errors, tau, before, after):
+    """Flip rate per round aligned on each trial's event round tau.
+
+    Returns (offsets, rate, n) for offsets -before..after-1; trials whose
+    window leaves the sequence are excluded at that offset.
+    """
+    trials, rounds = logical_errors.shape
+    prev = np.concatenate([np.zeros((trials, 1), dtype=bool), logical_errors[:, :-1]], axis=1)
+    flips = (logical_errors ^ prev).astype(float)
+    offsets = np.arange(-before, after)
+    rate = np.full(len(offsets), np.nan)
+    count = np.zeros(len(offsets), dtype=int)
+    valid = tau >= 0
+    for k, o in enumerate(offsets):
+        cols = tau + o
+        ok = valid & (cols >= 0) & (cols < rounds)
+        count[k] = int(ok.sum())
+        if count[k]:
+            rate[k] = flips[np.flatnonzero(ok), cols[ok]].mean()
+    return offsets, rate, count
 
 
 def summarize(logical_errors):

@@ -1,0 +1,109 @@
+{
+ "sivak": {
+  "T1_cavity_us": 610.0,
+  "t_cycle_us": 9.848,
+  "delta": 0.34,
+  "p_logical": 0.00181,
+  "p_logical_se": 4e-05,
+  "T_logical_ms": 2.2
+ },
+ "sigma_q_from_loss_L": 0.07197627475478029,
+ "sigma_m_from_delta_L": 0.13564037533648712,
+ "nominal_equivalent_cavity_T1_us": 83.1947720277541,
+ "sigma_m_matching_sivak_nl_L": 0.10162838037714564,
+ "sigma_m_matching_sivak_bayes_L": 0.10867671071510109,
+ "trials": 20000,
+ "rounds": 100,
+ "rows": [
+  {
+   "sigma_q_L": 0.07197627475478029,
+   "sigma_m_L": 0.0,
+   "nl_flip_exact": 3.738376027761767e-12,
+   "nl_flip": 0.0,
+   "nl_flip_se": 0.0,
+   "bayes_flip": 0.0,
+   "bayes_flip_se": 0.0
+  },
+  {
+   "sigma_q_L": 0.07197627475478029,
+   "sigma_m_L": 0.03,
+   "nl_flip_exact": 2.1712449786677076e-09,
+   "nl_flip": 0.0,
+   "nl_flip_se": 0.0,
+   "bayes_flip": 0.0,
+   "bayes_flip_se": 0.0
+  },
+  {
+   "sigma_q_L": 0.07197627475478029,
+   "sigma_m_L": 0.06,
+   "nl_flip_exact": 7.001200660520135e-06,
+   "nl_flip": 8e-06,
+   "nl_flip_se": 1.9992498218062945e-06,
+   "bayes_flip": 6.5000000000000004e-06,
+   "bayes_flip_se": 2.3975351736200738e-06
+  },
+  {
+   "sigma_q_L": 0.07197627475478029,
+   "sigma_m_L": 0.08,
+   "nl_flip_exact": 0.00019240021737076984,
+   "nl_flip": 0.00018250000000000002,
+   "nl_flip_se": 9.648281814245391e-06,
+   "bayes_flip": 0.00010950000000000002,
+   "bayes_flip_se": 1.0519316532028831e-05
+  },
+  {
+   "sigma_q_L": 0.07197627475478029,
+   "sigma_m_L": 0.1,
+   "nl_flip_exact": 0.0016275816595465722,
+   "nl_flip": 0.001614,
+   "nl_flip_se": 2.884946818557891e-05,
+   "bayes_flip": 0.0009685000000000001,
+   "bayes_flip_se": 3.135920211800475e-05
+  },
+  {
+   "sigma_q_L": 0.07197627475478029,
+   "sigma_m_L": 0.12,
+   "nl_flip_exact": 0.006679686463056537,
+   "nl_flip": 0.0065955000000000015,
+   "nl_flip_se": 6.004497695447032e-05,
+   "bayes_flip": 0.0040935,
+   "bayes_flip_se": 6.5963099108685e-05
+  },
+  {
+   "sigma_q_L": 0.07197627475478029,
+   "sigma_m_L": 0.1356,
+   "nl_flip_exact": 0.014644651537493595,
+   "nl_flip": 0.014440999999999999,
+   "nl_flip_se": 9.039239176625687e-05,
+   "bayes_flip": 0.0096715,
+   "bayes_flip_se": 0.00010097704791540642
+  },
+  {
+   "sigma_q_L": 0.07197627475478029,
+   "sigma_m_L": 0.15,
+   "nl_flip_exact": 0.02561225994196966,
+   "nl_flip": 0.025035,
+   "nl_flip_se": 0.00011926713706004317,
+   "bayes_flip": 0.018303500000000004,
+   "bayes_flip_se": 0.0001417386640262423
+  },
+  {
+   "sigma_q_L": 0.07197627475478029,
+   "sigma_m_L": 0.18,
+   "nl_flip_exact": 0.05874664427695618,
+   "nl_flip": 0.05590850000000001,
+   "nl_flip_se": 0.00017897718577838758,
+   "bayes_flip": 0.0473815,
+   "bayes_flip_se": 0.00023459576860257372
+  },
+  {
+   "sigma_q_L": 0.07197627475478029,
+   "sigma_m_L": 0.21,
+   "nl_flip_exact": 0.10179262380058356,
+   "nl_flip": 0.0926715,
+   "nl_flip_se": 0.00022854324752286911,
+   "bayes_flip": 0.089547,
+   "bayes_flip_se": 0.00033050143889256446
+  }
+ ]
+}

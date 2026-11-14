@@ -129,17 +129,31 @@ def point_dir(exp, point_id):
     return out_dir() / "cache" / exp / point_id
 
 
-def noise_chunk(noise_spec, exp, point_index, chunk, trials, rounds):
+def noise_chunk_with_schedule(noise_spec, exp, point_index, chunk, trials, rounds):
+    """(displacement, measurement, schedule) of one test chunk.
+
+    schedule is None for the stationary kinds; for kind "schedule" it is the
+    simulator.nonstationary.Schedule the noise was drawn from (the oracle
+    decoder reads it; every other decoder sees only syndromes).
+    """
     rng = make_rng(eval_split(), exp, point_index, chunk)
     kind = noise_spec["kind"]
     if kind == "ar1":
         model = NoiseModel(noise_spec["sigma_q"], noise_spec["sigma_m"], noise_spec["rho"])
-        return model.sample(rng, trials, rounds)
+        return (*model.sample(rng, trials, rounds), None)
     if kind == "switching":
         model = SwitchingNoiseModel(*(noise_spec[k] for k in
                                       ("sigma_q", "sigma_m", "rho_lo", "rho_hi", "p_switch")))
-        return model.sample(rng, trials, rounds)
+        return (*model.sample(rng, trials, rounds), None)
+    if kind == "schedule":
+        from simulator import nonstationary
+        return nonstationary.sample(noise_spec["spec"], rng, trials, rounds)
     raise ValueError(kind)
+
+
+def noise_chunk(noise_spec, exp, point_index, chunk, trials, rounds):
+    d, n, _ = noise_chunk_with_schedule(noise_spec, exp, point_index, chunk, trials, rounds)
+    return d, n
 
 
 def run_decoder(dec, noise_spec, exp, point_index, n_chunks, chunk_trials, rounds, budget):
@@ -151,8 +165,9 @@ def run_decoder(dec, noise_spec, exp, point_index, n_chunks, chunk_trials, round
     if DEVICE.type == "cuda":
         torch.cuda.synchronize()
     for c in range(n_chunks):
-        d, n = noise_chunk(noise_spec, exp, point_index, c, chunk_trials, rounds)
-        parts.append(run_blocked(decoder, d, n, block))
+        d, n, sched = noise_chunk_with_schedule(noise_spec, exp, point_index, c,
+                                                chunk_trials, rounds)
+        parts.append(run_blocked(decoder, d, n, block, schedule=sched))
     if DEVICE.type == "cuda":
         torch.cuda.synchronize()
     seconds = time.perf_counter() - t0
@@ -161,7 +176,7 @@ def run_decoder(dec, noise_spec, exp, point_index, n_chunks, chunk_trials, round
 
 
 def evaluate_point(exp, point_index, point_id, noise_spec, decoders, reference,
-                   cap, rounds=ROUNDS, min_events=None):
+                   cap, rounds=ROUNDS, min_events=None, chunk=None):
     """Evaluate all decoders on one point.
 
     The number of test chunks is set once, by growing the test set until the
@@ -170,7 +185,7 @@ def evaluate_point(exp, point_index, point_id, noise_spec, decoders, reference,
     the same noise.
     """
     budget = get_budget()
-    chunk = budget.chunk_trials
+    chunk = chunk or budget.chunk_trials
     cap = min(cap, budget.max_test_trials) if get_mode() == "quick" else cap
     if min_events is None:
         min_events = budget.min_events
@@ -222,8 +237,9 @@ def _size_test_set(exp, point_id, noise_spec, reference, cap, chunk, rounds, min
              if reference["kind"] == "bayes" else 50_000)
     while True:
         t0 = time.perf_counter()
-        d, n = noise_chunk(noise_spec, exp, point_index, n_chunks, chunk, rounds)
-        parts.append(run_blocked(decoder, d, n, block))
+        d, n, sched = noise_chunk_with_schedule(noise_spec, exp, point_index, n_chunks,
+                                                chunk, rounds)
+        parts.append(run_blocked(decoder, d, n, block, schedule=sched))
         seconds += time.perf_counter() - t0
         n_chunks += 1
         events = int(np.concatenate(parts)[:, -1].sum())
@@ -386,7 +402,7 @@ def e7():
     budget = get_budget()
     from training.train_lstm import model_list
     path = out_dir() / "E7_timing.json"
-    models = [lstm(m, m) for m, _, _ in model_list(budget)]
+    models = [lstm(m, m) for m, _, _ in model_list(budget, include_nonstationary=False)]
     if not all(lstm_ready(m) for m in models):
         log("E7: deferred until all LSTMs are trained (timing needs an idle GPU)")
         return
@@ -586,7 +602,16 @@ def e0():
                 "figure in results/E0_validate_sim/docs/figures)")
 
 
-EXPERIMENTS = dict(E0=e0, E1=e1, E5=e5, E2=e2, E3=e3, E4=e4, E6=e6, E8=e8, E7=e7)
+def _nonstationary(name):
+    def run():
+        from experiments import run_nonstationary
+        getattr(run_nonstationary, name.lower())()
+    return run
+
+
+EXPERIMENTS = dict(E0=e0, E1=e1, E5=e5, E2=e2, E3=e3, E4=e4, E6=e6, E8=e8, E7=e7,
+                   E9=_nonstationary("E9"), E10=_nonstationary("E10"),
+                   E11=_nonstationary("E11"))
 
 
 def main():
