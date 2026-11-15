@@ -1,0 +1,105 @@
+{
+ "Bayes (matched) | throughput": {
+  "reference": 1.431995043930101,
+  "fast": 0.6096727978643912,
+  "fast, no CUDA graph": 0.7231424951470444,
+  "fast, unfused": 0.8654966162424671,
+  "speedup": 2.3487927441509666
+ },
+ "Bayes (matched) | latency": {
+  "reference": 1.7552109798998572,
+  "fast": 0.12906049989396706,
+  "fast, no CUDA graph": 1.1796031400444917,
+  "fast, unfused": 0.14800778008066118,
+  "speedup": 13.59990842544307
+ },
+ "Bayes-broad | throughput": {
+  "reference": 20.61781191400769,
+  "fast": 19.694394726457176,
+  "fast, no CUDA graph": 19.758663320317282,
+  "fast, unfused": 23.039426777415883,
+  "speedup": 1.046887309834915
+ },
+ "Bayes-broad | latency": {
+  "reference": 11.216652159928344,
+  "fast": 0.27262855990557,
+  "fast, no CUDA graph": 1.9935297398478726,
+  "fast, unfused": 0.29677662008907646,
+  "speedup": 41.14261603338051
+ },
+ "Bayes (oracle) | throughput": {
+  "reference": 19.152181093602394,
+  "fast": 2.247529355372535,
+  "fast, unfused": 2.4749390235001556,
+  "speedup": 8.521437572248242
+ },
+ "Bayes (oracle) | latency": {
+  "reference": 2.3833630001172423,
+  "fast": 1.2104197998996824,
+  "fast, unfused": 0.9178046602755785,
+  "speedup": 1.9690383454688791
+ },
+ "Bayes-IMM | throughput": {
+  "reference": 89.8892377929883,
+  "fast": 44.47045933602567,
+  "fast, no CUDA graph": 44.32385501928593,
+  "fast, unfused": 53.498231191326795,
+  "speedup": 2.021324698127611
+ },
+ "Bayes-IMM | latency": {
+  "reference": 3.393588339968119,
+  "fast": 0.147069760132581,
+  "fast, no CUDA graph": 1.3472728201304562,
+  "fast, unfused": 0.15727961988886818,
+  "speedup": 23.074684672830458
+ },
+ "Bayes-window 200 | throughput": {
+  "reference": 38.82787222664774,
+  "fast": 30.50439769509694,
+  "fast, no CUDA graph": 29.628924628752884,
+  "fast, unfused": 36.18148822255307,
+  "speedup": 1.2728614613127949
+ },
+ "Bayes-window 200 | latency": {
+  "reference": 18.95155648002401,
+  "fast": 0.33474847994511947,
+  "fast, no CUDA graph": 4.367961079988163,
+  "fast, unfused": 0.33966529997996986,
+  "speedup": 56.61431676442872
+ },
+ "LSTM-nominal | throughput": {
+  "reference": 2.320550336918359,
+  "fast": 0.22659688482917772,
+  "speedup": 10.240874841098227
+ },
+ "LSTM-nominal | latency": {
+  "reference": 0.9202368001569994,
+  "fast": 0.027875299856532365,
+  "speedup": 33.01262425492255
+ },
+ "simulate (NL loop)": {
+  "reference": 6.189403997268528,
+  "fast": 5.366902987589128,
+  "speedup": 1.1532543091577059
+ },
+ "encode state delta=0.3 N=100": {
+  "reference": 32.08683500997722,
+  "fast": 1.9199310045223683,
+  "speedup": 16.712493800244474
+ },
+ "encode wigner 201x201 delta=0.3 N=100": {
+  "reference": 923.2533635004074,
+  "fast": 23.139967990573496,
+  "speedup": 39.8986447983209
+ },
+ "encode state delta=0.2 N=200": {
+  "reference": 65.52224900224246,
+  "fast": 2.0517520024441183,
+  "speedup": 31.93478009242349
+ },
+ "encode wigner 201x201 delta=0.2 N=200": {
+  "reference": 3677.348332996189,
+  "fast": 30.894670999259688,
+  "speedup": 119.02856428166228
+ }
+}

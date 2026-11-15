@@ -1,0 +1,7 @@
+decoder,sq_max_ler50_0p05,sq_max_ler50_0p10,sq_max_mean_0p01,sm_max_ler50_0p05,rho_min_ler50_0p05_A,rho_min_ler50_0p05_B,rounds_to_PL_0p01,rounds_to_PL_0p10,rho_2x_vs_NL_A,sq_2x_vs_NL,breakeven_sq_star
+NL,0.145,0.165,0.129,nowhere,nowhere,nowhere,1 [1–1],16 [15–17],none,none,never
+Bayes (matched),0.314,whole sweep,0.257,0.084,0.714,0.953,> 200,> 200,0.7–0.995 (6/6 pts at 2σ),0.08–0.34 (8/9 pts at 2σ),<= 0.14
+Bayes (nominal),0.306,0.334,0.255,0.081,0.736,0.965,–,–,0.7–0.995 (6/6 pts at 2σ),0.08–0.34 (8/9 pts at 2σ),0.123
+Bayes-broad,0.308,0.337,0.251,0.075,0.722,0.977,> 50,> 50,0.7–0.995 (6/6 pts at 2σ),0.08–0.34 (8/9 pts at 2σ),0.125
+LSTM-nominal,0.256,0.284,0.217,0.070,0.779,nowhere,102 [81–115],> 200,0.7–0.995 (6/6 pts at 2σ),0.1–0.34 (8/8 pts at 2σ),0.127
+LSTM-broad,0.241,0.272,0.200,0.066,0.758,nowhere,114 [100–143],> 200,0.7–0.995 (6/6 pts at 2σ),0.08–0.34 (8/9 pts at 2σ),0.139

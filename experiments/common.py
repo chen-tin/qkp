@@ -238,6 +238,12 @@ def run_blocked(decoder, displacement_noise, measurement_noise, block, schedule=
     schedule (simulator.nonstationary.Schedule) is passed, block by block,
     to decoders that declare needs_schedule (the oracle Bayes filter).
     """
+    if getattr(decoder, "is_fast", False):
+        # GPU drivers in decoders/fast.py: vectorised simulator, decisions kept
+        # on the GPU, CUDA-graph rounds (same decisions up to float32 near-ties)
+        from decoders.fast import run as fast_run
+        return fast_run(decoder, displacement_noise, measurement_noise, schedule=schedule,
+                        block=block)
     trials, rounds = displacement_noise.shape
     out = np.zeros((trials, rounds), dtype=bool)
     for start in range(0, trials, block):

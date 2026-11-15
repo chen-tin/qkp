@@ -22,6 +22,7 @@ Run from the repo root (nothing here has been run yet):
 
 import argparse
 import hashlib
+import os
 import time
 import traceback
 
@@ -43,7 +44,7 @@ from simulator.nonstationary import spec
 NS_CODE_HASH = hashlib.sha1(b"".join(
     (ROOT / rel).read_bytes() for rel in (
         "simulator/nonstationary.py", "decoders/bayesian/adaptive.py",
-        "experiments/common.py",
+        "experiments/common.py", "decoders/fast.py", "simulator/fast.py",
     ))).hexdigest()[:12]
 
 # grid of noise models for the adaptive decoders (covers every test point
@@ -88,37 +89,81 @@ E11_POINTS = [
 POINTS = {"E9": E9_POINTS, "E10": E10_POINTS, "E11": E11_POINTS}
 
 
-# decoder factories (same dict format as experiments/run_all.py)
+# decoder factories (same dict format as experiments/run_all.py). By default
+# the GPU fast paths of decoders/fast.py are used (QKP_FAST=0 for the
+# reference implementations); the implementation is part of every cache key.
+FAST = os.environ.get("QKP_FAST", "1") != "0"
+IMPL = "fast" if FAST else "reference"
+
+
 def oracle():
-    return dict(name="Bayes (oracle)", kind="bayes", spec=dict(oracle=True),
-                make=lambda: OracleBayesDecoder(n_x=96, device=run_all.DEVICE))
+    from decoders.fast import FastOracle
+    ref = lambda: OracleBayesDecoder(n_x=96, device=run_all.DEVICE)
+    fast = lambda: FastOracle(n_x=96, device=run_all.DEVICE, reference=ref,
+                              name="Bayes (oracle)")
+    return dict(name="Bayes (oracle)", kind="bayes", spec=dict(oracle=True, impl=IMPL),
+                make=fast if FAST else ref)
+
+
+def fixed(models, name, spec, ref):
+    from decoders.fast import FastGridDecoder
+    fast = lambda: FastGridDecoder(models, n_x=96, device=run_all.DEVICE, reference=ref,
+                                   name=name)
+    return dict(name=name, kind="bayes", spec=dict(spec, impl=IMPL), make=fast if FAST else ref)
 
 
 def imm(hazard=IMM_HAZARD):
-    return dict(name="Bayes-IMM", kind="bayes", spec=dict(grid=ADAPTIVE_GRID, hazard=hazard),
-                make=lambda: RegimeBankDecoder(ADAPTIVE_GRID, hazard=hazard, n_x=96,
-                                               device=run_all.DEVICE))
+    from decoders.fast import FastGridDecoder
+    ref = lambda: RegimeBankDecoder(ADAPTIVE_GRID, hazard=hazard, n_x=96, device=run_all.DEVICE)
+    fast = lambda: FastGridDecoder(ADAPTIVE_GRID, n_x=96, device=run_all.DEVICE, joint=True,
+                                   hazard=hazard, reference=ref, name="Bayes-IMM")
+    return dict(name="Bayes-IMM", kind="bayes",
+                spec=dict(grid=ADAPTIVE_GRID, hazard=hazard, impl=IMPL),
+                make=fast if FAST else ref)
 
 
 def window(w):
+    from decoders.fast import FastGridDecoder
+    ref = lambda: WindowedBayesDecoder(ADAPTIVE_GRID, window=w, n_x=96, device=run_all.DEVICE)
+    fast = lambda: FastGridDecoder(ADAPTIVE_GRID, n_x=96, device=run_all.DEVICE, window=w,
+                                   reference=ref, name=f"Bayes-window {w}")
     return dict(name=f"Bayes-window {w}", kind="bayes",
-                spec=dict(grid=ADAPTIVE_GRID, window=w),
-                make=lambda: WindowedBayesDecoder(ADAPTIVE_GRID, window=w, n_x=96,
-                                                  device=run_all.DEVICE))
+                spec=dict(grid=ADAPTIVE_GRID, window=w, impl=IMPL), make=fast if FAST else ref)
+
+
+def lstm_fast_family(prefix, label, seeds):
+    """run_all.lstm_family with the whole-sequence LSTM driver when FAST."""
+    out = []
+    for dec in lstm_family(prefix, label, seeds):
+        if FAST:
+            from decoders.fast import FastLSTM
+            from decoders.LSTM.model import load_model
+
+            def make(path=dec["checkpoint"], name=dec["name"]):
+                model, ck = load_model(path, run_all.DEVICE)
+                return FastLSTM(model, ck["chosen_head"], device=run_all.DEVICE, name=name)
+            dec = dict(dec, make=make, spec=dict(dec["spec"], impl=IMPL))
+        out.append(dec)
+    return out
 
 
 def decoder_set(budget):
+    from decoders.bayesian.grid_filter import BayesGridDecoder, MultiModelBayesDecoder
     nom = NOMINAL
+    dev = lambda: run_all.DEVICE
     return [
         oracle(),                                   # reference (index 0)
         simple("NL"),
-        bayes(nom["sigma_q"], nom["sigma_m"], nom["rho"], "Bayes (nominal)"),
-        bayes_broad(),
+        fixed([dict(nom)], "Bayes (nominal)", dict(nom),
+              lambda: BayesGridDecoder(**nom, n_x=96, name="Bayes (nominal)", device=dev())),
+        fixed(run_all.BROAD_COMPONENTS, "Bayes-broad",
+              dict(components=run_all.BROAD_COMPONENTS),
+              lambda: MultiModelBayesDecoder(run_all.BROAD_COMPONENTS, n_x=96, device=dev())),
         imm(),
         *[window(w) for w in WINDOWS],
-        *lstm_family("lstm_nominal", "LSTM-nominal", budget.lstm_seeds),
-        *lstm_family("lstm_broad", "LSTM-broad", budget.lstm_seeds),
-        *lstm_family("lstm_drift", "LSTM-drift", budget.lstm_seeds),
+        *lstm_fast_family("lstm_nominal", "LSTM-nominal", budget.lstm_seeds),
+        *lstm_fast_family("lstm_broad", "LSTM-broad", budget.lstm_seeds),
+        *lstm_fast_family("lstm_drift", "LSTM-drift", budget.lstm_seeds),
     ]
 
 
@@ -158,18 +203,22 @@ def main():
     run_all.DEVICE = torch_device()
     log(f"run_nonstationary: mode={get_mode()} device={run_all.DEVICE} "
         f"rounds={get_budget().ns_rounds} code={NS_CODE_HASH}")
+    from experiments.runlog import RunLog
     failures = []
-    for name, fn in EXPERIMENTS.items():
-        if args.only and name not in args.only:
-            continue
-        t0 = time.perf_counter()
-        log(f"=== {name} ===")
-        try:
-            fn()
-            log(f"=== {name} done in {time.perf_counter() - t0:.0f}s ===")
-        except Exception:
-            failures.append(name)
-            log(f"=== {name} FAILED ===\n{traceback.format_exc()}")
+    with RunLog("run_nonstationary", args=dict(vars(args), impl=IMPL, code=NS_CODE_HASH)) as rl:
+        for name, fn in EXPERIMENTS.items():
+            if args.only and name not in args.only:
+                continue
+            t0 = time.perf_counter()
+            log(f"=== {name} ===")
+            try:
+                with rl.phase(name):
+                    fn()
+                log(f"=== {name} done in {time.perf_counter() - t0:.0f}s ===")
+            except Exception:
+                failures.append(name)
+                log(f"=== {name} FAILED ===\n{traceback.format_exc()}")
+        rl.note(failed_experiments=failures, failed_decoders=list(run_all.FAILURES))
     log(f"run_nonstationary finished; failed experiments: {failures or 'none'}; "
         f"failed decoders/points: {run_all.FAILURES or 'none'}")
 

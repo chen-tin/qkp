@@ -1,0 +1,952 @@
+{
+ "env": {
+  "mode": "full",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "other_gpu_processes": [],
+  "load_avg": [
+   1.3642578125,
+   1.26904296875,
+   1.1982421875
+  ],
+  "torch": "2.11.0+cu128",
+  "load_avg_end": [
+   1.18505859375,
+   1.26318359375,
+   1.20751953125
+  ]
+ },
+ "scaling": [
+  {
+   "decoder": "NL",
+   "device": "cpu",
+   "batch": 1,
+   "rounds": 50,
+   "seconds": 0.00044942899694433436,
+   "ms_per_round": 0.008988579938886687,
+   "us_per_trial_round": 8.988579938886687,
+   "trial_rounds_per_s": 111252.27864679352,
+   "peak_gpu_gb": null
+  },
+  {
+   "decoder": "NL",
+   "device": "cpu",
+   "batch": 64,
+   "rounds": 50,
+   "seconds": 0.0004395299984025769,
+   "ms_per_round": 0.008790599968051538,
+   "us_per_trial_round": 0.13735312450080528,
+   "trial_rounds_per_s": 7280504.201374299,
+   "peak_gpu_gb": null
+  },
+  {
+   "decoder": "NL",
+   "device": "cpu",
+   "batch": 512,
+   "rounds": 50,
+   "seconds": 0.0017782330032787286,
+   "ms_per_round": 0.03556466006557457,
+   "us_per_trial_round": 0.06946222669057533,
+   "trial_rounds_per_s": 14396313.617393443,
+   "peak_gpu_gb": null
+  },
+  {
+   "decoder": "NL",
+   "device": "cpu",
+   "batch": 4096,
+   "rounds": 50,
+   "seconds": 0.007941828996990807,
+   "ms_per_round": 0.15883657993981615,
+   "us_per_trial_round": 0.03877846189936918,
+   "trial_rounds_per_s": 25787510.670098737,
+   "peak_gpu_gb": null
+  },
+  {
+   "decoder": "Bayes (matched) n_x=64",
+   "device": "cuda",
+   "batch": 1,
+   "rounds": 50,
+   "seconds": 0.11197473599895602,
+   "ms_per_round": 2.2394947199791204,
+   "us_per_trial_round": 2239.4947199791204,
+   "trial_rounds_per_s": 446.52929568386,
+   "peak_gpu_gb": 0.008628736
+  },
+  {
+   "decoder": "Bayes (matched) n_x=64",
+   "device": "cuda",
+   "batch": 64,
+   "rounds": 50,
+   "seconds": 0.10408326300239423,
+   "ms_per_round": 2.0816652600478847,
+   "us_per_trial_round": 32.5260196882482,
+   "trial_rounds_per_s": 30744.61645121935,
+   "peak_gpu_gb": 0.011836928
+  },
+  {
+   "decoder": "Bayes (matched) n_x=64",
+   "device": "cuda",
+   "batch": 512,
+   "rounds": 50,
+   "seconds": 0.13893470199400326,
+   "ms_per_round": 2.7786940398800652,
+   "us_per_trial_round": 5.427136796640752,
+   "trial_rounds_per_s": 184259.22129307158,
+   "peak_gpu_gb": 0.034679296
+  },
+  {
+   "decoder": "Bayes (matched) n_x=64",
+   "device": "cuda",
+   "batch": 4096,
+   "rounds": 50,
+   "seconds": 0.21348305500578135,
+   "ms_per_round": 4.269661100115627,
+   "us_per_trial_round": 1.0423977295204168,
+   "trial_rounds_per_s": 959326.7249920786,
+   "peak_gpu_gb": 0.2205696
+  },
+  {
+   "decoder": "Bayes (matched) n_x=96",
+   "device": "cuda",
+   "batch": 1,
+   "rounds": 50,
+   "seconds": 0.11357105799834244,
+   "ms_per_round": 2.271421159966849,
+   "us_per_trial_round": 2271.421159966849,
+   "trial_rounds_per_s": 440.2530088319662,
+   "peak_gpu_gb": 0.008753152
+  },
+  {
+   "decoder": "Bayes (matched) n_x=96",
+   "device": "cuda",
+   "batch": 64,
+   "rounds": 50,
+   "seconds": 0.1542154839989962,
+   "ms_per_round": 3.084309679979924,
+   "us_per_trial_round": 48.192338749686314,
+   "trial_rounds_per_s": 20750.186148758115,
+   "peak_gpu_gb": 0.015888896
+  },
+  {
+   "decoder": "Bayes (matched) n_x=96",
+   "device": "cuda",
+   "batch": 512,
+   "rounds": 50,
+   "seconds": 0.13395801900333026,
+   "ms_per_round": 2.6791603800666053,
+   "us_per_trial_round": 5.2327351173175884,
+   "trial_rounds_per_s": 191104.647489327,
+   "peak_gpu_gb": 0.066657792
+  },
+  {
+   "decoder": "Bayes (matched) n_x=96",
+   "device": "cuda",
+   "batch": 4096,
+   "rounds": 50,
+   "seconds": 0.35734590500214836,
+   "ms_per_round": 7.146918100042967,
+   "us_per_trial_round": 1.7448530517683025,
+   "trial_rounds_per_s": 573114.1651078071,
+   "peak_gpu_gb": 0.474387456
+  },
+  {
+   "decoder": "Bayes (matched) n_x=128",
+   "device": "cuda",
+   "batch": 1,
+   "rounds": 50,
+   "seconds": 0.1521321149994037,
+   "ms_per_round": 3.0426422999880742,
+   "us_per_trial_round": 3042.6422999880742,
+   "trial_rounds_per_s": 328.66170302171884,
+   "peak_gpu_gb": 0.008926208
+  },
+  {
+   "decoder": "Bayes (matched) n_x=128",
+   "device": "cuda",
+   "batch": 64,
+   "rounds": 50,
+   "seconds": 0.17063369199604494,
+   "ms_per_round": 3.412673839920899,
+   "us_per_trial_round": 53.323028748764045,
+   "trial_rounds_per_s": 18753.623405594317,
+   "peak_gpu_gb": 0.021538304
+  },
+  {
+   "decoder": "Bayes (matched) n_x=128",
+   "device": "cuda",
+   "batch": 512,
+   "rounds": 50,
+   "seconds": 0.21624222300306428,
+   "ms_per_round": 4.324844460061286,
+   "us_per_trial_round": 8.446961836057199,
+   "trial_rounds_per_s": 118385.76039628132,
+   "peak_gpu_gb": 0.111243776
+  },
+  {
+   "decoder": "Bayes (matched) n_x=128",
+   "device": "cuda",
+   "batch": 4096,
+   "rounds": 50,
+   "seconds": 0.7409054340023431,
+   "ms_per_round": 14.818108680046862,
+   "us_per_trial_round": 3.617702314464566,
+   "trial_rounds_per_s": 276418.5422337614,
+   "peak_gpu_gb": 0.828893184
+  },
+  {
+   "decoder": "Bayes (matched) n_x=192",
+   "device": "cuda",
+   "batch": 1,
+   "rounds": 50,
+   "seconds": 0.11171151800226653,
+   "ms_per_round": 2.2342303600453306,
+   "us_per_trial_round": 2234.2303600453306,
+   "trial_rounds_per_s": 447.5814212728319,
+   "peak_gpu_gb": 0.009422336
+  },
+  {
+   "decoder": "Bayes (matched) n_x=192",
+   "device": "cuda",
+   "batch": 64,
+   "rounds": 50,
+   "seconds": 0.11722536299930653,
+   "ms_per_round": 2.3445072599861305,
+   "us_per_trial_round": 36.63292593728329,
+   "trial_rounds_per_s": 27297.846798042592,
+   "peak_gpu_gb": 0.038222848
+  },
+  {
+   "decoder": "Bayes (matched) n_x=192",
+   "device": "cuda",
+   "batch": 512,
+   "rounds": 50,
+   "seconds": 0.2093360830040183,
+   "ms_per_round": 4.186721660080366,
+   "us_per_trial_round": 8.177190742344465,
+   "trial_rounds_per_s": 122291.38728801282,
+   "peak_gpu_gb": 0.238237696
+  },
+  {
+   "decoder": "Bayes (matched) n_x=192",
+   "device": "cuda",
+   "batch": 4096,
+   "rounds": 50,
+   "seconds": 3.051853888995538,
+   "ms_per_round": 61.03707777991076,
+   "us_per_trial_round": 14.901630317361025,
+   "trial_rounds_per_s": 67106.75132203205,
+   "peak_gpu_gb": 1.8462592
+  },
+  {
+   "decoder": "Bayes-broad",
+   "device": "cuda",
+   "batch": 1,
+   "rounds": 50,
+   "seconds": 0.9022101640002802,
+   "ms_per_round": 18.044203280005604,
+   "us_per_trial_round": 18044.203280005604,
+   "trial_rounds_per_s": 55.41945989425194,
+   "peak_gpu_gb": 0.009865728
+  },
+  {
+   "decoder": "Bayes-broad",
+   "device": "cuda",
+   "batch": 64,
+   "rounds": 50,
+   "seconds": 0.7658577889960725,
+   "ms_per_round": 15.31715577992145,
+   "us_per_trial_round": 239.33055906127265,
+   "trial_rounds_per_s": 4178.321414207632,
+   "peak_gpu_gb": 0.03576832
+  },
+  {
+   "decoder": "Bayes-broad",
+   "device": "cuda",
+   "batch": 512,
+   "rounds": 50,
+   "seconds": 0.9654928570016637,
+   "ms_per_round": 19.309857140033273,
+   "us_per_trial_round": 37.714564726627486,
+   "trial_rounds_per_s": 26514.955356066283,
+   "peak_gpu_gb": 0.210506752
+  },
+  {
+   "decoder": "Bayes-broad",
+   "device": "cuda",
+   "batch": 4096,
+   "rounds": 50,
+   "seconds": 7.137617981999938,
+   "ms_per_round": 142.75235963999876,
+   "us_per_trial_round": 34.85165030273407,
+   "trial_rounds_per_s": 28693.045847575006,
+   "peak_gpu_gb": 1.617832448
+  },
+  {
+   "decoder": "Bayes (oracle)",
+   "device": "cuda",
+   "batch": 1,
+   "rounds": 50,
+   "seconds": 0.23478642500413116,
+   "ms_per_round": 4.695728500082623,
+   "us_per_trial_round": 4695.728500082623,
+   "trial_rounds_per_s": 212.95950138139472,
+   "peak_gpu_gb": 0.00916992
+  },
+  {
+   "decoder": "Bayes (oracle)",
+   "device": "cuda",
+   "batch": 64,
+   "rounds": 50,
+   "seconds": 0.5279249119994347,
+   "ms_per_round": 10.558498239988694,
+   "us_per_trial_round": 164.97653499982334,
+   "trial_rounds_per_s": 6061.468074845134,
+   "peak_gpu_gb": 0.04526592
+  },
+  {
+   "decoder": "Bayes (oracle)",
+   "device": "cuda",
+   "batch": 512,
+   "rounds": 50,
+   "seconds": 1.3674085089951404,
+   "ms_per_round": 27.34817017990281,
+   "us_per_trial_round": 53.41439488262267,
+   "trial_rounds_per_s": 18721.54504787492,
+   "peak_gpu_gb": 0.298283008
+  },
+  {
+   "decoder": "Bayes (oracle)",
+   "device": "cuda",
+   "batch": 4096,
+   "rounds": 50,
+   "seconds": 9.418017456002417,
+   "ms_per_round": 188.36034912004834,
+   "us_per_trial_round": 45.9864133593868,
+   "trial_rounds_per_s": 21745.553239495657,
+   "peak_gpu_gb": 2.326605824
+  },
+  {
+   "decoder": "Bayes-IMM",
+   "device": "cuda",
+   "batch": 1,
+   "rounds": 50,
+   "seconds": 0.18599736600299366,
+   "ms_per_round": 3.719947320059873,
+   "us_per_trial_round": 3719.947320059873,
+   "trial_rounds_per_s": 268.8210111491323,
+   "peak_gpu_gb": 0.0123264
+  },
+  {
+   "decoder": "Bayes-IMM",
+   "device": "cuda",
+   "batch": 64,
+   "rounds": 50,
+   "seconds": 0.4833332869966398,
+   "ms_per_round": 9.666665739932796,
+   "us_per_trial_round": 151.04165218644994,
+   "trial_rounds_per_s": 6620.6902898915105,
+   "peak_gpu_gb": 0.180701184
+  },
+  {
+   "decoder": "Bayes-IMM",
+   "device": "cuda",
+   "batch": 512,
+   "rounds": 50,
+   "seconds": 3.3292955520009855,
+   "ms_per_round": 66.58591104001971,
+   "us_per_trial_round": 130.0506075000385,
+   "trial_rounds_per_s": 7689.314330959231,
+   "peak_gpu_gb": 1.378054656
+  },
+  {
+   "decoder": "Bayes-IMM",
+   "device": "cuda",
+   "batch": 1024,
+   "rounds": 50,
+   "seconds": 8.953642834996572,
+   "ms_per_round": 179.07285669993144,
+   "us_per_trial_round": 174.8758366210268,
+   "trial_rounds_per_s": 5718.342907299988,
+   "peak_gpu_gb": 2.746458624
+  },
+  {
+   "decoder": "Bayes-window 50",
+   "device": "cuda",
+   "batch": 1,
+   "rounds": 50,
+   "seconds": 1.23150332300429,
+   "ms_per_round": 24.6300664600858,
+   "us_per_trial_round": 24630.0664600858,
+   "trial_rounds_per_s": 40.600783664979055,
+   "peak_gpu_gb": 0.010799616
+  },
+  {
+   "decoder": "Bayes-window 50",
+   "device": "cuda",
+   "batch": 64,
+   "rounds": 50,
+   "seconds": 1.3012390809963108,
+   "ms_per_round": 26.024781619926216,
+   "us_per_trial_round": 406.6372128113471,
+   "trial_rounds_per_s": 2459.1945067849315,
+   "peak_gpu_gb": 0.054715392
+  },
+  {
+   "decoder": "Bayes-window 50",
+   "device": "cuda",
+   "batch": 512,
+   "rounds": 50,
+   "seconds": 1.6350185249975766,
+   "ms_per_round": 32.70037049995153,
+   "us_per_trial_round": 63.867911132717836,
+   "trial_rounds_per_s": 15657.314953075498,
+   "peak_gpu_gb": 0.327846912
+  },
+  {
+   "decoder": "Bayes-window 50",
+   "device": "cuda",
+   "batch": 1024,
+   "rounds": 50,
+   "seconds": 1.946422013999836,
+   "ms_per_round": 38.92844027999672,
+   "us_per_trial_round": 38.0160549609343,
+   "trial_rounds_per_s": 26304.67577521157,
+   "peak_gpu_gb": 0.642385408
+  },
+  {
+   "decoder": "Bayes-window 200",
+   "device": "cuda",
+   "batch": 1,
+   "rounds": 50,
+   "seconds": 1.3736846020037774,
+   "ms_per_round": 27.473692040075548,
+   "us_per_trial_round": 27473.692040075548,
+   "trial_rounds_per_s": 36.39845705998713,
+   "peak_gpu_gb": 0.010813952
+  },
+  {
+   "decoder": "Bayes-window 200",
+   "device": "cuda",
+   "batch": 64,
+   "rounds": 50,
+   "seconds": 1.4505133150014444,
+   "ms_per_round": 29.01026630002889,
+   "us_per_trial_round": 453.2854109379514,
+   "trial_rounds_per_s": 2206.1155639904027,
+   "peak_gpu_gb": 0.057037312
+  },
+  {
+   "decoder": "Bayes-window 200",
+   "device": "cuda",
+   "batch": 512,
+   "rounds": 50,
+   "seconds": 1.6317357079969952,
+   "ms_per_round": 32.634714159939904,
+   "us_per_trial_round": 63.739676093632625,
+   "trial_rounds_per_s": 15688.815213478887,
+   "peak_gpu_gb": 0.335219712
+  },
+  {
+   "decoder": "Bayes-window 200",
+   "device": "cuda",
+   "batch": 1024,
+   "rounds": 50,
+   "seconds": 1.7745613419974688,
+   "ms_per_round": 35.49122683994938,
+   "us_per_trial_round": 34.65940121088806,
+   "trial_rounds_per_s": 28852.200703509425,
+   "peak_gpu_gb": 0.657131008
+  },
+  {
+   "decoder": "LSTM-nominal",
+   "device": "cuda",
+   "batch": 1,
+   "rounds": 50,
+   "seconds": 0.05570764099684311,
+   "ms_per_round": 1.1141528199368622,
+   "us_per_trial_round": 1114.1528199368622,
+   "trial_rounds_per_s": 897.5429421402612,
+   "peak_gpu_gb": 0.028770816
+  },
+  {
+   "decoder": "LSTM-nominal",
+   "device": "cuda",
+   "batch": 64,
+   "rounds": 50,
+   "seconds": 0.06742657500581117,
+   "ms_per_round": 1.3485315001162235,
+   "us_per_trial_round": 21.07080468931599,
+   "trial_rounds_per_s": 47459.03228399496,
+   "peak_gpu_gb": 0.031059968
+  },
+  {
+   "decoder": "LSTM-nominal",
+   "device": "cuda",
+   "batch": 512,
+   "rounds": 50,
+   "seconds": 0.1334182420032448,
+   "ms_per_round": 2.6683648400648963,
+   "us_per_trial_round": 5.2116500782517505,
+   "trial_rounds_per_s": 191877.80932818312,
+   "peak_gpu_gb": 0.042430976
+  },
+  {
+   "decoder": "LSTM-nominal",
+   "device": "cuda",
+   "batch": 4096,
+   "rounds": 50,
+   "seconds": 0.6652001019974705,
+   "ms_per_round": 13.30400203994941,
+   "us_per_trial_round": 3.248047373034524,
+   "trial_rounds_per_s": 307877.2829183643,
+   "peak_gpu_gb": 0.127774208
+  },
+  {
+   "decoder": "Bayes (matched) n_x=96",
+   "batch": 256,
+   "rounds": 50,
+   "seconds": 0.12407964699377771,
+   "us_per_trial_round": 9.693722421388884,
+   "trial_rounds_per_s": 103159.54558318407,
+   "peak_gpu_gb": 0.041910784,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "Bayes (matched) n_x=96",
+   "batch": 256,
+   "rounds": 200,
+   "seconds": 0.6255557839976973,
+   "us_per_trial_round": 12.217886406205025,
+   "trial_rounds_per_s": 81847.21700245436,
+   "peak_gpu_gb": 0.041910784,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "Bayes (matched) n_x=96",
+   "batch": 256,
+   "rounds": 1000,
+   "seconds": 2.674566424997465,
+   "us_per_trial_round": 10.447525097646349,
+   "trial_rounds_per_s": 95716.44869513481,
+   "peak_gpu_gb": 0.041910784,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "Bayes (oracle)",
+   "batch": 256,
+   "rounds": 50,
+   "seconds": 0.26412645500386134,
+   "us_per_trial_round": 20.634879297176667,
+   "trial_rounds_per_s": 48461.63554428076,
+   "peak_gpu_gb": 0.157704192,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "Bayes (oracle)",
+   "batch": 256,
+   "rounds": 200,
+   "seconds": 1.1205415989970788,
+   "us_per_trial_round": 21.885578105411696,
+   "trial_rounds_per_s": 45692.19031745512,
+   "peak_gpu_gb": 0.158932992,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "Bayes (oracle)",
+   "batch": 256,
+   "rounds": 1000,
+   "seconds": 6.323246109001047,
+   "us_per_trial_round": 24.70018011328534,
+   "trial_rounds_per_s": 40485.53473754371,
+   "peak_gpu_gb": 0.165486592,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "Bayes-IMM",
+   "batch": 256,
+   "rounds": 50,
+   "seconds": 0.9746978479961399,
+   "us_per_trial_round": 76.14826937469843,
+   "trial_rounds_per_s": 13132.27481348732,
+   "peak_gpu_gb": 0.698116608,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "Bayes-IMM",
+   "batch": 256,
+   "rounds": 200,
+   "seconds": 3.6950079770031152,
+   "us_per_trial_round": 72.1681245508421,
+   "trial_rounds_per_s": 13856.533008496082,
+   "peak_gpu_gb": 0.698116608,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "Bayes-IMM",
+   "batch": 256,
+   "rounds": 1000,
+   "seconds": 18.49450149999757,
+   "us_per_trial_round": 72.2441464843655,
+   "trial_rounds_per_s": 13841.951890405571,
+   "peak_gpu_gb": 0.698116608,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "Bayes-window 200",
+   "batch": 256,
+   "rounds": 50,
+   "seconds": 1.187460903005558,
+   "us_per_trial_round": 92.77038304730922,
+   "trial_rounds_per_s": 10779.30226384901,
+   "peak_gpu_gb": 0.177512448,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "Bayes-window 200",
+   "batch": 256,
+   "rounds": 200,
+   "seconds": 5.553609114998835,
+   "us_per_trial_round": 108.468928027321,
+   "trial_rounds_per_s": 9219.230042986334,
+   "peak_gpu_gb": 0.177610752,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "Bayes-window 200",
+   "batch": 256,
+   "rounds": 1000,
+   "seconds": 25.01019181800075,
+   "us_per_trial_round": 97.69606178906542,
+   "trial_rounds_per_s": 10235.827132511133,
+   "peak_gpu_gb": 0.177709056,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "LSTM-nominal",
+   "batch": 256,
+   "rounds": 50,
+   "seconds": 0.07696204999956535,
+   "us_per_trial_round": 6.012660156216043,
+   "trial_rounds_per_s": 166315.73613322785,
+   "peak_gpu_gb": 0.038000128,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "LSTM-nominal",
+   "batch": 256,
+   "rounds": 200,
+   "seconds": 0.31190813700231956,
+   "us_per_trial_round": 6.091955800826554,
+   "trial_rounds_per_s": 164150.895491448,
+   "peak_gpu_gb": 0.038803968,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "LSTM-nominal",
+   "batch": 256,
+   "rounds": 1000,
+   "seconds": 1.4764912039972842,
+   "us_per_trial_round": 5.767543765614391,
+   "trial_rounds_per_s": 173384.03324512517,
+   "peak_gpu_gb": 0.039607808,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "NL",
+   "batch": 256,
+   "rounds": 50,
+   "seconds": 0.0010119150028913282,
+   "us_per_trial_round": 0.07905585960088501,
+   "trial_rounds_per_s": 12649283.74757442,
+   "peak_gpu_gb": null,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "NL",
+   "batch": 256,
+   "rounds": 200,
+   "seconds": 0.0026833429947146215,
+   "us_per_trial_round": 0.05240904286551995,
+   "trial_rounds_per_s": 19080676.64135692,
+   "peak_gpu_gb": null,
+   "sweep": "rounds"
+  },
+  {
+   "decoder": "NL",
+   "batch": 256,
+   "rounds": 1000,
+   "seconds": 0.012997199999517761,
+   "us_per_trial_round": 0.050770312498116255,
+   "trial_rounds_per_s": 19696550.02689029,
+   "peak_gpu_gb": null,
+   "sweep": "rounds"
+  }
+ ],
+ "components": {
+  "batch": 4096,
+  "rounds": 50,
+  "noise_s": 0.0065606740026851185,
+  "sim_loop_with_NL_s": 0.005151290002686437,
+  "bayes_total_s": 0.6731086070067249,
+  "bayes_decoding_share": 0.9923470151041539
+ },
+ "matched_accuracy": [
+  {
+   "decoder": "NL",
+   "trials": 8000,
+   "rounds": 50,
+   "flip_rate": 0.01906,
+   "flip_rate_se": 0.0004146215610407399,
+   "mean_ler": 0.14913,
+   "us_per_trial_round": 0.03417240250200848,
+   "peak_gpu_gb": null
+  },
+  {
+   "decoder": "Bayes (matched) n_x=64",
+   "trials": 8000,
+   "rounds": 50,
+   "flip_rate": 0.0021825,
+   "flip_rate_se": 0.00017882207326134456,
+   "mean_ler": 0.0014725,
+   "us_per_trial_round": 1.1452317549992586,
+   "peak_gpu_gb": 0.423160832
+  },
+  {
+   "decoder": "Bayes (matched) n_x=96",
+   "trials": 8000,
+   "rounds": 50,
+   "flip_rate": 0.0021925,
+   "flip_rate_se": 0.00017908622770433568,
+   "mean_ler": 0.0014775,
+   "us_per_trial_round": 2.860787789995811,
+   "peak_gpu_gb": 0.922017792
+  },
+  {
+   "decoder": "Bayes (matched) n_x=128",
+   "trials": 8000,
+   "rounds": 50,
+   "flip_rate": 0.0021925,
+   "flip_rate_se": 0.00017908622770433568,
+   "mean_ler": 0.001475,
+   "us_per_trial_round": 5.3271505199882085,
+   "peak_gpu_gb": 1.617785856
+  },
+  {
+   "decoder": "Bayes (matched) n_x=192",
+   "trials": 8000,
+   "rounds": 50,
+   "flip_rate": 0.0021925,
+   "flip_rate_se": 0.00017908622770433568,
+   "mean_ler": 0.001475,
+   "us_per_trial_round": 12.00615997749992,
+   "peak_gpu_gb": 3.598121472
+  },
+  {
+   "decoder": "Bayes-broad",
+   "trials": 8000,
+   "rounds": 50,
+   "flip_rate": 0.0025275,
+   "flip_rate_se": 0.00019137605928709717,
+   "mean_ler": 0.001945,
+   "us_per_trial_round": 23.861598820003564,
+   "peak_gpu_gb": 3.157488128
+  },
+  {
+   "decoder": "Bayes (oracle)",
+   "trials": 8000,
+   "rounds": 50,
+   "flip_rate": 0.0021925,
+   "flip_rate_se": 0.00017908622770433568,
+   "mean_ler": 0.0014775,
+   "us_per_trial_round": 18.796812470009172,
+   "peak_gpu_gb": 4.54160896
+  },
+  {
+   "decoder": "Bayes-IMM",
+   "trials": 2000,
+   "rounds": 50,
+   "flip_rate": 0.0027800000000000004,
+   "flip_rate_se": 0.0004118502280018217,
+   "mean_ler": 0.0035,
+   "us_per_trial_round": 79.25233379006386,
+   "peak_gpu_gb": 5.361655296
+  },
+  {
+   "decoder": "Bayes-window 50",
+   "trials": 2000,
+   "rounds": 50,
+   "flip_rate": 0.00271,
+   "flip_rate_se": 0.00041244758030960937,
+   "mean_ler": 0.00301,
+   "us_per_trial_round": 37.80775403996813,
+   "peak_gpu_gb": 1.251658752
+  },
+  {
+   "decoder": "Bayes-window 200",
+   "trials": 2000,
+   "rounds": 50,
+   "flip_rate": 0.00271,
+   "flip_rate_se": 0.00041244758030960937,
+   "mean_ler": 0.00301,
+   "us_per_trial_round": 37.14057706994936,
+   "peak_gpu_gb": 1.281226752
+  },
+  {
+   "decoder": "LSTM-nominal",
+   "trials": 8000,
+   "rounds": 50,
+   "flip_rate": 0.0041175,
+   "flip_rate_se": 0.00027385470375473935,
+   "mean_ler": 0.0062725,
+   "us_per_trial_round": 2.013780230008706,
+   "peak_gpu_gb": 0.223568896
+  }
+ ],
+ "end_to_end": {
+  "rows": [
+   {
+    "decoder": "NL",
+    "best_trial_rounds_per_s": 25787510.670098737,
+    "training_s": 0.0,
+    "1e6 trial-rounds (s)": 0.03877846189936918,
+    "E1-size (100k x 50) (s)": 0.19389230949684588,
+    "1e9 trial-rounds (s)": 38.77846189936918
+   },
+   {
+    "decoder": "Bayes (matched) n_x=64",
+    "best_trial_rounds_per_s": 959326.7249920786,
+    "training_s": 0.0,
+    "1e6 trial-rounds (s)": 1.0423977295204168,
+    "E1-size (100k x 50) (s)": 5.211988647602084,
+    "1e9 trial-rounds (s)": 1042.3977295204168
+   },
+   {
+    "decoder": "Bayes (matched) n_x=96",
+    "best_trial_rounds_per_s": 573114.1651078071,
+    "training_s": 0.0,
+    "1e6 trial-rounds (s)": 1.7448530517683023,
+    "E1-size (100k x 50) (s)": 8.724265258841513,
+    "1e9 trial-rounds (s)": 1744.8530517683023
+   },
+   {
+    "decoder": "Bayes (matched) n_x=128",
+    "best_trial_rounds_per_s": 276418.5422337614,
+    "training_s": 0.0,
+    "1e6 trial-rounds (s)": 3.617702314464566,
+    "E1-size (100k x 50) (s)": 18.08851157232283,
+    "1e9 trial-rounds (s)": 3617.702314464566
+   },
+   {
+    "decoder": "Bayes (matched) n_x=192",
+    "best_trial_rounds_per_s": 122291.38728801282,
+    "training_s": 0.0,
+    "1e6 trial-rounds (s)": 8.177190742344465,
+    "E1-size (100k x 50) (s)": 40.88595371172232,
+    "1e9 trial-rounds (s)": 8177.1907423444645
+   },
+   {
+    "decoder": "Bayes-broad",
+    "best_trial_rounds_per_s": 28693.045847575006,
+    "training_s": 0.0,
+    "1e6 trial-rounds (s)": 34.85165030273407,
+    "E1-size (100k x 50) (s)": 174.25825151367036,
+    "1e9 trial-rounds (s)": 34851.65030273407
+   },
+   {
+    "decoder": "Bayes (oracle)",
+    "best_trial_rounds_per_s": 21745.553239495657,
+    "training_s": 0.0,
+    "1e6 trial-rounds (s)": 45.9864133593868,
+    "E1-size (100k x 50) (s)": 229.932066796934,
+    "1e9 trial-rounds (s)": 45986.4133593868
+   },
+   {
+    "decoder": "Bayes-IMM",
+    "best_trial_rounds_per_s": 7689.314330959231,
+    "training_s": 0.0,
+    "1e6 trial-rounds (s)": 130.0506075000385,
+    "E1-size (100k x 50) (s)": 650.2530375001925,
+    "1e9 trial-rounds (s)": 130050.6075000385
+   },
+   {
+    "decoder": "Bayes-window 50",
+    "best_trial_rounds_per_s": 26304.67577521157,
+    "training_s": 0.0,
+    "1e6 trial-rounds (s)": 38.0160549609343,
+    "E1-size (100k x 50) (s)": 190.0802748046715,
+    "1e9 trial-rounds (s)": 38016.05496093429
+   },
+   {
+    "decoder": "Bayes-window 200",
+    "best_trial_rounds_per_s": 28852.200703509425,
+    "training_s": 0.0,
+    "1e6 trial-rounds (s)": 34.65940121088806,
+    "E1-size (100k x 50) (s)": 173.29700605444032,
+    "1e9 trial-rounds (s)": 34659.40121088806
+   },
+   {
+    "decoder": "LSTM-nominal",
+    "best_trial_rounds_per_s": 307877.2829183643,
+    "training_s": 339.11599612236023,
+    "1e6 trial-rounds (s)": 342.36404349539475,
+    "E1-size (100k x 50) (s)": 355.35623298753285,
+    "1e9 trial-rounds (s)": 3587.163369156884
+   }
+  ],
+  "lstm_training_s": 339.11599612236023,
+  "training": {
+   "lstm_broad_s0": {
+    "train_s": 456.10887908935547,
+    "data_s": 4.206294059753418
+   },
+   "lstm_broad_s1": {
+    "train_s": 669.9847011566162,
+    "data_s": 6.413215160369873
+   },
+   "lstm_broad_s2": {
+    "train_s": 672.9955275058746,
+    "data_s": 3.542433500289917
+   },
+   "lstm_matched_rho0.5_s0": {
+    "train_s": 667.770993232727,
+    "data_s": 3.0692689418792725
+   },
+   "lstm_matched_sq0.26_s0": {
+    "train_s": 642.781299829483,
+    "data_s": 3.7903330326080322
+   },
+   "lstm_nominal_s0": {
+    "train_s": 337.097181558609,
+    "data_s": 2.0188145637512207
+   },
+   "lstm_nominal_s1": {
+    "train_s": 369.4630742073059,
+    "data_s": 2.1506927013397217
+   },
+   "lstm_nominal_s2": {
+    "train_s": 402.1177866458893,
+    "data_s": 5.404037714004517
+   },
+   "lstm_switching_s0": {
+    "train_s": 651.9954969882965,
+    "data_s": 3.7868146896362305
+   }
+  },
+  "breakeven_trial_rounds_lstm_vs_bayes": null
+ },
+ "e9_e11_projection": {
+  "trial_rounds_per_decoder_per_point": 5000000,
+  "seconds_per_point": {
+   "Bayes (oracle)": 229.932066796934,
+   "NL": 0.19389230949684588,
+   "Bayes (nominal)": 8.724265258841513,
+   "Bayes-broad": 174.25825151367036,
+   "Bayes-IMM": 650.2530375001925,
+   "Bayes-window 50": 190.0802748046715,
+   "Bayes-window 200": 173.29700605444032,
+   "LSTM x 9 (3 families x 3 seeds)": 146.1621317865536
+  },
+  "points": 16,
+  "total_hours": 6.990670782332447
+ }
+}

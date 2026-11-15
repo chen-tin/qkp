@@ -1,0 +1,122 @@
+{
+ "impl": "reference",
+ "batch": 4096,
+ "heavy_batch": 1024,
+ "rounds": 50,
+ "decoders": {
+  "Bayes (matched)": {
+   "trials": 4096,
+   "wall_s": 0.2814500669919653,
+   "us_per_trial_round": 1.3742679052342055,
+   "latency_ms_per_round": 1.646928999980446,
+   "profiled_wall_s": 0.28742712900566403,
+   "gpu_busy_s": 0.21428579200000172,
+   "gpu_busy_fraction": 0.7455308506935648,
+   "categories_s": {
+    "gather / shift (shear)": 0.03198397100000005,
+    "other elementwise": 0.0720331890000001,
+    "host<->device copies": 0.033298948000000446,
+    "likelihood math (exp/log/remainder)": 0.005864722000000104,
+    "matmul (predict eps)": 0.03339659199999993,
+    "reductions (sums, max, softmax)": 0.0377083700000006
+   }
+  },
+  "Bayes-broad": {
+   "trials": 1024,
+   "wall_s": 0.6881329720054055,
+   "us_per_trial_round": 13.440097109480575,
+   "latency_ms_per_round": 10.240285079926252,
+   "profiled_wall_s": 0.7320615890057525,
+   "gpu_busy_s": 0.3940875499999906,
+   "gpu_busy_fraction": 0.5383256763071255,
+   "categories_s": {
+    "gather / shift (shear)": 0.04986064799999932,
+    "other elementwise": 0.13529089299999517,
+    "host<->device copies": 0.04081367800000206,
+    "likelihood math (exp/log/remainder)": 0.02480910800000145,
+    "matmul (predict eps)": 0.07480483300000045,
+    "reductions (sums, max, softmax)": 0.06850839000000145
+   }
+  },
+  "Bayes (oracle)": {
+   "trials": 1024,
+   "wall_s": 0.6305841670109658,
+   "us_per_trial_round": 12.316097011932925,
+   "latency_ms_per_round": 2.0468894601799548,
+   "profiled_wall_s": 0.5791243189887609,
+   "gpu_busy_s": 0.47080591299999663,
+   "gpu_busy_fraction": 0.8129617382017307,
+   "categories_s": {
+    "other elementwise": 0.1924488919999987,
+    "host<->device copies": 0.009799864999999297,
+    "gather / shift (shear)": 0.00618330300000003,
+    "likelihood math (exp/log/remainder)": 0.23006411400000043,
+    "reductions (sums, max, softmax)": 0.014298846999999221,
+    "matmul (predict eps)": 0.01801089199999997
+   }
+  },
+  "Bayes-IMM": {
+   "trials": 1024,
+   "wall_s": 1.781318031004048,
+   "us_per_trial_round": 34.79136779304781,
+   "latency_ms_per_round": 2.65737440000521,
+   "profiled_wall_s": 1.8253192810079781,
+   "gpu_busy_s": 1.5823689349999916,
+   "gpu_busy_fraction": 0.8668998084138878,
+   "categories_s": {
+    "other elementwise": 0.320324777999999,
+    "host<->device copies": 0.14011850400000336,
+    "gather / shift (shear)": 0.1374935289999992,
+    "likelihood math (exp/log/remainder)": 0.016409998000000144,
+    "matmul (predict eps)": 0.8027362250000134,
+    "reductions (sums, max, softmax)": 0.16528590099999999
+   }
+  },
+  "Bayes-window 200": {
+   "trials": 1024,
+   "wall_s": 1.1656158690020675,
+   "us_per_trial_round": 22.76593494144663,
+   "latency_ms_per_round": 14.566600999969523,
+   "profiled_wall_s": 1.1995735889940988,
+   "gpu_busy_s": 0.6738852509999805,
+   "gpu_busy_fraction": 0.5617706634947393,
+   "categories_s": {
+    "other elementwise": 0.22629721000000197,
+    "host<->device copies": 0.07631103399999693,
+    "gather / shift (shear)": 0.08728453899999991,
+    "likelihood math (exp/log/remainder)": 0.03498049300000242,
+    "matmul (predict eps)": 0.14573869100000011,
+    "reductions (sums, max, softmax)": 0.10327328400000317
+   }
+  },
+  "LSTM-nominal": {
+   "trials": 4096,
+   "wall_s": 0.28852354300033767,
+   "us_per_trial_round": 1.4088063623063363,
+   "latency_ms_per_round": 0.8372675601276569,
+   "profiled_wall_s": 0.34340164200693835,
+   "gpu_busy_s": 0.26989930900000075,
+   "gpu_busy_fraction": 0.7859581201261335,
+   "categories_s": {
+    "host<->device copies": 0.0007275970000002781,
+    "other elementwise": 0.0005690510000001734,
+    "matmul (predict eps)": 0.002986970000000091,
+    "lstm (cuDNN)": 0.26561569100000015
+   }
+  }
+ },
+ "simulate": {
+  "noise_s": 0.005265353000140749,
+  "loop_s": 0.00516266499471385
+ },
+ "encode": {
+  "delta=0.3,N=100": {
+   "state_s": 0.029582711998955347,
+   "wigner_s": 2.633269712998299
+  },
+  "delta=0.2,N=200": {
+   "state_s": 0.06372004900185857,
+   "wigner_s": 11.157471039987286
+  }
+ }
+}

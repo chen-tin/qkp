@@ -88,3 +88,163 @@ trials per point is enough for effects of this size.
   Monte Carlo noise.
 - E11 and the held-out shapes therefore test robustness to parameter regimes more than to
   recognisably different syndrome statistics.
+
+## D. Numerical precision (float32/TF32 vs float64)
+
+Script: `experiments/benchmark_precision.py`. Outputs: `results/benchmarks/precision.{json,csv}`.
+The Bayes filters store the belief in float32 and allow TF32 in the prediction GEMM. The same
+noise was rerun with three settings: fp32+TF32 (the default for every experiment), fp32 with
+TF32 off, and fp64 (the reference). The filters were switched at runtime; no decoder file was
+changed.
+
+| Case | Decoder | Trials × rounds | Decisions differing (fp32+TF32) | Flip rate (fp64) | Flip-rate change | max \|Δp\| |
+|---|---|---|---|---|---|---|
+| nominal | Bayes (matched) | 4000 × 50 | 0 | 2.09×10⁻³ | 0 | 1.4×10⁻⁴ |
+| σ_m = 0.02L, ρ = 0.99 | Bayes (matched) | 4000 × 50 | 0 | 1.01×10⁻² | 0 | 3.9×10⁻⁴ |
+| σ_q = 0.30L | Bayes (matched) | 4000 × 50 | 0 | 3.73×10⁻² | 0 | 2.7×10⁻⁴ |
+| ρ = 0 | Bayes (matched) | 4000 × 50 | 1.3×10⁻⁴ (25 of 200 000) | 2.03×10⁻² | +8.5×10⁻⁵ ± 5.1×10⁻⁵ | 1.5×10⁻⁴ |
+| nominal, 500 rounds | Bayes (matched) | 1000 × 500 | 0 | 5.3×10⁻⁴ | 0 | 2.6×10⁻⁴ |
+| step σ_q, 200 rounds | Bayes (oracle) | 1000 × 200 | 0 | 3.56×10⁻³ | 0 | 1.8×10⁻⁷ |
+| step σ_q, 200 rounds | Bayes-IMM | 500 × 200 | 0 | 3.80×10⁻³ | 0 | 3.9×10⁻⁴ |
+
+Notes on the table:
+- Plain fp32 (TF32 off) matched fp64 exactly in every case (max |Δp| ≤ 2.4×10⁻⁷, which is
+  the float32 precision at which p is recorded).
+- TF32 moves the posterior probability p by up to 4×10⁻⁴.
+- That changes decisions only at ρ = 0, where p sits close to ½ most often. There, 25 of
+  200 000 decisions differed, and the flip-rate change of +0.4% is not significant (1.7 SE).
+- No filter resets occurred in any setting.
+- Error does not build up over 500 rounds.
+- The oracle's per-trial batched matrix multiply did not use TF32 in this run.
+
+**Verdict:** float32 with TF32 is safe for every reported metric. Its effect is at least
+100× smaller than the statistical errors. For exact reproducibility of individual decisions
+near p = ½, turn TF32 off: this costs nothing in accuracy.
+
+## E. Finite-energy GKP states (HyQBench-style checks)
+
+Script: `experiments/benchmark_finite_energy.py` (QuTiP 5.3, CPU, 8 min). Outputs:
+`results/benchmarks/finite_energy.json` and `finite_energy_truncation.csv`.
+
+The state is exp(−Δ² n̂)|0⟩, built as in `quantum/encoding.py` (a coherent-state lattice sum
+with k_max = 8). The reference uses N = 600 Fock levels and k_max = 12. |+⟩ is the π/2 rotation
+of |0⟩, so its truncation metrics are identical to those of |0⟩; this was checked.
+
+| Δ | ⟨n⟩ | cutoff for 1−F < 1e-6 | 1−F at N = 100 | squeezing, dB (from ⟨S_q⟩, nominal) | Wigner negativity | peak SD / L (Δ/√2 / L) | odd-cell mass (shift model) |
+|---|---|---|---|---|---|---|---|
+| 0.20 | 12.0 | 173 | 4.0e-4 | 13.98 / 13.98 | 0.498 | 0.0798 (0.0798) | 4.2e-10 (3.7e-10) |
+| 0.25 | 7.5 | 109 | 4.6e-6 | 12.04 / 12.04 | 0.488 | 0.0997 (0.0997) | 5.28e-7 (5.35e-7) |
+| 0.30 | 5.1 | 77 | 1.9e-8 | 10.46 / 10.46 | 0.463 | 0.1195 (0.1197) | 2.94e-5 (2.95e-5) |
+| 0.34 | 3.8 | 61 | 1.1e-10 | 9.38 / 9.37 | 0.433 | 0.1353 (0.1356) | 2.26e-4 (2.28e-4) |
+| 0.40 | 2.4 | 41 | 1.5e-14 | 7.97 / 7.96 | 0.372 | 0.1589 (0.1596) | 1.69e-3 (1.73e-3) |
+
+Notes:
+- Δ_eff is computed as Δ_eff² = −ln(|⟨S⟩|²)/(2π) (Duivenvoorden, Terhal & Weigand 2017). It
+  agrees with the nominal Δ from ⟨S_q⟩. ⟨S_p⟩ gives a slightly larger value at Δ = 0.40
+  (0.411).
+- Wigner negativity is (∫|W| − 1)/2. It is converged to 4 digits across grid spacings 0.08,
+  0.05 and 0.035, with ∫W = 1.
+- Two QuTiP cross-checks agree with the marginal-based calculation to 1e-12: ⟨S_q⟩ from the
+  displacement operator, and the odd-cell mass after an explicit displacement.
+
+**Verdict:**
+- **Truncation.** The cutoff of 100 in `encoding.py` is enough for Δ ≥ 0.30 (1−F ≤ 2e-8),
+  borderline at Δ = 0.25, and not enough at Δ = 0.20 (1−F = 4e-4; it needs N ≥ 173). k_max = 8
+  also loses 1.5e-5 of fidelity at Δ = 0.20.
+- **Shift model.** For position readout, the finite-energy state behaves almost exactly like
+  an ideal GKP state with Gaussian shift noise of σ = Δ/√2. Peak widths agree to 0.5%. The odd-cell
+  (logical) mass agrees with `odd_jump_probability` within 0.1–2.3%, and within 0.3–1.1% after
+  an added displacement σ_q ∈ {0.072, 0.10, 0.20} L. The finite envelope also pulls peaks
+  0.1–1.3% toward the origin.
+- **Implied σ_m.** Δ = 0.34 (Sivak) gives an intrinsic σ = 0.136 L. The 0.10–0.11 L needed to
+  reproduce Sivak's p_X (section B) corresponds to Δ ≈ 0.25–0.27. So the state's width alone
+  overstates the effective measurement noise in that experiment. Its error per cycle is set
+  by more than readout of an ideal-plus-Δ state (binary ancilla, feedback); this check does
+  not model those.
+
+## F. Effective-length metrics (from existing E1–E8 results)
+
+`experiments/benchmark_effective_length.py` produces `results/benchmarks/effective_length.{json,csv}`
+from cached results only, with no new simulations. It is the analogue of the "effective
+fermionic length" benchmark (arXiv:2003.01862): for each decoder, how far it can be pushed
+before a quality threshold is crossed. Noise levels are in units of L. Sweep boundaries are
+interpolated in log space.
+
+Column definitions:
+- **σ_q max:** the largest σ_q with P_L(50) < 0.05, along E3 (ρ = 0.9, σ_m = 0.05L).
+- **σ_q max (mean):** the largest σ_q with time-averaged error < 0.01.
+- **σ_m max:** the largest σ_m with P_L(50) < 0.05, along E4.
+- **ρ min A / B:** the smallest ρ with P_L(50) < 0.05, along E2 levels A and B.
+- **Rounds to P_L > 0.01:** at the nominal point, the first round from which P_L stays above
+  0.01, with a Wilson-interval range. Two horizons are shown: E1 (50 rounds, LSTM averaged over
+  3 seeds) and E8 (200 rounds, seed s0 only).
+- **≥ 2× NL:** the range where the time-averaged error is at most half of NL's.
+- **σ_q\*:** above this σ_q, the decoder's logical flip rate per round is below the odd-jump
+  probability of one bare, unprotected round. Below it, measurement noise makes repeated
+  correction worse than not correcting.
+
+| Decoder | σ_q max | σ_q max (mean) | σ_m max | ρ min A / B | Rounds to P_L > 0.01 (E1 / E8) | ≥ 2× NL: ρ (E2-A) | ≥ 2× NL: σ_q (E3) | σ_q\* |
+|---|---|---|---|---|---|---|---|---|
+| NL | 0.145 | 0.129 | nowhere | nowhere / nowhere | 1 / 1 | – | – | never |
+| Bayes (matched) | 0.314 | 0.257 | 0.084 | 0.714 / 0.953 | > 50 / > 200 | 0.7–0.995 (6/6 at 2σ) | 0.08–0.34 (8/9) | ≤ 0.14 |
+| Bayes (nominal) | 0.306 | 0.255 | 0.081 | 0.736 / 0.965 | not run | 0.7–0.995 (6/6) | 0.08–0.34 (8/9) | 0.123 |
+| Bayes-broad | 0.308 | 0.251 | 0.075 | 0.722 / 0.977 | > 50 / not run | 0.7–0.995 (6/6) | 0.08–0.34 (8/9) | 0.125 |
+| LSTM-nominal | 0.256 | 0.217 | 0.070 | 0.779 / nowhere | > 50 / 102 [81–115] | 0.7–0.995 (6/6) | 0.10–0.34 (8/8) | 0.127 |
+| LSTM-broad | 0.241 | 0.200 | 0.066 | 0.758 / nowhere | 27 [20–33] / 114 [100–143] | 0.7–0.995 (6/6) | 0.08–0.34 (8/9) | 0.139 |
+
+Notes:
+- "nowhere" means the threshold fails even at the easiest point of the sweep.
+- Bayes (matched) has no σ_q\* crossing in the sweep. It beats a bare round at every resolved
+  point from σ_q = 0.14L, and makes zero flips below that.
+- The two LSTM-broad round lengths differ (27 and 114) because E1 averages 3 seeds and E8 uses
+  s0 alone. The LSTM-broad seeds differ widely (see E1).
+- On level B of E2 (σ_q = 0.30L, σ_m = 0.08L), only the Bayes filters keep P_L(50) below 0.05,
+  and they need ρ ≥ 0.95.
+
+## G. Cost: latency, throughput, scaling, matched accuracy, time-to-solution
+
+Script `experiments/benchmark_cost.py`; output in `results/benchmarks/cost.json` and
+`cost_*.csv`. Measured on 15 Nov 2026 on an idle laptop RTX 5080 (no other GPU processes,
+load average about 1.2), torch 2.11. "µs/tr" means microseconds per trial-round.
+
+| Decoder (GPU unless noted) | Latency, 1 trial (ms/round) | Best batched cost (µs/tr) | Flip rate at nominal (8 000 × 50) | Peak memory at best batch |
+|---|---|---|---|---|
+| NL (CPU, numpy) | 0.009 | 0.039 | 1.91e-2 | — |
+| Bayes matched, n_x = 64 | 2.24 | **1.04** | **2.18e-3** | 0.22 GB |
+| Bayes matched, n_x = 96 (default) | 2.27 | 1.75 | 2.19e-3 | 0.47 GB |
+| Bayes matched, n_x = 128 | 3.04 | 3.62 | 2.19e-3 | 0.83 GB |
+| Bayes matched, n_x = 192 | 2.23 | 8.2 | 2.19e-3 | 0.24 GB (at batch 512) |
+| Bayes-broad (8 models) | 18.0 | 34.9 | 2.53e-3 | 1.6 GB |
+| Bayes (oracle) | 4.70 | 46.0 | 2.19e-3 | 2.3 GB |
+| Bayes-IMM (12 regimes) | 3.72 | 130 | 2.78e-3 ± 0.41e-3 | 1.4 GB |
+| Bayes-window 50 / 200 (12 models) | 24.6 / 27.5 | 38.0 / 34.7 | 2.71e-3 ± 0.41e-3 | 0.65 GB |
+| LSTM-nominal (hidden 128) | 1.11 | 3.25 | 4.12e-3 | 0.13 GB |
+
+Findings:
+- **Matched accuracy.** At the nominal point every matched Bayes grid gives the same flip rate.
+  So n_x = 64 is the cheapest accurate decoder: 1.0 µs/tr, 13× cheaper than n_x = 192 and
+  1.7× cheaper than the default n_x = 96. The LSTM costs 3× more per trial-round than
+  n_x = 64 for twice the error, so it is beaten on both axes. NL is about 30× cheaper again,
+  but 9× less accurate. The oracle gives the same answer as matched Bayes on stationary noise,
+  at 44× the cost (one small matrix product per trial). IMM and the window averages pay
+  about 25% in accuracy (1.4 SE, 2 000 trials) for not knowing the model.
+- **Time-to-solution, QUARK-style.** The LSTM needs 339 s of training plus data generation
+  (lstm_nominal_s0). Its best throughput (3.1e5 trial-rounds/s) is *below* Bayes n_x = 96
+  (5.7e5) and n_x = 64 (9.6e5). Training therefore never pays off in throughput at this
+  operating point: decoding 1e9 trial-rounds takes 1 040 s with Bayes n_x = 64 and 3 590 s
+  with the LSTM, including training.
+- **Single-trial latency.** Latency is set by Python and kernel-launch overhead: 1.1 ms/round
+  for the LSTM and 2.2–4.7 ms/round for the filters, against a 9.85 µs hardware cycle. This
+  confirms the lab section: per-round real-time use would need an FPGA or compiled
+  implementation.
+- **Scaling.** Cost per trial-round stays flat from 50 to 1 000 rounds for every decoder
+  (within ±15% timing noise), so cost is linear in sequence length. Cost per trial-round
+  falls with batch size until the GPU is saturated (batch 4 096 for small grids). At n_x =
+  192 or with 12-model banks it rises again at large batches, because memory bandwidth limits.
+- **Components.** For matched Bayes at 4 096 × 50, noise generation (6.6 ms) and the
+  simulator loop (5 ms) are under 1% of the 673 ms total; decoding is 99%.
+- **E9–E11 projection.** With the full budget (5 000 trials × 1 000 rounds per point, 16
+  points): about **7.0 h** of decoding in total. Per point: IMM 650 s, oracle 230 s,
+  window 50 190 s, Bayes-broad 174 s, window 200 173 s, the nine LSTMs 146 s together, and
+  the rest under 10 s. LSTM-drift training is not included. The adaptive decoders
+  dominate the total; the oracle has not been timed at smaller grids.

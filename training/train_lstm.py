@@ -204,11 +204,14 @@ def train_all(names=None):
     budget = get_budget()
     device = torch_device()
     log(f"training LSTMs (mode={get_mode()}, device={device}, budget={budget})")
+    from experiments.runlog import RunLog
     paths = {}
-    for name, dataset, seed in model_list(budget):
-        if names is not None and name not in names:
-            continue
-        paths[name] = train_one(name, dataset, seed, budget, device)
+    with RunLog("train_lstm", args=dict(names=names)) as rl:
+        for name, dataset, seed in model_list(budget):
+            if names is not None and name not in names:
+                continue
+            with rl.phase("train", model=name, dataset=dataset, seed=seed):
+                paths[name] = train_one(name, dataset, seed, budget, device)
     return paths
 
 

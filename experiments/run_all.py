@@ -164,14 +164,21 @@ def run_decoder(dec, noise_spec, exp, point_index, n_chunks, chunk_trials, round
     t0 = time.perf_counter()
     if DEVICE.type == "cuda":
         torch.cuda.synchronize()
+    t_noise = 0.0
     for c in range(n_chunks):
+        tn = time.perf_counter()
         d, n, sched = noise_chunk_with_schedule(noise_spec, exp, point_index, c,
                                                 chunk_trials, rounds)
+        t_noise += time.perf_counter() - tn
         parts.append(run_blocked(decoder, d, n, block, schedule=sched))
     if DEVICE.type == "cuda":
         torch.cuda.synchronize()
     seconds = time.perf_counter() - t0
     resets = getattr(decoder, "resets", 0)
+    from experiments import runlog
+    runlog.record("decode", seconds, exp=exp, point=point_index, decoder=dec["name"],
+                  impl=dec["spec"].get("impl", "reference"), trials=n_chunks * chunk_trials,
+                  rounds=rounds, noise_s=t_noise, decode_s=seconds - t_noise, resets=resets)
     return np.concatenate(parts), seconds, resets
 
 
@@ -247,6 +254,10 @@ def _size_test_set(exp, point_id, noise_spec, reference, cap, chunk, rounds, min
             break
     record = np.concatenate(parts)
     resets = getattr(decoder, "resets", 0)
+    from experiments import runlog
+    runlog.record("decode", seconds, exp=exp, point=point_id, decoder=reference["name"],
+                  impl=reference["spec"].get("impl", "reference"), trials=record.shape[0],
+                  rounds=rounds, role="reference (sizes the test set)", resets=resets)
     save_npz(cache_path(reference), dec_config(reference, n_chunks),
              extra=dict(seconds=seconds, resets=resets, trials=record.shape[0]),
              bits=np.packbits(record, axis=1), trials=record.shape[0])
@@ -622,18 +633,22 @@ def main():
     assert matplotlib.get_backend().lower() == "agg", matplotlib.get_backend()
     DEVICE = torch_device()
     log(f"run_all: mode={get_mode()} device={DEVICE} budget={get_budget()}")
+    from experiments.runlog import RunLog
     failures = []
-    for name, fn in EXPERIMENTS.items():
-        if args.only and name not in args.only:
-            continue
-        t0 = time.perf_counter()
-        log(f"=== {name} ===")
-        try:
-            fn()
-            log(f"=== {name} done in {time.perf_counter() - t0:.0f}s ===")
-        except Exception:
-            failures.append(name)
-            log(f"=== {name} FAILED ===\n{traceback.format_exc()}")
+    with RunLog("run_all", args=vars(args)) as rl:
+        for name, fn in EXPERIMENTS.items():
+            if args.only and name not in args.only:
+                continue
+            t0 = time.perf_counter()
+            log(f"=== {name} ===")
+            try:
+                with rl.phase(name):
+                    fn()
+                log(f"=== {name} done in {time.perf_counter() - t0:.0f}s ===")
+            except Exception:
+                failures.append(name)
+                log(f"=== {name} FAILED ===\n{traceback.format_exc()}")
+        rl.note(failed_experiments=failures, failed_decoders=list(FAILURES))
     log(f"run_all finished; failed experiments: {failures or 'none'}; "
         f"failed decoders/points: {FAILURES or 'none'}")
 
