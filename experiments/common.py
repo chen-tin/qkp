@@ -321,6 +321,42 @@ def paired_difference(flips_a, flips_b, rounds):
     return d.mean(), d.std(ddof=1) / np.sqrt(n) if n > 1 else np.nan
 
 
+def eps_fit(pl, floor=0.2):
+    """Logical error per round from the decay of 1 - 2 P_L(t).
+
+    The standard memory-experiment estimate: fit log(1 - 2 P_L(t)) = a + t log(1 - 2 eps)
+    on the rounds before saturation (1 - 2 P_L >= floor, first contiguous run).
+    Returns (eps, rounds_used); eps is None with fewer than 5 usable rounds.
+
+    Use this, not the logical flip rate, for long runs: once P_L nears 1/2 a
+    decoder that revises its estimate dithers, and every dither counts as a flip
+    although no further information is being lost.
+    """
+    y = 1 - 2 * np.asarray(pl, dtype=float)
+    t = np.arange(1, len(y) + 1)
+    ok = np.flatnonzero(y >= floor)
+    if len(ok) < 5:
+        return None, int(ok[-1] + 1) if len(ok) else 0
+    gaps = np.flatnonzero(np.diff(ok) > 1)
+    last = ok[gaps[0]] if len(gaps) else ok[-1]
+    sel = slice(0, last + 1)
+    slope = np.polyfit(t[sel], np.log(np.clip(y[sel], 1e-12, None)), 1)[0]
+    return float(0.5 * (1 - np.exp(slope))), int(last + 1)
+
+
+def common_horizon(pl_reference, cap=0.4):
+    """Last round at which the reference decoder keeps P_L below cap (>= 1)."""
+    below = np.flatnonzero(np.asarray(pl_reference) < cap)
+    return int(below[-1] + 1) if len(below) else 1
+
+
+def paired_pl(rec_a, rec_b, h):
+    """Paired P_L difference a - b at round h (1-based) and its standard error."""
+    d = rec_a[:, h - 1].astype(float) - rec_b[:, h - 1].astype(float)
+    n = len(d)
+    return float(d.mean()), float(d.std(ddof=1) / np.sqrt(n)) if n > 1 else float("nan")
+
+
 def windowed_flip_rate(logical_errors, window):
     """Per-round logical-flip rate in consecutive windows of `window` rounds.
 

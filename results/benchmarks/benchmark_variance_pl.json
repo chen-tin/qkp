@@ -1,0 +1,57 @@
+{
+ "stationary nominal": {
+  "replicates": 8,
+  "trials": 1000,
+  "rounds": 1000,
+  "horizon_median": 1000,
+  "eps_oracle": 1.412779398186903e-05,
+  "eps_fixed": 1.4127460904782285e-05,
+  "eps_oracle_rel_sd_per_replicate": 0.30830848214090917,
+  "trials_for_10pct_eps": 9506,
+  "paired_pl_diff": 0.0,
+  "paired_pl_diff_sd_between_replicates": 0.0,
+  "paired_pl_diff_reported_se": 0.0
+ },
+ "sinusoid sigma_q P=200": {
+  "replicates": 8,
+  "trials": 1000,
+  "rounds": 1000,
+  "horizon_median": 1000,
+  "eps_oracle": 3.317203827345183e-05,
+  "eps_fixed": 3.684291255444394e-05,
+  "eps_oracle_rel_sd_per_replicate": 0.13995986228956003,
+  "trials_for_10pct_eps": 1959,
+  "paired_pl_diff": 0.0032500000000000003,
+  "paired_pl_diff_sd_between_replicates": 0.003654742515847437,
+  "paired_pl_diff_reported_se": 0.003639310571130917,
+  "trials_to_resolve_diff_3sigma": 11286
+ },
+ "1/f sigma_q": {
+  "replicates": 8,
+  "trials": 1000,
+  "rounds": 1000,
+  "horizon_median": 1000,
+  "eps_oracle": 6.398551636688232e-05,
+  "eps_fixed": 9.51032596564691e-05,
+  "eps_oracle_rel_sd_per_replicate": 0.1596813248568879,
+  "trials_for_10pct_eps": 2550,
+  "paired_pl_diff": 0.027875,
+  "paired_pl_diff_sd_between_replicates": 0.00825378700960959,
+  "paired_pl_diff_reported_se": 0.007888677385634582,
+  "trials_to_resolve_diff_3sigma": 721
+ },
+ "step rho 0.9->0.3": {
+  "replicates": 8,
+  "trials": 1000,
+  "rounds": 1000,
+  "horizon_median": 683,
+  "eps_oracle": 0.0009902830142395833,
+  "eps_fixed": 0.0010022016901643435,
+  "eps_oracle_rel_sd_per_replicate": 0.026164765684611596,
+  "trials_for_10pct_eps": 69,
+  "paired_pl_diff": 0.0052499999999999995,
+  "paired_pl_diff_sd_between_replicates": 0.018029737340611165,
+  "paired_pl_diff_reported_se": 0.019473857597713716,
+  "trials_to_resolve_diff_3sigma": 123831
+ }
+}

@@ -284,5 +284,73 @@ def main():
     log(f"benchmark_variance: wrote {OUT}")
 
 
+
+# ---------------------------------------------------------------------------
+# C1c. sample sizes for the P_L-based metric on long, nonstationary runs
+# ---------------------------------------------------------------------------
+def c1_pl(device, K=None, N=None, T=None):
+    """Replicate study of eps (decay fit) and paired P_L at the common horizon.
+
+    The flip rate is not a logical error rate once P_L saturates (revising
+    decoders dither), so long runs are scored with eps_fit and paired P_L;
+    this measures how many trials those need.
+    """
+    from decoders.fast import FastGridDecoder, FastOracle, run as fast_run
+    from experiments.common import common_horizon, eps_fit
+    K = K or (3 if QUICK else 8)
+    N = N or (300 if QUICK else 1000)
+    T = T or (200 if QUICK else 1000)
+    cases = {
+        "stationary nominal": ns.spec("stationary"),
+        "sinusoid sigma_q P=200": ns.spec("sinusoid", target="sigma_q", amp=0.3, period=200.0),
+        "1/f sigma_q": ns.spec("one_over_f", rel=0.25),
+        "step rho 0.9->0.3": ns.spec("step", target="rho", before=0.9, after=0.3),
+    }
+    out = {}
+    for cname, sp in cases.items():
+        eps_o, eps_f, diffs, diff_sd, horizons = [], [], [], [], []
+        for k in range(K):
+            d, n, sch = ns.sample(sp, make_rng("dev", "benchmark_var_c1pl", 100 * len(out) + k),
+                                  N, T)
+            ro = fast_run(FastOracle(device=device), d, n, schedule=sch)
+            rf = fast_run(FastGridDecoder([dict(NOMINAL)], device=device), d, n)
+            eps_o.append(eps_fit(ro.mean(axis=0))[0])
+            eps_f.append(eps_fit(rf.mean(axis=0))[0])
+            h = common_horizon(ro.mean(axis=0))
+            horizons.append(h)
+            dd = rf[:, h - 1].astype(float) - ro[:, h - 1].astype(float)
+            diffs.append(dd.mean())
+            diff_sd.append(dd.std(ddof=1))
+        eo = np.array([e for e in eps_o if e is not None])
+        ef = np.array([e for e in eps_f if e is not None])
+        dv = np.array(diffs)
+        rel_se_o = eo.std(ddof=1) / eo.mean() if len(eo) > 1 and eo.mean() > 0 else None
+        row = dict(
+            replicates=K, trials=N, rounds=T, horizon_median=int(np.median(horizons)),
+            eps_oracle=float(eo.mean()) if len(eo) else None,
+            eps_fixed=float(ef.mean()) if len(ef) else None,
+            eps_oracle_rel_sd_per_replicate=float(rel_se_o) if rel_se_o is not None else None,
+            trials_for_10pct_eps=int(math.ceil(N * (rel_se_o / 0.10) ** 2)) if rel_se_o else None,
+            paired_pl_diff=float(dv.mean()), paired_pl_diff_sd_between_replicates=float(dv.std(ddof=1)),
+            paired_pl_diff_reported_se=float(np.mean(diff_sd) / math.sqrt(N)),
+        )
+        if row["paired_pl_diff"] > 0:
+            row["trials_to_resolve_diff_3sigma"] = int(math.ceil(
+                (3 * np.mean(diff_sd) / row["paired_pl_diff"]) ** 2))
+        out[cname] = row
+        log(f"C1c {cname}: eps oracle {row['eps_oracle']}, rel SD/replicate {rel_se_o}, "
+            f"P_L diff {row['paired_pl_diff']:+.4f} (SE {row['paired_pl_diff_reported_se']:.4f})")
+    return out
+
+
+def main_c1pl():
+    device = torch_device()
+    out = c1_pl(device)
+    path = OUT / "benchmark_variance_pl.json"
+    path.write_text(json.dumps(out, indent=1, default=float))
+    log(f"benchmark_variance: wrote {path}")
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    main_c1pl() if "--pl" in sys.argv else main()

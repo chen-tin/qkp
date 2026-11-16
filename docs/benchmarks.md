@@ -72,6 +72,31 @@ The reported standard errors match the seed-to-seed scatter; the CI includes 1 e
 except the Bayes flip rate, where the reported SE is slightly conservative. The NL−Bayes
 difference is resolved at 3σ with about 50 trials.
 
+**Caution on the flip-rate metric.** The flip rate is a valid per-round logical error
+rate only while P_L stays small, as in the 50-round runs above (nominal P_L(50) ≤ 0.24).
+For long or high-noise runs, where P_L approaches 1/2, it is not: revising decoders dither,
+and each dither counts as a flip. Use the decay-fitted eps and paired P_L instead (C1c and
+`docs/nonstationary.md`). The earlier recommendation to use flip rate for long runs is
+withdrawn. In B, the Bayes points at σ_m ≥ 0.15L may be inflated for the same reason;
+the crossing with the Sivak value, at σ_m ≈ 0.11L where P_L(100) ≈ 0.1, is not affected.
+
+**C1c. Sample sizes for the P_L-based metric on long runs** (`benchmark_variance.py --pl`;
+8 replicates × 1 000 trials × 1 000 rounds; fixed nominal Bayes against the oracle;
+`results/benchmarks/benchmark_variance_pl.json`).
+
+| Point | eps (oracle) | Trials for 10% relative SE on eps | Paired P_L gap at the horizon | Reported SE ÷ replicate SD | Trials to resolve the gap at 3σ |
+|---|---|---|---|---|---|
+| stationary nominal | 1.4×10⁻⁵ | 9 500 | 0 (identical decoders) | — | — |
+| sinusoid σ_q, P = 200 | 3.3×10⁻⁵ | 2 000 | +0.003 | 1.00 | 11 300 |
+| 1/f σ_q | 6.4×10⁻⁵ | 2 550 | +0.028 | 0.96 | 720 |
+| step ρ 0.9 → 0.3 | 9.9×10⁻⁴ | 70 | +0.005 | 1.08 | 124 000 |
+
+The paired P_L standard errors match the replicate scatter, so these error bars are honest.
+At error rates around 10⁻⁵ per round, eps needs about 2 000–9 500 trials for 10% precision.
+The planned 5 000 trials per E9–E11 point resolve eps to about 1–14%, and P_L gaps of about
+0.01 or more. Smaller mis-specification costs, such as sinusoidal drift or ρ steps, cannot
+be distinguished from zero at that budget.
+
 **C1b. Nonstationary step in σ_q:** 12 seeds × 600 trials × 400 rounds. The fixed-model Bayes
 filter makes 3.2×10⁻⁴ more flips per round than the oracle, about 11%. Again the SE matches
 the scatter (ratio 0.81, CI includes 1). Resolving this difference at 3σ takes about 1 500
@@ -248,3 +273,30 @@ Findings:
   window 50 190 s, Bayes-broad 174 s, window 200 173 s, the nine LSTMs 146 s together, and
   the rest under 10 s. LSTM-drift training is not included. The adaptive decoders
   dominate the total; the oracle has not been timed at smaller grids.
+
+## H. Coverage map: where our scenarios sit, and where hardware sits
+
+Script `experiments/coverage_map.py`; output `results/benchmarks/coverage_map.png` and `.json`.
+Panels: (a) σ_q against ρ and (b) σ_q against σ_m, for the E1–E8 sweep points, the 5–95%
+range of every E9–E11 schedule, and the LSTM training box; (c) per-sequence syndrome spread
+against lag-1 syndrome correlation, which is what a decoder sees, for each scenario family,
+plus the hardware-scale point (σ_q = 0.072L, σ_m = 0.105L) simulated at ρ = 0, 0.5 and 0.9.
+
+Findings:
+- **ρ has no data anchor.** Every scenario assumes a value of ρ. No GKP measurement constrains
+  it, because the T1 data is sampled minutes apart.
+- **Hardware sits outside every simulated scenario.**
+  - Its σ_q (0.072L) is below the smallest we simulate (0.08L), and no nonstationary point
+    goes below 0.081L.
+  - Its σ_m (about 0.10L) appears only in the E4 sweep, at σ_q = 0.20L.
+  - No E9–E11 point varies σ_m.
+- **Measurement noise dominates the syndromes at hardware scale.** Consecutive syndromes share
+  ν_t with opposite signs, so their lag-1 correlation is negative: −0.38 at ρ = 0 and
+  still −0.24 at ρ = 0.9. All our scenarios sit at +0.23 to +0.58, except ρ = 0 (−0.04). In
+  standardised feature units, the nearest scenario is 2.1–2.8 away. In this regime ρ is
+  barely visible in the syndromes, so any memory advantage comes mainly from averaging out
+  readout noise, not from tracking correlated drift. This is a regime the decoder
+  comparisons have not tested.
+- **Syndrome spread is similar across our scenarios** (median SD 0.19–0.22L for most). The
+  families differ mainly in lag-1 correlation, consistent with C2.
+

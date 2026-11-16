@@ -59,10 +59,22 @@ values outside the training ranges).
   stationary σ_q = 0.32L.
 
 Each point uses a fixed test-set size (`ns_max_test_trials`) of `ns_rounds`-round sequences.
-The main metric is logical flips per round, paired against the oracle. P_L at the last round
-saturates on long runs and is reported only for completeness. `analyze_nonstationary.py`
-writes `E9/E10/E11_summary.csv`, a dot plot per experiment, flip rate over time per point,
-and flip rate aligned on the event round for steps and bursts.
+
+**Metric (corrected 15 Nov 2026).** The analysis first used logical flips per round. That
+is wrong for long runs. Once P_L(t) approaches 1/2, a decoder that revises its estimate of
+the logical parity dithers, and every dither counts as a flip, although no more
+information is being lost. The stress test exposed this: at stationary ρ = 0.3 over
+600 rounds, flip rates made every Bayes filter look 1.4–16× worse than nearest lattice,
+while P_L(t) showed them better at every round before saturation.
+`analyze_nonstationary.py` now reports:
+- `eps`: logical error per round from the decay of 1 − 2P_L(t) before saturation
+  (`experiments.common.eps_fit`);
+- `excess_vs_oracle`: eps ÷ the oracle's eps;
+- `pl_h`, `diff_vs_oracle`: P_L at the common horizon (the last round at which the oracle
+  keeps P_L below 0.4), and the paired difference from the oracle with its SE.
+
+The raw flip rate stays in the CSV, labelled as not a logical error rate. Figures: eps per
+point, P_L(t) per point, and P_L aligned on the event round for steps and bursts.
 
 ## Running (not done yet)
 

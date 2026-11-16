@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GKP simulator review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap">
+<style>
+/* VOICE work: supporting material for a research paper, calm and exact
+   IDEA an audit report laid out like a paper: claim, evidence, caveat, in paper order
+   PICTURE the z-score tally of every exact check; later the decoder curves and the hardware calibration
+   COLOUR white, ink #101418, warm yellow slab behind key figures, one blue for marks, slate for the rest
+   TYPE Manrope 800 display + Manrope text
+   LAYOUT title and key figures across, tally beneath; sections as paper sections; phone stacks */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#101418);--ink:light-dark(#101418,#e9ecef);--mute:light-dark(#5a6470,#9aa4ae);--rule:light-dark(#dfe3e7,#2a3038);--panel:light-dark(#f5f6f7,#171c22);--blue:light-dark(#1d4ed8,#7aa2ff);--slate:light-dark(#8a96a3,#6b7682);--yel:#ffd84a;--red:light-dark(#b42318,#ff8a7a)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Manrope,system-ui,sans-serif;overflow-x:clip}
+.band{padding-block:clamp(28px,4vw,56px);padding-inline:max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+.sec{border-top:1px solid var(--rule)}
+h1{font-size:clamp(30px,4.2vw,46px);line-height:1.05;letter-spacing:-.02em;font-weight:800;margin:0 0 14px;text-wrap:balance;max-width:24ch}
+h2{font-size:clamp(23px,2.5vw,29px);line-height:1.15;letter-spacing:-.015em;font-weight:800;margin:0 0 10px;text-wrap:balance}
+h3{font-size:17px;margin:22px 0 6px;font-weight:700}
+p{margin:0 0 12px;max-width:72ch}
+.lead{font-size:17px;max-width:70ch}
+.num{color:var(--mute);font-weight:700;margin-right:8px}
+.small{font-size:14px}
+.cap{font-size:14px;color:var(--mute);margin-top:8px;max-width:none}
+.top{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:32px;align-items:end}
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(10em,1fr));border-top:2px solid var(--ink)}
+.fg{padding:12px 14px 12px 0;border-bottom:1px solid var(--rule)}
+.fg b{display:block;font-size:clamp(24px,2.8vw,32px);font-weight:800;letter-spacing:-.02em;line-height:1.1;white-space:nowrap}
+.fg span{font-size:14px;color:var(--mute)}
+.fg.key{background:var(--yel);color:#101418;padding-left:14px}
+.fg.key span{color:#3a3f45}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:start}
+.fig{position:relative;min-height:320px}
+.fig.tall{min-height:440px}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+svg text{font:14px Manrope,system-ui,sans-serif;fill:var(--ink);paint-order:stroke;stroke:var(--bg);stroke-width:4px}
+.scroll{overflow-x:auto}
+.diagram{min-width:640px}
+.diagram svg{width:100%;height:auto;display:block}
+.diagram text{font:13.5px Manrope,system-ui,sans-serif;fill:var(--ink);stroke:none}
+.diagram .t{font-weight:700}
+.diagram .m{fill:var(--mute)}
+.diagram .dk{fill:#101418}
+.box{fill:var(--panel);stroke:var(--rule)}
+.box.hi{fill:color-mix(in srgb,var(--blue) 10%,var(--bg));stroke:var(--blue)}
+.box.y{fill:var(--yel);stroke:#e0b800}
+.ar{stroke:var(--ink);stroke-width:1.5;fill:none;marker-end:url(#ah)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:7px 10px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font-weight:700;font-size:14px;color:var(--mute);border-bottom:1.5px solid var(--ink)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.eq{font-family:"Cambria Math","STIX Two Math",Georgia,serif;font-size:17px;background:var(--panel);padding:12px 14px;border-left:3px solid var(--blue);margin:10px 0 14px;overflow-x:auto;white-space:nowrap}
+ul{padding-left:20px;margin:6px 0 12px}
+li{margin:4px 0;max-width:72ch}
+code{font-size:14px;background:var(--panel);padding:1px 5px;border-radius:3px;overflow-wrap:anywhere}
+a{color:var(--blue)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;margin-top:6px}
+.legend i{display:inline-block;width:18px;height:3px;vertical-align:middle;margin-right:6px}
+.tag{display:inline-block;font-size:13px;font-weight:700;padding:2px 8px;border-radius:3px}
+.tag.g{background:color-mix(in srgb,var(--blue) 14%,var(--bg));color:var(--blue)}
+.tag.y{background:var(--yel);color:#101418}
+.tag.r{background:color-mix(in srgb,var(--red) 14%,var(--bg));color:var(--red)}
+.q{counter-reset:q;list-style:none;padding:0}
+.q li{counter-increment:q;padding:10px 0 10px 34px;border-bottom:1px solid var(--rule);position:relative;max-width:none}
+.q li::before{content:counter(q);position:absolute;left:0;top:10px;font-weight:800;width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:13px;display:grid;place-items:center}
+footer{font-size:14px;color:var(--mute)}
+@media(min-width:601px){.stack td::before{content:none}}
+@media(max-width:860px){.top,.grid2{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){table{font-size:13px}th,td{padding:6px 4px}.fig{min-height:270px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--rule)}.stack td{display:grid;grid-template-columns:7em minmax(0,1fr);gap:10px;border:0;padding:3px 0}.stack td::before{content:attr(data-l);font-weight:700;color:var(--mute);font-size:13px}}
+</style>
+</head>
+<body>
+
+<section class="band">
+ <div class="wrap">
+  <div class="top">
+   <div>
+    <h1>GKP decoding under correlated displacement noise: a validated simulator and its benchmarks</h1>
+    <p class="lead">The supporting material for a paper. It covers the noise model and shift-model simulator, the evidence that they are correct, how they compare with real hardware, and what the decoders achieve. Every number comes from a script and result file in <code>qkp-experiment</code> (listed at the end). The next phase is decoder experiments; the last section sets them up.</p>
+   </div>
+   <div class="figs">
+    <div class="fg key"><b>__N_EXACT__</b><span>exact checks within 2σ</span></div>
+    <div class="fg"><b>95×</b><span>lower time-averaged error, matched Bayes vs NL (nominal)</span></div>
+    <div class="fg"><b>≤ 2.3%</b><span>shift model vs QuTiP finite-energy states</span></div>
+    <div class="fg"><b>__SQ_LOSS__ L</b><span>σ<sub>q</sub> of a real cavity (Sivak 2023); nominal 0.20 L</span></div>
+   </div>
+  </div>
+  <div class="scroll" style="margin-top:24px"><div class="diagram">
+   <svg viewBox="0 0 1000 250" role="img" aria-label="Pipeline: noise model, simulator round loop, decoders, references">
+    <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+    <g style="color:var(--ink)">
+     <rect class="box" x="10" y="20" width="220" height="210" rx="6"/>
+     <text class="t" x="24" y="46">Noise</text>
+     <text x="24" y="72">AR(1) shifts ε, readout ν</text>
+     <text x="24" y="96">regime switching</text>
+     <text x="24" y="120">drift: sinusoid, ramp, 1/f</text>
+     <text x="24" y="144">changes: step, telegraph,</text>
+     <text x="24" y="166">one-round burst</text>
+     <text class="m" x="24" y="210">simulator/*.py</text>
+     <path class="ar" d="M230 125H280"/>
+     <rect class="box hi" x="280" y="20" width="250" height="210" rx="6"/>
+     <text class="t" x="294" y="46">Round t</text>
+     <text x="294" y="76">x ← x + ε<tspan dy="4" font-size="11">t</tspan></text>
+     <text x="294" y="104">s<tspan dy="4" font-size="11">t</tspan><tspan dy="-4"> = wrap(x + ν</tspan><tspan dy="4" font-size="11">t</tspan><tspan dy="-4">)</tspan></text>
+     <text x="294" y="132">c<tspan dy="4" font-size="11">t</tspan><tspan dy="-4"> = s</tspan><tspan dy="4" font-size="11">t</tspan><tspan dy="-4"> + j</tspan><tspan dy="4" font-size="11">t</tspan><tspan dy="-4">L ; x ← x − c</tspan><tspan dy="4" font-size="11">t</tspan></text>
+     <text x="294" y="166">error ⇔ round(x/L) odd</text>
+     <text class="m" x="294" y="210">syndromes are decoder-independent</text>
+     <path class="ar" d="M530 125H580"/>
+     <rect class="box" x="580" y="20" width="190" height="210" rx="6"/>
+     <text class="t" x="594" y="46">Decoders: choose j<tspan dy="4" font-size="11">t</tspan></text>
+     <text x="594" y="76">nearest lattice</text>
+     <text x="594" y="100">Bayes grid filters</text>
+     <text x="594" y="124">(matched, broad, IMM,</text>
+     <text x="594" y="146">window, oracle)</text>
+     <text x="594" y="170">LSTMs</text>
+     <path class="ar" d="M770 125H820"/>
+     <rect class="box y" x="820" y="20" width="170" height="210" rx="6"/>
+     <text class="t dk" x="834" y="46">References</text>
+     <text class="dk" x="834" y="76">closed forms (NL)</text>
+     <text class="dk" x="834" y="100">matched / oracle</text>
+     <text class="dk" x="834" y="122">Bayes = optimal</text>
+     <text class="dk" x="834" y="146">QuTiP finite-Δ</text>
+     <text class="dk" x="834" y="170">Sivak et al. 2023</text>
+    </g>
+   </svg>
+  </div></div>
+  <p class="cap">Figure 1. Simulation pipeline. Because a decoder only chooses the parity j<sub>t</sub> of each correction, every decoder sees the same syndromes. Comparisons are therefore exactly paired, and the Bayes filter given the true noise model is the optimal decoder.</p>
+ </div>
+</section>
+
+<section class="band sec">
+ <div class="wrap">
+  <h2><span class="num">1</span>Model: one quadrature, classical shifts, correlated and drifting noise</h2>
+  <div class="grid2">
+   <div>
+    <p>Square GKP code, lattice spacing L = √π, q quadrature only. The displacement ε<sub>t</sub> is an AR(1) process whose parameters may change per round. Its innovation is scaled so the variance stays σ<sub>q</sub>(t)² and the lag-1 correlation is ρ(t). The readout error ν<sub>t</sub> is independent each round.</p>
+    <div class="eq">ε<sub>t</sub> = ρ<sub>t</sub>(σ<sub>t</sub>/σ<sub>t−1</sub>) ε<sub>t−1</sub> + σ<sub>t</sub>√(1−ρ<sub>t</sub>²) z<sub>t</sub>, &nbsp; ν<sub>t</sub> ~ N(0, σ<sub>m,t</sub>²)</div>
+    <p>The nominal point is σ<sub>q</sub> = 0.20 L, σ<sub>m</sub> = 0.05 L, ρ = 0.9. Section 3 shows that this is a stress regime: about 7× the noise variance of a state-of-the-art cavity.</p>
+    <p class="small"><b>Scope.</b> Not modelled: finite energy (but see §2), p-quadrature noise, ancilla errors, continuous corrections. Real cavity hardware also reads one ancilla bit per round, not an analog syndrome; this matters when comparing with experiments.</p>
+   </div>
+   <div class="scroll"><table class="stack"><thead><tr><th>Noise family</th><th>Used in</th><th>Follows</th></tr></thead><tbody>
+    <tr><td data-l="Family">Stationary AR(1)</td><td data-l="Used in">E1–E8</td><td data-l="Follows">—</td></tr>
+    <tr><td data-l="Family">Two-regime ρ switching (hidden Markov)</td><td data-l="Used in">E6, E10</td><td data-l="Follows">Klimov et al., PRL 2018 (telegraphic T1)</td></tr>
+    <tr><td data-l="Family">Sinusoidal drift of σ<sub>q</sub> or ρ</td><td data-l="Used in">E9, E11</td><td data-l="Follows"><a href="https://arxiv.org/abs/2511.09491">Bhardwaj et al. 2026</a>; <a href="https://arxiv.org/abs/1712.02360">Spitz et al. 2018</a></td></tr>
+    <tr><td data-l="Family">1/f drift (sum of OU processes)</td><td data-l="Used in">E9</td><td data-l="Follows"><a href="https://arxiv.org/abs/2502.12296">temporal coarse-graining, 2025</a></td></tr>
+    <tr><td data-l="Family">Unannounced step, ramp</td><td data-l="Used in">E9–E11</td><td data-l="Follows">—</td></tr>
+    <tr><td data-l="Family">One-round burst</td><td data-l="Used in">E10</td><td data-l="Follows"><a href="https://arxiv.org/abs/2406.18897">Tan, Pattison, McEwen, Preskill</a></td></tr>
+   </tbody></table>
+   <p class="cap">No prior work we found simulates nonstationary displacement noise for a GKP code. The shapes follow qubit-code drift and burst studies.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="band sec">
+ <div class="wrap">
+  <h2><span class="num">2</span>Validation: every exact reference is reproduced, and the shift model matches finite-energy states</h2>
+  <div class="fig tall" id="tally"><svg></svg></div>
+  <p class="cap">Figure 2. z = (simulated − reference) / binomial SE, on fresh random streams (seed 20261113). A: single round, 200 000 trials. B: per-round odd-jump marginal, 50 000 × 49 rounds (pooled, so indicative). C1: worst of 50 rounds of P<sub>L</sub>(t) at ρ = 0. Hollow points compare with an approximation (C2) or a limit (D), not an exact result. Derivations: <code>docs/sim_validation.md</code>.</p>
+  <div style="margin-top:12px">
+   <div>
+    <h3>Ground truth comes in three tiers</h3>
+    <ul>
+     <li><span class="tag g">exact</span> Closed forms for nearest lattice: single round, the per-round marginal for any ρ, P<sub>L</sub>(n) at ρ = 0, and the ρ → 1 limit.</li>
+     <li><span class="tag y">optimal</span> The Bayes grid filter given the true model is the optimal syndrome-only decoder for parity corrections. The 64- and 128-point grids agree on 99.9995% of trial-rounds. Under drift, the oracle (true schedule each round) takes this role.</li>
+     <li><span class="tag r">missing</span> No closed form for P<sub>L</sub>(t) at 0 &lt; ρ &lt; 1, and no public GKP syndrome data.</li>
+    </ul>
+   </div>
+   <h3>The shift model matches finite-energy states (QuTiP)</h3>
+   <div class="scroll"><table class="stack"><thead><tr><th>Finite-Δ check</th><th class="n">Δ = 0.25</th><th class="n">0.30</th><th class="n">0.34</th></tr></thead><tbody>
+    <tr><td data-l="Quantity">Logical (odd-cell) mass, QuTiP</td><td class="n" data-l="0.25">5.28e-7</td><td class="n" data-l="0.30">2.94e-5</td><td class="n" data-l="0.34">2.26e-4</td></tr>
+    <tr><td data-l="Quantity">Shift model, σ = Δ/√2</td><td class="n" data-l="0.25">5.35e-7</td><td class="n" data-l="0.30">2.95e-5</td><td class="n" data-l="0.34">2.28e-4</td></tr>
+    <tr><td data-l="Quantity">Peak SD / L (Δ/√2 / L)</td><td class="n" data-l="0.25">0.0997 (0.0997)</td><td class="n" data-l="0.30">0.1195 (0.1197)</td><td class="n" data-l="0.34">0.1353 (0.1356)</td></tr>
+    <tr><td data-l="Quantity">Cutoff for 1−F &lt; 10⁻⁶</td><td class="n" data-l="0.25">109</td><td class="n" data-l="0.30">77</td><td class="n" data-l="0.34">61</td></tr>
+   </tbody></table>
+   <p class="cap">Single-round position readout of finite-energy states agrees with the shift model to 0.1–2.3%. The Fock cutoff of 100 is enough for Δ ≥ 0.30; Δ = 0.20 needs about 173.</p></div>
+  </div>
+  <div class="grid2">
+   <div>
+    <h3>Numerics and statistics are not limiting</h3>
+    <ul>
+     <li><b>Precision:</b> float32 with TF32 changes the Bayes posteriors by at most 4×10⁻⁴. Decisions change only at near-ties, and the effect is at least 100× below the statistical error.</li>
+     <li><b>Error bars:</b> across 30 independent seeds, the seed-to-seed scatter ÷ the reported SE is 0.73–1.12, with every 95% interval containing 1 except the Bayes flip rate (0.58–0.98, conservative).</li>
+    </ul>
+   </div>
+   <div class="scroll"><table class="stack"><thead><tr><th>Trials for 10% relative SE (nominal)</th><th class="n">NL</th><th class="n">matched Bayes</th></tr></thead><tbody>
+    <tr><td data-l="Metric">P<sub>L</sub>(50)</td><td class="n" data-l="NL">330</td><td class="n" data-l="Bayes">67 000</td></tr>
+    <tr><td data-l="Metric">Time-averaged error</td><td class="n" data-l="NL">345</td><td class="n" data-l="Bayes">12 000</td></tr>
+    <tr><td data-l="Metric">Logical flips per round</td><td class="n" data-l="NL">420</td><td class="n" data-l="Bayes">6 000</td></tr>
+   </tbody></table>
+   <p class="cap">50-round runs at the nominal point, where P<sub>L</sub> stays small and the flip rate is a valid per-round error. It is <b>not</b> valid for long runs: once P<sub>L</sub> nears ½, revising decoders dither and every dither counts as a flip. Long runs therefore use the error per round fitted from the decay of 1 − 2P<sub>L</sub>(t). At about 10⁻⁵ per round over 1 000 rounds, that needs 2 000–9 500 trials for 10% precision (benchmark C1c).</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="band sec">
+ <div class="wrap">
+  <h2><span class="num">3</span>Hardware calibration: our nominal noise is a stress regime; real drift is rougher than our generators</h2>
+  <div class="grid2">
+   <div>
+    <div class="fig" id="cal"><svg></svg></div>
+    <div class="legend"><span><i style="background:var(--ink);height:1px"></i>NL, closed form</span><span><i style="background:var(--slate)"></i>NL, simulated</span><span><i style="background:var(--blue)"></i>Bayes, matched</span><span><i style="background:var(--red)"></i>Sivak et al. 2023: p<sub>X</sub> = 1.81×10⁻³ per cycle</span></div>
+    <p class="cap">Figure 3. Loss alone gives σ<sub>q</sub> = __SQ_LOSS__ L per cycle for a cavity with T1 = 610 µs and a 9.85 µs cycle (σ² = γ/(1−γ)). Our model reproduces the measured logical error per cycle at σ<sub>m</sub> ≈ __SM_MATCH__ L. Δ/√2 = 0.136 L (dotted) overshoots it 5–8×. Our nominal σ<sub>q</sub> = 0.20 L corresponds to T1 ≈ __T1EQ__ µs. This matches one published number, not data.</p>
+   </div>
+   <div>
+    <div class="scroll"><table class="stack"><thead><tr><th>Drift features (median)</th><th class="n">rel. σ spread</th><th class="n">α</th><th class="n">lag-1</th><th class="n">roughness</th></tr></thead><tbody>
+     <tr><td data-l="Series"><b>Measured T1, 27 traces</b></td><td class="n" data-l="spread">0.088</td><td class="n" data-l="α">0.65</td><td class="n" data-l="lag-1">0.38</td><td class="n" data-l="rough">0.79</td></tr>
+     <tr><td data-l="Series">1/f generator (E9)</td><td class="n" data-l="spread">0.18</td><td class="n" data-l="α">1.23</td><td class="n" data-l="lag-1">0.89</td><td class="n" data-l="rough">0.34</td></tr>
+     <tr><td data-l="Series">sinusoid (E9)</td><td class="n" data-l="spread">0.21</td><td class="n" data-l="α">2.24</td><td class="n" data-l="lag-1">1.00</td><td class="n" data-l="rough">0.005</td></tr>
+     <tr><td data-l="Series">telegraph / step (E10)</td><td class="n" data-l="spread">0.13</td><td class="n" data-l="α">1.9–2.1</td><td class="n" data-l="lag-1">0.99</td><td class="n" data-l="rough">0.05–0.11</td></tr>
+    </tbody></table></div>
+    <p class="cap">Measured transmon T1 drift (Zhu et al., Zenodo 16754689; σ<sub>q</sub> ∝ √Γ) against our generators, compared per sample. The generators vary σ<sub>q</sub> about twice as much and are much smoother, so E9–E11 are stress tests of the decoders rather than replays of real drift. Part of the real roughness may be T1-fit error.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="band sec">
+ <div class="wrap">
+  <h2><span class="num">4</span>Decoders: memory helps 95×, the correctly specified filter is best, and LSTMs reach about 80% of its noise tolerance</h2>
+  <div class="grid2">
+   <div>
+    <div class="fig" id="nominal"><svg></svg></div>
+    <div class="legend" id="nomleg"></div>
+    <p class="cap">Figure 4. Logical error P<sub>L</sub>(t) at the nominal point, 20 000 paired trials. Matched Bayes revises earlier decisions as evidence accumulates. Its per-round ablation cannot, which gives the odd/even pattern and a 12× higher error after 50 rounds.</p>
+   </div>
+   <div>
+    <div class="fig" id="trace"><svg></svg></div>
+    <div class="legend"><span><i style="background:var(--slate)"></i>x before correction / L</span><span><i style="background:var(--blue)"></i>ε<sub>t</sub>/L</span><span><i style="background:color-mix(in srgb,var(--red) 30%,transparent);height:10px"></i>NL in wrong logical state</span></div>
+    <p class="cap" id="tracecap">Figure 5.</p>
+   </div>
+  </div>
+  <div class="grid2">
+   <div class="scroll"><table class="stack"><thead><tr><th>Decoder (knows)</th><th class="n">P<sub>L</sub>(50)</th><th class="n">time-avg. error</th></tr></thead><tbody>
+    <tr><td data-l="Decoder">Nearest lattice (current syndrome)</td><td class="n" data-l="P_L(50)">0.242</td><td class="n" data-l="avg">0.144</td></tr>
+    <tr><td data-l="Decoder"><b>Bayes, matched (true model)</b></td><td class="n" data-l="P_L(50)"><b>8.5e-4</b></td><td class="n" data-l="avg"><b>1.5e-3</b></td></tr>
+    <tr><td data-l="Decoder">Bayes-broad (8-model average)</td><td class="n" data-l="P_L(50)">9.7e-4</td><td class="n" data-l="avg">1.9e-3</td></tr>
+    <tr><td data-l="Decoder">Bayes, per-round (no revision)</td><td class="n" data-l="P_L(50)">0.012</td><td class="n" data-l="avg">0.011</td></tr>
+    <tr><td data-l="Decoder">LSTM-nominal (3 seeds)</td><td class="n" data-l="P_L(50)">6.6e-3</td><td class="n" data-l="avg">5.5e-3</td></tr>
+    <tr><td data-l="Decoder">LSTM-broad (3 seeds)</td><td class="n" data-l="P_L(50)">0.015</td><td class="n" data-l="avg">0.010</td></tr>
+   </tbody></table>
+   <p class="cap">E1, nominal point, 60 000 trials (<code>RESULTS.md</code>, <code>writeup/report.pdf</code>).</p></div>
+   <div class="scroll"><table class="stack"><thead><tr><th>Effective length</th><th class="n">σ<sub>q</sub> at P<sub>L</sub>(50) = 5%</th><th class="n">σ<sub>m</sub> max</th><th class="n">rounds to stay &gt; 1%</th></tr></thead><tbody>
+    <tr><td data-l="Decoder">NL</td><td class="n" data-l="σq">0.145 L</td><td class="n" data-l="σm">none</td><td class="n" data-l="rounds">1</td></tr>
+    <tr><td data-l="Decoder"><b>Bayes, matched</b></td><td class="n" data-l="σq"><b>0.314 L</b></td><td class="n" data-l="σm"><b>0.084 L</b></td><td class="n" data-l="rounds">&gt; 200</td></tr>
+    <tr><td data-l="Decoder">Bayes-broad</td><td class="n" data-l="σq">0.308 L</td><td class="n" data-l="σm">0.075 L</td><td class="n" data-l="rounds">&gt; 50</td></tr>
+    <tr><td data-l="Decoder">LSTM-nominal</td><td class="n" data-l="σq">0.256 L</td><td class="n" data-l="σm">0.070 L</td><td class="n" data-l="rounds">102</td></tr>
+    <tr><td data-l="Decoder">LSTM-broad</td><td class="n" data-l="σq">0.241 L</td><td class="n" data-l="σm">0.066 L</td><td class="n" data-l="rounds">27–114</td></tr>
+   </tbody></table>
+   <p class="cap">From E2–E8. Every memory decoder beats NL at least 2× wherever ρ ≥ 0.7. Wrong memory is worse than none: assuming ρ' = 0.9 when ρ = 0 loses to NL (E5). Under regime switching, the broadly trained LSTM beats every fixed-model filter, and only a regime-aware filter beats it (E6).</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="band sec">
+ <div class="wrap">
+  <h2><span class="num">5</span>Robustness and coverage: drifting noise does not break the Bayes filter, but hardware sits outside every scenario we simulate</h2>
+  <div>
+   <div>
+    <h3>Stress test: the fixed nominal filter under all 16 nonstationary schedules</h3>
+    <p>The filter assumes stationary nominal noise (σ<sub>q</sub> = 0.20 L, ρ = 0.9) while the true noise drifts, steps, switches or bursts. 2 000 trials × 1 000 rounds per point (IMM: 1 000). There were no belief collapses at any point, and the filter beats nearest lattice everywhere. Its error per round is 0.97–1.48× the oracle's. The largest losses come where the noise leaves the assumed range or correlation vanishes. The adaptive IMM removes most of the loss, except under 1/f drift (1.43×). After a step to ρ = 0, which is outside its grid, its fitted error per round matches the oracle but its P<sub>L</sub> trails by 0.046 (2.2σ).</p>
+    <p class="small">An earlier version of this test scored decoders by logical flip rate, which made every Bayes filter look worse than nearest lattice when ρ dropped. That came from P<sub>L</sub> saturating, not from the decoders; see the note in §2.</p>
+   </div>
+   <div class="scroll"><table class="stack"><thead><tr><th>Point</th><th class="n">ε oracle</th><th class="n">fixed ÷ oracle</th><th class="n">IMM ÷ oracle</th><th class="n">P<sub>L</sub> gap, fixed − oracle</th></tr></thead><tbody>
+__STRESS_ROWS__
+   </tbody></table></div>
+   <p class="cap">ε is the error per round fitted from the decay of 1 − 2P<sub>L</sub>(t). Its statistical error is 6–31% per 1 000 trials at these rates (C1c), so ratios slightly below 1 are noise. The P<sub>L</sub> gap is paired, at the last round where the oracle stays below P<sub>L</sub> = 0.4. Data: <code>results/benchmarks/stress_bayes.json</code>.</p>
+  </div>
+  <h3>Coverage: hardware-scale noise is a regime the decoder comparisons have not tested</h3>
+  <img src="__COVERAGE_IMG__" alt="Coverage map: parameter space and syndrome-feature space with hardware anchors" style="width:100%;height:auto;display:block;border:1px solid var(--rule);background:#fff">
+  <p class="cap">Figure 7. (a, b) Parameter space: our sweep points, the 5–95% ranges of the E9–E11 schedules, and the LSTM training box. Hardware (Sivak et al.) has σ<sub>q</sub> = 0.072 L, below everything we simulate, and its ρ has never been measured. (c) What decoders see. At hardware scale, readout noise dominates, so consecutive syndromes are anti-correlated (lag-1 correlation −0.24 to −0.38 for any ρ). All our scenarios sit at +0.23 to +0.58, except ρ = 0 (−0.04), 2.1–2.8 standardised units away. There, any memory advantage would come from averaging readout noise rather than tracking correlated drift. Details: <code>docs/benchmarks.md</code> §H.</p>
+ </div>
+</section>
+
+<section class="band sec">
+ <div class="wrap">
+  <h2><span class="num">6</span>Cost: a 64-point grid filter is the cheapest accurate decoder; the GPU fast paths cut single-trial latency up to 57×</h2>
+  <div>
+   <div style="max-width:820px">
+    <div class="fig" id="pareto"><svg></svg></div>
+    <p class="cap">Figure 6. Accuracy against batched cost at the nominal point (laptop RTX 5080, reference implementations). Every matched-Bayes grid gives the same flip rate; n<sub>x</sub> = 64 is the cheapest. The LSTM costs more per trial-round for twice the error. Its 339 s of training never pays off against the filter's throughput.</p>
+   </div>
+   <div>
+    <h3>GPU fast paths: same decisions, less time</h3>
+    <div class="scroll"><table class="stack"><thead><tr><th>Decoder</th><th class="n">µs/trial-round</th><th class="n">×</th><th class="n">1-trial ms/round</th><th class="n">×</th></tr></thead><tbody>
+__AB_ROWS__
+    </tbody></table></div>
+    <p class="cap">Reference → GPU fast path, interleaved A/B runs at a 45 W GPU limit. The fast path computes the syndromes in closed form, keeps decisions on the GPU, replays each round as a CUDA graph, uses a fused <code>torch.compile</code> kernel and runs the LSTM in one sequence call. Decisions are identical except at float32 near-ties (≤ 6×10⁻⁴ of trial-rounds). Details: <code>docs/performance.md</code>.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="band sec">
+ <div class="wrap">
+  <h2><span class="num">7</span>Next: decoder experiments</h2>
+  <p class="lead">The simulator, references and tooling are in place. These experiments test the decoders where the paper's questions are open: changing noise, hardware-scale noise, and what limits the learned decoders.</p>
+  <div class="scroll"><table class="stack"><thead><tr><th>Question</th><th>Experiment</th><th>Status</th></tr></thead><tbody>
+   <tr><td data-l="Question">Do adaptive filters or a drift-trained LSTM track changing noise, and how close do they come to the oracle?</td><td data-l="Experiment">E9 drift (6 points), E10 steps / telegraph / bursts (5), E11 out-of-range values (5). Decoders: oracle, fixed Bayes, Bayes-broad, IMM, window 50/200, LSTM nominal / broad / drift. 1 000 rounds × 5 000 trials per point.</td><td data-l="Status"><span class="tag y">built</span> quick cycle ran; scored by decay-fitted ε and paired P<sub>L</sub>; full run about 3.6 h (estimate)</td></tr>
+   <tr><td data-l="Question"><b>Do the conclusions hold where real devices operate?</b> (Fig. 7: no scenario covers it)</td><td data-l="Experiment">Sweep around σ<sub>q</sub> ≈ 0.07 L, σ<sub>m</sub> ≈ 0.10 L over ρ, stationary and drifting, including σ<sub>m</sub> drift; LSTMs trained there.</td><td data-l="Status"><span class="tag r">to add, first</span></td></tr>
+   <tr><td data-l="Question">What limits the LSTM where errors are rare?</td><td data-l="Experiment">Model size, training-set size, curriculum toward rare errors; GRU / transformer baselines; seeds.</td><td data-l="Status"><span class="tag r">to add</span></td></tr>
+   <tr><td data-l="Question">How should the adaptive filters be tuned?</td><td data-l="Experiment">IMM hazard and window length against drift rate. Spitz et al. predict an optimal window N ≈ (p ω²)<sup>−1/3</sup>.</td><td data-l="Status"><span class="tag r">to add</span></td></tr>
+   <tr><td data-l="Question">Does the memory advantage survive one-bit syndromes?</td><td data-l="Experiment">Binary-readout mode (P(b | x) likelihood; retrain the LSTM on bit sequences).</td><td data-l="Status"><span class="tag r">to add</span></td></tr>
+  </tbody></table></div>
+ </div>
+</section>
+
+<footer class="band sec"><div class="wrap">Built by <code>writeup/artifact/build_review.py</code> from <code>results/benchmarks/</code>: <code>validation_rerun.json</code>, <code>gkp_calibration.json</code>, <code>cost.json</code>, <code>profile_ab.json</code>. Notes: <code>docs/sim_validation.md</code>, <code>docs/benchmarks.md</code> (A–G), <code>docs/performance.md</code>, <code>docs/nonstationary.md</code>. Decoder results E1–E8: <code>RESULTS.md</code>, <code>writeup/report.pdf</code>.</div></footer>
+
+<script>
+{
+const D = __DATA__;
+const $ = s => document.querySelector(s);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim() || v;
+const el = id => $(id + " svg");
+function observe(id, draw) { const s = el(id); const run = () => draw(s, s.clientWidth, s.clientHeight); new ResizeObserver(run).observe(s); }
+const line = pts => pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join("");
+function axes(W, H, m, xs, ys, xt, yt, ylab) {
+  let o = "";
+  yt.forEach(v => { const y = ys(v); o += `<line x1="${m.l}" x2="${W - m.r}" y1="${y}" y2="${y}" stroke="${css("--rule")}"/><text x="${m.l - 8}" y="${y + 5}" text-anchor="end">${v.lab ?? v}</text>`; });
+  xt.forEach(v => { o += `<text x="${xs(v)}" y="${H - m.b + 20}" text-anchor="middle">${v.lab ?? v}</text>`; });
+  if (ylab) o += `<text x="${m.l}" y="${m.t - 10}">${ylab}</text>`;
+  return o;
+}
+const logTick = v => ({valueOf: () => v, lab: "1e" + Math.round(Math.log10(v))});
+
+// Figure 2: tally
+observe("#tally", (s, W, H) => {
+  const narrow = W < 520, m = {l: narrow ? 104 : 190, r: 20, t: 20, b: 34};
+  const rows = D.checks, rh = (H - m.t - m.b) / rows.length;
+  const zx = z => m.l + (Math.max(-3, Math.min(3, z)) + 3) / 6 * (W - m.l - m.r);
+  let o = `<rect x="${zx(-2)}" y="${m.t}" width="${zx(2) - zx(-2)}" height="${H - m.t - m.b}" fill="${css("--panel")}"/>`;
+  [-3, -2, -1, 0, 1, 2, 3].forEach(z => o += `<line x1="${zx(z)}" x2="${zx(z)}" y1="${m.t}" y2="${H - m.b}" stroke="${z ? css("--rule") : css("--ink")}"/><text x="${zx(z)}" y="${H - m.b + 20}" text-anchor="middle">${z > 0 ? "+" + z : z}σ</text>`);
+  let last = "";
+  rows.forEach((r, i) => {
+    const y = m.t + rh * (i + .5);
+    if (r.g !== last) { o += `<text x="6" y="${y + 5}" font-weight="700">${narrow ? r.g.split(" ")[0] : r.g}</text>`; last = r.g; }
+    if (!narrow) o += `<text x="${m.l - 10}" y="${y + 5}" text-anchor="end" fill="${css("--mute")}">${r.l}</text>`;
+    o += `<line x1="${zx(0)}" x2="${zx(r.z)}" y1="${y}" y2="${y}" stroke="${css("--slate")}"/>`;
+    o += r.exact ? `<circle cx="${zx(r.z)}" cy="${y}" r="5.5" fill="${css("--blue")}"/>` : `<circle cx="${zx(r.z)}" cy="${y}" r="5" fill="${css("--bg")}" stroke="${css("--blue")}" stroke-width="2"/>`;
+  });
+  s.innerHTML = o;
+});
+
+// Figure 3: calibration against Sivak et al.
+observe("#cal", (s, W, H) => {
+  const m = {l: 52, r: 14, t: 24, b: 30}, lo = -6, hi = -0.8;
+  const xs = v => m.l + v / 0.21 * (W - m.l - m.r), ys = v => m.t + (hi - Math.log10(Math.max(v, 10 ** lo))) / (hi - lo) * (H - m.t - m.b);
+  let o = axes(W, H, m, xs, ys, W < 520 ? [0, 0.1, 0.2] : [0, 0.05, 0.1, 0.15, 0.2], [1e-6, 1e-5, 1e-4, 1e-3, 1e-2, 1e-1].map(logTick), "flips per round");
+  const sd = D.cal_meta.sm_delta;
+  o += `<line x1="${xs(sd)}" x2="${xs(sd)}" y1="${m.t}" y2="${H - m.b}" stroke="${css("--red")}" stroke-dasharray="3 4"/>`;
+  o += `<line x1="${m.l}" x2="${W - m.r}" y1="${ys(1.81e-3)}" y2="${ys(1.81e-3)}" stroke="${css("--red")}" stroke-width="2"/><text x="${m.l + 6}" y="${ys(1.81e-3) - 8}">Sivak et al. 2023</text>`;
+  const pts = (k, min) => D.cal.filter(r => r[k] > (min || 0)).map(r => [xs(r[0]), ys(r[k])]);
+  o += `<path d="${line(pts(3, 1e-7))}" stroke="${css("--ink")}" stroke-width="1" fill="none" stroke-dasharray="4 3"/>`;
+  [[1, "--slate", 2], [2, "--blue", 2.5]].forEach(([k, c, w]) => { o += `<path d="${line(pts(k))}" stroke="${css(c)}" stroke-width="${w}" fill="none"/>`; pts(k).forEach(p => o += `<circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="${css(c)}"/>`); });
+  o += `<text x="${W - m.r}" y="${H - m.b + 20}" text-anchor="end">σ_m / L</text>`;
+  s.innerHTML = o;
+});
+
+// Figure 4: nominal decoder curves
+const NOM = D.nominal, nomCol = {"No correction": "--slate", "Nearest lattice": "--ink", "Bayes per-round": "--red", "Bayes matched": "--blue"};
+$("#nomleg").innerHTML = Object.keys(NOM).map(k => `<span><i style="background:var(${nomCol[k]})"></i>${k}: ${NOM[k][49] < 1e-2 ? NOM[k][49].toExponential(1) : NOM[k][49].toFixed(3)}</span>`).join("");
+observe("#nominal", (s, W, H) => {
+  const m = {l: 50, r: 12, t: 24, b: 30}, lo = -4.5, hi = 0;
+  const xs = t => m.l + (t - 1) / 49 * (W - m.l - m.r), ys = v => m.t + (hi - Math.log10(Math.max(v, 10 ** lo))) / (hi - lo) * (H - m.t - m.b);
+  let o = axes(W, H, m, xs, ys, W < 520 ? [1, 25, 50] : [1, 10, 20, 30, 40, 50], [1e-4, 1e-3, 1e-2, 1e-1, 1].map(logTick), "P_L(t)");
+  Object.keys(NOM).forEach(k => { const pts = NOM[k].map((v, i) => [i + 1, v]).filter(p => p[1] > 0).map(p => [xs(p[0]), ys(p[1])]); o += `<path d="${line(pts)}" stroke="${css(nomCol[k])}" stroke-width="${k === "Bayes matched" ? 3 : 1.8}" fill="none"/>`; });
+  o += `<text x="${W - m.r}" y="${H - m.b + 20}" text-anchor="end">round</text>`;
+  s.innerHTML = o;
+});
+
+// Figure 5: one traced trial
+const Tr = D.trace, flip = Tr.kNL.findIndex(k => k === 1);
+$("#tracecap").textContent = `Figure 5. Why memory helps: one real trial at the nominal point. From round ${flip - 2} the displacement drifts by about +0.3 L per round. At round ${flip + 1}, x reaches ${Tr.xpre[flip].toFixed(2)} L and the noisy syndrome wraps to ${Tr.s[flip].toFixed(2)} L. Nearest lattice corrects the wrong way and stays in the wrong logical state. The matched Bayes filter has been tracking ε, so it chooses the other parity and is correct in all 50 rounds.`;
+observe("#trace", (s, W, H) => {
+  const m = {l: 44, r: 12, t: 24, b: 30};
+  const xs = t => m.l + (t - 1) / 49 * (W - m.l - m.r), ys = v => m.t + (1.6 - v) / 2.0 * (H - m.t - m.b);
+  let o = "";
+  Tr.kNL.forEach((k, i) => { if (k) o += `<rect x="${xs(i + 0.5)}" y="${m.t}" width="${xs(2) - xs(1) + .5}" height="${H - m.t - m.b}" fill="color-mix(in srgb, ${css("--red")} 14%, transparent)"/>`; });
+  o += axes(W, H, m, xs, ys, W < 520 ? [1, 25, 50] : [1, 10, 20, 30, 40, 50], [-0.4, 0, 0.5, 1, 1.5], "/ L");
+  o += `<line x1="${m.l}" x2="${W - m.r}" y1="${ys(0.5)}" y2="${ys(0.5)}" stroke="${css("--ink")}" stroke-dasharray="4 4"/><text x="${m.l + 6}" y="${ys(0.5) - 6}" fill="${css("--mute")}">wrap boundary</text>`;
+  o += `<path d="${line(Tr.xpre.map((v, i) => [xs(i + 1), ys(v)]))}" stroke="${css("--slate")}" stroke-width="2" fill="none"/>`;
+  o += `<path d="${line(Tr.eps.map((v, i) => [xs(i + 1), ys(v)]))}" stroke="${css("--blue")}" stroke-width="2.5" fill="none"/>`;
+  o += `<circle cx="${xs(flip + 1)}" cy="${ys(Tr.xpre[flip])}" r="5" fill="${css("--red")}"/>`;
+  s.innerHTML = o;
+});
+
+// Figure 6: accuracy vs cost
+observe("#pareto", (s, W, H) => {
+  const m = {l: 56, r: 16, t: 24, b: 30}, x0 = -1.6, x1 = 2.0, y0 = -3, y1 = -1.5;
+  const xs = v => m.l + (Math.log10(v) - x0) / (x1 - x0) * (W - m.l - m.r), ys = v => m.t + (y1 - Math.log10(v)) / (y1 - y0) * (H - m.t - m.b);
+  let o = axes(W, H, m, xs, ys, [0.1, 1, 10, 100].map(v => ({valueOf: () => v, lab: v})), [1e-3, 3e-3, 1e-2, 3e-2].map(v => ({valueOf: () => v, lab: v.toExponential(0)})), "flips per round");
+  o += `<text x="${W - m.r}" y="${H - m.b + 20}" text-anchor="end">µs / trial-round</text>`;
+  const narrow = W < 520;
+  D.pareto.forEach((p, i) => {
+    const c = p.n.startsWith("LSTM") ? "--red" : p.n.startsWith("Bayes n_x") ? "--blue" : "--slate";
+    o += `<circle cx="${xs(p.x)}" cy="${ys(p.y)}" r="5" fill="${css(c)}"/>`;
+    const hide = narrow && /n_x=(96|128|192)/.test(p.n);
+    if (!hide) o += `<text x="${xs(p.x) + 7}" y="${ys(p.y) + (i % 2 ? 16 : -8)}">${p.n.replace("Bayes (", "").replace(")", "")}</text>`;
+  });
+  s.innerHTML = o;
+});
+}
+</script>
+</body>
+</html>

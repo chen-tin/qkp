@@ -3,14 +3,18 @@
 Run from the repo root after experiments/run_nonstationary.py:
     MPLBACKEND=Agg python -m experiments.analyze_nonstationary
 
-Metrics (sequences are long, so P_L at the last round saturates for most
-decoders and is reported only for completeness):
-    flip_rate        logical-state changes per round, averaged over the run
-    excess_vs_oracle flip_rate / oracle flip_rate (paired, same noise)
-    diff_vs_oracle   paired per-trial difference of flip rates, with its SE
-    windowed curves  flip rate in consecutive windows (tracking over time)
-    aligned curves   flip rate around each trial's unannounced event round
-                     (steps and bursts), from the regenerated schedules
+Metrics. Sequences are long, so P_L(t) saturates at 1/2 for the weaker
+decoders. Once that happens a decoder that revises its estimate of the
+logical parity dithers, so the raw logical flip rate is *not* a logical error
+rate and is reported only for reference. The headline metrics are:
+    eps              logical error per round, from the decay of 1 - 2 P_L(t)
+                     before saturation (experiments.common.eps_fit)
+    excess_vs_oracle eps / eps of the oracle (same noise)
+    pl_h             P_L at the common horizon h, the last round at which the
+                     oracle keeps P_L below 0.4
+    diff_vs_oracle   paired P_L difference at h with its standard error
+Figures: P_L(t) per point, and P_L aligned on each trial's unannounced event
+(steps and bursts), from the regenerated schedules.
 """
 
 import json
@@ -27,7 +31,7 @@ import numpy as np
 
 from experiments.analyze import load_point, write_csv
 from experiments.common import (
-    aligned_flip_rate, flips_per_trial, get_budget, get_mode, log, out_dir, windowed_flip_rate,
+    common_horizon, eps_fit, flips_per_trial, get_budget, get_mode, log, out_dir, paired_pl,
 )
 from experiments.run_all import noise_chunk_with_schedule, point_dir, point_seed
 from experiments.run_nonstationary import POINTS, noise_spec
@@ -52,21 +56,24 @@ def family(name):
 
 def decoder_rows(exp, pid, data, relation):
     ref = data.get(REF, {}).get("errors")
+    h = common_horizon(ref.mean(axis=0)) if ref is not None else None
+    eps_ref = eps_fit(ref.mean(axis=0))[0] if ref is not None else None
     rows = []
     for name, d in data.items():
         rec = d["errors"]
         trials, rounds = rec.shape
-        per = flips_per_trial(rec) / rounds
+        eps, used = eps_fit(rec.mean(axis=0))
+        flips = flips_per_trial(rec) / rounds
         row = dict(exp=exp, point=pid, decoder=name, family=family(name),
                    lstm_drift_relation=relation, trials=trials, rounds=rounds,
-                   flip_rate=per.mean(), flip_rate_se=per.std(ddof=1) / math.sqrt(trials),
-                   ler_final=rec[:, -1].mean(), seconds=d["seconds"], resets=d["resets"])
+                   eps=eps, eps_rounds_used=used, ler_final=float(rec[:, -1].mean()),
+                   raw_flip_rate_not_a_logical_error_rate=float(flips.mean()),
+                   seconds=d["seconds"], resets=d["resets"])
         if ref is not None and ref.shape == rec.shape:
-            ref_per = flips_per_trial(ref) / rounds
-            diff = per - ref_per
-            row["diff_vs_oracle"] = diff.mean()
-            row["diff_vs_oracle_se"] = diff.std(ddof=1) / math.sqrt(trials)
-            row["excess_vs_oracle"] = per.mean() / ref_per.mean() if ref_per.mean() > 0 else None
+            row["horizon"] = h
+            row["pl_h"] = float(rec[:, h - 1].mean())
+            row["diff_vs_oracle"], row["diff_vs_oracle_se"] = paired_pl(rec, ref, h)
+            row["excess_vs_oracle"] = (eps / eps_ref) if (eps is not None and eps_ref) else None
         rows.append(row)
     return rows
 
@@ -80,13 +87,14 @@ def aggregate(rows):
     out = []
     for (exp, pid, fam), rs in groups.items():
         agg = dict(rs[0], decoder=fam, seeds=len(rs))
-        for key in ("flip_rate", "diff_vs_oracle", "excess_vs_oracle", "ler_final"):
+        for key in ("eps", "pl_h", "diff_vs_oracle", "excess_vs_oracle", "ler_final"):
             vals = [r[key] for r in rs if r.get(key) is not None]
             if vals:
                 agg[key] = float(np.mean(vals))
                 agg[key + "_seed_min"] = float(np.min(vals))
                 agg[key + "_seed_max"] = float(np.max(vals))
-        agg["flip_rate_se"] = float(np.mean([r["flip_rate_se"] for r in rs]))
+        ses = [r["diff_vs_oracle_se"] for r in rs if r.get("diff_vs_oracle_se") is not None]
+        agg["diff_vs_oracle_se"] = float(np.mean(ses)) if ses else None
         out.append(agg)
     return out
 
@@ -101,69 +109,68 @@ def event_rounds(exp, pid, point_spec, trials, rounds):
     index = point_seed(exp, pid)
     parts = [noise_chunk_with_schedule(noise_spec(point_spec), exp, index, c, chunk, rounds)[2]
              for c in range(n_chunks)]
-    tau = Schedule.concatenate(parts).tau
-    return tau[:trials]
+    return Schedule.concatenate(parts).tau[:trials]
 
 
-def plot_point_curves(ax, data, rounds, title):
-    window = max(10, rounds // 20)
+def _families(data):
     fams = defaultdict(list)
     for name, d in data.items():
         fams[family(name)].append(d["errors"])
-    for fam, recs in fams.items():
-        curves = [windowed_flip_rate(r, window) for r in recs]
-        starts = curves[0][0]
-        rate = np.mean([c[1] for c in curves], axis=0)
-        ax.plot(starts + window / 2, rate, label=fam, color=COLORS.get(fam),
-                lw=2.4 if fam == REF else 1.4)
+    return fams
+
+
+def plot_pl_curves(ax, data, title):
+    for fam, recs in _families(data).items():
+        pl = np.mean([r.mean(axis=0) for r in recs], axis=0)
+        t = np.arange(1, len(pl) + 1)
+        ax.plot(t, pl, label=fam, color=COLORS.get(fam), lw=2.4 if fam == REF else 1.4)
     ax.set_title(title, fontsize=10)
-    ax.set_yscale("log")
     ax.set_xlabel("round")
-    ax.grid(alpha=0.3, which="both")
+    ax.set_ylim(0, 0.55)
+    ax.grid(alpha=0.3)
 
 
-def plot_aligned(ax, data, tau, title, before=50, after=200, smooth=10):
+def plot_aligned(ax, data, tau, title, before=50, after=200):
     rounds = next(iter(data.values()))["errors"].shape[1]
     before, after = min(before, rounds // 4), min(after, rounds // 2)
-    fams = defaultdict(list)
-    for name, d in data.items():
-        fams[family(name)].append(d["errors"])
-    kernel = np.ones(smooth) / smooth
-    for fam, recs in fams.items():
-        rates = [aligned_flip_rate(r, tau, before, after) for r in recs]
-        offsets = rates[0][0]
-        rate = np.nanmean([r[1] for r in rates], axis=0)
-        ax.plot(offsets, np.convolve(rate, kernel, mode="same"), label=fam,
-                color=COLORS.get(fam), lw=2.4 if fam == REF else 1.4)
+    offsets = np.arange(-before, after)
+    for fam, recs in _families(data).items():
+        curves = []
+        for rec in recs:
+            ok = (tau >= before) & (tau + after < rounds)
+            idx = np.flatnonzero(ok)
+            curves.append([rec[idx, tau[idx] + k].mean() for k in offsets])
+        ax.plot(offsets, np.mean(curves, axis=0), label=fam, color=COLORS.get(fam),
+                lw=2.4 if fam == REF else 1.4)
     ax.axvline(0, color="k", lw=0.8, ls="--")
     ax.set_title(title, fontsize=10)
-    ax.set_yscale("log")
+    ax.set_ylim(0, 0.55)
     ax.set_xlabel("rounds after the unannounced event")
-    ax.grid(alpha=0.3, which="both")
+    ax.grid(alpha=0.3)
 
 
 def summary_dotplot(exp, rows, fname):
-    fam_rows = [r for r in rows if r["family"] == r["decoder"]]
+    fam_rows = [r for r in rows if r["family"] == r["decoder"] and r.get("eps")]
     points = [p for p, _, _ in POINTS[exp]]
-    decs = sorted({r["decoder"] for r in fam_rows}, key=lambda n: list(COLORS).index(n)
-                  if n in COLORS else 99)
+    decs = sorted({r["decoder"] for r in fam_rows},
+                  key=lambda n: list(COLORS).index(n) if n in COLORS else 99)
     fig, ax = plt.subplots(figsize=(8, 0.55 * len(points) + 1.6))
     for k, dec in enumerate(decs):
         xs, ys = [], []
         for i, p in enumerate(points):
             r = next((r for r in fam_rows if r["point"] == p and r["decoder"] == dec), None)
-            if r is not None:
-                xs.append(r["flip_rate"])
+            if r is not None and r["eps"] > 0:
+                xs.append(r["eps"])
                 ys.append(i + (k - len(decs) / 2) * 0.06)
         ax.scatter(xs, ys, label=dec, color=COLORS.get(dec), s=36 if dec == REF else 22,
                    zorder=3 if dec == REF else 2)
     ax.set_yticks(range(len(points)), points)
     ax.set_xscale("log")
-    ax.set_xlabel("logical flips per round (lower is better)")
+    ax.set_xlabel("logical error per round, from the decay of 1 - 2 P_L (lower is better)")
     ax.invert_yaxis()
     ax.grid(alpha=0.3, which="both", axis="x")
     ax.legend(fontsize=7, loc="center left", bbox_to_anchor=(1.01, 0.5))
-    ax.set_title(f"{exp}: flip rate by decoder (oracle = optimal with the true schedule)")
+    ax.set_title(f"{exp}: logical error per round (oracle = optimal with the true schedule)")
     fig.tight_layout()
     fig.savefig(FIG / fname, dpi=160)
     plt.close(fig)
@@ -183,21 +190,20 @@ def analyze(exp):
     if not loaded:
         return []
     write_csv(RES / f"{exp}_summary.csv", all_rows)
-    summary_dotplot(exp, all_rows, f"{exp}_flip_rates.png")
+    summary_dotplot(exp, all_rows, f"{exp}_eps.png")
 
     n = len(loaded)
     cols = min(3, n)
-    fig, axes = plt.subplots(math.ceil(n / cols), cols, figsize=(5 * cols, 3.6 * math.ceil(n / cols)),
-                             squeeze=False)
+    fig, axes = plt.subplots(math.ceil(n / cols), cols,
+                             figsize=(5 * cols, 3.6 * math.ceil(n / cols)), squeeze=False)
     for ax, (pid, point_spec, data) in zip(axes.flat, loaded):
-        rounds = next(iter(data.values()))["errors"].shape[1]
-        plot_point_curves(ax, data, rounds, pid)
+        plot_pl_curves(ax, data, pid)
     for ax in list(axes.flat)[n:]:
         ax.axis("off")
     axes.flat[0].legend(fontsize=7)
-    axes.flat[0].set_ylabel("logical flips per round (windowed)")
+    axes.flat[0].set_ylabel("P_L(t)")
     fig.tight_layout()
-    fig.savefig(FIG / f"{exp}_over_time.png", dpi=150)
+    fig.savefig(FIG / f"{exp}_pl_over_time.png", dpi=150)
     plt.close(fig)
 
     events = [(pid, s, d) for pid, s, d in loaded if s["family"] in ("step", "burst")]
@@ -209,7 +215,7 @@ def analyze(exp):
             if tau is not None:
                 plot_aligned(ax, data, tau, pid)
         axes.flat[0].legend(fontsize=7)
-        axes.flat[0].set_ylabel("logical flips per round (smoothed)")
+        axes.flat[0].set_ylabel("P_L, aligned on the event")
         fig.tight_layout()
         fig.savefig(FIG / f"{exp}_aligned_on_event.png", dpi=150)
         plt.close(fig)
@@ -222,8 +228,7 @@ def main():
     for exp in POINTS:
         try:
             rows = analyze(exp)
-            summary[exp] = [{k: v for k, v in r.items()} for r in rows
-                            if r["family"] == r["decoder"]]
+            summary[exp] = [r for r in rows if r["family"] == r["decoder"]]
         except Exception:
             import traceback
             summary[exp] = None
