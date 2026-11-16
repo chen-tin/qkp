@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GKP decoder runs dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+<style>
+/* VOICE work: a live lab dashboard, dense and exact
+   IDEA a lab notebook's results wall: one small-multiple per scaling axis, status strip on top
+   PICTURE small-multiple log charts of logical error against each scaling knob, plus mismatch heatmaps
+   COLOUR white, ink #101418, decoders in fixed hues (Bayes blue, NL slate, LSTM red/orange), warm yellow for status
+   TYPE Manrope 800 display + Manrope text
+   LAYOUT status strip; grid of chart cards, 2-3 per row on a laptop, 1 on a phone */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#101418);--ink:light-dark(#101418,#e9ecef);--mute:light-dark(#5a6470,#9aa4ae);--rule:light-dark(#dfe3e7,#2a3038);--panel:light-dark(#f6f7f8,#171c22);--yel:#ffd84a;
+--c-nl:light-dark(#6b7682,#9aa4ae);--c-bm:light-dark(#1d4ed8,#7aa2ff);--c-bn:light-dark(#0e9fb5,#56d4e6);--c-bb:light-dark(#15803d,#4ade80);--c-ln:light-dark(#c2410c,#fb923c);--c-lb:light-dark(#b42318,#ff8a7a);--c-or:light-dark(#101418,#e9ecef);--c-imm:light-dark(#7c3aed,#c4b5fd)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Manrope,system-ui,sans-serif;overflow-x:clip}
+.band{padding:clamp(20px,3vw,40px) max(4vw,16px)}
+.wrap{max-width:1280px;margin:0 auto}
+h1{font-size:clamp(28px,3.6vw,40px);line-height:1.05;letter-spacing:-.02em;margin:0 0 8px;font-weight:800}
+h2{font-size:21px;margin:26px 0 4px;font-weight:800;letter-spacing:-.01em}
+h3{font-size:15px;margin:0 0 2px;font-weight:700}
+p{margin:0 0 10px;max-width:80ch}
+.mute{color:var(--mute)}
+.small{font-size:13.5px}
+.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(15em,1fr));gap:0;border-top:2px solid var(--ink);margin-top:14px}
+.status div{padding:8px 12px 8px 0;border-bottom:1px solid var(--rule);font-size:13.5px}
+.status b{display:block}
+.status .key{background:var(--yel);color:#101418;padding-left:12px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:18px;margin-top:10px}
+.card{border:1px solid var(--rule);border-radius:6px;padding:12px 12px 8px;background:var(--bg)}
+.fig{position:relative;height:250px}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+svg text{font:12.5px Manrope,system-ui,sans-serif;fill:var(--ink);paint-order:stroke;stroke:var(--bg);stroke-width:3px}
+.cap{font-size:13px;color:var(--mute);margin:6px 0 0}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;margin:8px 0 0}
+.legend i{display:inline-block;width:16px;height:3px;vertical-align:middle;margin-right:5px}
+table.hm{border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums;width:100%}
+table.hm td,table.hm th{border:1px solid var(--bg);padding:5px 4px;text-align:center}
+table.hm th{color:var(--mute);font-weight:600}
+.scroll{overflow-x:auto}
+.dots .row{display:grid;grid-template-columns:9.5em minmax(0,1fr);align-items:center;gap:8px;border-bottom:1px solid var(--rule);padding:3px 0;font-size:12.5px}
+.dots .track{position:relative;height:16px}
+.dots .track span{position:absolute;top:3px;width:10px;height:10px;border-radius:50%;transform:translateX(-5px)}
+.dots .axis{display:flex;justify-content:space-between;font-size:12px;color:var(--mute);margin-left:calc(9.5em + 8px)}
+.pending{color:var(--mute);font-size:13px}
+@media(max-width:600px){.fig{height:220px}}
+</style>
+</head>
+<body>
+<section class="band">
+ <div class="wrap">
+  <h1>How decoder performance scales, across every run so far</h1>
+  <p class="mute">Generated <span id="built"></span> by <code>writeup/artifact/build_runs.py</code> from <code>results/</code>. Runs still going are shown as pending; rebuild to update. Logical error: P<sub>L</sub>(50) for the 50-round stationary runs, and ε (error per round, fitted from the decay of 1 − 2P<sub>L</sub>) for the long and closed-loop runs.</p>
+  <div class="status" id="status"></div>
+ </div>
+</section>
+
+<section class="band" style="padding-top:0">
+ <div class="wrap">
+  <h2>1 · Stationary noise: how error scales with noise strength, correlation and readout noise</h2>
+  <p class="small mute">E2–E4, 20 000–40 000 trials per point, 50 rounds. Lower is better. Bayes (matched) knows the true model; Bayes (nominal) assumes σ<sub>q</sub> = 0.2 L, σ<sub>m</sub> = 0.05 L, ρ = 0.9 everywhere.</p>
+  <div class="legend" id="famleg"></div>
+  <div class="cards">
+   <div class="card"><h3>Noise strength σ<sub>q</sub> (ρ = 0.9)</h3><div class="fig" id="f_sq"><svg></svg></div></div>
+   <div class="card"><h3>Correlation ρ (σ<sub>q</sub> = 0.2 L)</h3><div class="fig" id="f_rhoA"><svg></svg></div></div>
+   <div class="card"><h3>Correlation ρ at high noise (σ<sub>q</sub> = 0.3 L, σ<sub>m</sub> = 0.08 L)</h3><div class="fig" id="f_rhoB"><svg></svg></div></div>
+   <div class="card"><h3>Readout noise σ<sub>m</sub> (σ<sub>q</sub> = 0.2 L, ρ = 0.9)</h3><div class="fig" id="f_sm"><svg></svg></div></div>
+  </div>
+
+  <h2>2 · Model mismatch: what a wrong assumed model costs, at four true noise points</h2>
+  <p class="small mute">P<sub>L</sub>(50) of a Bayes filter assuming (ρ′, σ<sub>q</sub>′), divided by the matched filter's. Green: ≤ 1.5×; red: ≥ NL. E5 (nominal) and E5b, 40 000 trials each.</p>
+  <div class="cards" id="mismatch"></div>
+
+  <h2>3 · Nonstationary noise: cost of not knowing the schedule</h2>
+  <p class="small mute">Logical error per round of the fixed nominal filter and of the adaptive IMM filter, relative to the oracle that knows the true schedule. Stress test: 16 schedules, 2 000 trials × 1 000 rounds. The full E9–E12 runs are listed below as their points finish.</p>
+  <div class="cards">
+   <div class="card"><h3>Stress test: ε ÷ oracle ε</h3><div class="dots" id="stress"></div><div class="legend"><span><i style="background:var(--c-bn)"></i>fixed nominal Bayes</span><span><i style="background:var(--c-imm)"></i>Bayes-IMM</span></div></div>
+   <div class="card"><h3>Full runs E9–E12 (test streams): progress</h3><div id="nsprog"></div></div>
+  </div>
+
+  <h2>4 · Readout format: one-bit syndromes and fine corrections</h2>
+  <div class="cards">
+   <div class="card"><h3>E14 · error per round vs bits per round (hardware scale, ρ = 0.9)</h3><div class="fig" id="f_bits_hw9"><svg></svg></div></div>
+   <div class="card"><h3>E14 · hardware scale, ρ = 0 (white noise)</h3><div class="fig" id="f_bits_hw0"><svg></svg></div></div>
+   <div class="card"><h3>E14 · nominal noise, ρ = 0.9</h3><div class="fig" id="f_bits_nom9"><svg></svg></div></div>
+   <div class="card"><h3>E15 · fine vs parity corrections against readout noise (σ<sub>q</sub> = 0.072 L)</h3><div class="fig" id="f_e15"><svg></svg></div></div>
+  </div>
+  <div class="legend"><span><i style="background:var(--c-nl)"></i>sBs, memoryless (best δ)</span><span><i style="background:var(--c-bm)"></i>Bayes, one-bit readout</span><span><i style="background:var(--c-or)"></i>Bayes, analog syndrome</span><span><i style="background:var(--c-bb)"></i>Bayes, fine corrections (E15)</span></div>
+  <p class="cap">E14: 4 000 trials × 200 rounds, visibility 1, no bit flips, m = 1, 4, 8. E15: 200 rounds; NL in slate.</p>
+
+  <h2>5 · Compute: how cost scales with batch size</h2>
+  <div class="cards">
+   <div class="card"><h3>µs per trial-round vs batch size (laptop RTX 5080, reference implementations)</h3><div class="fig" id="f_batch"><svg></svg></div><div class="legend" id="batchleg"></div></div>
+   <div class="card"><h3>Accuracy vs cost at the nominal point</h3><div class="fig" id="f_pareto"><svg></svg></div></div>
+  </div>
+ </div>
+</section>
+
+<script>
+{
+const D = __DATA__;
+const $ = s => document.querySelector(s);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim() || v;
+const FAM = {"NL": "--c-nl", "Bayes (matched)": "--c-bm", "Bayes (nominal)": "--c-bn", "Bayes-broad": "--c-bb", "LSTM-nominal": "--c-ln", "LSTM-broad": "--c-lb"};
+const fmt = v => v == null ? "—" : (v < 1e-3 ? v.toExponential(1) : v < 0.1 ? v.toFixed(3) : v.toFixed(2));
+
+$("#built").textContent = D.status.built;
+const st = D.status, m = st.models;
+$("#status").innerHTML = `<div class="key"><b>Trained models</b>LSTMs ${m.lstm} · E13 variants ${m.variants}/19 · bit-LSTMs ${m.binary}/6 · DQN ${m.dqn}/10</div>` +
+  Object.entries(st.jobs).map(([k, v]) => `<div><b>${k}</b>${v.replace(/^\[[\d:]+\]\s*/, "").slice(0, 110)}</div>`).join("");
+$("#famleg").innerHTML = Object.entries(FAM).map(([k, c]) => `<span><i style="background:var(${c})"></i>${k}</span>`).join("");
+
+// generic log-y line chart
+function chart(sel, series, o) {
+  const s = $(sel + " svg");
+  const draw = () => {
+    const W = s.clientWidth, H = s.clientHeight, M = {l: 48, r: 10, t: 12, b: 28};
+    const xs0 = o.xlog ? Math.log10 : x => x, all = series.flatMap(se => se.pts.filter(p => p[1] > 0));
+    if (!all.length) { s.innerHTML = `<text x="10" y="20">no data yet</text>`; return; }
+    const xmin = o.xmin ?? Math.min(...all.map(p => p[0])), xmax = o.xmax ?? Math.max(...all.map(p => p[0]));
+    const ylo = Math.floor(Math.log10(Math.min(...all.map(p => p[1])))), yhi = o.yhi ?? Math.ceil(Math.log10(Math.max(...all.map(p => p[1]))));
+    const X = x => M.l + (xs0(x) - xs0(xmin)) / ((xs0(xmax) - xs0(xmin)) || 1) * (W - M.l - M.r);
+    const Y = y => M.t + (yhi - Math.log10(y)) / ((yhi - ylo) || 1) * (H - M.t - M.b);
+    let g = "";
+    for (let k = ylo; k <= yhi; k++) g += `<line x1="${M.l}" x2="${W - M.r}" y1="${Y(10 ** k)}" y2="${Y(10 ** k)}" stroke="${css("--rule")}"/><text x="${M.l - 6}" y="${Y(10 ** k) + 4}" text-anchor="end">1e${k}</text>`;
+    (o.xt || []).forEach(x => g += `<text x="${X(x)}" y="${H - M.b + 17}" text-anchor="middle">${x}</text>`);
+    if (o.xlabel) g += `<text x="${W - M.r}" y="${H - 2}" text-anchor="end" fill="${css("--mute")}">${o.xlabel}</text>`;
+    if (o.hline) g += `<line x1="${M.l}" x2="${W - M.r}" y1="${Y(o.hline)}" y2="${Y(o.hline)}" stroke="${css("--mute")}" stroke-dasharray="4 4"/>`;
+    series.forEach(se => {
+      const pts = se.pts.filter(p => p[1] > 0);
+      if (!pts.length) return;
+      g += `<path d="${pts.map((p, i) => (i ? "L" : "M") + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1)).join("")}" fill="none" stroke="${css(se.c)}" stroke-width="${se.w || 2}" ${se.dash ? `stroke-dasharray="${se.dash}"` : ""}/>`;
+      pts.forEach(p => g += `<circle cx="${X(p[0])}" cy="${Y(p[1])}" r="${se.r || 3}" fill="${css(se.c)}"/>`);
+      if (se.label) { const p = pts[pts.length - 1]; g += `<text x="${X(p[0]) - 4}" y="${Y(p[1]) - 7}" text-anchor="end">${se.label}</text>`; }
+    });
+    s.innerHTML = g;
+  };
+  new ResizeObserver(draw).observe(s);
+}
+const famSeries = obj => Object.entries(obj).map(([k, pts]) => ({c: FAM[k] || "--c-nl", pts: pts.map(p => [p[0], p[1]]), w: k === "Bayes (matched)" ? 2.8 : 1.8}));
+chart("#f_sq", famSeries(D.sigma_q), {xt: [0.08, 0.14, 0.2, 0.26, 0.34], xlabel: "σ_q / L", yhi: 0});
+chart("#f_rhoA", famSeries(D.rho_A), {xt: [0, 0.3, 0.5, 0.7, 0.9, 0.995], xlabel: "ρ", yhi: 0});
+chart("#f_rhoB", famSeries(D.rho_B), {xt: [0, 0.3, 0.5, 0.7, 0.9, 0.995], xlabel: "ρ", yhi: 0});
+chart("#f_sm", famSeries(D.sigma_m), {xt: [0.01, 0.035, 0.05, 0.07, 0.1, 0.12], xlabel: "σ_m / L", yhi: 0});
+
+// mismatch heatmaps
+$("#mismatch").innerHTML = Object.entries(D.mismatch).filter(([k, g]) => g.cells).map(([k, g]) => {
+  const rhos = [...new Set(g.cells.map(c => c[0]))].sort((a, b) => a - b), sqs = [...new Set(g.cells.map(c => c[1]))].sort((a, b) => a - b);
+  const nlr = g.nl && g.matched ? g.nl / g.matched : null;
+  const col = r => { if (nlr && r * g.matched >= g.nl) return "color-mix(in srgb, var(--c-lb) 55%, var(--bg))"; const t = Math.min(1, Math.log10(Math.max(r, 1)) / Math.log10(Math.max(nlr || 10, 2))); return r <= 1.5 ? "color-mix(in srgb, var(--c-bb) 35%, var(--bg))" : `color-mix(in srgb, var(--c-ln) ${Math.round(15 + 45 * t)}%, var(--bg))`; };
+  let t = `<table class="hm"><tr><th>ρ′ \\ σ<sub>q</sub>′</th>${sqs.map(q => `<th>×${q}</th>`).join("")}</tr>`;
+  rhos.forEach(r => { t += `<tr><th>${r}</th>` + sqs.map(q => { const c = g.cells.find(c => c[0] === r && c[1] === q); return c ? `<td style="background:${col(c[2])}">${c[2] < 10 ? c[2].toFixed(1) : Math.round(c[2])}×</td>` : `<td class="mute">matched</td>`; }).join("") + "</tr>"; });
+  return `<div class="card"><h3>${k}</h3><div class="scroll">${t}</table></div><p class="cap">matched P<sub>L</sub>(50) ${fmt(g.matched)} · NL ${fmt(g.nl)} (${nlr ? nlr.toFixed(0) + "×" : "—"})</p></div>`;
+}).join("");
+
+// stress dots (log scale 0.5x .. 3x)
+const lx = v => (Math.log10(v) - Math.log10(0.7)) / (Math.log10(2) - Math.log10(0.7)) * 100;
+$("#stress").innerHTML = D.stress.map(r => `<div class="row"><span>${r.point.replace(/^E\d+\//, "")}</span><span class="track"><span style="left:${lx(1)}%;width:1px;height:16px;top:0;border-radius:0;background:var(--rule)"></span>${r.fixed ? `<span style="left:${Math.min(100, lx(r.fixed))}%;background:var(--c-bn)" title="fixed ${r.fixed.toFixed(2)}x"></span>` : ""}${r.imm ? `<span style="left:${Math.min(100, lx(r.imm))}%;background:var(--c-imm)" title="IMM ${r.imm.toFixed(2)}x"></span>` : ""}</span></div>`).join("") + `<div class="axis"><span>0.7×</span><span>1×</span><span>1.4×</span><span>2×</span></div>`;
+
+// E9-E12 progress
+const NS = D.nonstat;
+$("#nsprog").innerHTML = NS.error ? `<p class="pending">${NS.error}</p>` : Object.entries(NS).map(([e, v]) => `<p><b>${e}</b>: ${v.done}/${v.total} points done${v.items.filter(i => !i.pending).map(i => `<br><span class="small">${i.point}: ` + Object.entries(i.decoders).filter(([k]) => k !== "Bayes (oracle)").map(([k, x]) => `${k.replace("Bayes", "B.")} ${x.toFixed(2)}×`).join(" · ") + "</span>").join("")}</p>`).join("") + `<p class="cap">ε ÷ oracle ε per decoder for finished points.</p>`;
+
+// E14 bits per round
+function bits(sel, prefix) {
+  const rows = D.binary.filter(r => r.point.startsWith(prefix) && r.point.includes("v1.0_pf0.0"));
+  const by = name => [1, 4, 8].map(mm => { const rs = rows.filter(r => r.point.endsWith("_m" + mm) && name(r.decoder)); const e = rs.map(r => r.eps).filter(x => x > 0); return [mm, e.length ? Math.min(...e) : null]; }).filter(p => p[1]);
+  chart(sel, [
+    {c: "--c-nl", pts: by(d => d.startsWith("sBs")), label: "sBs"},
+    {c: "--c-bm", pts: by(d => d.includes("binary")), w: 2.8, label: "Bayes 1-bit"},
+    {c: "--c-or", pts: by(d => d.includes("analog")), dash: "4 3", label: "analog"},
+  ], {xt: [1, 4, 8], xlabel: "bits per round m"});
+}
+bits("#f_bits_hw9", "hardware_rho0.9"); bits("#f_bits_hw0", "hardware_rho0.0"); bits("#f_bits_nom9", "nominal_rho0.9");
+const e15 = name => Object.entries({"hw_sm0.05": 0.05, "hw_sm0.10": 0.10, "hw": 0.105, "hw_sm0.15": 0.15}).map(([p, x]) => { const r = D.continuous.find(r => r.point === p && r.decoder === name); return r && r.eps > 0 ? [x, r.eps] : null; }).filter(Boolean).sort((a, b) => a[0] - b[0]);
+chart("#f_e15", [{c: "--c-nl", pts: e15("NL"), label: "NL"}, {c: "--c-bm", pts: e15("Bayes (parity)"), w: 3}, {c: "--c-bb", pts: e15("Bayes (fine)"), dash: "4 3", label: "Bayes"}], {xt: [0.05, 0.1, 0.15], xlabel: "σ_m / L"});
+
+// cost
+const CB = D.cost.batch || {}, pal = ["--c-nl", "--c-bm", "--c-bn", "--c-bb", "--c-imm", "--c-ln", "--c-lb", "--c-or"];
+const keep = Object.keys(CB).filter(k => !/n_x=(128|192)/.test(k));
+chart("#f_batch", keep.map((k, i) => ({c: pal[i % pal.length], pts: CB[k]})), {xlog: true, xt: [1, 64, 512, 4096], xlabel: "batch size (trials)"});
+$("#batchleg").innerHTML = keep.map((k, i) => `<span><i style="background:var(${pal[i % pal.length]})"></i>${k}</span>`).join("");
+const P = (D.cost.pareto || []).filter(p => p[2] > 0);
+chart("#f_pareto", P.map((p, i) => ({c: /LSTM/.test(p[0]) ? "--c-ln" : /NL/.test(p[0]) ? "--c-nl" : "--c-bm", pts: [[p[1], p[2]]], r: 4.5, label: i % 2 ? "" : p[0].replace("Bayes (matched) ", "B ").replace("Bayes", "B")})), {xlog: true, xt: [0.1, 1, 10, 100], xlabel: "µs / trial-round"});
+}
+</script>
+</body>
+</html>

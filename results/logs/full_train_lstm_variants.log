@@ -1,0 +1,12 @@
+[18:12:33] === train lstm ===
+[18:12:35] training LSTMs (mode=full, device=cuda, budget=Budget(chunk_trials=20000, max_test_trials=100000, min_events=50, diag_trials=2000, n_train=200000, n_val=20000, batch_size=2048, max_epochs=40, patience=5, train_time_cap_s=1800.0, hidden=128, lstm_seeds=3, filter_block_bytes=2000000000.0, ns_rounds=1000, ns_chunk_trials=1000, ns_max_test_trials=5000, ns_n_train=20000, ns_n_val=2000, ns_batch_size=128))
+[18:12:36] lstm_nominal_s0: checkpoint complete (time cap did not bind), skipping
+[18:12:36] lstm_nominal_s1: checkpoint complete (time cap did not bind), skipping
+[18:12:36] lstm_nominal_s2: checkpoint complete (time cap did not bind), skipping
+[18:12:36] lstm_broad_s0: checkpoint complete (time cap did not bind), skipping
+[18:12:36] lstm_broad_s1: checkpoint up to date, skipping
+[18:12:36] lstm_broad_s2: checkpoint up to date, skipping
+[18:12:36] lstm_matched_rho0.5_s0: checkpoint up to date, skipping
+[18:12:36] lstm_matched_sq0.26_s0: checkpoint up to date, skipping
+[18:12:36] lstm_switching_s0: checkpoint up to date, skipping
+[18:32:47] lstm_drift_s0 epoch 0: train 0.2952 val 0.2791 k0=0.4472 k1=0.4472 k2=0.4472 k4=0.4472 full=0.4472

@@ -1,0 +1,29 @@
+[18:11:34] run_all: mode=quick device=cuda budget=Budget(chunk_trials=2000, max_test_trials=4000, min_events=50, diag_trials=500, n_train=8000, n_val=2000, batch_size=1024, max_epochs=3, patience=2, train_time_cap_s=60.0, hidden=64, lstm_seeds=1, filter_block_bytes=1000000000.0, ns_rounds=120, ns_chunk_trials=300, ns_max_test_trials=600, ns_n_train=1000, ns_n_val=200, ns_batch_size=64)
+[18:11:34] === E15 ===
+[18:11:35] E15/nominal: NL               P_L(final) 0.2775
+[18:11:39] E15/nominal: Bayes (parity)   P_L(final) 0.0050
+[18:11:43] E15/nominal: Bayes (fine)     P_L(final) 0.0050
+[18:11:44] E15/nominal: DQN (parity)     P_L(final) 0.2825
+[18:11:45] E15/nominal: DQN (fine)       P_L(final) 0.4450
+[18:11:45] E15/hw: NL               P_L(final) 0.1375
+[18:11:47] E15/hw: Bayes (parity)   P_L(final) 0.0075
+[18:11:48] E15/hw: Bayes (fine)     P_L(final) 0.0075
+[18:11:48] E15/hw: DQN (parity)     P_L(final) 0.1375
+[18:11:49] E15/hw: DQN (fine)       P_L(final) 0.4025
+[18:11:49] E15/hw_sm0.05: NL               P_L(final) 0.0000
+[18:11:52] E15/hw_sm0.05: Bayes (parity)   P_L(final) 0.0000
+[18:11:55] E15/hw_sm0.05: Bayes (fine)     P_L(final) 0.0000
+[18:11:56] E15/hw_sm0.05: DQN (parity)     P_L(final) 0.0000
+[18:11:57] E15/hw_sm0.05: DQN (fine)       P_L(final) 0.0650
+[18:11:57] E15/hw_sm0.10: NL               P_L(final) 0.0900
+[18:11:59] E15/hw_sm0.10: Bayes (parity)   P_L(final) 0.0025
+[18:12:03] E15/hw_sm0.10: Bayes (fine)     P_L(final) 0.0025
+[18:12:04] E15/hw_sm0.10: DQN (parity)     P_L(final) 0.0900
+[18:12:04] E15/hw_sm0.10: DQN (fine)       P_L(final) 0.3675
+[18:12:04] E15/hw_sm0.15: NL               P_L(final) 0.4550
+[18:12:07] E15/hw_sm0.15: Bayes (parity)   P_L(final) 0.1525
+[18:12:10] E15/hw_sm0.15: Bayes (fine)     P_L(final) 0.1450
+[18:12:11] E15/hw_sm0.15: DQN (parity)     P_L(final) 0.4475
+[18:12:12] E15/hw_sm0.15: DQN (fine)       P_L(final) 0.5275
+[18:12:12] === E15 done in 40s ===
+[18:12:12] run_all finished; failed experiments: none; failed decoders/points: none

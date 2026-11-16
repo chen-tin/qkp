@@ -12,6 +12,7 @@ Run from the repo root:
 """
 
 import argparse
+import sys
 import json
 import time
 import traceback
@@ -613,16 +614,37 @@ def e0():
                 "figure in results/E0_validate_sim/docs/figures)")
 
 
-def _nonstationary(name):
+def _share_state():
+    """When this file runs as __main__, experiment modules import a second copy,
+    experiments.run_all, whose DEVICE would be None and whose FAILURES list would
+    not be reported. Point that copy at this module's state."""
+    import importlib
+    mod = importlib.import_module("experiments.run_all")
+    if mod is not sys.modules[__name__]:
+        mod.DEVICE = DEVICE
+        mod.FAILURES = FAILURES
+
+
+def _external(module, fn):
     def run():
-        from experiments import run_nonstationary
-        getattr(run_nonstationary, name.lower())()
+        import importlib
+        _share_state()
+        getattr(importlib.import_module(module), fn)()
     return run
+
+
+def _nonstationary(name):
+    return _external("experiments.run_nonstationary", name.lower())
 
 
 EXPERIMENTS = dict(E0=e0, E1=e1, E5=e5, E2=e2, E3=e3, E4=e4, E6=e6, E8=e8, E7=e7,
                    E9=_nonstationary("E9"), E10=_nonstationary("E10"),
-                   E11=_nonstationary("E11"))
+                   E11=_nonstationary("E11"),
+                   E5b=_external("experiments.run_mismatch", "e5b"),
+                   E12=_external("experiments.run_hardware", "e12"),
+                   E13=_external("experiments.run_learned", "e13"),
+                   E14=_external("experiments.run_binary", "e14"),
+                   E15=_external("experiments.run_continuous", "e15"))
 
 
 def main():

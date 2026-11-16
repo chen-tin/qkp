@@ -68,12 +68,14 @@ def factories(device):
     for w in WINDOWS:
         f[f"Bayes-window {w}"] = (lambda w=w: WindowedBayesDecoder(ADAPTIVE_GRID, window=w,
                                                                    n_x=96, device=device), "gpu")
-    path = CKPT / "lstm_nominal_s0.pt"
-    if path.exists():
-        def make_lstm():
-            model, ck = load_model(path, device)
-            return LSTMDecoder(model, head=ck["chosen_head"], name="LSTM-nominal", device=device)
-        f["LSTM-nominal"] = (make_lstm, "gpu")
+    # LSTMs: the 50-round nominal model and, once trained, the long-sequence drift model
+    for stem, label in (("lstm_nominal_s0", "LSTM-nominal"), ("lstm_drift_s0", "LSTM-drift")):
+        path = CKPT / f"{stem}.pt"
+        if path.exists():
+            def make_lstm(path=path, label=label):
+                model, ck = load_model(path, device)
+                return LSTMDecoder(model, head=ck["chosen_head"], name=label, device=device)
+            f[label] = (make_lstm, "gpu")
     return f
 
 

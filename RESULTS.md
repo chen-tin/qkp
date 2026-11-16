@@ -3,6 +3,8 @@
 **Location:** developed on the branch `experiment/decoder-comparison` and merged into `main`
 (14 Nov 2026). `chris-branch` was not modified.
 
+**Running findings log:** [`docs/findings.md`](docs/findings.md): every result as it comes in, with corrections.
+
 **Start here:**
 - [`writeup/report.pdf`](writeup/report.pdf): the full LaTeX write-up (20 pages).
   The source is `writeup/report.tex`, with sections in `writeup/sections/` and the methods
@@ -26,6 +28,11 @@
 | E9 | Gradual drift (sinusoid, ramp, 1/f; stationary control) | **built and tested, not run** (see `docs/nonstationary.md`) |
 | E10 | Unexpected changes (steps, telegraph switching, bursts) | **built and tested, not run** |
 | E11 | Unseen conditions for the drift-trained LSTM | **built and tested, not run** |
+| E5b | Bayes model mismatch at ρ = 0.5, σ_q = 0.26L and hardware scale | **built, not run** (`experiments/run_mismatch.py`) |
+| E12 | Hardware-scale study (σ_q = 0.072L, σ_m 0.08–0.136L, ρ sweep, drift incl. σ_m) | **built and tested, not run** (`docs/hardware.md`) |
+| E13 | Learned decoders: LSTM size / data / curriculum, GRU and transformer, extra seeds | **built and tested, not run** (`docs/learned.md`) |
+| E14 | One-bit (binary) syndromes: sBs baseline, binary Bayes, bit-LSTM, closed loop | **run** except the bit-LSTM (training); findings in `docs/findings.md` |
+| E15 | Continuous (fine) corrections and a DQN decoder, closed loop | **run** except the DQN (training); findings in `docs/findings.md` |
 | B | Benchmarks vs real data (T1 drift, Sivak et al. 2023) and simulation variance | complete (see `docs/benchmarks.md`) |
 | — | DQN / reinforcement learning | **not done** (out of scope by your instruction) |
 | — | Experimental GKP data | **not done** (out of scope) |
@@ -92,7 +99,7 @@ tests pass (`QKP_MODE=quick .venv/bin/python -m pytest -q`).
 ## Reproduce
 
 ```bash
-cd /home/babay/programs/QC/qkp-experiment
+cd qkp-experiment   # repo root
 QKP_MODE=quick .venv/bin/python -m pytest -q
 .venv/bin/python -m training.train_lstm          # skips up-to-date checkpoints
 .venv/bin/python -m experiments.run_all          # skips cached results

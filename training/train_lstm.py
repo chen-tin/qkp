@@ -44,6 +44,10 @@ def model_list(budget, include_nonstationary=True):
     ]
     if include_nonstationary:
         items += [(f"lstm_drift_s{s}", "drift", s) for s in range(budget.lstm_seeds)]
+        from experiments.run_hardware import hw_model_list
+        items += hw_model_list(budget)
+        from training.train_variants import seed_extensions
+        items += seed_extensions()
     return items
 
 

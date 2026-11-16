@@ -93,3 +93,13 @@ def make_dataset(name, split, trials, seed=0, rounds=ROUNDS):
     result = Simulator(trials=trials, rounds=rounds).run(NearestLattice(), eps, nu)
     y = (result.lattice_jumps() % 2).astype(np.int8)
     return dict(syndromes=result.syndromes.astype(np.float32), y=y, params=params)
+
+
+# extra training distributions defined by experiment modules (imported last:
+# those modules import this one indirectly)
+def _register_extra_datasets():
+    from experiments.run_hardware import HW_DATASETS
+    DATASETS.update(HW_DATASETS)
+
+
+_register_extra_datasets()

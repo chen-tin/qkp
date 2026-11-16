@@ -1,0 +1,10 @@
+[18:01:22] run_nonstationary: mode=full device=cuda rounds=1000 code=f7cf3d2f3018
+[18:01:23] === E9 ===
+[18:01:45] E9/control: Bayes (oracle) sets N=5000 (54 final-round errors, 22.2s)
+[18:01:46] E9/control: NL                     LER50=0.50860 mean=0.46323 (0.5s, resets=0)
+[18:01:50] E9/control: Bayes (nominal)        LER50=0.01080 mean=0.00440 (4.1s, resets=0)
+[18:03:54] E9/control: Bayes-broad            LER50=0.01180 mean=0.00513 (136.6s, resets=0)
+[18:14:17] E9/control: Bayes-IMM              LER50=0.01100 mean=0.00483 (675.0s, resets=0)
+[18:19:14] E9/control: Bayes (regime-aware)   LER50=0.13540 mean=0.07380 (321.9s, resets=0)
+[18:29:45] E9/control: Bayes-window 50        LER50=0.01280 mean=0.00600 (681.9s, resets=0)
+[18:39:17] E9/control: Bayes-window 200       LER50=0.01180 mean=0.00488 (606.4s, resets=0)

@@ -34,7 +34,10 @@ from experiments.common import (
     common_horizon, eps_fit, flips_per_trial, get_budget, get_mode, log, out_dir, paired_pl,
 )
 from experiments.run_all import noise_chunk_with_schedule, point_dir, point_seed
-from experiments.run_nonstationary import POINTS, noise_spec
+from experiments.run_nonstationary import POINTS as _NS_POINTS, noise_spec
+from experiments.run_hardware import HW_POINTS
+
+POINTS = dict(_NS_POINTS, E12=HW_POINTS)     # E9-E11 and the hardware-scale E12
 from simulator.nonstationary import Schedule
 
 RES = out_dir()
@@ -46,7 +49,11 @@ COLORS = {
     "Bayes (oracle)": "C0", "NL": "0.45", "Bayes (nominal)": "C9", "Bayes-broad": "C2",
     "Bayes-IMM": "C5", "Bayes-window 50": "C6", "Bayes-window 200": "C8",
     "LSTM-nominal": "C3", "LSTM-broad": "C1", "LSTM-drift": "C4",
+    "Bayes (regime-aware)": "C7", "LSTM-hw": "C4",
 }
+for _name, _c in list(COLORS.items()):       # E12 suffixed names share colours
+    for _suffix in (" (hw grid)", " (hw anchor)"):
+        COLORS.setdefault(_name + _suffix, _c)
 
 
 def family(name):

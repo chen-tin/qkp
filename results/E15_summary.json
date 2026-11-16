@@ -1,0 +1,167 @@
+[
+ {
+  "point": "nominal",
+  "decoder": "Bayes (fine)",
+  "eps": 6.726485810404359e-06,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.00315,
+  "diff_vs_bayes_parity": 0.0,
+  "diff_se": 0.0,
+  "trials": 20000
+ },
+ {
+  "point": "nominal",
+  "decoder": "Bayes (parity)",
+  "eps": 6.726485810404359e-06,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.00315,
+  "diff_vs_bayes_parity": 0.0,
+  "diff_se": 0.0,
+  "trials": 20000
+ },
+ {
+  "point": "nominal",
+  "decoder": "NL",
+  "eps": 0.006655961340565675,
+  "eps_rounds_used": 117,
+  "horizon": 200,
+  "pl_h": 0.4653,
+  "diff_vs_bayes_parity": 0.46215,
+  "diff_se": 0.0035495068424981585,
+  "trials": 20000
+ },
+ {
+  "point": "hw",
+  "decoder": "Bayes (fine)",
+  "eps": 0.00017966883152376045,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.03525,
+  "diff_vs_bayes_parity": -0.00015,
+  "diff_se": 8.659820992663834e-05,
+  "trials": 20000
+ },
+ {
+  "point": "hw",
+  "decoder": "Bayes (parity)",
+  "eps": 0.00017970918364768051,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.0354,
+  "diff_vs_bayes_parity": 0.0,
+  "diff_se": 0.0,
+  "trials": 20000
+ },
+ {
+  "point": "hw",
+  "decoder": "NL",
+  "eps": 0.002393988254899171,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.3064,
+  "diff_vs_bayes_parity": 0.271,
+  "diff_se": 0.003386520843900316,
+  "trials": 20000
+ },
+ {
+  "point": "hw_sm0.05",
+  "decoder": "Bayes (fine)",
+  "eps": 0.0,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.0,
+  "diff_vs_bayes_parity": 0.0,
+  "diff_se": 0.0,
+  "trials": 20000
+ },
+ {
+  "point": "hw_sm0.05",
+  "decoder": "Bayes (parity)",
+  "eps": 0.0,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.0,
+  "diff_vs_bayes_parity": 0.0,
+  "diff_se": 0.0,
+  "trials": 20000
+ },
+ {
+  "point": "hw_sm0.05",
+  "decoder": "NL",
+  "eps": 4.5816309290902524e-07,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.00015,
+  "diff_vs_bayes_parity": 0.00015,
+  "diff_se": 8.659820992663834e-05,
+  "trials": 20000
+ },
+ {
+  "point": "hw_sm0.10",
+  "decoder": "Bayes (fine)",
+  "eps": 0.00010057311750760745,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.0204,
+  "diff_vs_bayes_parity": -0.0001,
+  "diff_se": 7.070891024120918e-05,
+  "trials": 20000
+ },
+ {
+  "point": "hw_sm0.10",
+  "decoder": "Bayes (parity)",
+  "eps": 0.00010023812472409466,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.0205,
+  "diff_vs_bayes_parity": 0.0,
+  "diff_se": 0.0,
+  "trials": 20000
+ },
+ {
+  "point": "hw_sm0.10",
+  "decoder": "NL",
+  "eps": 0.0016146288135341358,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.23625,
+  "diff_vs_bayes_parity": 0.21575,
+  "diff_se": 0.0030660343936989953,
+  "trials": 20000
+ },
+ {
+  "point": "hw_sm0.15",
+  "decoder": "Bayes (fine)",
+  "eps": 0.003526822776457217,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.38085,
+  "diff_vs_bayes_parity": -0.00105,
+  "diff_se": 0.0004872953394373804,
+  "trials": 20000
+ },
+ {
+  "point": "hw_sm0.15",
+  "decoder": "Bayes (parity)",
+  "eps": 0.003516165483539002,
+  "eps_rounds_used": 200,
+  "horizon": 200,
+  "pl_h": 0.3819,
+  "diff_vs_bayes_parity": 0.0,
+  "diff_se": 0.0,
+  "trials": 20000
+ },
+ {
+  "point": "hw_sm0.15",
+  "decoder": "NL",
+  "eps": 0.02203570185544579,
+  "eps_rounds_used": 36,
+  "horizon": 200,
+  "pl_h": 0.50385,
+  "diff_vs_bayes_parity": 0.12195,
+  "diff_se": 0.004943190430438785,
+  "trials": 20000
+ }
+]

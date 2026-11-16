@@ -131,6 +131,30 @@ def window(w):
                 spec=dict(grid=ADAPTIVE_GRID, window=w, impl=IMPL), make=fast if FAST else ref)
 
 
+def regime_aware():
+    """E6's two-regime filter (rho 0.3 / 0.97, switch probability 0.05) on every point:
+    the right model for telegraph rho, a structured wrong model elsewhere."""
+    from decoders.fast import FastGridDecoder
+    sw = run_all.SWITCHING
+    models = [dict(sigma_q=sw["sigma_q"], rho=r, sigma_m=sw["sigma_m"])
+              for r in (sw["rho_lo"], sw["rho_hi"])]
+    ref = lambda: BayesGridDecoderRA()
+    fast = lambda: FastGridDecoder(models, n_x=96, device=run_all.DEVICE, joint=True,
+                                   hazard=sw["p_switch"], reference=ref,
+                                   name="Bayes (regime-aware)")
+    return dict(name="Bayes (regime-aware)", kind="bayes",
+                spec=dict(models=models, hazard=sw["p_switch"], impl=IMPL),
+                make=fast if FAST else ref)
+
+
+def BayesGridDecoderRA():
+    from decoders.bayesian.grid_filter import BayesGridDecoder
+    sw = run_all.SWITCHING
+    return BayesGridDecoder(sw["sigma_q"], sw["sigma_m"], sw["rho_lo"], name="Bayes (regime-aware)",
+                            rho_hi=sw["rho_hi"], p_switch=sw["p_switch"], n_x=96,
+                            device=run_all.DEVICE)
+
+
 def lstm_fast_family(prefix, label, seeds):
     """run_all.lstm_family with the whole-sequence LSTM driver when FAST."""
     out = []
@@ -160,6 +184,7 @@ def decoder_set(budget):
               dict(components=run_all.BROAD_COMPONENTS),
               lambda: MultiModelBayesDecoder(run_all.BROAD_COMPONENTS, n_x=96, device=dev())),
         imm(),
+        regime_aware(),
         *[window(w) for w in WINDOWS],
         *lstm_fast_family("lstm_nominal", "LSTM-nominal", budget.lstm_seeds),
         *lstm_fast_family("lstm_broad", "LSTM-broad", budget.lstm_seeds),

@@ -1,0 +1,151 @@
+[18:01:23] === train lstm ===
+[18:01:22] training LSTMs (mode=quick, device=cuda, budget=Budget(chunk_trials=2000, max_test_trials=4000, min_events=50, diag_trials=500, n_train=8000, n_val=2000, batch_size=1024, max_epochs=3, patience=2, train_time_cap_s=60.0, hidden=64, lstm_seeds=1, filter_block_bytes=1000000000.0, ns_rounds=120, ns_chunk_trials=300, ns_max_test_trials=600, ns_n_train=1000, ns_n_val=200, ns_batch_size=64))
+[18:01:23] lstm_nominal_s0: checkpoint up to date, skipping
+[18:01:23] lstm_broad_s0: checkpoint up to date, skipping
+[18:01:23] lstm_matched_rho0.5_s0: checkpoint up to date, skipping
+[18:01:23] lstm_matched_sq0.26_s0: checkpoint up to date, skipping
+[18:01:23] lstm_switching_s0: checkpoint up to date, skipping
+[18:01:25] lstm_drift_s0 epoch 0: train 0.5512 val 0.3324 k0=0.2894 k1=0.2894 k2=0.2894 k4=0.2894 full=0.2916
+[18:01:25] lstm_drift_s0 epoch 1: train 0.2891 val 0.2792 k0=0.2894 k1=0.2894 k2=0.2894 k4=0.2894 full=0.2957
+[18:01:25] lstm_drift_s0 epoch 2: train 0.2721 val 0.2774 k0=0.2894 k1=0.2894 k2=0.2894 k4=0.2894 full=0.2975
+[18:01:25] lstm_drift_s0: stop=max_epochs, chosen head=k0, val mean LER 0.28938, 1s
+[18:01:26] lstm_hw_s0 epoch 0: train 0.5291 val 0.2605 k0=0.1962 k1=0.1962 k2=0.1962 k4=0.1962 full=0.1962
+[18:01:26] lstm_hw_s0 epoch 1: train 0.2105 val 0.1899 k0=0.1962 k1=0.1962 k2=0.1962 k4=0.1962 full=0.1962
+[18:01:26] lstm_hw_s0 epoch 2: train 0.1836 val 0.1857 k0=0.1962 k1=0.1962 k2=0.1962 k4=0.1962 full=0.1962
+[18:01:26] lstm_hw_s0: stop=max_epochs, chosen head=k0, val mean LER 0.19617, 1s
+[18:01:27] lstm_matched_rho0.5_s1 epoch 0: train 0.6513 val 0.5805 k0=0.2464 k1=0.2464 k2=0.4223 k4=0.2464 full=0.2464
+[18:01:27] lstm_matched_rho0.5_s1 epoch 1: train 0.4705 val 0.3640 k0=0.2464 k1=0.2464 k2=0.2464 k4=0.2464 full=0.2464
+[18:01:27] lstm_matched_rho0.5_s1 epoch 2: train 0.3440 val 0.3366 k0=0.2464 k1=0.2464 k2=0.2464 k4=0.2464 full=0.2464
+[18:01:27] lstm_matched_rho0.5_s1: stop=max_epochs, chosen head=k0, val mean LER 0.24638, 1s
+[18:01:28] lstm_matched_rho0.5_s2 epoch 0: train 0.6293 val 0.5455 k0=0.2563 k1=0.2563 k2=0.2563 k4=0.3604 full=0.2563
+[18:01:28] lstm_matched_rho0.5_s2 epoch 1: train 0.4442 val 0.3600 k0=0.2563 k1=0.2563 k2=0.2563 k4=0.2563 full=0.2563
+[18:01:28] lstm_matched_rho0.5_s2 epoch 2: train 0.3475 val 0.3408 k0=0.2563 k1=0.2563 k2=0.2563 k4=0.2563 full=0.2563
+[18:01:29] lstm_matched_rho0.5_s2: stop=max_epochs, chosen head=k0, val mean LER 0.25634, 1s
+[18:01:29] lstm_matched_sq0.26_s1 epoch 0: train 0.6553 val 0.5923 k0=0.2764 k1=0.2764 k2=0.4313 k4=0.2764 full=0.2764
+[18:01:29] lstm_matched_sq0.26_s1 epoch 1: train 0.4991 val 0.4104 k0=0.2764 k1=0.2764 k2=0.2764 k4=0.2764 full=0.2764
+[18:01:30] lstm_matched_sq0.26_s1 epoch 2: train 0.3972 val 0.3915 k0=0.2764 k1=0.2764 k2=0.2764 k4=0.2764 full=0.2764
+[18:01:30] lstm_matched_sq0.26_s1: stop=max_epochs, chosen head=k0, val mean LER 0.27639, 1s
+[18:01:30] lstm_matched_sq0.26_s2 epoch 0: train 0.6363 val 0.5616 k0=0.2685 k1=0.2685 k2=0.2685 k4=0.3665 full=0.2685
+[18:01:30] lstm_matched_sq0.26_s2 epoch 1: train 0.4780 val 0.4080 k0=0.2685 k1=0.2685 k2=0.2685 k4=0.2685 full=0.2685
+[18:01:31] lstm_matched_sq0.26_s2 epoch 2: train 0.4048 val 0.3950 k0=0.2685 k1=0.2685 k2=0.2685 k4=0.2685 full=0.2685
+[18:01:31] lstm_matched_sq0.26_s2: stop=max_epochs, chosen head=k0, val mean LER 0.26846, 1s
+[18:01:31] lstm_switching_s1 epoch 0: train 0.6507 val 0.5790 k0=0.1919 k1=0.1919 k2=0.4036 k4=0.1919 full=0.1919
+[18:01:31] lstm_switching_s1 epoch 1: train 0.4661 val 0.3524 k0=0.1919 k1=0.1919 k2=0.1919 k4=0.1919 full=0.1919
+[18:01:32] lstm_switching_s1 epoch 2: train 0.3284 val 0.3203 k0=0.1919 k1=0.1919 k2=0.1919 k4=0.1919 full=0.1919
+[18:01:32] lstm_switching_s1: stop=max_epochs, chosen head=k0, val mean LER 0.19193, 1s
+[18:01:32] lstm_switching_s2 epoch 0: train 0.6265 val 0.5400 k0=0.2057 k1=0.2057 k2=0.2057 k4=0.3285 full=0.2057
+[18:01:32] lstm_switching_s2 epoch 1: train 0.4283 val 0.3423 k0=0.2057 k1=0.2057 k2=0.2057 k4=0.2057 full=0.2057
+[18:01:33] lstm_switching_s2 epoch 2: train 0.3223 val 0.3221 k0=0.2057 k1=0.2057 k2=0.2057 k4=0.2057 full=0.2057
+[18:01:33] lstm_switching_s2: stop=max_epochs, chosen head=k0, val mean LER 0.20570, 1s
+[18:01:33] === train lstm done in 13s ===
+[18:01:33] === train variants ===
+[18:01:34] var_lstm_h32_n200k_none_s0 epoch 0: val 0.6794 elevated 0.00
+[18:01:34] var_lstm_h32_n200k_none_s0 epoch 1: val 0.6736 elevated 0.00
+[18:01:34] var_lstm_h32_n200k_none_s0 epoch 2: val 0.6717 elevated 0.00
+[18:01:34] var_lstm_h32_n200k_none_s0: stop=max_epochs head=k2 val mean LER 0.13422 (0s, 13349 params)
+[18:01:34] var_lstm_h64_n200k_none_s0 epoch 0: val 0.6925 elevated 0.00
+[18:01:34] var_lstm_h64_n200k_none_s0 epoch 1: val 0.6845 elevated 0.00
+[18:01:34] var_lstm_h64_n200k_none_s0 epoch 2: val 0.6818 elevated 0.00
+[18:01:34] var_lstm_h64_n200k_none_s0: stop=max_epochs head=k0 val mean LER 0.13422 (0s, 51269 params)
+[18:01:35] var_lstm_h128_n200k_none_s0 epoch 0: val 0.6613 elevated 0.00
+[18:01:35] var_lstm_h128_n200k_none_s0 epoch 1: val 0.6463 elevated 0.00
+[18:01:35] var_lstm_h128_n200k_none_s0 epoch 2: val 0.6407 elevated 0.00
+[18:01:35] var_lstm_h128_n200k_none_s0: stop=max_epochs head=k0 val mean LER 0.13422 (0s, 200837 params)
+[18:01:35] var_lstm_h256_n200k_none_s0 epoch 0: val 0.6605 elevated 0.00
+[18:01:35] var_lstm_h256_n200k_none_s0 epoch 1: val 0.6274 elevated 0.00
+[18:01:35] var_lstm_h256_n200k_none_s0 epoch 2: val 0.6114 elevated 0.00
+[18:01:35] var_lstm_h256_n200k_none_s0: stop=max_epochs head=k0 val mean LER 0.13422 (0s, 794885 params)
+[18:01:35] var_lstm_h128_n25k_none_s0 epoch 0: val 0.6613 elevated 0.00
+[18:01:35] var_lstm_h128_n25k_none_s0 epoch 1: val 0.6463 elevated 0.00
+[18:01:35] var_lstm_h128_n25k_none_s0 epoch 2: val 0.6407 elevated 0.00
+[18:01:35] var_lstm_h128_n25k_none_s0: stop=max_epochs head=k0 val mean LER 0.13422 (0s, 200837 params)
+[18:01:35] var_lstm_h128_n50k_none_s0 epoch 0: val 0.6613 elevated 0.00
+[18:01:35] var_lstm_h128_n50k_none_s0 epoch 1: val 0.6463 elevated 0.00
+[18:01:35] var_lstm_h128_n50k_none_s0 epoch 2: val 0.6407 elevated 0.00
+[18:01:35] var_lstm_h128_n50k_none_s0: stop=max_epochs head=k0 val mean LER 0.13422 (0s, 200837 params)
+[18:01:35] var_lstm_h128_n100k_none_s0 epoch 0: val 0.6613 elevated 0.00
+[18:01:36] var_lstm_h128_n100k_none_s0 epoch 1: val 0.6463 elevated 0.00
+[18:01:36] var_lstm_h128_n100k_none_s0 epoch 2: val 0.6407 elevated 0.00
+[18:01:36] var_lstm_h128_n100k_none_s0: stop=max_epochs head=k0 val mean LER 0.13422 (0s, 200837 params)
+[18:01:36] var_lstm_h128_n400k_none_s0 epoch 0: val 0.6423 elevated 0.00
+[18:01:36] var_lstm_h128_n400k_none_s0 epoch 1: val 0.6081 elevated 0.00
+[18:01:36] var_lstm_h128_n400k_none_s0 epoch 2: val 0.5958 elevated 0.00
+[18:01:36] var_lstm_h128_n400k_none_s0: stop=max_epochs head=k0 val mean LER 0.13422 (0s, 200837 params)
+[18:01:36] var_lstm_h128_n200k_rare_s0 epoch 0: val 0.6616 elevated 0.50
+[18:01:36] var_lstm_h128_n200k_rare_s0 epoch 1: val 0.6468 elevated 0.00
+[18:01:36] var_lstm_h128_n200k_rare_s0 epoch 2: val 0.6414 elevated 0.00
+[18:01:36] var_lstm_h128_n200k_rare_s0: stop=max_epochs head=k0 val mean LER 0.13422 (0s, 200837 params)
+[18:01:36] var_lstm_h128_n200k_rare_s1 epoch 0: val 0.6828 elevated 0.50
+[18:01:36] var_lstm_h128_n200k_rare_s1 epoch 1: val 0.6699 elevated 0.00
+[18:01:36] var_lstm_h128_n200k_rare_s1 epoch 2: val 0.6652 elevated 0.00
+[18:01:36] var_lstm_h128_n200k_rare_s1: stop=max_epochs head=k2 val mean LER 0.14469 (0s, 200837 params)
+[18:01:37] var_lstm_h128_n200k_rare_s2 epoch 0: val 0.6647 elevated 0.50
+[18:01:37] var_lstm_h128_n200k_rare_s2 epoch 1: val 0.6526 elevated 0.00
+[18:01:37] var_lstm_h128_n200k_rare_s2 epoch 2: val 0.6482 elevated 0.00
+[18:01:37] var_lstm_h128_n200k_rare_s2: stop=max_epochs head=k0 val mean LER 0.15079 (0s, 200837 params)
+[18:01:37] var_lstm_h128_n200k_none_s1 epoch 0: val 0.6828 elevated 0.00
+[18:01:37] var_lstm_h128_n200k_none_s1 epoch 1: val 0.6698 elevated 0.00
+[18:01:37] var_lstm_h128_n200k_none_s1 epoch 2: val 0.6651 elevated 0.00
+[18:01:37] var_lstm_h128_n200k_none_s1: stop=max_epochs head=k2 val mean LER 0.14469 (0s, 200837 params)
+[18:01:37] var_lstm_h128_n200k_none_s2 epoch 0: val 0.6642 elevated 0.00
+[18:01:37] var_lstm_h128_n200k_none_s2 epoch 1: val 0.6516 elevated 0.00
+[18:01:37] var_lstm_h128_n200k_none_s2 epoch 2: val 0.6469 elevated 0.00
+[18:01:37] var_lstm_h128_n200k_none_s2: stop=max_epochs head=k0 val mean LER 0.15079 (0s, 200837 params)
+[18:01:37] var_gru_h148_n200k_none_s0 epoch 0: val 0.6577 elevated 0.00
+[18:01:37] var_gru_h148_n200k_none_s0 epoch 1: val 0.6225 elevated 0.00
+[18:01:37] var_gru_h148_n200k_none_s0 epoch 2: val 0.6091 elevated 0.00
+[18:01:37] var_gru_h148_n200k_none_s0: stop=max_epochs head=k0 val mean LER 0.13422 (0s, 200989 params)
+[18:01:38] var_gru_h148_n200k_none_s1 epoch 0: val 0.6341 elevated 0.00
+[18:01:38] var_gru_h148_n200k_none_s1 epoch 1: val 0.5994 elevated 0.00
+[18:01:38] var_gru_h148_n200k_none_s1 epoch 2: val 0.5861 elevated 0.00
+[18:01:38] var_gru_h148_n200k_none_s1: stop=max_epochs head=k0 val mean LER 0.14469 (0s, 200989 params)
+[18:01:38] var_gru_h148_n200k_none_s2 epoch 0: val 0.6574 elevated 0.00
+[18:01:38] var_gru_h148_n200k_none_s2 epoch 1: val 0.6240 elevated 0.00
+[18:01:38] var_gru_h148_n200k_none_s2 epoch 2: val 0.6114 elevated 0.00
+[18:01:38] var_gru_h148_n200k_none_s2: stop=max_epochs head=k0 val mean LER 0.15079 (0s, 200989 params)
+[18:01:38] var_transformer_h92_n200k_none_s0 epoch 0: val 0.3529 elevated 0.00
+[18:01:38] var_transformer_h92_n200k_none_s0 epoch 1: val 0.2538 elevated 0.00
+[18:01:38] var_transformer_h92_n200k_none_s0 epoch 2: val 0.2373 elevated 0.00
+[18:01:38] var_transformer_h92_n200k_none_s0: stop=max_epochs head=k0 val mean LER 0.13422 (0s, 206545 params)
+[18:01:38] var_transformer_h92_n200k_none_s1 epoch 0: val 0.3046 elevated 0.00
+[18:01:38] var_transformer_h92_n200k_none_s1 epoch 1: val 0.2361 elevated 0.00
+[18:01:38] var_transformer_h92_n200k_none_s1 epoch 2: val 0.2250 elevated 0.00
+[18:01:39] var_transformer_h92_n200k_none_s1: stop=max_epochs head=k0 val mean LER 0.14469 (0s, 206545 params)
+[18:01:39] var_transformer_h92_n200k_none_s2 epoch 0: val 0.2846 elevated 0.00
+[18:01:39] var_transformer_h92_n200k_none_s2 epoch 1: val 0.2291 elevated 0.00
+[18:01:39] var_transformer_h92_n200k_none_s2 epoch 2: val 0.2205 elevated 0.00
+[18:01:39] var_transformer_h92_n200k_none_s2: stop=max_epochs head=k0 val mean LER 0.15079 (0s, 206545 params)
+[18:01:39] === train variants done in 6s ===
+[18:01:39] === train binary ===
+[18:01:39] binary LSTMs (mode=quick, device=cuda)
+[18:01:39] binary_lstm_nominal_m1_s0 epoch 0: val 7.7112
+[18:01:39] binary_lstm_nominal_m1_s0 epoch 1: val 7.6934
+[18:01:39] binary_lstm_nominal_m1_s0 epoch 2: val 7.6689
+[18:01:40] binary_lstm_nominal_m4_s0 epoch 0: val 7.6935
+[18:01:40] binary_lstm_nominal_m4_s0 epoch 1: val 7.6436
+[18:01:40] binary_lstm_nominal_m4_s0 epoch 2: val 7.5531
+[18:01:40] binary_lstm_nominal_m8_s0 epoch 0: val 7.6817
+[18:01:40] binary_lstm_nominal_m8_s0 epoch 1: val 7.6006
+[18:01:40] binary_lstm_nominal_m8_s0 epoch 2: val 7.4557
+[18:01:40] binary_lstm_hardware_m1_s0 epoch 0: val 7.4565
+[18:01:40] binary_lstm_hardware_m1_s0 epoch 1: val 7.2054
+[18:01:41] binary_lstm_hardware_m1_s0 epoch 2: val 7.1615
+[18:01:41] binary_lstm_hardware_m4_s0 epoch 0: val 7.1694
+[18:01:41] binary_lstm_hardware_m4_s0 epoch 1: val 6.8073
+[18:01:41] binary_lstm_hardware_m4_s0 epoch 2: val 6.7286
+[18:01:41] binary_lstm_hardware_m8_s0 epoch 0: val 7.2004
+[18:01:41] binary_lstm_hardware_m8_s0 epoch 1: val 6.4946
+[18:01:41] binary_lstm_hardware_m8_s0 epoch 2: val 6.3743
+[18:01:41] === train binary done in 3s ===
+[18:01:41] === train dqn ===
+[18:01:43] dqn nominal/parity: trained in 2s
+[18:01:45] dqn nominal/fine: trained in 2s
+[18:01:49] dqn hw/parity: trained in 4s
+[18:01:54] dqn hw/fine: trained in 5s
+[18:02:05] dqn hw_sm0.05/parity: trained in 12s
+[18:02:23] dqn hw_sm0.05/fine: trained in 18s
+[18:02:45] dqn hw_sm0.10/parity: trained in 22s
+[18:03:03] dqn hw_sm0.10/fine: trained in 18s
+[18:03:23] dqn hw_sm0.15/parity: trained in 20s
+[18:03:44] dqn hw_sm0.15/fine: trained in 21s
+[18:03:44] === train dqn done in 133s ===
