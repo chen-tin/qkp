@@ -1,0 +1,36 @@
+{
+  "id": "gnn",
+  "title": "Data-driven decoding of quantum error correcting codes using graph neural networks",
+  "year": 2025,
+  "methods": [
+    "GNN"
+  ],
+  "scope": "transferable; surface and repetition codes",
+  "source_url": "https://doi.org/10.1103/PhysRevResearch.7.023181",
+  "blockers": [
+    "Full checkpoint evaluation adapter needs PyTorch Geometric extensions and exact graph preprocessing.",
+    "Reference values here are approximate readings of plotted markers; digitize the vector figure or obtain raw author data for tighter matching.",
+    "Do not use generic Stim uniform noise in place of Appendix B."
+  ],
+  "sources": [
+    {
+      "name": "publication",
+      "url": "https://doi.org/10.1103/PhysRevResearch.7.023181",
+      "download": false
+    },
+    {
+      "name": "paper.pdf",
+      "url": "https://arxiv.org/pdf/2307.01241v2",
+      "download": true,
+      "sha256": "ca711d6ff3be83c5b95fe84932d62c022743da3065b8d3b564560e31d01b4893"
+    }
+  ],
+  "upstream": {
+    "url": "https://github.com/LangeMoritz/GNN_decoder.git",
+    "commit": "15d8443bedf7862ef72ec1b5239ecd01163eb8d6",
+    "pin_date": "2026-11-18",
+    "publication_release": false
+  },
+  "supported_modes": [],
+  "evidence_status": "published_metrics_verified; no new paper-metric reproduction claimed"
+}

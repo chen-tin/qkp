@@ -1,0 +1,10 @@
+# Isolated reproduction environment; upstream pins take precedence.
+# Unpinned entries are setup hints, not a claimed tested lock.
+torch==2.4.1
+torch-geometric==2.5.3
+torch-scatter==2.1.2
+torch-sparse==0.6.18
+torch-cluster==1.6.3
+stim==1.15.0
+numpy==2.3.4
+PyYAML==6.0.3

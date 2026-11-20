@@ -1,0 +1,16 @@
+{
+  "registered_utc": "2026-11-18T20:08:41+00:00",
+  "config": {
+    "profile": "smoke",
+    "delta": 0.2182,
+    "sigma2": 0.0005,
+    "tracking_n": 100000,
+    "variance_n": 1000,
+    "rounds": 10,
+    "tracking_seed": 191200829,
+    "variance_seed": 191200830,
+    "source_sha256": "bc5fac0399daed456fb75613d4f82cc62e62bd285785f03583007992808772be",
+    "protocol_sha256": "0efbe83c62241fe514693a958e6e1e65691e4d90e35fd5bf6f07305c359d4e96",
+    "paper_sha256": "0e6d8de6b738ca7a1cfcfb80f410984105a09036a1d932f84eb9945250f0d3ff"
+  }
+}

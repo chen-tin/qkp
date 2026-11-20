@@ -1,0 +1,19 @@
+{
+  "classification": "infrastructure_validation",
+  "targeted_tests": {
+    "passed": 50,
+    "wall_seconds": 8.13,
+    "completed": true
+  },
+  "extended_legacy_regression": {
+    "passed_before_interruption": 58,
+    "wall_seconds": 439.15,
+    "completed": false
+  },
+  "production_benchmarks_executed": false,
+  "plans": "benchmark_plans_v2",
+  "all_six_plans_current_sources_verified": true,
+  "independent_software_control_pass": true,
+  "tiny_trajectory_smokes_numerically_valid": false,
+  "documentation_links_verified": true
+}

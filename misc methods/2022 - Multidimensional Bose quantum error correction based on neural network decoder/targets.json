@@ -1,0 +1,26 @@
+[
+  {
+    "id": "perfect_measurement_threshold",
+    "kind": "noise_threshold",
+    "value": 0.78,
+    "unit": "paper_sigma",
+    "conditions": {
+      "code": "surface_GKP",
+      "GKP_measurements": "perfect"
+    },
+    "locator": "Abstract; threshold figures",
+    "source_url": "https://www.nature.com/articles/s41534-022-00650-z"
+  },
+  {
+    "id": "noisy_measurement_threshold",
+    "kind": "noise_threshold",
+    "value": 0.34,
+    "unit": "paper_sigma",
+    "conditions": {
+      "code": "surface_GKP",
+      "GKP_measurements": "noisy"
+    },
+    "locator": "Abstract; threshold figures",
+    "source_url": "https://www.nature.com/articles/s41534-022-00650-z"
+  }
+]

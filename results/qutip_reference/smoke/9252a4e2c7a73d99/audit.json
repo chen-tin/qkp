@@ -1,0 +1,20 @@
+{
+  "raw_hashes_verified": true,
+  "population_gates": {
+    "nominal/nearest/N96": {
+      "valid_population_horizon": 0,
+      "mean_edge": [
+        3.536284264788487e-08,
+        0.04371622524319852
+      ],
+      "max_edge": [
+        3.819655530772914e-08,
+        0.21171019805268199
+      ],
+      "norm_error": 2.2648549702353193e-14
+    }
+  },
+  "cutoff_comparisons": {},
+  "analysis_source_sha256": "ce3c402c63079a1529518ad1892c32720232a44462cbcb3a312f6a1eb2f3f5e4",
+  "note": "Population gates are necessary; separate cutoff, ancilla-dx and logical-bin refinement comparisons are also required."
+}

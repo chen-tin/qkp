@@ -1,0 +1,39 @@
+{
+  "id": "feedback",
+  "title": "Non-Markovian Feedback for Optimized Quantum Error Correction",
+  "year": 2025,
+  "methods": [
+    "recurrent feedback control",
+    "feedback-GRAPE"
+  ],
+  "scope": "direct GKP control; not a post-processing decoder",
+  "source_url": "https://doi.org/10.1103/PhysRevLett.134.020601",
+  "blockers": [
+    "Default author runner is a short example, not the full Figure 3 recipe.",
+    "All noise regimes, trained checkpoints, six-state evaluation and lifetime fitting need configuration before a Figure 3 claim.",
+    "TensorFlow and old Keras APIs need an isolated compatible environment."
+  ],
+  "supported_modes": [
+    "train"
+  ],
+  "sources": [
+    {
+      "name": "publication",
+      "url": "https://doi.org/10.1103/PhysRevLett.134.020601",
+      "download": false
+    },
+    {
+      "name": "paper.pdf",
+      "url": "https://arxiv.org/pdf/2312.07391v2",
+      "download": true,
+      "sha256": "f4062ad2a87b71559b77d3486b481a149a352e2b7bbff9cdba21945e77b323e0"
+    }
+  ],
+  "upstream": {
+    "url": "https://github.com/Matteo-Puviani/GQF.git",
+    "commit": "c9ab1ef2b3ff6fa6d6d24cd95fbd06e2872e016d",
+    "pin_date": "2026-11-18",
+    "publication_release": false
+  },
+  "evidence_status": "published_metrics_verified; no new paper-metric reproduction claimed"
+}

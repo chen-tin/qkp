@@ -1,0 +1,305 @@
+{
+  "scope": "Saved-data numerical root cause review; no new physical simulation",
+  "nominal_config": {
+    "seed": 26111901,
+    "data_delta": 0.3,
+    "per_state": 512,
+    "rounds": 8,
+    "dx": 0.003,
+    "logical_bins": 192,
+    "points": {
+      "nominal": [
+        0.2,
+        0.05,
+        0.9
+      ]
+    },
+    "decoders": [
+      "nearest"
+    ]
+  },
+  "population_valid_through_cycle": {
+    "3072": 5,
+    "4096": 8,
+    "5120": 8
+  },
+  "cutoff_comparisons": {
+    "4096_minus_3072": {
+      "mean": [
+        0.0,
+        0.002944025022758485,
+        0.0022706469727180665,
+        0.0017052659156561846,
+        0.0019299309592435828,
+        0.002318621854530788,
+        0.003487185757767353,
+        0.0050552046854948785,
+        0.0054177564735829785
+      ],
+      "se": [
+        0.0,
+        0.0011483248908136343,
+        0.0013158812567600608,
+        0.0016554231699755129,
+        0.0018638427143333233,
+        0.0021488714573015865,
+        0.0023218333218219867,
+        0.0025134122277751187,
+        0.0027329383450773246
+      ],
+      "ci95_low": [
+        0.0,
+        0.0006933495942129339,
+        -0.00030843289846288523,
+        -0.0015393038766688596,
+        -0.0017231336336970067,
+        -0.0018930888091863059,
+        -0.0010635239311086128,
+        0.00012900724075319905,
+        6.129574526307115e-05
+      ],
+      "ci95_high": [
+        0.0,
+        0.005194700451304036,
+        0.004849726843899019,
+        0.004949835707981229,
+        0.005582995552184172,
+        0.006530332518247882,
+        0.00803789544664332,
+        0.009981402130236558,
+        0.010774217201902886
+      ],
+      "within_tolerance": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    },
+    "5120_minus_4096": {
+      "mean": [
+        -1.295260195396016e-16,
+        -0.0016294833672535283,
+        -1.4100983874892707e-05,
+        -0.0019657144329708956,
+        -0.0010093155743430132,
+        -6.454012399317634e-05,
+        -0.00033996460845245384,
+        -0.0016563818943688806,
+        -0.0012813661448826698
+      ],
+      "se": [
+        0.0,
+        0.0009667801853631537,
+        0.001367466335773795,
+        0.0017065394703356098,
+        0.001907164262601705,
+        0.0021380654648000008,
+        0.0022483431878814225,
+        0.0024703049225884006,
+        0.0026460539122839122
+      ],
+      "ci95_low": [
+        -1.295260195396016e-16,
+        -0.003524337711532215,
+        -0.0026942857520624135,
+        -0.005310470333024659,
+        -0.004747288841644142,
+        -0.004255071431589953,
+        -0.004746636281585893,
+        -0.006498090573474019,
+        -0.006467536514110302
+      ],
+      "ci95_high": [
+        -1.295260195396016e-16,
+        0.0002653709770251583,
+        0.0026660837843126284,
+        0.0013790414670828677,
+        0.002728657692958115,
+        0.004125991183603601,
+        0.004066707064680985,
+        0.0031853267847362582,
+        0.0039048042243449623
+      ],
+      "within_tolerance": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "selected_trajectory_rule": "Descending maximum boundary mass over all cycles at N3072, stable argsort reversed",
+  "selected_trajectory_indices": [
+    1659,
+    1973,
+    2776
+  ],
+  "measurement_step_diagnostic": [
+    {
+      "dx": 0.003,
+      "sum_squared_jumps": 0.09548612700178366,
+      "smooth_grid_derivative_p2": 31.821871453187086
+    },
+    {
+      "dx": 0.0015,
+      "sum_squared_jumps": 0.047745628040289735,
+      "smooth_grid_derivative_p2": 31.828709000594557
+    }
+  ],
+  "bin_refinement_two_cycles": [
+    {
+      "point": "nominal",
+      "decoder": "nearest",
+      "cutoff": 3072,
+      "cycles": 2,
+      "trajectories": 1536,
+      "coarse_dx": 0.003,
+      "fine_dx": 0.0015,
+      "coarse_final_mean_boundary_mass": 2.0717242510582204e-06,
+      "fine_final_mean_boundary_mass": 2.0439508301969509e-07,
+      "fine_minus_coarse_final_fidelity": -0.0012010779985675523,
+      "paired_ci95_low": -0.003656576032105425,
+      "paired_ci95_high": 0.0012544200349703207,
+      "all_cycle_CIs_inside_plus_minus_0_005": true
+    },
+    {
+      "point": "nominal",
+      "decoder": "bayes_gaussian",
+      "cutoff": 3072,
+      "cycles": 2,
+      "trajectories": 1536,
+      "coarse_dx": 0.003,
+      "fine_dx": 0.0015,
+      "coarse_final_mean_boundary_mass": 2.072553014462687e-06,
+      "fine_final_mean_boundary_mass": 2.0455518209999716e-07,
+      "fine_minus_coarse_final_fidelity": -0.001503726459180019,
+      "paired_ci95_low": -0.0032955220530150597,
+      "paired_ci95_high": 0.0002880691346550217,
+      "all_cycle_CIs_inside_plus_minus_0_005": true
+    },
+    {
+      "point": "nominal",
+      "decoder": "lstm_256x3_s0",
+      "cutoff": 3072,
+      "cycles": 2,
+      "trajectories": 1536,
+      "coarse_dx": 0.003,
+      "fine_dx": 0.0015,
+      "coarse_final_mean_boundary_mass": 2.0724471305129525e-06,
+      "fine_final_mean_boundary_mass": 2.04520786830535e-07,
+      "fine_minus_coarse_final_fidelity": -0.0015175774367863024,
+      "paired_ci95_low": -0.003332758181238649,
+      "paired_ci95_high": 0.00029760330766604435,
+      "all_cycle_CIs_inside_plus_minus_0_005": true
+    },
+    {
+      "point": "white",
+      "decoder": "nearest",
+      "cutoff": 3072,
+      "cycles": 2,
+      "trajectories": 1536,
+      "coarse_dx": 0.003,
+      "fine_dx": 0.0015,
+      "coarse_final_mean_boundary_mass": 2.1078052902728915e-06,
+      "fine_final_mean_boundary_mass": 2.0496451202270137e-07,
+      "fine_minus_coarse_final_fidelity": -0.0010819558192323832,
+      "paired_ci95_low": -0.0028995124641919877,
+      "paired_ci95_high": 0.0007356008257272213,
+      "all_cycle_CIs_inside_plus_minus_0_005": true
+    },
+    {
+      "point": "white",
+      "decoder": "bayes_gaussian",
+      "cutoff": 3072,
+      "cycles": 2,
+      "trajectories": 1536,
+      "coarse_dx": 0.003,
+      "fine_dx": 0.0015,
+      "coarse_final_mean_boundary_mass": 2.108124230084322e-06,
+      "fine_final_mean_boundary_mass": 2.0495825455564813e-07,
+      "fine_minus_coarse_final_fidelity": 0.000860848564891532,
+      "paired_ci95_low": -0.0013635922227523307,
+      "paired_ci95_high": 0.0030852893525353947,
+      "all_cycle_CIs_inside_plus_minus_0_005": true
+    },
+    {
+      "point": "white",
+      "decoder": "lstm_256x3_s0",
+      "cutoff": 3072,
+      "cycles": 2,
+      "trajectories": 1536,
+      "coarse_dx": 0.003,
+      "fine_dx": 0.0015,
+      "coarse_final_mean_boundary_mass": 2.106554124202418e-06,
+      "fine_final_mean_boundary_mass": 2.047233463598861e-07,
+      "fine_minus_coarse_final_fidelity": 0.00011437188519531672,
+      "paired_ci95_low": -0.0029345112377195553,
+      "paired_ci95_high": 0.0031632550081101885,
+      "all_cycle_CIs_inside_plus_minus_0_005": true
+    },
+    {
+      "point": "readout_high",
+      "decoder": "nearest",
+      "cutoff": 3072,
+      "cycles": 2,
+      "trajectories": 1536,
+      "coarse_dx": 0.003,
+      "fine_dx": 0.0015,
+      "coarse_final_mean_boundary_mass": 4.216787017964736e-08,
+      "fine_final_mean_boundary_mass": 2.203971583589946e-08,
+      "fine_minus_coarse_final_fidelity": -6.025709430813644e-05,
+      "paired_ci95_low": -0.0018442859543740902,
+      "paired_ci95_high": 0.0017237717657578174,
+      "all_cycle_CIs_inside_plus_minus_0_005": true
+    },
+    {
+      "point": "readout_high",
+      "decoder": "bayes_gaussian",
+      "cutoff": 3072,
+      "cycles": 2,
+      "trajectories": 1536,
+      "coarse_dx": 0.003,
+      "fine_dx": 0.0015,
+      "coarse_final_mean_boundary_mass": 4.220691951548553e-08,
+      "fine_final_mean_boundary_mass": 2.2044813396868043e-08,
+      "fine_minus_coarse_final_fidelity": -0.000809455494836215,
+      "paired_ci95_low": -0.0024687956700896346,
+      "paired_ci95_high": 0.0008498846804172046,
+      "all_cycle_CIs_inside_plus_minus_0_005": true
+    },
+    {
+      "point": "readout_high",
+      "decoder": "lstm_256x3_s0",
+      "cutoff": 3072,
+      "cycles": 2,
+      "trajectories": 1536,
+      "coarse_dx": 0.003,
+      "fine_dx": 0.0015,
+      "coarse_final_mean_boundary_mass": 4.206579581670842e-08,
+      "fine_final_mean_boundary_mass": 2.217233936200808e-08,
+      "fine_minus_coarse_final_fidelity": 0.00011781879292692319,
+      "paired_ci95_low": -0.00105055465751615,
+      "paired_ci95_high": 0.0012861922433699963,
+      "all_cycle_CIs_inside_plus_minus_0_005": true
+    }
+  ],
+  "interpretation": "N3072 has a demonstrated boundary limitation. N4096/N5120 pass population gates and mean-fidelity cutoff equivalence through cycle8. Rare energy jumps persist. A binned-wavefunction defect is confirmed mathematically; its causal contribution to observed spikes is not isolated.",
+  "limitations": [
+    "Eight-cycle study covers nominal nearest-lattice only",
+    "Pointwise trajectory CIs exclude model/systematic uncertainty",
+    "No substep energies, unwrapped homodyne outcomes or outcome log likelihoods were saved",
+    "No long-horizon smooth-resource intervention has been run",
+    "Cutoff equivalence does not establish convergence of energy tails or individual trajectories"
+  ]
+}

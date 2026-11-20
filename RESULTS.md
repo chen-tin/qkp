@@ -1,5 +1,7 @@
 # Results: GKP decoding under correlated displacement noise
 
+**Current research notebook:** [RESEARCH_NOTES.md](RESEARCH_NOTES.md) consolidates the later heatmaps, completed LSTM capacity sweep, reproduction outcomes, QuTiP validation, smooth-resource decision, and paper-preparation gaps. The historical baseline summary below retains its original scope; its launch-time status labels are superseded only where the notebook links completed evidence.
+
 **Location:** developed on the branch `experiment/decoder-comparison` and merged into `main`
 (14 Nov 2026). `chris-branch` was not modified.
 

@@ -1,0 +1,35 @@
+{
+  "paper_id": "gkp_cnn",
+  "status": "planned",
+  "registered": "2026-11-18",
+  "question": "Can the published metric be reproduced under the same physical and evaluation model?",
+  "audience": "Researchers assessing decoder failure across noise conditions",
+  "baseline": "MWPM under the identical perfect/noisy measurement regimes",
+  "intervention": [
+    "CNN"
+  ],
+  "settings": {
+    "perfect_GKP_measurements": {
+      "NN_threshold_sigma": 0.78,
+      "MWPM_threshold_sigma": 0.5
+    },
+    "noisy_measurements": {
+      "NN_threshold_sigma": 0.34,
+      "MWPM_threshold_sigma": 0.25
+    },
+    "architecture_source": "Supplementary Information and paper tables",
+    "noise_convention": "Use this paper\u2019s displacement sigma and measurement model; do not import qkp simulator defaults.",
+    "threshold_method": "Fit multiple-distance logical-error curves with uncertainty; never infer a threshold from one code distance."
+  },
+  "hypothesis": "The registered metric can be matched under the original protocol; no predicted advantage in the qkp simulator is asserted.",
+  "decision_rule": "Compare independently measured estimates and uncertainty with reported values or marked visual-reading ranges. A match is provisional until model, split and units are audited; missing code/data or imprecise estimates remain inconclusive. Do not tune on held-out test data.",
+  "compute": "Smoke: CPU, one thread, small bounded input. Production: explicitly launch after resolving listed blockers; no full training is started by fetch/check.",
+  "uncertainty": "Wilson intervals for independent Bernoulli counts; bootstrap trajectory/seed-level fits for lifetimes and thresholds. Use three independent training seeds for new training, reported separately.",
+  "procedure": "Rebuild the surface-GKP simulator and CNN specified in the paper and supplement, or supply the author implementation. First reproduce the MWPM thresholds, then evaluate the NN on the same noise grid. Retain multiple-distance raw counts and threshold-fit covariance. The sigma values are paper claims, not verified qkp results.",
+  "blockers": [
+    "Author neural decoder implementation and simulation data are available on request.",
+    "The linked ConcatenatedCodedRepeaters repository is a cited reference implementation, not this CNN.",
+    "Training sample-count wording needs reconciliation before a full run."
+  ],
+  "raw_output_contract": "See ../RESULTS.md. Save raw outcomes, checkpoint/config/source hashes, environment, seed and noise units."
+}

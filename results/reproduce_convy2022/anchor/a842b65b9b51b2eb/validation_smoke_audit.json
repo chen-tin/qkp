@@ -1,0 +1,29 @@
+{
+  "validator": "independent documentation-only agent",
+  "validated_utc": "2026-11-18T19:59:05.700553+00:00",
+  "initial_document": "docs/convy2022_reproduction.md",
+  "commands": [
+    {
+      "command": ".venv/bin/python -m pytest tests/test_convy2022_reproduction.py -q",
+      "result": "4 passed in 0.86s"
+    },
+    {
+      "command": ".venv/bin/python -m experiments.reproduce_convy2022 --smoke --seeds 0 --device cpu",
+      "result": "exit 0; control and intervention completed"
+    }
+  ],
+  "smoke_run": "results/reproduce_convy2022/smoke/e29ea9f03ffc2556",
+  "bayesian_smoke_final_correct": 202,
+  "lstm_smoke_final_correct": 35,
+  "smoke_test_n": 256,
+  "lstm_training_ce": [
+    2.0871798992156982,
+    2.0837831497192383
+  ],
+  "lstm_validation_ce": [
+    2.0798394680023193,
+    2.0765774250030518
+  ],
+  "interpretation": "Smoke validates execution and finite optimization only, not reproduction. Full Bayesian control differs materially from paper target. Hold LSTM production scaling as a claimed reproduction pending resolved mismatch.",
+  "modifications": "No source or protocol files modified by validator."
+}

@@ -1,0 +1,1316 @@
+{
+  "plan_sha256": "f91e986cd38e2c57add726d53763361622c7434895d02e8b37f82828d1fbc837",
+  "expected_jobs": 300,
+  "completed_jobs": 0,
+  "all_jobs_executed": false,
+  "stage_failures": 0,
+  "groups": {
+    "nominal/baseline/nearest/N4096": {
+      "expected_chunks": 150,
+      "completed_chunks": 0,
+      "stage_pass": true,
+      "trials": 0,
+      "fixed_budget_complete": false,
+      "interval_interpretation": "interim_descriptive_no_stopping_claim",
+      "events": {},
+      "mean_logical_fidelity": null,
+      "mean_energy": null,
+      "maximum_energy": null
+    },
+    "nominal/baseline/bayes_gaussian/N4096": {
+      "expected_chunks": 150,
+      "completed_chunks": 0,
+      "stage_pass": true,
+      "trials": 0,
+      "fixed_budget_complete": false,
+      "interval_interpretation": "interim_descriptive_no_stopping_claim",
+      "events": {},
+      "mean_logical_fidelity": null,
+      "mean_energy": null,
+      "maximum_energy": null
+    },
+    "nominal/baseline/lstm_256x3_s0/N4096": {
+      "expected_chunks": 150,
+      "completed_chunks": 0,
+      "stage_pass": true,
+      "trials": 0,
+      "fixed_budget_complete": false,
+      "interval_interpretation": "interim_descriptive_no_stopping_claim",
+      "events": {},
+      "mean_logical_fidelity": null,
+      "mean_energy": null,
+      "maximum_energy": null
+    },
+    "nominal/baseline/nearest/N5120": {
+      "expected_chunks": 150,
+      "completed_chunks": 0,
+      "stage_pass": true,
+      "trials": 0,
+      "fixed_budget_complete": false,
+      "interval_interpretation": "interim_descriptive_no_stopping_claim",
+      "events": {},
+      "mean_logical_fidelity": null,
+      "mean_energy": null,
+      "maximum_energy": null
+    },
+    "nominal/baseline/bayes_gaussian/N5120": {
+      "expected_chunks": 150,
+      "completed_chunks": 0,
+      "stage_pass": true,
+      "trials": 0,
+      "fixed_budget_complete": false,
+      "interval_interpretation": "interim_descriptive_no_stopping_claim",
+      "events": {},
+      "mean_logical_fidelity": null,
+      "mean_energy": null,
+      "maximum_energy": null
+    },
+    "nominal/baseline/lstm_256x3_s0/N5120": {
+      "expected_chunks": 150,
+      "completed_chunks": 0,
+      "stage_pass": true,
+      "trials": 0,
+      "fixed_budget_complete": false,
+      "interval_interpretation": "interim_descriptive_no_stopping_claim",
+      "events": {},
+      "mean_logical_fidelity": null,
+      "mean_energy": null,
+      "maximum_energy": null
+    }
+  },
+  "classification": "benchmark_observations",
+  "numerically_certified": false,
+  "registered_numerical_sample_checks_pass": false,
+  "scoring_refinement": {
+    "2f28b4dad6b2aca5": {
+      "status": "pending",
+      "pass": false
+    },
+    "b3e655f79458e0ee": {
+      "status": "pending",
+      "pass": false
+    },
+    "7ba22dce7dcbefc8": {
+      "status": "pending",
+      "pass": false
+    },
+    "5420a2b83e590e24": {
+      "status": "pending",
+      "pass": false
+    },
+    "4d79a6ba705359fb": {
+      "status": "pending",
+      "pass": false
+    },
+    "586a9147a983270e": {
+      "status": "pending",
+      "pass": false
+    },
+    "538d154eb45564cd": {
+      "status": "pending",
+      "pass": false
+    },
+    "21e724b488514ae3": {
+      "status": "pending",
+      "pass": false
+    },
+    "8a70cc8c2aa2e12b": {
+      "status": "pending",
+      "pass": false
+    },
+    "c0f5afec3ce3758d": {
+      "status": "pending",
+      "pass": false
+    },
+    "7f497b30ffd93d82": {
+      "status": "pending",
+      "pass": false
+    },
+    "c1a96f139b413f64": {
+      "status": "pending",
+      "pass": false
+    },
+    "eda0fd017fef2120": {
+      "status": "pending",
+      "pass": false
+    },
+    "8bb67b0edda76a36": {
+      "status": "pending",
+      "pass": false
+    },
+    "d02615705169f641": {
+      "status": "pending",
+      "pass": false
+    },
+    "3620c3ae004b6236": {
+      "status": "pending",
+      "pass": false
+    },
+    "ae7c91d6401edc73": {
+      "status": "pending",
+      "pass": false
+    },
+    "2001adf2d6cbe92e": {
+      "status": "pending",
+      "pass": false
+    },
+    "e8a1ff10d08eda97": {
+      "status": "pending",
+      "pass": false
+    },
+    "33e519fdf638340e": {
+      "status": "pending",
+      "pass": false
+    },
+    "13531dc3c842d915": {
+      "status": "pending",
+      "pass": false
+    },
+    "7cec7eb2904edf33": {
+      "status": "pending",
+      "pass": false
+    },
+    "5a28f763cfafb8ac": {
+      "status": "pending",
+      "pass": false
+    },
+    "8f21718a41726162": {
+      "status": "pending",
+      "pass": false
+    },
+    "b905d882b189c9a6": {
+      "status": "pending",
+      "pass": false
+    },
+    "314160524ed8b685": {
+      "status": "pending",
+      "pass": false
+    },
+    "ff75ab6db3f0c41f": {
+      "status": "pending",
+      "pass": false
+    },
+    "5f2bc1444c1855ef": {
+      "status": "pending",
+      "pass": false
+    },
+    "953bae9147fbbab1": {
+      "status": "pending",
+      "pass": false
+    },
+    "5e21c68e91a03b91": {
+      "status": "pending",
+      "pass": false
+    },
+    "ac6602b17932d39f": {
+      "status": "pending",
+      "pass": false
+    },
+    "2ac628a8440b423d": {
+      "status": "pending",
+      "pass": false
+    },
+    "1ed214dcc7014b9b": {
+      "status": "pending",
+      "pass": false
+    },
+    "1e08d2f269f48718": {
+      "status": "pending",
+      "pass": false
+    },
+    "adef40bc57916e23": {
+      "status": "pending",
+      "pass": false
+    },
+    "d5e148d11694491c": {
+      "status": "pending",
+      "pass": false
+    },
+    "6f6a775ff6adb659": {
+      "status": "pending",
+      "pass": false
+    },
+    "3c13528cb430519f": {
+      "status": "pending",
+      "pass": false
+    },
+    "1e1e87c9ede8c8d5": {
+      "status": "pending",
+      "pass": false
+    },
+    "a970a752a29cf5f0": {
+      "status": "pending",
+      "pass": false
+    },
+    "e37415b8a10cd09f": {
+      "status": "pending",
+      "pass": false
+    },
+    "95303bf8ac1f983e": {
+      "status": "pending",
+      "pass": false
+    },
+    "8044672e8656980c": {
+      "status": "pending",
+      "pass": false
+    },
+    "f3dac9aff3bf77b3": {
+      "status": "pending",
+      "pass": false
+    },
+    "f141908bc69dffc9": {
+      "status": "pending",
+      "pass": false
+    },
+    "abf8a045306af2a9": {
+      "status": "pending",
+      "pass": false
+    },
+    "df897fa933e67222": {
+      "status": "pending",
+      "pass": false
+    },
+    "265aac095bc90746": {
+      "status": "pending",
+      "pass": false
+    },
+    "3a1a6c1326a81d60": {
+      "status": "pending",
+      "pass": false
+    },
+    "8109ca85f8ae4f5a": {
+      "status": "pending",
+      "pass": false
+    },
+    "02465bc0eabd2451": {
+      "status": "pending",
+      "pass": false
+    },
+    "d6dcf795b40f2751": {
+      "status": "pending",
+      "pass": false
+    },
+    "3d72f0adbc4ae467": {
+      "status": "pending",
+      "pass": false
+    },
+    "d063c2ddfd49acb6": {
+      "status": "pending",
+      "pass": false
+    },
+    "c4a142be02144c12": {
+      "status": "pending",
+      "pass": false
+    },
+    "dfbc6a898e4b975b": {
+      "status": "pending",
+      "pass": false
+    },
+    "50adb71c56c94bc6": {
+      "status": "pending",
+      "pass": false
+    },
+    "425d316792b5cac0": {
+      "status": "pending",
+      "pass": false
+    },
+    "4e66c90a5944a185": {
+      "status": "pending",
+      "pass": false
+    },
+    "11b6209b53909b06": {
+      "status": "pending",
+      "pass": false
+    },
+    "315852b19246525d": {
+      "status": "pending",
+      "pass": false
+    },
+    "f4e4c5a4b7e4b60c": {
+      "status": "pending",
+      "pass": false
+    },
+    "a86ce27316a6d2c5": {
+      "status": "pending",
+      "pass": false
+    },
+    "df484b33d72cfdca": {
+      "status": "pending",
+      "pass": false
+    },
+    "d28e5a7dac71557c": {
+      "status": "pending",
+      "pass": false
+    },
+    "6e35f6280431c65e": {
+      "status": "pending",
+      "pass": false
+    },
+    "b378ef47898f3dc4": {
+      "status": "pending",
+      "pass": false
+    },
+    "79362b9583f33e7a": {
+      "status": "pending",
+      "pass": false
+    },
+    "d371d4a9e87e3963": {
+      "status": "pending",
+      "pass": false
+    },
+    "6324af3da7158574": {
+      "status": "pending",
+      "pass": false
+    },
+    "3a104b55516b43f7": {
+      "status": "pending",
+      "pass": false
+    },
+    "16ab9e1c35728440": {
+      "status": "pending",
+      "pass": false
+    },
+    "3616d6e7c3271633": {
+      "status": "pending",
+      "pass": false
+    },
+    "a796bb9144e224cd": {
+      "status": "pending",
+      "pass": false
+    },
+    "1a658e82f9574ae4": {
+      "status": "pending",
+      "pass": false
+    },
+    "048dd377a95a8766": {
+      "status": "pending",
+      "pass": false
+    },
+    "286c48a1b1f8ac13": {
+      "status": "pending",
+      "pass": false
+    },
+    "54eac429c69e9d99": {
+      "status": "pending",
+      "pass": false
+    },
+    "b0158ae543e3d304": {
+      "status": "pending",
+      "pass": false
+    },
+    "07870d059de89df2": {
+      "status": "pending",
+      "pass": false
+    },
+    "5fb69a21af73b4fd": {
+      "status": "pending",
+      "pass": false
+    },
+    "6d4c1b8bf9af69aa": {
+      "status": "pending",
+      "pass": false
+    },
+    "b888c81d9c76914f": {
+      "status": "pending",
+      "pass": false
+    },
+    "4259258b4f3d2039": {
+      "status": "pending",
+      "pass": false
+    },
+    "4400da10d4dd2a36": {
+      "status": "pending",
+      "pass": false
+    },
+    "54ec50fffe3eae28": {
+      "status": "pending",
+      "pass": false
+    },
+    "0204e0cec3b45ece": {
+      "status": "pending",
+      "pass": false
+    },
+    "5475875842f2d5d8": {
+      "status": "pending",
+      "pass": false
+    },
+    "da896348ce843de9": {
+      "status": "pending",
+      "pass": false
+    },
+    "cbe07b89ef65997c": {
+      "status": "pending",
+      "pass": false
+    },
+    "2efc43cffbd1262c": {
+      "status": "pending",
+      "pass": false
+    },
+    "ada87c571525388a": {
+      "status": "pending",
+      "pass": false
+    },
+    "7d148de7f4903485": {
+      "status": "pending",
+      "pass": false
+    },
+    "202ce5b4276ea96c": {
+      "status": "pending",
+      "pass": false
+    },
+    "8de3070c752f7e65": {
+      "status": "pending",
+      "pass": false
+    },
+    "cf923267c44b1c58": {
+      "status": "pending",
+      "pass": false
+    },
+    "bcd15f1069cdf6e5": {
+      "status": "pending",
+      "pass": false
+    },
+    "57798f56172ae71c": {
+      "status": "pending",
+      "pass": false
+    },
+    "ad64f22d045737ca": {
+      "status": "pending",
+      "pass": false
+    },
+    "097680672d99441c": {
+      "status": "pending",
+      "pass": false
+    },
+    "503af25f0b4a8cc5": {
+      "status": "pending",
+      "pass": false
+    },
+    "45ca833a9e846421": {
+      "status": "pending",
+      "pass": false
+    },
+    "396836b559a66151": {
+      "status": "pending",
+      "pass": false
+    },
+    "08d7ffa50712d9b7": {
+      "status": "pending",
+      "pass": false
+    },
+    "d2b0ac38ca245f8a": {
+      "status": "pending",
+      "pass": false
+    },
+    "aa5b360689dbde31": {
+      "status": "pending",
+      "pass": false
+    },
+    "add07a615c5f072e": {
+      "status": "pending",
+      "pass": false
+    },
+    "5182e8377162d25a": {
+      "status": "pending",
+      "pass": false
+    },
+    "fac129baa245a7e2": {
+      "status": "pending",
+      "pass": false
+    },
+    "3ff62ea13204548b": {
+      "status": "pending",
+      "pass": false
+    },
+    "a750132d523084e7": {
+      "status": "pending",
+      "pass": false
+    },
+    "c091b98af9efc25a": {
+      "status": "pending",
+      "pass": false
+    },
+    "e40a21d4b06794de": {
+      "status": "pending",
+      "pass": false
+    },
+    "6f082184ed8bb3b3": {
+      "status": "pending",
+      "pass": false
+    },
+    "fe7b91a4aa7b3c3b": {
+      "status": "pending",
+      "pass": false
+    },
+    "33d588302c2de51d": {
+      "status": "pending",
+      "pass": false
+    },
+    "f1de484b97254ed2": {
+      "status": "pending",
+      "pass": false
+    },
+    "75a2e86051ef93eb": {
+      "status": "pending",
+      "pass": false
+    },
+    "cfc448e5ebc1c003": {
+      "status": "pending",
+      "pass": false
+    },
+    "d8422ab19175769b": {
+      "status": "pending",
+      "pass": false
+    },
+    "f2087e218248f0d0": {
+      "status": "pending",
+      "pass": false
+    },
+    "a2f9cfe18040c742": {
+      "status": "pending",
+      "pass": false
+    },
+    "4588880250a996e1": {
+      "status": "pending",
+      "pass": false
+    },
+    "8d5601abde0e0c15": {
+      "status": "pending",
+      "pass": false
+    },
+    "4f9b0440b12a90b3": {
+      "status": "pending",
+      "pass": false
+    },
+    "ef08109209f91c1d": {
+      "status": "pending",
+      "pass": false
+    },
+    "eb8cb3d1dc0ffd21": {
+      "status": "pending",
+      "pass": false
+    },
+    "5e52e0d8828152cb": {
+      "status": "pending",
+      "pass": false
+    },
+    "9920419ae1bebe97": {
+      "status": "pending",
+      "pass": false
+    },
+    "018cf4ef9224e355": {
+      "status": "pending",
+      "pass": false
+    },
+    "e407a3b64e04399f": {
+      "status": "pending",
+      "pass": false
+    },
+    "dff68c7bee8c7ba9": {
+      "status": "pending",
+      "pass": false
+    },
+    "4fc00c252e2f4f64": {
+      "status": "pending",
+      "pass": false
+    },
+    "371240ee8c0b7c37": {
+      "status": "pending",
+      "pass": false
+    },
+    "315d7df2227271f5": {
+      "status": "pending",
+      "pass": false
+    },
+    "f3fa6bd56beab381": {
+      "status": "pending",
+      "pass": false
+    },
+    "fd4d33c72d3b40e6": {
+      "status": "pending",
+      "pass": false
+    },
+    "de86c31e885b9428": {
+      "status": "pending",
+      "pass": false
+    },
+    "64e95ffa0641f92f": {
+      "status": "pending",
+      "pass": false
+    },
+    "2ab5d5d074eb914f": {
+      "status": "pending",
+      "pass": false
+    },
+    "47a9e9514fdbe978": {
+      "status": "pending",
+      "pass": false
+    },
+    "0a73ce0d96be460f": {
+      "status": "pending",
+      "pass": false
+    },
+    "8404de6105b9d44e": {
+      "status": "pending",
+      "pass": false
+    },
+    "2f74af8c1e612f45": {
+      "status": "pending",
+      "pass": false
+    },
+    "7c52323634d447be": {
+      "status": "pending",
+      "pass": false
+    },
+    "3fbb06db48fba700": {
+      "status": "pending",
+      "pass": false
+    },
+    "981c4178deb98143": {
+      "status": "pending",
+      "pass": false
+    },
+    "1d4969da71a46da0": {
+      "status": "pending",
+      "pass": false
+    },
+    "7a780c394b98d28a": {
+      "status": "pending",
+      "pass": false
+    },
+    "59c5cb16fd00e5ce": {
+      "status": "pending",
+      "pass": false
+    },
+    "5dda891740072df9": {
+      "status": "pending",
+      "pass": false
+    },
+    "c9b331eb864a9bd4": {
+      "status": "pending",
+      "pass": false
+    },
+    "8799b46afccc2dcd": {
+      "status": "pending",
+      "pass": false
+    },
+    "47b9bbb82347d9bd": {
+      "status": "pending",
+      "pass": false
+    },
+    "6effae75b8487b90": {
+      "status": "pending",
+      "pass": false
+    },
+    "d9fcca08596f299d": {
+      "status": "pending",
+      "pass": false
+    },
+    "ed05a266b6bbdf29": {
+      "status": "pending",
+      "pass": false
+    },
+    "0b9124c385b64683": {
+      "status": "pending",
+      "pass": false
+    },
+    "c5bd0327cb6a791f": {
+      "status": "pending",
+      "pass": false
+    },
+    "4506457e3baa5dd3": {
+      "status": "pending",
+      "pass": false
+    },
+    "e08b58c895e7678f": {
+      "status": "pending",
+      "pass": false
+    },
+    "756028b21ea9fa15": {
+      "status": "pending",
+      "pass": false
+    },
+    "e0707e5881fa2616": {
+      "status": "pending",
+      "pass": false
+    },
+    "c0b861d5ad1fc783": {
+      "status": "pending",
+      "pass": false
+    },
+    "81ae3728d41152a0": {
+      "status": "pending",
+      "pass": false
+    },
+    "a31e76f1990069e8": {
+      "status": "pending",
+      "pass": false
+    },
+    "b89f700b2ab26189": {
+      "status": "pending",
+      "pass": false
+    },
+    "941d67bf21b7b44d": {
+      "status": "pending",
+      "pass": false
+    },
+    "e272eb7892ef6f5a": {
+      "status": "pending",
+      "pass": false
+    },
+    "2acbf0afe90a1100": {
+      "status": "pending",
+      "pass": false
+    },
+    "39c1c6a2ee8686c7": {
+      "status": "pending",
+      "pass": false
+    },
+    "87b5b7f74660b39a": {
+      "status": "pending",
+      "pass": false
+    },
+    "b7a988524b6c9b8b": {
+      "status": "pending",
+      "pass": false
+    },
+    "b0edc8cca694e929": {
+      "status": "pending",
+      "pass": false
+    },
+    "46873a9c9605e3c5": {
+      "status": "pending",
+      "pass": false
+    },
+    "00f40db065f9a979": {
+      "status": "pending",
+      "pass": false
+    },
+    "ce34b68d79d20a1e": {
+      "status": "pending",
+      "pass": false
+    },
+    "fdb1364f0e1b73d9": {
+      "status": "pending",
+      "pass": false
+    },
+    "25ed0dbbf55ed165": {
+      "status": "pending",
+      "pass": false
+    },
+    "5c371e28bd482a87": {
+      "status": "pending",
+      "pass": false
+    },
+    "092d79e999db7f83": {
+      "status": "pending",
+      "pass": false
+    },
+    "b9b9cf5556d1be8f": {
+      "status": "pending",
+      "pass": false
+    },
+    "c4bb309c1e279748": {
+      "status": "pending",
+      "pass": false
+    },
+    "3ea887a35dba06bc": {
+      "status": "pending",
+      "pass": false
+    },
+    "394fed44b6678640": {
+      "status": "pending",
+      "pass": false
+    },
+    "40e1fc9465e7cc83": {
+      "status": "pending",
+      "pass": false
+    },
+    "bdaf986ea3ecbb2e": {
+      "status": "pending",
+      "pass": false
+    },
+    "4289c93c7beb0366": {
+      "status": "pending",
+      "pass": false
+    },
+    "ae50cadd8f2b952c": {
+      "status": "pending",
+      "pass": false
+    },
+    "552ea66aed8d4287": {
+      "status": "pending",
+      "pass": false
+    },
+    "880ef9a088a1b375": {
+      "status": "pending",
+      "pass": false
+    },
+    "68aa9dd3fe160c37": {
+      "status": "pending",
+      "pass": false
+    },
+    "69d190658aacc648": {
+      "status": "pending",
+      "pass": false
+    },
+    "178faae8a0b7ef56": {
+      "status": "pending",
+      "pass": false
+    },
+    "b1d3e3704734679f": {
+      "status": "pending",
+      "pass": false
+    },
+    "ba4e300bdb4a3c2e": {
+      "status": "pending",
+      "pass": false
+    },
+    "b66752c2fc7495f4": {
+      "status": "pending",
+      "pass": false
+    },
+    "aeac812c44d8e357": {
+      "status": "pending",
+      "pass": false
+    },
+    "31209a94086e0c8c": {
+      "status": "pending",
+      "pass": false
+    },
+    "c918243129e83673": {
+      "status": "pending",
+      "pass": false
+    },
+    "7cf1b895a537a060": {
+      "status": "pending",
+      "pass": false
+    },
+    "cdc910022476fde5": {
+      "status": "pending",
+      "pass": false
+    },
+    "3c30387f2dc3b12b": {
+      "status": "pending",
+      "pass": false
+    },
+    "4fef4d4af28fe612": {
+      "status": "pending",
+      "pass": false
+    },
+    "8b2f31259f04d895": {
+      "status": "pending",
+      "pass": false
+    },
+    "04177155a9cefc11": {
+      "status": "pending",
+      "pass": false
+    },
+    "83dde1ebf9bee8b7": {
+      "status": "pending",
+      "pass": false
+    },
+    "87c7a60cab589c96": {
+      "status": "pending",
+      "pass": false
+    },
+    "aef8ef75fb5e766c": {
+      "status": "pending",
+      "pass": false
+    },
+    "3c5879f1f52b7cf2": {
+      "status": "pending",
+      "pass": false
+    },
+    "4c990fe26fbf904f": {
+      "status": "pending",
+      "pass": false
+    },
+    "b561e3263faa16d4": {
+      "status": "pending",
+      "pass": false
+    },
+    "c667ba877f18e940": {
+      "status": "pending",
+      "pass": false
+    },
+    "2f5d7c01608481ad": {
+      "status": "pending",
+      "pass": false
+    },
+    "0db644939512dbff": {
+      "status": "pending",
+      "pass": false
+    },
+    "713fe5465299f480": {
+      "status": "pending",
+      "pass": false
+    },
+    "fa75d2c471a8b242": {
+      "status": "pending",
+      "pass": false
+    },
+    "8c07c60b14d59f94": {
+      "status": "pending",
+      "pass": false
+    },
+    "8ba783b7b2a1fd6b": {
+      "status": "pending",
+      "pass": false
+    },
+    "956052bf28bb219c": {
+      "status": "pending",
+      "pass": false
+    },
+    "e5e72ab299fd1c70": {
+      "status": "pending",
+      "pass": false
+    },
+    "b2d4d90c68603967": {
+      "status": "pending",
+      "pass": false
+    },
+    "7e244780b9971b6a": {
+      "status": "pending",
+      "pass": false
+    },
+    "ca833c88464a9241": {
+      "status": "pending",
+      "pass": false
+    },
+    "99aa998034a543f6": {
+      "status": "pending",
+      "pass": false
+    },
+    "16b36c5ceb189b74": {
+      "status": "pending",
+      "pass": false
+    },
+    "4f99341436b5a7b9": {
+      "status": "pending",
+      "pass": false
+    },
+    "41a16446efe5d2c2": {
+      "status": "pending",
+      "pass": false
+    },
+    "e9dcdfe39116c0e5": {
+      "status": "pending",
+      "pass": false
+    },
+    "26c88f4c0c7cfdc6": {
+      "status": "pending",
+      "pass": false
+    },
+    "b89ab05e44dbf601": {
+      "status": "pending",
+      "pass": false
+    },
+    "88f5155c0722592f": {
+      "status": "pending",
+      "pass": false
+    },
+    "a44fda8ea5b93d74": {
+      "status": "pending",
+      "pass": false
+    },
+    "9e038ee0a0609509": {
+      "status": "pending",
+      "pass": false
+    },
+    "4a969a16076dc8c5": {
+      "status": "pending",
+      "pass": false
+    },
+    "219eb4f2c2fe70a0": {
+      "status": "pending",
+      "pass": false
+    },
+    "2a924d3c4504d071": {
+      "status": "pending",
+      "pass": false
+    },
+    "18364f00cb12c107": {
+      "status": "pending",
+      "pass": false
+    },
+    "e740bdbd83c74d14": {
+      "status": "pending",
+      "pass": false
+    },
+    "83bc119bb341e565": {
+      "status": "pending",
+      "pass": false
+    },
+    "8b82044531dde391": {
+      "status": "pending",
+      "pass": false
+    },
+    "835fbd99cf3c3865": {
+      "status": "pending",
+      "pass": false
+    },
+    "86e6cfc8e0e3b0a0": {
+      "status": "pending",
+      "pass": false
+    },
+    "bdbc410a780a6aca": {
+      "status": "pending",
+      "pass": false
+    },
+    "1a1b777ead7dc7ea": {
+      "status": "pending",
+      "pass": false
+    },
+    "0773c6b64e6890df": {
+      "status": "pending",
+      "pass": false
+    },
+    "022b47e257e50f3f": {
+      "status": "pending",
+      "pass": false
+    },
+    "d8be51e31b437689": {
+      "status": "pending",
+      "pass": false
+    },
+    "842f4d7bce190ec8": {
+      "status": "pending",
+      "pass": false
+    },
+    "ddf276c2985cb660": {
+      "status": "pending",
+      "pass": false
+    },
+    "7a46e824860ebef0": {
+      "status": "pending",
+      "pass": false
+    },
+    "f452d53a668aadad": {
+      "status": "pending",
+      "pass": false
+    },
+    "52ecd980fadb467e": {
+      "status": "pending",
+      "pass": false
+    },
+    "d2827c48607d7e08": {
+      "status": "pending",
+      "pass": false
+    },
+    "4b39197bd5b5f5ff": {
+      "status": "pending",
+      "pass": false
+    },
+    "7b7bd4817f107392": {
+      "status": "pending",
+      "pass": false
+    },
+    "7b034d89b9bbeea8": {
+      "status": "pending",
+      "pass": false
+    },
+    "f9cbd0f811bbbb55": {
+      "status": "pending",
+      "pass": false
+    },
+    "782be67b07c1ea2c": {
+      "status": "pending",
+      "pass": false
+    },
+    "876c5fb0bdcf6c81": {
+      "status": "pending",
+      "pass": false
+    },
+    "99015b9983a894b0": {
+      "status": "pending",
+      "pass": false
+    },
+    "957f8dc4900d18f9": {
+      "status": "pending",
+      "pass": false
+    },
+    "140709e90104fbd7": {
+      "status": "pending",
+      "pass": false
+    },
+    "e10a4fdea7372a6e": {
+      "status": "pending",
+      "pass": false
+    },
+    "f635533783dab22c": {
+      "status": "pending",
+      "pass": false
+    },
+    "026d67cdebea1701": {
+      "status": "pending",
+      "pass": false
+    },
+    "fdc1e91590678994": {
+      "status": "pending",
+      "pass": false
+    },
+    "85389a155805cf2b": {
+      "status": "pending",
+      "pass": false
+    },
+    "6e07d529ac865cdd": {
+      "status": "pending",
+      "pass": false
+    },
+    "46cd2c6a8e0a8eaf": {
+      "status": "pending",
+      "pass": false
+    },
+    "93099ffd6db9b3b6": {
+      "status": "pending",
+      "pass": false
+    },
+    "9b07885d35708c94": {
+      "status": "pending",
+      "pass": false
+    },
+    "ae8965fcfc437dbc": {
+      "status": "pending",
+      "pass": false
+    },
+    "a33be9082243e6a0": {
+      "status": "pending",
+      "pass": false
+    },
+    "f2ce68ccc716192b": {
+      "status": "pending",
+      "pass": false
+    },
+    "e15de0142463425a": {
+      "status": "pending",
+      "pass": false
+    },
+    "7134399aa84c87c3": {
+      "status": "pending",
+      "pass": false
+    },
+    "00008f427a6a5506": {
+      "status": "pending",
+      "pass": false
+    },
+    "1db2eeac8ee42471": {
+      "status": "pending",
+      "pass": false
+    },
+    "91f79c6e4874bd5c": {
+      "status": "pending",
+      "pass": false
+    },
+    "6f793ca5ef36ad52": {
+      "status": "pending",
+      "pass": false
+    },
+    "86855ee8531ba188": {
+      "status": "pending",
+      "pass": false
+    },
+    "ef22f1a4ae97f8ed": {
+      "status": "pending",
+      "pass": false
+    },
+    "86f395c1eb0a5499": {
+      "status": "pending",
+      "pass": false
+    },
+    "ab05f9ea37095c90": {
+      "status": "pending",
+      "pass": false
+    },
+    "cce37edfda13813a": {
+      "status": "pending",
+      "pass": false
+    },
+    "a2d90490591fbdef": {
+      "status": "pending",
+      "pass": false
+    },
+    "39d45899bc419e45": {
+      "status": "pending",
+      "pass": false
+    },
+    "dfba4c99610e2b7f": {
+      "status": "pending",
+      "pass": false
+    },
+    "5c5315890467f59b": {
+      "status": "pending",
+      "pass": false
+    },
+    "80c21290b3752bd0": {
+      "status": "pending",
+      "pass": false
+    },
+    "4267cad146bb7af8": {
+      "status": "pending",
+      "pass": false
+    },
+    "7a04786c6e9a035b": {
+      "status": "pending",
+      "pass": false
+    },
+    "f577138953830ccf": {
+      "status": "pending",
+      "pass": false
+    },
+    "ceea6b0bd9d22360": {
+      "status": "pending",
+      "pass": false
+    },
+    "790e7ed4ebeef7ec": {
+      "status": "pending",
+      "pass": false
+    },
+    "50852cd6fcc20e29": {
+      "status": "pending",
+      "pass": false
+    },
+    "35ade23fd10688bd": {
+      "status": "pending",
+      "pass": false
+    },
+    "64fdaba85797183b": {
+      "status": "pending",
+      "pass": false
+    },
+    "deb63c4de17e825a": {
+      "status": "pending",
+      "pass": false
+    }
+  },
+  "cutoff_equivalence": {
+    "nominal/baseline/nearest": {
+      "pass": false,
+      "status": "pending"
+    },
+    "nominal/baseline/bayes_gaussian": {
+      "pass": false,
+      "status": "pending"
+    },
+    "nominal/baseline/lstm_256x3_s0": {
+      "pass": false,
+      "status": "pending"
+    }
+  },
+  "independent_instrument_checks": {
+    "scope": "ideal single-instrument checks on supplied finite-cutoff states; no all-state bound",
+    "coverage": {
+      "4096/0.0886226925452758/1": {
+        "pass": false,
+        "input_hashes": []
+      },
+      "5120/0.0886226925452758/1": {
+        "pass": false,
+        "input_hashes": []
+      }
+    },
+    "pass": false
+  },
+  "all_registered_empirical_checks_pass": false,
+  "note": "Passing sample checks is not a rigorous channel-error bound or validation of a lumped physical approximation."
+}

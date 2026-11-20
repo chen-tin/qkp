@@ -1,0 +1,43 @@
+[
+  {
+    "id": "cnot_ML_failure",
+    "kind": "gate_failure_rate",
+    "value": 0.0036,
+    "unit": "fraction",
+    "conditions": {
+      "gate": "GKP_CNOT",
+      "squeezing_dB": 12,
+      "decoder": "correlated_ML",
+      "noise": "finite_squeezing_dominant"
+    },
+    "locator": "Abstract and gate-decoding results",
+    "source_url": "https://doi.org/10.1103/PRXQuantum.3.010315"
+  },
+  {
+    "id": "cnot_rounding_failure",
+    "kind": "gate_failure_rate",
+    "value": 0.0087,
+    "unit": "fraction",
+    "conditions": {
+      "gate": "GKP_CNOT",
+      "squeezing_dB": 12,
+      "decoder": "closest_integer",
+      "noise": "finite_squeezing_dominant"
+    },
+    "locator": "Abstract and gate-decoding results",
+    "source_url": "https://doi.org/10.1103/PRXQuantum.3.010315"
+  },
+  {
+    "id": "threshold_squeezing",
+    "kind": "squeezing_threshold",
+    "value": 9.9,
+    "unit": "dB",
+    "conditions": {
+      "code": "surface_GKP",
+      "noise": "finite_squeezing_dominant",
+      "decoder": "dynamic_analog_correlated_MWPM"
+    },
+    "locator": "Abstract and threshold figure",
+    "source_url": "https://doi.org/10.1103/PRXQuantum.3.010315"
+  }
+]

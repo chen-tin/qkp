@@ -1,0 +1,967 @@
+{
+  "scope": "Two-quadrature finite-energy GKP data + ideal finite-ancilla SUM/homodyne; no loss/dephasing/gate faults.",
+  "run": "results/qutip_reference/reference/27ef7fdefecc9020",
+  "refinement_run": "results/qutip_reference/convergence/86ab35fc13213ba0",
+  "cycles": 2,
+  "trajectories_per_input_state": 256,
+  "input_states": 6,
+  "initial_reference_fidelity": 0.9772475462772654,
+  "comparisons": [
+    {
+      "point": "nominal",
+      "decoder": "nearest",
+      "cycles": 2,
+      "classical": 0.9596354166666666,
+      "finite_energy_replayed": 0.935446375636121,
+      "reference": 0.9354554836229071,
+      "reference_ci95": [
+        0.923668040759152,
+        0.9472429264866622
+      ],
+      "difference": -0.024179933043758945,
+      "paired_statistical_ci95": [
+        -0.03639444129947837,
+        -0.011965424788039521
+      ],
+      "numerical_sensitivity_budget": 0.012866635887118272,
+      "sensitivity_expanded_interval": [
+        -0.04926107718659664,
+        0.0009012110990787511
+      ],
+      "all_numerical_gates_pass": true,
+      "cutoff_comparison": {
+        "mean": [
+          -7.401486830834377e-17,
+          0.002105497191309458,
+          0.00348928149800967
+        ],
+        "se": [
+          0.0,
+          0.0024850150342618587,
+          0.0029188180321047135
+        ],
+        "ci95_low": [
+          -7.401486830834377e-17,
+          -0.0027650427768842194,
+          -0.002231496722341486
+        ],
+        "ci95_high": [
+          -7.401486830834377e-17,
+          0.0069760371595031356,
+          0.009210059718360825
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N1536_dx0.003/nearest_finite_ancilla.npz",
+        "b": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N3072_dx0.003/nearest_finite_ancilla.npz",
+        "sha256_a": "c8d08411b3d3d18ba1c768b31c24cf17cf2c34d44187cdcc15c0fed70b02cde5",
+        "sha256_b": "03c82757070bf122bad83836b93bbc3512140f0717e18064a36f33007c59248e",
+        "tolerance": 0.01,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "dx_comparison": {
+        "mean": [
+          0.0,
+          -0.001098672727122311,
+          -0.0012010779985675523
+        ],
+        "se": [
+          0.0,
+          0.0009199034095920622,
+          0.0012528281401630826
+        ],
+        "ci95_low": [
+          0.0,
+          -0.0029016502791783007,
+          -0.003656576032105425
+        ],
+        "ci95_high": [
+          0.0,
+          0.0007043048249336791,
+          0.0012544200349703207
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N3072_dx0.003/nearest_finite_ancilla.npz",
+        "b": "results/qutip_reference/convergence/86ab35fc13213ba0/nominal_N3072_dx0.0015/nearest_finite_ancilla.npz",
+        "sha256_a": "03c82757070bf122bad83836b93bbc3512140f0717e18064a36f33007c59248e",
+        "sha256_b": "174177378c4390232bdd8d178314113ff1cc08ca95a08d44caebc1d0613b5039",
+        "tolerance": 0.005,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "logical_refinement": {
+        "mean": [
+          -3.8100364876947346e-12
+        ],
+        "se": [
+          1.368512262167571e-12
+        ],
+        "ci95_low": [
+          -6.492271233944537e-12
+        ],
+        "ci95_high": [
+          -1.1278017414449329e-12
+        ],
+        "max_absolute_difference": 1.3665202303059232e-10,
+        "within_tolerance": true,
+        "snapshot_per_state": 32,
+        "raw_sha256": "174177378c4390232bdd8d178314113ff1cc08ca95a08d44caebc1d0613b5039"
+      },
+      "assessment": "inconclusive_at_one_percentage_point"
+    },
+    {
+      "point": "nominal",
+      "decoder": "bayes_gaussian",
+      "cycles": 2,
+      "classical": 1.0,
+      "finite_energy_replayed": 0.9733706574407868,
+      "reference": 0.9842705204005563,
+      "reference_ci95": [
+        0.9789714448420913,
+        0.9895695959590213
+      ],
+      "difference": -0.015729479599443614,
+      "paired_statistical_ci95": [
+        -0.021028555157908604,
+        -0.010430404040978624
+      ],
+      "numerical_sensitivity_budget": 0.0066899847802778,
+      "sensitivity_expanded_interval": [
+        -0.027718539938186404,
+        -0.003740419260700824
+      ],
+      "all_numerical_gates_pass": true,
+      "cutoff_comparison": {
+        "mean": [
+          -7.401486830834377e-17,
+          0.002105497191309458,
+          -0.0005733252542587491
+        ],
+        "se": [
+          0.0,
+          0.0024850150342618587,
+          0.0014393822328393879
+        ],
+        "ci95_low": [
+          -7.401486830834377e-17,
+          -0.0027650427768842194,
+          -0.003394462590610718
+        ],
+        "ci95_high": [
+          -7.401486830834377e-17,
+          0.0069760371595031356,
+          0.00224781208209322
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N1536_dx0.003/bayes_gaussian_finite_ancilla.npz",
+        "b": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N3072_dx0.003/bayes_gaussian_finite_ancilla.npz",
+        "sha256_a": "38f97dc4e22142154deadaece3cd84d57520eaca3aa2e63a45d4c762f7a42acc",
+        "sha256_b": "d828daf8e96907f435706e540b0b0dd9d8522d2d8787b9bf23315380beaf83a1",
+        "tolerance": 0.01,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "dx_comparison": {
+        "mean": [
+          0.0,
+          -0.001098672727122311,
+          -0.001503726459180019
+        ],
+        "se": [
+          0.0,
+          0.0009199034095920622,
+          0.0009141982240329645
+        ],
+        "ci95_low": [
+          0.0,
+          -0.0029016502791783007,
+          -0.0032955220530150597
+        ],
+        "ci95_high": [
+          0.0,
+          0.0007043048249336791,
+          0.0002880691346550217
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N3072_dx0.003/bayes_gaussian_finite_ancilla.npz",
+        "b": "results/qutip_reference/convergence/86ab35fc13213ba0/nominal_N3072_dx0.0015/bayes_gaussian_finite_ancilla.npz",
+        "sha256_a": "d828daf8e96907f435706e540b0b0dd9d8522d2d8787b9bf23315380beaf83a1",
+        "sha256_b": "c47c96268624397eaa76b2634c97d4d0d62426aaa3ac76343f8777e8e868c0cd",
+        "tolerance": 0.005,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "logical_refinement": {
+        "mean": [
+          -5.1916619151863115e-12
+        ],
+        "se": [
+          1.3397989689002593e-12
+        ],
+        "ci95_low": [
+          -7.817619640754647e-12
+        ],
+        "ci95_high": [
+          -2.5657041896179756e-12
+        ],
+        "max_absolute_difference": 1.3665202303059232e-10,
+        "within_tolerance": true,
+        "snapshot_per_state": 32,
+        "raw_sha256": "c47c96268624397eaa76b2634c97d4d0d62426aaa3ac76343f8777e8e868c0cd"
+      },
+      "assessment": "inconclusive_at_one_percentage_point"
+    },
+    {
+      "point": "nominal",
+      "decoder": "lstm_256x3_s0",
+      "cycles": 2,
+      "classical": 1.0,
+      "finite_energy_replayed": 0.9733706574407868,
+      "reference": 0.9830061195527872,
+      "reference_ci95": [
+        0.9774267798746915,
+        0.9885854592308828
+      ],
+      "difference": -0.01699388044721285,
+      "paired_statistical_ci95": [
+        -0.022573220125308553,
+        -0.011414540769117146
+      ],
+      "numerical_sensitivity_budget": 0.008078031009776445,
+      "sensitivity_expanded_interval": [
+        -0.030651251135084996,
+        -0.003336509759340701
+      ],
+      "all_numerical_gates_pass": true,
+      "cutoff_comparison": {
+        "mean": [
+          -7.401486830834377e-17,
+          0.002105497191309458,
+          -0.0011918502151503313
+        ],
+        "se": [
+          0.0,
+          0.0024850150342618587,
+          0.001813003965769005
+        ],
+        "ci95_low": [
+          -7.401486830834377e-17,
+          -0.0027650427768842194,
+          -0.004745272691885773
+        ],
+        "ci95_high": [
+          -7.401486830834377e-17,
+          0.0069760371595031356,
+          0.0023615722615851096
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N1536_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+        "b": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N3072_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+        "sha256_a": "0f5057dd8797e5b484fe8603a06500fed2074f6f07bebf25f8e471328362357b",
+        "sha256_b": "d31dda1ac543970426cdfc3d53a30bc9249741cc5cbaac6dc9ea2ccf5011c518",
+        "tolerance": 0.01,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "dx_comparison": {
+        "mean": [
+          0.0,
+          -0.001098672727122311,
+          -0.0015175774367863024
+        ],
+        "se": [
+          0.0,
+          0.0009199034095920622,
+          0.0009261296425701242
+        ],
+        "ci95_low": [
+          0.0,
+          -0.0029016502791783007,
+          -0.003332758181238649
+        ],
+        "ci95_high": [
+          0.0,
+          0.0007043048249336791,
+          0.00029760330766604435
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N3072_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+        "b": "results/qutip_reference/convergence/86ab35fc13213ba0/nominal_N3072_dx0.0015/lstm_256x3_s0_finite_ancilla.npz",
+        "sha256_a": "d31dda1ac543970426cdfc3d53a30bc9249741cc5cbaac6dc9ea2ccf5011c518",
+        "sha256_b": "e882eda0bd919eafef59eee3cf5d3567ef7f1bf219ba7bef3384bbd8b30272cb",
+        "tolerance": 0.005,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "logical_refinement": {
+        "mean": [
+          -5.1916619151863115e-12
+        ],
+        "se": [
+          1.3397989689002593e-12
+        ],
+        "ci95_low": [
+          -7.817619640754647e-12
+        ],
+        "ci95_high": [
+          -2.5657041896179756e-12
+        ],
+        "max_absolute_difference": 1.3665202303059232e-10,
+        "within_tolerance": true,
+        "snapshot_per_state": 32,
+        "raw_sha256": "e882eda0bd919eafef59eee3cf5d3567ef7f1bf219ba7bef3384bbd8b30272cb"
+      },
+      "assessment": "inconclusive_at_one_percentage_point"
+    },
+    {
+      "point": "white",
+      "decoder": "nearest",
+      "cycles": 2,
+      "classical": 0.9498697916666666,
+      "finite_energy_replayed": 0.9263732773739153,
+      "reference": 0.9205981431489146,
+      "reference_ci95": [
+        0.907553995613214,
+        0.9336422906846152
+      ],
+      "difference": -0.02927164851775026,
+      "paired_statistical_ci95": [
+        -0.04308197313835713,
+        -0.015461323897143395
+      ],
+      "numerical_sensitivity_budget": 0.011992532327049998,
+      "sensitivity_expanded_interval": [
+        -0.055074505465407125,
+        -0.0034687915700933967
+      ],
+      "all_numerical_gates_pass": true,
+      "cutoff_comparison": {
+        "mean": [
+          -7.401486830834377e-17,
+          0.002105497191309458,
+          0.0027553778831214733
+        ],
+        "se": [
+          0.0,
+          0.0024850150342618587,
+          0.0032335501866031075
+        ],
+        "ci95_low": [
+          -7.401486830834377e-17,
+          -0.0027650427768842194,
+          -0.0035822640248232137
+        ],
+        "ci95_high": [
+          -7.401486830834377e-17,
+          0.0069760371595031356,
+          0.009093019791066161
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/white_N1536_dx0.003/nearest_finite_ancilla.npz",
+        "b": "results/qutip_reference/reference/27ef7fdefecc9020/white_N3072_dx0.003/nearest_finite_ancilla.npz",
+        "sha256_a": "9e42d1550fddf003fc82b151a1e184fbe1ad6538c682c133c24b0219fffc0dd2",
+        "sha256_b": "f356e45f85fc5e7ab3fc1c0791226c226f5ef179a0d008ba029e615052d2c5e4",
+        "tolerance": 0.01,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "dx_comparison": {
+        "mean": [
+          0.0,
+          -0.001098672727122311,
+          -0.0010819558192323832
+        ],
+        "se": [
+          0.0,
+          0.0009199034095920622,
+          0.0009273418589812413
+        ],
+        "ci95_low": [
+          0.0,
+          -0.0029016502791783007,
+          -0.0028995124641919877
+        ],
+        "ci95_high": [
+          0.0,
+          0.0007043048249336791,
+          0.0007356008257272213
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/white_N3072_dx0.003/nearest_finite_ancilla.npz",
+        "b": "results/qutip_reference/convergence/86ab35fc13213ba0/white_N3072_dx0.0015/nearest_finite_ancilla.npz",
+        "sha256_a": "f356e45f85fc5e7ab3fc1c0791226c226f5ef179a0d008ba029e615052d2c5e4",
+        "sha256_b": "1ce578cea9b01221e4890185c5a1bbfb313224e2e03168cdb3a036ed5d421d9d",
+        "tolerance": 0.005,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "logical_refinement": {
+        "mean": [
+          -1.9170669103100537e-12
+        ],
+        "se": [
+          1.0865796904311787e-12
+        ],
+        "ci95_low": [
+          -4.046723969887786e-12
+        ],
+        "ci95_high": [
+          2.1259014926767908e-13
+        ],
+        "max_absolute_difference": 7.179185024241974e-11,
+        "within_tolerance": true,
+        "snapshot_per_state": 32,
+        "raw_sha256": "1ce578cea9b01221e4890185c5a1bbfb313224e2e03168cdb3a036ed5d421d9d"
+      },
+      "assessment": "inconclusive_at_one_percentage_point"
+    },
+    {
+      "point": "white",
+      "decoder": "bayes_gaussian",
+      "cycles": 2,
+      "classical": 0.951171875,
+      "finite_energy_replayed": 0.9275521100740675,
+      "reference": 0.9160913061665287,
+      "reference_ci95": [
+        0.9027086783842218,
+        0.9294739339488356
+      ],
+      "difference": -0.035080568833469564,
+      "paired_statistical_ci95": [
+        -0.04913902839601671,
+        -0.021022109270922424
+      ],
+      "numerical_sensitivity_budget": 0.008433608638602003,
+      "sensitivity_expanded_interval": [
+        -0.05757263703461871,
+        -0.01258850063232042
+      ],
+      "all_numerical_gates_pass": true,
+      "cutoff_comparison": {
+        "mean": [
+          -7.401486830834377e-17,
+          0.002105497191309458,
+          -2.521912929522377e-05
+        ],
+        "se": [
+          0.0,
+          0.0024850150342618587,
+          0.0027159172959134027
+        ],
+        "ci95_low": [
+          -7.401486830834377e-17,
+          -0.0027650427768842194,
+          -0.005348319214274759
+        ],
+        "ci95_high": [
+          -7.401486830834377e-17,
+          0.0069760371595031356,
+          0.005297880955684312
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/white_N1536_dx0.003/bayes_gaussian_finite_ancilla.npz",
+        "b": "results/qutip_reference/reference/27ef7fdefecc9020/white_N3072_dx0.003/bayes_gaussian_finite_ancilla.npz",
+        "sha256_a": "e6a53221efca004f273d52aae13a275c4b207c97c3b8735628fdc3fd403274e7",
+        "sha256_b": "4206670140a1b7ffabc2c46311d04c47f3a1a61e539952a242613c6f171e8c74",
+        "tolerance": 0.01,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "dx_comparison": {
+        "mean": [
+          0.0,
+          -0.001098672727122311,
+          0.000860848564891532
+        ],
+        "se": [
+          0.0,
+          0.0009199034095920622,
+          0.0011349396239880066
+        ],
+        "ci95_low": [
+          0.0,
+          -0.0029016502791783007,
+          -0.0013635922227523307
+        ],
+        "ci95_high": [
+          0.0,
+          0.0007043048249336791,
+          0.0030852893525353947
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/white_N3072_dx0.003/bayes_gaussian_finite_ancilla.npz",
+        "b": "results/qutip_reference/convergence/86ab35fc13213ba0/white_N3072_dx0.0015/bayes_gaussian_finite_ancilla.npz",
+        "sha256_a": "4206670140a1b7ffabc2c46311d04c47f3a1a61e539952a242613c6f171e8c74",
+        "sha256_b": "dea16fe32b538fa91694ca5dc9380c015976ed46932f77d67628b36960c965ee",
+        "tolerance": 0.005,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "logical_refinement": {
+        "mean": [
+          -2.1976170883064583e-12
+        ],
+        "se": [
+          1.0806712657070897e-12
+        ],
+        "ci95_low": [
+          -4.315693848219611e-12
+        ],
+        "ci95_high": [
+          -7.954032839330578e-14
+        ],
+        "max_absolute_difference": 7.179185024241974e-11,
+        "within_tolerance": true,
+        "snapshot_per_state": 32,
+        "raw_sha256": "dea16fe32b538fa91694ca5dc9380c015976ed46932f77d67628b36960c965ee"
+      },
+      "assessment": "difference_exceeds_one_percentage_point"
+    },
+    {
+      "point": "white",
+      "decoder": "lstm_256x3_s0",
+      "cycles": 2,
+      "classical": 0.8828125,
+      "finite_energy_replayed": 0.8634792630643052,
+      "reference": 0.8587909088690749,
+      "reference_ci95": [
+        0.8417242765582198,
+        0.8758575411799301
+      ],
+      "difference": -0.024021591130923836,
+      "paired_statistical_ci95": [
+        -0.04114489493832361,
+        -0.006898287323524065
+      ],
+      "numerical_sensitivity_budget": 0.015090515929696013,
+      "sensitivity_expanded_interval": [
+        -0.05623541086801962,
+        0.008192228606171949
+      ],
+      "all_numerical_gates_pass": false,
+      "cutoff_comparison": {
+        "mean": [
+          -7.401486830834377e-17,
+          0.002105497191309458,
+          -0.005038275605768249
+        ],
+        "se": [
+          0.0,
+          0.0024850150342618587,
+          0.0035148529732900264
+        ],
+        "ci95_low": [
+          -7.401486830834377e-17,
+          -0.0027650427768842194,
+          -0.011927260844370036
+        ],
+        "ci95_high": [
+          -7.401486830834377e-17,
+          0.0069760371595031356,
+          0.001850709632833538
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/white_N1536_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+        "b": "results/qutip_reference/reference/27ef7fdefecc9020/white_N3072_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+        "sha256_a": "a502f664d77ea8478ee4331484a41c7188ee6efa451554ebe7a283190605d7b2",
+        "sha256_b": "7359f7292f6c9523a878e6f67cf1d6a8830cd4eddf6f14fae618a045db234744",
+        "tolerance": 0.01,
+        "within_tolerance": [
+          true,
+          true,
+          false
+        ]
+      },
+      "dx_comparison": {
+        "mean": [
+          0.0,
+          -0.001098672727122311,
+          0.00011437188519531672
+        ],
+        "se": [
+          0.0,
+          0.0009199034095920622,
+          0.0015555811979016743
+        ],
+        "ci95_low": [
+          0.0,
+          -0.0029016502791783007,
+          -0.0029345112377195553
+        ],
+        "ci95_high": [
+          0.0,
+          0.0007043048249336791,
+          0.0031632550081101885
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/white_N3072_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+        "b": "results/qutip_reference/convergence/86ab35fc13213ba0/white_N3072_dx0.0015/lstm_256x3_s0_finite_ancilla.npz",
+        "sha256_a": "7359f7292f6c9523a878e6f67cf1d6a8830cd4eddf6f14fae618a045db234744",
+        "sha256_b": "372a8a32c8a181fe7376d8376e5a233dc927fe02e8d59be02eb0301c17d33779",
+        "tolerance": 0.005,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "logical_refinement": {
+        "mean": [
+          -1.6688719272258308e-12
+        ],
+        "se": [
+          1.100004194698758e-12
+        ],
+        "ci95_low": [
+          -3.824840531678322e-12
+        ],
+        "ci95_high": [
+          4.870966772266609e-13
+        ],
+        "max_absolute_difference": 7.721578931807471e-11,
+        "within_tolerance": true,
+        "snapshot_per_state": 32,
+        "raw_sha256": "372a8a32c8a181fe7376d8376e5a233dc927fe02e8d59be02eb0301c17d33779"
+      },
+      "assessment": "numerically_inconclusive"
+    },
+    {
+      "point": "readout_high",
+      "decoder": "nearest",
+      "cycles": 2,
+      "classical": 0.8313802083333334,
+      "finite_energy_replayed": 0.7982839960543601,
+      "reference": 0.7248292743236776,
+      "reference_ci95": [
+        0.7086402649640994,
+        0.7410182836832558
+      ],
+      "difference": -0.106550934009655,
+      "paired_statistical_ci95": [
+        -0.12896297674319906,
+        -0.08413889127611093
+      ],
+      "numerical_sensitivity_budget": 0.009214314566930682,
+      "sensitivity_expanded_interval": [
+        -0.13817729131012974,
+        -0.07492457670918025
+      ],
+      "all_numerical_gates_pass": true,
+      "cutoff_comparison": {
+        "mean": [
+          -7.401486830834377e-17,
+          0.0044226491083134934,
+          0.0018209061899428138
+        ],
+        "se": [
+          0.0,
+          0.0020565939751960418,
+          0.0028295412935556647
+        ],
+        "ci95_low": [
+          -7.401486830834377e-17,
+          0.00039179898610730134,
+          -0.003724892838195013
+        ],
+        "ci95_high": [
+          -7.401486830834377e-17,
+          0.008453499230519686,
+          0.007366705218080641
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N1536_dx0.003/nearest_finite_ancilla.npz",
+        "b": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N3072_dx0.003/nearest_finite_ancilla.npz",
+        "sha256_a": "30256051701f4c71518a823c655ee1688b2450fc830fd8923025ae28a5476d58",
+        "sha256_b": "ff026824a816566a481e9f3591770fd96b0244ffd8110c4b5b603380c29bd4e2",
+        "tolerance": 0.01,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "dx_comparison": {
+        "mean": [
+          0.0,
+          0.00020879871395314297,
+          -6.025709430813644e-05
+        ],
+        "se": [
+          0.0,
+          0.0007014209861944192,
+          0.0009102355319476251
+        ],
+        "ci95_low": [
+          0.0,
+          -0.0011659611569884473,
+          -0.0018442859543740902
+        ],
+        "ci95_high": [
+          0.0,
+          0.0015835585848947332,
+          0.0017237717657578174
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N3072_dx0.003/nearest_finite_ancilla.npz",
+        "b": "results/qutip_reference/convergence/86ab35fc13213ba0/readout_high_N3072_dx0.0015/nearest_finite_ancilla.npz",
+        "sha256_a": "ff026824a816566a481e9f3591770fd96b0244ffd8110c4b5b603380c29bd4e2",
+        "sha256_b": "b650d8a0723ea27bb2e6245fc7da8d18658ee98f837029c9238a6b9a84379173",
+        "tolerance": 0.005,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "logical_refinement": {
+        "mean": [
+          -5.142390961905436e-07
+        ],
+        "se": [
+          1.0915351470015877e-07
+        ],
+        "ci95_low": [
+          -7.281760537888123e-07
+        ],
+        "ci95_high": [
+          -3.003021385922749e-07
+        ],
+        "max_absolute_difference": 3.3233944759514245e-06,
+        "within_tolerance": true,
+        "snapshot_per_state": 32,
+        "raw_sha256": "b650d8a0723ea27bb2e6245fc7da8d18658ee98f837029c9238a6b9a84379173"
+      },
+      "assessment": "difference_exceeds_one_percentage_point"
+    },
+    {
+      "point": "readout_high",
+      "decoder": "bayes_gaussian",
+      "cycles": 2,
+      "classical": 0.837890625,
+      "finite_energy_replayed": 0.80270798647293,
+      "reference": 0.7300814626631221,
+      "reference_ci95": [
+        0.7141043618020116,
+        0.7460585635242326
+      ],
+      "difference": -0.10780916233687675,
+      "paired_statistical_ci95": [
+        -0.13080823037760306,
+        -0.08481009429615044
+      ],
+      "numerical_sensitivity_budget": 0.007711571798114649,
+      "sensitivity_expanded_interval": [
+        -0.13851980217571772,
+        -0.0770985224980358
+      ],
+      "all_numerical_gates_pass": true,
+      "cutoff_comparison": {
+        "mean": [
+          -7.401486830834377e-17,
+          0.0044226491083134934,
+          -0.00044045380184474245
+        ],
+        "se": [
+          0.0,
+          0.0020565939751960418,
+          0.0024485138347226506
+        ],
+        "ci95_low": [
+          -7.401486830834377e-17,
+          0.00039179898610730134,
+          -0.005239452733549064
+        ],
+        "ci95_high": [
+          -7.401486830834377e-17,
+          0.008453499230519686,
+          0.00435854512985958
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N1536_dx0.003/bayes_gaussian_finite_ancilla.npz",
+        "b": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N3072_dx0.003/bayes_gaussian_finite_ancilla.npz",
+        "sha256_a": "34b9051f1ab5c898e568081203bb5041ff2513ca1ad3bc8dcfc62a4266860c73",
+        "sha256_b": "099790993919db34b4b84dfb59eb6d68be81937ea8ccb53aa1505c42c55ea2f8",
+        "tolerance": 0.01,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "dx_comparison": {
+        "mean": [
+          0.0,
+          0.00020879871395314297,
+          -0.000809455494836215
+        ],
+        "se": [
+          0.0,
+          0.0007014209861944192,
+          0.0008466176870300316
+        ],
+        "ci95_low": [
+          0.0,
+          -0.0011659611569884473,
+          -0.0024687956700896346
+        ],
+        "ci95_high": [
+          0.0,
+          0.0015835585848947332,
+          0.0008498846804172046
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N3072_dx0.003/bayes_gaussian_finite_ancilla.npz",
+        "b": "results/qutip_reference/convergence/86ab35fc13213ba0/readout_high_N3072_dx0.0015/bayes_gaussian_finite_ancilla.npz",
+        "sha256_a": "099790993919db34b4b84dfb59eb6d68be81937ea8ccb53aa1505c42c55ea2f8",
+        "sha256_b": "c7f8c06f4101c631dddd6e399430027a6fc4fbb75c83731c9712821761e94707",
+        "tolerance": 0.005,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "logical_refinement": {
+        "mean": [
+          -6.195851614430523e-07
+        ],
+        "se": [
+          1.0406300027994531e-07
+        ],
+        "ci95_low": [
+          -8.23544894114921e-07
+        ],
+        "ci95_high": [
+          -4.156254287711835e-07
+        ],
+        "max_absolute_difference": 3.3233944759514245e-06,
+        "within_tolerance": true,
+        "snapshot_per_state": 32,
+        "raw_sha256": "c7f8c06f4101c631dddd6e399430027a6fc4fbb75c83731c9712821761e94707"
+      },
+      "assessment": "difference_exceeds_one_percentage_point"
+    },
+    {
+      "point": "readout_high",
+      "decoder": "lstm_256x3_s0",
+      "cycles": 2,
+      "classical": 0.796875,
+      "finite_energy_replayed": 0.766973972568667,
+      "reference": 0.7053686333641064,
+      "reference_ci95": [
+        0.6885108377464224,
+        0.7222264289817903
+      ],
+      "difference": -0.09150636663589257,
+      "paired_statistical_ci95": [
+        -0.11712187564080088,
+        -0.06589085763098425
+      ],
+      "numerical_sensitivity_budget": 0.011974390532692274,
+      "sensitivity_expanded_interval": [
+        -0.12909626617349315,
+        -0.053916467098291974
+      ],
+      "all_numerical_gates_pass": false,
+      "cutoff_comparison": {
+        "mean": [
+          -7.401486830834377e-17,
+          0.0044226491083134934,
+          0.005342162708157614
+        ],
+        "se": [
+          0.0,
+          0.0020565939751960418,
+          0.0027259235504741098
+        ],
+        "ci95_low": [
+          -7.401486830834377e-17,
+          0.00039179898610730134,
+          -5.492753810459536e-07
+        ],
+        "ci95_high": [
+          -7.401486830834377e-17,
+          0.008453499230519686,
+          0.010684874691696274
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N1536_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+        "b": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N3072_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+        "sha256_a": "5a7f4192413a16b83f16de860be670f38161cdc0093a5d7337fd948dbf892ebc",
+        "sha256_b": "7a90684d1fac5776b3b4184302b53d707cbde7ba03e6250249e97fa523e7c935",
+        "tolerance": 0.01,
+        "within_tolerance": [
+          true,
+          true,
+          false
+        ]
+      },
+      "dx_comparison": {
+        "mean": [
+          0.0,
+          0.00020879871395314297,
+          0.00011781879292692319
+        ],
+        "se": [
+          0.0,
+          0.0007014209861944192,
+          0.0005961198571295626
+        ],
+        "ci95_low": [
+          0.0,
+          -0.0011659611569884473,
+          -0.00105055465751615
+        ],
+        "ci95_high": [
+          0.0,
+          0.0015835585848947332,
+          0.0012861922433699963
+        ],
+        "a": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N3072_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+        "b": "results/qutip_reference/convergence/86ab35fc13213ba0/readout_high_N3072_dx0.0015/lstm_256x3_s0_finite_ancilla.npz",
+        "sha256_a": "7a90684d1fac5776b3b4184302b53d707cbde7ba03e6250249e97fa523e7c935",
+        "sha256_b": "97c9d6e1893e77379946850af522f7b0076a7aeac9b7028494389fbcc0eddd45",
+        "tolerance": 0.005,
+        "within_tolerance": [
+          true,
+          true,
+          true
+        ]
+      },
+      "logical_refinement": {
+        "mean": [
+          -5.000243848300145e-07
+        ],
+        "se": [
+          1.0659517077652967e-07
+        ],
+        "ci95_low": [
+          -7.089470804779034e-07
+        ],
+        "ci95_high": [
+          -2.911016891821256e-07
+        ],
+        "max_absolute_difference": 3.3235976260037603e-06,
+        "within_tolerance": true,
+        "snapshot_per_state": 32,
+        "raw_sha256": "97c9d6e1893e77379946850af522f7b0076a7aeac9b7028494389fbcc0eddd45"
+      },
+      "assessment": "numerically_inconclusive"
+    }
+  ],
+  "source_sha256": "63a7d6d112720fa6c8fffd319aafc187c6dbfdceca0123b0a473c5e957f3b348",
+  "interpretation": "Expanded intervals add empirical numerical-sensitivity bounds to sampling intervals; they are a conservative sensitivity summary, not a rigorous bound on the infinite-cutoff limit."
+}

@@ -1,0 +1,34 @@
+{
+  "raw_hashes_verified": true,
+  "population_gates": {
+    "nominal/nearest/N5120": {
+      "valid_population_horizon": 8,
+      "mean_edge": [
+        0.0,
+        6.413537177010266e-07,
+        1.2065974450459966e-06,
+        1.611165217155018e-06,
+        1.774512839245466e-06,
+        1.9155726271564295e-06,
+        2.1477683198910104e-06,
+        1.976618714916424e-06,
+        2.001484320022125e-06
+      ],
+      "max_edge": [
+        0.0,
+        5.80134639281808e-06,
+        1.4556499433027858e-05,
+        1.975968895586403e-05,
+        1.5025231662137559e-05,
+        1.6198669708657125e-05,
+        0.0006061811324960565,
+        1.7429176461975923e-05,
+        1.7814641038153646e-05
+      ],
+      "norm_error": 6.332934177066818e-12
+    }
+  },
+  "cutoff_comparisons": {},
+  "analysis_source_sha256": "7081f5fbcd72b7254563a1c1bb84b09bbaa61e3f56a5748f8010e7918c12de3d",
+  "note": "Population gates are necessary; separate cutoff, ancilla-dx and logical-bin refinement comparisons are also required."
+}

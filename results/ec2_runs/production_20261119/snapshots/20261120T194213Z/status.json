@@ -1,0 +1,40 @@
+{
+  "run_id": "qkp-20261120-003030-d2292a",
+  "status": "running_production_sweeps",
+  "started": "2026-11-20T00:32:42.190039+00:00",
+  "updated": "2026-11-20T19:37:20.039069+00:00",
+  "stages": {
+    "numerical": {
+      "status": "completed",
+      "jobs": 2,
+      "completed_jobs": 2,
+      "stage_failures": 0,
+      "registered_numerical_sample_checks_pass": true
+    },
+    "finite_gate": {
+      "status": "completed",
+      "jobs": 8,
+      "completed_jobs": 8,
+      "stage_failures": 8,
+      "registered_numerical_sample_checks_pass": false
+    },
+    "physics": {
+      "status": "refining_saved_scores",
+      "jobs": 20,
+      "completed_jobs": 12
+    },
+    "noise": {
+      "status": "refining_saved_scores",
+      "jobs": 14,
+      "completed_jobs": 12
+    },
+    "coverage": {
+      "status": "queued",
+      "jobs": 250
+    },
+    "rare": {
+      "status": "queued",
+      "jobs": 300
+    }
+  }
+}

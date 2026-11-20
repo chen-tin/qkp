@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-18",
+  "unit_tests": {
+    "passed": 8,
+    "environment": ".smoke-venv, Python 3.11.15"
+  },
+  "runs": [
+    {
+      "paper": "nbp4",
+      "mode": "smoke",
+      "status": "passed",
+      "classification": "infrastructure_smoke",
+      "path": "2025 - Quaternary Neural Belief Propagation Decoding of Quantum LDPC Codes With Overcomplete Check Matrices/runs/20261118T215634Z-smoke-44000",
+      "upstream_commit": "801ccc34a92f013422a90a421e6ad4e2149db86e",
+      "python": "3.13.13 | packaged by conda-forge | (main, Apr  8 2026, 02:29:07) [Clang 19.1.7 ]",
+      "protocol_sha256": "033d8d11351e2dd594dbefa09e0a617d9bb5dfda034a37042e538509d1cdb90e",
+      "adapter_sha256": "a8f1f756e547b225d4f049a5055b1caf8b7bd27e269035ae0c316312697cdc38",
+      "configuration_note": "Corrected ep0=.37 and effective stopping CLI limits"
+    },
+    {
+      "paper": "resgru",
+      "mode": "smoke",
+      "status": "passed",
+      "classification": "infrastructure_smoke",
+      "path": "2026 - Resgru - Syndrome decoder for heavy-hexagon quantum error correction code/runs/20261118T215305Z-smoke-598000",
+      "upstream_commit": "5765954cf34f0b776d44ef94fa65a8b77140ab6b",
+      "observations": {
+        "classification": "infrastructure_smoke",
+        "family": "resgru",
+        "seed": 1741,
+        "training_steps": 1,
+        "shots_train": 32,
+        "shots_test": 32,
+        "loss": 0.931826114654541,
+        "errors": 1,
+        "constant_zero_control_errors": 1,
+        "parameters": 869121,
+        "note": "Architecture, actual author circuit and gradient path only; not a performance reproduction."
+      }
+    },
+    {
+      "paper": "tcn",
+      "mode": "smoke",
+      "status": "passed",
+      "classification": "infrastructure_smoke",
+      "path": "2026 - Rethink the Role of Neural Decoders in Quantum Error Correction/runs/20261118T215448Z-smoke-995000",
+      "upstream_commit": "aeca633b4c30022193dfe1b18a41e860d3496b87",
+      "observations": {
+        "classification": "infrastructure_smoke",
+        "family": "tcn",
+        "seed": 1741,
+        "training_steps": 1,
+        "shots_train": 32,
+        "shots_test": 32,
+        "loss": 0.8197619915008545,
+        "errors": 3,
+        "constant_zero_control_errors": 3,
+        "parameters": 411393,
+        "note": "Architecture, actual author circuit and gradient path only; not a performance reproduction."
+      },
+      "python": "3.11.15 (main, Jun 11 2026, 04:04:09) [Clang 22.1.3 ]"
+    },
+    {
+      "paper": "mamba",
+      "mode": "replay",
+      "status": "passed",
+      "classification": "author_data_reanalysis",
+      "path": "2026 - Scalable neural decoders for practical real-time quantum error correction/runs/20261118T215104Z-replay-94000",
+      "upstream_commit": "f8db26927c061c25fa6828c70ea29bb477430e3b",
+      "observations": {
+        "classification": "author_data_reanalysis",
+        "rows": [
+          {
+            "condition": "real_time_experiment_data_p/surface_code_bZ_d3_r28_p0.002_mamba",
+            "noise_injected": true,
+            "model": "mamba",
+            "errors": 29761,
+            "shots": 500000,
+            "shot_failure_rate": 0.059522,
+            "ci95_low": 0.05886957073818374,
+            "ci95_high": 0.060181197522209955,
+            "actual_sha256": "cd68ea72ade85cc620cb629f99af958d2ed5213d4fad2f25817c40cf50a1fb46",
+            "predicted_sha256": "e1c7c9334c48392d874eed542c932680cd888988957e56ba6f2baae60a9b2755"
+          },
+          {
+            "condition": "real_time_experiment_data_p/surface_code_bZ_d3_r28_p0.002_mamba",
+            "noise_injected": false,
+            "model": "mamba",
+            "errors": 29529,
+            "shots": 500000,
+            "shot_failure_rate": 0.059058,
+            "ci95_low": 0.05840797427126558,
+            "ci95_high": 0.05971480111882091,
+            "actual_sha256": "7ca9737db879adddefa396ce49b2fe50b0bcad88364c6cd756dca8bb0be09903",
+            "predicted_sha256": "049ef4d56966e5078d4fd7568c818a68ece74dc35dc1b2c26c8d9cb0bf3bca44"
+          },
+          {
+            "condition": "real_time_experiment_data_p/surface_code_bZ_d3_r28_p0.002_transformer",
+            "noise_injected": true,
+            "model": "transformer",
+            "errors": 31568,
+            "shots": 500000,
+            "shot_failure_rate": 0.063136,
+            "ci95_low": 0.06246522643231092,
+            "ci95_high": 0.0638134862963807,
+            "actual_sha256": "06471be9b86e7f020f14faf0beec438f07e3fbd54642370ab0aaa39d2793ae8d",
+            "predicted_sha256": "5773c99bdd3f83fdec0ba12d969b165af1e5b981799d61132a63bdd672924138"
+          },
+          {
+            "condition": "real_time_experiment_data_p/surface_code_bZ_d3_r28_p0.002_transformer",
+            "noise_injected": false,
+            "model": "transformer",
+            "errors": 31361,
+            "shots": 500000,
+            "shot_failure_rate": 0.062722,
+            "ci95_low": 0.062053294964717065,
+            "ci95_high": 0.06339742412538149,
+            "actual_sha256": "a8bd0bdfbc50a94cb50b87a3d1a7292a632fb486b7aaccada6aa49377e4909ba",
+            "predicted_sha256": "0c1aa855d7ff782fc0035fc32dc63d1d729153bf13b89eb7a892007addc71c72"
+          }
+        ],
+        "note": "Released simulated 28-round outcomes; not regenerated models or hardware per-round targets."
+      }
+    }
+  ],
+  "full_paper_reproductions_completed": 0
+}

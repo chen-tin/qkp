@@ -1,0 +1,44 @@
+{
+  "classification": "effective_noise_calibration",
+  "input": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulation_quality_infrastructure/v1/calibration_fixture.npz",
+  "input_sha256": "337bb9cde5acbd8cfe620fa43435292342f1aebaa6957dce55e32077a5548756",
+  "source_sha256": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+  "units": "absolute q/p, [q,p]=i",
+  "model": {
+    "sigma_q_over_L": 0.19468359165639804,
+    "sigma_m_over_L": 0.05083254394802918,
+    "rho": 0.6933014107616275,
+    "means_over_L": {
+      "displacement": [
+        0.00908030204702934,
+        -0.01697521764695787
+      ],
+      "readout": [
+        -0.003313527959437108,
+        -0.00042224667976088206
+      ]
+    },
+    "quadrature_std_over_L": [
+      0.18670080145930004,
+      0.2014338664562104
+    ],
+    "note": "Zero-mean isotropic effective model; inspect quadrature asymmetry/means and held-out residuals."
+  },
+  "held_out": {
+    "standardized_innovations": {
+      "mean": 0.0033673524875771853,
+      "variance": 1.0169268741776065,
+      "fourth_moment": 3.202208478711289
+    },
+    "standardized_readout": {
+      "mean": -0.008222988924009127,
+      "variance": 0.9556315582023117,
+      "fourth_moment": 3.0371506580669196
+    },
+    "cross_quadrature_correlation": 0.09745961813907564,
+    "gaussian_prediction_nll_per_innovation": 0.03578809416356815,
+    "interpretation": "held-out diagnostics, not a hardware-equivalence test or a p-value"
+  },
+  "hardware_validated": false,
+  "measurement_contract": "sigma_m is additive classical readout SD; quantum resource width is separate"
+}

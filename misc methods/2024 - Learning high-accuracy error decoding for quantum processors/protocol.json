@@ -1,0 +1,35 @@
+{
+  "paper_id": "alphaqubit",
+  "status": "planned",
+  "registered": "2026-11-18",
+  "question": "Can the published metric be reproduced under the same physical and evaluation model?",
+  "audience": "Researchers assessing decoder failure across noise conditions",
+  "baseline": "Tensor-network decoder: d3 .03028 +/- .00023; d5 .02915 +/- .00016 per round",
+  "intervention": [
+    "recurrent Transformer"
+  ],
+  "settings": {
+    "hardware_data": "https://doi.org/10.5281/zenodo.6804040",
+    "hardware_finetune_fold": "even",
+    "hardware_test_fold": "odd",
+    "ensemble_models": 20,
+    "pretraining_examples_hardware_DEM": 2000000000,
+    "architecture_source": "Supplementary pseudocode",
+    "soft_inputs": [
+      "measurement posterior",
+      "leakage information"
+    ],
+    "duration_fit": "Use the publication fidelity-decay fit, including boundary treatment; do not replace with shot_errors/shots/rounds."
+  },
+  "hypothesis": "The registered metric can be matched under the original protocol; no predicted advantage in the qkp simulator is asserted.",
+  "decision_rule": "Compare independently measured estimates and uncertainty with reported values or marked visual-reading ranges. A match is provisional until model, split and units are audited; missing code/data or imprecise estimates remain inconclusive. Do not tune on held-out test data.",
+  "compute": "Smoke: CPU, one thread, small bounded input. Production: explicitly launch after resolving listed blockers; no full training is started by fetch/check.",
+  "uncertainty": "Wilson intervals for independent Bernoulli counts; bootstrap trajectory/seed-level fits for lifetimes and thresholds. Use three independent training seeds for new training, reported separately.",
+  "procedure": "Acquire the Sycamore data, preserve the even/odd partition, implement each supplementary pseudocode component, pretrain on the calibrated detector-error model, fine-tune and ensemble 20 independently trained models. Score fitted logical errors per round. The existing qkp generic Transformer is not an AlphaQubit reproduction.",
+  "blockers": [
+    "Paper releases detailed pseudocode, not an executable author training implementation or model checkpoints.",
+    "Hardware calibration, soft-input preprocessing, ensemble and fit must be implemented faithfully.",
+    "Full pretraining is a large accelerator workload."
+  ],
+  "raw_output_contract": "See ../RESULTS.md. Save raw outcomes, checkpoint/config/source hashes, environment, seed and noise units."
+}

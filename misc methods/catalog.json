@@ -1,0 +1,125 @@
+[
+  {
+    "id": "surface_gkp",
+    "folder": "2022 - Low-Overhead Fault-Tolerant Quantum Error Correction with the Surface-GKP Code",
+    "methods": [
+      "analog MWPM",
+      "correlated maximum likelihood",
+      "surface-GKP concatenation"
+    ],
+    "scope": "direct GKP concatenated fault tolerance",
+    "modes": []
+  },
+  {
+    "id": "gkp_cnn",
+    "folder": "2022 - Multidimensional Bose quantum error correction based on neural network decoder",
+    "methods": [
+      "CNN"
+    ],
+    "scope": "direct surface-GKP decoding",
+    "modes": []
+  },
+  {
+    "id": "analog_ldpc",
+    "folder": "2024 - Analog Information Decoding of Bosonic Quantum Low-Density Parity-Check Codes",
+    "methods": [
+      "analog belief propagation",
+      "overlapping-window decoding",
+      "bosonic qLDPC concatenation"
+    ],
+    "scope": "bosonic-code outer decoder; reported model is not our single-mode GKP simulator",
+    "modes": []
+  },
+  {
+    "id": "alphaqubit",
+    "folder": "2024 - Learning high-accuracy error decoding for quantum processors",
+    "methods": [
+      "recurrent Transformer"
+    ],
+    "scope": "transferable; surface-code decoding",
+    "modes": []
+  },
+  {
+    "id": "gnn",
+    "folder": "2025 - Data-driven decoding of quantum error correcting codes using graph neural networks",
+    "methods": [
+      "GNN"
+    ],
+    "scope": "transferable; surface and repetition codes",
+    "modes": []
+  },
+  {
+    "id": "learned_gkp",
+    "folder": "2025 - Neural-Network-Based Design of Approximate Gottesman-Kitaev-Preskill Code",
+    "methods": [
+      "learned codeword coefficients"
+    ],
+    "scope": "direct GKP encoding optimization; not a decoder",
+    "modes": []
+  },
+  {
+    "id": "feedback",
+    "folder": "2025 - Non-Markovian Feedback for Optimized Quantum Error Correction",
+    "methods": [
+      "recurrent feedback control",
+      "feedback-GRAPE"
+    ],
+    "scope": "direct GKP control; not a post-processing decoder",
+    "modes": [
+      "train"
+    ]
+  },
+  {
+    "id": "nbp4",
+    "folder": "2025 - Quaternary Neural Belief Propagation Decoding of Quantum LDPC Codes With Overcomplete Check Matrices",
+    "methods": [
+      "neural belief propagation",
+      "model-based neural decoder"
+    ],
+    "scope": "transferable; toric and qLDPC codes",
+    "modes": [
+      "smoke",
+      "evaluate"
+    ]
+  },
+  {
+    "id": "resgru",
+    "folder": "2026 - Resgru - Syndrome decoder for heavy-hexagon quantum error correction code",
+    "methods": [
+      "GRU",
+      "residual MLP"
+    ],
+    "scope": "transferable; heavy-hexagon, not GKP",
+    "modes": [
+      "smoke"
+    ]
+  },
+  {
+    "id": "tcn",
+    "folder": "2026 - Rethink the Role of Neural Decoders in Quantum Error Correction",
+    "methods": [
+      "TCN",
+      "3D CNN",
+      "MLP",
+      "Transformer",
+      "GNN"
+    ],
+    "scope": "transferable; surface-code benchmark",
+    "modes": [
+      "smoke"
+    ]
+  },
+  {
+    "id": "mamba",
+    "folder": "2026 - Scalable neural decoders for practical real-time quantum error correction",
+    "methods": [
+      "Mamba",
+      "state-space model"
+    ],
+    "scope": "transferable; surface-code decoding",
+    "modes": [
+      "smoke",
+      "replay"
+    ]
+  }
+]

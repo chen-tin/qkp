@@ -1,0 +1,30 @@
+{
+  "started_utc": "2026-11-19T14:58:21Z",
+  "status": "completed",
+  "command": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-u",
+    "-m",
+    "experiments.qutip_reference",
+    "--convergence",
+    "--cutoffs",
+    "3072",
+    "4096",
+    "--rounds",
+    "8",
+    "--per-state",
+    "512",
+    "--points",
+    "nominal",
+    "--decoders",
+    "nearest"
+  ],
+  "protocol_sha256": "057c3eb8ceaf8f6ea5f1775637eb50450a4e7f71ca9ea818d9c7385544ccbeb5",
+  "child_pid": 53738,
+  "returncode": 0,
+  "run": "results/qutip_reference/convergence/e042e0a1b30d34d0",
+  "cutoff_equivalence_pass": false,
+  "population_gates_pass": false,
+  "conclusion": "numerically_inconclusive",
+  "completed_utc": "2026-11-19T15:04:35Z"
+}

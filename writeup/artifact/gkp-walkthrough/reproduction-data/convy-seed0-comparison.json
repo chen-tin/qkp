@@ -1,0 +1,13 @@
+{
+  "seed": 0,
+  "final_fidelity": 0.8348333333333333,
+  "published_lstm_compatible": false,
+  "paired_lstm_minus_bayes": -0.004966666666666667,
+  "paired_normal95": [
+    -0.006819516747412938,
+    -0.0031138165859203957
+  ],
+  "n": 30000,
+  "predictions_sha256": "bf8d852922cb5fe27ff5bc742d9ad6421fd09f10f827de482abe75c388956b8f",
+  "metric": "Final exact-state correctness, paired by trajectory."
+}

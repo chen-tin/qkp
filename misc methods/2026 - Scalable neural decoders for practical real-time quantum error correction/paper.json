@@ -1,0 +1,46 @@
+{
+  "id": "mamba",
+  "title": "Scalable neural decoders for practical real-time quantum error correction",
+  "year": 2026,
+  "methods": [
+    "Mamba",
+    "state-space model"
+  ],
+  "scope": "transferable; surface-code decoding",
+  "source_url": "https://www.nature.com/articles/s41534-026-01403-y",
+  "blockers": [
+    "Author training/decoder code is withheld for intellectual-property reasons; available on request.",
+    "Public repository releases numerical real-time data, not the hardware model or training code.",
+    "Replay results are shot failure rates and must not be compared directly to hardware per-round targets."
+  ],
+  "supported_modes": [
+    "smoke",
+    "replay"
+  ],
+  "sources": [
+    {
+      "name": "publication",
+      "url": "https://www.nature.com/articles/s41534-026-01403-y",
+      "download": false
+    },
+    {
+      "name": "paper.pdf",
+      "url": "https://www.nature.com/articles/s41534-026-01403-y_reference.pdf",
+      "download": true,
+      "sha256": "5792030fb400d82c41a9042c450aa1d7200244a9520b90d19ad8e29667b6fcb5"
+    }
+  ],
+  "upstream": {
+    "url": "https://github.com/qDNA-yonsei/NeuralDecoder_v1.git",
+    "commit": "f8db26927c061c25fa6828c70ea29bb477430e3b",
+    "pin_date": "2026-11-18",
+    "publication_release": false,
+    "checkout_paths": [
+      "/README.md",
+      "/LICENSE",
+      "/dataset/real_time_experiment_data_p/surface_code_bZ_d3_r28_p0.002_mamba/",
+      "/dataset/real_time_experiment_data_p/surface_code_bZ_d3_r28_p0.002_transformer/"
+    ]
+  },
+  "evidence_status": "published_metrics_verified; no new paper-metric reproduction claimed"
+}

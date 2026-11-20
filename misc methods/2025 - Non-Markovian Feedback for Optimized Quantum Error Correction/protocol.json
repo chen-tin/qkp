@@ -1,0 +1,41 @@
+{
+  "paper_id": "feedback",
+  "status": "planned",
+  "registered": "2026-11-18",
+  "question": "Can the published metric be reproduced under the same physical and evaluation model?",
+  "audience": "Researchers assessing decoder failure across noise conditions",
+  "baseline": "Standard sBs, Markovian feedback, autonomous QEC under matched physical durations and noise",
+  "intervention": [
+    "recurrent feedback control",
+    "feedback-GRAPE"
+  ],
+  "settings": {
+    "controls": "15 sBs gate parameters",
+    "simulation": "noisy cavity + ancilla, Fock truncation convergence required",
+    "training_method": "model-based feedback-GRAPE",
+    "author_runner_defaults": {
+      "N": 100,
+      "Delta": 0.34,
+      "max_steps": 21,
+      "batch_size": 8,
+      "num_training_episodes": 101,
+      "lr": 0.0001,
+      "protocol": "sBs",
+      "dynamics_type": "Sivak2023",
+      "model": "RNN",
+      "noise_level": "high"
+    },
+    "lifetime": "fit average logical channel fidelity using all six cardinal logical states; do not fit only +Z"
+  },
+  "hypothesis": "The registered metric can be matched under the original protocol; no predicted advantage in the qkp simulator is asserted.",
+  "decision_rule": "Compare independently measured estimates and uncertainty with reported values or marked visual-reading ranges. A match is provisional until model, split and units are audited; missing code/data or imprecise estimates remain inconclusive. Do not tune on held-out test data.",
+  "compute": "Smoke: CPU, one thread, small bounded input. Production: explicitly launch after resolving listed blockers; no full training is started by fetch/check.",
+  "uncertainty": "Wilson intervals for independent Bernoulli counts; bootstrap trajectory/seed-level fits for lifetimes and thresholds. Use three independent training seeds for new training, reported separately.",
+  "procedure": "Run the released feedback-GRAPE example to establish the environment, then reproduce the paper\u2019s matched protocols and six logical-state channel-fidelity trajectories. Fit lifetimes with intervals across trajectories and training seeds. This controller changes physical gates; compare it in a separate experiment from classical post-processing decoders.",
+  "blockers": [
+    "Default author runner is a short example, not the full Figure 3 recipe.",
+    "All noise regimes, trained checkpoints, six-state evaluation and lifetime fitting need configuration before a Figure 3 claim.",
+    "TensorFlow and old Keras APIs need an isolated compatible environment."
+  ],
+  "raw_output_contract": "See ../RESULTS.md. Save raw outcomes, checkpoint/config/source hashes, environment, seed and noise units."
+}

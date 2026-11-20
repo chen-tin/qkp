@@ -1,0 +1,227 @@
+{
+  "complete": true,
+  "config": {
+    "states": null,
+    "cycle": null,
+    "columns": null,
+    "data_cutoff": 6,
+    "fock_levels": [
+      0,
+      2
+    ],
+    "ancilla_cutoffs": [
+      64,
+      96
+    ],
+    "sigma": 0.5,
+    "radius": 12.0,
+    "dy": 0.04,
+    "coupling": 1.0,
+    "max_joint": 2000000,
+    "max_scratch_mb": 512,
+    "output": "results/simulation_quality_infrastructure/v1/instrument",
+    "audit_only": false,
+    "inputs": {
+      "kind": "Fock_states",
+      "levels": [
+        0,
+        2
+      ],
+      "cutoff": 6
+    },
+    "source_hashes": {
+      "experiments/validate_reference_states.py": "438c0778b21d56ccc29141af520b938a9441ee5db6635f2f51bea87d00b510a3",
+      "quantum/measurement_benchmark.py": "a3609bd2dce0525d46d885083e791b6cc5447eb338741f235216c90df06c3730",
+      "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+      "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5"
+    },
+    "python": "3.13.13",
+    "qutip": "5.3.1"
+  },
+  "input_sha256": "b976c700f1f970c8b558f57a3d1ceec2f2ecd5ff6c3dc52f0648c30fdec84350",
+  "rows": [
+    {
+      "ancilla_cutoff": 64,
+      "axis": "q",
+      "column": 0,
+      "outcome_tv": 1.0009416648503024e-12,
+      "weighted_conditional_infidelity": 1.7105254884830915e-16,
+      "worst_conditional_infidelity_relevant": 8.881784197001252e-16,
+      "relevant_reference_probability_mass": 0.9999998827918201,
+      "reference_integrated_mass": 0.999999999999942,
+      "candidate_integrated_mass": 1.0000000000000002,
+      "joint_norm_error": 5.784261958297066e-14,
+      "ancilla_boundary_mass": 3.929700977608406e-22,
+      "grid_infidelity_change": 9.245313313432328e-18,
+      "grid_tv_change": 1.281601474194871e-15
+    },
+    {
+      "ancilla_cutoff": 64,
+      "axis": "q",
+      "column": 1,
+      "outcome_tv": 1.0931937674467253e-11,
+      "weighted_conditional_infidelity": 8.970553510993118e-17,
+      "worst_conditional_infidelity_relevant": 7.771561172376096e-16,
+      "relevant_reference_probability_mass": 0.9999999002762122,
+      "reference_integrated_mass": 0.9999999999995366,
+      "candidate_integrated_mass": 1.0,
+      "joint_norm_error": 4.634070904785403e-13,
+      "ancilla_boundary_mass": 1.9043794225870868e-20,
+      "grid_infidelity_change": 5.119916752265335e-18,
+      "grid_tv_change": 1.334405981573706e-14
+    },
+    {
+      "ancilla_cutoff": 64,
+      "axis": "p",
+      "column": 0,
+      "outcome_tv": 1.0009416648503024e-12,
+      "weighted_conditional_infidelity": 1.7105254884830915e-16,
+      "worst_conditional_infidelity_relevant": 8.881784197001252e-16,
+      "relevant_reference_probability_mass": 0.9999998827918201,
+      "reference_integrated_mass": 0.999999999999942,
+      "candidate_integrated_mass": 1.0000000000000002,
+      "joint_norm_error": 5.784261958297066e-14,
+      "ancilla_boundary_mass": 3.929700977608406e-22,
+      "grid_infidelity_change": 9.245313313432328e-18,
+      "grid_tv_change": 1.281601474194871e-15
+    },
+    {
+      "ancilla_cutoff": 64,
+      "axis": "p",
+      "column": 1,
+      "outcome_tv": 1.0931937674467253e-11,
+      "weighted_conditional_infidelity": 8.970553510993118e-17,
+      "worst_conditional_infidelity_relevant": 7.771561172376096e-16,
+      "relevant_reference_probability_mass": 0.9999999002762122,
+      "reference_integrated_mass": 0.9999999999995366,
+      "candidate_integrated_mass": 1.0,
+      "joint_norm_error": 4.634070904785403e-13,
+      "ancilla_boundary_mass": 1.9043794225870868e-20,
+      "grid_infidelity_change": 5.119916752265335e-18,
+      "grid_tv_change": 1.334405981573706e-14
+    },
+    {
+      "ancilla_cutoff": 96,
+      "axis": "q",
+      "column": 0,
+      "outcome_tv": 1.284206488941898e-12,
+      "weighted_conditional_infidelity": 1.262588652712781e-16,
+      "worst_conditional_infidelity_relevant": 9.992007221626409e-16,
+      "relevant_reference_probability_mass": 0.9999998827918198,
+      "reference_integrated_mass": 0.9999999999999232,
+      "candidate_integrated_mass": 1.0000000000000002,
+      "joint_norm_error": 7.638334409421077e-14,
+      "ancilla_boundary_mass": 1.913463540164946e-31,
+      "grid_infidelity_change": 2.864746440274295e-17,
+      "grid_tv_change": 1.7658248491487062e-15
+    },
+    {
+      "ancilla_cutoff": 96,
+      "axis": "q",
+      "column": 1,
+      "outcome_tv": 9.795765264862606e-12,
+      "weighted_conditional_infidelity": 9.480871309677944e-17,
+      "worst_conditional_infidelity_relevant": 6.661338147750939e-16,
+      "relevant_reference_probability_mass": 0.9999999002762109,
+      "reference_integrated_mass": 0.9999999999994557,
+      "candidate_integrated_mass": 1.0,
+      "joint_norm_error": 5.443423489737143e-13,
+      "ancilla_boundary_mass": 9.664424389029709e-30,
+      "grid_infidelity_change": 1.943029909205275e-18,
+      "grid_tv_change": 1.2663300664257894e-14
+    },
+    {
+      "ancilla_cutoff": 96,
+      "axis": "p",
+      "column": 0,
+      "outcome_tv": 1.284206488941898e-12,
+      "weighted_conditional_infidelity": 1.262588652712781e-16,
+      "worst_conditional_infidelity_relevant": 9.992007221626409e-16,
+      "relevant_reference_probability_mass": 0.9999998827918198,
+      "reference_integrated_mass": 0.9999999999999232,
+      "candidate_integrated_mass": 1.0000000000000002,
+      "joint_norm_error": 7.638334409421077e-14,
+      "ancilla_boundary_mass": 1.913463540164946e-31,
+      "grid_infidelity_change": 2.864746440274295e-17,
+      "grid_tv_change": 1.7658248491487062e-15
+    },
+    {
+      "ancilla_cutoff": 96,
+      "axis": "p",
+      "column": 1,
+      "outcome_tv": 9.795765264862606e-12,
+      "weighted_conditional_infidelity": 9.480871309677944e-17,
+      "worst_conditional_infidelity_relevant": 6.661338147750939e-16,
+      "relevant_reference_probability_mass": 0.9999999002762109,
+      "reference_integrated_mass": 0.9999999999994557,
+      "candidate_integrated_mass": 1.0,
+      "joint_norm_error": 5.443423489737143e-13,
+      "ancilla_boundary_mass": 9.664424389029709e-30,
+      "grid_infidelity_change": 1.943029909205275e-18,
+      "grid_tv_change": 1.2663300664257894e-14
+    }
+  ],
+  "refinements": [
+    {
+      "ancilla_cutoff": 96,
+      "axis": "q",
+      "column": 0,
+      "outcome_tv": 3.550360253419349e-13,
+      "weighted_conditional_infidelity": 1.4291653719585906e-16,
+      "worst_conditional_infidelity_relevant": 6.661338147750939e-16,
+      "relevant_reference_probability_mass": 0.9999998827918198,
+      "reference_integrated_mass": 0.9999999999999232,
+      "candidate_integrated_mass": 0.999999999999942,
+      "pass": true
+    },
+    {
+      "ancilla_cutoff": 96,
+      "axis": "q",
+      "column": 1,
+      "outcome_tv": 8.593400206386871e-12,
+      "weighted_conditional_infidelity": 8.220752419825708e-17,
+      "worst_conditional_infidelity_relevant": 6.661338147750939e-16,
+      "relevant_reference_probability_mass": 0.9999999002762109,
+      "reference_integrated_mass": 0.9999999999994557,
+      "candidate_integrated_mass": 0.9999999999995366,
+      "pass": true
+    },
+    {
+      "ancilla_cutoff": 96,
+      "axis": "p",
+      "column": 0,
+      "outcome_tv": 3.550360253419349e-13,
+      "weighted_conditional_infidelity": 1.4291653719585906e-16,
+      "worst_conditional_infidelity_relevant": 6.661338147750939e-16,
+      "relevant_reference_probability_mass": 0.9999998827918198,
+      "reference_integrated_mass": 0.9999999999999232,
+      "candidate_integrated_mass": 0.999999999999942,
+      "pass": true
+    },
+    {
+      "ancilla_cutoff": 96,
+      "axis": "p",
+      "column": 1,
+      "outcome_tv": 8.593400206386871e-12,
+      "weighted_conditional_infidelity": 8.220752419825708e-17,
+      "worst_conditional_infidelity_relevant": 6.661338147750939e-16,
+      "relevant_reference_probability_mass": 0.9999999002762109,
+      "reference_integrated_mass": 0.9999999999994557,
+      "candidate_integrated_mass": 0.9999999999995366,
+      "pass": true
+    }
+  ],
+  "raw_hashes": {
+    "Na64_q_input0.npz": "fa6ef58df3c4a1921ed9456f2b15e09e4fd6836bb535a26ce0954a0caddc4007",
+    "Na64_q_input1.npz": "36b3935195f4183d4c622726c185cff83599b6f57462a4d0d15a47fbc1919d35",
+    "Na64_p_input0.npz": "520dfec6c88a0d8853a531a7a589bd5308e466b81e85273e8dcc07bc411e8321",
+    "Na64_p_input1.npz": "76ae00740331257f08c9fb39483c0d08a946dfa5532f989280f24d3834b17d59",
+    "Na96_q_input0.npz": "d7576fa7dde1321c3f53f443db9bdc152388ab75b8a54a940eaacb27ed70d92c",
+    "Na96_q_input1.npz": "1a111f3d0f6914a9be0ac59ff40d86daa35d65b7b8d86150a0834bcb3d93d469",
+    "Na96_p_input0.npz": "b79ee76d366d6593e4a665ef7e26bb5388138aa9ce796adbfe46497777d03559",
+    "Na96_p_input1.npz": "6da82b98769b1cac0acd8f1059b3e16dc878198266f852051bc4f68a917044ab"
+  },
+  "pass": true,
+  "scope": "single extraction on supplied finite data operators; common preparation/feedback/scoring",
+  "scratch_bytes_estimate": 940320
+}

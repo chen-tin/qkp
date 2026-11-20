@@ -1,0 +1,133 @@
+{
+  "classification": "bounded independent software pilot, not production or numerical certification",
+  "runs": {
+    "control": {
+      "path": "results/qutip_reference/smoke/adaa00c49f057046",
+      "hashes_and_raw_seals_verified": true,
+      "stages": {
+        "replayed_corrections": {
+          "max_norm_error": 2.042810365310288e-14,
+          "max_edge": 0.012022407464332613,
+          "max_mean_edge": 0.007939702316901725,
+          "valid_by_cycle": [
+            false,
+            false,
+            false
+          ],
+          "pass": false,
+          "stage_count": 25
+        },
+        "finite_ancilla": {
+          "max_norm_error": 5.995204332975845e-15,
+          "max_edge": 0.5195863573960879,
+          "max_mean_edge": 0.20613008593477097,
+          "valid_by_cycle": [
+            false,
+            false,
+            false
+          ],
+          "pass": false,
+          "stage_count": 25
+        }
+      },
+      "physics": {
+        "cycle_time": 1.0,
+        "gate_duration": 0.0,
+        "feedback_delay": 0.0,
+        "loss_rate": 0.0,
+        "dephasing_rate": 0.0,
+        "detector_efficiency": 1.0,
+        "detector_std": 0.0,
+        "coupling": 1.0,
+        "feedback_gain": 1.0,
+        "control_rotation": 0.0,
+        "cooling_transmissivity": 1.0,
+        "displacement_provenance": "independent",
+        "gate_backend": "lumped",
+        "gate_ancilla_cutoff": 512,
+        "ancilla_loss_rate": 0.0,
+        "ancilla_dephasing_rate": 0.0,
+        "homodyne_radius": 60.0,
+        "homodyne_dy": 0.01,
+        "max_joint_dimension": 2000000,
+        "max_gate_scratch_mb": 512.0,
+        "idle_time": 1.0,
+        "detector_variance": 0.0,
+        "duration_model": "symmetric_lumped_noise_around_instantaneous_instrument",
+        "cooling_model": "explicit_passive_loss_not_GKP_stabilization"
+      }
+    },
+    "combined_physical": {
+      "path": "results/qutip_reference/smoke/1d32cca10210d308",
+      "hashes_and_raw_seals_verified": true,
+      "stages": {
+        "replayed_corrections": {
+          "max_norm_error": 5.995204332975845e-15,
+          "max_edge": 0.020079099636735466,
+          "max_mean_edge": 0.007939702316901725,
+          "valid_by_cycle": [
+            false,
+            false,
+            false
+          ],
+          "pass": false,
+          "stage_count": 25
+        },
+        "finite_ancilla": {
+          "max_norm_error": 5.995204332975845e-15,
+          "max_edge": 0.3529072478427842,
+          "max_mean_edge": 0.13391629605312283,
+          "valid_by_cycle": [
+            false,
+            false,
+            false
+          ],
+          "pass": false,
+          "stage_count": 25
+        }
+      },
+      "physics": {
+        "cycle_time": 1.0,
+        "gate_duration": 0.2,
+        "feedback_delay": 0.1,
+        "loss_rate": 0.02,
+        "dephasing_rate": 0.005,
+        "detector_efficiency": 0.8,
+        "detector_std": 0.02,
+        "coupling": 1.0,
+        "feedback_gain": 1.0,
+        "control_rotation": 0.0,
+        "cooling_transmissivity": 1.0,
+        "displacement_provenance": "independent",
+        "gate_backend": "lumped",
+        "gate_ancilla_cutoff": 512,
+        "ancilla_loss_rate": 0.0,
+        "ancilla_dephasing_rate": 0.0,
+        "homodyne_radius": 60.0,
+        "homodyne_dy": 0.01,
+        "max_joint_dimension": 2000000,
+        "max_gate_scratch_mb": 512.0,
+        "idle_time": 0.39999999999999997,
+        "detector_variance": 0.12539999999999998,
+        "duration_model": "symmetric_lumped_noise_around_instantaneous_instrument",
+        "cooling_model": "explicit_passive_loss_not_GKP_stabilization"
+      }
+    }
+  },
+  "production_plans": {
+    "numerical": {
+      "plan_seal_current_sources_and_snapshots_verified": true,
+      "expected_jobs": 2,
+      "estimated_output_bytes": 950796288
+    },
+    "finite_gate": {
+      "plan_seal_current_sources_and_snapshots_verified": true,
+      "expected_jobs": 8,
+      "estimated_output_bytes": 6144000
+    }
+  },
+  "decoder_privacy": "Source inspection: only dec.decode(s) is called. Raw syndrome equals wrap(reported/coupling); nearest correction equals that input. Latent ideal outcomes/density and environmental losses remain separate diagnostics.",
+  "common_exogenous_noise_verified": true,
+  "limitations": "No performance inference: both tiny-cutoff pilots fail population gates; scoring/cutoff/instrument refinement not attempted. Physical intervention combines channels and detector settings solely to test execution and privacy.",
+  "production_blocker": "No software blocker found by this pilot. Available storage remains main-agent responsibility; neither pilot certifies production numerics."
+}

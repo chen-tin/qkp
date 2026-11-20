@@ -1,0 +1,40 @@
+{
+  "id": "nbp4",
+  "title": "Quaternary Neural Belief Propagation Decoding of Quantum LDPC Codes With Overcomplete Check Matrices",
+  "year": 2025,
+  "methods": [
+    "neural belief propagation",
+    "model-based neural decoder"
+  ],
+  "scope": "transferable; toric and qLDPC codes",
+  "source_url": "https://doi.org/10.1109/ACCESS.2025.3539475",
+  "blockers": [
+    "The released C++ executable defaults to GB [[46,2]] with six iterations; the adapter makes an explicit copy with toric/18-iteration parameters.",
+    "Training weights are public; a fresh-training replication needs the notebook settings and independent seeds.",
+    "The adapter compiles a serial C++17 copy and records removal of OpenMP includes/pragmas; no libomp is required."
+  ],
+  "supported_modes": [
+    "smoke",
+    "evaluate"
+  ],
+  "sources": [
+    {
+      "name": "publication",
+      "url": "https://doi.org/10.1109/ACCESS.2025.3539475",
+      "download": false
+    },
+    {
+      "name": "paper.pdf",
+      "url": "https://publikationen.bibliothek.kit.edu/1000179617/157326592",
+      "download": true,
+      "sha256": "1b96f05ebb0f9d8c1ccb5e2e2287f4cecc12460533f418fe95d80ae40fb19ff9"
+    }
+  ],
+  "upstream": {
+    "url": "https://github.com/kit-cel/Quantum-Neural-BP4-demo.git",
+    "commit": "801ccc34a92f013422a90a421e6ad4e2149db86e",
+    "pin_date": "2026-11-18",
+    "publication_release": false
+  },
+  "evidence_status": "published_metrics_verified; no new paper-metric reproduction claimed"
+}

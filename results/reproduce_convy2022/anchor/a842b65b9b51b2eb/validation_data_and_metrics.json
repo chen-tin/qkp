@@ -1,0 +1,47 @@
+{
+  "initial_state_counts": [
+    3750,
+    3750,
+    3750,
+    3750,
+    3750,
+    3750,
+    3750,
+    3750
+  ],
+  "first_interval_flip_fraction": 0.0034666666666666665,
+  "per_qubit_odd_flip_probabilities": [
+    0.00128976,
+    0.00127968,
+    0.00128048
+  ],
+  "inferred_gamma_us_inv": [
+    0.04035707334556699,
+    0.040041261886962075,
+    0.04006632605524314
+  ],
+  "measurement_noise_mean": [
+    -0.0007008262824312846,
+    -0.00099260479514122
+  ],
+  "measurement_noise_variance": [
+    6.648323164115624,
+    6.647788417465455
+  ],
+  "variance_expected": 6.648936170212766,
+  "exact_final_correct": 25194,
+  "final_residual_xor_counts": [
+    25194,
+    618,
+    294,
+    145,
+    618,
+    41,
+    145,
+    2945
+  ],
+  "final_majority_recovery_fraction": 0.8908,
+  "all_step_exact_accuracy": 0.8919405866666666,
+  "author_transition_estimator_max_abs_difference": 7.473530938550965e-08,
+  "empirical_vs_exact_transition_max_abs_difference": 4.043807392106746e-05
+}

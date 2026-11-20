@@ -9,3 +9,30 @@ data/
 results/benchmarks/cache/
 results/benchmarks/*.log
 results/runlog/
+
+# Local secrets and tool caches
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.DS_Store
+
+# Keep compact evidence, protocols and reports; regenerate or archive raw arrays.
+/results/**/*.npy
+/results/**/*.npz
+/results/**/*.pt
+/results/**/*.pth
+/results/**/*.log
+/results/**/.run.lock
+/results/**/*.tmp
+
+# The frozen production controller is small and required by the EC2 source bundle.
+!/results/lstm_size_sweep/full/9aab4963bc37dcea/checkpoints/h256_l3_s0.pt
+
+# Live downloads and launch payloads change independently of Git. Publish dated snapshots.
+/results/ec2_runs/*/*
+!/results/ec2_runs/*/manifest.json
+!/results/ec2_runs/*/snapshots/
+
+# Downloadable bundles duplicate the checked-in offline HTML and assets.
+/writeup/artifact/*.zip

@@ -1,0 +1,549 @@
+{
+  "raw_hashes_verified": true,
+  "population_gates": {
+    "nominal/nearest/N1536": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        8.074361090907873e-109,
+        4.6609629447138053e-07,
+        8.233988538250858e-07
+      ],
+      "max_edge": [
+        9.863356198084578e-109,
+        2.8663889013002538e-06,
+        0.00027875424460661804
+      ],
+      "norm_error": 1.1352030426792226e-12
+    },
+    "nominal/bayes_gaussian/N1536": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        8.074361090907873e-109,
+        4.6609629447138053e-07,
+        8.227844974117998e-07
+      ],
+      "max_edge": [
+        9.863356198084578e-109,
+        2.8663889013002538e-06,
+        0.00027875424460661804
+      ],
+      "norm_error": 1.1352030426792226e-12
+    },
+    "nominal/lstm_256x3_s0/N1536": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        8.074361090907873e-109,
+        4.6609629447138053e-07,
+        8.228389516552827e-07
+      ],
+      "max_edge": [
+        9.863356198084578e-109,
+        2.8663889013002538e-06,
+        0.00027875424460661804
+      ],
+      "norm_error": 1.1352030426792226e-12
+    },
+    "white/nearest/N1536": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        8.074361090907873e-109,
+        4.6609629447138053e-07,
+        8.167150832923829e-07
+      ],
+      "max_edge": [
+        9.863356198084578e-109,
+        2.8663889013002538e-06,
+        0.00027985160168149186
+      ],
+      "norm_error": 7.167599846980011e-13
+    },
+    "white/bayes_gaussian/N1536": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        8.074361090907873e-109,
+        4.6609629447138053e-07,
+        8.165025118599604e-07
+      ],
+      "max_edge": [
+        9.863356198084578e-109,
+        2.8663889013002538e-06,
+        0.00027985160168149186
+      ],
+      "norm_error": 7.385203559806541e-13
+    },
+    "white/lstm_256x3_s0/N1536": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        8.074361090907873e-109,
+        4.6609629447138053e-07,
+        8.191464632874793e-07
+      ],
+      "max_edge": [
+        9.863356198084578e-109,
+        2.8663889013002538e-06,
+        0.00027985160168149186
+      ],
+      "norm_error": 7.167599846980011e-13
+    },
+    "readout_high/nearest/N1536": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        8.074361090907873e-109,
+        2.731933850704985e-08,
+        2.6785387372332482e-08
+      ],
+      "max_edge": [
+        9.863356198084578e-109,
+        1.2176202940885182e-07,
+        1.8740156519702443e-07
+      ],
+      "norm_error": 9.314771176605063e-13
+    },
+    "readout_high/bayes_gaussian/N1536": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        8.074361090907873e-109,
+        2.731933850704985e-08,
+        2.6875003082755217e-08
+      ],
+      "max_edge": [
+        9.863356198084578e-109,
+        1.2176202940885182e-07,
+        1.8740156519702443e-07
+      ],
+      "norm_error": 9.314771176605063e-13
+    },
+    "readout_high/lstm_256x3_s0/N1536": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        8.074361090907873e-109,
+        2.731933850704985e-08,
+        2.6738665145497792e-08
+      ],
+      "max_edge": [
+        9.863356198084578e-109,
+        1.2176202940885182e-07,
+        1.8740156519702443e-07
+      ],
+      "norm_error": 9.314771176605063e-13
+    },
+    "nominal/nearest/N3072": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        3.696849376036752e-217,
+        1.7488658627767128e-06,
+        2.0717242510582233e-06
+      ],
+      "max_edge": [
+        4.7203483695597485e-217,
+        7.1519681175189396e-06,
+        1.508141313114643e-05
+      ],
+      "norm_error": 2.502886786714953e-12
+    },
+    "nominal/bayes_gaussian/N3072": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        3.696849376036752e-217,
+        1.7488658627767128e-06,
+        2.07255301446269e-06
+      ],
+      "max_edge": [
+        4.7203483695597485e-217,
+        7.1519681175189396e-06,
+        1.508141313114643e-05
+      ],
+      "norm_error": 2.502886786714953e-12
+    },
+    "nominal/lstm_256x3_s0/N3072": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        3.696849376036752e-217,
+        1.7488658627767128e-06,
+        2.0724471305129563e-06
+      ],
+      "max_edge": [
+        4.7203483695597485e-217,
+        7.1519681175189396e-06,
+        1.508141313114643e-05
+      ],
+      "norm_error": 2.502886786714953e-12
+    },
+    "white/nearest/N3072": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        3.696849376036752e-217,
+        1.7488658627767128e-06,
+        2.1078052902728906e-06
+      ],
+      "max_edge": [
+        4.7203483695597485e-217,
+        7.1519681175189396e-06,
+        1.2167541676863415e-05
+      ],
+      "norm_error": 2.1985746556651975e-12
+    },
+    "white/bayes_gaussian/N3072": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        3.696849376036752e-217,
+        1.7488658627767128e-06,
+        2.108124230084321e-06
+      ],
+      "max_edge": [
+        4.7203483695597485e-217,
+        7.1519681175189396e-06,
+        1.2167541676863415e-05
+      ],
+      "norm_error": 2.1985746556651975e-12
+    },
+    "white/lstm_256x3_s0/N3072": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        3.696849376036752e-217,
+        1.7488658627767128e-06,
+        2.1065541242024158e-06
+      ],
+      "max_edge": [
+        4.7203483695597485e-217,
+        7.1519681175189396e-06,
+        1.1764062427714646e-05
+      ],
+      "norm_error": 2.1985746556651975e-12
+    },
+    "readout_high/nearest/N3072": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        3.696849376036752e-217,
+        3.4982926187253977e-08,
+        4.2167870179647386e-08
+      ],
+      "max_edge": [
+        4.7203483695597485e-217,
+        3.2392197162636584e-07,
+        9.698261913555428e-07
+      ],
+      "norm_error": 2.2971624602519114e-12
+    },
+    "readout_high/bayes_gaussian/N3072": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        3.696849376036752e-217,
+        3.4982926187253977e-08,
+        4.220691951548556e-08
+      ],
+      "max_edge": [
+        4.7203483695597485e-217,
+        3.2392197162636584e-07,
+        9.739277525205212e-07
+      ],
+      "norm_error": 2.2971624602519114e-12
+    },
+    "readout_high/lstm_256x3_s0/N3072": {
+      "valid_population_horizon": 2,
+      "mean_edge": [
+        3.696849376036752e-217,
+        3.4982926187253977e-08,
+        4.206579581670847e-08
+      ],
+      "max_edge": [
+        4.7203483695597485e-217,
+        3.2392197162636584e-07,
+        9.739277525205212e-07
+      ],
+      "norm_error": 2.2971624602519114e-12
+    }
+  },
+  "cutoff_comparisons": {
+    "nominal/nearest": {
+      "mean": [
+        -7.401486830834377e-17,
+        0.002105497191309458,
+        0.00348928149800967
+      ],
+      "se": [
+        0.0,
+        0.0024850150342618587,
+        0.0029188180321047135
+      ],
+      "ci95_low": [
+        -7.401486830834377e-17,
+        -0.0027650427768842194,
+        -0.002231496722341486
+      ],
+      "ci95_high": [
+        -7.401486830834377e-17,
+        0.0069760371595031356,
+        0.009210059718360825
+      ],
+      "a": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N1536_dx0.003/nearest_finite_ancilla.npz",
+      "b": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N3072_dx0.003/nearest_finite_ancilla.npz",
+      "sha256_a": "c8d08411b3d3d18ba1c768b31c24cf17cf2c34d44187cdcc15c0fed70b02cde5",
+      "sha256_b": "03c82757070bf122bad83836b93bbc3512140f0717e18064a36f33007c59248e",
+      "tolerance": 0.01,
+      "within_tolerance": [
+        true,
+        true,
+        true
+      ]
+    },
+    "nominal/bayes_gaussian": {
+      "mean": [
+        -7.401486830834377e-17,
+        0.002105497191309458,
+        -0.0005733252542587491
+      ],
+      "se": [
+        0.0,
+        0.0024850150342618587,
+        0.0014393822328393879
+      ],
+      "ci95_low": [
+        -7.401486830834377e-17,
+        -0.0027650427768842194,
+        -0.003394462590610718
+      ],
+      "ci95_high": [
+        -7.401486830834377e-17,
+        0.0069760371595031356,
+        0.00224781208209322
+      ],
+      "a": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N1536_dx0.003/bayes_gaussian_finite_ancilla.npz",
+      "b": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N3072_dx0.003/bayes_gaussian_finite_ancilla.npz",
+      "sha256_a": "38f97dc4e22142154deadaece3cd84d57520eaca3aa2e63a45d4c762f7a42acc",
+      "sha256_b": "d828daf8e96907f435706e540b0b0dd9d8522d2d8787b9bf23315380beaf83a1",
+      "tolerance": 0.01,
+      "within_tolerance": [
+        true,
+        true,
+        true
+      ]
+    },
+    "nominal/lstm_256x3_s0": {
+      "mean": [
+        -7.401486830834377e-17,
+        0.002105497191309458,
+        -0.0011918502151503313
+      ],
+      "se": [
+        0.0,
+        0.0024850150342618587,
+        0.001813003965769005
+      ],
+      "ci95_low": [
+        -7.401486830834377e-17,
+        -0.0027650427768842194,
+        -0.004745272691885773
+      ],
+      "ci95_high": [
+        -7.401486830834377e-17,
+        0.0069760371595031356,
+        0.0023615722615851096
+      ],
+      "a": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N1536_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+      "b": "results/qutip_reference/reference/27ef7fdefecc9020/nominal_N3072_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+      "sha256_a": "0f5057dd8797e5b484fe8603a06500fed2074f6f07bebf25f8e471328362357b",
+      "sha256_b": "d31dda1ac543970426cdfc3d53a30bc9249741cc5cbaac6dc9ea2ccf5011c518",
+      "tolerance": 0.01,
+      "within_tolerance": [
+        true,
+        true,
+        true
+      ]
+    },
+    "white/nearest": {
+      "mean": [
+        -7.401486830834377e-17,
+        0.002105497191309458,
+        0.0027553778831214733
+      ],
+      "se": [
+        0.0,
+        0.0024850150342618587,
+        0.0032335501866031075
+      ],
+      "ci95_low": [
+        -7.401486830834377e-17,
+        -0.0027650427768842194,
+        -0.0035822640248232137
+      ],
+      "ci95_high": [
+        -7.401486830834377e-17,
+        0.0069760371595031356,
+        0.009093019791066161
+      ],
+      "a": "results/qutip_reference/reference/27ef7fdefecc9020/white_N1536_dx0.003/nearest_finite_ancilla.npz",
+      "b": "results/qutip_reference/reference/27ef7fdefecc9020/white_N3072_dx0.003/nearest_finite_ancilla.npz",
+      "sha256_a": "9e42d1550fddf003fc82b151a1e184fbe1ad6538c682c133c24b0219fffc0dd2",
+      "sha256_b": "f356e45f85fc5e7ab3fc1c0791226c226f5ef179a0d008ba029e615052d2c5e4",
+      "tolerance": 0.01,
+      "within_tolerance": [
+        true,
+        true,
+        true
+      ]
+    },
+    "white/bayes_gaussian": {
+      "mean": [
+        -7.401486830834377e-17,
+        0.002105497191309458,
+        -2.521912929522377e-05
+      ],
+      "se": [
+        0.0,
+        0.0024850150342618587,
+        0.0027159172959134027
+      ],
+      "ci95_low": [
+        -7.401486830834377e-17,
+        -0.0027650427768842194,
+        -0.005348319214274759
+      ],
+      "ci95_high": [
+        -7.401486830834377e-17,
+        0.0069760371595031356,
+        0.005297880955684312
+      ],
+      "a": "results/qutip_reference/reference/27ef7fdefecc9020/white_N1536_dx0.003/bayes_gaussian_finite_ancilla.npz",
+      "b": "results/qutip_reference/reference/27ef7fdefecc9020/white_N3072_dx0.003/bayes_gaussian_finite_ancilla.npz",
+      "sha256_a": "e6a53221efca004f273d52aae13a275c4b207c97c3b8735628fdc3fd403274e7",
+      "sha256_b": "4206670140a1b7ffabc2c46311d04c47f3a1a61e539952a242613c6f171e8c74",
+      "tolerance": 0.01,
+      "within_tolerance": [
+        true,
+        true,
+        true
+      ]
+    },
+    "white/lstm_256x3_s0": {
+      "mean": [
+        -7.401486830834377e-17,
+        0.002105497191309458,
+        -0.005038275605768249
+      ],
+      "se": [
+        0.0,
+        0.0024850150342618587,
+        0.0035148529732900264
+      ],
+      "ci95_low": [
+        -7.401486830834377e-17,
+        -0.0027650427768842194,
+        -0.011927260844370036
+      ],
+      "ci95_high": [
+        -7.401486830834377e-17,
+        0.0069760371595031356,
+        0.001850709632833538
+      ],
+      "a": "results/qutip_reference/reference/27ef7fdefecc9020/white_N1536_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+      "b": "results/qutip_reference/reference/27ef7fdefecc9020/white_N3072_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+      "sha256_a": "a502f664d77ea8478ee4331484a41c7188ee6efa451554ebe7a283190605d7b2",
+      "sha256_b": "7359f7292f6c9523a878e6f67cf1d6a8830cd4eddf6f14fae618a045db234744",
+      "tolerance": 0.01,
+      "within_tolerance": [
+        true,
+        true,
+        false
+      ]
+    },
+    "readout_high/nearest": {
+      "mean": [
+        -7.401486830834377e-17,
+        0.0044226491083134934,
+        0.0018209061899428138
+      ],
+      "se": [
+        0.0,
+        0.0020565939751960418,
+        0.0028295412935556647
+      ],
+      "ci95_low": [
+        -7.401486830834377e-17,
+        0.00039179898610730134,
+        -0.003724892838195013
+      ],
+      "ci95_high": [
+        -7.401486830834377e-17,
+        0.008453499230519686,
+        0.007366705218080641
+      ],
+      "a": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N1536_dx0.003/nearest_finite_ancilla.npz",
+      "b": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N3072_dx0.003/nearest_finite_ancilla.npz",
+      "sha256_a": "30256051701f4c71518a823c655ee1688b2450fc830fd8923025ae28a5476d58",
+      "sha256_b": "ff026824a816566a481e9f3591770fd96b0244ffd8110c4b5b603380c29bd4e2",
+      "tolerance": 0.01,
+      "within_tolerance": [
+        true,
+        true,
+        true
+      ]
+    },
+    "readout_high/bayes_gaussian": {
+      "mean": [
+        -7.401486830834377e-17,
+        0.0044226491083134934,
+        -0.00044045380184474245
+      ],
+      "se": [
+        0.0,
+        0.0020565939751960418,
+        0.0024485138347226506
+      ],
+      "ci95_low": [
+        -7.401486830834377e-17,
+        0.00039179898610730134,
+        -0.005239452733549064
+      ],
+      "ci95_high": [
+        -7.401486830834377e-17,
+        0.008453499230519686,
+        0.00435854512985958
+      ],
+      "a": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N1536_dx0.003/bayes_gaussian_finite_ancilla.npz",
+      "b": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N3072_dx0.003/bayes_gaussian_finite_ancilla.npz",
+      "sha256_a": "34b9051f1ab5c898e568081203bb5041ff2513ca1ad3bc8dcfc62a4266860c73",
+      "sha256_b": "099790993919db34b4b84dfb59eb6d68be81937ea8ccb53aa1505c42c55ea2f8",
+      "tolerance": 0.01,
+      "within_tolerance": [
+        true,
+        true,
+        true
+      ]
+    },
+    "readout_high/lstm_256x3_s0": {
+      "mean": [
+        -7.401486830834377e-17,
+        0.0044226491083134934,
+        0.005342162708157614
+      ],
+      "se": [
+        0.0,
+        0.0020565939751960418,
+        0.0027259235504741098
+      ],
+      "ci95_low": [
+        -7.401486830834377e-17,
+        0.00039179898610730134,
+        -5.492753810459536e-07
+      ],
+      "ci95_high": [
+        -7.401486830834377e-17,
+        0.008453499230519686,
+        0.010684874691696274
+      ],
+      "a": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N1536_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+      "b": "results/qutip_reference/reference/27ef7fdefecc9020/readout_high_N3072_dx0.003/lstm_256x3_s0_finite_ancilla.npz",
+      "sha256_a": "5a7f4192413a16b83f16de860be670f38161cdc0093a5d7337fd948dbf892ebc",
+      "sha256_b": "7a90684d1fac5776b3b4184302b53d707cbde7ba03e6250249e97fa523e7c935",
+      "tolerance": 0.01,
+      "within_tolerance": [
+        true,
+        true,
+        false
+      ]
+    }
+  },
+  "analysis_source_sha256": "5e3a7ec5b7feba9d0727dc3f8d9e57588d9b5f3f1fa3a6f057f841e1ff38cf57",
+  "note": "Population gates are necessary; separate cutoff, ancilla-dx and logical-bin refinement comparisons are also required."
+}

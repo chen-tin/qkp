@@ -1,0 +1,107 @@
+{
+  "retrieved_utc": "2026-11-18T19:54:48.336542+00:00",
+  "paper": "https://arxiv.org/html/2110.10378v2",
+  "doi": "10.1088/1367-2630/ac66f9",
+  "figure_url": "https://arxiv.org/html/2110.10378v2/Tracking.svg",
+  "author_repository": "https://github.com/IanConvy/bayesian-error-correction",
+  "author_commit": "9bb00616add5fb8cd004f7ca64d14f7803dfa33b",
+  "lstm_notebook_url": "https://colab.research.google.com/drive/1NSwz4Qy3SlfE-fptz59-hj3880QJ7DVj?usp=sharing",
+  "notebook_access": "Drive connector and public export both returned 404; Colab returned sign-in shell, no notebook content.",
+  "figure_extraction": "Vector line coordinates, Scheme A solid curves. Each panel calibrated separately from y=0.5 and y=1 tick locations; x=0 and x=.02. Values are digitized, not original numerical data; allow absolute 0.0002 extraction tolerance.",
+  "curves": [
+    {
+      "model": "double_threshold",
+      "panel": "left",
+      "gamma_us_inv": [
+        0.0,
+        0.01,
+        0.02,
+        0.04,
+        0.06,
+        0.1,
+        0.14
+      ],
+      "fidelity": [
+        1.0,
+        0.9806667,
+        0.9420667,
+        0.8426667,
+        0.7467333,
+        0.6127667,
+        0.5390667
+      ]
+    },
+    {
+      "model": "lstm",
+      "panel": "left",
+      "gamma_us_inv": [
+        0.0,
+        0.01,
+        0.02,
+        0.04,
+        0.06,
+        0.1,
+        0.14
+      ],
+      "fidelity": [
+        1.0,
+        0.9860333,
+        0.9605333,
+        0.8835667,
+        0.8004666,
+        0.6565333,
+        0.5722
+      ]
+    },
+    {
+      "model": "bayesian",
+      "panel": "right",
+      "gamma_us_inv": [
+        0.0,
+        0.01,
+        0.02,
+        0.04,
+        0.06,
+        0.1,
+        0.14
+      ],
+      "fidelity": [
+        1.0,
+        0.9902666,
+        0.9637,
+        0.8868,
+        0.808,
+        0.6605666,
+        0.5756667
+      ]
+    },
+    {
+      "model": "lstm",
+      "panel": "right",
+      "gamma_us_inv": [
+        0.0,
+        0.01,
+        0.02,
+        0.04,
+        0.06,
+        0.1,
+        0.14
+      ],
+      "fidelity": [
+        1.0,
+        0.9860333,
+        0.9605333,
+        0.8835667,
+        0.8004667,
+        0.6565333,
+        0.5722
+      ]
+    }
+  ],
+  "sha256": {
+    "Tracking.svg": "81c33f7abac4c0cbd021ef34e6b69656d5c527ccc85b24cc2281d563996c3fd6",
+    "author_real_data.py": "479d6e87ae9364d859cf44d73184f3d4727b335c46936ff84c8d41a5f5b043b3",
+    "paper.html": "e76ad8763141c816528b391eaa129fcee9d2047d59c317dbe4dc4107709fd851",
+    "author_tools.py": "ed3a45db0444226fa3529f7075340d19eeab84e4712bf70b0e261b7d88919ce2"
+  }
+}

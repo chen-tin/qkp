@@ -1,0 +1,20 @@
+<section class="section decoder-maps" id="decoder-heatmaps" aria-labelledby="decoder-maps-title">
+ <div class="section-intro"><div><div class="eyebrow">Parameter sweeps · measured decoder performance</div><h2 id="decoder-maps-title">Where does each decoder break down?</h2><p>Vary two noise parameters together. Each square is an evaluated setting, and every decoder faces the same trials. Select a square to compare their error rates and uncertainty.</p></div><span class="lesson-tag">Stationary noise · measured results</span></div>
+ <div id="benchmark-results" class="benchmark-results" hidden></div>
+ <div id="heatmap-unavailable" class="scope" hidden>No heatmap results are embedded yet. Generate the parameter sweep and rebuild the viewer to populate this section.</div>
+ <div id="heatmap-content">
+  <div class="heatmap-toolbar">
+   <div><label for="heatmap-plane">Parameters to vary</label><select id="heatmap-plane"><option value="q_rho">Displacement σq × correlation ρ</option><option value="q_m">Displacement σq × readout σm</option><option value="rho_m">Correlation ρ × readout σm</option></select></div>
+   <div><label for="heatmap-metric">Cell color</label><select id="heatmap-metric"><option value="error">Logical error probability</option><option value="difference">Difference from nearest lattice</option></select></div>
+   <div><label for="heatmap-models">Decoders to show</label><select id="heatmap-models"><option value="representative">Original decoders · LSTM seed 0</option><option value="sizes0">LSTM sizes · seed 0</option><option value="sizes1">LSTM sizes · seed 1</option><option value="sizes2">LSTM sizes · seed 2</option><option value="sizes">LSTM sizes · all 36 models</option><option value="all">All models & uncorrected reference</option><option value="classical">Nearest lattice & Bayesian decoders</option><option value="learned">All LSTM models</option></select></div>
+   <div class="heatmap-range"><label for="heatmap-horizon">Readout round <output id="heatmap-horizon-value" for="heatmap-horizon">50</output></label><input id="heatmap-horizon" type="range" min="1" max="50" step="1" value="50"></div>
+   <div class="heatmap-range"><label for="heatmap-threshold">Failure threshold <output id="heatmap-threshold-value" for="heatmap-threshold">10%</output></label><input id="heatmap-threshold" type="range" min="1" max="50" step="1" value="10"></div>
+  </div>
+  <div class="heatmap-context"><p id="heatmap-context"></p><p id="heatmap-sampling"></p></div>
+  <div id="heatmap-size-coverage" class="heatmap-size-coverage" hidden></div>
+  <div class="heatmap-legend-row"><div class="heatmap-legend"><span id="heatmap-scale-title">Logical error · lower is better</span><div id="heatmap-colorbar"></div><div id="heatmap-scale-ticks"></div></div><div class="heatmap-border-key"><span><i class="above"></i>95% interval above threshold</span><span><i class="uncertain"></i>Interval crosses threshold</span><span><i class="selected"></i>Selected setting</span></div></div>
+  <div class="heatmap-cards" id="heatmap-cards"></div>
+  <div class="heatmap-detail" id="heatmap-detail" aria-live="polite" aria-atomic="true"></div>
+  <details class="heatmap-methods"><summary>What was evaluated, uncertainty, and downloads</summary><div id="heatmap-methods-text"></div><div class="actions"><button type="button" class="button" id="heatmap-export">Download visible heatmaps · CSV ↓</button><button type="button" class="button" id="heatmap-json">Download complete results · JSON ↓</button></div></details>
+ </div>
+</section>

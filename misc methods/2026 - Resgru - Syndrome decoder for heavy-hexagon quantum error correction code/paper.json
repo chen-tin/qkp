@@ -1,0 +1,35 @@
+{
+  "id": "resgru",
+  "title": "Resgru - Syndrome decoder for heavy-hexagon quantum error correction code",
+  "year": 2026,
+  "methods": [
+    "GRU",
+    "residual MLP"
+  ],
+  "scope": "transferable; heavy-hexagon, not GKP",
+  "source_url": "https://doi.org/10.1088/1402-4896/ae87e2",
+  "blockers": [
+    "Original experimental datasets are available on request.",
+    "Released example configuration must be reconciled against final paper training settings before a metric reproduction claim.",
+    "Full multi-duration evaluation and matched MWPM comparison adapter not yet implemented.",
+    "Author training script assumes distributed CUDA initialization and fixed 500k validation; a portable production launcher needs adaptation.",
+    "The author dataset seed selects round length but does not seed its Stim sampler; do not claim deterministic training."
+  ],
+  "supported_modes": [
+    "smoke"
+  ],
+  "sources": [
+    {
+      "name": "publication",
+      "url": "https://doi.org/10.1088/1402-4896/ae87e2",
+      "download": false
+    }
+  ],
+  "upstream": {
+    "url": "https://github.com/Ashu-20/Resgru.git",
+    "commit": "5765954cf34f0b776d44ef94fa65a8b77140ab6b",
+    "pin_date": "2026-11-18",
+    "publication_release": false
+  },
+  "evidence_status": "published_metrics_verified; no new paper-metric reproduction claimed"
+}

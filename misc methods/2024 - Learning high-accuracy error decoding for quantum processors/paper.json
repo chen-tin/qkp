@@ -1,0 +1,35 @@
+{
+  "id": "alphaqubit",
+  "title": "Learning high-accuracy error decoding for quantum processors",
+  "year": 2024,
+  "methods": [
+    "recurrent Transformer"
+  ],
+  "scope": "transferable; surface-code decoding",
+  "source_url": "https://www.nature.com/articles/s41586-024-08148-8",
+  "blockers": [
+    "Paper releases detailed pseudocode, not an executable author training implementation or model checkpoints.",
+    "Hardware calibration, soft-input preprocessing, ensemble and fit must be implemented faithfully.",
+    "Full pretraining is a large accelerator workload."
+  ],
+  "sources": [
+    {
+      "name": "publication",
+      "url": "https://www.nature.com/articles/s41586-024-08148-8",
+      "download": false
+    },
+    {
+      "name": "paper.pdf",
+      "url": "https://www.nature.com/articles/s41586-024-08148-8.pdf",
+      "download": true
+    },
+    {
+      "name": "supplement.pdf",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-024-08148-8/MediaObjects/41586_2024_8148_MOESM1_ESM.pdf",
+      "download": true,
+      "sha256": "139c7b4317437e7f87f554ff729eac7053a248c1580cfd2a88f9f286444a9982"
+    }
+  ],
+  "supported_modes": [],
+  "evidence_status": "published_metrics_verified; no new paper-metric reproduction claimed"
+}

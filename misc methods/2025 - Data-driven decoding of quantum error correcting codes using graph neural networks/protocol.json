@@ -1,0 +1,59 @@
+{
+  "paper_id": "gnn",
+  "status": "planned",
+  "registered": "2026-11-18",
+  "question": "Can the published metric be reproduced under the same physical and evaluation model?",
+  "audience": "Researchers assessing decoder failure across noise conditions",
+  "baseline": "MWPM and belief-matching, identical Appendix B circuit and memory-Z observable",
+  "intervention": [
+    "GNN"
+  ],
+  "settings": {
+    "distances": [
+      3,
+      5,
+      7,
+      9
+    ],
+    "rounds": [
+      3,
+      5,
+      7,
+      9,
+      11
+    ],
+    "training_p_mixture": [
+      0.001,
+      0.002,
+      0.003,
+      0.004,
+      0.005
+    ],
+    "test_p": 0.001,
+    "basis": "Z",
+    "shots_d_lt_7": 10000000,
+    "shots_d_ge_7": 100000000,
+    "graph_features": [
+      "X_stabilizer_flag",
+      "Z_stabilizer_flag",
+      "x",
+      "y",
+      "t"
+    ],
+    "graph_edges": "Euclidean inverse distance with nearest-neighbor pruning",
+    "architecture": "Table 1: 1.36M parameters for d<=7, 2.35M for d=9",
+    "training": "fresh samples, Adam, manual LR 1e-4 to 1e-5",
+    "checkpoints": "models/circuit_level_noise/"
+  },
+  "hypothesis": "The registered metric can be matched under the original protocol; no predicted advantage in the qkp simulator is asserted.",
+  "decision_rule": "Compare independently measured estimates and uncertainty with reported values or marked visual-reading ranges. A match is provisional until model, split and units are audited; missing code/data or imprecise estimates remain inconclusive. Do not tune on held-out test data.",
+  "compute": "Smoke: CPU, one thread, small bounded input. Production: explicitly launch after resolving listed blockers; no full training is started by fetch/check.",
+  "uncertainty": "Wilson intervals for independent Bernoulli counts; bootstrap trajectory/seed-level fits for lifetimes and thresholds. Use three independent training seeds for new training, reported separately.",
+  "procedure": "The author repository includes trained checkpoints for each distance and duration. Start with d=3, rounds=3, memory-Z and Appendix B noise. Include empty-syndrome shots in the denominator even though training omits those graphs. Figure 3 uses 10 million shots for d<7 and 100 million for larger distances. Benchmark latency separately; batched GPU throughput is not real-time latency.",
+  "blockers": [
+    "Full checkpoint evaluation adapter needs PyTorch Geometric extensions and exact graph preprocessing.",
+    "Reference values here are approximate readings of plotted markers; digitize the vector figure or obtain raw author data for tighter matching.",
+    "Do not use generic Stim uniform noise in place of Appendix B."
+  ],
+  "raw_output_contract": "See ../RESULTS.md. Save raw outcomes, checkpoint/config/source hashes, environment, seed and noise units."
+}

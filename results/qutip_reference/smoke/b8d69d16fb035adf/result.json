@@ -1,0 +1,173 @@
+{
+  "config": {
+    "profile": "smoke",
+    "seed": 26111901,
+    "data_delta": 0.3,
+    "per_state": 5,
+    "rounds": 2,
+    "dx": 0.003,
+    "cutoffs": [
+      96
+    ],
+    "points": {
+      "nominal": [
+        0.2,
+        0.05,
+        0.9
+      ]
+    },
+    "decoders": [
+      "nearest"
+    ],
+    "source_hashes": {
+      "quantum/qutip_reference.py": "aacdf1a803c08378997f4c0c7898a0ac1994461d5ba1d9a34d12a50f198ea683",
+      "experiments/qutip_reference.py": "450fa65f76ba4e269fac2d3ccba9ee5922c80e34a2e1fbfea376c4b8239160ee",
+      "docs/qutip_reference.md": "7ac328a093cecbbff1fe1284a16d35f7aa5bca2361f5047a44998d2c0e00825e",
+      "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+      "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+      "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+      "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+      "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e"
+    },
+    "checkpoint_sha256": "5f4486abe6368d0e071722923c85cfee829b0583b75e0655da2c52e891a115af",
+    "python": "3.13.13",
+    "numpy": "2.5.5",
+    "qutip": "5.3.1",
+    "torch": "2.15.0"
+  },
+  "rows": [
+    {
+      "point": "nominal",
+      "decoder": "nearest",
+      "cutoff": 96,
+      "ancilla_dx": 0.003,
+      "ancilla_delta": 0.12533656843651017,
+      "per_state": 5,
+      "total_trajectories": 30,
+      "rounds": 2,
+      "classical": {
+        "mean": [
+          1.0,
+          0.9333333333333333,
+          0.9
+        ],
+        "se": [
+          0.0,
+          0.047140452079103175,
+          0.05773502691896258
+        ],
+        "ci95_low": [
+          1.0,
+          0.8409397450433573,
+          0.786841426592386
+        ],
+        "ci95_high": [
+          1.0,
+          1.0257269216233094,
+          1.013158573407614
+        ]
+      },
+      "finite_energy_replayed": {
+        "mean": [
+          0.9772476824057468,
+          0.9084027272358841,
+          0.8782245264324693
+        ],
+        "se": [
+          1.850371707708594e-17,
+          0.045533131132526085,
+          0.054448789777044676
+        ],
+        "ci95_low": [
+          0.9772476824057468,
+          0.819159430112796,
+          0.771506859467672
+        ],
+        "ci95_high": [
+          0.9772476824057468,
+          0.9976460243589722,
+          0.9849421933972666
+        ]
+      },
+      "finite_ancilla": {
+        "mean": [
+          0.9772476824057468,
+          0.8964131577519925,
+          0.7307606239517891
+        ],
+        "se": [
+          1.850371707708594e-17,
+          0.04306101394995108,
+          0.052996550681952706
+        ],
+        "ci95_low": [
+          0.9772476824057468,
+          0.8120151212723139,
+          0.626889293310313
+        ],
+        "ci95_high": [
+          0.9772476824057468,
+          0.9808111942316711,
+          0.8346319545932652
+        ]
+      },
+      "reference_minus_classical": {
+        "mean": [
+          -0.022752317594252853,
+          -0.03692017558134067,
+          -0.1692393760482108
+        ],
+        "se": [
+          0.0,
+          0.06795242650905814,
+          0.05749034599253178
+        ],
+        "ci95_low": [
+          -0.022752317594252853,
+          -0.17010448420119578,
+          -0.2819183836523166
+        ],
+        "ci95_high": [
+          -0.022752317594252853,
+          0.09626413303851444,
+          -0.05656036844410499
+        ]
+      },
+      "reference_minus_replayed": {
+        "mean": [
+          0.0,
+          -0.011989569483891512,
+          -0.14746390248067995
+        ],
+        "se": [
+          0.0,
+          0.06652746602833531,
+          0.055601616219226636
+        ],
+        "ci95_low": [
+          0.0,
+          -0.1423810068821371,
+          -0.2564410677525793
+        ],
+        "ci95_high": [
+          0.0,
+          0.11840186791435406,
+          -0.03848673720878061
+        ]
+      },
+      "max_norm_error": 6.061817714453355e-14,
+      "max_edge_weight": 0.29966151323972545,
+      "mean_edge_weight_max_round": 0.0674546366365198,
+      "mean_energy_final": 45.2270429286049,
+      "extraction_trace_error": 5.168800877497385e-15,
+      "raw_hashes": {
+        "nearest_replayed_corrections.npz": "910fff62c5bfc0c7034b9c3864b89409512c8f8343b079a014b8a0777b8cd6bd",
+        "nearest_finite_ancilla.npz": "3584e51118e11b0b67ae619ae39f7053d810a9c3f498b85a0f2d917c6cd16126"
+      },
+      "seconds": 0.004058041000007506,
+      "numerical_edge_gate_pass": false
+    }
+  ],
+  "complete": true,
+  "scope": "Finite-energy ideal SUM/homodyne reference; no loss, gate/ancilla faults or hardware claims. Convergence gate and separate dx check required."
+}

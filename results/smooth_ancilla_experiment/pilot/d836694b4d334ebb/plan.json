@@ -1,0 +1,30 @@
+{
+  "registered_utc": "2026-11-19T22:48:29Z",
+  "config": {
+    "pilot": true,
+    "seed": 26111901,
+    "validation_seed": 26111923,
+    "data_delta": 0.3,
+    "per_state": 4,
+    "rounds": 2,
+    "logical_bins": 192,
+    "cutoffs": [
+      64
+    ],
+    "source_hashes": {
+      "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+      "quantum/measurement_benchmark.py": "a3bf6a74ce23cc76b4e52424bec3c44adfe07fa922fc4e13587029348a936e19",
+      "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+      "experiments/smooth_ancilla_experiment.py": "38ce1c63ca1e0d12f0d714e4ecd84811b15f912307150059f70f6cf112181785",
+      "experiments/qutip_reference.py": "87126cf9872e07110614eed7d0a56d62f3803b4db099e682f3bf45cb6d209ecb",
+      "docs/smooth_ancilla_experiment.md": "5b309ca8c4f7549a01bb116a73016fe12ad8bb717b82864e6abd60e407f2d3e1",
+      "tests/test_continuous_ancilla.py": "080958f6d2956a14b1466e32a61a4c0017fc68a9bf3f80e259a7d885bfc7c2c7",
+      "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+      "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e"
+    },
+    "python": "3.13.13",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "qutip": "5.3.1"
+  }
+}

@@ -1,0 +1,37 @@
+<section class="section noise-lab" id="noise-playground" aria-labelledby="noise-lab-title">
+ <div class="section-intro"><div><div class="eyebrow">An interactive view of the noise engine</div><h2 id="noise-lab-title">Change a parameter. See the disturbance.</h2><p>Adjust the noise, then follow it from physical kicks to the measured syndrome. Colored traces show your settings; dashed traces use the reference with the same random draws.</p></div><span class="lesson-tag">Live simulation · runs offline</span></div>
+ <div class="noise-modes" role="group" aria-label="Noise condition">
+  <button type="button" data-noise-mode="stationary" aria-pressed="true">Start here <small>Shared parameters</small></button>
+  <button type="button" data-noise-mode="drift" aria-pressed="false">01 · Gradual drift <small>Slowly changing noise</small></button>
+  <button type="button" data-noise-mode="sudden" aria-pressed="false">02 · Unexpected changes <small>Steps, switches & bursts</small></button>
+  <button type="button" data-noise-mode="unseen" aria-pressed="false">03 · Unseen conditions <small>Beyond the training set</small></button>
+ </div>
+ <div class="noise-workspace">
+  <aside class="noise-controls" aria-label="Noise parameters">
+   <div class="noise-control-heading"><h3>Your settings</h3><button type="button" class="button quiet" id="noise-reset">Reset</button></div>
+   <div class="noise-select-row" id="noise-family-row"><label for="noise-family">Shape of the change</label><select id="noise-family"></select></div>
+   <div class="noise-select-row" id="noise-target-row"><label for="noise-target">Property that changes</label><select id="noise-target"><option value="sigma_q">σq · displacement strength</option><option value="rho">ρ · correlation</option><option value="sigma_m">σm · readout noise</option></select></div>
+   <div id="noise-base-controls"></div>
+   <div id="noise-shape-controls"></div>
+   <details class="noise-advanced"><summary>Time window & random path</summary><div id="noise-run-controls"></div><p id="noise-seed"></p><button type="button" class="button" id="noise-new-path">Draw another path ↻</button><p>Sliders keep the random draws fixed. This button changes the path for both traces.</p></details>
+  </aside>
+  <div class="noise-results">
+   <div class="noise-insight"><span class="eyebrow">What to look for</span><p id="noise-explanation"></p></div>
+   <div class="noise-presets" id="noise-presets" role="group" aria-label="Try a parameter example"></div>
+   <div class="noise-coverage" id="noise-coverage" hidden></div>
+   <div class="noise-comparison"><div><span class="noise-key current">Your settings</span><span class="noise-key reference" id="noise-reference-label">Reference: nominal</span></div><div class="actions"><button type="button" class="button" id="noise-pin">Use current as reference</button><button type="button" class="button quiet" id="noise-nominal">Nominal reference</button></div></div>
+   <div class="noise-chart-grid">
+    <figure class="noise-chart"><figcaption><strong>1 · The parameter schedule</strong><span id="noise-schedule-caption"></span></figcaption><svg id="noise-schedule-chart" role="img" aria-label="Parameter schedule over rounds"></svg></figure>
+    <figure class="noise-chart"><figcaption><strong>2 · Physical displacement</strong><span>dₜ / L · the kick added each round</span></figcaption><svg id="noise-displacement-chart" role="img" aria-label="Physical displacement over rounds"></svg></figure>
+    <figure class="noise-chart"><figcaption><strong>3 · Readout error</strong><span>νₜ / L · added only to the measurement</span></figcaption><svg id="noise-readout-chart" role="img" aria-label="Measurement noise over rounds"></svg></figure>
+    <figure class="noise-chart"><figcaption><strong>4 · Observed syndrome</strong><span>sₜ / L · after wrapping into [−½, ½)</span></figcaption><svg id="noise-syndrome-chart" role="img" aria-label="Wrapped syndrome over rounds"></svg></figure>
+   </div>
+   <div class="noise-metrics" id="noise-metrics" aria-live="polite" aria-atomic="true"></div>
+   <p class="noise-scale-note" id="noise-scale-note"></p>
+   <details class="noise-how"><summary>How these live plots connect to the simulator</summary><p>All shifts are displayed in units of the lattice spacing L = √π. Each plot compares one seeded path, with identical underlying Gaussian draws for your settings and the reference. The schedule and noise equations follow <code>simulator/nonstationary.py</code>; the last panel runs the nearest-lattice correction loop from <code>simulator/sim.py</code>.</p><pre>ε₁ = σq,₁ z₁
+εₜ = ρₜ (σq,ₜ / σq,ₜ₋₁) εₜ₋₁ + σq,ₜ √(1 − ρₜ²) zₜ
+dₜ = εₜ + kickₜ z′ₜ        νₜ = σm,ₜ z″ₜ
+x ← x + dₜ;  sₜ = wrap(x + νₜ);  x ← x − sₜ</pre><p>The shaded bands show ± one standard deviation of the noise distribution, not a confidence interval. The dashed ±½L lines are lattice half-spacing guides; crossing one on a kick alone is not a logical-error diagnosis. The cards report schedule averages, not estimated decoder performance. The JavaScript generator uses a separate seeded random-number stream from the saved Python illustrations, so their individual paths differ. The original figures and 50-round replay remain the saved examples above and below.</p><p>Schedule values are bounded as in Python: |ρ| ≤ 0.995, σq ≥ 10⁻⁶ in absolute units, and σm ≥ 0. This view exposes fixed parameter values for one trial; the Python generator can also sample many parameters from ranges across trials. Unseen-condition labels use <code>DRIFT_TRAIN_MIX</code> in <code>training/datasets.py</code>.</p><button type="button" class="button" id="noise-download">Download this comparison · CSV ↓</button></details>
+  </div>
+ </div>
+</section>

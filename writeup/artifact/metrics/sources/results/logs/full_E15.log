@@ -1,0 +1,29 @@
+[18:12:36] run_all: mode=full device=cuda budget=Budget(chunk_trials=20000, max_test_trials=100000, min_events=50, diag_trials=2000, n_train=200000, n_val=20000, batch_size=2048, max_epochs=40, patience=5, train_time_cap_s=1800.0, hidden=128, lstm_seeds=3, filter_block_bytes=2000000000.0, ns_rounds=1000, ns_chunk_trials=1000, ns_max_test_trials=5000, ns_n_train=20000, ns_n_val=2000, ns_batch_size=128)
+[18:12:36] === E15 ===
+[18:12:37] E15/nominal: NL               P_L(final) 0.4653
+[18:14:37] E15/nominal: Bayes (parity)   P_L(final) 0.0032
+[18:15:43] E15/nominal: Bayes (fine)     P_L(final) 0.0032
+[18:15:43] E15/nominal: DQN (parity) deferred (train it with python -m rl.train)
+[18:15:43] E15/nominal: DQN (fine) deferred (train it with python -m rl.train)
+[18:15:43] E15/hw: NL               P_L(final) 0.3064
+[18:16:34] E15/hw: Bayes (parity)   P_L(final) 0.0354
+[18:17:23] E15/hw: Bayes (fine)     P_L(final) 0.0352
+[18:17:23] E15/hw: DQN (parity) deferred (train it with python -m rl.train)
+[18:17:23] E15/hw: DQN (fine) deferred (train it with python -m rl.train)
+[18:17:24] E15/hw_sm0.05: NL               P_L(final) 0.0001
+[18:18:22] E15/hw_sm0.05: Bayes (parity)   P_L(final) 0.0000
+[18:19:28] E15/hw_sm0.05: Bayes (fine)     P_L(final) 0.0000
+[18:19:28] E15/hw_sm0.05: DQN (parity) deferred (train it with python -m rl.train)
+[18:19:28] E15/hw_sm0.05: DQN (fine) deferred (train it with python -m rl.train)
+[18:19:28] E15/hw_sm0.10: NL               P_L(final) 0.2362
+[18:20:34] E15/hw_sm0.10: Bayes (parity)   P_L(final) 0.0205
+[18:21:43] E15/hw_sm0.10: Bayes (fine)     P_L(final) 0.0204
+[18:21:43] E15/hw_sm0.10: DQN (parity) deferred (train it with python -m rl.train)
+[18:21:43] E15/hw_sm0.10: DQN (fine) deferred (train it with python -m rl.train)
+[18:21:43] E15/hw_sm0.15: NL               P_L(final) 0.5039
+[18:22:46] E15/hw_sm0.15: Bayes (parity)   P_L(final) 0.3819
+[18:23:41] E15/hw_sm0.15: Bayes (fine)     P_L(final) 0.3809
+[18:23:41] E15/hw_sm0.15: DQN (parity) deferred (train it with python -m rl.train)
+[18:23:41] E15/hw_sm0.15: DQN (fine) deferred (train it with python -m rl.train)
+[18:23:41] === E15 done in 720s ===
+[18:23:41] run_all finished; failed experiments: none; failed decoders/points: none

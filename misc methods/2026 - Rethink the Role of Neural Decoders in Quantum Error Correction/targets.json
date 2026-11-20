@@ -1,0 +1,46 @@
+[
+  {
+    "id": "d3_calibrated_finetuned",
+    "kind": "shot_failure_rate",
+    "value": 0.067,
+    "unit": "fraction",
+    "conditions": {
+      "code": "Sycamore_surface",
+      "distance": 3,
+      "model": "TCN-small",
+      "prior": "calibrated",
+      "fine_tuned": true,
+      "protocol": "Table 1 hardware evaluation",
+      "rounds": 3,
+      "test_shots": 5000,
+      "finetuning_shots": 45000,
+      "pretraining_shots": 5000000,
+      "center_qubit": [
+        7,
+        5
+      ]
+    },
+    "locator": "Table 1 and Appendix D.1, Eq. 12 (shot-error definition)",
+    "source_url": "https://proceedings.mlr.press/v306/yan26g.html"
+  },
+  {
+    "id": "d5_calibrated_finetuned",
+    "kind": "shot_failure_rate",
+    "value": 0.1147,
+    "unit": "fraction",
+    "conditions": {
+      "code": "Sycamore_surface",
+      "distance": 5,
+      "model": "TCN-small",
+      "prior": "calibrated",
+      "fine_tuned": true,
+      "protocol": "Table 1 hardware evaluation",
+      "rounds": 5,
+      "test_shots": 5000,
+      "finetuning_shots": 45000,
+      "pretraining_shots": 5000000
+    },
+    "locator": "Table 1 and Appendix D.1, Eq. 12 (shot-error definition)",
+    "source_url": "https://proceedings.mlr.press/v306/yan26g.html"
+  }
+]

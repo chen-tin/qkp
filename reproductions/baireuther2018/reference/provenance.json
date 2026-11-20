@@ -1,0 +1,26 @@
+{
+  "retrieved_utc": "2026-11-18T19:59:49.063154+00:00",
+  "paper": "https://ar5iv.labs.arxiv.org/html/1705.07855",
+  "doi": "10.22331/q-2018-01-29-48",
+  "decoder": {
+    "url": "https://github.com/baireuther/neural_network_decoder",
+    "branch": "arXiv1705p07855",
+    "commit": "d4cfd7c2c6fded738423c51bcc26e9ede5168a17"
+  },
+  "circuit": {
+    "url": "https://github.com/baireuther/circuit_model",
+    "branch": "1705p07855",
+    "commit": "cbdcd64c75bab42fd648e4d9cdc695f9f1a5504c"
+  },
+  "target": {
+    "figure": 3,
+    "lstm_error_per_cycle": 0.00209,
+    "blossom_error_per_cycle": 0.00274
+  },
+  "sha256": {
+    "decoder.py": "a5dd78ac5c97121a9351fef672310dba699f90604a1f548f57d41c364a33ab29",
+    "circuit_LICENSE": "1ebc518c0a342933d3194d76f3374957cad089812ce1a7f4c70c0436b41d6858",
+    "paper.html": "2638edb39ea12afa450f9470b5621973a51cc0fea7390a05035463eaa4fdbf5c",
+    "circuit_model.py": "bd00fb053e9cfe51ac6c3b097cd58b51f9a310e1a0cc5f3362b330c15b83edd8"
+  }
+}

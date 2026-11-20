@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-11-19T20:50:28Z",
+  "scope": "Numerical diagnosis; not a new physical performance benchmark",
+  "finding": "Ancilla.amplitude uses a piecewise-constant position wavefunction. Its jumps can generate artificial high-momentum tails; the underlying step-function approximation has no finite continuum kinetic energy.",
+  "jump_squared_sum_at_dx_0_003": 0.09548612700178366,
+  "smooth_grid_derivative_p2": 31.821871453187086,
+  "mathematical_diagnostic": "For derivative half-step h<dx/2, integral |dphi/dx|^2 for the step function behaves as sum(jump^2)/(2h), diverging as h approaches zero.",
+  "observed_boundary_case": {
+    "run": "convergence/e042e0a1b30d34d0",
+    "cutoff": 3072,
+    "trajectory": 1659,
+    "energy_at_cycle5": 46.44199074200472,
+    "energy_at_cycle6": 2602.0708761315936,
+    "top_10pct_mass_cycle6": 0.3455713535726632,
+    "top_10pct_mass_cycle7": 0.9498971381661973
+  },
+  "interpretation": "Average heating is consistent with finite-energy SUM backaction, but the abrupt rare spikes cannot be labeled physical until smooth measurement-resource evaluation is checked.",
+  "required_followup": "Replace binwise amplitude evaluation with a smooth analytic resource and consistent continuous outcome sampling. Validate against explicit two-mode QuTiP and rerun numerical checks before long-horizon physical claims.",
+  "existing_two_cycle_results": "Passed limited bin/cutoff fidelity refinements for seven of nine cases. This does not validate long-time energy tails.",
+  "cutoff5120_check": "Still useful for basis sensitivity; does not by itself resolve the measurement-approximation concern."
+}

@@ -1,0 +1,31 @@
+{
+  "id": "surface_gkp",
+  "title": "Low-Overhead Fault-Tolerant Quantum Error Correction with the Surface-GKP Code",
+  "year": 2022,
+  "methods": [
+    "analog MWPM",
+    "correlated maximum likelihood",
+    "surface-GKP concatenation"
+  ],
+  "scope": "direct GKP concatenated fault tolerance",
+  "source_url": "https://doi.org/10.1103/PRXQuantum.3.010315",
+  "blockers": [
+    "No verified public author simulation repository located.",
+    "Full correlated gate model and dynamically weighted matching implementation remain to be implemented from the paper appendices.",
+    "A 1e-7 failure claim requires adequate rare-event statistics, not a smoke run."
+  ],
+  "sources": [
+    {
+      "name": "publication",
+      "url": "https://doi.org/10.1103/PRXQuantum.3.010315",
+      "download": false
+    },
+    {
+      "name": "paper.pdf",
+      "url": "https://harvest.aps.org/v2/journals/articles/10.1103/PRXQuantum.3.010315/fulltext",
+      "download": true
+    }
+  ],
+  "supported_modes": [],
+  "evidence_status": "published_metrics_verified; no new paper-metric reproduction claimed"
+}

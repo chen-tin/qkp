@@ -1,0 +1,22 @@
+[
+  {
+    "epoch": 1,
+    "train_ce": 0.6931408524513245,
+    "validation_wrong": 62,
+    "validation_n": 128,
+    "validation_ce": 0.6930883526802063,
+    "best_epoch": 1,
+    "stale_epochs": 0,
+    "seconds": 1.6705320419277996
+  },
+  {
+    "epoch": 2,
+    "train_ce": 0.693124520778656,
+    "validation_wrong": 61,
+    "validation_n": 128,
+    "validation_ce": 0.6930797100067139,
+    "best_epoch": 2,
+    "stale_epochs": 0,
+    "seconds": 0.05224616697523743
+  }
+]

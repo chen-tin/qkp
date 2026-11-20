@@ -1,0 +1,116 @@
+{
+  "validated_utc": "2026-11-18T20:10:26.415215+00:00",
+  "validator": "independent documentation-only validation agent",
+  "decision": "Scaling to20,000,000 tracking samples and200,000 Gaussian trajectories over200 rounds is justified for the stated numerical-components checkpoint. This is not approval to claim full Figure3 reproduction.",
+  "commands": [
+    {
+      "command": ".venv/bin/python -m pytest tests/test_wan2020_reproduction.py -q",
+      "result": "4 passed in1.17s"
+    },
+    {
+      "command": ".venv/bin/python -m experiments.reproduce_wan2020 --smoke",
+      "result": "exit0;100,000 tracking samples;1,000 trajectories over10 rounds; control and conditional-mean estimator both finite"
+    }
+  ],
+  "plan": {
+    "registered_utc": "2026-11-18T20:08:41+00:00",
+    "config": {
+      "profile": "smoke",
+      "delta": 0.2182,
+      "sigma2": 0.0005,
+      "tracking_n": 100000,
+      "variance_n": 1000,
+      "rounds": 10,
+      "tracking_seed": 191200829,
+      "variance_seed": 191200830,
+      "source_sha256": "bc5fac0399daed456fb75613d4f82cc62e62bd285785f03583007992808772be",
+      "protocol_sha256": "0efbe83c62241fe514693a958e6e1e65691e4d90e35fd5bf6f07305c359d4e96",
+      "paper_sha256": "0e6d8de6b738ca7a1cfcfb80f410984105a09036a1d932f84eb9945250f0d3ff"
+    }
+  },
+  "smoke_result": {
+    "completed_utc": "2026-11-18T20:08:41+00:00",
+    "tracking_integral": 1.802665117654732e-05,
+    "quadrature_error_estimate": 2.5120791901158487e-17,
+    "tracking_mc_probability": 0.0,
+    "tracking_mc_wilson95": [
+      0.0,
+      3.841311258303963e-05
+    ],
+    "tracking_consistent": true,
+    "journal_tracking_order": 1e-05,
+    "preprint_tracking_order": 1e-11,
+    "journal_order_agreement": true,
+    "variance_final": {
+      "round": 10,
+      "bayesian_mse": 0.00016705369216698433,
+      "control_mse": 0.00016854988707625467,
+      "posterior_variance": 0.0001636256338641033,
+      "mse95": [
+        0.00015332625280132462,
+        0.00018272068364221287
+      ],
+      "paper_approx_variance": 0.00016355493316611434
+    },
+    "matrix_variance": 0.00016362563386410327,
+    "matrix_filter_abs_difference": 2.710505431213761e-20,
+    "full_figure3_reproduced": false,
+    "scope": "Journal D1/D2 tracking probability; local-Gaussian Bayesian variance Eqs13/15."
+  },
+  "independent_numerics": {
+    "independent_tracking_probability": 1.8026651176547308e-05,
+    "tracking_main_probability": 1.802665117654732e-05,
+    "tracking_absolute_difference": 1.0164395367051604e-20,
+    "independent_quadrature_error": 9.901107571793266e-18,
+    "tracking_method": "Reverse integration order: integrate Gaussian readout residual e within each rounding cell, then analytic Gaussian u tails outside that cell. Return after4-cell jumps is omitted with negligible bound at sigma=.02236.",
+    "precision_from_literal_C10_max_absolute_difference": 0.0,
+    "posterior_mean_matrix_vs_filter_max_absolute_difference": 8.673617379884035e-19,
+    "stationary_variance_closed_form": 0.00016362575270596942,
+    "round200_recursion_variance": 0.00016362575270596942,
+    "paper_second_order_variance_round200": 0.0001635550453741284
+  },
+  "journal_equations_visually_checked": {
+    "file": "reproductions/wan2020/reference/journal.pdf",
+    "sha256": "0e6d8de6b738ca7a1cfcfb80f410984105a09036a1d932f84eb9945250f0d3ff",
+    "pages": [
+      8,
+      9
+    ],
+    "equations": [
+      "C10 precision matrix",
+      "C13/C14 conditional variance",
+      "C15 truncated expansion",
+      "D1 joint mixture",
+      "D2 tracking-success region"
+    ],
+    "tracking_statement": "Journal specifies approximately1e-5 at Delta=.2182 and sigma0_squared=.0005; independently reduced integral1.8026651e-5 is consistent at order-of-magnitude precision."
+  },
+  "scientific_checks": [
+    "D1 transforms to independent u~N(0,sigma0_squared),e~N(0,Delta_squared), and integer comb index n. Integer shifts preserve the equality-of-mod4-rounded-residues event, so normalized envelope weights cancel.",
+    "For |u|<=12sigma0, the implementation sums disjoint boundary crossings and symmetry handles both signs. Omitted u mass is negligible; no appreciable multiple-boundary or modulo4-return term at these parameters.",
+    "Literal C10 entrywise construction equals B-transpose-B precision exactly; matrix conditional mean and recursive estimator agree within8.7e-19.",
+    "Gaussian posterior variance at200 rounds equals independent stationary Riccati solution; Eq15/C15 is correctly identified as a truncated expansion.",
+    "No-estimator control is the zero conditional mean of the prior shift; intervention uses only measurements through the current round.",
+    "Smoke exact posterior variance lies in the estimated chi-square95 interval."
+  ],
+  "resource_assessment": {
+    "tracking_expected_failures_full": 360.53302353094637,
+    "tracking_chunk_size": 1000000,
+    "tracking_storage": "Retains chunk counts and failure pairs; does not retain20M full pairs. Working arrays are tens of MB.",
+    "variance_storage": "O(200000) active vectors plus200 summary rows and terminal samples;200x200 precision matrix.",
+    "seed_scope": "Confirmation seeds and sample counts fixed in protocol; validator ran no production Monte Carlo."
+  },
+  "limitations": [
+    "Smoke saw0 tracking failures; this is statistically plausible but weak evidence and must not be advertised as a rare-event reproduction.",
+    "20M samples should yield about361 tracking failures, allowing roughly10% relative95 uncertainty.",
+    "This covers single-round tracking and the local-Gaussian q-quadrature posterior only.",
+    "No finite-energy channel, truncation fidelity, modular-subsystem scoring, memoryless comparison or Figure3 has been reproduced.",
+    "A production point outside its preregistered interval must be reported/audited, not corrected by changing noise parameters."
+  ],
+  "dependency_sha256": {
+    "experiments/reproduce_convy2022.py": "081a7b9b7e577a6314220d4b6a4cecd77651198884cfd6cc2d3479e5fa9a3539"
+  },
+  "files_modified_by_validator": [
+    "reproductions/wan2020/validation.json"
+  ]
+}

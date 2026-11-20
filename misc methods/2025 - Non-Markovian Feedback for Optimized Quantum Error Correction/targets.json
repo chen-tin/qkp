@@ -1,0 +1,20 @@
+[
+  {
+    "id": "lifetime_gain",
+    "kind": "lifetime_ratio",
+    "value": 2.0,
+    "unit": "ratio",
+    "conditions": {
+      "code": "GKP",
+      "comparison": "non_Markovian_vs_standard_sBs",
+      "protocol": "Figure 3 same noise and gate durations"
+    },
+    "locator": "Main text and Figure 3",
+    "reference_interval": [
+      1.8,
+      2.2
+    ],
+    "precision": "paper says about 100% increase; interval is an operational approximate-target band, not a reported CI",
+    "source_url": "https://doi.org/10.1103/PhysRevLett.134.020601"
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "validated_utc": "2026-11-18T20:05:14.228578+00:00",
+  "validator": "independent documentation-only validation agent",
+  "decision": "Full training is justified as an independent source-matched PyTorch reproduction attempt; no numerical paper result has been reproduced by this smoke run.",
+  "commands": [
+    {
+      "command": ".venv/bin/python -m pytest tests/test_baireuther_reproduction.py -q",
+      "result": "4 passed in 0.94s"
+    },
+    {
+      "command": ".venv/bin/python -m experiments.reproduce_baireuther2018 --smoke --seeds 0 --device cpu --output /tmp/baireuther-independent-smoke-v2",
+      "result": "exit0; two epochs, both finite; best epoch1; no test metrics evaluated because other seeds are unfinished"
+    }
+  ],
+  "smoke_plan": {
+    "registered_utc": "2026-11-18T20:04:03+00:00",
+    "config": {
+      "profile": "smoke",
+      "n_train": 1280,
+      "n_val": 128,
+      "n_test": 256,
+      "batches_per_epoch": 10,
+      "max_epochs": 2,
+      "patience": 100,
+      "device": "cpu",
+      "torch": "2.15.0",
+      "numpy": "2.5.5",
+      "source_hashes": {
+        "experiments/reproduce_baireuther2018.py": "31555b452881c1b84e0bee125ccacdf53e840cf39023c664e490fa7b1df9935e",
+        "experiments/baireuther_circuit.py": "d0da2ea4bf9590f8d28d1033a5cd9ff46cdf9c173a682a703e166ed749da3d40",
+        "reproductions/baireuther2018/reference/circuit_model.py": "bd00fb053e9cfe51ac6c3b097cd58b51f9a310e1a0cc5f3362b330c15b83edd8",
+        "docs/baireuther2018_reproduction.md": "122edfeaad7d92de5a6fa0067771b8c7146b584e116e450021b9e3ea203afdef"
+      },
+      "px": 0.00048,
+      "py": 0.00048,
+      "pz": 0.00048,
+      "pm": 0.0014
+    },
+    "planned_seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "smoke_training_history": [
+    {
+      "epoch": 1,
+      "train_ce": 0.6931492865085602,
+      "validation_wrong": 61,
+      "validation_n": 128,
+      "validation_ce": 0.6931102871894836,
+      "best_epoch": 1,
+      "stale_epochs": 0,
+      "validation_epsilon": 0.019412976053996823,
+      "validation_t0": 9.999999544324748,
+      "seconds": 0.10255162499379367
+    },
+    {
+      "epoch": 2,
+      "train_ce": 0.6931558966636657,
+      "validation_wrong": 65,
+      "validation_n": 128,
+      "validation_ce": 0.6931416392326355,
+      "best_epoch": 1,
+      "stale_epochs": 1,
+      "validation_epsilon": 0.09816352006634828,
+      "validation_t0": 0.1686819683031553,
+      "seconds": 0.07243841700255871
+    }
+  ],
+  "source_provenance_checks": {
+    "decoder.py": true,
+    "circuit_LICENSE": true,
+    "paper.html": true,
+    "circuit_model.py": true
+  },
+  "additional_dependency_sha256": {
+    "experiments/reproduce_convy2022.py": "081a7b9b7e577a6314220d4b6a4cecd77651198884cfd6cc2d3479e5fa9a3539",
+    "reproductions/baireuther2018/reference/decoder.py": "a5dd78ac5c97121a9351fef672310dba699f90604a1f548f57d41c364a33ab29",
+    "reproductions/baireuther2018/reference/provenance.json": "7ad83126287029c8f79d8f49cd1d7cff71950a8d2bf791ab1de05e074ee07032"
+  },
+  "architecture": {
+    "reference": "TensorFlow v1.4 BasicLSTMCell equations, i,j,f,o gate order and forget_bias=1; pinned author decoder dense/activation/XOR structure. Independent NumPy forward with same weights, dropout disabled.",
+    "manual_forward_max_absolute_difference": 3.638822754226112e-08,
+    "padding_invariance_max_absolute_difference": 0.0,
+    "trainable_parameters": 112130,
+    "source_sha256": "a6095ea77bf9079b15782d5e87cc4f6a3a1b893d72f1429bdb5a2d27c2d21468",
+    "tensorflow_reference_url": "https://raw.githubusercontent.com/tensorflow/tensorflow/v1.4.0/tensorflow/python/ops/rnn_cell_impl.py"
+  },
+  "statistics_optimizer": {
+    "source_sha256": "31555b452881c1b84e0bee125ccacdf53e840cf39023c664e490fa7b1df9935e",
+    "original_validation_fit": [
+      0.019412976053996823,
+      9.999999544324748
+    ],
+    "port_validation_fit": [
+      0.019412976053996823,
+      9.999999544324748
+    ],
+    "fit_max_absolute_difference": 0.0,
+    "adam_tf_formula_max_absolute_difference": 0.0
+  },
+  "resume": {
+    "current_source_sha256": "31555b452881c1b84e0bee125ccacdf53e840cf39023c664e490fa7b1df9935e",
+    "interruption": "Raised after epoch1 checkpoint was atomically saved; resumed unchanged2-epoch protocol.",
+    "max_last_weights_difference": 0.0,
+    "best_weights_bitwise_identical": true,
+    "best_epoch_equal": true
+  },
+  "findings_fixed_before_scaling": [
+    "Validation checkpoint and seed selection now minimize fitted error per cycle, rather than pooled wrong count.",
+    "Point/boot fit bounds match original executable source, including positional-argument bug that leaves validation t0 bound at10.",
+    "Probability=.5 predicts odd parity, matching source.",
+    "Adam resets at each epoch to match source graph rebuilding for longer validation histories.",
+    "Adam epsilon placement matches original TensorFlow formula."
+  ],
+  "known_disclosed_differences": [
+    "PyTorch replaces TensorFlow1 contrib; same architecture/equations checked, not bitwise identical hardware/runtime.",
+    "New seeds and batched float32 NumPy uniform draws replace original float64 RandomState trajectories; exact supplied-fault circuit equivalence checked separately.",
+    "Training seeds share the newly frozen data; original datasets and trained weights unavailable.",
+    "1000 whole-trajectory bootstrap resamples instead of author source default5000.",
+    "Only Figure3 Pauli-circuit LSTM target; no fresh blossom/MWPM implementation or density-matrix model."
+  ],
+  "limits": [
+    "Smoke fit is not a scientific result: its first epoch reaches t0 upper bound, expected for an untrained decoder and128 validation examples.",
+    "Full production must satisfy100 epochs without improved fitted validation error for all3 seeds; no arbitrary shorter cap.",
+    "Validate final curve/fit quality and confidence interval before claiming numerical reproduction.",
+    "MPS behavior is not validated by this CPU-only check."
+  ],
+  "files_modified_by_validator": [
+    "reproductions/baireuther2018/validation.json"
+  ]
+}

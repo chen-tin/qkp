@@ -1,0 +1,5 @@
+# Isolated reproduction environment; upstream pins take precedence.
+# Unpinned entries are setup hints, not a claimed tested lock.
+numpy
+scipy
+pymatching

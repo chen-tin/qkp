@@ -1,0 +1,42 @@
+{
+  "paper_id": "learned_gkp",
+  "status": "planned",
+  "registered": "2026-11-18",
+  "question": "Can the published metric be reproduced under the same physical and evaluation model?",
+  "audience": "Researchers assessing decoder failure across noise conditions",
+  "baseline": "Best conventional finite-energy GKP encoding at the same squeezing and channel",
+  "intervention": [
+    "learned codeword coefficients"
+  ],
+  "settings": {
+    "squeezing_dB": 9.55,
+    "optimized_M": 3,
+    "components": "2M+1=7",
+    "conventional_components": 21,
+    "training_kappa_tau": [
+      0,
+      0.005
+    ],
+    "training_kappa_phi_tau": [
+      0,
+      0.005
+    ],
+    "generalization_grid": [
+      0,
+      0.01
+    ],
+    "objective": "Knill-Laflamme violation and energy/stabilizer constraints, not classifier accuracy",
+    "validation": "Report codeword normalization, overlap, energy, cutoff convergence, KL residuals for both encodings."
+  },
+  "hypothesis": "The registered metric can be matched under the original protocol; no predicted advantage in the qkp simulator is asserted.",
+  "decision_rule": "Compare independently measured estimates and uncertainty with reported values or marked visual-reading ranges. A match is provisional until model, split and units are audited; missing code/data or imprecise estimates remain inconclusive. Do not tune on held-out test data.",
+  "compute": "Smoke: CPU, one thread, small bounded input. Production: explicitly launch after resolving listed blockers; no full training is started by fetch/check.",
+  "uncertainty": "Wilson intervals for independent Bernoulli counts; bootstrap trajectory/seed-level fits for lifetimes and thresholds. Use three independent training seeds for new training, reported separately.",
+  "procedure": "Construct normalized finite Fock-basis codewords from squeezed coherent states, optimize coefficients against the paper\u2019s error operators, and compare KL residuals on identical loss/dephasing grids. Save coefficients and residual matrices. Report the component-count reduction only if the optimized code also beats the conventional code on the specified correctability objective.",
+  "blockers": [
+    "No verified public author training implementation/checkpoints located.",
+    "Optimized coefficient tables and complete supplementary constraints must be obtained and implemented.",
+    "Component-count ratio alone is not evidence of improved correctability."
+  ],
+  "raw_output_contract": "See ../RESULTS.md. Save raw outcomes, checkpoint/config/source hashes, environment, seed and noise units."
+}

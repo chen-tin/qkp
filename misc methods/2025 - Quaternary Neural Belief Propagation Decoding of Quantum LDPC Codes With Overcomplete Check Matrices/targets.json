@@ -1,0 +1,27 @@
+[
+  {
+    "id": "toric_d8_nobp18",
+    "kind": "frame_error_rate",
+    "value": 0.001,
+    "unit": "fraction",
+    "conditions": {
+      "code": "toric",
+      "distance": 8,
+      "n": 128,
+      "k": 2,
+      "checks": 384,
+      "physical_p": 0.045,
+      "noise": "depolarizing",
+      "decoder": "NOBP4",
+      "iterations": 18,
+      "decoder_initial_p": 0.37
+    },
+    "locator": "Figure 9, d=8 green curve; journal PDF page 10",
+    "reference_interval": [
+      0.0008,
+      0.00125
+    ],
+    "precision": "visual reading range, not a confidence interval",
+    "source_url": "https://doi.org/10.1109/ACCESS.2025.3539475"
+  }
+]

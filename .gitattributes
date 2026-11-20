@@ -1,0 +1,14 @@
+# Preserve binary artifacts and keep generated research evidence out of default diffs.
+*.pdf binary
+*.pt binary
+*.npy binary
+*.npz binary
+*.png binary
+*.jpg binary
+*.zip binary
+
+/results/** linguist-generated=true -whitespace
+/writeup/artifact/gkp-walkthrough/** linguist-generated=true -whitespace
+/writeup/artifact/metrics/** linguist-generated=true -whitespace
+/reproductions/*/reference/** linguist-vendored=true -whitespace
+*.svg linguist-generated=true -whitespace

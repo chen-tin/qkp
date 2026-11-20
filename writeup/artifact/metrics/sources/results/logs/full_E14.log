@@ -1,0 +1,125 @@
+[18:12:36] run_all: mode=full device=cuda budget=Budget(chunk_trials=20000, max_test_trials=100000, min_events=50, diag_trials=2000, n_train=200000, n_val=20000, batch_size=2048, max_epochs=40, patience=5, train_time_cap_s=1800.0, hidden=128, lstm_seeds=3, filter_block_bytes=2000000000.0, ns_rounds=1000, ns_chunk_trials=1000, ns_max_test_trials=5000, ns_n_train=20000, ns_n_val=2000, ns_batch_size=128)
+[18:12:36] === E14 ===
+[18:12:36] E14/nominal_rho0.0_v1.0_pf0.0_m4: LSTM (binary) deferred (binary_lstm_nominal_m4_s0.pt not trained)
+[18:12:37] E14/nominal_rho0.0_v1.0_pf0.0_m4: sBs delta=0.08L          P_L(T)=0.491
+[18:12:37] E14/nominal_rho0.0_v1.0_pf0.0_m4: sBs delta=0.15L          P_L(T)=0.508
+[18:12:37] E14/nominal_rho0.0_v1.0_pf0.0_m4: sBs delta=0.25L          P_L(T)=0.496
+[18:12:54] E14/nominal_rho0.0_v1.0_pf0.0_m4: Bayes (binary, matched)  P_L(T)=0.487
+[18:13:19] E14/nominal_rho0.0_v1.0_pf0.01_m4: LSTM (binary) deferred (binary_lstm_nominal_m4_s0.pt not trained)
+[18:13:20] E14/nominal_rho0.0_v1.0_pf0.01_m4: sBs delta=0.08L          P_L(T)=0.510
+[18:13:20] E14/nominal_rho0.0_v1.0_pf0.01_m4: sBs delta=0.15L          P_L(T)=0.500
+[18:13:20] E14/nominal_rho0.0_v1.0_pf0.01_m4: sBs delta=0.25L          P_L(T)=0.494
+[18:13:36] E14/nominal_rho0.0_v1.0_pf0.01_m4: Bayes (binary, matched)  P_L(T)=0.514
+[18:13:44] E14/nominal_rho0.0_v0.95_pf0.0_m4: LSTM (binary) deferred (binary_lstm_nominal_m4_s0.pt not trained)
+[18:13:44] E14/nominal_rho0.0_v0.95_pf0.0_m4: sBs delta=0.08L          P_L(T)=0.505
+[18:13:44] E14/nominal_rho0.0_v0.95_pf0.0_m4: sBs delta=0.15L          P_L(T)=0.495
+[18:13:44] E14/nominal_rho0.0_v0.95_pf0.0_m4: sBs delta=0.25L          P_L(T)=0.503
+[18:13:56] E14/nominal_rho0.0_v0.95_pf0.0_m4: Bayes (binary, matched)  P_L(T)=0.505
+[18:14:05] E14/nominal_rho0.0_v0.95_pf0.01_m4: LSTM (binary) deferred (binary_lstm_nominal_m4_s0.pt not trained)
+[18:14:05] E14/nominal_rho0.0_v0.95_pf0.01_m4: sBs delta=0.08L          P_L(T)=0.502
+[18:14:05] E14/nominal_rho0.0_v0.95_pf0.01_m4: sBs delta=0.15L          P_L(T)=0.501
+[18:14:05] E14/nominal_rho0.0_v0.95_pf0.01_m4: sBs delta=0.25L          P_L(T)=0.498
+[18:14:26] E14/nominal_rho0.0_v0.95_pf0.01_m4: Bayes (binary, matched)  P_L(T)=0.500
+[18:14:31] E14/nominal_rho0.0_v1.0_pf0.0_m1: LSTM (binary) deferred (binary_lstm_nominal_m1_s0.pt not trained)
+[18:14:31] E14/nominal_rho0.0_v1.0_pf0.0_m1: sBs delta=0.08L          P_L(T)=0.493
+[18:14:32] E14/nominal_rho0.0_v1.0_pf0.0_m1: sBs delta=0.15L          P_L(T)=0.510
+[18:14:32] E14/nominal_rho0.0_v1.0_pf0.0_m1: sBs delta=0.25L          P_L(T)=0.491
+[18:14:54] E14/nominal_rho0.0_v1.0_pf0.0_m1: Bayes (binary, matched)  P_L(T)=0.508
+[18:14:58] E14/nominal_rho0.0_v1.0_pf0.0_m8: LSTM (binary) deferred (binary_lstm_nominal_m8_s0.pt not trained)
+[18:14:59] E14/nominal_rho0.0_v1.0_pf0.0_m8: sBs delta=0.08L          P_L(T)=0.501
+[18:14:59] E14/nominal_rho0.0_v1.0_pf0.0_m8: sBs delta=0.15L          P_L(T)=0.501
+[18:15:00] E14/nominal_rho0.0_v1.0_pf0.0_m8: sBs delta=0.25L          P_L(T)=0.494
+[18:15:34] E14/nominal_rho0.0_v1.0_pf0.0_m8: Bayes (binary, matched)  P_L(T)=0.519
+[18:15:41] E14/nominal_rho0.9_v1.0_pf0.0_m4: LSTM (binary) deferred (binary_lstm_nominal_m4_s0.pt not trained)
+[18:15:42] E14/nominal_rho0.9_v1.0_pf0.0_m4: sBs delta=0.08L          P_L(T)=0.502
+[18:15:42] E14/nominal_rho0.9_v1.0_pf0.0_m4: sBs delta=0.15L          P_L(T)=0.509
+[18:15:42] E14/nominal_rho0.9_v1.0_pf0.0_m4: sBs delta=0.25L          P_L(T)=0.493
+[18:16:07] E14/nominal_rho0.9_v1.0_pf0.0_m4: Bayes (binary, matched)  P_L(T)=0.477
+[18:16:14] E14/nominal_rho0.9_v1.0_pf0.01_m4: LSTM (binary) deferred (binary_lstm_nominal_m4_s0.pt not trained)
+[18:16:14] E14/nominal_rho0.9_v1.0_pf0.01_m4: sBs delta=0.08L          P_L(T)=0.497
+[18:16:14] E14/nominal_rho0.9_v1.0_pf0.01_m4: sBs delta=0.15L          P_L(T)=0.490
+[18:16:15] E14/nominal_rho0.9_v1.0_pf0.01_m4: sBs delta=0.25L          P_L(T)=0.508
+[18:16:34] E14/nominal_rho0.9_v1.0_pf0.01_m4: Bayes (binary, matched)  P_L(T)=0.477
+[18:16:38] E14/nominal_rho0.9_v0.95_pf0.0_m4: LSTM (binary) deferred (binary_lstm_nominal_m4_s0.pt not trained)
+[18:16:38] E14/nominal_rho0.9_v0.95_pf0.0_m4: sBs delta=0.08L          P_L(T)=0.507
+[18:16:38] E14/nominal_rho0.9_v0.95_pf0.0_m4: sBs delta=0.15L          P_L(T)=0.498
+[18:16:38] E14/nominal_rho0.9_v0.95_pf0.0_m4: sBs delta=0.25L          P_L(T)=0.506
+[18:16:58] E14/nominal_rho0.9_v0.95_pf0.0_m4: Bayes (binary, matched)  P_L(T)=0.493
+[18:17:06] E14/nominal_rho0.9_v0.95_pf0.01_m4: LSTM (binary) deferred (binary_lstm_nominal_m4_s0.pt not trained)
+[18:17:07] E14/nominal_rho0.9_v0.95_pf0.01_m4: sBs delta=0.08L          P_L(T)=0.494
+[18:17:07] E14/nominal_rho0.9_v0.95_pf0.01_m4: sBs delta=0.15L          P_L(T)=0.504
+[18:17:07] E14/nominal_rho0.9_v0.95_pf0.01_m4: sBs delta=0.25L          P_L(T)=0.499
+[18:17:27] E14/nominal_rho0.9_v0.95_pf0.01_m4: Bayes (binary, matched)  P_L(T)=0.502
+[18:17:33] E14/nominal_rho0.9_v1.0_pf0.0_m1: LSTM (binary) deferred (binary_lstm_nominal_m1_s0.pt not trained)
+[18:17:33] E14/nominal_rho0.9_v1.0_pf0.0_m1: sBs delta=0.08L          P_L(T)=0.512
+[18:17:33] E14/nominal_rho0.9_v1.0_pf0.0_m1: sBs delta=0.15L          P_L(T)=0.511
+[18:17:33] E14/nominal_rho0.9_v1.0_pf0.0_m1: sBs delta=0.25L          P_L(T)=0.487
+[18:17:55] E14/nominal_rho0.9_v1.0_pf0.0_m1: Bayes (binary, matched)  P_L(T)=0.501
+[18:17:59] E14/nominal_rho0.9_v1.0_pf0.0_m8: LSTM (binary) deferred (binary_lstm_nominal_m8_s0.pt not trained)
+[18:18:00] E14/nominal_rho0.9_v1.0_pf0.0_m8: sBs delta=0.08L          P_L(T)=0.502
+[18:18:00] E14/nominal_rho0.9_v1.0_pf0.0_m8: sBs delta=0.15L          P_L(T)=0.509
+[18:18:01] E14/nominal_rho0.9_v1.0_pf0.0_m8: sBs delta=0.25L          P_L(T)=0.490
+[18:18:24] E14/nominal_rho0.9_v1.0_pf0.0_m8: Bayes (binary, matched)  P_L(T)=0.164
+[18:18:33] E14/hardware_rho0.0_v1.0_pf0.0_m4: LSTM (binary) deferred (binary_lstm_hardware_m4_s0.pt not trained)
+[18:18:33] E14/hardware_rho0.0_v1.0_pf0.0_m4: sBs delta=0.08L          P_L(T)=0.088
+[18:18:33] E14/hardware_rho0.0_v1.0_pf0.0_m4: sBs delta=0.15L          P_L(T)=0.180
+[18:18:34] E14/hardware_rho0.0_v1.0_pf0.0_m4: sBs delta=0.25L          P_L(T)=0.471
+[18:18:51] E14/hardware_rho0.0_v1.0_pf0.0_m4: Bayes (binary, matched)  P_L(T)=0.074
+[18:19:01] E14/hardware_rho0.0_v1.0_pf0.01_m4: LSTM (binary) deferred (binary_lstm_hardware_m4_s0.pt not trained)
+[18:19:01] E14/hardware_rho0.0_v1.0_pf0.01_m4: sBs delta=0.08L          P_L(T)=0.105
+[18:19:02] E14/hardware_rho0.0_v1.0_pf0.01_m4: sBs delta=0.15L          P_L(T)=0.202
+[18:19:02] E14/hardware_rho0.0_v1.0_pf0.01_m4: sBs delta=0.25L          P_L(T)=0.483
+[18:19:18] E14/hardware_rho0.0_v1.0_pf0.01_m4: Bayes (binary, matched)  P_L(T)=0.086
+[18:19:25] E14/hardware_rho0.0_v0.95_pf0.0_m4: LSTM (binary) deferred (binary_lstm_hardware_m4_s0.pt not trained)
+[18:19:25] E14/hardware_rho0.0_v0.95_pf0.0_m4: sBs delta=0.08L          P_L(T)=0.119
+[18:19:26] E14/hardware_rho0.0_v0.95_pf0.0_m4: sBs delta=0.15L          P_L(T)=0.216
+[18:19:26] E14/hardware_rho0.0_v0.95_pf0.0_m4: sBs delta=0.25L          P_L(T)=0.476
+[18:19:43] E14/hardware_rho0.0_v0.95_pf0.0_m4: Bayes (binary, matched)  P_L(T)=0.101
+[18:19:52] E14/hardware_rho0.0_v0.95_pf0.01_m4: LSTM (binary) deferred (binary_lstm_hardware_m4_s0.pt not trained)
+[18:19:52] E14/hardware_rho0.0_v0.95_pf0.01_m4: sBs delta=0.08L          P_L(T)=0.117
+[18:19:53] E14/hardware_rho0.0_v0.95_pf0.01_m4: sBs delta=0.15L          P_L(T)=0.230
+[18:19:53] E14/hardware_rho0.0_v0.95_pf0.01_m4: sBs delta=0.25L          P_L(T)=0.477
+[18:20:11] E14/hardware_rho0.0_v0.95_pf0.01_m4: Bayes (binary, matched)  P_L(T)=0.111
+[18:20:17] E14/hardware_rho0.0_v1.0_pf0.0_m1: LSTM (binary) deferred (binary_lstm_hardware_m1_s0.pt not trained)
+[18:20:18] E14/hardware_rho0.0_v1.0_pf0.0_m1: sBs delta=0.08L          P_L(T)=0.260
+[18:20:18] E14/hardware_rho0.0_v1.0_pf0.0_m1: sBs delta=0.15L          P_L(T)=0.474
+[18:20:18] E14/hardware_rho0.0_v1.0_pf0.0_m1: sBs delta=0.25L          P_L(T)=0.501
+[18:20:36] E14/hardware_rho0.0_v1.0_pf0.0_m1: Bayes (binary, matched)  P_L(T)=0.257
+[18:20:45] E14/hardware_rho0.0_v1.0_pf0.0_m8: LSTM (binary) deferred (binary_lstm_hardware_m8_s0.pt not trained)
+[18:20:45] E14/hardware_rho0.0_v1.0_pf0.0_m8: sBs delta=0.08L          P_L(T)=0.039
+[18:20:46] E14/hardware_rho0.0_v1.0_pf0.0_m8: sBs delta=0.15L          P_L(T)=0.018
+[18:20:46] E14/hardware_rho0.0_v1.0_pf0.0_m8: sBs delta=0.25L          P_L(T)=0.110
+[18:21:06] E14/hardware_rho0.0_v1.0_pf0.0_m8: Bayes (binary, matched)  P_L(T)=0.014
+[18:21:14] E14/hardware_rho0.9_v1.0_pf0.0_m4: LSTM (binary) deferred (binary_lstm_hardware_m4_s0.pt not trained)
+[18:21:14] E14/hardware_rho0.9_v1.0_pf0.0_m4: sBs delta=0.08L          P_L(T)=0.500
+[18:21:15] E14/hardware_rho0.9_v1.0_pf0.0_m4: sBs delta=0.15L          P_L(T)=0.503
+[18:21:13] E14/hardware_rho0.9_v1.0_pf0.0_m4: sBs delta=0.25L          P_L(T)=0.504
+[18:21:30] E14/hardware_rho0.9_v1.0_pf0.0_m4: Bayes (binary, matched)  P_L(T)=0.262
+[18:21:34] E14/hardware_rho0.9_v1.0_pf0.01_m4: LSTM (binary) deferred (binary_lstm_hardware_m4_s0.pt not trained)
+[18:21:34] E14/hardware_rho0.9_v1.0_pf0.01_m4: sBs delta=0.08L          P_L(T)=0.491
+[18:21:34] E14/hardware_rho0.9_v1.0_pf0.01_m4: sBs delta=0.15L          P_L(T)=0.505
+[18:21:35] E14/hardware_rho0.9_v1.0_pf0.01_m4: sBs delta=0.25L          P_L(T)=0.493
+[18:21:49] E14/hardware_rho0.9_v1.0_pf0.01_m4: Bayes (binary, matched)  P_L(T)=0.295
+[18:21:57] E14/hardware_rho0.9_v0.95_pf0.0_m4: LSTM (binary) deferred (binary_lstm_hardware_m4_s0.pt not trained)
+[18:21:57] E14/hardware_rho0.9_v0.95_pf0.0_m4: sBs delta=0.08L          P_L(T)=0.494
+[18:21:58] E14/hardware_rho0.9_v0.95_pf0.0_m4: sBs delta=0.15L          P_L(T)=0.499
+[18:21:58] E14/hardware_rho0.9_v0.95_pf0.0_m4: sBs delta=0.25L          P_L(T)=0.502
+[18:22:13] E14/hardware_rho0.9_v0.95_pf0.0_m4: Bayes (binary, matched)  P_L(T)=0.332
+[18:22:18] E14/hardware_rho0.9_v0.95_pf0.01_m4: LSTM (binary) deferred (binary_lstm_hardware_m4_s0.pt not trained)
+[18:22:18] E14/hardware_rho0.9_v0.95_pf0.01_m4: sBs delta=0.08L          P_L(T)=0.504
+[18:22:18] E14/hardware_rho0.9_v0.95_pf0.01_m4: sBs delta=0.15L          P_L(T)=0.499
+[18:22:18] E14/hardware_rho0.9_v0.95_pf0.01_m4: sBs delta=0.25L          P_L(T)=0.491
+[18:22:35] E14/hardware_rho0.9_v0.95_pf0.01_m4: Bayes (binary, matched)  P_L(T)=0.367
+[18:22:42] E14/hardware_rho0.9_v1.0_pf0.0_m1: LSTM (binary) deferred (binary_lstm_hardware_m1_s0.pt not trained)
+[18:22:43] E14/hardware_rho0.9_v1.0_pf0.0_m1: sBs delta=0.08L          P_L(T)=0.501
+[18:22:43] E14/hardware_rho0.9_v1.0_pf0.0_m1: sBs delta=0.15L          P_L(T)=0.493
+[18:22:43] E14/hardware_rho0.9_v1.0_pf0.0_m1: sBs delta=0.25L          P_L(T)=0.487
+[18:22:54] E14/hardware_rho0.9_v1.0_pf0.0_m1: Bayes (binary, matched)  P_L(T)=0.494
+[18:23:03] E14/hardware_rho0.9_v1.0_pf0.0_m8: LSTM (binary) deferred (binary_lstm_hardware_m8_s0.pt not trained)
+[18:23:04] E14/hardware_rho0.9_v1.0_pf0.0_m8: sBs delta=0.08L          P_L(T)=0.503
+[18:23:04] E14/hardware_rho0.9_v1.0_pf0.0_m8: sBs delta=0.15L          P_L(T)=0.464
+[18:23:05] E14/hardware_rho0.9_v1.0_pf0.0_m8: sBs delta=0.25L          P_L(T)=0.361
+[18:23:20] E14/hardware_rho0.9_v1.0_pf0.0_m8: Bayes (binary, matched)  P_L(T)=0.030
+[18:23:28] E14 analysis: 120 rows
+[18:23:28] === E14 done in 706s ===
+[18:23:28] run_all finished; failed experiments: none; failed decoders/points: none

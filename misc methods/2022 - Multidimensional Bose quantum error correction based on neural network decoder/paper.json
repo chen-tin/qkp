@@ -1,0 +1,35 @@
+{
+  "id": "gkp_cnn",
+  "title": "Multidimensional Bose quantum error correction based on neural network decoder",
+  "year": 2022,
+  "methods": [
+    "CNN"
+  ],
+  "scope": "direct surface-GKP decoding",
+  "source_url": "https://www.nature.com/articles/s41534-022-00650-z",
+  "blockers": [
+    "Author neural decoder implementation and simulation data are available on request.",
+    "The linked ConcatenatedCodedRepeaters repository is a cited reference implementation, not this CNN.",
+    "Training sample-count wording needs reconciliation before a full run."
+  ],
+  "sources": [
+    {
+      "name": "publication",
+      "url": "https://www.nature.com/articles/s41534-022-00650-z",
+      "download": false
+    },
+    {
+      "name": "paper.pdf",
+      "url": "https://www.nature.com/articles/s41534-022-00650-z.pdf",
+      "download": true
+    },
+    {
+      "name": "supplement.pdf",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41534-022-00650-z/MediaObjects/41534_2022_650_MOESM1_ESM.pdf",
+      "download": true,
+      "sha256": "77f0dab22fd6e4e22262e0be89c707bd042e4de2be604aa28844a426882c1b83"
+    }
+  ],
+  "supported_modes": [],
+  "evidence_status": "published_metrics_verified; no new paper-metric reproduction claimed"
+}

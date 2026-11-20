@@ -1,0 +1,37 @@
+{
+  "paper_id": "surface_gkp",
+  "status": "planned",
+  "registered": "2026-11-18",
+  "question": "Can the published metric be reproduced under the same physical and evaluation model?",
+  "audience": "Researchers assessing decoder failure across noise conditions",
+  "baseline": "Closest-integer gate decoding and conventional rotated surface-code resource comparison",
+  "intervention": [
+    "analog MWPM",
+    "correlated maximum likelihood",
+    "surface-GKP concatenation"
+  ],
+  "settings": {
+    "anchor_squeezing_dB": 12,
+    "threshold_squeezing_dB": 9.9,
+    "gate_ML": "joint displacement optimization; Algorithms 1 and 2",
+    "outer_decoder": "dynamic matching edge weights using complete analog history and space-time correlations",
+    "resource_claim": {
+      "logical_failure_upper_bound": 1e-07,
+      "modes": 291,
+      "qubits": 97,
+      "squeezing_dB": 12
+    },
+    "rare_event_policy": "For zero failures report confidence upper bound, never claim zero logical error."
+  },
+  "hypothesis": "The registered metric can be matched under the original protocol; no predicted advantage in the qkp simulator is asserted.",
+  "decision_rule": "Compare independently measured estimates and uncertainty with reported values or marked visual-reading ranges. A match is provisional until model, split and units are audited; missing code/data or imprecise estimates remain inconclusive. Do not tune on held-out test data.",
+  "compute": "Smoke: CPU, one thread, small bounded input. Production: explicitly launch after resolving listed blockers; no full training is started by fetch/check.",
+  "uncertainty": "Wilson intervals for independent Bernoulli counts; bootstrap trajectory/seed-level fits for lifetimes and thresholds. Use three independent training seeds for new training, reported separately.",
+  "procedure": "First reproduce the joint two-mode CNOT displacement decoder against closest-integer rounding at 12 dB. Then implement the Appendix C memory circuit with dynamically weighted, correlated matching graphs and perform the squeezing sweep. Preserve the paper\u2019s variance-to-dB convention and count both relevant gate failure components.",
+  "blockers": [
+    "No verified public author simulation repository located.",
+    "Full correlated gate model and dynamically weighted matching implementation remain to be implemented from the paper appendices.",
+    "A 1e-7 failure claim requires adequate rare-event statistics, not a smoke run."
+  ],
+  "raw_output_contract": "See ../RESULTS.md. Save raw outcomes, checkpoint/config/source hashes, environment, seed and noise units."
+}

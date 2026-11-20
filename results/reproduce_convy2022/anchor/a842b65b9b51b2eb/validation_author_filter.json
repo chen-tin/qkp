@@ -1,0 +1,46 @@
+{
+  "true_initial": {
+    "n": 30000,
+    "correct_final": 25194,
+    "final_fidelity": 0.8398,
+    "wilson95": [
+      0.8356059727410111,
+      0.8439070165534389
+    ],
+    "sem": 0.0021176713626056332,
+    "mean_time_fidelity": 0.8919405333333333,
+    "prediction_disagreements_with_ours": 6,
+    "final_prediction_disagreements_with_ours": 0
+  },
+  "first_label": {
+    "n": 30000,
+    "correct_final": 25196,
+    "final_fidelity": 0.8398666666666667,
+    "wilson95": [
+      0.8356733297033884,
+      0.8439729758534306
+    ],
+    "sem": 0.0021173147214407287,
+    "mean_time_fidelity": 0.8921599466666666,
+    "prediction_disagreements_with_ours": 5317,
+    "final_prediction_disagreements_with_ours": 6
+  },
+  "method": "Original author Bayesian.get_gaussian_outputs depth=0, same fitted parameters; original float32 prior transition recurrence; preallocated prediction storage. Runs both correctly provided initial state and author tracking helper first-label initialization.",
+  "author_commit": "9bb00616add5fb8cd004f7ca64d14f7803dfa33b",
+  "author_real_data_sha256": "479d6e87ae9364d859cf44d73184f3d4727b335c46936ff84c8d41a5f5b043b3",
+  "seconds": 3.467088222503662,
+  "author_transition_and_first_label": {
+    "n": 30000,
+    "correct_final": 25196,
+    "final_fidelity": 0.8398666666666667,
+    "wilson95": [
+      0.8356733297033884,
+      0.8439729758534306
+    ],
+    "sem": 0.0021173147214407287,
+    "mean_time_fidelity": 0.8921598933333333,
+    "prediction_disagreements_with_ours": 5321,
+    "final_prediction_disagreements_with_ours": 6
+  },
+  "transition_note": "Reconstructed original get_flip_probs formula exactly from frozen integer count arrays: replace actual terminal-state counts by N/8; conditional moments unchanged."
+}

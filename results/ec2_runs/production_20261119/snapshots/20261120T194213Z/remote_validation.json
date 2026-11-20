@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "test_command": [
+    "/opt/qkp/.venv/bin/python",
+    "-m",
+    "pytest",
+    "tests/test_simulation_quality.py",
+    "tests/test_continuous_ancilla.py",
+    "tests/test_qutip_engine_benchmark.py",
+    "tests/test_qutip_reference.py",
+    "tests/test_quantum_channels.py",
+    "-q"
+  ],
+  "completed": "2026-11-20T00:33:01.202392+00:00"
+}

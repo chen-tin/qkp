@@ -1,0 +1,402 @@
+{
+  "validated_utc": "2026-11-18T20:13:25.966653+00:00",
+  "validator": "independent documentation-only validation agent",
+  "decision": "41-point finite-energy scoring comparison is scientifically justified under the documented encoding, extraction and target-state conventions. It is a scoring audit, not full Figure3 reproduction.",
+  "commands": [
+    {
+      "command": ".venv/bin/python -m pytest tests/test_wan_fidelity.py -q",
+      "result": "4 passed in1.14s"
+    },
+    {
+      "command": ".venv/bin/python -m experiments.wan_fidelity_audit --smoke",
+      "result": "exit0; rounds0 and200; uncorrected control and Gaussian-residual-only diagnostic both evaluated"
+    }
+  ],
+  "smoke_plan": {
+    "registered_utc": "2026-11-18T20:11:26+00:00",
+    "config": {
+      "profile": "smoke",
+      "delta": 0.2182,
+      "kappa": 0.2182,
+      "sigma2": 0.0005,
+      "rounds": [
+        0,
+        200
+      ],
+      "source_sha256": "74094ceef56048748fc29b245d23e000ff1404e9b8716c8b9fe5f0db60d1aed4",
+      "protocol_sha256": "585c308ef5dc8e9ac25d0cff879af1eed5964ef608be281212c6648f94380d9b",
+      "journal_sha256": "0e6d8de6b738ca7a1cfcfb80f410984105a09036a1d932f84eb9945250f0d3ff"
+    }
+  },
+  "smoke_result": {
+    "completed_utc": "2026-11-18T20:11:26+00:00",
+    "curves": [
+      {
+        "round": 0,
+        "sigma_total_squared": 0.0,
+        "no_qec_plus": 0.981648366792579,
+        "no_qec_worst": {
+          "fidelity": 0.9816483577001531,
+          "theta": 1.5707964015952292,
+          "phi": -1.5806990055698449,
+          "optimizer_success": true
+        },
+        "gaussian_residual_only_worst": 0.9816483577001531
+      },
+      {
+        "round": 200,
+        "sigma_total_squared": 0.1,
+        "no_qec_plus": 0.9116340331942986,
+        "no_qec_worst": {
+          "fidelity": 0.9019365749934278,
+          "theta": 4.71238898481931,
+          "phi": -1.5707963131211116,
+          "optimizer_success": true
+        },
+        "gaussian_residual_only_worst": 0.9815228628423873
+      }
+    ],
+    "published_no_qec_digitized": [
+      {
+        "round": 0,
+        "fidelity": 0.9814310645724258,
+        "absolute_tolerance": 0.0003
+      },
+      {
+        "round": 200,
+        "fidelity": 0.9118324607329843,
+        "absolute_tolerance": 0.0003
+      }
+    ],
+    "full_figure3_reproduced": false,
+    "scope": "Uncorrected channel and scoring audit; residual-only diagnostic omits failures."
+  },
+  "independent_global_minimum_checks": {
+    "gram_matrix": [
+      [
+        1.0000000000000002,
+        1.320199583403268e-07
+      ],
+      [
+        1.320199583403268e-07,
+        0.9999999999999998
+      ]
+    ],
+    "gram_identity_spectral_norm": 1.320199583403268e-07,
+    "encoding_inverse_sqrt": [
+      [
+        1.0000000000000062,
+        -6.60099792588873e-08
+      ],
+      [
+        -6.600997920337615e-08,
+        1.0000000000000064
+      ]
+    ],
+    "checks": [
+      {
+        "variance": 0,
+        "bloch_translation": [
+          3.558202769533756e-10,
+          0.0,
+          0.0
+        ],
+        "bloch_linear": [
+          [
+            0.9632967332293387,
+            0.0,
+            -1.611985288809914e-14
+          ],
+          [
+            0.0,
+            0.9632967154020822,
+            0.0
+          ],
+          [
+            -5.551108580983096e-17,
+            0.0,
+            0.999999981493494
+          ]
+        ],
+        "worst": {
+          "fidelity": 0.9816483577001531,
+          "theta": 1.5707964015952292,
+          "phi": -1.5806990055698449,
+          "optimizer_success": true
+        },
+        "optimizer_bloch_vector": [
+          -0.00990251692793291,
+          -0.9999509688772177,
+          -7.480033253331658e-08
+        ],
+        "stationarity_max_absolute_residual": 5.490832857218021e-09,
+        "certificate_min_eigenvalue": 1.354472090042691e-14,
+        "eigenvalue_translation_global_lower_bound": 0.981648357523131,
+        "optimizer_gap_to_rigorous_lower_bound": 1.7702217469661718e-10,
+        "raw_normalized_encoding_minus_isometric_fidelity": {
+          "plus": 5.551115123125783e-16,
+          "minus": 2.220446049250313e-16,
+          "Yplus": -3.885780586188048e-15,
+          "Yminus": -3.885780586188048e-15,
+          "zero": -3.774758283725532e-15,
+          "one": -3.774758283725532e-15
+        }
+      },
+      {
+        "variance": 0.025,
+        "bloch_translation": [
+          3.421180507687966e-10,
+          0.0,
+          -5.551115123125783e-17
+        ],
+        "bloch_linear": [
+          [
+            0.926201293265584,
+            0.0,
+            -1.5499096027096724e-14
+          ],
+          [
+            0.0,
+            0.9260895441929299,
+            0.0
+          ],
+          [
+            -5.550441169922431e-17,
+            0.0,
+            0.9998793468833751
+          ]
+        ],
+        "worst": {
+          "fidelity": 0.9630447720964643,
+          "theta": 4.712388999219012,
+          "phi": -1.570794516459869,
+          "optimizer_success": true
+        },
+        "optimizer_bloch_vector": [
+          -1.8103350277235e-06,
+          0.9999999999983611,
+          1.8834322362316006e-08
+        ],
+        "stationarity_max_absolute_residual": 2.779561806364081e-09,
+        "certificate_min_eigenvalue": 1.1102230246251565e-16,
+        "eigenvalue_translation_global_lower_bound": 0.9630447719254058,
+        "optimizer_gap_to_rigorous_lower_bound": 1.710585006975407e-10,
+        "raw_normalized_encoding_minus_isometric_fidelity": {
+          "plus": 1.1102230246251565e-16,
+          "minus": 0.0,
+          "Yplus": -3.9968028886505635e-15,
+          "Yminus": -3.9968028886505635e-15,
+          "zero": -3.774758283725532e-15,
+          "one": -3.774758283725532e-15
+        }
+      },
+      {
+        "variance": 0.05,
+        "bloch_translation": [
+          3.2894348142268406e-10,
+          0.0,
+          5.551115123125783e-17
+        ],
+        "bloch_linear": [
+          [
+            0.8905343556714899,
+            0.0,
+            -1.490224384794068e-14
+          ],
+          [
+            0.0,
+            0.8885648237466816,
+            0.0
+          ],
+          [
+            -5.5388338348859523e-17,
+            0.0,
+            0.9977883706425636
+          ]
+        ],
+        "worst": {
+          "fidelity": 0.9442824118733404,
+          "theta": 1.5707963511573213,
+          "phi": -1.5707962589580053,
+          "optimizer_success": true
+        },
+        "optimizer_bloch_vector": [
+          6.783689127671035e-08,
+          -0.9999999999999973,
+          -2.4362424683007432e-08
+        ],
+        "stationarity_max_absolute_residual": 5.321900814213578e-09,
+        "certificate_min_eigenvalue": 0.0,
+        "eigenvalue_translation_global_lower_bound": 0.9442824117088691,
+        "optimizer_gap_to_rigorous_lower_bound": 1.6447132544783472e-10,
+        "raw_normalized_encoding_minus_isometric_fidelity": {
+          "plus": 1.1102230246251565e-16,
+          "minus": 0.0,
+          "Yplus": -3.774758283725532e-15,
+          "Yminus": -3.774758283725532e-15,
+          "zero": -3.774758283725532e-15,
+          "one": -3.774758283725532e-15
+        }
+      },
+      {
+        "variance": 0.075,
+        "bloch_translation": [
+          3.162762494622351e-10,
+          0.0,
+          1.1102230246251565e-16
+        ],
+        "bloch_linear": [
+          [
+            0.8562409104775799,
+            0.0,
+            -1.4328375736478594e-14
+          ],
+          [
+            0.0,
+            0.8480011278982515,
+            0.0
+          ],
+          [
+            -5.4976907781183674e-17,
+            0.0,
+            0.99037679410257
+          ]
+        ],
+        "worst": {
+          "fidelity": 0.9240005639491253,
+          "theta": 1.5707963094588497,
+          "phi": -1.5707965053169448,
+          "optimizer_success": true
+        },
+        "optimizer_bloch_vector": [
+          -1.7852204819406963e-07,
+          -0.9999999999999839,
+          1.7336046881536658e-08
+        ],
+        "stationarity_max_absolute_residual": 4.936462559241017e-09,
+        "certificate_min_eigenvalue": -3.3306690738754696e-16,
+        "eigenvalue_translation_global_lower_bound": 0.9240005637909876,
+        "optimizer_gap_to_rigorous_lower_bound": 1.5813772513695312e-10,
+        "raw_normalized_encoding_minus_isometric_fidelity": {
+          "plus": 1.1102230246251565e-16,
+          "minus": 0.0,
+          "Yplus": -3.552713678800501e-15,
+          "Yminus": -3.552713678800501e-15,
+          "zero": -3.774758283725532e-15,
+          "one": -3.774758283725532e-15
+        }
+      },
+      {
+        "variance": 0.1,
+        "bloch_translation": [
+          3.040968179131039e-10,
+          0.0,
+          5.551115123125783e-17
+        ],
+        "bloch_linear": [
+          [
+            0.8232680660845015,
+            0.0,
+            -1.3776606586177659e-14
+          ],
+          [
+            0.0,
+            0.8038731499868565,
+            0.0
+          ],
+          [
+            -5.420339206720006e-17,
+            0.0,
+            0.9764415542195286
+          ]
+        ],
+        "worst": {
+          "fidelity": 0.9019365749934278,
+          "theta": 4.71238898481931,
+          "phi": -1.5707963131211116,
+          "optimizer_success": true
+        },
+        "optimizer_bloch_vector": [
+          -1.3673785054405738e-08,
+          0.9999999999999999,
+          4.434620486982104e-09
+        ],
+        "stationarity_max_absolute_residual": 1.5305508171433733e-09,
+        "certificate_min_eigenvalue": 1.1102230246251565e-16,
+        "eigenvalue_translation_global_lower_bound": 0.9019365748413799,
+        "optimizer_gap_to_rigorous_lower_bound": 1.5204792980227921e-10,
+        "raw_normalized_encoding_minus_isometric_fidelity": {
+          "plus": 2.220446049250313e-16,
+          "minus": -1.1102230246251565e-16,
+          "Yplus": -3.3306690738754696e-15,
+          "Yminus": -3.3306690738754696e-15,
+          "zero": -3.774758283725532e-15,
+          "one": -3.6637359812630166e-15
+        }
+      }
+    ],
+    "global_minimum_bound": "For unit Bloch r, fidelity=.5*(1+r^T A r+t^T r)>=.5*(1+lambda_min(A)-||t||). Compare optimizer to this rigorous lower bound."
+  },
+  "all_state_orthonormalization_fidelity_difference_upper_bound": 1.32019966958552e-07,
+  "orthonormalization_bound_reason": "Write normalized raw encoding as V sqrt(G)|psi>/sqrt(<psi|G|psi>), compared with exact isometry V|psi>. Pure-state trace distance is bounded by sqrt(lambda_max(G)/lambda_min(G))-1. The Gaussian channel/gauge trace cannot increase trace distance, bounding the change in fidelity with any fixed target projector.",
+  "primary_sources": [
+    {
+      "url": "https://doi.org/10.1103/PhysRevResearch.2.043280",
+      "local": "reproductions/wan2020/reference/journal.pdf",
+      "equations": [
+        "Eq1 finite-energy codeword",
+        "Eq2 Gaussian displacement channel"
+      ],
+      "sha256": "0e6d8de6b738ca7a1cfcfb80f410984105a09036a1d932f84eb9945250f0d3ff"
+    },
+    {
+      "url": "https://arxiv.org/html/1907.08210v3",
+      "title": "Pantaleoni, Baragiola and Menicucci, Modular Bosonic Subsystem Codes",
+      "equations": [
+        "Eq1 q=alpha*l+2alpha*m_G+u_G",
+        "Eq3 gauge partial trace",
+        "Eq4 squared Uhlmann fidelity; pure target gives expectation value"
+      ],
+      "notes": "alpha=sqrt(pi). Primary text notes that subsystem decompositions are not unique."
+    }
+  ],
+  "analytic_formula_checks": [
+    "Wan Eq1 Gaussian amplitude peaks have width delta and peak-centered envelope weights exp(-kappa_squared*center_squared/2), matching implementation.",
+    "Product of two displaced Gaussian amplitudes separates into overlap exp(-separation_squared/(4delta_squared)) and a Gaussian in modular position of variance delta_squared/2. Convolution adds vq. Bin integral is the Gaussian CDF difference.",
+    "Averaging momentum displacements gives exp(-vp*(ell-other)^2*pi/2), matching the channel coherence factor.",
+    "Gauge trace pairs equal m_G and u_G with logical indices ell,other, exactly matching the documented bin integral.",
+    "Channel CP/TP/Hermiticity checks, enlarged peak/bin cutoffs and direct wavefunction quadrature pass at zero/nonzero noise.",
+    "Global minimum is checked independently with a rigorous Bloch quadratic lower bound. Reported optimizer is within1.8e-10 of the bound at five representative variances."
+  ],
+  "digitization": {
+    "image": "reproductions/wan2020/reference/journal_figure3.jpg",
+    "sha256": "7683529535a084ba0a50267bb7f6146dcb2e8958cb341b793a869424a87d35fc",
+    "size": [
+      1015,
+      934
+    ],
+    "visual_check": "Axes and cyan color selection agree with protocol. Inset is black, orange curve fails cyan mask, black text excluded.",
+    "tolerance": 0.0003,
+    "endpoint_plus_difference": 0.00019842753868570817,
+    "endpoint_worst_difference": 0.009895885739556465
+  },
+  "convention_concerns": [
+    "Gauge extraction is the specific modular-position subsystem of Pantaleoni Eqs1/3. Other subsystem conventions can encode different logical states.",
+    "Scoring compares the extracted output with the intended pure qubit. Fidelity against the extracted finite-energy input instead would be1 initially; the published initial F0<1 is consistent with an intended-target convention but does not uniquely specify all scoring details.",
+    "Journal caption rounds Delta=kappa to.22; audit fixes.2182 from journal numerical examples. This is declared, not a fit to the plotted curve.",
+    "Approximate codewords are symmetrically orthonormalized. Bound above shows this cannot explain the roughly.01 endpoint discrepancy.",
+    "No original author simulation code or explicit restriction to real-amplitude inputs was found. Plus-state agreement is not evidence that the authors used that state or proof of an author error."
+  ],
+  "limits": [
+    "41-point calculation can compare this audit convention with published blue pixels; it cannot establish the memoryless or memory-assisted finite-energy curves.",
+    "Gaussian-residual-only intervention omits tracking/truncation/syndrome failures.",
+    "No production comparison was launched by the validator."
+  ],
+  "additional_dependency_sha256": {
+    "experiments/reproduce_convy2022.py": "081a7b9b7e577a6314220d4b6a4cecd77651198884cfd6cc2d3479e5fa9a3539",
+    "experiments/reproduce_wan2020.py": "bc5fac0399daed456fb75613d4f82cc62e62bd285785f03583007992808772be"
+  },
+  "files_modified_by_validator": [
+    "reproductions/wan2020/fidelity_validation.json"
+  ]
+}

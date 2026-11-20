@@ -1,0 +1,43 @@
+{
+  "id": "tcn",
+  "title": "Rethink the Role of Neural Decoders in Quantum Error Correction",
+  "year": 2026,
+  "methods": [
+    "TCN",
+    "3D CNN",
+    "MLP",
+    "Transformer",
+    "GNN"
+  ],
+  "scope": "transferable; surface-code benchmark",
+  "source_url": "https://proceedings.mlr.press/v306/yan26g.html",
+  "blockers": [
+    "Released code contains model, data, compression and training utilities, but no complete Table 1 hardware-calibration/fine-tuning entry point.",
+    "The local smoke test validates the released TCN on generated Stim data; it cannot establish Table 1 accuracy.",
+    "Upstream pins numpy 2.2.6 with brevitas 0.12.1, which requires numpy <=1.26.4. Local smoke setup uses numpy 1.26.4; this environment deviation is explicit.",
+    "SciPy 1.15.3 wheel failed to load on this macOS machine; isolated smoke environment uses SciPy 1.16.3."
+  ],
+  "supported_modes": [
+    "smoke"
+  ],
+  "sources": [
+    {
+      "name": "publication",
+      "url": "https://proceedings.mlr.press/v306/yan26g.html",
+      "download": false
+    },
+    {
+      "name": "paper.pdf",
+      "url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/yan26g/yan26g.pdf",
+      "download": true,
+      "sha256": "930c8df103c25a4106249a14161a41537187518dbc3483c99b2e5c295c4ec00a"
+    }
+  ],
+  "upstream": {
+    "url": "https://github.com/GrahamYan/QEC-neural-decoder-benchmark.git",
+    "commit": "aeca633b4c30022193dfe1b18a41e860d3496b87",
+    "pin_date": "2026-11-18",
+    "publication_release": false
+  },
+  "evidence_status": "published_metrics_verified; no new paper-metric reproduction claimed"
+}

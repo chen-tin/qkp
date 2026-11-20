@@ -1,0 +1,37 @@
+{
+  "paper_id": "analog_ldpc",
+  "status": "planned",
+  "registered": "2026-11-18",
+  "question": "Can the published metric be reproduced under the same physical and evaluation model?",
+  "audience": "Researchers assessing decoder failure across noise conditions",
+  "baseline": "Hard-syndrome decoder under the same phenomenological model; historical 7.1% single-shot threshold is not a newly paired run",
+  "intervention": [
+    "analog belief propagation",
+    "overlapping-window decoding",
+    "bosonic qLDPC concatenation"
+  ],
+  "settings": {
+    "single_shot_sizes": [
+      5,
+      7,
+      9,
+      11
+    ],
+    "noisy_rounds": 128,
+    "decoder": "ATD/BP+OSD with analog LLRs",
+    "outer_code": "3D toric and lifted-product qLDPC examples",
+    "threshold_fit": "finite-size scaling, Appendix G",
+    "source_note": "Current pinned author repo has evolved since publication; audit API and paper-era results before simulation."
+  },
+  "hypothesis": "The registered metric can be matched under the original protocol; no predicted advantage in the qkp simulator is asserted.",
+  "decision_rule": "Compare independently measured estimates and uncertainty with reported values or marked visual-reading ranges. A match is provisional until model, split and units are audited; missing code/data or imprecise estimates remain inconclusive. Do not tune on held-out test data.",
+  "compute": "Smoke: CPU, one thread, small bounded input. Production: explicitly launch after resolving listed blockers; no full training is started by fetch/check.",
+  "uncertainty": "Wilson intervals for independent Bernoulli counts; bootstrap trajectory/seed-level fits for lifetimes and thresholds. Use three independent training seeds for new training, reported separately.",
+  "procedure": "Use the author ATD and quasi-single-shot simulators with the supplied parity-check matrices. Preserve X/Z component distinctions and repeated-round conventions. Fit threshold crossings for multiple sizes and bootstrap independent simulation batches. Never compare the single-shot 9.9% threshold with the non-single-shot 1.66% as though they were the same task.",
+  "blockers": [
+    "Paper-era data/configuration locations differ from current MQT layout.",
+    "Simulation driver must be reconciled with pinned ATD/QSS APIs before full threshold sweeps.",
+    "Analog measurement channel must match the paper; no direct GKP-noise transfer claim."
+  ],
+  "raw_output_contract": "See ../RESULTS.md. Save raw outcomes, checkpoint/config/source hashes, environment, seed and noise units."
+}

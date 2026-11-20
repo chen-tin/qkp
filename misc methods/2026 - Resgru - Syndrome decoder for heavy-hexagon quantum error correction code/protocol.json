@@ -1,0 +1,62 @@
+{
+  "paper_id": "resgru",
+  "status": "planned",
+  "registered": "2026-11-18",
+  "question": "Can the published metric be reproduced under the same physical and evaluation model?",
+  "audience": "Researchers assessing decoder failure across noise conditions",
+  "baseline": "MWPM using exactly the same detector error model and held-out shots",
+  "intervention": [
+    "GRU",
+    "residual MLP"
+  ],
+  "settings": {
+    "distance": [
+      3,
+      5,
+      7
+    ],
+    "physical_p": 0.001,
+    "noise_parameters": [
+      "after_clifford_depolarization",
+      "after_reset_flip_probability",
+      "before_measure_flip_probability",
+      "before_round_data_depolarization"
+    ],
+    "training_rounds": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15
+    ],
+    "evaluation_rounds_max": 300,
+    "hidden_size": 256,
+    "layers": 2,
+    "upstream_example_epochs": 100,
+    "upstream_example_batch_size": 512,
+    "upstream_example_lr": 0.001,
+    "upstream_example_train_samples": 10000000,
+    "seed_plan": [
+      0,
+      1,
+      2
+    ],
+    "notes": "Training settings are released example defaults, not a verified match to the final paper runs. Freeze circuit and fit convention before paper comparison.",
+    "seed_note": "The local smoke sampler is explicitly seeded. The released training dataset does not seed Stim; its seed only selects round length."
+  },
+  "hypothesis": "The registered metric can be matched under the original protocol; no predicted advantage in the qkp simulator is asserted.",
+  "decision_rule": "Compare independently measured estimates and uncertainty with reported values or marked visual-reading ranges. A match is provisional until model, split and units are audited; missing code/data or imprecise estimates remain inconclusive. Do not tune on held-out test data.",
+  "compute": "Smoke: CPU, one thread, small bounded input. Production: explicitly launch after resolving listed blockers; no full training is started by fetch/check.",
+  "uncertainty": "Wilson intervals for independent Bernoulli counts; bootstrap trajectory/seed-level fits for lifetimes and thresholds. Use three independent training seeds for new training, reported separately.",
+  "procedure": "Generate seeded heavy-hexagon Stim detector events with the author circuit. Train the released residual GRU on short sequences. Evaluate all decoders on shared held-out shots across durations through 300 rounds; fit the same parity-decay model and compute 1 - epsilon_GRU/epsilon_MWPM. Short-sequence validation accuracy alone is not the published metric.",
+  "blockers": [
+    "Original experimental datasets are available on request.",
+    "Released example configuration must be reconciled against final paper training settings before a metric reproduction claim.",
+    "Full multi-duration evaluation and matched MWPM comparison adapter not yet implemented.",
+    "Author training script assumes distributed CUDA initialization and fixed 500k validation; a portable production launcher needs adaptation.",
+    "The author dataset seed selects round length but does not seed its Stim sampler; do not claim deterministic training."
+  ],
+  "raw_output_contract": "See ../RESULTS.md. Save raw outcomes, checkpoint/config/source hashes, environment, seed and noise units."
+}

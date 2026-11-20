@@ -1,0 +1,34 @@
+[
+  {
+    "id": "hardware_d3",
+    "kind": "per_round_ler",
+    "value": 0.02901,
+    "unit": "fraction_per_round",
+    "conditions": {
+      "code": "Sycamore_surface",
+      "distance": 3,
+      "ensemble": 20,
+      "test_fold": "odd",
+      "protocol": "Figure 3"
+    },
+    "locator": "Figure 3 and Results",
+    "reported_standard_error": 0.00023,
+    "source_url": "https://www.nature.com/articles/s41586-024-08148-8"
+  },
+  {
+    "id": "hardware_d5",
+    "kind": "per_round_ler",
+    "value": 0.02748,
+    "unit": "fraction_per_round",
+    "conditions": {
+      "code": "Sycamore_surface",
+      "distance": 5,
+      "ensemble": 20,
+      "test_fold": "odd",
+      "protocol": "Figure 3"
+    },
+    "locator": "Figure 3 and Results",
+    "reported_standard_error": 0.00015,
+    "source_url": "https://www.nature.com/articles/s41586-024-08148-8"
+  }
+]

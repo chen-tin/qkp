@@ -1,0 +1,57 @@
+{
+  "paper_id": "tcn",
+  "status": "planned",
+  "registered": "2026-11-18",
+  "question": "Can the published metric be reproduced under the same physical and evaluation model?",
+  "audience": "Researchers assessing decoder failure across noise conditions",
+  "baseline": "Standard and correlated MWPM, plus uniform-prior TCN on identical hardware test split",
+  "intervention": [
+    "TCN",
+    "3D CNN",
+    "MLP",
+    "Transformer",
+    "GNN"
+  ],
+  "settings": {
+    "model": "TCN-small",
+    "hardware_baselines": {
+      "d3_MWPM": 0.0801,
+      "d3_correlated_MWPM": 0.0738,
+      "d5_MWPM": 0.1438,
+      "d5_correlated_MWPM": 0.1252
+    },
+    "prior_controls": [
+      "uniform p=.005",
+      "hardware calibrated"
+    ],
+    "hardware_data": "https://doi.org/10.5281/zenodo.6804040",
+    "distances": [
+      3,
+      5,
+      7,
+      9
+    ],
+    "training_source": "Appendices and qec_decoder/train.py",
+    "FPGA_latency": "resource-model estimate; not measured wall-clock latency",
+    "hardware_rounds": "r=d",
+    "d3_center_qubit": [
+      7,
+      5
+    ],
+    "pretraining_shots": 5000000,
+    "finetuning_shots": 45000,
+    "test_shots": 5000
+  },
+  "hypothesis": "The registered metric can be matched under the original protocol; no predicted advantage in the qkp simulator is asserted.",
+  "decision_rule": "Compare independently measured estimates and uncertainty with reported values or marked visual-reading ranges. A match is provisional until model, split and units are audited; missing code/data or imprecise estimates remain inconclusive. Do not tune on held-out test data.",
+  "compute": "Smoke: CPU, one thread, small bounded input. Production: explicitly launch after resolving listed blockers; no full training is started by fetch/check.",
+  "uncertainty": "Wilson intervals for independent Bernoulli counts; bootstrap trajectory/seed-level fits for lifetimes and thresholds. Use three independent training seeds for new training, reported separately.",
+  "procedure": "Use the author TCN-small architecture, and preserve the hardware split and calibration used in Table 1. Compare uniform pretraining, calibrated pretraining, and fine-tuning separately. Table 1 values are shot-level percentages, not AlphaQubit-style fitted errors per round. Record INT4 resource estimates separately from measured inference times.",
+  "blockers": [
+    "Released code contains model, data, compression and training utilities, but no complete Table 1 hardware-calibration/fine-tuning entry point.",
+    "The local smoke test validates the released TCN on generated Stim data; it cannot establish Table 1 accuracy.",
+    "Upstream pins numpy 2.2.6 with brevitas 0.12.1, which requires numpy <=1.26.4. Local smoke setup uses numpy 1.26.4; this environment deviation is explicit.",
+    "SciPy 1.15.3 wheel failed to load on this macOS machine; isolated smoke environment uses SciPy 1.16.3."
+  ],
+  "raw_output_contract": "See ../RESULTS.md. Save raw outcomes, checkpoint/config/source hashes, environment, seed and noise units."
+}

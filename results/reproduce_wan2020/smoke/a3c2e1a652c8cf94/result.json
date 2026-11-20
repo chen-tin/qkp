@@ -1,0 +1,29 @@
+{
+  "completed_utc": "2026-11-18T20:08:41+00:00",
+  "tracking_integral": 1.802665117654732e-05,
+  "quadrature_error_estimate": 2.5120791901158487e-17,
+  "tracking_mc_probability": 0.0,
+  "tracking_mc_wilson95": [
+    0.0,
+    3.841311258303963e-05
+  ],
+  "tracking_consistent": true,
+  "journal_tracking_order": 1e-05,
+  "preprint_tracking_order": 1e-11,
+  "journal_order_agreement": true,
+  "variance_final": {
+    "round": 10,
+    "bayesian_mse": 0.00016705369216698433,
+    "control_mse": 0.00016854988707625467,
+    "posterior_variance": 0.0001636256338641033,
+    "mse95": [
+      0.00015332625280132462,
+      0.00018272068364221287
+    ],
+    "paper_approx_variance": 0.00016355493316611434
+  },
+  "matrix_variance": 0.00016362563386410327,
+  "matrix_filter_abs_difference": 2.710505431213761e-20,
+  "full_figure3_reproduced": false,
+  "scope": "Journal D1/D2 tracking probability; local-Gaussian Bayesian variance Eqs13/15."
+}

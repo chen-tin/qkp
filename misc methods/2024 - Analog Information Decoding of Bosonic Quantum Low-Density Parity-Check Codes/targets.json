@@ -1,0 +1,50 @@
+[
+  {
+    "id": "single_shot_threshold",
+    "kind": "noise_threshold",
+    "value": 0.099,
+    "unit": "physical_error_probability",
+    "conditions": {
+      "code": "3D_toric",
+      "component": "single_shot",
+      "noise": "phenomenological_analog",
+      "sizes": [
+        5,
+        7,
+        9,
+        11
+      ],
+      "rounds": 128
+    },
+    "locator": "Figure 7b",
+    "source_url": "https://doi.org/10.1103/PRXQuantum.5.020349"
+  },
+  {
+    "id": "non_single_shot_analog_threshold",
+    "kind": "noise_threshold",
+    "value": 0.0166,
+    "unit": "physical_error_probability",
+    "conditions": {
+      "code": "3D_toric",
+      "component": "non_single_shot",
+      "syndrome": "analog",
+      "noise": "phenomenological"
+    },
+    "locator": "Appendix F, Figure 15",
+    "source_url": "https://doi.org/10.1103/PRXQuantum.5.020349"
+  },
+  {
+    "id": "non_single_shot_hard_threshold",
+    "kind": "noise_threshold",
+    "value": 0.0126,
+    "unit": "physical_error_probability",
+    "conditions": {
+      "code": "3D_toric",
+      "component": "non_single_shot",
+      "syndrome": "hard",
+      "noise": "phenomenological"
+    },
+    "locator": "Appendix F, Figure 15",
+    "source_url": "https://doi.org/10.1103/PRXQuantum.5.020349"
+  }
+]

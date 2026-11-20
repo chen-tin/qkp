@@ -1,0 +1,12 @@
+Working directory: /Users/christopherbabayan/programs/QUANTUM/qkp
+
+Control:
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.qutip_reference --smoke --cutoffs 32 --per-state 2 --rounds 2 --seed 26111973 --params .20 .05 .90 --decoders nearest --logical-bins 32 --snapshot-per-state 2 --hot-per-state 1
+
+Combined physical software intervention:
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python -m experiments.qutip_reference --smoke --cutoffs 32 --per-state 2 --rounds 2 --seed 26111973 --params .20 .05 .90 --decoders nearest --logical-bins 32 --snapshot-per-state 2 --hot-per-state 1 --physics-json results/simulation_quality_infrastructure/independent_pilot_20261119/physics.json
+
+Audit:
+PYTHONPATH=. OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python results/simulation_quality_infrastructure/independent_pilot_20261119/audit.py
+
+Scope: bounded software execution/provenance/privacy checks only. Combined physical intervention cannot isolate effects of individual channels. Both pilots fail population gates at cutoff 32 and provide no valid physical performance inference. No production job, source edit, or frozen-plan modification was performed.

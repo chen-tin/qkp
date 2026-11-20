@@ -1,0 +1,66 @@
+{
+  "raw_hashes_verified": true,
+  "population_gates": {
+    "custom/nearest/N24": {
+      "valid_population_horizon": -1,
+      "mean_edge": [
+        0.01000089381071119,
+        0.05026731994167787
+      ],
+      "max_edge": [
+        0.01664446368197725,
+        0.40315567326803536
+      ],
+      "norm_error": 8.881784197001252e-15,
+      "stage_gates": [
+        {
+          "coverage": "every_recorded_primitive_stage",
+          "stage_checks_complete": true,
+          "valid_by_cycle": [
+            false,
+            false
+          ],
+          "valid_through_cycle": -1,
+          "pass": false,
+          "instrument_pass": true,
+          "max_edge": 0.40315567326803536,
+          "max_mean_edge": 0.05026731994167787,
+          "max_norm_error": 4.884981308350689e-15,
+          "thresholds": {
+            "mean_edge": 0.0001,
+            "individual_edge": 0.01,
+            "norm": 1e-07,
+            "energy_limit": 1000.0,
+            "energy_jump": 1000.0
+          },
+          "continuous_gate_bound": false
+        },
+        {
+          "coverage": "every_recorded_primitive_stage",
+          "stage_checks_complete": true,
+          "valid_by_cycle": [
+            false,
+            false
+          ],
+          "valid_through_cycle": -1,
+          "pass": false,
+          "instrument_pass": true,
+          "max_edge": 0.047185972644796764,
+          "max_mean_edge": 0.020098184185403753,
+          "max_norm_error": 8.881784197001252e-15,
+          "thresholds": {
+            "mean_edge": 0.0001,
+            "individual_edge": 0.01,
+            "norm": 1e-07,
+            "energy_limit": 1000.0,
+            "energy_jump": 1000.0
+          },
+          "continuous_gate_bound": false
+        }
+      ]
+    }
+  },
+  "cutoff_comparisons": {},
+  "analysis_source_sha256": "77336c649e0282a0e5bc7861c3b91042a3e4f6b1ee0f8ace420c203130b31f57",
+  "note": "Population gates are necessary; separate cutoff, ancilla-dx and logical-bin refinement comparisons are also required."
+}

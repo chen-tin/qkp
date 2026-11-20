@@ -1,0 +1,48 @@
+{
+  "paper_id": "nbp4",
+  "status": "planned",
+  "registered": "2026-11-18",
+  "question": "Can the published metric be reproduced under the same physical and evaluation model?",
+  "audience": "Researchers assessing decoder failure across noise conditions",
+  "baseline": "Untrained BP4 and overcomplete BP4; MWPM reference from paper",
+  "intervention": [
+    "neural belief propagation",
+    "model-based neural decoder"
+  ],
+  "settings": {
+    "code": "toric [[128,2,8]]",
+    "checks": 384,
+    "iterations": 18,
+    "physical_p_grid": [
+      0.015,
+      0.03,
+      0.045,
+      0.06,
+      0.075,
+      0.09,
+      0.105,
+      0.12,
+      0.135,
+      0.15
+    ],
+    "weights": "training_results/toric_128_2_384/",
+    "parity_checks": "PCMs/toric_128_2/toric_128_2_H_384.alist",
+    "max_frame_errors": 300,
+    "max_decoded_words": 45000000,
+    "seed_limit": "Author C++ RNG is not externally seeded; record this limitation, do not claim exact deterministic replay.",
+    "decoder_initial_p": 0.37,
+    "initial_p_source": "Pinned author train_toric_L8.py sets ep0=.37 when m=3*n. Physical test noise remains .045; these are different parameters.",
+    "effective_stopping_rule": "Stop at 300 frame errors or 45,000,000 words. Author serial loop uses <=; CLI limits are299 and44999999."
+  },
+  "hypothesis": "The registered metric can be matched under the original protocol; no predicted advantage in the qkp simulator is asserted.",
+  "decision_rule": "Compare independently measured estimates and uncertainty with reported values or marked visual-reading ranges. A match is provisional until model, split and units are audited; missing code/data or imprecise estimates remain inconclusive. Do not tune on held-out test data.",
+  "compute": "Smoke: CPU, one thread, small bounded input. Production: explicitly launch after resolving listed blockers; no full training is started by fetch/check.",
+  "uncertainty": "Wilson intervals for independent Bernoulli counts; bootstrap trajectory/seed-level fits for lifetimes and thresholds. Use three independent training seeds for new training, reported separately.",
+  "procedure": "Build the author C++ decoder and load released toric weights. The adapter copies sources into the run folder and changes only code n/k/m, decoder iterations, and trained/control choice; all changes are recorded. Score frame errors, counting nontrivial logical errors even when the syndrome matches. Foundational reference: Liu and Poulin, PRL 122, 200501 (2019), https://doi.org/10.1103/PhysRevLett.122.200501; this newer paper adds public code and weights.",
+  "blockers": [
+    "The released C++ executable defaults to GB [[46,2]] with six iterations; the adapter makes an explicit copy with toric/18-iteration parameters.",
+    "Training weights are public; a fresh-training replication needs the notebook settings and independent seeds.",
+    "The adapter compiles a serial C++17 copy and records removal of OpenMP includes/pragmas; no libomp is required."
+  ],
+  "raw_output_contract": "See ../RESULTS.md. Save raw outcomes, checkpoint/config/source hashes, environment, seed and noise units."
+}

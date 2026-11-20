@@ -1,0 +1,39 @@
+{
+  "paper_id": "mamba",
+  "status": "planned",
+  "registered": "2026-11-18",
+  "question": "Can the published metric be reproduced under the same physical and evaluation model?",
+  "audience": "Researchers assessing decoder failure across noise conditions",
+  "baseline": "Transformer on identical simulation inputs; retain both with- and without-latency-noise conditions",
+  "intervention": [
+    "Mamba",
+    "state-space model"
+  ],
+  "settings": {
+    "version": "Accepted article 28 October 2026 (not arXiv v1)",
+    "hardware_data": "https://doi.org/10.5281/zenodo.6804040",
+    "released_data": "author simulated real-time outcomes, distances 3 to 9",
+    "noise_injection": "four decoder-latency-dependent noise injections in 28-round simulations",
+    "replay_definition": "Compare actual and predicted final observable bits with/without injected noise. This reanalyzes released data, not training or hardware Figure 2.",
+    "replay_subset": {
+      "distance": 3,
+      "rounds": 28,
+      "p": 0.002,
+      "models": [
+        "mamba",
+        "transformer"
+      ]
+    }
+  },
+  "hypothesis": "The registered metric can be matched under the original protocol; no predicted advantage in the qkp simulator is asserted.",
+  "decision_rule": "Compare independently measured estimates and uncertainty with reported values or marked visual-reading ranges. A match is provisional until model, split and units are audited; missing code/data or imprecise estimates remain inconclusive. Do not tune on held-out test data.",
+  "compute": "Smoke: CPU, one thread, small bounded input. Production: explicitly launch after resolving listed blockers; no full training is started by fetch/check.",
+  "uncertainty": "Wilson intervals for independent Bernoulli counts; bootstrap trajectory/seed-level fits for lifetimes and thresholds. Use three independent training seeds for new training, reported separately.",
+  "procedure": "Replay the released actual/predicted observable files for both architectures and noise-injection conditions. Export errors, shots and Wilson intervals. To regenerate observations or reproduce hardware per-round targets, obtain the author model and training implementation. Do not use the preprint threshold to label the accepted article benchmark.",
+  "blockers": [
+    "Author training/decoder code is withheld for intellectual-property reasons; available on request.",
+    "Public repository releases numerical real-time data, not the hardware model or training code.",
+    "Replay results are shot failure rates and must not be compared directly to hardware per-round targets."
+  ],
+  "raw_output_contract": "See ../RESULTS.md. Save raw outcomes, checkpoint/config/source hashes, environment, seed and noise units."
+}

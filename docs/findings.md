@@ -1,5 +1,7 @@
 # Findings log
 
+New project-wide work is consolidated in [RESEARCH_NOTES.md](../RESEARCH_NOTES.md), with ongoing logging required by [AGENTS.md](../AGENTS.md). This historical findings log is retained as evidence, including its dated corrections.
+
 A running record of results, in the order they came in. Each entry gives the claim, the
 evidence (script and result file) and the caveats. Corrections are recorded as new entries
 that point back to what they correct. Nothing earlier is silently rewritten.

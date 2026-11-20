@@ -1,0 +1,52 @@
+{
+  "registered_utc": "2026-11-19T22:25:43Z",
+  "status": "planned",
+  "config": {
+    "pilot": false,
+    "seed": 26111907,
+    "data_delta": 0.3,
+    "logical_bins": 192,
+    "data_cutoffs": [
+      64,
+      96
+    ],
+    "ancilla_cutoffs": [
+      256,
+      512,
+      768
+    ],
+    "resources": {
+      "nominal": 0.0886226925452758,
+      "high_readout": 0.28359261614488257
+    },
+    "axes": [
+      "q",
+      "p"
+    ],
+    "radius": 36.0,
+    "dy": 0.005,
+    "quadrature": "cell_split_nested_trapezoid_one_sided_feedback_boundaries",
+    "source_hashes": {
+      "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+      "quantum/measurement_benchmark.py": "eb714ee555f7d36f77210e2268e70af1d250fc19270529eee368c3ebb9290137",
+      "experiments/benchmark_qutip_engine.py": "72b39bc22753d6243ff937a5c2b80235fc75aa740780fa75c83663ec691f9b2b",
+      "docs/qutip_engine_benchmark.md": "5d7f7967e60198d599afc6ca9626b3d4a169ae0cf758082dc046c4d950e5d7fe",
+      "tests/test_qutip_engine_benchmark.py": "d95f66697d47fee6ccf4417accb8078b396163172dcff158b4f3693e4276f80c",
+      "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e"
+    },
+    "python": "3.13.13",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "qutip": "5.3.1",
+    "qutip_wave_kernel_sha256": "73dd3ff8ed10ae9dcf4822d10b8dcbad1186aef60c611264a00ed8ada5c3be84",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "threads": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "outcome_nodes": 14501
+  }
+}

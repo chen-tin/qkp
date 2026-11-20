@@ -1,0 +1,32 @@
+[
+  {
+    "id": "d5_reduction",
+    "kind": "relative_ler_reduction",
+    "value": 0.28,
+    "unit": "fraction",
+    "conditions": {
+      "code": "heavy_hexagon",
+      "distance": 5,
+      "physical_p": 0.001,
+      "noise": "circuit_level_depolarizing",
+      "baseline": "MWPM_same_DEM"
+    },
+    "locator": "Abstract",
+    "source_url": "https://doi.org/10.1088/1402-4896/ae87e2"
+  },
+  {
+    "id": "d7_reduction",
+    "kind": "relative_ler_reduction",
+    "value": 0.14,
+    "unit": "fraction",
+    "conditions": {
+      "code": "heavy_hexagon",
+      "distance": 7,
+      "physical_p": 0.001,
+      "noise": "circuit_level_depolarizing",
+      "baseline": "MWPM_same_DEM"
+    },
+    "locator": "Abstract",
+    "source_url": "https://doi.org/10.1088/1402-4896/ae87e2"
+  }
+]

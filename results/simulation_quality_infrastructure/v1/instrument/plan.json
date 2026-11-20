@@ -1,0 +1,38 @@
+{
+  "states": null,
+  "cycle": null,
+  "columns": null,
+  "data_cutoff": 6,
+  "fock_levels": [
+    0,
+    2
+  ],
+  "ancilla_cutoffs": [
+    64,
+    96
+  ],
+  "sigma": 0.5,
+  "radius": 12.0,
+  "dy": 0.04,
+  "coupling": 1.0,
+  "max_joint": 2000000,
+  "max_scratch_mb": 512,
+  "output": "results/simulation_quality_infrastructure/v1/instrument",
+  "audit_only": false,
+  "inputs": {
+    "kind": "Fock_states",
+    "levels": [
+      0,
+      2
+    ],
+    "cutoff": 6
+  },
+  "source_hashes": {
+    "experiments/validate_reference_states.py": "438c0778b21d56ccc29141af520b938a9441ee5db6635f2f51bea87d00b510a3",
+    "quantum/measurement_benchmark.py": "a3609bd2dce0525d46d885083e791b6cc5447eb338741f235216c90df06c3730",
+    "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+    "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5"
+  },
+  "python": "3.13.13",
+  "qutip": "5.3.1"
+}

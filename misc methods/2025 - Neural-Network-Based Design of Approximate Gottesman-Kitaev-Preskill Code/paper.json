@@ -1,0 +1,30 @@
+{
+  "id": "learned_gkp",
+  "title": "Neural-Network-Based Design of Approximate Gottesman-Kitaev-Preskill Code",
+  "year": 2025,
+  "methods": [
+    "learned codeword coefficients"
+  ],
+  "scope": "direct GKP encoding optimization; not a decoder",
+  "source_url": "https://doi.org/10.1103/PhysRevLett.134.060601",
+  "blockers": [
+    "No verified public author training implementation/checkpoints located.",
+    "Optimized coefficient tables and complete supplementary constraints must be obtained and implemented.",
+    "Component-count ratio alone is not evidence of improved correctability."
+  ],
+  "sources": [
+    {
+      "name": "publication",
+      "url": "https://doi.org/10.1103/PhysRevLett.134.060601",
+      "download": false
+    },
+    {
+      "name": "paper.pdf",
+      "url": "https://nori-physics.org/wp-content/uploads/PhysRevLett_134_060601_14_Feb_2025.pdf",
+      "download": true,
+      "sha256": "c43e7f59f91aacf07cef6ea07e5311afa949ef971a606bd8aaf1588ffdee11e1"
+    }
+  ],
+  "supported_modes": [],
+  "evidence_status": "published_metrics_verified; no new paper-metric reproduction claimed"
+}

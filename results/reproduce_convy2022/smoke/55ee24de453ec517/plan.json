@@ -1,0 +1,35 @@
+{
+  "registered_utc": "2026-11-18T19:56:55+00:00",
+  "config": {
+    "schema": 1,
+    "paper": "Convy et al. NJP 24 063019 (2022)",
+    "target": "Figure 2 Scheme A, gamma=.04/us",
+    "gamma": 0.04,
+    "dt_us": 0.032,
+    "gamma_m_us": 4.7,
+    "steps": 625,
+    "n_train": 512,
+    "n_val": 128,
+    "n_test": 256,
+    "max_epochs": 2,
+    "min_epochs": 2,
+    "patience": 12,
+    "min_delta": 1e-05,
+    "learning_rate": 0.001,
+    "batch_size": 512,
+    "device": "mps",
+    "source_sha256": "081a7b9b7e577a6314220d4b6a4cecd77651198884cfd6cc2d3479e5fa9a3539",
+    "protocol_sha256": "34e985ec68f78f4da477488ee7f168a04d55e40d55a90976a3a97dbe0421f985",
+    "reference_sha256": "8b7f9effe4ea2ba56757b693fe5670a7ba937bacac7b77e251f2b35ecd58d40c",
+    "torch": "2.15.0",
+    "numpy": "2.5.5",
+    "profile": "smoke"
+  },
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "planned_training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "disclosure": "Independent implementation. Original LSTM notebook unavailable."
+}

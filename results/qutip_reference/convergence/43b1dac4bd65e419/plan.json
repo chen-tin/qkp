@@ -1,0 +1,42 @@
+{
+  "registered_utc": "2026-11-19T11:23:05Z",
+  "config": {
+    "profile": "convergence",
+    "seed": 26111901,
+    "data_delta": 0.3,
+    "per_state": 64,
+    "rounds": 8,
+    "dx": 0.003,
+    "cutoffs": [
+      192,
+      256,
+      384
+    ],
+    "points": {
+      "nominal": [
+        0.2,
+        0.05,
+        0.9
+      ]
+    },
+    "decoders": [
+      "nearest"
+    ],
+    "source_hashes": {
+      "quantum/qutip_reference.py": "aacdf1a803c08378997f4c0c7898a0ac1994461d5ba1d9a34d12a50f198ea683",
+      "experiments/qutip_reference.py": "450fa65f76ba4e269fac2d3ccba9ee5922c80e34a2e1fbfea376c4b8239160ee",
+      "docs/qutip_reference.md": "7ac328a093cecbbff1fe1284a16d35f7aa5bca2361f5047a44998d2c0e00825e",
+      "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+      "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+      "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+      "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+      "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e"
+    },
+    "checkpoint_sha256": "5f4486abe6368d0e071722923c85cfee829b0583b75e0655da2c52e891a115af",
+    "python": "3.13.13",
+    "numpy": "2.5.5",
+    "qutip": "5.3.1",
+    "torch": "2.15.0"
+  },
+  "status": "planned"
+}

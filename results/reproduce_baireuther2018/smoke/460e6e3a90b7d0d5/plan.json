@@ -1,0 +1,30 @@
+{
+  "registered_utc": "2026-11-18T20:03:49+00:00",
+  "config": {
+    "profile": "smoke",
+    "n_train": 1280,
+    "n_val": 128,
+    "n_test": 256,
+    "batches_per_epoch": 10,
+    "max_epochs": 2,
+    "patience": 100,
+    "device": "mps",
+    "torch": "2.15.0",
+    "numpy": "2.5.5",
+    "source_hashes": {
+      "experiments/reproduce_baireuther2018.py": "31555b452881c1b84e0bee125ccacdf53e840cf39023c664e490fa7b1df9935e",
+      "experiments/baireuther_circuit.py": "d0da2ea4bf9590f8d28d1033a5cd9ff46cdf9c173a682a703e166ed749da3d40",
+      "reproductions/baireuther2018/reference/circuit_model.py": "bd00fb053e9cfe51ac6c3b097cd58b51f9a310e1a0cc5f3362b330c15b83edd8",
+      "docs/baireuther2018_reproduction.md": "122edfeaad7d92de5a6fa0067771b8c7146b584e116e450021b9e3ea203afdef"
+    },
+    "px": 0.00048,
+    "py": 0.00048,
+    "pz": 0.00048,
+    "pm": 0.0014
+  },
+  "planned_seeds": [
+    0,
+    1,
+    2
+  ]
+}

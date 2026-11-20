@@ -1,0 +1,43 @@
+{
+  "completed_utc": "2026-11-18T20:11:26+00:00",
+  "curves": [
+    {
+      "round": 0,
+      "sigma_total_squared": 0.0,
+      "no_qec_plus": 0.981648366792579,
+      "no_qec_worst": {
+        "fidelity": 0.9816483577001531,
+        "theta": 1.5707964015952292,
+        "phi": -1.5806990055698449,
+        "optimizer_success": true
+      },
+      "gaussian_residual_only_worst": 0.9816483577001531
+    },
+    {
+      "round": 200,
+      "sigma_total_squared": 0.1,
+      "no_qec_plus": 0.9116340331942986,
+      "no_qec_worst": {
+        "fidelity": 0.9019365749934278,
+        "theta": 4.71238898481931,
+        "phi": -1.5707963131211116,
+        "optimizer_success": true
+      },
+      "gaussian_residual_only_worst": 0.9815228628423873
+    }
+  ],
+  "published_no_qec_digitized": [
+    {
+      "round": 0,
+      "fidelity": 0.9814310645724258,
+      "absolute_tolerance": 0.0003
+    },
+    {
+      "round": 200,
+      "fidelity": 0.9118324607329843,
+      "absolute_tolerance": 0.0003
+    }
+  ],
+  "full_figure3_reproduced": false,
+  "scope": "Uncorrected channel and scoring audit; residual-only diagnostic omits failures."
+}

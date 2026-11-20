@@ -1,0 +1,38 @@
+{
+  "id": "analog_ldpc",
+  "title": "Analog Information Decoding of Bosonic Quantum Low-Density Parity-Check Codes",
+  "year": 2024,
+  "methods": [
+    "analog belief propagation",
+    "overlapping-window decoding",
+    "bosonic qLDPC concatenation"
+  ],
+  "scope": "bosonic-code outer decoder; reported model is not our single-mode GKP simulator",
+  "source_url": "https://doi.org/10.1103/PRXQuantum.5.020349",
+  "blockers": [
+    "Paper-era data/configuration locations differ from current MQT layout.",
+    "Simulation driver must be reconciled with pinned ATD/QSS APIs before full threshold sweeps.",
+    "Analog measurement channel must match the paper; no direct GKP-noise transfer claim."
+  ],
+  "sources": [
+    {
+      "name": "publication",
+      "url": "https://doi.org/10.1103/PRXQuantum.5.020349",
+      "download": false
+    },
+    {
+      "name": "paper.pdf",
+      "url": "https://research.chalmers.se/publication/541506/file/541506_Fulltext.pdf",
+      "download": true,
+      "sha256": "5de502e15051be12f1332a2b64e8aee507bbf129705eabc670c6f593400a77a3"
+    }
+  ],
+  "upstream": {
+    "url": "https://github.com/cda-tum/mqt-qecc.git",
+    "commit": "8d8544ddf182997126cd007b23a8f63ab728ad2b",
+    "pin_date": "2026-11-18",
+    "publication_release": false
+  },
+  "supported_modes": [],
+  "evidence_status": "published_metrics_verified; no new paper-metric reproduction claimed"
+}

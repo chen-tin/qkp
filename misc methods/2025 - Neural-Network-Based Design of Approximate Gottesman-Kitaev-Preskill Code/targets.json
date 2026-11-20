@@ -1,0 +1,16 @@
+[
+  {
+    "id": "state_count_ratio",
+    "kind": "encoding_component_ratio",
+    "value": 0.3333333333333333,
+    "unit": "ratio",
+    "conditions": {
+      "squeezing_dB": 9.55,
+      "optimized_components": 7,
+      "conventional_components": 21,
+      "criterion": "optimized Knill-Laflamme error lower than best conventional code under same loss and dephasing"
+    },
+    "locator": "Abstract and Figure 2",
+    "source_url": "https://doi.org/10.1103/PhysRevLett.134.060601"
+  }
+]
