@@ -439,6 +439,8 @@ At5120 smooth−binned F8=+.188692 percentage points,95%interval[-.115726,+.4931
 
 **Decision:** Publish source, documented limits, offline HTML and compact evidence through the user-authorized GitHub update; retain large raw data outside Git. Further benchmark findings require a later dated snapshot and notebook update.
 
+**Publication receipt:** At19:45:59UTC, `git ls-remote origin refs/heads/main` confirmed published commit `7abb58a25046056c06038a6178171c3ca666791b` on main, and the working tree matched origin. The first push using the default work-account credential received403; the already signed-in personal account `babayChris` has push permission and completed the push through a command-scoped credential helper. The default signed-in account and global Git credential configuration were not changed. This follow-up records the verified publication; it does not change any benchmark observations.
+
 ## Paper preparation: remaining decisions and evidence gaps
 
 1. Define the main contribution: decoder robustness, simulator validation, or a staged study combining them. No novelty or state-of-the-art claim has been established by this notebook.
