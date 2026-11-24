@@ -1,0 +1,21 @@
+{
+  "config": {
+    "data_cutoffs": [
+      4096,
+      5120
+    ],
+    "lambda_rows": 9216,
+    "ancilla_cutoff": 16384,
+    "lambda_sha256": "7bed1940284f57145fd316fc2b51b6ec6c2c14b4690a8e5e63f40a5bc4c9f069",
+    "sigma": 0.0886226925452758,
+    "coupling": 1.01,
+    "source_hashes": {
+      "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+      "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+      "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+      "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+      "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+    }
+  },
+  "sha256": "dbb0b81500c286c31a27915bfddd5c3d849c5079eff44bc81863c1ca6a5288b8"
+}

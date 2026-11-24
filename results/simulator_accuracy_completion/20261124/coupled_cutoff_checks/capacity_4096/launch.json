@@ -1,0 +1,19 @@
+{
+  "launched_utc": "2026-11-24T09:07:22.237403+00:00",
+  "argv": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-u",
+    "-m",
+    "experiments.coupled_cdf_capacity",
+    "_job",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/capacity_4096"
+  ],
+  "plan_sha256": "937dc09ceac9dde4f49ff7ed35eb37035057d1f1e235de2785e6f34789ba4409",
+  "available_memory_bytes": 8513503232,
+  "max_seconds": 180,
+  "max_rss_bytes": 4294967296,
+  "local_only": true,
+  "no_sync": true,
+  "no_shutdown": true,
+  "thread_scope": "Environmentrequested2;Acceleratecountnotindependentlyverified"
+}

@@ -1,0 +1,96 @@
+{
+  "status": "RunningReadbackAudit",
+  "updated_utc": "2026-11-24T09:19:46.742148+00:00",
+  "verified_rows": [
+    {
+      "data_cutoff": 4096,
+      "ancilla_cutoff": 12288,
+      "all_lambdas_tested": 4096,
+      "refinement_from": null,
+      "finite_grid_stinespring_operator_norm": 2.401762185475006e-12,
+      "finite_grid_channel_trace_norm_upper_bound": 4.803524370952249e-12,
+      "grid_norm_sensitivity": 1.5893763380097147e-16,
+      "max_reference_mass_error": 1.8476331575811855e-12,
+      "max_candidate_mass_error": 2.930988785010413e-14,
+      "grid_mass_sensitivity": 8.43769498715119e-15,
+      "max_joint_norm_error": 8.282263763703668e-14,
+      "max_ancilla_boundary_mass": 2.344745727373746e-25,
+      "worst_lambda_index": 4095,
+      "secondary_grid_diagnostics": {
+        "max_per_lambda_grid_norm_sensitivity": 2.096856403196196e-15,
+        "max_per_lambda_reference_mass_sensitivity": 8.43769498715119e-15,
+        "max_per_lambda_candidate_mass_sensitivity": 4.440892098500626e-15
+      },
+      "pass": true
+    },
+    {
+      "data_cutoff": 5120,
+      "ancilla_cutoff": 12288,
+      "all_lambdas_tested": 5120,
+      "refinement_from": null,
+      "finite_grid_stinespring_operator_norm": 6.3703970290623295e-12,
+      "finite_grid_channel_trace_norm_upper_bound": 1.274079405813058e-11,
+      "grid_norm_sensitivity": 5.441051253450274e-16,
+      "max_reference_mass_error": 1.843636354692535e-12,
+      "max_candidate_mass_error": 2.9531932455029164e-14,
+      "grid_mass_sensitivity": 9.547918011776346e-15,
+      "max_joint_norm_error": 8.282263763703668e-14,
+      "max_ancilla_boundary_mass": 1.8514803593410558e-17,
+      "worst_lambda_index": 5119,
+      "secondary_grid_diagnostics": {
+        "max_per_lambda_grid_norm_sensitivity": 3.2896273193533126e-15,
+        "max_per_lambda_reference_mass_sensitivity": 9.547918011776346e-15,
+        "max_per_lambda_candidate_mass_sensitivity": 4.6629367034256575e-15
+      },
+      "pass": true
+    },
+    {
+      "data_cutoff": 4096,
+      "ancilla_cutoff": 16384,
+      "all_lambdas_tested": 4096,
+      "refinement_from": 12288,
+      "finite_grid_stinespring_operator_norm": 3.482941424889416e-12,
+      "finite_grid_channel_trace_norm_upper_bound": 6.965882849781975e-12,
+      "grid_norm_sensitivity": 3.341162042507051e-16,
+      "max_reference_mass_error": 1.7885692926711272e-12,
+      "max_candidate_mass_error": 2.930988785010413e-14,
+      "grid_mass_sensitivity": 7.771561172376096e-15,
+      "max_joint_norm_error": 4.951594689828198e-14,
+      "max_ancilla_boundary_mass": 2.542410117773715e-26,
+      "worst_lambda_index": 4095,
+      "ancilla_refinement_operator_norm": 2.101874267586771e-12,
+      "ancilla_refinement_grid_sensitivity": 1.505742413482347e-18,
+      "secondary_grid_diagnostics": {
+        "max_per_lambda_grid_norm_sensitivity": 1.4125200965407135e-15,
+        "max_per_lambda_reference_mass_sensitivity": 7.771561172376096e-15,
+        "max_per_lambda_candidate_mass_sensitivity": 4.440892098500626e-15,
+        "max_per_lambda_refinement_grid_norm_sensitivity": 1.0778531050918307e-16
+      },
+      "pass": true
+    },
+    {
+      "data_cutoff": 5120,
+      "ancilla_cutoff": 16384,
+      "all_lambdas_tested": 5120,
+      "refinement_from": 12288,
+      "finite_grid_stinespring_operator_norm": 4.674645812604424e-12,
+      "finite_grid_channel_trace_norm_upper_bound": 9.349291625213058e-12,
+      "grid_norm_sensitivity": 1.0029816159082717e-16,
+      "max_reference_mass_error": 1.7854606682021767e-12,
+      "max_candidate_mass_error": 2.9531932455029164e-14,
+      "grid_mass_sensitivity": 1.021405182655144e-14,
+      "max_joint_norm_error": 4.951594689828198e-14,
+      "max_ancilla_boundary_mass": 2.5747453532813415e-26,
+      "worst_lambda_index": 5117,
+      "ancilla_refinement_operator_norm": 6.2713103894240186e-12,
+      "ancilla_refinement_grid_sensitivity": 3.0662749451025274e-18,
+      "secondary_grid_diagnostics": {
+        "max_per_lambda_grid_norm_sensitivity": 2.080674812700049e-15,
+        "max_per_lambda_reference_mass_sensitivity": 1.021405182655144e-14,
+        "max_per_lambda_candidate_mass_sensitivity": 4.6629367034256575e-15,
+        "max_per_lambda_refinement_grid_norm_sensitivity": 9.042605082805161e-17
+      },
+      "pass": true
+    }
+  ]
+}

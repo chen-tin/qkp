@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-24T09:52:03.550216+00:00",
+  "previous_manager_pid": 66763,
+  "previous_manager_sha256": "e7d6abbe195f3c49232f38f4b6203b36e8c6d903f4360f846bbc5c021c5b3195",
+  "previous_scientific_sessions": 0,
+  "manager_sha256": "b927f335e63ac12ca064ab12f7274ae050b37561d0f5efcc910a3778a3455774",
+  "guard_sha256": "c9a8e902046f5cb80f50102254c2580d11a11f9d4d0e9ee5f93592b7e3bedea6",
+  "mechanism_auditor_sha256": "040f44925f346391eac192bfd16a762da2f729a61d97616dfe22f5b9b200e4b2",
+  "scope": "Resources/callback only: preserve mainplan/scientific sources/3x3600s/8GiBRSS/1GiBheadroom. Queue up to4h for fixed physics-priority barrier. Deduct full density remaining4GiBgrowth. Corrected auditor binds exact approved plan internally; CLI has no approved-plan argument.",
+  "barrier": "MEASUREMENT_RAM_RELEASED marker only after passive4096 active and settled, or all4physics processed, and explicit measurement release already received."
+}

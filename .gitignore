@@ -24,6 +24,7 @@ results/runlog/
 /results/**/*.pth
 /results/**/*.log
 /results/**/.run.lock
+/results/**/*.lock
 /results/**/*.tmp
 
 # The frozen production controller is small and required by the EC2 source bundle.

@@ -1,0 +1,16 @@
+{
+  "tested_utc": "2026-11-24T09:07:04.799229+00:00",
+  "classification": "directed software regressions; not scientific ensemble accuracy",
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_local_finite_gate_audit.py tests/test_local_gkp_gate_pilot.py",
+  "passed": 25,
+  "failed": 0,
+  "seconds": 2.09,
+  "log": "software_checks.log",
+  "source_sha256": {
+    "experiments/local_finite_gate_audit.py": "b19fab6e6785cf359d4c0bed8f0f2a0aa35ecb19221c30e55889316f7c3e0f7f",
+    "experiments/local_gkp_gate_pilot.py": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c",
+    "tests/test_local_finite_gate_audit.py": "e28213d0dd5a7ea2923991e73560e57de3638da9f62f584c9de83c20ef8b2a19",
+    "tests/test_local_gkp_gate_pilot.py": "b8191fb6b8cac1b1871c6191315a44c861f853c7eed69185106284230aa66291"
+  },
+  "scope": "Generator/action+adjoint vsQuTiPLiouvillian; analyticidle; negativeCQmetric; exact36keycoverage inclmissing/duplicate; resource-resume grid; fixedseed23 actualmcsolve q/p; originalGKPsettings/seed; CDFhashedidentities/childlifecycle/acceptanceevidence."
+}

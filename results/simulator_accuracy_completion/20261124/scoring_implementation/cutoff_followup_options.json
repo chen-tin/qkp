@@ -1,0 +1,108 @@
+{
+  "source": "results/simulator_accuracy_actions/20261123/analysis/physics_cutoff_diagnosis.json",
+  "source_sha256": "81b515148320e6f0521d369838e676ded6607301ffbdce0019ac79acf73885ec",
+  "scope": "Local follow-up options only; no new runs or intervals.",
+  "options": [
+    {
+      "comparison": "nominal/loss/nearest",
+      "existing_sample_per_cutoff": 3072,
+      "offending_cycles": [
+        {
+          "cycle": 5,
+          "observed_mean": 0.004622443357370622,
+          "half_width": 0.005791741910866641,
+          "slack_to_band": 0.005377556642629378,
+          "plug_in_total_sample_multiplier": 1.1599744259355502
+        },
+        {
+          "cycle": 7,
+          "observed_mean": 0.0032364293598806733,
+          "half_width": 0.007437881191452973,
+          "slack_to_band": 0.006763570640119327,
+          "plug_in_total_sample_multiplier": 1.2093344183271626
+        },
+        {
+          "cycle": 8,
+          "observed_mean": -0.0016348392732703106,
+          "half_width": 0.008419885345726429,
+          "slack_to_band": 0.00836516072672969,
+          "plug_in_total_sample_multiplier": 1.0131267345985309
+        }
+      ],
+      "planning_only_total_equal_chunks": 2,
+      "status": "Planned; not launched",
+      "warning": "Post-hoc plug-in planning based on existing means/variance, not prospective power guarantee or permission to stop when significance appears."
+    },
+    {
+      "comparison": "nominal/loss_dephasing/nearest",
+      "existing_sample_per_cutoff": 3072,
+      "offending_cycles": [
+        {
+          "cycle": 6,
+          "observed_mean": 0.003651828172846808,
+          "half_width": 0.006594214648391827,
+          "slack_to_band": 0.006348171827153193,
+          "plug_in_total_sample_multiplier": 1.0790183061256786
+        }
+      ],
+      "planning_only_total_equal_chunks": 2,
+      "status": "Planned; not launched",
+      "warning": "Post-hoc plug-in planning based on existing means/variance, not prospective power guarantee or permission to stop when significance appears."
+    },
+    {
+      "comparison": "nominal/coupling_error/nearest",
+      "existing_sample_per_cutoff": 3072,
+      "offending_cycles": [
+        {
+          "cycle": 4,
+          "observed_mean": -0.006662039353394243,
+          "half_width": 0.006256190531371778,
+          "slack_to_band": 0.003337960646605757,
+          "plug_in_total_sample_multiplier": 3.512833039945417
+        },
+        {
+          "cycle": 6,
+          "observed_mean": 0.00293482673750667,
+          "half_width": 0.008632254903094124,
+          "slack_to_band": 0.00706517326249333,
+          "plug_in_total_sample_multiplier": 1.4928043054885638
+        },
+        {
+          "cycle": 7,
+          "observed_mean": 0.00298913654944189,
+          "half_width": 0.009889005757544908,
+          "slack_to_band": 0.007010863450558111,
+          "plug_in_total_sample_multiplier": 1.989583829286748
+        },
+        {
+          "cycle": 8,
+          "observed_mean": 0.002792026643843136,
+          "half_width": 0.010796760300218216,
+          "slack_to_band": 0.007207973356156864,
+          "plug_in_total_sample_multiplier": 2.2436782299921405
+        }
+      ],
+      "planning_only_total_equal_chunks": 4,
+      "status": "Planned; not launched",
+      "warning": "Post-hoc plug-in planning based on existing means/variance, not prospective power guarantee or permission to stop when significance appears."
+    },
+    {
+      "comparison": "nominal/control_rotation/nearest",
+      "existing_sample_per_cutoff": 3072,
+      "offending_cycles": [
+        {
+          "cycle": 8,
+          "observed_mean": 0.0040786730410318625,
+          "half_width": 0.006019427380091136,
+          "slack_to_band": 0.005921326958968138,
+          "plug_in_total_sample_multiplier": 1.033409082638325
+        }
+      ],
+      "planning_only_total_equal_chunks": 2,
+      "status": "Planned; not launched",
+      "warning": "Post-hoc plug-in planning based on existing means/variance, not prospective power guarantee or permission to stop when significance appears."
+    }
+  ],
+  "recommended_protocol": "Preregister a fixed number of fresh matched noise chunks per condition at both original cutoffs, same original physics/controllers/horizon and unchanged\u00b1.01 criterion; report new held-out chunks separately and any prespecified combined analysis. If unresolved after fixed batch, retain inconclusive. Higher cutoff is a separate intervention to diagnose systematic sensitivity, not an interchangeable way to force a pass.",
+  "alternative": "For an explicitly narrower bounded claim, retain four unresolved original comparisons and restrict claims to passed conditions. This documents evidence limits and does not complete original equivalence coverage."
+}

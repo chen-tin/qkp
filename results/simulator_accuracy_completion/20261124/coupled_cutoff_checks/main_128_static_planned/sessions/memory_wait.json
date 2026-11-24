@@ -1,0 +1,23 @@
+{
+  "observed_utc": "2026-11-24T14:33:07.028238+00:00",
+  "available_memory_bytes": 9484304384,
+  "effective_available_memory_bytes": 8082079744,
+  "density_reservation": {
+    "readback_root_pids": [
+      32505,
+      32514
+    ],
+    "readback_sampled_tree_rss_bytes": 745259008,
+    "readback_committed_bytes": 2147483648,
+    "readback_remaining_growth_bytes": 1402224640,
+    "density_root_pids": [],
+    "density_tree_pids": [],
+    "density_sampled_tree_rss_bytes": 0,
+    "density_committed_bytes": 0,
+    "density_remaining_growth_bytes": 0,
+    "density_final_release_marker": true,
+    "scope": "Sampled process-tree RSS; full4GiB reservation persists between v7/v8."
+  },
+  "headroom_bytes": 1073741824,
+  "error": "Local memory preflight failed: estimate=7465861120, cap=8589934592, available=7008337920"
+}

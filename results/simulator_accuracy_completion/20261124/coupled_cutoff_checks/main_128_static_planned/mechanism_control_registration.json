@@ -1,0 +1,20 @@
+{
+  "registered_utc": "2026-11-24T09:28:01.686781+00:00",
+  "status": "Planned; no main-study scientific jobs started",
+  "source_sha256": {
+    "experiments/audit_coupled_mechanisms.py": "84721523d3c29a6aa2904db14d3ab418c09c245ab5de8b65fe8f43772b7756dd",
+    "tests/test_coupled_mechanisms.py": "2599702fe1a6ec087b514d94f61056a90a690c3ee3bb7ad5b09a986384950d56"
+  },
+  "fixed_controls": [
+    "All replay-arm arrays, every4condition\u00d72cutoff pair, bitwise dtype/shape/bytes; no array exclusions.",
+    "Finite-arm dq/dp/nq/np/state_ids and every schedule_ field bitwise.",
+    "Every scientific config field except explicitlydifferent experimental_measurement_sampler mustmatch.",
+    "Regenerate original frozen-seed noise only toverifyrecordedarrays andhashunpersisteduniforms; no newindependentnoise/trajectories."
+  ],
+  "exclusions": {
+    "ZIP_container_metadata": "Timestamps/compressionheaders are not decoded scientificarrays.",
+    "sampler_config": "Registered experimentallever intentionallydifferent; namedexplicitly."
+  },
+  "decision": "Record every mismatch and numericdelta; do not assume equality, discardfields, or add acceptance tolerances after results.",
+  "command": ".venv/bin/python -m experiments.audit_coupled_mechanisms results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned --output results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/mechanism_audit.json"
+}

@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "scope": "Exact v7 scientific/source configuration preserved; v8 resumes only after clean v7 wall-time timeout; prior row seals and helper AST checked by inherited observations at runtime. No new conditions/shots/thresholds.",
+  "interpreter": "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+  "interpreter_lexical_not_symlink_resolved": true,
+  "python_prefix": "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv",
+  "source_sha256": {
+    "experiments/local_finite_gate_audit.py": "b19fab6e6785cf359d4c0bed8f0f2a0aa35ecb19221c30e55889316f7c3e0f7f",
+    "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+    "quantum/measurement_benchmark.py": "845df5476e7793e393b977ffd29ede10eb100f9e2a01a6a462ee2a0b3b493cca",
+    "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e"
+  },
+  "v7_plan_sha256": "04848dc690e8c3575e15a04e2c31f81aa98fa97bf0aceae876af04699910284e",
+  "v8_plan_sha256": "41ff776f1b094f89a09805590f58c95d58f3e5e34b1c8df8ac5e04244214031e",
+  "resource_limits": {
+    "wall_seconds": 3600,
+    "soft_rss_target_bytes": 3221225472,
+    "hard_rss_bytes": 4294967296,
+    "max_density_joint_dimension": 3072
+  },
+  "thread_request": "OPENBLAS_NUM_THREADS=OMP_NUM_THREADS=MKL_NUM_THREADS=1; actual Accelerate thread count not independently verified",
+  "imported_numerical_root": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v8/runtime",
+  "python_executable": "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+  "versions": {
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "qutip": "5.3.1"
+  },
+  "density_cutoffs": [
+    [
+      24,
+      96
+    ],
+    [
+      32,
+      96
+    ]
+  ],
+  "controller_source_sha256": "fb2ed9d60f00e12fd850c27cce37df1585484fbb395f4d518e4a58a17f9a0e23",
+  "readback_auditor_source_sha256": "b113494651ecb57e724f5775df305f2548f13c293a918ff1a5f751fad6ae813b"
+}

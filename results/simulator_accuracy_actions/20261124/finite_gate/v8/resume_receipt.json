@@ -1,0 +1,178 @@
+{
+  "previous_folder": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v7",
+  "previous_plan_sha256": "04848dc690e8c3575e15a04e2c31f81aa98fa97bf0aceae876af04699910284e",
+  "previous_result_sha256": "146a639b3bfa4bec621893e1d1ab05a400904edc720c382bd576ac499371f4d7",
+  "unchanged_numerical_helper_sha256": {
+    "input_ket": "5dd5b7379ee9a2083ec73213c201a30559ee85188d745ad8a1e758119c98feaf",
+    "trace_distance": "003b851ffb3a9bde4640f1a944e528225aaf60e7025c156a868304bd536a83cd",
+    "stage_diagnostics": "f591b13941b5645737e0f7384e0da4c790d99c82eaaaf3834b98f54f3ec9024d",
+    "lindblad_operator": "1474e2b9c089b4a94c3d1fc2a945d4a979ca90a1e06366e2900234bceaa57261",
+    "evolve_density": "3d8d97e0b2b8e8bdfb68f4a6c922d9136b2f49d1db43d3fcbcf7d386318d575b",
+    "instrument_distance": "28d827b7aa94b8c63afc11cf89545562a3ef0b4849110a1bae144a75569b195d",
+    "diagnostics_pass": "17c787e4c87f4b9bf899c4cbc878a07e02b697069da72164f55c86c8d4c32d74",
+    "decide": "7ec2bcf8570d1a980de9306794c90a32360b5253c4d6553b71c033e97f7ce45e",
+    "ideal_ket_controls": "537d1119a44919b22d1c7359ce919b56346a1763b649debad41d1546ebe372ad"
+  },
+  "objects": [
+    {
+      "path": "raw/vacuum_q_ideal_Nd24_Na96.npz",
+      "sha256": "37d799ed26b4ecc3a6d09dde43b54e69521027f9bcceaa7d5f3e3e55ad613d76"
+    },
+    {
+      "path": "raw/vacuum_q_loss_Nd24_Na96.npz",
+      "sha256": "7807f39019dde04bb2c350a2c5e5a11897a5e0c9bae738f03214a8ea0f105016"
+    },
+    {
+      "path": "raw/vacuum_q_dephasing_Nd24_Na96.npz",
+      "sha256": "82f80a7454fabbd450fc4b50c85aa34c824d8bd903aebc015ae2952097575ab0"
+    },
+    {
+      "path": "raw/vacuum_q_combined_Nd24_Na96.npz",
+      "sha256": "88417d6a01358817b1b56cceab8f6eb3163747e90a1fbaec7ba733281b4653a4"
+    },
+    {
+      "path": "raw/vacuum_p_ideal_Nd24_Na96.npz",
+      "sha256": "d5328a2048bbd4d4258093304079695a988a612ff72bf3e590a824a654093b3e"
+    },
+    {
+      "path": "raw/vacuum_p_loss_Nd24_Na96.npz",
+      "sha256": "dc99cf284ae80c349f12e03506a7b1f5e617a7714860a02dad186c428ba0d809"
+    },
+    {
+      "path": "raw/vacuum_p_dephasing_Nd24_Na96.npz",
+      "sha256": "6d09e7dee337827835064d78fa7c71f9c1d7ff0b4765253904260e6179f19421"
+    },
+    {
+      "path": "raw/vacuum_p_combined_Nd24_Na96.npz",
+      "sha256": "b167b24c31d507968059dff8b3f1a252a9232067004dfc6e87bb4e296cc0d4bd"
+    },
+    {
+      "path": "raw/coherent_q_ideal_Nd24_Na96.npz",
+      "sha256": "cac8d03fa20f78b74c32835b38c78c6fefe22dfe88932e4a3c6edda133d27a85"
+    },
+    {
+      "path": "raw/coherent_q_loss_Nd24_Na96.npz",
+      "sha256": "9b2c53fd11525a8ec833851cb338549f185ac6ce5fa9d849e28142a42aa15d1e"
+    },
+    {
+      "path": "raw/coherent_q_dephasing_Nd24_Na96.npz",
+      "sha256": "1681b32b49fa40758e757f200353b5cce1df2303932ba1d142ad538869cddae1"
+    },
+    {
+      "path": "raw/coherent_q_combined_Nd24_Na96.npz",
+      "sha256": "2ea5450c9ff061ed6eb718a6ccdf5e3af500864a8281b0b3c00db6a37843ec39"
+    },
+    {
+      "path": "raw/coherent_p_ideal_Nd24_Na96.npz",
+      "sha256": "905413bd90da0540fbd48a608a22d15e50a48eca827e5405497b326634a95225"
+    },
+    {
+      "path": "raw/coherent_p_loss_Nd24_Na96.npz",
+      "sha256": "0afc44426bcef36afb55536a4e9b7fa56ec006f01206baa93cee3a325d67a198"
+    },
+    {
+      "path": "raw/coherent_p_dephasing_Nd24_Na96.npz",
+      "sha256": "7823df2df4cd45987d776b22fd81890cbdafa2cf71c88189a9dccd748e91cb22"
+    },
+    {
+      "path": "raw/coherent_p_combined_Nd24_Na96.npz",
+      "sha256": "44fddab6a05f5721a8b35122639b5c3e5d5a9747b2825526b1a03fd2eec2a9a3"
+    },
+    {
+      "path": "raw/vacuum_q_ideal_Nd32_Na96.npz",
+      "sha256": "43bfa06ecdd4d6072474e2482bad1245ffd17407ffa16f8d1171e31541195b0c"
+    },
+    {
+      "path": "raw/vacuum_q_loss_Nd32_Na96.npz",
+      "sha256": "fa094a7dde5c2c12e3592c5e7a0060b0f5d346cbd541bbf21903647ca8cf1085"
+    },
+    {
+      "path": "raw/vacuum_q_dephasing_Nd32_Na96.npz",
+      "sha256": "700e97015bacbe79382de712d6d6501b2a5e96592a8eef5d4795d4fbbcd8fa23"
+    },
+    {
+      "path": "raw/vacuum_q_combined_Nd32_Na96.npz",
+      "sha256": "a83524f0800933fbaff1dc48a562b682f0a8e6fdfc7d91a3814fcbc0d9023575"
+    },
+    {
+      "path": "raw/vacuum_p_ideal_Nd32_Na96.npz",
+      "sha256": "cef6ca9cbc3456dc203600700b1da75187684710da445376f8497dd22c5dd65f"
+    },
+    {
+      "path": "raw/vacuum_p_loss_Nd32_Na96.npz",
+      "sha256": "7dc57390eb900179ff3e2cf71db887f40697a563fabf2fbc30e741abdf927660"
+    },
+    {
+      "path": "raw/vacuum_p_dephasing_Nd32_Na96.npz",
+      "sha256": "e08877b24c32a22208af0945b960fdc6ba16059f957e00bf62a03a8ac8c859f8"
+    },
+    {
+      "path": "raw/vacuum_p_combined_Nd32_Na96.npz",
+      "sha256": "7c863da5c9a1f9c85e7834bcf118b31b2723b9e5c6486fe588d7f2c6fdff6885"
+    },
+    {
+      "path": "raw/coherent_q_ideal_Nd32_Na96.npz",
+      "sha256": "1e677cb59236b987ae8098d1ec8665ae02c097f99f0fabea96a657c1b3048ec7"
+    },
+    {
+      "path": "raw/coherent_q_loss_Nd32_Na96.npz",
+      "sha256": "a9b32d37daabd34e71b3bc71ce2f9dfa5216aed5c35f362a042ad0059489c54f"
+    },
+    {
+      "path": "raw/coherent_q_dephasing_Nd32_Na96.npz",
+      "sha256": "a6bf99b7c108a1866a0814072909e8b43333f612cd03840c94806e325b3bbd7b"
+    },
+    {
+      "path": "raw/coherent_q_combined_Nd32_Na96.npz",
+      "sha256": "47027a8c3e924239fa97d3dfd23009ff875ef70e235b48c064971234b61c56ba"
+    },
+    {
+      "path": "raw/coherent_p_ideal_Nd32_Na96.npz",
+      "sha256": "a2ca410d95631887f4db104590e309d51795e96101b53dfbfc27aca6c45495c8"
+    },
+    {
+      "path": "raw/coherent_p_loss_Nd32_Na96.npz",
+      "sha256": "2e6ccc1974ba7ca16b89178f91d7286237750e1721b39a01ca71abf9c9c55340"
+    },
+    {
+      "path": "raw/coherent_p_dephasing_Nd32_Na96.npz",
+      "sha256": "471245fe8876173c18ad3f99027424444820259677c8664524cc517b0e7771f5"
+    },
+    {
+      "path": "raw/ideal_vacuum_q_Nd64_Na64.npz",
+      "sha256": "0498eb67b708d827b7d39b3474aab4de4f2c79a9b84243e32b1b26aabc51836a"
+    },
+    {
+      "path": "raw/ideal_vacuum_p_Nd64_Na64.npz",
+      "sha256": "8424314fa97c10deb956a38c27f2d57e9707ef0dc5301f480980ca5790aea79c"
+    },
+    {
+      "path": "raw/ideal_coherent_q_Nd64_Na64.npz",
+      "sha256": "d43343af2fae842c2e2651d6f93d309611cc5a62a888b558038f4dcb5a0c5be4"
+    },
+    {
+      "path": "raw/ideal_coherent_p_Nd64_Na64.npz",
+      "sha256": "1e881d64fde1324e6e971ccbd459256b7980c3c2704a6e35bfccaf15ae60074c"
+    },
+    {
+      "path": "raw/ideal_vacuum_q_Nd96_Na96.npz",
+      "sha256": "8d20b1437c64260e6e6b8634346ec252be296c6ff80353f254543a315fbf7741"
+    },
+    {
+      "path": "raw/ideal_vacuum_p_Nd96_Na96.npz",
+      "sha256": "149fe611f6945f4ad5e8e90dda708bdb1594e253253d66d30860da6e5cf76f33"
+    },
+    {
+      "path": "raw/ideal_coherent_q_Nd96_Na96.npz",
+      "sha256": "ba0b8574dd929dc680a69777686bb8c057f1319b723cdbae276b32c0f51ef8c7"
+    },
+    {
+      "path": "raw/ideal_coherent_p_Nd96_Na96.npz",
+      "sha256": "5951fb03d38713bb56025c9c736027732ad896e3746994ec2f28ca3e87ca9bcd"
+    }
+  ],
+  "inherited_rows": 31,
+  "previous_refinements_preserved_at_source_not_reused": [],
+  "numerical_extension": false,
+  "scope": "Only resource cap/orchestration changed; raw bytes, numerical functions, physical configuration and acceptance rules match."
+}

@@ -1,0 +1,616 @@
+{
+  "point": "nominal",
+  "decoder": "nearest",
+  "cutoff": 5120,
+  "ancilla_dx": null,
+  "measurement_resource": "smooth",
+  "ancilla_inverse_cdf_residual": 1.5297998159927645e-11,
+  "ancilla_delta": 0.12533656843651017,
+  "per_state": 128,
+  "total_trajectories": 768,
+  "rounds": 8,
+  "classical": {
+    "mean": [
+      1.0,
+      0.98046875,
+      0.9700520833333334,
+      0.9557291666666666,
+      0.9544270833333334,
+      0.9505208333333334,
+      0.9453125,
+      0.9348958333333334,
+      0.9348958333333334
+    ],
+    "se": [
+      0.0,
+      0.004997741776651436,
+      0.0061714583919494255,
+      0.007439633962924291,
+      0.0075474151786549875,
+      0.007843197564226983,
+      0.008223742668266235,
+      0.008930371559175464,
+      0.008915410296265984
+    ],
+    "ci95_low": [
+      1.0,
+      0.9706733561137322,
+      0.9579562471530254,
+      0.9411477520411744,
+      0.9396344214067991,
+      0.9351484485838166,
+      0.9291942605520733,
+      0.9173926267087892,
+      0.917421950245255
+    ],
+    "ci95_high": [
+      1.0,
+      0.9902641438862678,
+      0.9821479195136413,
+      0.9703105812921589,
+      0.9692197452598676,
+      0.9658932180828501,
+      0.9614307394479267,
+      0.9523990399578776,
+      0.9523697164214118
+    ]
+  },
+  "finite_energy_replayed": {
+    "mean": [
+      0.9772475462772854,
+      0.9549324809564971,
+      0.9447694737298068,
+      0.9313402416998149,
+      0.9298843680228585,
+      0.9261834867240402,
+      0.921019488583468,
+      0.9114459037709057,
+      0.9110811102204378
+    ],
+    "se": [
+      6.035104486035889e-17,
+      0.004729536138473057,
+      0.005870785602459346,
+      0.007034643982711408,
+      0.007181180943784446,
+      0.007463821271121884,
+      0.007805838232105801,
+      0.008440815508942339,
+      0.008414435834656031
+    ],
+    "ci95_low": [
+      0.9772475462772853,
+      0.9456627604615095,
+      0.9332629453880306,
+      0.9175525928496395,
+      0.915809512006576,
+      0.9115546658455977,
+      0.9057203267793953,
+      0.8949022093732321,
+      0.8945891190342892
+    ],
+    "ci95_high": [
+      0.9772475462772855,
+      0.9642022014514846,
+      0.956276002071583,
+      0.9451278905499902,
+      0.9439592240391409,
+      0.9408123076024826,
+      0.9363186503875408,
+      0.9279895981685794,
+      0.9275731014065864
+    ]
+  },
+  "finite_ancilla": {
+    "mean": [
+      0.9772475462772854,
+      0.9494575559040638,
+      0.9455799875439962,
+      0.9263075765027234,
+      0.9130944035718748,
+      0.9029043990074649,
+      0.889649631516679,
+      0.883400287005775,
+      0.8809471805123051
+    ],
+    "se": [
+      6.035104486035889e-17,
+      0.007544866148360041,
+      0.007808503794379061,
+      0.009098937118186186,
+      0.009830095195911924,
+      0.010386953627622984,
+      0.011003537578144871,
+      0.011288429240464871,
+      0.011400207448306896
+    ],
+    "ci95_low": [
+      0.9772475462772853,
+      0.934669889985103,
+      0.9302756013338693,
+      0.9084739874534843,
+      0.8938277710232877,
+      0.8825463439882367,
+      0.8680830941609825,
+      0.8612753722524357,
+      0.858603184497339
+    ],
+    "ci95_high": [
+      0.9772475462772855,
+      0.9642452218230245,
+      0.9608843737541231,
+      0.9441411655519626,
+      0.9323610361204618,
+      0.923262454026693,
+      0.9112161688723754,
+      0.9055252017591143,
+      0.9032911765272713
+    ]
+  },
+  "reference_minus_classical": {
+    "mean": [
+      -0.02275245372271617,
+      -0.031011194095935505,
+      -0.02447209578933661,
+      -0.02942159016394295,
+      -0.04133267976145851,
+      -0.0476164343258671,
+      -0.055662868483320714,
+      -0.051495546327558615,
+      -0.053948652821027926
+    ],
+    "se": [
+      2.6681514919712764e-18,
+      0.007766913082492959,
+      0.008887543586849529,
+      0.009985650324667335,
+      0.010927561913020233,
+      0.011570484639845129,
+      0.011683549861505342,
+      0.011919393545298288,
+      0.011903200653311725
+    ],
+    "ci95_low": [
+      -0.022752453722716177,
+      -0.04623406400867426,
+      -0.04189136113059114,
+      -0.04899310516250109,
+      -0.06275030754980919,
+      -0.07029416750363683,
+      -0.0785622054234485,
+      -0.07485712839390181,
+      -0.07727849740227191
+    ],
+    "ci95_high": [
+      -0.022752453722716164,
+      -0.01578832418319675,
+      -0.007052830448082081,
+      -0.009850075165384813,
+      -0.01991505197310783,
+      -0.024938701148097375,
+      -0.032763531543192934,
+      -0.028133964261215425,
+      -0.030618808239783944
+    ]
+  },
+  "reference_minus_replayed": {
+    "mean": [
+      0.0,
+      -0.005474925052431689,
+      0.0008105138141900826,
+      -0.005032665197091686,
+      -0.0167899644509839,
+      -0.023279087716573606,
+      -0.0313698570667894,
+      -0.02804561676513094,
+      -0.030133929708132796
+    ],
+    "se": [
+      0.0,
+      0.007650857193971721,
+      0.008731053666117839,
+      0.009795543818856858,
+      0.010747183640268755,
+      0.011407004565239616,
+      0.011503644944437088,
+      0.011689103559325526,
+      0.01168276678757157
+    ],
+    "ci95_low": [
+      0.0,
+      -0.020470329603475026,
+      -0.016302036918486813,
+      -0.02423157829103454,
+      -0.03785405732114815,
+      -0.04563640583592661,
+      -0.053916586848821745,
+      -0.050955838752967296,
+      -0.053031731851553146
+    ],
+    "ci95_high": [
+      0.0,
+      0.00952047949861165,
+      0.017923064546866978,
+      0.01416624789685117,
+      0.004274128419180352,
+      -0.0009217695972205987,
+      -0.008823127284757058,
+      -0.005135394777294584,
+      -0.007236127564712445
+    ]
+  },
+  "max_norm_error": 6.093348048352709e-12,
+  "max_edge_weight": 3.516247918770217e-12,
+  "mean_edge_weight_max_round": 4.262855692557298e-15,
+  "mean_energy_final": 262.6553104990871,
+  "extraction_trace_error": 3.2717937623096456e-11,
+  "raw_hashes": {
+    "nearest_replayed_corrections.npz": "8462cc6f8c95f23bdea11eb0bf4c001b502b7fb135a95fb1675deec6ccdb92f1",
+    "nearest_finite_ancilla.npz": "8ac86ef181bb6f91bdded2bdd6c30b6710b652ecc70ca8a3a2be8033ea0f0d3d"
+  },
+  "seconds": 101.99556924999342,
+  "numerical_edge_gate_pass": true,
+  "stage_gates": {
+    "replayed_corrections": {
+      "coverage": "every_recorded_primitive_stage",
+      "stage_checks_complete": true,
+      "valid_by_cycle": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "valid_through_cycle": 8,
+      "pass": true,
+      "instrument_pass": true,
+      "max_edge": 4.97837332022838e-25,
+      "max_mean_edge": 1.9091395636154459e-25,
+      "max_norm_error": 6.093348048352709e-12,
+      "thresholds": {
+        "mean_edge": 0.0001,
+        "individual_edge": 0.01,
+        "norm": 1e-07,
+        "energy_limit": 1000.0,
+        "energy_jump": 1000.0
+      },
+      "continuous_gate_bound": false
+    },
+    "finite_ancilla": {
+      "coverage": "every_recorded_primitive_stage",
+      "stage_checks_complete": true,
+      "valid_by_cycle": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "valid_through_cycle": 8,
+      "pass": true,
+      "instrument_pass": true,
+      "max_edge": 3.516247918770217e-12,
+      "max_mean_edge": 4.611577221666143e-15,
+      "max_norm_error": 6.470379787515412e-13,
+      "thresholds": {
+        "mean_edge": 0.0001,
+        "individual_edge": 0.01,
+        "norm": 1e-07,
+        "energy_limit": 1000.0,
+        "energy_jump": 1000.0
+      },
+      "continuous_gate_bound": false
+    }
+  },
+  "physics": {
+    "cycle_time": 1.0,
+    "gate_duration": 0.0,
+    "feedback_delay": 0.0,
+    "loss_rate": 0.0,
+    "dephasing_rate": 0.0,
+    "detector_efficiency": 1.0,
+    "detector_std": 0.0,
+    "coupling": 1.0,
+    "feedback_gain": 1.0,
+    "control_rotation": 0.001,
+    "cooling_transmissivity": 1.0,
+    "displacement_provenance": "independent",
+    "gate_backend": "lumped",
+    "gate_ancilla_cutoff": 512,
+    "ancilla_loss_rate": 0.0,
+    "ancilla_dephasing_rate": 0.0,
+    "homodyne_radius": 60.0,
+    "homodyne_dy": 0.01,
+    "max_joint_dimension": 2000000,
+    "max_gate_scratch_mb": 512.0,
+    "idle_time": 1.0,
+    "detector_variance": 0.0,
+    "duration_model": "symmetric_lumped_noise_around_instantaneous_instrument",
+    "cooling_model": "explicit_passive_loss_not_GKP_stabilization"
+  },
+  "events": {
+    "energy_limit": {
+      "errors": 8,
+      "trials": 768,
+      "rate": 0.010416666666666666,
+      "states": [
+        {
+          "errors": 4,
+          "trials": 128,
+          "rate": 0.03125,
+          "interval": [
+            0.0037003967385281877,
+            0.10769433409120613
+          ],
+          "one_sided_upper": 0.10099028175445446,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 1,
+          "trials": 128,
+          "rate": 0.0078125,
+          "interval": [
+            1.0858177682798745e-05,
+            0.06719569051429564
+          ],
+          "one_sided_upper": 0.061508688402810874,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 3,
+          "trials": 128,
+          "rate": 0.0234375,
+          "interval": [
+            0.0016821640932278405,
+            0.09513352787046571
+          ],
+          "one_sided_upper": 0.08871473600978817,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        }
+      ],
+      "interval": [
+        0.0008989031682398045,
+        0.07005479789872808
+      ],
+      "one_sided_upper": 0.06434089671789646,
+      "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+    },
+    "energy_jump": {
+      "errors": 0,
+      "trials": 768,
+      "rate": 0.0,
+      "states": [
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        }
+      ],
+      "interval": [
+        0.0,
+        0.050101744972133676
+      ],
+      "one_sided_upper": 0.0449438913801084,
+      "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+    },
+    "boundary_failure": {
+      "errors": 0,
+      "trials": 768,
+      "rate": 0.0,
+      "states": [
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        },
+        {
+          "errors": 0,
+          "trials": 128,
+          "rate": 0.0,
+          "interval": [
+            0.0,
+            0.050101744972133676
+          ],
+          "one_sided_upper": 0.0449438913801084,
+          "alpha": 0.05,
+          "comparisons": 18,
+          "method": "fixed_n_Clopper_Pearson_Bonferroni"
+        }
+      ],
+      "interval": [
+        0.0,
+        0.050101744972133676
+      ],
+      "one_sided_upper": 0.0449438913801084,
+      "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+    }
+  },
+  "logical_refinement_status": "pending_separate_saved_state_analysis",
+  "outcome_density_contract": "latent ideal homodyne density conditional on hidden trajectory; not reported-record likelihood"
+}

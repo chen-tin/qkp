@@ -1,0 +1,31 @@
+{
+  "registered_utc": "2026-11-24T09:12:03.396453+00:00",
+  "status": "waiting_for_measurement_RAM_release",
+  "approved_canonical_plan_sha256": "eb995962bfa7e47ca1e360fca56699e4a3c27699323a72a03792338c880a3032",
+  "plan_file_sha256": "52c926cb4316a968f77152b4103a361cd31cfce9c600bb1caf32170968137919",
+  "scientific_design": "16fixedjobs:4conditions\u00d72cutoffs\u00d7legacy/directCDF,128/state\u00d76cardinal,8cycles,nearest,freshbase26112401. Noaddedshots/optionalstopping or retryuntilpass.",
+  "capacity_pilot": "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/capacity_4096/capacity_result.json",
+  "capacity_pilot_sha256": "9baa6b2209d5c8d487009be4c0bc49a437caf39d8df4678f1ca91bc1abe9ef65",
+  "capacity_extrapolation_caveat": "4096capacitypilot12trajectories/T2:parent64.283s,totalchild62.134s,evolutionbotharms4.117s. Multiplying tinytime by256 for128/state/T8 confounds fixed table/eigensystem/scoring and smallmatrix overhead; not a reliable speedup or full-runtime forecast. Fixedstudy runtime will be observed under bounded sessions.",
+  "caps": {
+    "max_sessions": 3,
+    "seconds_per_session": 3600,
+    "requested_threads": 2,
+    "sampled_child_rss_bytes": 8589934592,
+    "disk_reserve_bytes": 8589934592,
+    "available_memory_headroom_bytes": 1073741824
+  },
+  "resume_policy": "Only fresh cleanTimeoutError plus source/raw seals and memoryheadroom permits resume ofsamefixedjobs. Non-timeout/startup/software/memory/disk errors stopautoretry. Checkednegative/outside/inconclusive outcomes countprocessed.",
+  "ram_coordination": "Waiting for measurementagent uniformg1readback+g1.01 reservation release; currentavailable near8.54GB justbarelyfitsprefight withoutfuturemeasurementgrowth, so no scientific launch.",
+  "manager_command": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-u",
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/sessions/run_fixed_study_sessions.py"
+  ],
+  "manager_source_sha256": "e7d6abbe195f3c49232f38f4b6203b36e8c6d903f4360f846bbc5c021c5b3195",
+  "marker": "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/sessions/MEASUREMENT_RAM_RELEASED",
+  "stop_marker": "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/sessions/STOP",
+  "old_fourjob_monitor": "Separate alreadyauthorized3sessionbudget; remainsactive withunchanged source/plan.",
+  "local_only": true,
+  "cloud_compute_or_writes": false
+}

@@ -1,0 +1,22 @@
+{
+  "registered_utc": "2026-11-24T09:06:16.765402+00:00",
+  "scope": "Static single-width smoothresource only; no dynamicwidth/noiseextensions. Exactlyone resourceCDFtable/scientificchildcontext.",
+  "sigma_m_absolute_q": 0.5,
+  "noise_extensions": {},
+  "max_distinct_resource_tables": 1,
+  "benchmark_plan_sha256": "0517c0197c684d316933571ed857f0254e640631db745f349198847ed9d08cb1",
+  "job_ids": [
+    "4798e4e6b326ccb1",
+    "56559a7609d5bd21",
+    "37d8357d2c187f72",
+    "f2dd17287b5dfeb5",
+    "976f254f4ef9b241",
+    "88ab14a2c9ae22cd",
+    "2e31888b906bbc86",
+    "0773147476712698"
+  ],
+  "budget_provenance": "Original fixed16/state budget andbase_seed26112001 restored after diagnostic2/statepilot. This is NOT independent confirmatory data: same registered base stream and shared initial Gaussian draws may overlap; shape-dependent RNG indexing means not a simple nested subset. No pilot observations reused as full-budget raw data.",
+  "pilot_path": "../pilot_cdf_128_192",
+  "pilot_numerical_checks_pass": true,
+  "pilot_projected_full_seconds": 776.9319313360611
+}

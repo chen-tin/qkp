@@ -1,0 +1,407 @@
+{
+  "contract": {
+    "backend": "direct_full_outcome_inverse_CDF",
+    "uniform_index": 1,
+    "quantile_stream": "uniforms[1]",
+    "unused_auxiliary_streams": [
+      "uniforms[0] eigenvalue draw",
+      "uniforms[2] historical jitter"
+    ],
+    "coupling_scope": "Common quantiles across cutoffs and explicit QuTiP; also changes coupling to classical replay, whose readout uses uniforms[1]. Marginals unchanged within declared numerical error.",
+    "max_step": 0.00025,
+    "cdf_tolerance": 1e-10,
+    "shot_batch": 64,
+    "node_chunk": 256,
+    "tail_probability": 1e-15,
+    "float_budget": 5e-12,
+    "max_table_bytes": 67108864,
+    "floating_bound_status": "Explicit engineering allowance; not a proved special-function ULP guarantee."
+  },
+  "calls": [
+    {
+      "axis": "q",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3477676488748514e-11,
+      "max_iterations": 13,
+      "minimum_conditional_norm": 0.026849387063494188,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "p",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3478675689470677e-11,
+      "max_iterations": 12,
+      "minimum_conditional_norm": 0.017866938405515013,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "q",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3461939077374453e-11,
+      "max_iterations": 19,
+      "minimum_conditional_norm": 0.008681944987655801,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "p",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3470682083693376e-11,
+      "max_iterations": 19,
+      "minimum_conditional_norm": 0.008900624677520732,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "q",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3454028738323999e-11,
+      "max_iterations": 19,
+      "minimum_conditional_norm": 0.018413895544885577,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "p",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3456381023357423e-11,
+      "max_iterations": 19,
+      "minimum_conditional_norm": 0.017908113902884038,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "q",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3473013552045089e-11,
+      "max_iterations": 19,
+      "minimum_conditional_norm": 0.01565579283808899,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "p",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3466518747351032e-11,
+      "max_iterations": 19,
+      "minimum_conditional_norm": 0.0075586636423754855,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "q",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3469793905273676e-11,
+      "max_iterations": 18,
+      "minimum_conditional_norm": 0.016582905055763986,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "p",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3446701266361473e-11,
+      "max_iterations": 18,
+      "minimum_conditional_norm": 0.023589952768570552,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "q",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3435932103022609e-11,
+      "max_iterations": 18,
+      "minimum_conditional_norm": 0.011710923793944915,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "p",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3402070300771541e-11,
+      "max_iterations": 19,
+      "minimum_conditional_norm": 0.009341412922773967,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "q",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3444397553585375e-11,
+      "max_iterations": 19,
+      "minimum_conditional_norm": 0.010615471012443959,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "p",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.346360441191139e-11,
+      "max_iterations": 19,
+      "minimum_conditional_norm": 0.017625799759482967,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "q",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3444099181147507e-11,
+      "max_iterations": 20,
+      "minimum_conditional_norm": 0.009864342489758976,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "p",
+      "cutoff": 4096,
+      "trajectories": 768,
+      "max_declared_exact_cdf_residual_bound": 1.3463243589428387e-11,
+      "max_iterations": 19,
+      "minimum_conditional_norm": 0.014348733380492612,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    }
+  ],
+  "scope": "New process-local experimental sampler; production defaults restored on context exit."
+}

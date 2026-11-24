@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-11-24T08:35:31.045270+00:00",
+  "status": "waiting_for_local_memory",
+  "scientific_jobs_launched": 0,
+  "attempt1": {
+    "estimated_peak_bytes": 9730785280,
+    "requested_rss_cap_bytes": 8589934592,
+    "available_bytes": 9286287360,
+    "result": "preflight correctly refused before scientific child launch",
+    "log": "results/simulator_accuracy_completion/20261124/remaining_physics_attempt1_memory_preflight.log"
+  },
+  "next": "Run same frozen plan after large instrument checks release memory, using12GiB sampledRSS trigger and >=estimate+1GiB available-memory reserve. Onehour scientificsessioncap/no-sync/no-shutdown unchanged."
+}

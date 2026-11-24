@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-11-24T15:12:47.047953+00:00",
+  "summary_sha256": "0febbfed53ef4340fad337e9c8df2e71ccddbfd948f5b9a8c13d6ee673275905",
+  "ratios": {
+    "loss": {
+      "status": "complete",
+      "direct_over_legacy_variance_ratio": [
+        null,
+        1.511752255305945e-23,
+        5.1481195428820315e-22,
+        1.006668720172478e-21,
+        8.143105177095687e-19,
+        5.159075247462283e-23,
+        6.223298626052077e-20,
+        1.464904981148327e-19,
+        7.155941113798371e-19
+      ],
+      "registered_cutoff_pass": {
+        "legacy_mixture": false,
+        "direct_cdf": true
+      }
+    },
+    "loss_dephasing": {
+      "status": "complete",
+      "direct_over_legacy_variance_ratio": [
+        null,
+        5.62023319237448e-20,
+        3.0509177819582644e-20,
+        1.4623893176533886e-20,
+        1.721380944515954e-20,
+        1.3437914502260337e-17,
+        2.1822768647940474e-19,
+        1.1781852254211202e-17,
+        2.575664176574552e-19
+      ],
+      "registered_cutoff_pass": {
+        "legacy_mixture": false,
+        "direct_cdf": true
+      }
+    },
+    "coupling_error": {
+      "status": "complete",
+      "direct_over_legacy_variance_ratio": [
+        null,
+        5.652196594735761e-22,
+        3.92434437732481e-19,
+        1.6676368453775815e-19,
+        3.5338418121468e-18,
+        5.473871927263483e-16,
+        5.260654176340667e-15,
+        9.718480393302434e-13,
+        1.403221856219391e-12
+      ],
+      "registered_cutoff_pass": {
+        "legacy_mixture": false,
+        "direct_cdf": true
+      }
+    },
+    "control_rotation": {
+      "status": "complete",
+      "direct_over_legacy_variance_ratio": [
+        null,
+        1.198654210442559e-22,
+        2.979645785840267e-20,
+        2.589790507231185e-21,
+        2.2771406825121544e-19,
+        2.1492756906885153e-21,
+        3.815632597132422e-20,
+        3.268961107008599e-20,
+        5.078283847354798e-21
+      ],
+      "registered_cutoff_pass": {
+        "legacy_mixture": false,
+        "direct_cdf": true
+      }
+    }
+  },
+  "scope": "Descriptive paired-cutoff variance only; no variance-ratio interval or proof of absence of physical cutoff bias."
+}

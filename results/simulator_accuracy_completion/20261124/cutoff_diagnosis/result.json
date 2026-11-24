@@ -1,0 +1,855 @@
+{
+  "generated_utc": "2026-11-24T08:22:44.477831+00:00",
+  "manifest_sha256": "4276099cfb074f1ee3a0a2921a25abfbbbe5a2de545391326ad9a506daf1ad87",
+  "source_sha256": "832d35c62ce3b11bd9eea4b529ad9ca59e2be327a42e5052159bc97178c5621a",
+  "comparisons": {
+    "loss": {
+      "inputs": {
+        "4096": {
+          "path": "results/simulator_accuracy_completion/20261124/inputs/cutoff_pairs/loss_N4096.npz",
+          "sha256": "c26a2c70a2b458cf8d7e7af14845c494829768687ec6d41b6624403f4361fcf7"
+        },
+        "5120": {
+          "path": "results/simulator_accuracy_completion/20261124/inputs/cutoff_pairs/loss_N5120.npz",
+          "sha256": "896d4605f51d746f1e26e54a42d806f548a879f07d1b608f5f644c9288bd65c8"
+        }
+      },
+      "trials": 3072,
+      "per_state": 512,
+      "cycles": [
+        {
+          "cycle": 0,
+          "difference": -1.6653345369377348e-16,
+          "se": 0.0,
+          "ci95": [
+            -1.6653345369377348e-16,
+            -1.6653345369377348e-16
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 2.220446049250313e-16,
+          "fraction_absolute_difference_gt_tolerance": 0.0,
+          "largest_1pct_absolute_difference_share": 0.013454861111111112,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 1,
+          "difference": 0.00033539496528997543,
+          "se": 0.0008538177206972557,
+          "ci95": [
+            -0.0013380570166386786,
+            0.0020088469472186294
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999594542262,
+          "fraction_absolute_difference_gt_tolerance": 0.005859375,
+          "largest_1pct_absolute_difference_share": 0.9846251388244933,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 2,
+          "difference": 0.002221643993379636,
+          "se": 0.0012476220324240607,
+          "ci95": [
+            -0.00022365025649011923,
+            0.004666938243249392
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999583251798,
+          "fraction_absolute_difference_gt_tolerance": 0.010091145833333334,
+          "largest_1pct_absolute_difference_share": 0.9539408850888363,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 3,
+          "difference": 0.0018895586730740285,
+          "se": 0.0017707390690145175,
+          "ci95": [
+            -0.0015810261282123152,
+            0.0053601434743603725
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.999999958909464,
+          "fraction_absolute_difference_gt_tolerance": 0.015950520833333332,
+          "largest_1pct_absolute_difference_share": 0.9383429017513869,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 4,
+          "difference": -0.0009461744250301917,
+          "se": 0.002438868859827419,
+          "ci95": [
+            -0.005726269553308067,
+            0.0038339207032476834
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.999999961879358,
+          "fraction_absolute_difference_gt_tolerance": 0.031901041666666664,
+          "largest_1pct_absolute_difference_share": 0.518883051452746,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 5,
+          "difference": 0.004622443357370622,
+          "se": 0.0029550246619587514,
+          "ci95": [
+            -0.001169298553496019,
+            0.010414185268237263
+          ],
+          "classification": "inconclusive",
+          "max_absolute_trajectory_difference": 0.9999999617268196,
+          "fraction_absolute_difference_gt_tolerance": 0.037434895833333336,
+          "largest_1pct_absolute_difference_share": 0.3584938315078008,
+          "same_mean_variance_total_sample_multiplier": 1.1599744259355502,
+          "same_mean_variance_projected_per_state": 594
+        },
+        {
+          "cycle": 6,
+          "difference": 0.0013874021327515338,
+          "se": 0.003388554008919644,
+          "ci95": [
+            -0.005254041684399602,
+            0.00802884594990267
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999686130894,
+          "fraction_absolute_difference_gt_tolerance": 0.050455729166666664,
+          "largest_1pct_absolute_difference_share": 0.27536619880420005,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 7,
+          "difference": 0.0032364293598806733,
+          "se": 0.00379490707488619,
+          "ci95": [
+            -0.004201451831572299,
+            0.010674310551333646
+          ],
+          "classification": "inconclusive",
+          "max_absolute_trajectory_difference": 0.999999970367784,
+          "fraction_absolute_difference_gt_tolerance": 0.057942708333333336,
+          "largest_1pct_absolute_difference_share": 0.22076788078751358,
+          "same_mean_variance_total_sample_multiplier": 1.2093344183271626,
+          "same_mean_variance_projected_per_state": 620
+        },
+        {
+          "cycle": 8,
+          "difference": -0.0016348392732703106,
+          "se": 0.004295938809152434,
+          "ci95": [
+            -0.010054724618996739,
+            0.006785046072456118
+          ],
+          "classification": "inconclusive",
+          "max_absolute_trajectory_difference": 0.999999970361444,
+          "fraction_absolute_difference_gt_tolerance": 0.07389322916666667,
+          "largest_1pct_absolute_difference_share": 0.17274262549016875,
+          "same_mean_variance_total_sample_multiplier": 1.0131267345985309,
+          "same_mean_variance_projected_per_state": 519
+        }
+      ],
+      "low_stage_checks": {
+        "coverage": "every_recorded_primitive_stage",
+        "stage_checks_complete": true,
+        "valid_by_cycle": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "valid_through_cycle": 8,
+        "pass": true,
+        "instrument_pass": true,
+        "max_edge": 3.2313856249432682e-06,
+        "max_mean_edge": 1.4776907437401336e-09,
+        "max_norm_error": 1.8307577676068831e-13,
+        "thresholds": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "continuous_gate_bound": false
+      },
+      "high_stage_checks": {
+        "coverage": "every_recorded_primitive_stage",
+        "stage_checks_complete": true,
+        "valid_by_cycle": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "valid_through_cycle": 8,
+        "pass": true,
+        "instrument_pass": true,
+        "max_edge": 2.0655474426496178e-08,
+        "max_mean_edge": 1.0805437290692913e-11,
+        "max_norm_error": 3.590461261637756e-13,
+        "thresholds": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "continuous_gate_bound": false
+      },
+      "low_max_mean_photon_number": 1788.8968386301847,
+      "high_max_mean_photon_number": 1799.6814514539692,
+      "scope": "Paired original logical-score samples and recorded stages; no new trajectories, true-bias conclusion or simultaneous interval. Sample projection assumes unchanged mean/variance and is not a stopping rule."
+    },
+    "loss_dephasing": {
+      "inputs": {
+        "4096": {
+          "path": "results/simulator_accuracy_completion/20261124/inputs/cutoff_pairs/loss_dephasing_N4096.npz",
+          "sha256": "2c00c4c4f4928c6ea4d821c19b5a27f376a6c6f39a76a6c6268afc4162dd04d4"
+        },
+        "5120": {
+          "path": "results/simulator_accuracy_completion/20261124/inputs/cutoff_pairs/loss_dephasing_N5120.npz",
+          "sha256": "265e6343aa2647b5631279b5950467ba8446c99132bea9cbf97f4c333f87a45b"
+        }
+      },
+      "trials": 3072,
+      "per_state": 512,
+      "cycles": [
+        {
+          "cycle": 0,
+          "difference": -1.6653345369377348e-16,
+          "se": 0.0,
+          "ci95": [
+            -1.6653345369377348e-16,
+            -1.6653345369377348e-16
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 2.220446049250313e-16,
+          "fraction_absolute_difference_gt_tolerance": 0.0,
+          "largest_1pct_absolute_difference_share": 0.013454861111111112,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 1,
+          "difference": 8.807694965593571e-06,
+          "se": 0.0009137625094869176,
+          "ci95": [
+            -0.0017821339140516553,
+            0.0017997493039828424
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999571368539,
+          "fraction_absolute_difference_gt_tolerance": 0.005533854166666667,
+          "largest_1pct_absolute_difference_share": 0.9851078942440025,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 2,
+          "difference": -0.0005387602829135455,
+          "se": 0.0013619990499748771,
+          "ci95": [
+            -0.0032082293678420003,
+            0.002130708802014909
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999604029128,
+          "fraction_absolute_difference_gt_tolerance": 0.01171875,
+          "largest_1pct_absolute_difference_share": 0.9488114579961718,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 3,
+          "difference": -0.0024759898889583367,
+          "se": 0.0022714802593961306,
+          "ci95": [
+            -0.00692800938896833,
+            0.0019760296110516566
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999618057778,
+          "fraction_absolute_difference_gt_tolerance": 0.025065104166666668,
+          "largest_1pct_absolute_difference_share": 0.5962721659648456,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 4,
+          "difference": -0.0006568364714581621,
+          "se": 0.0026942115393732294,
+          "ci95": [
+            -0.005937394055361764,
+            0.004623721112445439
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999626214344,
+          "fraction_absolute_difference_gt_tolerance": 0.036783854166666664,
+          "largest_1pct_absolute_difference_share": 0.4282709309517499,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 5,
+          "difference": 0.004072475029591102,
+          "se": 0.00302428244975962,
+          "ci95": [
+            -0.0018550096510141553,
+            0.00999995971019636
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999624526932,
+          "fraction_absolute_difference_gt_tolerance": 0.041666666666666664,
+          "largest_1pct_absolute_difference_share": 0.3434861313994127,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 6,
+          "difference": 0.003651828172846808,
+          "se": 0.003364457051459278,
+          "ci95": [
+            -0.0029423864755450196,
+            0.010246042821238635
+          ],
+          "classification": "inconclusive",
+          "max_absolute_trajectory_difference": 0.999999965634336,
+          "fraction_absolute_difference_gt_tolerance": 0.052083333333333336,
+          "largest_1pct_absolute_difference_share": 0.27862515207605215,
+          "same_mean_variance_total_sample_multiplier": 1.0790183061256786,
+          "same_mean_variance_projected_per_state": 553
+        },
+        {
+          "cycle": 7,
+          "difference": -0.00045730083451382854,
+          "se": 0.0037285363135263617,
+          "ci95": [
+            -0.00776509772407504,
+            0.006850496055047383
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999777012196,
+          "fraction_absolute_difference_gt_tolerance": 0.0576171875,
+          "largest_1pct_absolute_difference_share": 0.2275149985128407,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 8,
+          "difference": 0.0011386343152570975,
+          "se": 0.004239097818758718,
+          "ci95": [
+            -0.007169844736452062,
+            0.009447113366966258
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999777892066,
+          "fraction_absolute_difference_gt_tolerance": 0.07421875,
+          "largest_1pct_absolute_difference_share": 0.176943086206791,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        }
+      ],
+      "low_stage_checks": {
+        "coverage": "every_recorded_primitive_stage",
+        "stage_checks_complete": true,
+        "valid_by_cycle": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "valid_through_cycle": 8,
+        "pass": true,
+        "instrument_pass": true,
+        "max_edge": 3.326526366710861e-06,
+        "max_mean_edge": 2.4761247016996e-09,
+        "max_norm_error": 1.7552626019323725e-13,
+        "thresholds": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "continuous_gate_bound": false
+      },
+      "high_stage_checks": {
+        "coverage": "every_recorded_primitive_stage",
+        "stage_checks_complete": true,
+        "valid_by_cycle": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "valid_through_cycle": 8,
+        "pass": true,
+        "instrument_pass": true,
+        "max_edge": 4.902301703669661e-07,
+        "max_mean_edge": 1.7233735942110463e-10,
+        "max_norm_error": 3.588240815588506e-13,
+        "thresholds": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "continuous_gate_bound": false
+      },
+      "low_max_mean_photon_number": 1871.5698216387243,
+      "high_max_mean_photon_number": 2301.3531308724237,
+      "scope": "Paired original logical-score samples and recorded stages; no new trajectories, true-bias conclusion or simultaneous interval. Sample projection assumes unchanged mean/variance and is not a stopping rule."
+    },
+    "coupling_error": {
+      "inputs": {
+        "4096": {
+          "path": "results/simulator_accuracy_completion/20261124/inputs/cutoff_pairs/coupling_error_N4096.npz",
+          "sha256": "1d46cc7de32ecf6cd1422c6caacb0ac5c4a38640ddd451a20dfcfc6173128d3f"
+        },
+        "5120": {
+          "path": "results/simulator_accuracy_completion/20261124/inputs/cutoff_pairs/coupling_error_N5120.npz",
+          "sha256": "7ba38668202e1520a45337823f8a89175cb0c265326caac11c88ba1c560ad794"
+        }
+      },
+      "trials": 3072,
+      "per_state": 512,
+      "cycles": [
+        {
+          "cycle": 0,
+          "difference": -1.6653345369377348e-16,
+          "se": 0.0,
+          "ci95": [
+            -1.6653345369377348e-16,
+            -1.6653345369377348e-16
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 2.220446049250313e-16,
+          "fraction_absolute_difference_gt_tolerance": 0.0,
+          "largest_1pct_absolute_difference_share": 0.013454861111111112,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 1,
+          "difference": -3.2155434310687836e-05,
+          "se": 0.0010235211161193122,
+          "ci95": [
+            -0.002038219959320723,
+            0.001973909090699347
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999576594254,
+          "fraction_absolute_difference_gt_tolerance": 0.007161458333333333,
+          "largest_1pct_absolute_difference_share": 0.9760427939673012,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 2,
+          "difference": 0.0003907011284195471,
+          "se": 0.0017614582661284704,
+          "ci95": [
+            -0.0030616936334625297,
+            0.0038430958903016236
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999584344132,
+          "fraction_absolute_difference_gt_tolerance": 0.019856770833333332,
+          "largest_1pct_absolute_difference_share": 0.941219727884,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 3,
+          "difference": -0.0010265210716654998,
+          "se": 0.0023972141715544173,
+          "ci95": [
+            -0.005724974511141051,
+            0.0036719323678100517
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999580685819,
+          "fraction_absolute_difference_gt_tolerance": 0.051106770833333336,
+          "largest_1pct_absolute_difference_share": 0.5178364641275073,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 4,
+          "difference": -0.006662039353394243,
+          "se": 0.0031919925981905707,
+          "ci95": [
+            -0.01291822988476602,
+            -0.0004058488220224652
+          ],
+          "classification": "inconclusive",
+          "max_absolute_trajectory_difference": 0.9999999656756307,
+          "fraction_absolute_difference_gt_tolerance": 0.09147135416666667,
+          "largest_1pct_absolute_difference_share": 0.2947175984356568,
+          "same_mean_variance_total_sample_multiplier": 3.512833039945417,
+          "same_mean_variance_projected_per_state": 1799
+        },
+        {
+          "cycle": 5,
+          "difference": -0.002032458885022914,
+          "se": 0.0037480181298832895,
+          "ci95": [
+            -0.009378439432997125,
+            0.005313521662951298
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999675907678,
+          "fraction_absolute_difference_gt_tolerance": 0.10611979166666667,
+          "largest_1pct_absolute_difference_share": 0.21784859031358028,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 6,
+          "difference": 0.00293482673750667,
+          "se": 0.004404292615162568,
+          "ci95": [
+            -0.005697428165587454,
+            0.011567081640600795
+          ],
+          "classification": "inconclusive",
+          "max_absolute_trajectory_difference": 0.9999999667230558,
+          "fraction_absolute_difference_gt_tolerance": 0.13216145833333334,
+          "largest_1pct_absolute_difference_share": 0.16012815377000464,
+          "same_mean_variance_total_sample_multiplier": 1.4928043054885638,
+          "same_mean_variance_projected_per_state": 765
+        },
+        {
+          "cycle": 7,
+          "difference": 0.00298913654944189,
+          "se": 0.005045503813104933,
+          "ci95": [
+            -0.006899869208103019,
+            0.012878142306986798
+          ],
+          "classification": "inconclusive",
+          "max_absolute_trajectory_difference": 0.9999999667301404,
+          "fraction_absolute_difference_gt_tolerance": 0.140625,
+          "largest_1pct_absolute_difference_share": 0.12337377250145919,
+          "same_mean_variance_total_sample_multiplier": 1.989583829286748,
+          "same_mean_variance_projected_per_state": 1019
+        },
+        {
+          "cycle": 8,
+          "difference": 0.002792026643843136,
+          "se": 0.005508652396361352,
+          "ci95": [
+            -0.00800473365637508,
+            0.013588786944061352
+          ],
+          "classification": "inconclusive",
+          "max_absolute_trajectory_difference": 0.9999999797988681,
+          "fraction_absolute_difference_gt_tolerance": 0.16145833333333334,
+          "largest_1pct_absolute_difference_share": 0.10395064274360657,
+          "same_mean_variance_total_sample_multiplier": 2.2436782299921405,
+          "same_mean_variance_projected_per_state": 1149
+        }
+      ],
+      "low_stage_checks": {
+        "coverage": "every_recorded_primitive_stage",
+        "stage_checks_complete": true,
+        "valid_by_cycle": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "valid_through_cycle": 8,
+        "pass": true,
+        "instrument_pass": true,
+        "max_edge": 9.92869231843798e-06,
+        "max_mean_edge": 3.4287898475067755e-09,
+        "max_norm_error": 2.4280577548552174e-13,
+        "thresholds": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "continuous_gate_bound": false
+      },
+      "high_stage_checks": {
+        "coverage": "every_recorded_primitive_stage",
+        "stage_checks_complete": true,
+        "valid_by_cycle": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "valid_through_cycle": 8,
+        "pass": true,
+        "instrument_pass": true,
+        "max_edge": 3.952121863517416e-09,
+        "max_mean_edge": 1.7961478970597659e-12,
+        "max_norm_error": 5.88862292261183e-13,
+        "thresholds": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "continuous_gate_bound": false
+      },
+      "low_max_mean_photon_number": 1917.8301403978414,
+      "high_max_mean_photon_number": 1991.1746259711813,
+      "scope": "Paired original logical-score samples and recorded stages; no new trajectories, true-bias conclusion or simultaneous interval. Sample projection assumes unchanged mean/variance and is not a stopping rule."
+    },
+    "control_rotation": {
+      "inputs": {
+        "4096": {
+          "path": "results/simulator_accuracy_completion/20261124/inputs/cutoff_pairs/control_rotation_N4096.npz",
+          "sha256": "c446d806836a1650942dd8d742d4465b2cb8ab17844bd1bf7cc95476a4abe28b"
+        },
+        "5120": {
+          "path": "results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/nearest_finite_ancilla.npz",
+          "sha256": "5b1bb450211521173501f92060bb5d30916eb9a833d01e2cdaec5a5abbef0997"
+        }
+      },
+      "trials": 3072,
+      "per_state": 512,
+      "cycles": [
+        {
+          "cycle": 0,
+          "difference": -1.6653345369377348e-16,
+          "se": 0.0,
+          "ci95": [
+            -1.6653345369377348e-16,
+            -1.6653345369377348e-16
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 2.220446049250313e-16,
+          "fraction_absolute_difference_gt_tolerance": 0.0,
+          "largest_1pct_absolute_difference_share": 0.013454861111111112,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 1,
+          "difference": 0.000451591672717761,
+          "se": 0.0007942961154898321,
+          "ci95": [
+            -0.0011052001067023344,
+            0.0020083834521378565
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999590354222,
+          "fraction_absolute_difference_gt_tolerance": 0.005208333333333333,
+          "largest_1pct_absolute_difference_share": 0.9831239351854281,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 2,
+          "difference": 0.0021642299222943704,
+          "se": 0.0013307629008564195,
+          "ci95": [
+            -0.0004440174353461867,
+            0.0047724772799349275
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999858764239,
+          "fraction_absolute_difference_gt_tolerance": 0.008138020833333334,
+          "largest_1pct_absolute_difference_share": 0.9619331003150275,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 3,
+          "difference": 0.0015611660329025985,
+          "se": 0.0016783472836405333,
+          "ci95": [
+            -0.0017283341965833867,
+            0.004850666262388584
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999862116745,
+          "fraction_absolute_difference_gt_tolerance": 0.014322916666666666,
+          "largest_1pct_absolute_difference_share": 0.96087969092453,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 4,
+          "difference": 0.0005854637831702519,
+          "se": 0.002183526442073155,
+          "ci95": [
+            -0.0036941694025838987,
+            0.004865096968924403
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999856503892,
+          "fraction_absolute_difference_gt_tolerance": 0.022786458333333332,
+          "largest_1pct_absolute_difference_share": 0.6531344409265976,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 5,
+          "difference": 0.0012090488468795289,
+          "se": 0.002534044651119328,
+          "ci95": [
+            -0.003757587404530584,
+            0.006175685098289642
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999848941787,
+          "fraction_absolute_difference_gt_tolerance": 0.02734375,
+          "largest_1pct_absolute_difference_share": 0.48890567738863816,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 6,
+          "difference": 0.0025533405437814798,
+          "se": 0.0027328337372983574,
+          "ci95": [
+            -0.0028029151570591487,
+            0.007909596244622109
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.999999984904995,
+          "fraction_absolute_difference_gt_tolerance": 0.0302734375,
+          "largest_1pct_absolute_difference_share": 0.42226956604947175,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 7,
+          "difference": 0.0009213588889714878,
+          "se": 0.002934998905274676,
+          "ci95": [
+            -0.004831133260031204,
+            0.00667385103797418
+          ],
+          "classification": "within_tolerance",
+          "max_absolute_trajectory_difference": 0.9999999848995478,
+          "fraction_absolute_difference_gt_tolerance": 0.0341796875,
+          "largest_1pct_absolute_difference_share": 0.36809631603523935,
+          "same_mean_variance_total_sample_multiplier": 1.0,
+          "same_mean_variance_projected_per_state": 512
+        },
+        {
+          "cycle": 8,
+          "difference": 0.0040786730410318625,
+          "se": 0.0030711928523032956,
+          "ci95": [
+            -0.0019407543390592731,
+            0.010098100421122998
+          ],
+          "classification": "inconclusive",
+          "max_absolute_trajectory_difference": 0.9999999848447627,
+          "fraction_absolute_difference_gt_tolerance": 0.0380859375,
+          "largest_1pct_absolute_difference_share": 0.336423733174796,
+          "same_mean_variance_total_sample_multiplier": 1.033409082638325,
+          "same_mean_variance_projected_per_state": 530
+        }
+      ],
+      "low_stage_checks": {
+        "coverage": "every_recorded_primitive_stage",
+        "stage_checks_complete": true,
+        "valid_by_cycle": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "valid_through_cycle": 8,
+        "pass": true,
+        "instrument_pass": true,
+        "max_edge": 5.503107773565549e-05,
+        "max_mean_edge": 1.856593935294722e-08,
+        "max_norm_error": 2.311484337269576e-13,
+        "thresholds": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "continuous_gate_bound": false
+      },
+      "high_stage_checks": {
+        "coverage": "every_recorded_primitive_stage",
+        "stage_checks_complete": true,
+        "valid_by_cycle": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "valid_through_cycle": 8,
+        "pass": true,
+        "instrument_pass": true,
+        "max_edge": 3.578873707211512e-08,
+        "max_mean_edge": 1.2432270866863923e-11,
+        "max_norm_error": 5.782041512247815e-13,
+        "thresholds": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "continuous_gate_bound": false
+      },
+      "low_max_mean_photon_number": 1986.8504970654983,
+      "high_max_mean_photon_number": 1988.7149248652743,
+      "scope": "Paired original logical-score samples and recorded stages; no new trajectories, true-bias conclusion or simultaneous interval. Sample projection assumes unchanged mean/variance and is not a stopping rule."
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "completed_utc": "2026-11-24T15:18:17.028837+00:00",
+  "classification": "completed_local_repairs_and_fixed_targeted_studies_with_explicit_limits",
+  "local_only": true,
+  "new_remote_execution_or_deployment": false,
+  "targeted_study_processes_remaining": [],
+  "software_validation": {
+    "passed": 263,
+    "seconds": 21.7,
+    "manifest": "results/simulator_accuracy_completion/20261124/integration_final_reporting_manifest.json",
+    "version": "Active reporting-corrected sources; completed scientific versions remain in frozen snapshots."
+  },
+  "measurement": {
+    "pass": true,
+    "data_cutoffs": [
+      4096,
+      5120
+    ],
+    "gains": [
+      1,
+      1.01
+    ],
+    "scope": "Complete finite-operator spectra and declared discrete grids; no rigorous continuum/hardware certificate.",
+    "evidence": "results/simulator_accuracy_completion/20261124/measurement/completion_summary.json"
+  },
+  "recovered_scoring": {
+    "pass": true,
+    "checks": 162,
+    "evidence": "results/simulator_accuracy_completion/20261124/scoring_635d50e4441cc5d1/completion_summary.json"
+  },
+  "remaining_physics": {
+    "processed_jobs": 4,
+    "expected_jobs": 4,
+    "all_scoring_pass": true,
+    "stage_failures": 1,
+    "evidence": "results/simulator_accuracy_completion/20261124/remaining_physics/completion_report.json",
+    "scope": "Four fresh local configurations supplement 16 historical configurations, with source/environment identities kept distinct."
+  },
+  "matched_sampler_study": {
+    "processed_jobs": 16,
+    "expected_jobs": 16,
+    "per_condition": {
+      "loss": {
+        "legacy_mixture": {
+          "interval_pass": false,
+          "all_numerical_stage_pass": true,
+          "all_scoring_pass": true,
+          "max_absolute_ci95_extent": 0.014242337172424768,
+          "combined_registered_pass": false
+        },
+        "direct_cdf": {
+          "interval_pass": true,
+          "all_numerical_stage_pass": true,
+          "all_scoring_pass": true,
+          "max_absolute_ci95_extent": 1.4005548353456063e-11,
+          "combined_registered_pass": true
+        }
+      },
+      "loss_dephasing": {
+        "legacy_mixture": {
+          "interval_pass": false,
+          "all_numerical_stage_pass": true,
+          "all_scoring_pass": true,
+          "max_absolute_ci95_extent": 0.021159373274934903,
+          "combined_registered_pass": false
+        },
+        "direct_cdf": {
+          "interval_pass": true,
+          "all_numerical_stage_pass": true,
+          "all_scoring_pass": true,
+          "max_absolute_ci95_extent": 6.297743801460971e-11,
+          "combined_registered_pass": true
+        }
+      },
+      "coupling_error": {
+        "legacy_mixture": {
+          "interval_pass": false,
+          "all_numerical_stage_pass": true,
+          "all_scoring_pass": true,
+          "max_absolute_ci95_extent": 0.031734031638067206,
+          "combined_registered_pass": false
+        },
+        "direct_cdf": {
+          "interval_pass": true,
+          "all_numerical_stage_pass": true,
+          "all_scoring_pass": true,
+          "max_absolute_ci95_extent": 3.259944673042919e-08,
+          "combined_registered_pass": true
+        }
+      },
+      "control_rotation": {
+        "legacy_mixture": {
+          "interval_pass": false,
+          "all_numerical_stage_pass": true,
+          "all_scoring_pass": true,
+          "max_absolute_ci95_extent": 0.014068842169004815,
+          "combined_registered_pass": false
+        },
+        "direct_cdf": {
+          "interval_pass": true,
+          "all_numerical_stage_pass": true,
+          "all_scoring_pass": true,
+          "max_absolute_ci95_extent": 6.287225315086085e-12,
+          "combined_registered_pass": true
+        }
+      }
+    },
+    "cdf_diagnostics_pass": true,
+    "mechanism_pass": true,
+    "evidence": "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/completion_report.json"
+  },
+  "finite_gate": {
+    "density_scope": "Supports registered vacuum/coherent single-extraction CQ margin, with empirical convergence.",
+    "gkp_scope": "Numerical controls pass for fixed two-cycle GKP setting; lumped-versus-explicit logical-fidelity equivalence inconclusive.",
+    "evidence": "results/simulator_accuracy_actions/20261124/finite_gate/component_report.json"
+  },
+  "remaining_limits": [
+    {
+      "item": "Passive-cooling 4096 nearest cycle-eight numerical validity",
+      "status": "failed_in_one_of_3072_paths",
+      "peak_individual_boundary": 0.04949983503,
+      "threshold": 0.01,
+      "evidence": "results/simulator_accuracy_completion/20261124/remaining_physics/passive_cooling_nearest_stage_failure.json"
+    },
+    {
+      "item": "New eight-cycle finite-duration/passive nearest cutoff intervals",
+      "status": "inconclusive; Bayes/LSTM interval checks pass"
+    },
+    {
+      "item": "Two-cycle GKP finite-duration lumping \u00b1.01 equivalence",
+      "status": "inconclusive"
+    },
+    {
+      "item": "Original coverage250 and rare300 jobs",
+      "status": "Planned/unrun; additional local archive path and multi-day budget required",
+      "estimated_uncompressed_bytes": 261468979200,
+      "current_free_disk_bytes": 31926038528,
+      "evidence": "results/simulator_accuracy_completion/20261124/unrun_550_resource_assessment.json"
+    },
+    {
+      "item": "Original independent-noise confirmation proposal",
+      "status": "Planned/unrun; register a fresh unused stream before execution"
+    }
+  ],
+  "overall_hardware_or_universal_accuracy_certified": false,
+  "integrity_check": "results/simulator_accuracy_completion/20261124/final_integrity_check.json",
+  "canonical_notebook": "RESEARCH_NOTES.md",
+  "human_report": "docs/simulator_accuracy_local_20261124.md",
+  "finalized_utc": "2026-11-24T15:31:21.576850+00:00",
+  "reporting_correction": {
+    "evidence": "results/simulator_accuracy_completion/20261124/scoring_reporting_correction/correction_20261124.md",
+    "historical_reports_rewritten": false,
+    "historical_runs_rescored": false
+  },
+  "final_state_validation": "results/simulator_accuracy_completion/20261124/final_state_validation.json",
+  "evidence_manifest": "results/simulator_accuracy_completion/20261124/evidence_manifest.json"
+}

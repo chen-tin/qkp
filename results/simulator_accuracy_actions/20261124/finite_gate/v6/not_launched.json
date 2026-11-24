@@ -1,0 +1,6 @@
+{
+  "created_utc": "2026-11-24T09:04:37.581552+00:00",
+  "status": "Planned/deprioritized before launch",
+  "reason": "Prelaunch review caught audit-driver refinement-coverage counter hardcoded20; actual two-arm16-condition cutoff comparisons require32+4solver=36. Correct acceptance coverage before new extension; physical thresholds unchanged.",
+  "watcher_pid_cancelled": 55011
+}

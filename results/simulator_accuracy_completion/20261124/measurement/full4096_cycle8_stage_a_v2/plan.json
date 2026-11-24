@@ -1,0 +1,56 @@
+{
+  "states": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261123/root/archive_spot_check/nearest_finite_ancilla.npz",
+  "cycle": 8,
+  "columns": [
+    0,
+    8
+  ],
+  "data_cutoff": 96,
+  "fock_levels": null,
+  "ancilla_cutoffs": [
+    768,
+    1024
+  ],
+  "sigma": 0.0886226925452758,
+  "radius": 60.0,
+  "dy": 0.01,
+  "coupling": 1.0,
+  "max_joint": 7000000,
+  "max_scratch_mb": 3500.0,
+  "streaming": true,
+  "chunk": 64,
+  "preflight_only": false,
+  "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/full4096_cycle8_stage_a_v2",
+  "audit_only": false,
+  "inputs": {
+    "kind": "saved_states",
+    "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261123/root/archive_spot_check/nearest_finite_ancilla.npz",
+    "sha256": "419564e205e6fcef5ed602ddce2dbebd19e12a14f4695db5979f81fcccb60e0b",
+    "key": "snapshot_cycle_8",
+    "columns": [
+      0,
+      8
+    ],
+    "original_trial_ids": [
+      0,
+      211
+    ],
+    "cardinal_input_ids": [
+      0,
+      0
+    ],
+    "mean_photon_number_per_input": [
+      196.14402200355974,
+      1892.8939145178733
+    ]
+  },
+  "source_hashes": {
+    "experiments/validate_reference_states.py": "e1b43df755358dff55ea40da4cc7f188507cf88f3c89468f4179a1e130c9d2a4",
+    "quantum/measurement_benchmark.py": "845df5476e7793e393b977ffd29ede10eb100f9e2a01a6a462ee2a0b3b493cca",
+    "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+    "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+    "quantum/streaming_measurement.py": "bf7358762a01e229d88eb6b7674f6049cd20781f91f219de2d39059cb825bf67"
+  },
+  "python": "3.13.13",
+  "qutip": "5.3.1"
+}

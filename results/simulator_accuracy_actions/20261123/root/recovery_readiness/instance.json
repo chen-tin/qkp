@@ -1,0 +1,174 @@
+{
+  "Reservations": [
+    {
+      "ReservationId": "r-014dacbf9aa795036",
+      "OwnerId": "882574060060",
+      "Groups": [],
+      "Instances": [
+        {
+          "Architecture": "x86_64",
+          "BlockDeviceMappings": [
+            {
+              "DeviceName": "/dev/xvda",
+              "Ebs": {
+                "AttachTime": "2026-11-20T00:31:28.772000+00:00",
+                "DeleteOnTermination": true,
+                "Status": "attached",
+                "VolumeId": "vol-04b76b804e79ea4c6",
+                "EbsCardIndex": 0
+              }
+            }
+          ],
+          "ClientToken": "qkp-20261120-003030-d2292a",
+          "EbsOptimized": false,
+          "EnaSupport": true,
+          "Hypervisor": "xen",
+          "IamInstanceProfile": {
+            "Arn": "arn:aws:iam::882574060060:instance-profile/qkp-20261120-003030-d2292a-role",
+            "Id": "AIPA427MDNIOJABK7STFN"
+          },
+          "NetworkInterfaces": [
+            {
+              "Attachment": {
+                "AttachTime": "2026-11-20T00:31:28+00:00",
+                "AttachmentId": "eni-attach-05e5a07e31ab5a77f",
+                "DeleteOnTermination": true,
+                "DeviceIndex": 0,
+                "Status": "attached",
+                "NetworkCardIndex": 0
+              },
+              "Description": "",
+              "Groups": [
+                {
+                  "GroupId": "sg-06c9076511c85f830",
+                  "GroupName": "qkp-20261120-003030-d2292a"
+                }
+              ],
+              "Ipv6Addresses": [],
+              "MacAddress": "02:ff:c7:6f:35:6d",
+              "NetworkInterfaceId": "eni-084e26c9e4e52019e",
+              "OwnerId": "882574060060",
+              "PrivateDnsName": "ip-172-31-4-192.ec2.internal",
+              "PrivateIpAddress": "172.31.4.192",
+              "PrivateIpAddresses": [
+                {
+                  "Primary": true,
+                  "PrivateDnsName": "ip-172-31-4-192.ec2.internal",
+                  "PrivateIpAddress": "172.31.4.192"
+                }
+              ],
+              "SourceDestCheck": true,
+              "Status": "in-use",
+              "SubnetId": "subnet-05e3e6d93789c1a15",
+              "VpcId": "vpc-0300160de764eefec",
+              "InterfaceType": "interface",
+              "Operator": {
+                "Managed": false
+              }
+            }
+          ],
+          "RootDeviceName": "/dev/xvda",
+          "RootDeviceType": "ebs",
+          "SecurityGroups": [
+            {
+              "GroupId": "sg-06c9076511c85f830",
+              "GroupName": "qkp-20261120-003030-d2292a"
+            }
+          ],
+          "SourceDestCheck": true,
+          "StateReason": {
+            "Code": "Client.InstanceInitiatedShutdown",
+            "Message": "Client.InstanceInitiatedShutdown: Instance initiated shutdown"
+          },
+          "Tags": [
+            {
+              "Key": "Name",
+              "Value": "qkp-20261120-003030-d2292a"
+            },
+            {
+              "Key": "RunId",
+              "Value": "qkp-20261120-003030-d2292a"
+            },
+            {
+              "Key": "Owner",
+              "Value": "christopher-babayan"
+            },
+            {
+              "Key": "Project",
+              "Value": "qkp-benchmark"
+            }
+          ],
+          "VirtualizationType": "hvm",
+          "CpuOptions": {
+            "CoreCount": 4,
+            "ThreadsPerCore": 2
+          },
+          "CapacityReservationSpecification": {
+            "CapacityReservationPreference": "open"
+          },
+          "HibernationOptions": {
+            "Configured": false
+          },
+          "MetadataOptions": {
+            "State": "applied",
+            "HttpTokens": "required",
+            "HttpPutResponseHopLimit": 2,
+            "HttpEndpoint": "enabled",
+            "HttpProtocolIpv6": "disabled",
+            "InstanceMetadataTags": "disabled"
+          },
+          "EnclaveOptions": {
+            "Enabled": false
+          },
+          "BootMode": "uefi-preferred",
+          "PlatformDetails": "Linux/UNIX",
+          "UsageOperation": "RunInstances",
+          "UsageOperationUpdateTime": "2026-11-20T00:31:28+00:00",
+          "PrivateDnsNameOptions": {
+            "HostnameType": "ip-name",
+            "EnableResourceNameDnsARecord": false,
+            "EnableResourceNameDnsAAAARecord": false
+          },
+          "MaintenanceOptions": {
+            "AutoRecovery": "default",
+            "RebootMigration": "default"
+          },
+          "CurrentInstanceBootMode": "uefi",
+          "NetworkPerformanceOptions": {
+            "BandwidthWeighting": "default"
+          },
+          "Operator": {
+            "Managed": false,
+            "HiddenByDefault": false
+          },
+          "SecondaryInterfaces": [],
+          "InstanceId": "i-0be3c3be10368ba15",
+          "ImageId": "ami-0add9dc62cfab3c11",
+          "State": {
+            "Code": 80,
+            "Name": "stopped"
+          },
+          "PrivateDnsName": "ip-172-31-4-192.ec2.internal",
+          "PublicDnsName": "",
+          "StateTransitionReason": "User initiated",
+          "AmiLaunchIndex": 0,
+          "ProductCodes": [],
+          "InstanceType": "m7i.2xlarge",
+          "LaunchTime": "2026-11-20T00:31:28+00:00",
+          "Placement": {
+            "AvailabilityZoneId": "use1-az1",
+            "GroupName": "",
+            "Tenancy": "default",
+            "AvailabilityZone": "us-east-1a"
+          },
+          "Monitoring": {
+            "State": "disabled"
+          },
+          "SubnetId": "subnet-05e3e6d93789c1a15",
+          "VpcId": "vpc-0300160de764eefec",
+          "PrivateIpAddress": "172.31.4.192"
+        }
+      ]
+    }
+  ]
+}

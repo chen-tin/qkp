@@ -1,0 +1,732 @@
+{
+  "status": "passed",
+  "created_utc": "2026-11-24T14:33:18.858665+00:00",
+  "elapsed_seconds": 360.68471058299474,
+  "plan_sha256": "41ff776f1b094f89a09805590f58c95d58f3e5e34b1c8df8ac5e04244214031e",
+  "result_sha256": "4c877134c09526f39998f980deab62fd21dc9d7404e87370662607732f5c85e1",
+  "audit_source_sha256": "b113494651ecb57e724f5775df305f2548f13c293a918ff1a5f751fad6ae813b",
+  "imported_frozen_root": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v8/runtime",
+  "rows_verified": 32,
+  "sealed_ideal_controls_verified": 8,
+  "refinement_coverage": {
+    "pass": true,
+    "expected_records": 36,
+    "actual_records": 36,
+    "missing": [],
+    "unexpected": [],
+    "duplicate_keys": []
+  },
+  "cutoff_refinements_recomputed": 32,
+  "maximum_metric_readback_delta": 0.0,
+  "maximum_cutoff_readback_delta": 0.0,
+  "final_density_diagnostics": [
+    {
+      "key": "vacuum_q_ideal",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9726645085268788e-07,
+      "ancilla_boundary_mass": 5.211507801488949e-28
+    },
+    {
+      "key": "vacuum_q_ideal",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9726645085268788e-07,
+      "ancilla_boundary_mass": 5.211507801488949e-28
+    },
+    {
+      "key": "vacuum_q_loss",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 1.9984014443252818e-15,
+      "data_boundary_mass": 1.9618165755264808e-07,
+      "ancilla_boundary_mass": 5.4255148459781625e-28
+    },
+    {
+      "key": "vacuum_q_loss",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9620750912693527e-07,
+      "ancilla_boundary_mass": 5.448926000785643e-28
+    },
+    {
+      "key": "vacuum_q_dephasing",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 1.5543122344752192e-15,
+      "data_boundary_mass": 1.9723243556151822e-07,
+      "ancilla_boundary_mass": 5.4462983235784885e-28
+    },
+    {
+      "key": "vacuum_q_dephasing",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.972664508526654e-07,
+      "ancilla_boundary_mass": 5.448926000785562e-28
+    },
+    {
+      "key": "vacuum_q_combined",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 6.661338147750939e-16,
+      "data_boundary_mass": 1.961478070088956e-07,
+      "ancilla_boundary_mass": 5.4228916155289345e-28
+    },
+    {
+      "key": "vacuum_q_combined",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9620750912693527e-07,
+      "ancilla_boundary_mass": 5.448926000786178e-28
+    },
+    {
+      "key": "vacuum_p_ideal",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9726645085268788e-07,
+      "ancilla_boundary_mass": 5.211507801488949e-28
+    },
+    {
+      "key": "vacuum_p_ideal",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9726645085268788e-07,
+      "ancilla_boundary_mass": 5.211507801488949e-28
+    },
+    {
+      "key": "vacuum_p_loss",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 1.9984014443252818e-15,
+      "data_boundary_mass": 1.9618165755264808e-07,
+      "ancilla_boundary_mass": 5.4255148459781625e-28
+    },
+    {
+      "key": "vacuum_p_loss",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9620750912693527e-07,
+      "ancilla_boundary_mass": 5.448926000785643e-28
+    },
+    {
+      "key": "vacuum_p_dephasing",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 1.5543122344752192e-15,
+      "data_boundary_mass": 1.9723243556151822e-07,
+      "ancilla_boundary_mass": 5.4462983235784885e-28
+    },
+    {
+      "key": "vacuum_p_dephasing",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.972664508526654e-07,
+      "ancilla_boundary_mass": 5.448926000785562e-28
+    },
+    {
+      "key": "vacuum_p_combined",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 6.661338147750939e-16,
+      "data_boundary_mass": 1.961478070088956e-07,
+      "ancilla_boundary_mass": 5.4228916155289345e-28
+    },
+    {
+      "key": "vacuum_p_combined",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9620750912693527e-07,
+      "ancilla_boundary_mass": 5.448926000786178e-28
+    },
+    {
+      "key": "coherent_q_ideal",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 1.1102740112153987e-16,
+      "data_boundary_mass": 3.4137902268943236e-07,
+      "ancilla_boundary_mass": 6.78310944225856e-27
+    },
+    {
+      "key": "coherent_q_ideal",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 1.1102740112153987e-16,
+      "data_boundary_mass": 3.4137902268943236e-07,
+      "ancilla_boundary_mass": 6.78310944225856e-27
+    },
+    {
+      "key": "coherent_q_loss",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 6.661358988404155e-16,
+      "data_boundary_mass": 3.3948839335292874e-07,
+      "ancilla_boundary_mass": 6.984757171331282e-27
+    },
+    {
+      "key": "coherent_q_loss",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.440922444086492e-16,
+      "data_boundary_mass": 3.3953106331531364e-07,
+      "ancilla_boundary_mass": 7.005385717590097e-27
+    },
+    {
+      "key": "coherent_q_dephasing",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 8.881797284364394e-16,
+      "data_boundary_mass": 3.413334147727166e-07,
+      "ancilla_boundary_mass": 7.011818397680615e-27
+    },
+    {
+      "key": "coherent_q_dephasing",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 1.1103268707331607e-16,
+      "data_boundary_mass": 3.4139335861249574e-07,
+      "ancilla_boundary_mass": 7.0111919813188e-27
+    },
+    {
+      "key": "coherent_q_combined",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 1.6838505991246776e-18,
+      "data_boundary_mass": 3.3944300608217535e-07,
+      "ancilla_boundary_mass": 6.98542310507381e-27
+    },
+    {
+      "key": "coherent_q_combined",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 1.4566625449532783e-18,
+      "data_boundary_mass": 3.395453263054298e-07,
+      "ancilla_boundary_mass": 7.005485770049455e-27
+    },
+    {
+      "key": "coherent_p_ideal",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 2.2204537617737936e-16,
+      "data_boundary_mass": 5.847270677286455e-07,
+      "ancilla_boundary_mass": 1.8831557837215467e-27
+    },
+    {
+      "key": "coherent_p_ideal",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 2.2204537617737936e-16,
+      "data_boundary_mass": 5.847270677286455e-07,
+      "ancilla_boundary_mass": 1.8831557837215467e-27
+    },
+    {
+      "key": "coherent_p_loss",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 1.1102242208137652e-15,
+      "data_boundary_mass": 5.815151618943811e-07,
+      "ancilla_boundary_mass": 2.0194223588379307e-27
+    },
+    {
+      "key": "coherent_p_loss",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 6.661357229697892e-16,
+      "data_boundary_mass": 5.816092307794493e-07,
+      "ancilla_boundary_mass": 2.0287501388747862e-27
+    },
+    {
+      "key": "coherent_p_dephasing",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 6.66135431785349e-16,
+      "data_boundary_mass": 5.846365913672589e-07,
+      "ancilla_boundary_mass": 2.0284528883631373e-27
+    },
+    {
+      "key": "coherent_p_dephasing",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 6.661357375128328e-16,
+      "data_boundary_mass": 5.847170771721486e-07,
+      "ancilla_boundary_mass": 2.0301840445065594e-27
+    },
+    {
+      "key": "coherent_p_combined",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 1.5543129218277026e-15,
+      "data_boundary_mass": 5.814251007062165e-07,
+      "ancilla_boundary_mass": 2.01815344689711e-27
+    },
+    {
+      "key": "coherent_p_combined",
+      "cutoffs": [
+        24,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 1.1102241258450808e-15,
+      "data_boundary_mass": 5.815992950855688e-07,
+      "ancilla_boundary_mass": 2.029210971507337e-27
+    },
+    {
+      "key": "vacuum_q_ideal",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9573822515474108e-10,
+      "ancilla_boundary_mass": 5.078053438557347e-28
+    },
+    {
+      "key": "vacuum_q_ideal",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9573822515474108e-10,
+      "ancilla_boundary_mass": 5.078053438557347e-28
+    },
+    {
+      "key": "vacuum_q_loss",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 3.3306690738754696e-16,
+      "data_boundary_mass": 1.9411391824685643e-10,
+      "ancilla_boundary_mass": -7.380983943227011e-27
+    },
+    {
+      "key": "vacuum_q_loss",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 0.0,
+      "data_boundary_mass": 1.9414555958975028e-10,
+      "ancilla_boundary_mass": -6.954743565090444e-27
+    },
+    {
+      "key": "vacuum_q_dephasing",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9568587901965865e-10,
+      "ancilla_boundary_mass": -7.279672058829433e-27
+    },
+    {
+      "key": "vacuum_q_dephasing",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 1.1102230246251565e-16,
+      "data_boundary_mass": 1.95738225151645e-10,
+      "ancilla_boundary_mass": -6.954743561412899e-27
+    },
+    {
+      "key": "vacuum_q_combined",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 2.220446049250313e-16,
+      "data_boundary_mass": 1.940619842869612e-10,
+      "ancilla_boundary_mass": -7.694619809712986e-27
+    },
+    {
+      "key": "vacuum_q_combined",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 0.0,
+      "data_boundary_mass": 1.941455595897503e-10,
+      "ancilla_boundary_mass": -6.954743566577702e-27
+    },
+    {
+      "key": "vacuum_p_ideal",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9573822515474108e-10,
+      "ancilla_boundary_mass": 5.078053438557347e-28
+    },
+    {
+      "key": "vacuum_p_ideal",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9573822515474108e-10,
+      "ancilla_boundary_mass": 5.078053438557347e-28
+    },
+    {
+      "key": "vacuum_p_loss",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 3.3306690738754696e-16,
+      "data_boundary_mass": 1.9411391824685643e-10,
+      "ancilla_boundary_mass": -7.380983943227011e-27
+    },
+    {
+      "key": "vacuum_p_loss",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 0.0,
+      "data_boundary_mass": 1.9414555958975028e-10,
+      "ancilla_boundary_mass": -6.954743565090444e-27
+    },
+    {
+      "key": "vacuum_p_dephasing",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 4.440892098500626e-16,
+      "data_boundary_mass": 1.9568587901965865e-10,
+      "ancilla_boundary_mass": -7.279672058829433e-27
+    },
+    {
+      "key": "vacuum_p_dephasing",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 1.1102230246251565e-16,
+      "data_boundary_mass": 1.95738225151645e-10,
+      "ancilla_boundary_mass": -6.954743561412899e-27
+    },
+    {
+      "key": "vacuum_p_combined",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 2.220446049250313e-16,
+      "data_boundary_mass": 1.940619842869612e-10,
+      "ancilla_boundary_mass": -7.694619809712986e-27
+    },
+    {
+      "key": "vacuum_p_combined",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 0.0,
+      "data_boundary_mass": 1.941455595897503e-10,
+      "ancilla_boundary_mass": -6.954743566577702e-27
+    },
+    {
+      "key": "coherent_q_ideal",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 1.1102282066081237e-16,
+      "data_boundary_mass": 4.788979083265136e-10,
+      "ancilla_boundary_mass": 6.7274105673632e-27
+    },
+    {
+      "key": "coherent_q_ideal",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 1.1102282066081237e-16,
+      "data_boundary_mass": 4.788979083265136e-10,
+      "ancilla_boundary_mass": 6.7274105673632e-27
+    },
+    {
+      "key": "coherent_q_loss",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 3.3307061669589095e-16,
+      "data_boundary_mass": 4.748574299687286e-10,
+      "ancilla_boundary_mass": 6.731230635025364e-27
+    },
+    {
+      "key": "coherent_q_loss",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 3.330704746435587e-16,
+      "data_boundary_mass": 4.749324325305731e-10,
+      "ancilla_boundary_mass": 6.755656090447689e-27
+    },
+    {
+      "key": "coherent_q_dephasing",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 1.1103394924751279e-16,
+      "data_boundary_mass": 4.788059528048693e-10,
+      "ancilla_boundary_mass": 6.760105512582069e-27
+    },
+    {
+      "key": "coherent_q_dephasing",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 2.2205022982720597e-16,
+      "data_boundary_mass": 4.789405443275726e-10,
+      "ancilla_boundary_mass": 6.761272361378201e-27
+    },
+    {
+      "key": "coherent_q_combined",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 8.881798244834249e-16,
+      "data_boundary_mass": 4.747662002759536e-10,
+      "ancilla_boundary_mass": 6.687394603507422e-27
+    },
+    {
+      "key": "coherent_q_combined",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 2.220500539725295e-16,
+      "data_boundary_mass": 4.749747186153496e-10,
+      "ancilla_boundary_mass": 6.755755288479553e-27
+    },
+    {
+      "key": "coherent_p_ideal",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 3.330669440668617e-16,
+      "data_boundary_mass": 1.0909648013433794e-09,
+      "ancilla_boundary_mass": 1.8504593610648497e-27
+    },
+    {
+      "key": "coherent_p_ideal",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 3.330669440668617e-16,
+      "data_boundary_mass": 1.0909648013433794e-09,
+      "ancilla_boundary_mass": 1.8504593610648497e-27
+    },
+    {
+      "key": "coherent_p_loss",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 1.1103390216653022e-16,
+      "data_boundary_mass": 1.0817407950128585e-09,
+      "ancilla_boundary_mass": 2.4258429308876483e-27
+    },
+    {
+      "key": "coherent_p_loss",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.440919419414537e-16,
+      "data_boundary_mass": 1.0819494316934287e-09,
+      "ancilla_boundary_mass": 2.4347323544367048e-27
+    },
+    {
+      "key": "coherent_p_dephasing",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 6.66135629256039e-16,
+      "data_boundary_mass": 1.0906998070583015e-09,
+      "ancilla_boundary_mass": 2.435652622203707e-27
+    },
+    {
+      "key": "coherent_p_dephasing",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 2.2205047229269953e-16,
+      "data_boundary_mass": 1.090948678190863e-09,
+      "ancilla_boundary_mass": 2.4367451960685885e-27
+    },
+    {
+      "key": "coherent_p_combined",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "explicit",
+      "norm_error": 9.992019712862284e-16,
+      "data_boundary_mass": 1.081477886683544e-09,
+      "ancilla_boundary_mass": 2.4252621238425424e-27
+    },
+    {
+      "key": "coherent_p_combined",
+      "cutoffs": [
+        32,
+        96
+      ],
+      "arm": "lumped",
+      "norm_error": 4.4409213810007475e-16,
+      "data_boundary_mass": 1.0819334467813142e-09,
+      "ancilla_boundary_mass": 2.4354433933918043e-27
+    }
+  ],
+  "numerical_checks_pass": true,
+  "decision": "supports",
+  "scope": "Fresh-process raw readback; primary and grid CQ metrics, all cutoff comparisons, final-state gates, exact coverage and raw seals. Reuses frozen CQ evaluator; does not re-run dynamics or independently prove its implementation.",
+  "limitations": "Intermediate-time stage gates and tightened-solver evolutions are retained receipt checks; only final density matrices are persisted. Numerical sensitivities are empirical refinement evidence, not rigorous infinite-dimensional bounds."
+}

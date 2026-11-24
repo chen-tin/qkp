@@ -1,0 +1,40 @@
+{
+  "declared_sampler": {
+    "kind": "direct_conditional_cdf_experimental",
+    "uniform_index": 1,
+    "parameters": {
+      "max_step": 0.00025,
+      "tolerance": 1e-10,
+      "shot_batch": 64,
+      "node_chunk": 256,
+      "tail_probability": 1e-15,
+      "float_budget": 5e-12,
+      "max_table_bytes": 67108864
+    },
+    "scope": "Same marginal conditional instrument; new cross-cutoff and replay common-random-number coupling. Legacy mixture uses auxiliaryuniform0+resourceuniform1; directCDFusesonlyuniform1 forphysicaloutcome. Explicitqutipbranch unchanged."
+  },
+  "contract": {
+    "backend": "direct_full_outcome_inverse_CDF",
+    "uniform_index": 1,
+    "quantile_stream": "uniforms[1]",
+    "unused_auxiliary_streams": [
+      "uniforms[0] eigenvalue draw",
+      "uniforms[2] historical jitter"
+    ],
+    "coupling_scope": "Common quantiles across cutoffs and explicit QuTiP; also changes coupling to classical replay, whose readout uses uniforms[1]. Marginals unchanged within declared numerical error.",
+    "max_step": 0.00025,
+    "cdf_tolerance": 1e-10,
+    "shot_batch": 64,
+    "node_chunk": 256,
+    "tail_probability": 1e-15,
+    "float_budget": 5e-12,
+    "max_table_bytes": 67108864,
+    "floating_bound_status": "Explicit engineering allowance; not a proved special-function ULP guarantee."
+  },
+  "calls": [],
+  "restored_original_measurement": true,
+  "error": null,
+  "phase": "run",
+  "driver_sha256": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c",
+  "backend_sha256": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8"
+}

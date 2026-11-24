@@ -1,0 +1,191 @@
+{
+  "created_utc": "2026-11-24T09:10:16.713465+00:00",
+  "classification": "saved-data mechanism/control audit",
+  "pass": true,
+  "common_original_scientific_source_hashes_match": true,
+  "rows": [
+    {
+      "cutoff": 128,
+      "variant": "ideal",
+      "arm": "replayed_corrections",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": true,
+      "arrays_checked": 37,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 128,
+      "variant": "ideal",
+      "arm": "finite_ancilla",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": false,
+      "arrays_checked": 0,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 192,
+      "variant": "ideal",
+      "arm": "replayed_corrections",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": true,
+      "arrays_checked": 37,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 192,
+      "variant": "ideal",
+      "arm": "finite_ancilla",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": false,
+      "arrays_checked": 0,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 128,
+      "variant": "lumped",
+      "arm": "replayed_corrections",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": true,
+      "arrays_checked": 37,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 128,
+      "variant": "lumped",
+      "arm": "finite_ancilla",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": false,
+      "arrays_checked": 0,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 192,
+      "variant": "lumped",
+      "arm": "replayed_corrections",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": true,
+      "arrays_checked": 37,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 192,
+      "variant": "lumped",
+      "arm": "finite_ancilla",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": false,
+      "arrays_checked": 0,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 128,
+      "variant": "qutip",
+      "arm": "replayed_corrections",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": true,
+      "arrays_checked": 37,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 128,
+      "variant": "qutip",
+      "arm": "finite_ancilla",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": true,
+      "arrays_checked": 36,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 192,
+      "variant": "qutip",
+      "arm": "replayed_corrections",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": true,
+      "arrays_checked": 37,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 192,
+      "variant": "qutip",
+      "arm": "finite_ancilla",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": true,
+      "arrays_checked": 36,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 128,
+      "variant": "qutip_refined",
+      "arm": "replayed_corrections",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": true,
+      "arrays_checked": 37,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 128,
+      "variant": "qutip_refined",
+      "arm": "finite_ancilla",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": true,
+      "arrays_checked": 36,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 192,
+      "variant": "qutip_refined",
+      "arm": "replayed_corrections",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": true,
+      "arrays_checked": 37,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    },
+    {
+      "cutoff": 192,
+      "variant": "qutip_refined",
+      "arm": "finite_ancilla",
+      "physical_config_same": true,
+      "exogenous_arrays_identical": true,
+      "expected_entire_arm_unchanged": true,
+      "arrays_checked": 36,
+      "max_absolute_difference": 0.0,
+      "mismatched_arrays": []
+    }
+  ],
+  "sampler_comparison": "New direct-CDF physical outcome usesuniform1instead ofauxiliaryeigenvalue0+resource1; changed CRNcoupling isdeclared, marginals tested separately. Explicitgate andclassicalreplay arrays mustremainunchanged.",
+  "sources": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/pilot_128_192/plans/finite_gate",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/pilot_cdf_128_192/plans/finite_gate"
+  ],
+  "analysis_script_sha256": "7ae5716c6cb03e615cc1cbee2677e47130507526bac483543c2071b920b896e3",
+  "limitations": "Twelve trajectories/job in pilot; this audit tests unchanged draws/branches, not equivalence from empirical performance means or hardware validity."
+}

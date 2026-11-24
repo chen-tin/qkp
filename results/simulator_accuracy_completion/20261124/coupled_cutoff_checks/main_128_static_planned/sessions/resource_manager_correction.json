@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-11-24T09:52:03.550216+00:00",
+  "previous_manager_pid": 66763,
+  "previous_manager_sha256": "e7d6abbe195f3c49232f38f4b6203b36e8c6d903f4360f846bbc5c021c5b3195",
+  "previous_scientific_sessions": 0,
+  "manager_sha256": "7c84f91cf96c889b94e245f395c935a4b6020b35406e4feee03bcc90648deb5c",
+  "guard_sha256": "501cdcec8482fa6d42de8f43cdf22fefa5b9fe4823e6b6e5d627fbdabe0cb018",
+  "mechanism_auditor_sha256": "040f44925f346391eac192bfd16a762da2f729a61d97616dfe22f5b9b200e4b2",
+  "scope": "Resources/callback only: preserve mainplan/scientific sources/3x3600s/8GiBRSS/1GiBheadroom. Queue up to4h for fixed physics-priority barrier. Deduct full density remaining4GiBgrowth. Corrected auditor binds exact approved plan internally; CLI has no approved-plan argument.",
+  "barrier": "MEASUREMENT_RAM_RELEASED marker only after passive4096 active and settled, or all4physics processed, and explicit measurement release already received.",
+  "safety_correction_utc": "2026-11-24T09:58:12.267579+00:00",
+  "process_safety_sha256": "4d1f796ccbdf63540676b8bb64f0138c60e3b7fd015b8de20b632123d8e0f2ea",
+  "process_safety_test_sha256": "12ea5b899d83ab836ff8d1979f468db43aec3a58780dfd6f6cab7d50cb40bb36",
+  "safety_correction": {
+    "durable_history": "Physics resumes existing revised history; refuses unsettled/invalid history, never reconstructs later launches from old2session registry.",
+    "owned_process_group": "Each supervisor starts a new session with PGID==PID, SIGINT leader then50s grace for nested30+10s cleanup, SIGKILL entire owned group if needed,5s verify; check descendants even after leader exits.",
+    "deadline": "External monotonic3600s maximum work/finalization deadline; cooperative science deadline60s earlier. Physics reserves60s cleanup inside remaining unchanged10800s cumulative total and charges measured parent wall including cleanup.",
+    "postrun_mechanism_verification": "Separate300s external deadline+50s graceful/5s verify, owned group; failure never triggers physical reruns.",
+    "tests": "18passed (9localprocess/budget+9mechanism), persisted command/log/hash receipt at resource_coordination/safety_tests_20261124_receipt.json",
+    "restart_external_stop": "Any prior external_stop_reason rejects restart even if final scientific status later reads cleanTimeout."
+  },
+  "automatic_terminal_barrier_correction": {
+    "created_utc": "2026-11-24T14:28:26.829091+00:00",
+    "prior_manager_sha256": "98b41e1ee39552e6fdb60a869e1d9a63a8ea4a69c537b361880ab5f2ad81e26d",
+    "expired_queue_receipt": "expired_zero_launch_queue_20261124.json",
+    "prior_scientific_launches": 0,
+    "change": "Automatically satisfy physics priority after allfour fixed jobs have independently verifiedraw and checkedscoring, regardless numericalpass. Terminal completion doesnotexpire when activechildphaseismissed. Existingsource/capacity/densityguards remainrequired.",
+    "scientific_settings_changed": false
+  },
+  "prior_guard_sha256": "c9a8e902046f5cb80f50102254c2580d11a11f9d4d0e9ee5f93592b7e3bedea6",
+  "density_readback_reservation_correction": {
+    "created_utc": "2026-11-24T14:33:04.239599+00:00",
+    "heavy_science_released": "results/simulator_accuracy_actions/20261124/finite_gate/density_reservation_release.json",
+    "remaining_readonly_audit_cap_bytes": 1073741824,
+    "maximum_wall_seconds": 1200,
+    "audit_pid": 32514,
+    "guard_pid": 33626,
+    "rule": "Subtractonlymax(0,1GiB-currentactualreadbacktreeRSS); currentresidencyalreadyreducesavailable. Nochange tomain1GiBextraheadroom/8GiBRSS/scientificscope."
+  }
+}

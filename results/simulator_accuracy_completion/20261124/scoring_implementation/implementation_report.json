@@ -1,0 +1,24 @@
+{
+  "classification": "bounded software equivalence/negative controls; scientific rescoring separately registered",
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_local_score_refinement.py tests/test_simulation_quality.py",
+  "passed": 29,
+  "seconds": 5.96,
+  "new_tests": 7,
+  "existing_tests": 22,
+  "checks": [
+    "Single/batched scoring agree to2e-13 across capacity splits",
+    "Basis evaluations reduced3fold for3banks (counted source calls; no runtime speedup inference)",
+    "Full cutoff preserved and impossible budget rejected",
+    "All-file/all-cycle refinement metrics match original scorer",
+    "Corrupted saved-score negative control still fails",
+    "Partial-cycle selection cannot claim complete horizon",
+    "External output leaves result/raw hashes unchanged"
+  ],
+  "scope": "Same quadrature nodes/chunk/order per column, logical convention, .001 score tolerance,1e-7trace/positivity gates; no new physical model or threshold change.",
+  "source_sha256": {
+    "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+    "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+    "experiments/local_accuracy_completion.py": "a5fca2e58ee1352b6ec049ac2a640226f29ee6b54cbcb2b605321f58e9a9a51f",
+    "tests/test_local_score_refinement.py": "26fdd46c67af54f5fb3ff373d906f800f22bfeb5fd8daabfa12a588aab423736"
+  }
+}

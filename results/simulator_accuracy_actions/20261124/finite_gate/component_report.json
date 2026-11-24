@@ -1,0 +1,151 @@
+{
+  "status": "completed",
+  "updated_utc": "2026-11-24T14:35:10.805397+00:00",
+  "owned_source_sha256": {
+    "experiments/local_finite_gate_audit.py": "b19fab6e6785cf359d4c0bed8f0f2a0aa35ecb19221c30e55889316f7c3e0f7f",
+    "tests/test_local_finite_gate_audit.py": "e28213d0dd5a7ea2923991e73560e57de3638da9f62f584c9de83c20ef8b2a19",
+    "experiments/local_gkp_gate_pilot.py": "215feb3e4ab4e27bf8ca998f05d6594d065bd5b8e84e1f40230949c304b2397b",
+    "tests/test_local_gkp_gate_pilot.py": "eda8e520c4e5b6563e29c1c4a3aaf875af69686d22727cc5b10a3ac77e271423",
+    "docs/local_finite_gate_accuracy_2026-11-24.md": "2303bf9a72ed5a93afdc471d5cb05fd736a3d5fd82f9ae63d907feee574277ec"
+  },
+  "software_checks": "software_checks_after_metadata.json",
+  "GKP": {
+    "status": "completed",
+    "root": "results/simulator_accuracy_completion/20261124/gkp_finite_gate",
+    "final_directory": "full16_cdf_128_192",
+    "completed_jobs": 8,
+    "trajectories_per_cardinal_state": 16,
+    "cardinal_states": 6,
+    "total_trajectories_per_job_per_arm": 96,
+    "numerical_checks_pass": true,
+    "physical_approximation_decision": "inconclusive",
+    "primary_cycle2_lumped_minus_refined_N192": {
+      "mean": -0.012155779836,
+      "pointwise_95_percent_interval": [
+        -0.030465114695,
+        0.006153555023
+      ]
+    },
+    "material_margin_logical_fidelity": 0.01,
+    "runtime_seconds": 629.8978380420012,
+    "worker_tree_RSS_bytes": 1200422912,
+    "same_base_seed_not_independent_confirmation": true,
+    "exact_pilot_complete_shot_overlap": 0,
+    "shared_pilot_first_round_dq_prefix_values": 12,
+    "raw_audit": "full16_cdf_128_192/independent_readback.json",
+    "metadata_correction": "full16_cdf_128_192/reporting_correction.json",
+    "practical_restriction": "Lumped remains a symmetric approximation; \u00b11pp equivalence unestablished; explicit reference when feasible. No physics fix or extra shots inferred from inconclusive interval.",
+    "scope": "Broad two-cycle six-cardinal finite-energy GKP only, static sigma_m=.5, original fixed16/state protocol; not nominal8cycle/hardware."
+  },
+  "density": {
+    "status": "completed",
+    "registered_final_grid": [
+      [
+        24,
+        96
+      ],
+      [
+        32,
+        96
+      ]
+    ],
+    "expected_rows": 32,
+    "expected_refinement_records": 36,
+    "original_negative_lower_cutoff_results_preserved": "v5/result.json",
+    "queued_only_if_clean_wall_timeout": true,
+    "beyond_v8": "Requires facts to parent before any extra authorization.",
+    "readback_script": "readback_completed_density.py",
+    "final_directory": "v8",
+    "numerical_checks_pass": true,
+    "decision": "supports",
+    "completed_rows": 32,
+    "refinement_coverage": {
+      "pass": true,
+      "expected_records": 36,
+      "actual_records": 36,
+      "missing": [],
+      "unexpected": [],
+      "duplicate_keys": []
+    },
+    "maximum_final_CQ_instrument_trace_distance": 7.283445525763866e-05,
+    "maximum_cutoff_CQ_trace_distance": 0.00020313727070223444,
+    "numerical_sensitivity_envelope": 0.00040627454140448383,
+    "inherited_rows_v8": 31,
+    "physical_configuration": "v8/plan.json",
+    "source_dependency_hashes": {
+      "experiments/local_finite_gate_audit.py": "b19fab6e6785cf359d4c0bed8f0f2a0aa35ecb19221c30e55889316f7c3e0f7f",
+      "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+      "quantum/measurement_benchmark.py": "845df5476e7793e393b977ffd29ede10eb100f9e2a01a6a462ee2a0b3b493cca",
+      "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e"
+    },
+    "source_and_receipt_lineage": "v8/previous_receipt_lineage.json",
+    "readback": "v8/independent_readback.json",
+    "readback_status": "passed",
+    "phase_resources": {
+      "v7": {
+        "created_utc": "2026-11-24T10:18:40.257772+00:00",
+        "pid": 69553,
+        "returncode": -2,
+        "interruption_reason": "wall_time_cap",
+        "elapsed_seconds": 3600.359810833994,
+        "max_sampled_rss_bytes": 3265085440,
+        "command": [
+          "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+          "-u",
+          "-m",
+          "experiments.local_finite_gate_audit",
+          "run",
+          "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v7"
+        ],
+        "cwd": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v7/runtime",
+        "thread_environment": {
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "PYTHONPATH": "/Users/christopherbabayan/programs/QUANTUM/qkp"
+        }
+      },
+      "v8": {
+        "created_utc": "2026-11-24T10:41:11.993840+00:00",
+        "pid": 14405,
+        "returncode": 0,
+        "interruption_reason": null,
+        "elapsed_seconds": 1348.9772585000028,
+        "max_sampled_rss_bytes": 3936174080,
+        "command": [
+          "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+          "-u",
+          "-m",
+          "experiments.local_finite_gate_audit",
+          "run",
+          "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v8"
+        ],
+        "cwd": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v8/runtime",
+        "thread_environment": {
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "PYTHONPATH": "/Users/christopherbabayan/programs/QUANTUM/qkp"
+        }
+      }
+    },
+    "old_failed16_to24_maximum_cutoff_CQ_distance": 0.0037187883884725126,
+    "future_density_evolution_queued": false,
+    "limitations": "Vacuum/coherent low-energy one-extraction instrument only; no GKP multicycle/hardware generalization. Deterministic empirical refinements are not rigorous infinite-dimensional error bounds; no Monte Carlo intervals.",
+    "final_release_receipt": "density_final_release.json",
+    "historical_status_correction": "v7 frozen result checkpoint running is superseded for liveness by v7/resource_usage.json: clean wall timeout returncode-2 at2026-11-24T10:18:40Z; archived bytes untouched.",
+    "readback_elapsed_seconds": 360.68471058299474,
+    "readback_max_sampled_RSS_bytes": 758923264,
+    "readback_maximum_metric_delta": 0.0,
+    "readback_maximum_cutoff_delta": 0.0,
+    "reservations_released": true
+  },
+  "recordkeeping": "Parent /root owns RESEARCH_NOTES.md and receives all launch/outcome/correction summaries.",
+  "evidence_sha256": {
+    "v8/plan.json": "41ff776f1b094f89a09805590f58c95d58f3e5e34b1c8df8ac5e04244214031e",
+    "v8/result.json": "4c877134c09526f39998f980deab62fd21dc9d7404e87370662607732f5c85e1",
+    "v8/resume_receipt.json": "d3375f78f2d0304370b1eabf9c6ee4ee5a418cc6fc5471911fb61ceedc31e57f",
+    "v8/previous_receipt_lineage.json": "e95467aba25184b9ed417a94ce4d8097f9495383eeebadd3b1352548d041ff94",
+    "v8/independent_readback.json": "4fd1b461e7d2dfcac9653fba054481c3c3ea01408db2d6189a4cc1eebddf4328"
+  }
+}

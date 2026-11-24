@@ -1,0 +1,48 @@
+{
+  "Volumes": [
+    {
+      "AvailabilityZoneId": "use1-az1",
+      "Iops": 3000,
+      "Tags": [
+        {
+          "Key": "Owner",
+          "Value": "christopher-babayan"
+        },
+        {
+          "Key": "Project",
+          "Value": "qkp-benchmark"
+        },
+        {
+          "Key": "RunId",
+          "Value": "qkp-20261120-003030-d2292a"
+        }
+      ],
+      "VolumeType": "gp3",
+      "MultiAttachEnabled": false,
+      "Throughput": 125,
+      "Operator": {
+        "Managed": false,
+        "HiddenByDefault": false
+      },
+      "VolumeId": "vol-04b76b804e79ea4c6",
+      "Size": 400,
+      "SnapshotId": "snap-083110dc5d4534900",
+      "AvailabilityZone": "us-east-1a",
+      "State": "in-use",
+      "CreateTime": "2026-11-20T00:31:28.844000+00:00",
+      "Attachments": [
+        {
+          "DeleteOnTermination": true,
+          "EbsCardIndex": 0,
+          "VolumeId": "vol-04b76b804e79ea4c6",
+          "InstanceId": "i-0be3c3be10368ba15",
+          "Device": "/dev/xvda",
+          "State": "attached",
+          "AttachTime": "2026-11-20T00:31:28+00:00"
+        }
+      ],
+      "Encrypted": true,
+      "KmsKeyId": "arn:aws:kms:us-east-1:882574060060:key/2ecab452-7ae3-4076-acd1-11bfaaec2454"
+    }
+  ]
+}

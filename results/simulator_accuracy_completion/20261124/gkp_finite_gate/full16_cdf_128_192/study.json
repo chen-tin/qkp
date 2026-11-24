@@ -1,0 +1,89 @@
+{
+  "created_utc": "2026-11-24T09:06:16.367466+00:00",
+  "status": "Planned",
+  "classification": "local_GKP_finite_gate_control",
+  "purpose": "Resolve numerical validity of the original broad two-cycle finite-gate controls using higher data/ancillary cutoffs; preserve original8invalid controls.",
+  "question": "Do higher-cutoff original GKP controls pass population, scoring, data-cutoff and explicit ancillary/grid refinement checks, and does lumped dissipation agree with refined explicit gates within1pp logical fidelity?",
+  "hypothesis": "The declared higher-cutoff controls pass numerical checks; lumped-minus-refined-explicit logical-fidelity differences remain within\u00b1.01 atallthreecycle samples.",
+  "fixed": {
+    "noise_distribution": "stationary Gaussian AR(1) q/p displacement; independent axes; finite-energy resource measurement back-action",
+    "sigma_q_over_L": 0.1,
+    "resource_sigma_absolute_q": 0.5,
+    "sigma_m_over_L": 0.28209479177387814,
+    "rho": 0.3,
+    "data_delta": 0.3,
+    "rounds": 2,
+    "cardinal_inputs": 6,
+    "controller": "nearest",
+    "base_seed": 26112001,
+    "loss_rate_per_time_unit": 0.01,
+    "dephasing_rate_per_time_unit": 0.001,
+    "each_gate_duration": 0.1,
+    "cycle_time": 1.0,
+    "ancillary_dissipation": 0,
+    "L": "sqrt(pi), [q,p]=i",
+    "training_seeds": []
+  },
+  "departure_from_original": {
+    "per_state": 16,
+    "original_per_state": 16,
+    "data_cutoffs": [
+      128,
+      192
+    ],
+    "original_data_cutoffs": [
+      32,
+      48
+    ],
+    "coarse_explicit_ancilla_radius_dy": [
+      256,
+      20.0,
+      0.02
+    ],
+    "refined_explicit_ancilla_radius_dy": [
+      384,
+      24.0,
+      0.01
+    ]
+  },
+  "primary_metric": "six-cardinal equal-weight mean logical fidelity by cycle; difference between paired arms; lower absolute difference isbetter",
+  "numerical_metrics": "Unchanged stage meanedge<1e-4,individualedge<.01,norm<1e-7,gategridmass1\u00b11e-5; saved-state192/384/768refinement absolute tolerance.001; paireddata-cutoff andqutip/refined95%intervals whollyinside\u00b1.01.",
+  "decision_rule": {
+    "supports": "All eight jobs and required numerical/refinement checks pass; lumped-minus-refined intervals wholly within\u00b1.01 everycycle atboth data cutoffs.",
+    "contradicts": "All numerical checks pass and at least one lumped-minus-refined interval lies entirely outside\u00b1.01.",
+    "inconclusive": "Any numerical gate/coverage/resource failure or interval overlaps an equivalence boundary. Keep failed controls; next registered numericalpair256/384 if128/192 fails."
+  },
+  "uncertainty": "Existing paired state-stratified normal95%fidelity intervals; pilot2/state has limited statistical power and is a numerical/timingpreflight, not a confirmatory equivalence claim. Deterministic quadrature gets no MCinterval.",
+  "limits": {
+    "wall_seconds": 3600,
+    "hard_rss_bytes": 2147483648,
+    "threads": 1
+  },
+  "full_budget_gate": "Launch separate16/state8-job plan only after pilot numerical checks pass and projected runtime8\u00d7pilot wall<=3600s. Full run retains negative/inconclusive findings.",
+  "measurement_sampler": {
+    "kind": "direct_conditional_cdf_experimental",
+    "uniform_index": 1,
+    "parameters": {
+      "max_step": 0.00025,
+      "tolerance": 1e-10,
+      "shot_batch": 64,
+      "node_chunk": 256,
+      "tail_probability": 1e-15,
+      "float_budget": 5e-12,
+      "max_table_bytes": 67108864
+    },
+    "scope": "Same marginal conditional instrument; new cross-cutoff and replay common-random-number coupling. Legacy mixture uses auxiliaryuniform0+resourceuniform1; directCDFusesonlyuniform1 forphysicaloutcome. Explicitqutipbranch unchanged."
+  },
+  "sampler_error_scope": "DirectCDF table/interpolation/slope/tail components follow analytic bounds; float_budget is an explicitly assumed floating-error allowance, not a proved floatingpoint bound. Deterministic source-directed marginal tests are separate evidence.",
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "qutip": "5.3.1",
+    "torch": "2.15.0",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O"
+  },
+  "driver_sha256": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c",
+  "benchmark_plan_sha256": "aad69b5d6b4aa277a09576e52a8d998d89cfe8db1e5675b8b80be91f83b41203",
+  "scope": "Two-cycle broad-noise GKP control only; not nominal8cycle memory, hardware accuracy, or all-state certification."
+}

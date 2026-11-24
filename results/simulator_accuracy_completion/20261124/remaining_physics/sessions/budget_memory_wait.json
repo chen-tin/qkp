@@ -1,0 +1,18 @@
+{
+  "observed_utc": "2026-11-24T10:35:41.332754+00:00",
+  "actual_available_memory_bytes": 10470817792,
+  "effective_available_memory_bytes": 10111811584,
+  "extra_headroom_bytes": 536870912,
+  "density_root_pids": [
+    14405
+  ],
+  "density_tree_pids": [
+    14405
+  ],
+  "density_sampled_tree_rss_bytes": 3935961088,
+  "density_committed_bytes": 4294967296,
+  "density_remaining_growth_bytes": 359006208,
+  "density_final_release_marker": false,
+  "scope": "Sampled process-tree RSS; full4GiB reservation persists between v7/v8.",
+  "error": "Manager effective memory/headroom reservation not met"
+}

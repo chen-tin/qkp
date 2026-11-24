@@ -1,0 +1,52 @@
+{
+  "identity": {
+    "config": {
+      "data_cutoff": 5120,
+      "data_cutoffs": [
+        4096,
+        5120
+      ],
+      "ancilla_cutoffs": [
+        8192,
+        12288,
+        16384
+      ],
+      "sigma": 0.0886226925452758,
+      "coupling": 1.0,
+      "radius": 160.0,
+      "dy": 0.01,
+      "chunk": 128,
+      "grid_chunk": 512,
+      "max_scratch_bytes": 5368709120,
+      "reference_wave_basis": "scaled_generalized_laguerre_v1",
+      "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+      "source_hashes": {
+        "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+        "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+        "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+        "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+        "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+      },
+      "environment": {
+        "python": "3.13.13",
+        "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+        "device": "CPU",
+        "packages": {
+          "numpy": "2.5.5",
+          "scipy": "1.18.1",
+          "qutip": "5.3.1"
+        }
+      }
+    },
+    "data_cutoff": 5120,
+    "ancilla_cutoff": 8192,
+    "transfer_sha256": "1ae5dc52c8d22ed68711c02a489dc2db73b7fb5ab8cce4404765797d3f8508cc",
+    "previous_transfer_sha256": null
+  },
+  "sha256": "9532b32e1a2c0e287236d7073747716245aa532155ca9c17a7246622d8fa0552",
+  "migration": {
+    "from": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_v1/curves_Na8192_Nd5120.json",
+    "source_sha256": "9e0437cd8070ea8234a5879af22029e78ba6022b056762079360faa13b66dbc2",
+    "reason": "Predeclared thirdancillaryrung only; underlying per-pair geometry/configuration unchanged"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "prepared_utc": "2026-11-24T16:29:07.743204+00:00",
+  "repository": "chen-tin/qkp",
+  "branch": "main",
+  "pre_publication_notebook": {
+    "path": "results/github_publication/20261124/RESEARCH_NOTES_before_publication.md",
+    "sha256": "50b4a102b24f014c406ae10132586df8f33c18eac3d787ec33511a4fe64e7c6b"
+  },
+  "local_test_manifest": "results/simulator_accuracy_completion/20261124/integration_final_reporting_manifest.json",
+  "authentication": "Command-scoped already-signed-in babayChris account; push permission verified. No credential values persisted.",
+  "raw_data_policy": "Existing ignored raw/checkpoint/log artifacts stay local; runtime locks ignored.",
+  "original_audit_evidence_manifest": "results/simulator_accuracy_completion/20261124/evidence_manifest.json",
+  "notebook_note": "The earlier audit manifest hashes the pre-publication notebook. Its exact bytes are preserved above; the current notebook is living documentation."
+}

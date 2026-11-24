@@ -1,0 +1,1093 @@
+{
+  "updated_utc": "2026-11-24T09:42:16.845406+00:00",
+  "classification": "Local implementation/verification and declared finite-operator accuracy studies; distinct from full production benchmark completion",
+  "source_freeze": {
+    "quantum/streaming_measurement.py": true,
+    "quantum/spectral_circuit.py": true,
+    "quantum/measurement_benchmark.py": true,
+    "experiments/validate_reference_states.py": true,
+    "quantum/instrument_operator_bound.py": true,
+    "experiments/validate_instrument_operator.py": true,
+    "tests/test_instrument_operator_bound.py": true,
+    "tests/test_reference_wave_basis.py": true
+  },
+  "all_registered_sources_still_frozen": true,
+  "environment": {
+    "python": "3.13.13",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "device": "CPU",
+    "packages": {
+      "numpy": "2.5.5",
+      "scipy": "1.18.1",
+      "qutip": "5.3.1",
+      "mpmath": "1.3.0",
+      "pytest": "9.2.0"
+    },
+    "requested_numerical_threads": 2,
+    "software_test_threads": 1
+  },
+  "software_checks": {
+    "fresh_combined_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_reference_wave_basis.py tests/test_spectral_circuit.py tests/test_streaming_measurement.py tests/test_instrument_operator_bound.py tests/test_accuracy_measurement_directed.py tests/test_qutip_engine_benchmark.py tests/test_simulation_quality.py",
+    "result": "96 passed in 20.83s",
+    "log": "combined_measurement_tests.log",
+    "junit": "combined_measurement_tests.xml",
+    "overlap_note": "Do not add earlier overlapping control counts."
+  },
+  "confirmed_reference_defect": {
+    "before": "QuTiP Gaussian-seeded oscillator kernel underflowed for high-order appreciable wavefunctions at |x|>38.",
+    "red_log": "reference_basis_before.log",
+    "red_result": "3 failed,5 passed in3.44s",
+    "fix": "Separate scaled generalized-Laguerre oscillator evaluator; no local-Hermite fallback. Direct scalar gold uses mpmath90dps, including n16383/x160 and n16382/x120. QuTiP still supplies circuit operators and small direct ODE controls.",
+    "backend": "scaled_generalized_laguerre_v1"
+  },
+  "memory_implementation": "Streaming q/p conditional grids, no Ndata*Ny state bank; light real tridiagonal data basis, independent exact product spectral SUM, tiled real/imag transforms; uniform path row-tiles sealed transfer files and maps one data-cutoff block at a time.",
+  "selected_production_inputs": {
+    "pass": true,
+    "rows": [
+      {
+        "ancilla_cutoff": 4096,
+        "axis": "q",
+        "column": 0,
+        "outcome_tv": 1.7989606560548292e-14,
+        "weighted_conditional_infidelity": 3.0614536072030244e-16,
+        "worst_conditional_infidelity_relevant": 4.107825191113079e-15,
+        "relevant_reference_probability_mass": 0.9999953563566157,
+        "reference_integrated_mass": 1.0000000000000029,
+        "candidate_integrated_mass": 1.0000000000000009,
+        "joint_norm_error": 3.6273206660553114e-12,
+        "ancilla_boundary_mass": 2.631357386147816e-18,
+        "grid_infidelity_change": 2.2614201233598664e-17,
+        "grid_tv_change": 2.8655621537590835e-17
+      },
+      {
+        "ancilla_cutoff": 8192,
+        "axis": "q",
+        "column": 0,
+        "outcome_tv": 1.9196744763379214e-14,
+        "weighted_conditional_infidelity": 3.3356080689836526e-16,
+        "worst_conditional_infidelity_relevant": 3.552713678800501e-15,
+        "relevant_reference_probability_mass": 0.9999953563566158,
+        "reference_integrated_mass": 0.999999999999999,
+        "candidate_integrated_mass": 1.0000000000000009,
+        "joint_norm_error": 3.630429290524262e-12,
+        "ancilla_boundary_mass": 4.636411209182695e-27,
+        "grid_infidelity_change": 5.74455220788031e-18,
+        "grid_tv_change": 5.861320441720987e-17
+      },
+      {
+        "ancilla_cutoff": 4096,
+        "axis": "q",
+        "column": 1,
+        "outcome_tv": 1.424396789174478e-09,
+        "weighted_conditional_infidelity": 3.461595575452203e-11,
+        "worst_conditional_infidelity_relevant": 1.5654059382086416e-08,
+        "relevant_reference_probability_mass": 0.9999952977951506,
+        "reference_integrated_mass": 1.0000000000000961,
+        "candidate_integrated_mass": 1.0000000000000178,
+        "joint_norm_error": 1.1196599203344704e-12,
+        "ancilla_boundary_mass": 6.13564928321326e-10,
+        "grid_infidelity_change": 3.805600040789986e-18,
+        "grid_tv_change": 1.0891708033289294e-12
+      },
+      {
+        "ancilla_cutoff": 8192,
+        "axis": "q",
+        "column": 1,
+        "outcome_tv": 6.749615905560183e-14,
+        "weighted_conditional_infidelity": 3.36851251942342e-16,
+        "worst_conditional_infidelity_relevant": 4.773959005888173e-15,
+        "relevant_reference_probability_mass": 0.9999952978023239,
+        "reference_integrated_mass": 1.0000000000000846,
+        "candidate_integrated_mass": 1.0000000000000178,
+        "joint_norm_error": 3.1044056214568627e-12,
+        "ancilla_boundary_mass": 1.6099556574518786e-20,
+        "grid_infidelity_change": 2.970936051015828e-17,
+        "grid_tv_change": 2.501433125281035e-16
+      },
+      {
+        "ancilla_cutoff": 4096,
+        "axis": "p",
+        "column": 0,
+        "outcome_tv": 4.739339338549368e-14,
+        "weighted_conditional_infidelity": 3.496373772870502e-16,
+        "worst_conditional_infidelity_relevant": 3.9968028886505635e-15,
+        "relevant_reference_probability_mass": 0.999997136245451,
+        "reference_integrated_mass": 0.9999999999999705,
+        "candidate_integrated_mass": 1.000000000000016,
+        "joint_norm_error": 3.90176779774265e-12,
+        "ancilla_boundary_mass": 2.353019204509942e-22,
+        "grid_infidelity_change": 5.4973106081971953e-17,
+        "grid_tv_change": 1.4521315269583124e-16
+      },
+      {
+        "ancilla_cutoff": 8192,
+        "axis": "p",
+        "column": 0,
+        "outcome_tv": 4.691695712675566e-14,
+        "weighted_conditional_infidelity": 3.435043881436769e-16,
+        "worst_conditional_infidelity_relevant": 4.551914400963142e-15,
+        "relevant_reference_probability_mass": 0.9999971362454511,
+        "reference_integrated_mass": 0.9999999999999625,
+        "candidate_integrated_mass": 1.000000000000016,
+        "joint_norm_error": 3.907763002075626e-12,
+        "ancilla_boundary_mass": 4.6391818128925824e-27,
+        "grid_infidelity_change": 7.68651087601556e-18,
+        "grid_tv_change": 6.595137678982833e-17
+      },
+      {
+        "ancilla_cutoff": 4096,
+        "axis": "p",
+        "column": 1,
+        "outcome_tv": 2.558021427959069e-06,
+        "weighted_conditional_infidelity": 1.0919171138750931e-07,
+        "worst_conditional_infidelity_relevant": 0.0009237388457030704,
+        "relevant_reference_probability_mass": 0.9999971225504936,
+        "reference_integrated_mass": 1.0000000000000264,
+        "candidate_integrated_mass": 1.0000000000000113,
+        "joint_norm_error": 3.779199175824033e-13,
+        "ancilla_boundary_mass": 2.003661567976152e-06,
+        "grid_infidelity_change": 3.786773287263657e-17,
+        "grid_tv_change": 1.0875192221377968e-10
+      },
+      {
+        "ancilla_cutoff": 8192,
+        "axis": "p",
+        "column": 1,
+        "outcome_tv": 1.7836530517904276e-13,
+        "weighted_conditional_infidelity": 3.234283703021368e-16,
+        "worst_conditional_infidelity_relevant": 3.9968028886505635e-15,
+        "relevant_reference_probability_mass": 0.999997144243649,
+        "reference_integrated_mass": 1.0000000000000118,
+        "candidate_integrated_mass": 1.0000000000000113,
+        "joint_norm_error": 2.862043935181191e-12,
+        "ancilla_boundary_mass": 2.557670251745972e-18,
+        "grid_infidelity_change": 4.688023082280075e-17,
+        "grid_tv_change": 4.597929622582041e-16
+      }
+    ],
+    "refinements": [
+      {
+        "ancilla_cutoff": 8192,
+        "axis": "q",
+        "column": 0,
+        "outcome_tv": 1.1619270274288627e-14,
+        "weighted_conditional_infidelity": 3.289746163798716e-16,
+        "worst_conditional_infidelity_relevant": 4.107825191113079e-15,
+        "relevant_reference_probability_mass": 0.9999953563566158,
+        "reference_integrated_mass": 0.999999999999999,
+        "candidate_integrated_mass": 1.0000000000000029,
+        "pass": true
+      },
+      {
+        "ancilla_cutoff": 8192,
+        "axis": "q",
+        "column": 1,
+        "outcome_tv": 1.424396580710979e-09,
+        "weighted_conditional_infidelity": 2.991939721295387e-11,
+        "worst_conditional_infidelity_relevant": 1.565405816084109e-08,
+        "relevant_reference_probability_mass": 0.9999952978023239,
+        "reference_integrated_mass": 1.0000000000000846,
+        "candidate_integrated_mass": 1.0000000000000961,
+        "pass": true
+      },
+      {
+        "ancilla_cutoff": 8192,
+        "axis": "p",
+        "column": 0,
+        "outcome_tv": 1.6597773952273748e-14,
+        "weighted_conditional_infidelity": 2.924208346942745e-16,
+        "worst_conditional_infidelity_relevant": 4.551914400963142e-15,
+        "relevant_reference_probability_mass": 0.9999971362454511,
+        "reference_integrated_mass": 0.9999999999999625,
+        "candidate_integrated_mass": 0.9999999999999705,
+        "pass": true
+      },
+      {
+        "ancilla_cutoff": 8192,
+        "axis": "p",
+        "column": 1,
+        "outcome_tv": 2.5580214273428974e-06,
+        "weighted_conditional_infidelity": 2.4959832768684014e-08,
+        "worst_conditional_infidelity_relevant": 0.000715724927475514,
+        "relevant_reference_probability_mass": 0.999997144243649,
+        "reference_integrated_mass": 1.0000000000000118,
+        "candidate_integrated_mass": 1.0000000000000264,
+        "pass": true
+      }
+    ],
+    "config": {
+      "states": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261123/root/archive_spot_check/nearest_finite_ancilla.npz",
+      "cycle": 8,
+      "columns": [
+        0,
+        8
+      ],
+      "data_cutoff": 96,
+      "fock_levels": null,
+      "ancilla_cutoffs": [
+        4096,
+        8192
+      ],
+      "sigma": 0.0886226925452758,
+      "radius": 120.0,
+      "dy": 0.01,
+      "coupling": 1.0,
+      "max_joint": 35000000,
+      "max_scratch_mb": 4000.0,
+      "streaming": true,
+      "chunk": 64,
+      "circuit_backend": "spectral",
+      "preflight_only": false,
+      "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/full4096_cycle8_spectral_v1",
+      "audit_only": false,
+      "inputs": {
+        "kind": "saved_states",
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261123/root/archive_spot_check/nearest_finite_ancilla.npz",
+        "sha256": "419564e205e6fcef5ed602ddce2dbebd19e12a14f4695db5979f81fcccb60e0b",
+        "key": "snapshot_cycle_8",
+        "columns": [
+          0,
+          8
+        ],
+        "original_trial_ids": [
+          0,
+          211
+        ],
+        "cardinal_input_ids": [
+          0,
+          0
+        ],
+        "mean_photon_number_per_input": [
+          196.14402200355974,
+          1892.8939145178733
+        ]
+      },
+      "reference_wave_basis": "scaled_generalized_laguerre_v1",
+      "source_hashes": {
+        "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+        "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+        "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+        "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+        "quantum/streaming_measurement.py": "2a29be80f22466028711aa721f905b8708bd2408fbb6c4b21f571c4f0cf3f55d",
+        "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258"
+      },
+      "python": "3.13.13",
+      "qutip": "5.3.1"
+    },
+    "result_sha256": "245ffa1261670943f2c48ac7fa0f0a76455ec1e309a69216d4ed50f234e01fea",
+    "receipt": {
+      "finished_utc": "2026-11-24T08:35:49.843737+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "elapsed_seconds": 513.4294607080083,
+      "peak_rss_bytes": 3757735936,
+      "status": "Completed execution",
+      "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/full4096_cycle8_spectral_v1"
+    },
+    "readback_receipt": {
+      "finished_utc": "2026-11-24T08:49:52.192563+00:00",
+      "exit_code": 0,
+      "stop_reason": null,
+      "elapsed_seconds": 618.2158400000044,
+      "peak_rss_bytes": 3255058432
+    },
+    "scope": "Two saved cycle8 Z+ inputs (representative and hottest saved state), N4096; full data dimension, q/p ideal single extractions, no new memory trajectories."
+  },
+  "uniform_reports": {
+    "g1_coarse": {
+      "complete": true,
+      "registered_final_checks_pass": false,
+      "data_cutoffs": [
+        4096,
+        5120
+      ],
+      "all_declared_lambdas": 9216,
+      "config": {
+        "data_cutoff": 5120,
+        "data_cutoffs": [
+          4096,
+          5120
+        ],
+        "ancilla_cutoffs": [
+          8192,
+          12288
+        ],
+        "sigma": 0.0886226925452758,
+        "coupling": 1.0,
+        "radius": 160.0,
+        "dy": 0.01,
+        "chunk": 128,
+        "grid_chunk": 512,
+        "max_scratch_bytes": 5368709120,
+        "reference_wave_basis": "scaled_generalized_laguerre_v1",
+        "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+        "source_hashes": {
+          "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+          "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+          "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+        },
+        "environment": {
+          "python": "3.13.13",
+          "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+          "device": "CPU",
+          "packages": {
+            "numpy": "2.5.5",
+            "scipy": "1.18.1",
+            "qutip": "5.3.1"
+          }
+        }
+      },
+      "source_result_sha256": "4842454837c2aab380369fc14663a39fc2e904d58b20b2005a4b724f3da0bf35",
+      "rows": [
+        {
+          "data_cutoff": 4096,
+          "ancilla_cutoff": 8192,
+          "finite_grid_stinespring_operator_norm": 3.713427412344844e-06,
+          "finite_grid_channel_trace_norm_upper_bound": 7.42685482469305e-06,
+          "grid_norm_sensitivity": 1.3099788045761382e-17,
+          "max_reference_mass_error": 1.7952306308188781e-12,
+          "max_candidate_mass_error": 2.930988785010413e-14,
+          "grid_mass_sensitivity": 7.549516567451064e-15,
+          "max_joint_norm_error": 2.4868995751603507e-14,
+          "max_ancilla_boundary_mass": 1.7136395825758665e-08,
+          "worst_lambda_index": 0,
+          "worst_lambda": -90.10168864485325,
+          "all_lambdas_tested": 4096,
+          "sample_checks_pass": true,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": true
+        },
+        {
+          "data_cutoff": 5120,
+          "ancilla_cutoff": 8192,
+          "finite_grid_stinespring_operator_norm": 0.0010466691433895594,
+          "finite_grid_channel_trace_norm_upper_bound": 0.0020933382867800647,
+          "grid_norm_sensitivity": 1.929879867024198e-17,
+          "max_reference_mass_error": 1.7918999617450027e-12,
+          "max_candidate_mass_error": 2.9531932455029164e-14,
+          "grid_mass_sensitivity": 9.769962616701378e-15,
+          "max_joint_norm_error": 2.5091040356528538e-14,
+          "max_ancilla_boundary_mass": 0.0001442178097087614,
+          "worst_lambda_index": 5119,
+          "worst_lambda": 100.7994421653552,
+          "all_lambdas_tested": 5120,
+          "sample_checks_pass": false,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": false
+        },
+        {
+          "data_cutoff": 4096,
+          "ancilla_cutoff": 12288,
+          "finite_grid_stinespring_operator_norm": 2.401762185475006e-12,
+          "finite_grid_channel_trace_norm_upper_bound": 4.803524370952249e-12,
+          "grid_norm_sensitivity": 1.5893763380097147e-16,
+          "max_reference_mass_error": 1.8476331575811855e-12,
+          "max_candidate_mass_error": 2.930988785010413e-14,
+          "grid_mass_sensitivity": 8.43769498715119e-15,
+          "max_joint_norm_error": 8.282263763703668e-14,
+          "max_ancilla_boundary_mass": 2.344745727373746e-25,
+          "worst_lambda_index": 4095,
+          "ancilla_refinement_operator_norm": 3.7134274099674142e-06,
+          "ancilla_refinement_grid_sensitivity": 1.8287441331220344e-18,
+          "worst_lambda": 90.10168864485286,
+          "all_lambdas_tested": 4096,
+          "sample_checks_pass": true,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": true
+        },
+        {
+          "data_cutoff": 5120,
+          "ancilla_cutoff": 12288,
+          "finite_grid_stinespring_operator_norm": 6.3703970290623295e-12,
+          "finite_grid_channel_trace_norm_upper_bound": 1.274079405813058e-11,
+          "grid_norm_sensitivity": 5.441051253450274e-16,
+          "max_reference_mass_error": 1.843636354692535e-12,
+          "max_candidate_mass_error": 2.9531932455029164e-14,
+          "grid_mass_sensitivity": 9.547918011776346e-15,
+          "max_joint_norm_error": 8.282263763703668e-14,
+          "max_ancilla_boundary_mass": 1.8514803593410558e-17,
+          "worst_lambda_index": 5119,
+          "ancilla_refinement_operator_norm": 0.0010466691433986509,
+          "ancilla_refinement_grid_sensitivity": 1.1709383462843448e-17,
+          "worst_lambda": 100.7994421653552,
+          "all_lambdas_tested": 5120,
+          "sample_checks_pass": false,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": true
+        }
+      ],
+      "scope": "Uniform EACH declared finite-data operator and discrete outcome grid. Window/grid/ancilla convergence empirical; no physical Fock-cutoff/hardware/rigorous continuum certification."
+    },
+    "g1_extended": {
+      "complete": true,
+      "registered_final_checks_pass": true,
+      "data_cutoffs": [
+        4096,
+        5120
+      ],
+      "all_declared_lambdas": 9216,
+      "config": {
+        "data_cutoff": 5120,
+        "data_cutoffs": [
+          4096,
+          5120
+        ],
+        "ancilla_cutoffs": [
+          8192,
+          12288,
+          16384
+        ],
+        "sigma": 0.0886226925452758,
+        "coupling": 1.0,
+        "radius": 160.0,
+        "dy": 0.01,
+        "chunk": 128,
+        "grid_chunk": 512,
+        "max_scratch_bytes": 5368709120,
+        "reference_wave_basis": "scaled_generalized_laguerre_v1",
+        "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+        "source_hashes": {
+          "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+          "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+          "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+        },
+        "environment": {
+          "python": "3.13.13",
+          "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+          "device": "CPU",
+          "packages": {
+            "numpy": "2.5.5",
+            "scipy": "1.18.1",
+            "qutip": "5.3.1"
+          }
+        }
+      },
+      "source_result_sha256": "464716e88d055122701b7d0933973c587b51d1055e041feea84775af3439b905",
+      "rows": [
+        {
+          "data_cutoff": 4096,
+          "ancilla_cutoff": 8192,
+          "finite_grid_stinespring_operator_norm": 3.713427412344844e-06,
+          "finite_grid_channel_trace_norm_upper_bound": 7.42685482469305e-06,
+          "grid_norm_sensitivity": 1.3099788045761382e-17,
+          "max_reference_mass_error": 1.7952306308188781e-12,
+          "max_candidate_mass_error": 2.930988785010413e-14,
+          "grid_mass_sensitivity": 7.549516567451064e-15,
+          "max_joint_norm_error": 2.4868995751603507e-14,
+          "max_ancilla_boundary_mass": 1.7136395825758665e-08,
+          "worst_lambda_index": 0,
+          "worst_lambda": -90.10168864485325,
+          "all_lambdas_tested": 4096,
+          "sample_checks_pass": true,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": true
+        },
+        {
+          "data_cutoff": 5120,
+          "ancilla_cutoff": 8192,
+          "finite_grid_stinespring_operator_norm": 0.0010466691433895594,
+          "finite_grid_channel_trace_norm_upper_bound": 0.0020933382867800647,
+          "grid_norm_sensitivity": 1.929879867024198e-17,
+          "max_reference_mass_error": 1.7918999617450027e-12,
+          "max_candidate_mass_error": 2.9531932455029164e-14,
+          "grid_mass_sensitivity": 9.769962616701378e-15,
+          "max_joint_norm_error": 2.5091040356528538e-14,
+          "max_ancilla_boundary_mass": 0.0001442178097087614,
+          "worst_lambda_index": 5119,
+          "worst_lambda": 100.7994421653552,
+          "all_lambdas_tested": 5120,
+          "sample_checks_pass": false,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": false
+        },
+        {
+          "data_cutoff": 4096,
+          "ancilla_cutoff": 12288,
+          "finite_grid_stinespring_operator_norm": 2.401762185475006e-12,
+          "finite_grid_channel_trace_norm_upper_bound": 4.803524370952249e-12,
+          "grid_norm_sensitivity": 1.5893763380097147e-16,
+          "max_reference_mass_error": 1.8476331575811855e-12,
+          "max_candidate_mass_error": 2.930988785010413e-14,
+          "grid_mass_sensitivity": 8.43769498715119e-15,
+          "max_joint_norm_error": 8.282263763703668e-14,
+          "max_ancilla_boundary_mass": 2.344745727373746e-25,
+          "worst_lambda_index": 4095,
+          "ancilla_refinement_operator_norm": 3.7134274099674142e-06,
+          "ancilla_refinement_grid_sensitivity": 1.8287441331220344e-18,
+          "worst_lambda": 90.10168864485286,
+          "all_lambdas_tested": 4096,
+          "sample_checks_pass": true,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": true
+        },
+        {
+          "data_cutoff": 5120,
+          "ancilla_cutoff": 12288,
+          "finite_grid_stinespring_operator_norm": 6.3703970290623295e-12,
+          "finite_grid_channel_trace_norm_upper_bound": 1.274079405813058e-11,
+          "grid_norm_sensitivity": 5.441051253450274e-16,
+          "max_reference_mass_error": 1.843636354692535e-12,
+          "max_candidate_mass_error": 2.9531932455029164e-14,
+          "grid_mass_sensitivity": 9.547918011776346e-15,
+          "max_joint_norm_error": 8.282263763703668e-14,
+          "max_ancilla_boundary_mass": 1.8514803593410558e-17,
+          "worst_lambda_index": 5119,
+          "ancilla_refinement_operator_norm": 0.0010466691433986509,
+          "ancilla_refinement_grid_sensitivity": 1.1709383462843448e-17,
+          "worst_lambda": 100.7994421653552,
+          "all_lambdas_tested": 5120,
+          "sample_checks_pass": false,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": true
+        },
+        {
+          "data_cutoff": 4096,
+          "ancilla_cutoff": 16384,
+          "finite_grid_stinespring_operator_norm": 3.482941424889416e-12,
+          "finite_grid_channel_trace_norm_upper_bound": 6.965882849781975e-12,
+          "grid_norm_sensitivity": 3.341162042507051e-16,
+          "max_reference_mass_error": 1.7885692926711272e-12,
+          "max_candidate_mass_error": 2.930988785010413e-14,
+          "grid_mass_sensitivity": 7.771561172376096e-15,
+          "max_joint_norm_error": 4.951594689828198e-14,
+          "max_ancilla_boundary_mass": 2.542410117773715e-26,
+          "worst_lambda_index": 4095,
+          "ancilla_refinement_operator_norm": 2.101874267586771e-12,
+          "ancilla_refinement_grid_sensitivity": 1.505742413482347e-18,
+          "worst_lambda": 90.10168864485286,
+          "all_lambdas_tested": 4096,
+          "sample_checks_pass": true,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": true
+        },
+        {
+          "data_cutoff": 5120,
+          "ancilla_cutoff": 16384,
+          "finite_grid_stinespring_operator_norm": 4.674645812604424e-12,
+          "finite_grid_channel_trace_norm_upper_bound": 9.349291625213058e-12,
+          "grid_norm_sensitivity": 1.0029816159082717e-16,
+          "max_reference_mass_error": 1.7854606682021767e-12,
+          "max_candidate_mass_error": 2.9531932455029164e-14,
+          "grid_mass_sensitivity": 1.021405182655144e-14,
+          "max_joint_norm_error": 4.951594689828198e-14,
+          "max_ancilla_boundary_mass": 2.5747453532813415e-26,
+          "worst_lambda_index": 5117,
+          "ancilla_refinement_operator_norm": 6.2713103894240186e-12,
+          "ancilla_refinement_grid_sensitivity": 3.0662749451025274e-18,
+          "worst_lambda": 100.25668679989978,
+          "all_lambdas_tested": 5120,
+          "sample_checks_pass": true,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": true
+        }
+      ],
+      "scope": "Uniform EACH declared finite-data operator and discrete outcome grid. Window/grid/ancilla convergence empirical; no physical Fock-cutoff/hardware/rigorous continuum certification."
+    },
+    "g1p01": {
+      "complete": true,
+      "registered_final_checks_pass": true,
+      "data_cutoffs": [
+        4096,
+        5120
+      ],
+      "all_declared_lambdas": 9216,
+      "config": {
+        "data_cutoff": 5120,
+        "data_cutoffs": [
+          4096,
+          5120
+        ],
+        "ancilla_cutoffs": [
+          12288,
+          16384
+        ],
+        "sigma": 0.0886226925452758,
+        "coupling": 1.01,
+        "radius": 160.0,
+        "dy": 0.01,
+        "chunk": 128,
+        "grid_chunk": 512,
+        "max_scratch_bytes": 5368709120,
+        "reference_wave_basis": "scaled_generalized_laguerre_v1",
+        "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+        "source_hashes": {
+          "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+          "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+          "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+        },
+        "environment": {
+          "python": "3.13.13",
+          "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+          "device": "CPU",
+          "packages": {
+            "numpy": "2.5.5",
+            "scipy": "1.18.1",
+            "qutip": "5.3.1"
+          }
+        }
+      },
+      "source_result_sha256": "368d292074f81c0fda6fffd713f1cfae2bef827f617c99ba636a356407736a94",
+      "rows": [
+        {
+          "data_cutoff": 4096,
+          "ancilla_cutoff": 12288,
+          "finite_grid_stinespring_operator_norm": 2.4102336714812787e-12,
+          "finite_grid_channel_trace_norm_upper_bound": 4.8204673429647926e-12,
+          "grid_norm_sensitivity": 1.9249524134913747e-16,
+          "max_reference_mass_error": 1.8385293287792592e-12,
+          "max_candidate_mass_error": 2.919886554764162e-14,
+          "grid_mass_sensitivity": 8.215650382226158e-15,
+          "max_joint_norm_error": 8.282263763703668e-14,
+          "max_ancilla_boundary_mass": 6.169126334193752e-25,
+          "worst_lambda_index": 4092,
+          "worst_lambda": 89.31388793951604,
+          "all_lambdas_tested": 4096,
+          "sample_checks_pass": true,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": true
+        },
+        {
+          "data_cutoff": 5120,
+          "ancilla_cutoff": 12288,
+          "finite_grid_stinespring_operator_norm": 2.1869843014168707e-11,
+          "finite_grid_channel_trace_norm_upper_bound": 4.373968602835777e-11,
+          "grid_norm_sensitivity": 1.812455572028526e-16,
+          "max_reference_mass_error": 1.8463008899516353e-12,
+          "max_candidate_mass_error": 2.930988785010413e-14,
+          "grid_mass_sensitivity": 9.992007221626409e-15,
+          "max_joint_norm_error": 8.282263763703668e-14,
+          "max_ancilla_boundary_mass": 3.397612542324813e-17,
+          "worst_lambda_index": 5119,
+          "worst_lambda": 100.7994421653552,
+          "all_lambdas_tested": 5120,
+          "sample_checks_pass": true,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": true
+        },
+        {
+          "data_cutoff": 4096,
+          "ancilla_cutoff": 16384,
+          "finite_grid_stinespring_operator_norm": 3.5391887604843407e-12,
+          "finite_grid_channel_trace_norm_upper_bound": 7.0783775209718576e-12,
+          "grid_norm_sensitivity": 4.803461911032984e-16,
+          "max_reference_mass_error": 1.779687508474126e-12,
+          "max_candidate_mass_error": 2.919886554764162e-14,
+          "grid_mass_sensitivity": 8.215650382226158e-15,
+          "max_joint_norm_error": 4.951594689828198e-14,
+          "max_ancilla_boundary_mass": 2.538545926776658e-26,
+          "worst_lambda_index": 4095,
+          "ancilla_refinement_operator_norm": 2.195178228858062e-12,
+          "ancilla_refinement_grid_sensitivity": 5.9206336311983265e-18,
+          "worst_lambda": 90.10168864485286,
+          "all_lambdas_tested": 4096,
+          "sample_checks_pass": true,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": true
+        },
+        {
+          "data_cutoff": 5120,
+          "ancilla_cutoff": 16384,
+          "finite_grid_stinespring_operator_norm": 4.7316373358061424e-12,
+          "finite_grid_channel_trace_norm_upper_bound": 9.46327467161655e-12,
+          "grid_norm_sensitivity": 1.5693213382891048e-15,
+          "max_reference_mass_error": 1.786792935831727e-12,
+          "max_candidate_mass_error": 2.930988785010413e-14,
+          "grid_mass_sensitivity": 9.992007221626409e-15,
+          "max_joint_norm_error": 4.929390229335695e-14,
+          "max_ancilla_boundary_mass": 2.54654899796664e-26,
+          "worst_lambda_index": 5119,
+          "ancilla_refinement_operator_norm": 2.186795887212473e-11,
+          "ancilla_refinement_grid_sensitivity": 4.5669774597997914e-18,
+          "worst_lambda": 100.7994421653552,
+          "all_lambdas_tested": 5120,
+          "sample_checks_pass": true,
+          "direct_numerical_checks_without_preceding_ancillary_refinement": true
+        }
+      ],
+      "scope": "Uniform EACH declared finite-data operator and discrete outcome grid. Window/grid/ancilla convergence empirical; no physical Fock-cutoff/hardware/rigorous continuum certification."
+    }
+  },
+  "g1_fine_pair_readback_audit": {
+    "completed_utc": "2026-11-24T09:19:46.862357+00:00",
+    "audit_complete": true,
+    "pass": true,
+    "fine_ancilla_pair": [
+      12288,
+      16384
+    ],
+    "data_cutoffs": [
+      4096,
+      5120
+    ],
+    "all_declared_lambdas": 9216,
+    "rows": [
+      {
+        "data_cutoff": 4096,
+        "ancilla_cutoff": 12288,
+        "all_lambdas_tested": 4096,
+        "refinement_from": null,
+        "finite_grid_stinespring_operator_norm": 2.401762185475006e-12,
+        "finite_grid_channel_trace_norm_upper_bound": 4.803524370952249e-12,
+        "grid_norm_sensitivity": 1.5893763380097147e-16,
+        "max_reference_mass_error": 1.8476331575811855e-12,
+        "max_candidate_mass_error": 2.930988785010413e-14,
+        "grid_mass_sensitivity": 8.43769498715119e-15,
+        "max_joint_norm_error": 8.282263763703668e-14,
+        "max_ancilla_boundary_mass": 2.344745727373746e-25,
+        "worst_lambda_index": 4095,
+        "secondary_grid_diagnostics": {
+          "max_per_lambda_grid_norm_sensitivity": 2.096856403196196e-15,
+          "max_per_lambda_reference_mass_sensitivity": 8.43769498715119e-15,
+          "max_per_lambda_candidate_mass_sensitivity": 4.440892098500626e-15
+        },
+        "pass": true
+      },
+      {
+        "data_cutoff": 5120,
+        "ancilla_cutoff": 12288,
+        "all_lambdas_tested": 5120,
+        "refinement_from": null,
+        "finite_grid_stinespring_operator_norm": 6.3703970290623295e-12,
+        "finite_grid_channel_trace_norm_upper_bound": 1.274079405813058e-11,
+        "grid_norm_sensitivity": 5.441051253450274e-16,
+        "max_reference_mass_error": 1.843636354692535e-12,
+        "max_candidate_mass_error": 2.9531932455029164e-14,
+        "grid_mass_sensitivity": 9.547918011776346e-15,
+        "max_joint_norm_error": 8.282263763703668e-14,
+        "max_ancilla_boundary_mass": 1.8514803593410558e-17,
+        "worst_lambda_index": 5119,
+        "secondary_grid_diagnostics": {
+          "max_per_lambda_grid_norm_sensitivity": 3.2896273193533126e-15,
+          "max_per_lambda_reference_mass_sensitivity": 9.547918011776346e-15,
+          "max_per_lambda_candidate_mass_sensitivity": 4.6629367034256575e-15
+        },
+        "pass": true
+      },
+      {
+        "data_cutoff": 4096,
+        "ancilla_cutoff": 16384,
+        "all_lambdas_tested": 4096,
+        "refinement_from": 12288,
+        "finite_grid_stinespring_operator_norm": 3.482941424889416e-12,
+        "finite_grid_channel_trace_norm_upper_bound": 6.965882849781975e-12,
+        "grid_norm_sensitivity": 3.341162042507051e-16,
+        "max_reference_mass_error": 1.7885692926711272e-12,
+        "max_candidate_mass_error": 2.930988785010413e-14,
+        "grid_mass_sensitivity": 7.771561172376096e-15,
+        "max_joint_norm_error": 4.951594689828198e-14,
+        "max_ancilla_boundary_mass": 2.542410117773715e-26,
+        "worst_lambda_index": 4095,
+        "ancilla_refinement_operator_norm": 2.101874267586771e-12,
+        "ancilla_refinement_grid_sensitivity": 1.505742413482347e-18,
+        "secondary_grid_diagnostics": {
+          "max_per_lambda_grid_norm_sensitivity": 1.4125200965407135e-15,
+          "max_per_lambda_reference_mass_sensitivity": 7.771561172376096e-15,
+          "max_per_lambda_candidate_mass_sensitivity": 4.440892098500626e-15,
+          "max_per_lambda_refinement_grid_norm_sensitivity": 1.0778531050918307e-16
+        },
+        "pass": true
+      },
+      {
+        "data_cutoff": 5120,
+        "ancilla_cutoff": 16384,
+        "all_lambdas_tested": 5120,
+        "refinement_from": 12288,
+        "finite_grid_stinespring_operator_norm": 4.674645812604424e-12,
+        "finite_grid_channel_trace_norm_upper_bound": 9.349291625213058e-12,
+        "grid_norm_sensitivity": 1.0029816159082717e-16,
+        "max_reference_mass_error": 1.7854606682021767e-12,
+        "max_candidate_mass_error": 2.9531932455029164e-14,
+        "grid_mass_sensitivity": 1.021405182655144e-14,
+        "max_joint_norm_error": 4.951594689828198e-14,
+        "max_ancilla_boundary_mass": 2.5747453532813415e-26,
+        "worst_lambda_index": 5117,
+        "ancilla_refinement_operator_norm": 6.2713103894240186e-12,
+        "ancilla_refinement_grid_sensitivity": 3.0662749451025274e-18,
+        "secondary_grid_diagnostics": {
+          "max_per_lambda_grid_norm_sensitivity": 2.080674812700049e-15,
+          "max_per_lambda_reference_mass_sensitivity": 1.021405182655144e-14,
+          "max_per_lambda_candidate_mass_sensitivity": 4.6629367034256575e-15,
+          "max_per_lambda_refinement_grid_norm_sensitivity": 9.042605082805161e-17
+        },
+        "pass": true
+      }
+    ],
+    "source_result": "results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_extended_v1/result.json",
+    "source_result_sha256": "464716e88d055122701b7d0933973c587b51d1055e041feea84775af3439b905",
+    "source_config": {
+      "data_cutoff": 5120,
+      "data_cutoffs": [
+        4096,
+        5120
+      ],
+      "ancilla_cutoffs": [
+        8192,
+        12288,
+        16384
+      ],
+      "sigma": 0.0886226925452758,
+      "coupling": 1.0,
+      "radius": 160.0,
+      "dy": 0.01,
+      "chunk": 128,
+      "grid_chunk": 512,
+      "max_scratch_bytes": 5368709120,
+      "reference_wave_basis": "scaled_generalized_laguerre_v1",
+      "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+      "source_hashes": {
+        "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+        "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+        "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+        "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+        "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+      },
+      "environment": {
+        "python": "3.13.13",
+        "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+        "device": "CPU",
+        "packages": {
+          "numpy": "2.5.5",
+          "scipy": "1.18.1",
+          "qutip": "5.3.1"
+        }
+      }
+    },
+    "coarse_evidence_retained": true,
+    "coarse_scope": "Any lower-level refinement to8192 remains in the original source record; this audit recomputes BOTH finest levels primarychecks and their mutual refinement, without altering parent evidence.",
+    "classification": "derived sealed-readback numerical audit; no fresh physical evolution",
+    "secondary_diagnostic_status": "Posthoc source-directed per-lambda grid sensitivity diagnostic requested during audit; original registered numerical acceptance criteria unchanged.",
+    "scope": "Uniform EACH declared finite-data operator and discrete outcome grid. Window/grid/ancilla convergence empirical; no physical Fock-cutoff/hardware/rigorous continuum certification.",
+    "audit_script_sha256": "ad6d59fe0d9f34e5dc09b47796fff14857f9155166e1312b00ef6fc81ba69096"
+  },
+  "g1p01_fine_pair_readback_audit": {
+    "completed_utc": "2026-11-24T09:41:22.096440+00:00",
+    "audit_complete": true,
+    "pass": true,
+    "fine_ancilla_pair": [
+      12288,
+      16384
+    ],
+    "data_cutoffs": [
+      4096,
+      5120
+    ],
+    "all_declared_lambdas": 9216,
+    "rows": [
+      {
+        "data_cutoff": 4096,
+        "ancilla_cutoff": 12288,
+        "all_lambdas_tested": 4096,
+        "refinement_from": null,
+        "finite_grid_stinespring_operator_norm": 2.4102336714812787e-12,
+        "finite_grid_channel_trace_norm_upper_bound": 4.8204673429647926e-12,
+        "grid_norm_sensitivity": 1.9249524134913747e-16,
+        "max_reference_mass_error": 1.8385293287792592e-12,
+        "max_candidate_mass_error": 2.919886554764162e-14,
+        "grid_mass_sensitivity": 8.215650382226158e-15,
+        "max_joint_norm_error": 8.282263763703668e-14,
+        "max_ancilla_boundary_mass": 6.169126334193752e-25,
+        "worst_lambda_index": 4092,
+        "secondary_grid_diagnostics": {
+          "max_per_lambda_grid_norm_sensitivity": 2.049166290028776e-15,
+          "max_per_lambda_reference_mass_sensitivity": 8.215650382226158e-15,
+          "max_per_lambda_candidate_mass_sensitivity": 4.6629367034256575e-15
+        },
+        "pass": true
+      },
+      {
+        "data_cutoff": 5120,
+        "ancilla_cutoff": 12288,
+        "all_lambdas_tested": 5120,
+        "refinement_from": null,
+        "finite_grid_stinespring_operator_norm": 2.1869843014168707e-11,
+        "finite_grid_channel_trace_norm_upper_bound": 4.373968602835777e-11,
+        "grid_norm_sensitivity": 1.812455572028526e-16,
+        "max_reference_mass_error": 1.8463008899516353e-12,
+        "max_candidate_mass_error": 2.930988785010413e-14,
+        "grid_mass_sensitivity": 9.992007221626409e-15,
+        "max_joint_norm_error": 8.282263763703668e-14,
+        "max_ancilla_boundary_mass": 3.397612542324813e-17,
+        "worst_lambda_index": 5119,
+        "secondary_grid_diagnostics": {
+          "max_per_lambda_grid_norm_sensitivity": 3.1672859747770215e-15,
+          "max_per_lambda_reference_mass_sensitivity": 9.992007221626409e-15,
+          "max_per_lambda_candidate_mass_sensitivity": 4.440892098500626e-15
+        },
+        "pass": true
+      },
+      {
+        "data_cutoff": 4096,
+        "ancilla_cutoff": 16384,
+        "all_lambdas_tested": 4096,
+        "refinement_from": 12288,
+        "finite_grid_stinespring_operator_norm": 3.5391887604843407e-12,
+        "finite_grid_channel_trace_norm_upper_bound": 7.0783775209718576e-12,
+        "grid_norm_sensitivity": 4.803461911032984e-16,
+        "max_reference_mass_error": 1.779687508474126e-12,
+        "max_candidate_mass_error": 2.919886554764162e-14,
+        "grid_mass_sensitivity": 8.215650382226158e-15,
+        "max_joint_norm_error": 4.951594689828198e-14,
+        "max_ancilla_boundary_mass": 2.538545926776658e-26,
+        "worst_lambda_index": 4095,
+        "ancilla_refinement_operator_norm": 2.195178228858062e-12,
+        "ancilla_refinement_grid_sensitivity": 5.9206336311983265e-18,
+        "secondary_grid_diagnostics": {
+          "max_per_lambda_grid_norm_sensitivity": 1.4333639260709349e-15,
+          "max_per_lambda_reference_mass_sensitivity": 8.215650382226158e-15,
+          "max_per_lambda_candidate_mass_sensitivity": 4.6629367034256575e-15,
+          "max_per_lambda_refinement_grid_norm_sensitivity": 9.504526587888798e-17
+        },
+        "pass": true
+      },
+      {
+        "data_cutoff": 5120,
+        "ancilla_cutoff": 16384,
+        "all_lambdas_tested": 5120,
+        "refinement_from": 12288,
+        "finite_grid_stinespring_operator_norm": 4.7316373358061424e-12,
+        "finite_grid_channel_trace_norm_upper_bound": 9.46327467161655e-12,
+        "grid_norm_sensitivity": 1.5693213382891048e-15,
+        "max_reference_mass_error": 1.786792935831727e-12,
+        "max_candidate_mass_error": 2.930988785010413e-14,
+        "grid_mass_sensitivity": 9.992007221626409e-15,
+        "max_joint_norm_error": 4.929390229335695e-14,
+        "max_ancilla_boundary_mass": 2.54654899796664e-26,
+        "worst_lambda_index": 5119,
+        "ancilla_refinement_operator_norm": 2.186795887212473e-11,
+        "ancilla_refinement_grid_sensitivity": 4.5669774597997914e-18,
+        "secondary_grid_diagnostics": {
+          "max_per_lambda_grid_norm_sensitivity": 2.445935827162448e-15,
+          "max_per_lambda_reference_mass_sensitivity": 9.992007221626409e-15,
+          "max_per_lambda_candidate_mass_sensitivity": 4.440892098500626e-15,
+          "max_per_lambda_refinement_grid_norm_sensitivity": 8.775595805156051e-17
+        },
+        "pass": true
+      }
+    ],
+    "source_result": "results/simulator_accuracy_completion/20261124/measurement/uniform_gain1p01_union_v1/result.json",
+    "source_result_sha256": "368d292074f81c0fda6fffd713f1cfae2bef827f617c99ba636a356407736a94",
+    "source_config": {
+      "data_cutoff": 5120,
+      "data_cutoffs": [
+        4096,
+        5120
+      ],
+      "ancilla_cutoffs": [
+        12288,
+        16384
+      ],
+      "sigma": 0.0886226925452758,
+      "coupling": 1.01,
+      "radius": 160.0,
+      "dy": 0.01,
+      "chunk": 128,
+      "grid_chunk": 512,
+      "max_scratch_bytes": 5368709120,
+      "reference_wave_basis": "scaled_generalized_laguerre_v1",
+      "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+      "source_hashes": {
+        "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+        "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+        "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+        "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+        "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+      },
+      "environment": {
+        "python": "3.13.13",
+        "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+        "device": "CPU",
+        "packages": {
+          "numpy": "2.5.5",
+          "scipy": "1.18.1",
+          "qutip": "5.3.1"
+        }
+      }
+    },
+    "coarse_evidence_retained": true,
+    "coarse_scope": "Any lower-level refinement to8192 remains in the original source record; this audit recomputes BOTH finest levels primarychecks and their mutual refinement, without altering parent evidence.",
+    "classification": "derived sealed-readback numerical audit; no fresh physical evolution",
+    "secondary_diagnostic_status": "Posthoc source-directed per-lambda grid sensitivity diagnostic requested during audit; original registered numerical acceptance criteria unchanged.",
+    "scope": "Uniform EACH declared finite-data operator and discrete outcome grid. Window/grid/ancilla convergence empirical; no physical Fock-cutoff/hardware/rigorous continuum certification.",
+    "audit_script_sha256": "ad6d59fe0d9f34e5dc09b47796fff14857f9155166e1312b00ef6fc81ba69096"
+  },
+  "g1_fine_pair_readback_receipt": {
+    "finished_utc": "2026-11-24T09:19:47.411060+00:00",
+    "exit_code": 0,
+    "stop_reason": null,
+    "elapsed_seconds": 670.5266130410018,
+    "peak_sampled_rss_bytes": 3319758848,
+    "rss_poll_seconds": 2,
+    "rss_scope": "Sampled trigger, not kernel-enforced peak bound; transient sampling overshoot possible."
+  },
+  "g1p01_fine_pair_readback_receipt": {
+    "finished_utc": "2026-11-24T09:41:23.450116+00:00",
+    "exit_code": 0,
+    "stop_reason": null,
+    "elapsed_seconds": 446.82611558299686,
+    "peak_sampled_rss_bytes": 3506585600,
+    "rss_poll_seconds": 2,
+    "rss_scope": "Sampled trigger, not kernel-enforced peak bound; transient sampling overshoot possible."
+  },
+  "g1_uniform_receipt": {
+    "finished_utc": "2026-11-24T09:07:47.970291+00:00",
+    "elapsed_seconds": 1064.5037112080026,
+    "peak_sampled_rss_bytes": 3277897728,
+    "rss_sampling_seconds": 2,
+    "rss_limit_scope": "Sampled trigger, not kernel-enforced bound",
+    "stop_reason": null,
+    "attempts": [
+      {
+        "phase": "operator_union_base",
+        "exit_code": 0,
+        "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_v1",
+        "elapsed_total_seconds": 511.54537220801285,
+        "stop_reason": null
+      },
+      {
+        "phase": "operator_union_extended",
+        "exit_code": 0,
+        "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_extended_v1",
+        "elapsed_total_seconds": 1064.5025929160038,
+        "stop_reason": null
+      }
+    ],
+    "last_output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_extended_v1",
+    "last_exit_code": 0
+  },
+  "g1p01_receipt": {
+    "finished_utc": "2026-11-24T09:33:26.755970+00:00",
+    "exit_code": 0,
+    "stop_reason": null,
+    "elapsed_seconds": 741.0922329169989,
+    "peak_sampled_rss_bytes": 3358605312,
+    "rss_poll_seconds": 2,
+    "rss_scope": "Sampled trigger, not kernel-enforced peak bound; transient sampling overshoot possible."
+  },
+  "failed_or_interrupted_infrastructure": {
+    "initial_ode_receipt": {
+      "finished_utc": "2026-11-24T08:19:51.700651+00:00",
+      "exit_code": -15,
+      "stop_reason": null,
+      "elapsed_seconds": 28.18674474999716,
+      "peak_rss_bytes": 2972827648,
+      "status": "Interrupted/inconclusive",
+      "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/full4096_cycle8_stage_a"
+    },
+    "second_ode_receipt": {
+      "finished_utc": "2026-11-24T08:24:19.435136+00:00",
+      "exit_code": -15,
+      "stop_reason": null,
+      "elapsed_seconds": 191.60308904200792,
+      "peak_rss_bytes": 2772942848,
+      "status": "Interrupted/inconclusive",
+      "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/full4096_cycle8_stage_a_v2"
+    },
+    "initial_sample_audit_receipt": {
+      "finished_utc": "2026-11-24T08:37:27.551381+00:00",
+      "exit_code": 1,
+      "stop_reason": null,
+      "elapsed_seconds": 2.0205983750056475,
+      "peak_rss_bytes": 8126464
+    },
+    "explanation": "Initial28.19s ODE attempt interrupted to add checkpointing; second191.60s stopped after high-order reference defect found, without a completed joint. First readback wrapper followed venv symlink and failed import before compute; corrected lexical-venv attempt passed."
+  },
+  "limits": [
+    "Uniform bounds use complete declared finite-data spectra and an explicit finite outcome grid. Window/grid/ancilla convergence is empirical, not a rigorous continuum or hardware certificate.",
+    "No claims about unresolved physical Fock-cutoff confidence intervals, finite-duration dissipation, hardware calibration or unrun full coverage/rare-event studies.",
+    "RSS peaks are sampled every2seconds; they are not kernel-enforced instantaneous bounds.",
+    "Any g1.01 status must come from its own fresh physical transfers and audit, not inferred from g1."
+  ]
+}

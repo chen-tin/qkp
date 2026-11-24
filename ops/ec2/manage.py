@@ -172,8 +172,30 @@ exec .venv/bin/python -u ops/ec2/worker.py --run-id {run} --bucket {bucket}
 def fetch(folder):
     folder=folder.resolve();spec=json.loads((folder/"manifest.json").read_text())
     destination=folder/"metrics";destination.mkdir(exist_ok=True)
-    aws(spec,"s3","sync",f's3://{spec["bucket"]}/{spec["run_id"]}/metrics/',str(destination),"--no-progress","--only-show-errors")
+    aws(spec,"s3","sync",f's3://{spec["bucket"]}/{spec["run_id"]}/metrics/',str(destination),"--exact-timestamps","--no-progress","--only-show-errors")
+    observe(folder, spec)
     return destination
+
+
+def observe(folder, spec=None):
+    """Refresh a separate local status view without altering archived metrics."""
+    # This file is also invoked directly as a script from the repository root.
+    import sys
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from ops.ec2.monitoring import read_archived_status, write_observation
+    folder=Path(folder)
+    spec=spec or json.loads((folder/"manifest.json").read_text())
+    instance=spec["resources"]["instance_id"]
+    state="unknown";error=None
+    try:
+        data=aws(spec,"ec2","describe-instances","--instance-ids",instance)["Reservations"][0]["Instances"][0]
+        state=data["State"]["Name"]
+    except (RuntimeError, KeyError, IndexError, ValueError) as exc:
+        error=str(exc)
+    report=write_observation(folder,read_archived_status(folder),state,query_error=error)
+    report["instance_id"]=instance
+    return report
 
 
 def main():
@@ -194,9 +216,14 @@ def main():
         if args.action=="stop":
             print(json.dumps(aws(spec,"ec2","stop-instances","--instance-ids",instance),indent=2))
         else:
-            data=aws(spec,"ec2","describe-instances","--instance-ids",instance)["Reservations"][0]["Instances"][0]
-            managed=aws(spec,"ssm","describe-instance-information","--filters",f"Key=InstanceIds,Values={instance}")["InstanceInformationList"]
-            print(json.dumps({"instance_id":instance,"state":data["State"]["Name"],"ssm_status":managed[0]["PingStatus"] if managed else "not_registered"},indent=2))
+            report=observe(args.folder,spec)
+            report["state"]=report["instance_state"]
+            try:
+                managed=aws(spec,"ssm","describe-instance-information","--filters",f"Key=InstanceIds,Values={instance}")["InstanceInformationList"]
+                report["ssm_status"]=managed[0]["PingStatus"] if managed else "not_registered"
+            except RuntimeError as exc:
+                report["ssm_status"]="unknown";report["ssm_query_error"]=str(exc)
+            print(json.dumps(report,indent=2))
 
 
 if __name__=="__main__":main()

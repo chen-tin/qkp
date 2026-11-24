@@ -1,0 +1,986 @@
+{
+  "schema": 1,
+  "classification": "planned_benchmark",
+  "preset": "finite_gate",
+  "jobs": [
+    {
+      "point": "broad_control",
+      "variant": "ideal",
+      "chunk": 0,
+      "base_seed": 26112001,
+      "cutoff": 128,
+      "config": {
+        "schema": 2,
+        "profile": "quality_finite_gate",
+        "seed": 4138287304,
+        "data_delta": 0.3,
+        "per_state": 2,
+        "rounds": 2,
+        "measurement_resource": "smooth",
+        "dx": null,
+        "logical_bins": 192,
+        "cutoffs": [
+          128
+        ],
+        "points": {
+          "broad_control": [
+            0.1,
+            0.28209479177387814,
+            0.3
+          ]
+        },
+        "decoders": [
+          "nearest"
+        ],
+        "physics": {
+          "cycle_time": 1.0,
+          "gate_duration": 0.0,
+          "feedback_delay": 0.0,
+          "loss_rate": 0.0,
+          "dephasing_rate": 0.0,
+          "detector_efficiency": 1.0,
+          "detector_std": 0.0,
+          "coupling": 1.0,
+          "feedback_gain": 1.0,
+          "control_rotation": 0.0,
+          "cooling_transmissivity": 1.0,
+          "displacement_provenance": "independent",
+          "gate_backend": "lumped",
+          "gate_ancilla_cutoff": 512,
+          "ancilla_loss_rate": 0.0,
+          "ancilla_dephasing_rate": 0.0,
+          "homodyne_radius": 60.0,
+          "homodyne_dy": 0.01,
+          "max_joint_dimension": 2000000,
+          "max_gate_scratch_mb": 512.0
+        },
+        "noise_extension": {},
+        "gates": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "score_snapshot_per_state": 2,
+        "hot_snapshot_per_state": 2,
+        "snapshot_cycles": [
+          0,
+          1,
+          2
+        ],
+        "source_hashes": {
+          "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+          "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+          "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+          "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+          "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+          "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+          "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+          "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+          "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+          "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+          "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+          "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+          "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+          "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+          "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+          "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+          "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+          "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+          "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+          "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+          "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+          "quantum/coupled_measurement.py": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8",
+          "experiments/local_gkp_gate_pilot.py": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c"
+        },
+        "checkpoint_sha256": null,
+        "measurement_sampler": {
+          "kind": "direct_conditional_cdf_experimental",
+          "uniform_index": 1,
+          "parameters": {
+            "max_step": 0.00025,
+            "tolerance": 1e-10,
+            "shot_batch": 64,
+            "node_chunk": 256,
+            "tail_probability": 1e-15,
+            "float_budget": 5e-12,
+            "max_table_bytes": 67108864
+          },
+          "scope": "Same marginal conditional instrument; new cross-cutoff and replay common-random-number coupling. Legacy mixture uses auxiliaryuniform0+resourceuniform1; directCDFusesonlyuniform1 forphysicaloutcome. Explicitqutipbranch unchanged."
+        }
+      },
+      "id": "480e3a6cc36ae2b9"
+    },
+    {
+      "point": "broad_control",
+      "variant": "ideal",
+      "chunk": 0,
+      "base_seed": 26112001,
+      "cutoff": 192,
+      "config": {
+        "schema": 2,
+        "profile": "quality_finite_gate",
+        "seed": 4138287304,
+        "data_delta": 0.3,
+        "per_state": 2,
+        "rounds": 2,
+        "measurement_resource": "smooth",
+        "dx": null,
+        "logical_bins": 192,
+        "cutoffs": [
+          192
+        ],
+        "points": {
+          "broad_control": [
+            0.1,
+            0.28209479177387814,
+            0.3
+          ]
+        },
+        "decoders": [
+          "nearest"
+        ],
+        "physics": {
+          "cycle_time": 1.0,
+          "gate_duration": 0.0,
+          "feedback_delay": 0.0,
+          "loss_rate": 0.0,
+          "dephasing_rate": 0.0,
+          "detector_efficiency": 1.0,
+          "detector_std": 0.0,
+          "coupling": 1.0,
+          "feedback_gain": 1.0,
+          "control_rotation": 0.0,
+          "cooling_transmissivity": 1.0,
+          "displacement_provenance": "independent",
+          "gate_backend": "lumped",
+          "gate_ancilla_cutoff": 512,
+          "ancilla_loss_rate": 0.0,
+          "ancilla_dephasing_rate": 0.0,
+          "homodyne_radius": 60.0,
+          "homodyne_dy": 0.01,
+          "max_joint_dimension": 2000000,
+          "max_gate_scratch_mb": 512.0
+        },
+        "noise_extension": {},
+        "gates": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "score_snapshot_per_state": 2,
+        "hot_snapshot_per_state": 2,
+        "snapshot_cycles": [
+          0,
+          1,
+          2
+        ],
+        "source_hashes": {
+          "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+          "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+          "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+          "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+          "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+          "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+          "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+          "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+          "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+          "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+          "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+          "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+          "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+          "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+          "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+          "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+          "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+          "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+          "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+          "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+          "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+          "quantum/coupled_measurement.py": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8",
+          "experiments/local_gkp_gate_pilot.py": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c"
+        },
+        "checkpoint_sha256": null,
+        "measurement_sampler": {
+          "kind": "direct_conditional_cdf_experimental",
+          "uniform_index": 1,
+          "parameters": {
+            "max_step": 0.00025,
+            "tolerance": 1e-10,
+            "shot_batch": 64,
+            "node_chunk": 256,
+            "tail_probability": 1e-15,
+            "float_budget": 5e-12,
+            "max_table_bytes": 67108864
+          },
+          "scope": "Same marginal conditional instrument; new cross-cutoff and replay common-random-number coupling. Legacy mixture uses auxiliaryuniform0+resourceuniform1; directCDFusesonlyuniform1 forphysicaloutcome. Explicitqutipbranch unchanged."
+        }
+      },
+      "id": "b0bb4f40cd859d32"
+    },
+    {
+      "point": "broad_control",
+      "variant": "lumped",
+      "chunk": 0,
+      "base_seed": 26112001,
+      "cutoff": 128,
+      "config": {
+        "schema": 2,
+        "profile": "quality_finite_gate",
+        "seed": 4138287304,
+        "data_delta": 0.3,
+        "per_state": 2,
+        "rounds": 2,
+        "measurement_resource": "smooth",
+        "dx": null,
+        "logical_bins": 192,
+        "cutoffs": [
+          128
+        ],
+        "points": {
+          "broad_control": [
+            0.1,
+            0.28209479177387814,
+            0.3
+          ]
+        },
+        "decoders": [
+          "nearest"
+        ],
+        "physics": {
+          "cycle_time": 1.0,
+          "gate_duration": 0.1,
+          "feedback_delay": 0.0,
+          "loss_rate": 0.01,
+          "dephasing_rate": 0.001,
+          "detector_efficiency": 1.0,
+          "detector_std": 0.0,
+          "coupling": 1.0,
+          "feedback_gain": 1.0,
+          "control_rotation": 0.0,
+          "cooling_transmissivity": 1.0,
+          "displacement_provenance": "independent",
+          "gate_backend": "lumped",
+          "gate_ancilla_cutoff": 512,
+          "ancilla_loss_rate": 0.0,
+          "ancilla_dephasing_rate": 0.0,
+          "homodyne_radius": 60.0,
+          "homodyne_dy": 0.01,
+          "max_joint_dimension": 2000000,
+          "max_gate_scratch_mb": 512.0
+        },
+        "noise_extension": {},
+        "gates": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "score_snapshot_per_state": 2,
+        "hot_snapshot_per_state": 2,
+        "snapshot_cycles": [
+          0,
+          1,
+          2
+        ],
+        "source_hashes": {
+          "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+          "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+          "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+          "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+          "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+          "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+          "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+          "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+          "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+          "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+          "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+          "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+          "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+          "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+          "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+          "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+          "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+          "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+          "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+          "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+          "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+          "quantum/coupled_measurement.py": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8",
+          "experiments/local_gkp_gate_pilot.py": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c"
+        },
+        "checkpoint_sha256": null,
+        "measurement_sampler": {
+          "kind": "direct_conditional_cdf_experimental",
+          "uniform_index": 1,
+          "parameters": {
+            "max_step": 0.00025,
+            "tolerance": 1e-10,
+            "shot_batch": 64,
+            "node_chunk": 256,
+            "tail_probability": 1e-15,
+            "float_budget": 5e-12,
+            "max_table_bytes": 67108864
+          },
+          "scope": "Same marginal conditional instrument; new cross-cutoff and replay common-random-number coupling. Legacy mixture uses auxiliaryuniform0+resourceuniform1; directCDFusesonlyuniform1 forphysicaloutcome. Explicitqutipbranch unchanged."
+        }
+      },
+      "id": "60673c6df365c87e"
+    },
+    {
+      "point": "broad_control",
+      "variant": "lumped",
+      "chunk": 0,
+      "base_seed": 26112001,
+      "cutoff": 192,
+      "config": {
+        "schema": 2,
+        "profile": "quality_finite_gate",
+        "seed": 4138287304,
+        "data_delta": 0.3,
+        "per_state": 2,
+        "rounds": 2,
+        "measurement_resource": "smooth",
+        "dx": null,
+        "logical_bins": 192,
+        "cutoffs": [
+          192
+        ],
+        "points": {
+          "broad_control": [
+            0.1,
+            0.28209479177387814,
+            0.3
+          ]
+        },
+        "decoders": [
+          "nearest"
+        ],
+        "physics": {
+          "cycle_time": 1.0,
+          "gate_duration": 0.1,
+          "feedback_delay": 0.0,
+          "loss_rate": 0.01,
+          "dephasing_rate": 0.001,
+          "detector_efficiency": 1.0,
+          "detector_std": 0.0,
+          "coupling": 1.0,
+          "feedback_gain": 1.0,
+          "control_rotation": 0.0,
+          "cooling_transmissivity": 1.0,
+          "displacement_provenance": "independent",
+          "gate_backend": "lumped",
+          "gate_ancilla_cutoff": 512,
+          "ancilla_loss_rate": 0.0,
+          "ancilla_dephasing_rate": 0.0,
+          "homodyne_radius": 60.0,
+          "homodyne_dy": 0.01,
+          "max_joint_dimension": 2000000,
+          "max_gate_scratch_mb": 512.0
+        },
+        "noise_extension": {},
+        "gates": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "score_snapshot_per_state": 2,
+        "hot_snapshot_per_state": 2,
+        "snapshot_cycles": [
+          0,
+          1,
+          2
+        ],
+        "source_hashes": {
+          "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+          "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+          "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+          "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+          "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+          "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+          "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+          "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+          "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+          "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+          "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+          "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+          "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+          "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+          "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+          "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+          "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+          "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+          "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+          "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+          "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+          "quantum/coupled_measurement.py": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8",
+          "experiments/local_gkp_gate_pilot.py": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c"
+        },
+        "checkpoint_sha256": null,
+        "measurement_sampler": {
+          "kind": "direct_conditional_cdf_experimental",
+          "uniform_index": 1,
+          "parameters": {
+            "max_step": 0.00025,
+            "tolerance": 1e-10,
+            "shot_batch": 64,
+            "node_chunk": 256,
+            "tail_probability": 1e-15,
+            "float_budget": 5e-12,
+            "max_table_bytes": 67108864
+          },
+          "scope": "Same marginal conditional instrument; new cross-cutoff and replay common-random-number coupling. Legacy mixture uses auxiliaryuniform0+resourceuniform1; directCDFusesonlyuniform1 forphysicaloutcome. Explicitqutipbranch unchanged."
+        }
+      },
+      "id": "289d7f3c192b9fc3"
+    },
+    {
+      "point": "broad_control",
+      "variant": "qutip",
+      "chunk": 0,
+      "base_seed": 26112001,
+      "cutoff": 128,
+      "config": {
+        "schema": 2,
+        "profile": "quality_finite_gate",
+        "seed": 4138287304,
+        "data_delta": 0.3,
+        "per_state": 2,
+        "rounds": 2,
+        "measurement_resource": "smooth",
+        "dx": null,
+        "logical_bins": 192,
+        "cutoffs": [
+          128
+        ],
+        "points": {
+          "broad_control": [
+            0.1,
+            0.28209479177387814,
+            0.3
+          ]
+        },
+        "decoders": [
+          "nearest"
+        ],
+        "physics": {
+          "cycle_time": 1.0,
+          "gate_duration": 0.1,
+          "feedback_delay": 0.0,
+          "loss_rate": 0.01,
+          "dephasing_rate": 0.001,
+          "detector_efficiency": 1.0,
+          "detector_std": 0.0,
+          "coupling": 1.0,
+          "feedback_gain": 1.0,
+          "control_rotation": 0.0,
+          "cooling_transmissivity": 1.0,
+          "displacement_provenance": "independent",
+          "gate_backend": "qutip",
+          "gate_ancilla_cutoff": 256,
+          "ancilla_loss_rate": 0.0,
+          "ancilla_dephasing_rate": 0.0,
+          "homodyne_radius": 20.0,
+          "homodyne_dy": 0.02,
+          "max_joint_dimension": 2000000,
+          "max_gate_scratch_mb": 512.0
+        },
+        "noise_extension": {},
+        "gates": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "score_snapshot_per_state": 2,
+        "hot_snapshot_per_state": 2,
+        "snapshot_cycles": [
+          0,
+          1,
+          2
+        ],
+        "source_hashes": {
+          "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+          "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+          "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+          "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+          "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+          "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+          "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+          "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+          "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+          "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+          "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+          "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+          "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+          "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+          "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+          "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+          "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+          "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+          "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+          "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+          "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+          "quantum/coupled_measurement.py": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8",
+          "experiments/local_gkp_gate_pilot.py": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c"
+        },
+        "checkpoint_sha256": null,
+        "measurement_sampler": {
+          "kind": "direct_conditional_cdf_experimental",
+          "uniform_index": 1,
+          "parameters": {
+            "max_step": 0.00025,
+            "tolerance": 1e-10,
+            "shot_batch": 64,
+            "node_chunk": 256,
+            "tail_probability": 1e-15,
+            "float_budget": 5e-12,
+            "max_table_bytes": 67108864
+          },
+          "scope": "Same marginal conditional instrument; new cross-cutoff and replay common-random-number coupling. Legacy mixture uses auxiliaryuniform0+resourceuniform1; directCDFusesonlyuniform1 forphysicaloutcome. Explicitqutipbranch unchanged."
+        }
+      },
+      "id": "f789317c389284c0"
+    },
+    {
+      "point": "broad_control",
+      "variant": "qutip",
+      "chunk": 0,
+      "base_seed": 26112001,
+      "cutoff": 192,
+      "config": {
+        "schema": 2,
+        "profile": "quality_finite_gate",
+        "seed": 4138287304,
+        "data_delta": 0.3,
+        "per_state": 2,
+        "rounds": 2,
+        "measurement_resource": "smooth",
+        "dx": null,
+        "logical_bins": 192,
+        "cutoffs": [
+          192
+        ],
+        "points": {
+          "broad_control": [
+            0.1,
+            0.28209479177387814,
+            0.3
+          ]
+        },
+        "decoders": [
+          "nearest"
+        ],
+        "physics": {
+          "cycle_time": 1.0,
+          "gate_duration": 0.1,
+          "feedback_delay": 0.0,
+          "loss_rate": 0.01,
+          "dephasing_rate": 0.001,
+          "detector_efficiency": 1.0,
+          "detector_std": 0.0,
+          "coupling": 1.0,
+          "feedback_gain": 1.0,
+          "control_rotation": 0.0,
+          "cooling_transmissivity": 1.0,
+          "displacement_provenance": "independent",
+          "gate_backend": "qutip",
+          "gate_ancilla_cutoff": 256,
+          "ancilla_loss_rate": 0.0,
+          "ancilla_dephasing_rate": 0.0,
+          "homodyne_radius": 20.0,
+          "homodyne_dy": 0.02,
+          "max_joint_dimension": 2000000,
+          "max_gate_scratch_mb": 512.0
+        },
+        "noise_extension": {},
+        "gates": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "score_snapshot_per_state": 2,
+        "hot_snapshot_per_state": 2,
+        "snapshot_cycles": [
+          0,
+          1,
+          2
+        ],
+        "source_hashes": {
+          "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+          "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+          "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+          "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+          "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+          "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+          "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+          "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+          "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+          "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+          "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+          "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+          "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+          "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+          "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+          "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+          "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+          "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+          "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+          "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+          "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+          "quantum/coupled_measurement.py": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8",
+          "experiments/local_gkp_gate_pilot.py": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c"
+        },
+        "checkpoint_sha256": null,
+        "measurement_sampler": {
+          "kind": "direct_conditional_cdf_experimental",
+          "uniform_index": 1,
+          "parameters": {
+            "max_step": 0.00025,
+            "tolerance": 1e-10,
+            "shot_batch": 64,
+            "node_chunk": 256,
+            "tail_probability": 1e-15,
+            "float_budget": 5e-12,
+            "max_table_bytes": 67108864
+          },
+          "scope": "Same marginal conditional instrument; new cross-cutoff and replay common-random-number coupling. Legacy mixture uses auxiliaryuniform0+resourceuniform1; directCDFusesonlyuniform1 forphysicaloutcome. Explicitqutipbranch unchanged."
+        }
+      },
+      "id": "eb6a8f1c2c1e0a69"
+    },
+    {
+      "point": "broad_control",
+      "variant": "qutip_refined",
+      "chunk": 0,
+      "base_seed": 26112001,
+      "cutoff": 128,
+      "config": {
+        "schema": 2,
+        "profile": "quality_finite_gate",
+        "seed": 4138287304,
+        "data_delta": 0.3,
+        "per_state": 2,
+        "rounds": 2,
+        "measurement_resource": "smooth",
+        "dx": null,
+        "logical_bins": 192,
+        "cutoffs": [
+          128
+        ],
+        "points": {
+          "broad_control": [
+            0.1,
+            0.28209479177387814,
+            0.3
+          ]
+        },
+        "decoders": [
+          "nearest"
+        ],
+        "physics": {
+          "cycle_time": 1.0,
+          "gate_duration": 0.1,
+          "feedback_delay": 0.0,
+          "loss_rate": 0.01,
+          "dephasing_rate": 0.001,
+          "detector_efficiency": 1.0,
+          "detector_std": 0.0,
+          "coupling": 1.0,
+          "feedback_gain": 1.0,
+          "control_rotation": 0.0,
+          "cooling_transmissivity": 1.0,
+          "displacement_provenance": "independent",
+          "gate_backend": "qutip",
+          "gate_ancilla_cutoff": 384,
+          "ancilla_loss_rate": 0.0,
+          "ancilla_dephasing_rate": 0.0,
+          "homodyne_radius": 24.0,
+          "homodyne_dy": 0.01,
+          "max_joint_dimension": 2000000,
+          "max_gate_scratch_mb": 512.0
+        },
+        "noise_extension": {},
+        "gates": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "score_snapshot_per_state": 2,
+        "hot_snapshot_per_state": 2,
+        "snapshot_cycles": [
+          0,
+          1,
+          2
+        ],
+        "source_hashes": {
+          "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+          "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+          "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+          "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+          "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+          "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+          "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+          "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+          "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+          "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+          "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+          "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+          "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+          "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+          "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+          "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+          "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+          "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+          "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+          "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+          "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+          "quantum/coupled_measurement.py": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8",
+          "experiments/local_gkp_gate_pilot.py": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c"
+        },
+        "checkpoint_sha256": null,
+        "measurement_sampler": {
+          "kind": "direct_conditional_cdf_experimental",
+          "uniform_index": 1,
+          "parameters": {
+            "max_step": 0.00025,
+            "tolerance": 1e-10,
+            "shot_batch": 64,
+            "node_chunk": 256,
+            "tail_probability": 1e-15,
+            "float_budget": 5e-12,
+            "max_table_bytes": 67108864
+          },
+          "scope": "Same marginal conditional instrument; new cross-cutoff and replay common-random-number coupling. Legacy mixture uses auxiliaryuniform0+resourceuniform1; directCDFusesonlyuniform1 forphysicaloutcome. Explicitqutipbranch unchanged."
+        }
+      },
+      "id": "8c4f1cbab8a7c692"
+    },
+    {
+      "point": "broad_control",
+      "variant": "qutip_refined",
+      "chunk": 0,
+      "base_seed": 26112001,
+      "cutoff": 192,
+      "config": {
+        "schema": 2,
+        "profile": "quality_finite_gate",
+        "seed": 4138287304,
+        "data_delta": 0.3,
+        "per_state": 2,
+        "rounds": 2,
+        "measurement_resource": "smooth",
+        "dx": null,
+        "logical_bins": 192,
+        "cutoffs": [
+          192
+        ],
+        "points": {
+          "broad_control": [
+            0.1,
+            0.28209479177387814,
+            0.3
+          ]
+        },
+        "decoders": [
+          "nearest"
+        ],
+        "physics": {
+          "cycle_time": 1.0,
+          "gate_duration": 0.1,
+          "feedback_delay": 0.0,
+          "loss_rate": 0.01,
+          "dephasing_rate": 0.001,
+          "detector_efficiency": 1.0,
+          "detector_std": 0.0,
+          "coupling": 1.0,
+          "feedback_gain": 1.0,
+          "control_rotation": 0.0,
+          "cooling_transmissivity": 1.0,
+          "displacement_provenance": "independent",
+          "gate_backend": "qutip",
+          "gate_ancilla_cutoff": 384,
+          "ancilla_loss_rate": 0.0,
+          "ancilla_dephasing_rate": 0.0,
+          "homodyne_radius": 24.0,
+          "homodyne_dy": 0.01,
+          "max_joint_dimension": 2000000,
+          "max_gate_scratch_mb": 512.0
+        },
+        "noise_extension": {},
+        "gates": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "score_snapshot_per_state": 2,
+        "hot_snapshot_per_state": 2,
+        "snapshot_cycles": [
+          0,
+          1,
+          2
+        ],
+        "source_hashes": {
+          "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+          "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+          "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+          "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+          "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+          "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+          "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+          "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+          "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+          "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+          "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+          "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+          "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+          "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+          "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+          "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+          "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+          "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+          "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+          "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+          "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+          "quantum/coupled_measurement.py": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8",
+          "experiments/local_gkp_gate_pilot.py": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c"
+        },
+        "checkpoint_sha256": null,
+        "measurement_sampler": {
+          "kind": "direct_conditional_cdf_experimental",
+          "uniform_index": 1,
+          "parameters": {
+            "max_step": 0.00025,
+            "tolerance": 1e-10,
+            "shot_batch": 64,
+            "node_chunk": 256,
+            "tail_probability": 1e-15,
+            "float_budget": 5e-12,
+            "max_table_bytes": 67108864
+          },
+          "scope": "Same marginal conditional instrument; new cross-cutoff and replay common-random-number coupling. Legacy mixture uses auxiliaryuniform0+resourceuniform1; directCDFusesonlyuniform1 forphysicaloutcome. Explicitqutipbranch unchanged."
+        }
+      },
+      "id": "c441dc68a3a99ea7"
+    }
+  ],
+  "fixed_budget": {
+    "per_state_per_job": 2,
+    "chunks": 1,
+    "base_seeds": [
+      26112001
+    ],
+    "rounds": 2,
+    "target_zero_event_probability": null,
+    "optional_stopping": false
+  },
+  "expected_jobs": 8,
+  "estimated_uncompressed_output_bytes": 1966080,
+  "source_hashes": {
+    "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+    "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+    "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+    "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+    "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+    "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+    "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+    "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+    "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+    "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+    "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+    "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+    "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+    "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+    "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+    "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+    "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+    "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+    "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+    "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+    "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+    "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+    "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+    "quantum/coupled_measurement.py": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8",
+    "experiments/local_gkp_gate_pilot.py": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c"
+  },
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "qutip": "5.3.1",
+    "torch": "2.15.0",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O"
+  },
+  "metric_contract": {
+    "primary": "six_cardinal_mean_logical_fidelity_by_cycle",
+    "events": [
+      "energy_limit",
+      "energy_jump",
+      "boundary_failure"
+    ],
+    "interval": "state_stratified_fixed_n_Clopper_Pearson_with_Bonferroni",
+    "energy_thresholds": "diagnostic predefined event definitions, separate from numerical gates",
+    "numerical_checks": [
+      "all_stage_population_and_norm",
+      "cutoff_equivalence",
+      "saved_state_scoring_refinement",
+      "independent_instrument_checks"
+    ],
+    "cutoff_tolerance": 0.01,
+    "scoring_bins": [
+      192,
+      384,
+      768
+    ],
+    "scoring_tolerance": 0.001,
+    "hardware_claim": false
+  },
+  "method_sources": [
+    "https://doi.org/10.1103/PRXQuantum.2.020101",
+    "https://doi.org/10.1103/PhysRevLett.125.040501"
+  ],
+  "decision": "No benchmark verdict until scheduled jobs and required numerical checks complete; report failures and incomplete checks.",
+  "note": "Physics values are project-selected interventions, not calibrated hardware. Passive cooling is not GKP stabilization.",
+  "measurement_sampler": {
+    "kind": "direct_conditional_cdf_experimental",
+    "uniform_index": 1,
+    "parameters": {
+      "max_step": 0.00025,
+      "tolerance": 1e-10,
+      "shot_batch": 64,
+      "node_chunk": 256,
+      "tail_probability": 1e-15,
+      "float_budget": 5e-12,
+      "max_table_bytes": 67108864
+    },
+    "scope": "Same marginal conditional instrument; new cross-cutoff and replay common-random-number coupling. Legacy mixture uses auxiliaryuniform0+resourceuniform1; directCDFusesonlyuniform1 forphysicaloutcome. Explicitqutipbranch unchanged."
+  }
+}

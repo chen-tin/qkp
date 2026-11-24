@@ -1,0 +1,501 @@
+{
+  "classification": "saved_state_numerical_refinement",
+  "settings": {
+    "bins": [
+      192,
+      384,
+      768
+    ],
+    "tolerance": 0.001,
+    "chunk": 128,
+    "backend": "local",
+    "cycles": null,
+    "source_sha256": {
+      "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+      "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876"
+    },
+    "run_result_sha256": "746fed19c58a4d944e232b528344c19822aba5c4a3889678bec0affcf1599a60"
+  },
+  "checks": [
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/pilot_cdf_128_192/plans/finite_gate/jobs/b0bb4f40cd859d32/broad_control_N192_smooth/nearest_finite_ancilla.npz",
+      "raw_sha256": "e0a42d8dfb2f791e9cb9fe1f25599f28895f2f162b915204742297fb81748052",
+      "bins": [
+        192,
+        384,
+        768
+      ],
+      "tolerance": 0.001,
+      "trace_tolerance": 1e-07,
+      "coverage": "all_cycles",
+      "checks": [
+        {
+          "cycle": 0,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  1.6653345369377348e-16
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  1.6653345369377348e-16
+                ],
+                "ci95_high": [
+                  1.6653345369377348e-16
+                ]
+              },
+              "max_absolute_difference": 3.3306690738754696e-16,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 2.919306918375275e-05,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -2.048415838803071e-08
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -2.048415838803071e-08
+                ],
+                "ci95_high": [
+                  -2.048415838803071e-08
+                ]
+              },
+              "max_absolute_difference": 3.1813504941524684e-08,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 2.9224877693301288e-05,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -5.124879187690112e-09
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -5.124879187690112e-09
+                ],
+                "ci95_high": [
+                  -5.124879187690112e-09
+                ]
+              },
+              "max_absolute_difference": 7.959339409779886e-09,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 2.923283578354363e-05,
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "cycle": 1,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  2.2065682614424986e-15
+                ],
+                "se": [
+                  1.3207574900480166e-15
+                ],
+                "ci95_low": [
+                  -3.8206885136306144e-16
+                ],
+                "ci95_high": [
+                  4.795205374248059e-15
+                ]
+              },
+              "max_absolute_difference": 1.1546319456101628e-14,
+              "trace_error": 2.3092638912203256e-14,
+              "minimum_logical_eigenvalue": 0.0416893703278739,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -9.196846274539539e-07
+                ],
+                "se": [
+                  3.9773031898048314e-07
+                ],
+                "ci95_low": [
+                  -1.6992217282153067e-06
+                ],
+                "ci95_high": [
+                  -1.4014752669260091e-07
+                ]
+              },
+              "max_absolute_difference": 2.754101368407369e-06,
+              "trace_error": 2.3314683517128287e-14,
+              "minimum_logical_eigenvalue": 0.041690477686798844,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -2.2991914626346865e-07
+                ],
+                "se": [
+                  9.94315208675881e-08
+                ],
+                "ci95_low": [
+                  -4.248013460919788e-07
+                ],
+                "ci95_high": [
+                  -3.5036946434958526e-08
+                ]
+              },
+              "max_absolute_difference": 6.885192783689931e-07,
+              "trace_error": 2.3092638912203256e-14,
+              "minimum_logical_eigenvalue": 0.04169075452488663,
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "cycle": 2,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  1.1518563880486e-15
+                ],
+                "se": [
+                  1.18994331559747e-15
+                ],
+                "ci95_low": [
+                  -1.1803896541665561e-15
+                ],
+                "ci95_high": [
+                  3.484102430263756e-15
+                ]
+              },
+              "max_absolute_difference": 1.0769163338864018e-14,
+              "trace_error": 2.220446049250313e-14,
+              "minimum_logical_eigenvalue": 0.07506947670051317,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -1.7880387095936534e-07
+                ],
+                "se": [
+                  4.970722442923929e-07
+                ],
+                "ci95_low": [
+                  -1.153047567486924e-06
+                ],
+                "ci95_high": [
+                  7.954398255681933e-07
+                ]
+              },
+              "max_absolute_difference": 2.6578237541929894e-06,
+              "trace_error": 2.220446049250313e-14,
+              "minimum_logical_eigenvalue": 0.07507042162793026,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -4.4700730575386594e-08
+                ],
+                "se": [
+                  1.2426724890356574e-07
+                ],
+                "ci95_low": [
+                  -2.8826006288424324e-07
+                ],
+                "ci95_high": [
+                  1.9885860173347005e-07
+                ]
+              },
+              "max_absolute_difference": 6.644517108189696e-07,
+              "trace_error": 2.1760371282653068e-14,
+              "minimum_logical_eigenvalue": 0.07507065785790124,
+              "pass": true
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "sample_checks_pass": true,
+      "all_cycle_snapshots_pass": true,
+      "note": "Representative samples and selected hot states; not an operator-norm or all-trajectory bound."
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/pilot_cdf_128_192/plans/finite_gate/jobs/b0bb4f40cd859d32/broad_control_N192_smooth/nearest_replayed_corrections.npz",
+      "raw_sha256": "2259d66375595be1b5bc9bfc10a0f579c1cea1532f6fc0995a37eec54e696b0d",
+      "bins": [
+        192,
+        384,
+        768
+      ],
+      "tolerance": 0.001,
+      "trace_tolerance": 1e-07,
+      "coverage": "all_cycles",
+      "checks": [
+        {
+          "cycle": 0,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  1.6653345369377348e-16
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  1.6653345369377348e-16
+                ],
+                "ci95_high": [
+                  1.6653345369377348e-16
+                ]
+              },
+              "max_absolute_difference": 3.3306690738754696e-16,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 2.919306918375275e-05,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -2.048415838803071e-08
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -2.048415838803071e-08
+                ],
+                "ci95_high": [
+                  -2.048415838803071e-08
+                ]
+              },
+              "max_absolute_difference": 3.1813504941524684e-08,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 2.9224877693301288e-05,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -5.124879187690112e-09
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -5.124879187690112e-09
+                ],
+                "ci95_high": [
+                  -5.124879187690112e-09
+                ]
+              },
+              "max_absolute_difference": 7.959339409779886e-09,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 2.923283578354363e-05,
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "cycle": 1,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  -3.1271281860275244e-15
+                ],
+                "se": [
+                  2.209819533378655e-15
+                ],
+                "ci95_low": [
+                  -7.458294883782676e-15
+                ],
+                "ci95_high": [
+                  1.2040385117276279e-15
+                ]
+              },
+              "max_absolute_difference": 1.9206858326015208e-14,
+              "trace_error": 3.8191672047105385e-14,
+              "minimum_logical_eigenvalue": 0.0031903281538378514,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -8.777357196297168e-07
+                ],
+                "se": [
+                  9.455431253685044e-07
+                ],
+                "ci95_low": [
+                  -2.7309661911813752e-06
+                ],
+                "ci95_high": [
+                  9.75494751921942e-07
+                ]
+              },
+              "max_absolute_difference": 7.919846226833727e-06,
+              "trace_error": 3.808064974464287e-14,
+              "minimum_logical_eigenvalue": 0.003191890532422692,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -2.1947532230966646e-07
+                ],
+                "se": [
+                  2.363785647734845e-07
+                ],
+                "ci95_low": [
+                  -6.827687959829516e-07
+                ],
+                "ci95_high": [
+                  2.4381815136361874e-07
+                ]
+              },
+              "max_absolute_difference": 1.9800040476081193e-06,
+              "trace_error": 3.7969627442180354e-14,
+              "minimum_logical_eigenvalue": 0.003192281216940762,
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "cycle": 2,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  -1.1194748831636996e-15
+                ],
+                "se": [
+                  3.157026426486413e-15
+                ],
+                "ci95_low": [
+                  -7.307132977318087e-15
+                ],
+                "ci95_high": [
+                  5.0681832109906875e-15
+                ]
+              },
+              "max_absolute_difference": 2.1760371282653068e-14,
+              "trace_error": 4.418687638008123e-14,
+              "minimum_logical_eigenvalue": 3.289703173603442e-05,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -3.8919118690305954e-07
+                ],
+                "se": [
+                  1.4714883262092216e-06
+                ],
+                "ci95_low": [
+                  -3.273255309944181e-06
+                ],
+                "ci95_high": [
+                  2.494872936138062e-06
+                ]
+              },
+              "max_absolute_difference": 1.1226808781850117e-05,
+              "trace_error": 4.4297898682543746e-14,
+              "minimum_logical_eigenvalue": 3.2931999046026394e-05,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -9.729930533034874e-08
+                ],
+                "se": [
+                  3.6786616992020886e-07
+                ],
+                "ci95_low": [
+                  -8.183037495046299e-07
+                ],
+                "ci95_high": [
+                  6.237051388439326e-07
+                ]
+              },
+              "max_absolute_difference": 2.806605806648932e-06,
+              "trace_error": 4.474198789239381e-14,
+              "minimum_logical_eigenvalue": 3.294074724508045e-05,
+              "pass": true
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "sample_checks_pass": true,
+      "all_cycle_snapshots_pass": true,
+      "note": "Representative samples and selected hot states; not an operator-norm or all-trajectory bound."
+    }
+  ],
+  "all_sample_checks_pass": true,
+  "all_cycles_checked": true
+}

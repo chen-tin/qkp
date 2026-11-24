@@ -1,0 +1,231 @@
+{
+  "completed_utc": "2026-11-24T09:42:15.414824+00:00",
+  "status": "Completed within declared finite-operator scope, with independent sealed readbacks",
+  "source_freeze": {
+    "quantum/streaming_measurement.py": true,
+    "quantum/spectral_circuit.py": true,
+    "quantum/measurement_benchmark.py": true,
+    "experiments/validate_reference_states.py": true,
+    "quantum/instrument_operator_bound.py": true,
+    "experiments/validate_instrument_operator.py": true,
+    "tests/test_instrument_operator_bound.py": true,
+    "tests/test_reference_wave_basis.py": true
+  },
+  "registered_source_sha256": {
+    "quantum/streaming_measurement.py": "2a29be80f22466028711aa721f905b8708bd2408fbb6c4b21f571c4f0cf3f55d",
+    "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+    "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+    "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+    "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+    "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+    "tests/test_instrument_operator_bound.py": "e7587211f23c52080c9f1a0f3a82aeb5e930f5dab48b7603846e6727a4633775",
+    "tests/test_reference_wave_basis.py": "03192b1772cf4d1123ac1f0de3a6ffe5994de8275b9e73f0c10ad6b30340e905"
+  },
+  "studies": {
+    "g1": {
+      "pass": true,
+      "result": "uniform_operator_union_extended_v1/result.json",
+      "result_sha256": "464716e88d055122701b7d0933973c587b51d1055e041feea84775af3439b905",
+      "config": {
+        "data_cutoff": 5120,
+        "data_cutoffs": [
+          4096,
+          5120
+        ],
+        "ancilla_cutoffs": [
+          8192,
+          12288,
+          16384
+        ],
+        "sigma": 0.0886226925452758,
+        "coupling": 1.0,
+        "radius": 160.0,
+        "dy": 0.01,
+        "chunk": 128,
+        "grid_chunk": 512,
+        "max_scratch_bytes": 5368709120,
+        "reference_wave_basis": "scaled_generalized_laguerre_v1",
+        "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+        "source_hashes": {
+          "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+          "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+          "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+        },
+        "environment": {
+          "python": "3.13.13",
+          "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+          "device": "CPU",
+          "packages": {
+            "numpy": "2.5.5",
+            "scipy": "1.18.1",
+            "qutip": "5.3.1"
+          }
+        }
+      },
+      "readback_audit": "uniform_g1_fine_pair_audit.json",
+      "readback_audit_sha256": "b13cf65aaef57d0d96ca45e64faf0e78b17d265b83536a2d53e6e13fc72a1284",
+      "max_finest_delta": 4.674645812604424e-12,
+      "max_both_fine_levels_delta": 6.3703970290623295e-12,
+      "max_ancilla_refinement_delta": 6.2713103894240186e-12,
+      "max_reference_mass_error": 1.8476331575811855e-12,
+      "max_per_lambda_grid_delta_sensitivity": 3.2896273193533126e-15,
+      "max_per_lambda_grid_mass_sensitivity": 1.021405182655144e-14,
+      "run_receipt": {
+        "finished_utc": "2026-11-24T09:07:47.970291+00:00",
+        "elapsed_seconds": 1064.5037112080026,
+        "peak_sampled_rss_bytes": 3277897728,
+        "rss_sampling_seconds": 2,
+        "rss_limit_scope": "Sampled trigger, not kernel-enforced bound",
+        "stop_reason": null,
+        "attempts": [
+          {
+            "phase": "operator_union_base",
+            "exit_code": 0,
+            "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_v1",
+            "elapsed_total_seconds": 511.54537220801285,
+            "stop_reason": null
+          },
+          {
+            "phase": "operator_union_extended",
+            "exit_code": 0,
+            "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_extended_v1",
+            "elapsed_total_seconds": 1064.5025929160038,
+            "stop_reason": null
+          }
+        ],
+        "last_output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_extended_v1",
+        "last_exit_code": 0
+      },
+      "readback_receipt": {
+        "finished_utc": "2026-11-24T09:19:47.411060+00:00",
+        "exit_code": 0,
+        "stop_reason": null,
+        "elapsed_seconds": 670.5266130410018,
+        "peak_sampled_rss_bytes": 3319758848,
+        "rss_poll_seconds": 2,
+        "rss_scope": "Sampled trigger, not kernel-enforced peak bound; transient sampling overshoot possible."
+      }
+    },
+    "g1p01": {
+      "pass": true,
+      "result": "uniform_gain1p01_union_v1/result.json",
+      "result_sha256": "368d292074f81c0fda6fffd713f1cfae2bef827f617c99ba636a356407736a94",
+      "config": {
+        "data_cutoff": 5120,
+        "data_cutoffs": [
+          4096,
+          5120
+        ],
+        "ancilla_cutoffs": [
+          12288,
+          16384
+        ],
+        "sigma": 0.0886226925452758,
+        "coupling": 1.01,
+        "radius": 160.0,
+        "dy": 0.01,
+        "chunk": 128,
+        "grid_chunk": 512,
+        "max_scratch_bytes": 5368709120,
+        "reference_wave_basis": "scaled_generalized_laguerre_v1",
+        "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+        "source_hashes": {
+          "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+          "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+          "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+        },
+        "environment": {
+          "python": "3.13.13",
+          "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+          "device": "CPU",
+          "packages": {
+            "numpy": "2.5.5",
+            "scipy": "1.18.1",
+            "qutip": "5.3.1"
+          }
+        }
+      },
+      "readback_audit": "uniform_gain1p01_fine_pair_audit.json",
+      "readback_audit_sha256": "dfef352837deb590dd29d6727bc8f173c4af57e6a091c1387bd52d0075c23e2c",
+      "max_finest_delta": 4.7316373358061424e-12,
+      "max_both_fine_levels_delta": 2.1869843014168707e-11,
+      "max_ancilla_refinement_delta": 2.186795887212473e-11,
+      "max_reference_mass_error": 1.8463008899516353e-12,
+      "max_per_lambda_grid_delta_sensitivity": 3.1672859747770215e-15,
+      "max_per_lambda_grid_mass_sensitivity": 9.992007221626409e-15,
+      "run_receipt": {
+        "finished_utc": "2026-11-24T09:33:26.755970+00:00",
+        "exit_code": 0,
+        "stop_reason": null,
+        "elapsed_seconds": 741.0922329169989,
+        "peak_sampled_rss_bytes": 3358605312,
+        "rss_poll_seconds": 2,
+        "rss_scope": "Sampled trigger, not kernel-enforced peak bound; transient sampling overshoot possible."
+      },
+      "readback_receipt": {
+        "finished_utc": "2026-11-24T09:41:23.450116+00:00",
+        "exit_code": 0,
+        "stop_reason": null,
+        "elapsed_seconds": 446.82611558299686,
+        "peak_sampled_rss_bytes": 3506585600,
+        "rss_poll_seconds": 2,
+        "rss_scope": "Sampled trigger, not kernel-enforced peak bound; transient sampling overshoot possible."
+      }
+    }
+  },
+  "coarse_negative_retained": {
+    "path": "uniform_operator_union_v1/result.json",
+    "pass": false,
+    "row": {
+      "data_cutoff": 5120,
+      "ancilla_cutoff": 8192,
+      "finite_grid_stinespring_operator_norm": 0.0010466691433895594,
+      "finite_grid_channel_trace_norm_upper_bound": 0.0020933382867800647,
+      "grid_norm_sensitivity": 1.929879867024198e-17,
+      "max_reference_mass_error": 1.7918999617450027e-12,
+      "max_candidate_mass_error": 2.9531932455029164e-14,
+      "grid_mass_sensitivity": 9.769962616701378e-15,
+      "max_joint_norm_error": 2.5091040356528538e-14,
+      "max_ancilla_boundary_mass": 0.0001442178097087614,
+      "worst_lambda_index": 5119,
+      "worst_lambda": 100.7994421653552,
+      "all_lambdas_tested": 5120,
+      "sample_checks_pass": false
+    },
+    "interpretation": "Inadequate coarse independent ancillary reference; discrepancy shrinks under refinement. No simulator defect inferred from this negative."
+  },
+  "software_verification": {
+    "fresh_combined_result": "96 passed in20.83s",
+    "log": "combined_measurement_tests.log"
+  },
+  "coverage": {
+    "data_cutoffs": [
+      4096,
+      5120
+    ],
+    "all_lambda_rows": 9216,
+    "couplings": [
+      1.0,
+      1.01
+    ],
+    "ancilla_finest_pair": [
+      12288,
+      16384
+    ],
+    "sigma_absolute_q": 0.0886226925452758,
+    "radius": 160.0,
+    "dy": 0.01,
+    "axes": "q and exact finite-Fourier-conjugate p instrument; small direct q/p ODE controls",
+    "noise": "Ideal single SUM extraction; no dissipation or detector noise in this instrument comparison",
+    "statistics": "Deterministic quadrature; no Monte Carlo confidence intervals or training seeds"
+  },
+  "limitations": [
+    "Finite-grid operator result in floating-point arithmetic; ancillary/window/grid convergence empirical, no rigorous continuum or hardware certificate.",
+    "Does not establish physical Fock-cutoff adequacy or full noisy-memory trajectory accuracy.",
+    "RSS sampled every2seconds; recorded peaks are not kernel-enforced instantaneous bounds."
+  ]
+}

@@ -10,7 +10,33 @@ live feed or a completed full benchmark. The metrics/ links below describe
 the operator's live local mirror, which is excluded from Git alongside raw
 arrays and launch payloads.
 
-## Active run
+## 23 November status and recovery correction
+
+The instance is stopped after a bounded recovery-only session. All16 saved
+physics jobs are now archived;15 scoring refinements are complete. Numerical2/2
+and noise14/14 pass registered numerical sample checks. Four physics cutoff
+comparisons are inconclusive, all8 finite-gate controls remain invalid, and
+coverage0/250 and rare0/300 remain unrun.
+
+The historical handoff blocked on a persistent bootstrap logging process.
+Local scheduler/checkpoint/status and validation fixes pass121 combined
+directed/reference tests; they are not deployed. See the
+[repair/recovery evidence](../results/simulator_accuracy_actions/20261123/summary.json)
+and [canonical notebook](../RESEARCH_NOTES.md). After running the local status or
+fetch command, the [observed dashboard](../results/ec2_runs/production_20261119/index.html)
+reconciles EC2 state with heartbeat age. The archived metrics dashboard retains
+its historical application labels. The launch-time description below remains
+provenance; it does not indicate current execution.
+
+## 24 November local follow-up
+
+All implementation and computation in the completion pass stayed local. The missing saved-job refinement is complete, and four supplemental physics configurations are fully observed/refined under new macOS source/environment identities. This provides evidence for the original20scientific configurations without rewriting the interrupted EC2 plan/status or uploading new local results.
+
+The local audit retains one4096passive-nearest cycle-eight boundary failure and inconclusive nearest finite-duration/passive cutoff intervals. Independent finite-grid instrument checks pass at4096/5120for gains1/1.01. A fixed16-job direct-CDF coupling comparison resolves the four earlier targeted cutoff intervals within its registered model; matched legacy intervals remain inconclusive. Numerically valid finite-gate controls retain their separate physical-approximation limits. The relevant local software suite passed263tests; source hashes stayed unchanged thereafter.
+
+See the [local issue/result record](simulator_accuracy_local_20261124.md) and [canonical notebook](../RESEARCH_NOTES.md) for exact identities, controls and limitations. All targeted local processes have exited. Original coverage0/250andrare0/300remain unrun and need additional local storage/runtime. Historical snapshots and raw evidence are unchanged; no new EC2 execution or deployment occurred in this pass.
+
+## Recorded run
 
 - Run: qkp-20261120-003030-d2292a.
 - Instance: i-0be3c3be10368ba15, m7i.2xlarge,8vCPU/32GiB.

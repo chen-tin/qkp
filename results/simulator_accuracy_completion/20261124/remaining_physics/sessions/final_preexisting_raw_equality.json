@@ -1,0 +1,56 @@
+{
+  "checked_utc": "2026-11-24T14:28:27.132361+00:00",
+  "source_receipt_sha256": "6690f91c28fa5f3a0af41f76462a044853fb82f138c34312ab1dc7e6d8ffc754",
+  "count": 12,
+  "checks": {
+    "jobs/0643eef0fa378878/nominal_N5120_smooth/bayes_gaussian_finite_ancilla.npz": {
+      "raw_unchanged": true,
+      "seal_unchanged": true
+    },
+    "jobs/0643eef0fa378878/nominal_N5120_smooth/bayes_gaussian_replayed_corrections.npz": {
+      "raw_unchanged": true,
+      "seal_unchanged": true
+    },
+    "jobs/0643eef0fa378878/nominal_N5120_smooth/lstm_256x3_s0_finite_ancilla.npz": {
+      "raw_unchanged": true,
+      "seal_unchanged": true
+    },
+    "jobs/0643eef0fa378878/nominal_N5120_smooth/lstm_256x3_s0_replayed_corrections.npz": {
+      "raw_unchanged": true,
+      "seal_unchanged": true
+    },
+    "jobs/0643eef0fa378878/nominal_N5120_smooth/nearest_finite_ancilla.npz": {
+      "raw_unchanged": true,
+      "seal_unchanged": true
+    },
+    "jobs/0643eef0fa378878/nominal_N5120_smooth/nearest_replayed_corrections.npz": {
+      "raw_unchanged": true,
+      "seal_unchanged": true
+    },
+    "jobs/dcd0f4d8452e1fb5/nominal_N4096_smooth/bayes_gaussian_finite_ancilla.npz": {
+      "raw_unchanged": true,
+      "seal_unchanged": true
+    },
+    "jobs/dcd0f4d8452e1fb5/nominal_N4096_smooth/bayes_gaussian_replayed_corrections.npz": {
+      "raw_unchanged": true,
+      "seal_unchanged": true
+    },
+    "jobs/dcd0f4d8452e1fb5/nominal_N4096_smooth/lstm_256x3_s0_finite_ancilla.npz": {
+      "raw_unchanged": true,
+      "seal_unchanged": true
+    },
+    "jobs/dcd0f4d8452e1fb5/nominal_N4096_smooth/lstm_256x3_s0_replayed_corrections.npz": {
+      "raw_unchanged": true,
+      "seal_unchanged": true
+    },
+    "jobs/dcd0f4d8452e1fb5/nominal_N4096_smooth/nearest_finite_ancilla.npz": {
+      "raw_unchanged": true,
+      "seal_unchanged": true
+    },
+    "jobs/dcd0f4d8452e1fb5/nominal_N4096_smooth/nearest_replayed_corrections.npz": {
+      "raw_unchanged": true,
+      "seal_unchanged": true
+    }
+  },
+  "all_raw_and_seals_unchanged": true
+}

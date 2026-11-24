@@ -1,0 +1,59 @@
+{
+  "states": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261123/root/archive_spot_check/nearest_finite_ancilla.npz",
+  "cycle": 8,
+  "columns": [
+    0,
+    8
+  ],
+  "data_cutoff": 96,
+  "fock_levels": null,
+  "ancilla_cutoffs": [
+    4096,
+    8192
+  ],
+  "sigma": 0.0886226925452758,
+  "radius": 120.0,
+  "dy": 0.01,
+  "coupling": 1.0,
+  "max_joint": 35000000,
+  "max_scratch_mb": 4000.0,
+  "streaming": true,
+  "chunk": 64,
+  "circuit_backend": "spectral",
+  "preflight_only": false,
+  "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/full4096_cycle8_spectral_v1",
+  "audit_only": false,
+  "inputs": {
+    "kind": "saved_states",
+    "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261123/root/archive_spot_check/nearest_finite_ancilla.npz",
+    "sha256": "419564e205e6fcef5ed602ddce2dbebd19e12a14f4695db5979f81fcccb60e0b",
+    "key": "snapshot_cycle_8",
+    "columns": [
+      0,
+      8
+    ],
+    "original_trial_ids": [
+      0,
+      211
+    ],
+    "cardinal_input_ids": [
+      0,
+      0
+    ],
+    "mean_photon_number_per_input": [
+      196.14402200355974,
+      1892.8939145178733
+    ]
+  },
+  "reference_wave_basis": "scaled_generalized_laguerre_v1",
+  "source_hashes": {
+    "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+    "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+    "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+    "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+    "quantum/streaming_measurement.py": "2a29be80f22466028711aa721f905b8708bd2408fbb6c4b21f571c4f0cf3f55d",
+    "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258"
+  },
+  "python": "3.13.13",
+  "qutip": "5.3.1"
+}

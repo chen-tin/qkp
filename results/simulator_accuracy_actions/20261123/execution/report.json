@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-11-24T07:29:04.170659+00:00",
+  "classification": "Directed operational software regressions; no scientific benchmark or deployment",
+  "environment": {
+    "python": "3.13.13",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "device": "local CPU",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_ec2_parallel.py tests/test_ec2_monitoring.py",
+  "red_results": [
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_ec2_parallel.py",
+      "log": "red.log",
+      "failed": 3,
+      "passed": 9,
+      "seconds": 2.42,
+      "scope": "Persistent bootstrap tee reproduces handoff blocker; newly specified checkpoint behaviors absent."
+    },
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_ec2_monitoring.py",
+      "log": "monitoring_red.log",
+      "failed": 8,
+      "passed": 0,
+      "seconds": 3.65,
+      "scope": "Operational overlay module absent; initial stopped/stale/fetch behavior specification."
+    }
+  ],
+  "green_result": {
+    "passed": 26,
+    "failed": 0,
+    "seconds": 1.8,
+    "log": "green.log"
+  },
+  "changes": [
+    "Drain excludes only exact direct-child bootstrap tee -a /var/log/qkp-bootstrap.log; other children and tee descendants still block. Callback cancellation resumes same supervisor identity only.",
+    "Both supervisors archive sealed observation before scoring/refinement. Upload failure blocks scorer; parallel child receives per-job checkpoint URI. Existing cold-start/no-drain path remains supported.",
+    "Separate local run-root observed_status.json and index.html reconcile EC2 state with archived heartbeat; no archived metric/status rewriting.",
+    "Fetch uses exact timestamps, checks EC2 every poll even with archived running label, stops polling stopped/terminated instance and handles sync timeouts/API errors explicitly."
+  ],
+  "coverage": [
+    "Active scientific descendant plus persistent bootstrap tee; unrelated tee blocking; timeout and cancellation signal only supervisor.",
+    "Raw archive completed before simulated shutdown during scorer; upload error prevents scoring; checked negative scores reused.",
+    "Stopped EC2 overrides archived running; stale/missing/invalid/future heartbeat cannot appear running; unavailable API yields unknown.",
+    "Archived complete status preserved; exact-timestamp fetch; stopped detection independent of application label; sync timeout still queries instance; archive bytes unchanged."
+  ],
+  "limitations": [
+    "Process topology tests mock Linux /proc/signals on local macOS; no live service/SSM handoff run.",
+    "S3 upload/download and EC2 responses mocked; no AWS mutations or calls performed in this subtask.",
+    "No physics, noise trajectories, scoring calculations or model training executed.",
+    "Fixes are local and not deployed; missing16th raw job remains recovery work.",
+    "Scientific plans/source snapshots/checkpoints/raw historical evidence untouched."
+  ],
+  "source_sha256": {
+    "ops/ec2/parallel_worker.py": "9d765e4c6ede107016f0e9280084ad0650f22001f6d7e19454dc50073829e7f2",
+    "ops/ec2/worker.py": "1a9bb91f181c02e35af335f4e211d58a52bbcfba7674311e4623fed0794b33e3",
+    "ops/ec2/manage.py": "6517f17873111339b280fc986580cd50196d309eef4b67188a552902ed129593",
+    "ops/ec2/fetch_metrics.py": "57077f614ad22df2b0217182ca6eab75e9109fb32a777bba3e12cdf6f2fdae43",
+    "ops/ec2/monitoring.py": "96176a6477c69cdd6294eee0d32b8187675aa8d330a06f66f79bcfd6652c3969",
+    "tests/test_ec2_parallel.py": "13e7c01cbab166ffd8a4eebce6cd0dbd6bb7129d3d4384ba436e6accd2c0f8dd",
+    "tests/test_ec2_monitoring.py": "018b6cb8b7c11ef9a27ef4dbaf96288043e16b29d45648e7a743b792543b08e9"
+  },
+  "evidence_sha256": {
+    "monitoring_red.log": "498bfc00d83f421863e7c510ddc3a2580374eb866c3bca05f42e902c88190a77",
+    "red.log": "24f3d484ce49747ce7609a2ea3230f209a58e79a233e360da4a366c662554628",
+    "green.log": "dabae172f08c4ad97fae0226e9fb69f86f87db0ab6e3845cdb5bd3e95d80c7b9"
+  }
+}

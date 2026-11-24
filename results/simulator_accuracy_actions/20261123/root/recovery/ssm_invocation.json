@@ -1,0 +1,22 @@
+{
+  "CommandId": "8d6cf75c-7193-4e0c-8a94-4d5caea27e3d",
+  "InstanceId": "i-0be3c3be10368ba15",
+  "Comment": "Recover existing QKP job only; no scientific compute",
+  "DocumentName": "AWS-RunShellScript",
+  "DocumentVersion": "$DEFAULT",
+  "PluginName": "aws:runShellScript",
+  "ResponseCode": 0,
+  "ExecutionStartDateTime": "2026-11-24T07:29:07.963Z",
+  "ExecutionElapsedTime": "PT5.142S",
+  "ExecutionEndDateTime": "2026-11-24T07:29:12.963Z",
+  "Status": "Success",
+  "StatusDetails": "Success",
+  "StandardOutputContent": "{\"checked_utc\": \"2026-11-24T07:29:12.678653+00:00\", \"job_id\": \"635d50e4441cc5d1\", \"result_sha256\": \"f88b023f771d6512f8f3dff57283b58fd423b929329ea6858f578efd8024030b\", \"verified_raw\": {\"nominal_N5120_smooth/nearest_replayed_corrections.npz\": {\"sha256\": \"5ce3d29a52fd7d8ca2a5931430ac4227a1ecb0f0e2c0d80318f024e0bd0606e0\", \"bytes\": 52805555}, \"nominal_N5120_smooth/nearest_finite_ancilla.npz\": {\"sha256\": \"5b1bb450211521173501f92060bb5d30916eb9a833d01e2cdaec5a5abbef0997\", \"bytes\": 54061694}, \"nominal_N5120_smooth/bayes_gaussian_replayed_corrections.npz\": {\"sha256\": \"933c0f5b324d7da31bed298ea042642459862e300a15ae9e90204a4662d17a01\", \"bytes\": 52724587}, \"nominal_N5120_smooth/bayes_gaussian_finite_ancilla.npz\": {\"sha256\": \"3e9d2de5368254896442aa31c910ae0a12bb35a7ebcadf17e3170e4e123eb8c1\", \"bytes\": 54221876}, \"nominal_N5120_smooth/lstm_256x3_s0_replayed_corrections.npz\": {\"sha256\": \"cda672332d693e2b04895ef83f6b854031cdbbdd2eb31b0d183ca4942e6ed491\", \"bytes\": 52963081}, \"nominal_N5120_smooth/lstm_256x3_s0_finite_ancilla.npz\": {\"sha256\": \"8690689acf51e38016a7035031b164cd5a7c622a7132278f570b12acd9ed9a6e\", \"bytes\": 54222329}}, \"destination\": \"s3://qkp-bench-882574060060-20261120-003030-d2292a/qkp-20261120-003030-d2292a/raw/physics/jobs/635d50e4441cc5d1/\", \"scientific_processes_at_start\": [], \"scope\": \"Existing observations recovered without simulation, scoring, source edits or changed raw bytes.\"}\n",
+  "StandardOutputUrl": "",
+  "StandardErrorContent": "Shutdown scheduled for Tue 2026-11-24 07:44:08 UTC, use 'shutdown -c' to cancel.\n",
+  "StandardErrorUrl": "",
+  "CloudWatchOutputConfig": {
+    "CloudWatchLogGroupName": "",
+    "CloudWatchOutputEnabled": false
+  }
+}

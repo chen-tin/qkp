@@ -1,0 +1,1017 @@
+{
+  "classification": "saved_state_numerical_refinement",
+  "settings": {
+    "bins": [
+      192,
+      384,
+      768
+    ],
+    "tolerance": 0.001,
+    "chunk": 128,
+    "backend": "local",
+    "cycles": null,
+    "source_sha256": {
+      "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+      "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876"
+    },
+    "run_result_sha256": "86c2e9c3bd733d1619c035d4fcf675c497e1da1ce2944def091a157ac6a673b4",
+    "shared_basis": {
+      "enabled": true,
+      "max_batch_bytes": 268435456
+    }
+  },
+  "checks": [
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/local_physics_independent_pilot/intervention/jobs/867e544c77289f92/nominal_N16_smooth/nearest_finite_ancilla.npz",
+      "raw_sha256": "9f893b5a2e9d4480e5f40d99f21c63861423e8110f775075bffcecad224d3c0e",
+      "bins": [
+        192,
+        384,
+        768
+      ],
+      "tolerance": 0.001,
+      "trace_tolerance": 1e-07,
+      "coverage": "all_cycles",
+      "checks": [
+        {
+          "cycle": 0,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  1.6653345369377348e-16
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  1.6653345369377348e-16
+                ],
+                "ci95_high": [
+                  1.6653345369377348e-16
+                ]
+              },
+              "max_absolute_difference": 4.440892098500626e-16,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008687791961253188,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -3.8900640301579394e-08
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -3.8900640301579394e-08
+                ],
+                "ci95_high": [
+                  -3.8900640301579394e-08
+                ]
+              },
+              "max_absolute_difference": 2.565863519432554e-07,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008688048546766969,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -9.74150795215086e-09
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -9.74150795215086e-09
+                ],
+                "ci95_high": [
+                  -9.74150795215086e-09
+                ]
+              },
+              "max_absolute_difference": 6.414405773202958e-08,
+              "trace_error": 2.220446049250313e-16,
+              "minimum_logical_eigenvalue": 0.008688112690614924,
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "cycle": 1,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  2.4517425127138875e-16
+                ],
+                "se": [
+                  6.084459990454661e-17
+                ],
+                "ci95_low": [
+                  1.2592102680473147e-16
+                ],
+                "ci95_high": [
+                  3.6442747573804603e-16
+                ]
+              },
+              "max_absolute_difference": 5.551115123125783e-16,
+              "trace_error": 8.881784197001252e-16,
+              "minimum_logical_eigenvalue": 0.07575678512113165,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -9.155868001033592e-07
+                ],
+                "se": [
+                  6.013750958448251e-07
+                ],
+                "ci95_low": [
+                  -2.094260329158507e-06
+                ],
+                "ci95_high": [
+                  2.630867289517886e-07
+                ]
+              },
+              "max_absolute_difference": 4.671729963212634e-06,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 0.07575686393695918,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -2.288811217452761e-07
+                ],
+                "se": [
+                  1.503218342617696e-07
+                ],
+                "ci95_low": [
+                  -5.235065029883355e-07
+                ],
+                "ci95_high": [
+                  6.574425949778334e-08
+                ]
+              },
+              "max_absolute_difference": 1.1677310194357915e-06,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 0.07575688364217087,
+              "pass": true
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "sample_checks_pass": true,
+      "all_cycle_snapshots_pass": true,
+      "note": "Representative samples and selected hot states; not an operator-norm or all-trajectory bound."
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/local_physics_independent_pilot/intervention/jobs/867e544c77289f92/nominal_N16_smooth/nearest_replayed_corrections.npz",
+      "raw_sha256": "7372542f9722428579a1b2d91c2fff554cd1d04a560c526c81cdaf6803e6d8ab",
+      "bins": [
+        192,
+        384,
+        768
+      ],
+      "tolerance": 0.001,
+      "trace_tolerance": 1e-07,
+      "coverage": "all_cycles",
+      "checks": [
+        {
+          "cycle": 0,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  1.6653345369377348e-16
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  1.6653345369377348e-16
+                ],
+                "ci95_high": [
+                  1.6653345369377348e-16
+                ]
+              },
+              "max_absolute_difference": 4.440892098500626e-16,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008687791961253188,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -3.8900640301579394e-08
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -3.8900640301579394e-08
+                ],
+                "ci95_high": [
+                  -3.8900640301579394e-08
+                ]
+              },
+              "max_absolute_difference": 2.565863519432554e-07,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008688048546766969,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -9.74150795215086e-09
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -9.74150795215086e-09
+                ],
+                "ci95_high": [
+                  -9.74150795215086e-09
+                ]
+              },
+              "max_absolute_difference": 6.414405773202958e-08,
+              "trace_error": 2.220446049250313e-16,
+              "minimum_logical_eigenvalue": 0.008688112690614924,
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "cycle": 1,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  1.3877787807814457e-16
+                ],
+                "se": [
+                  5.777783805466598e-17
+                ],
+                "ci95_low": [
+                  2.5535396386414593e-17
+                ],
+                "ci95_high": [
+                  2.520203597698745e-16
+                ]
+              },
+              "max_absolute_difference": 4.440892098500626e-16,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 0.008987203362031015,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -1.4779543978012585e-07
+                ],
+                "se": [
+                  2.807515318840842e-07
+                ],
+                "ci95_low": [
+                  -6.980583308773644e-07
+                ],
+                "ci95_high": [
+                  4.0246745131711267e-07
+                ]
+              },
+              "max_absolute_difference": 2.872272959919542e-06,
+              "trace_error": 8.881784197001252e-16,
+              "minimum_logical_eigenvalue": 0.008987624046299825,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -3.6960399944311696e-08
+                ],
+                "se": [
+                  7.019112983863069e-08
+                ],
+                "ci95_low": [
+                  -1.7453248646219878e-07
+                ],
+                "ci95_high": [
+                  1.006116865735754e-07
+                ]
+              },
+              "max_absolute_difference": 7.180667440653821e-07,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008987729257010857,
+              "pass": true
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "sample_checks_pass": true,
+      "all_cycle_snapshots_pass": true,
+      "note": "Representative samples and selected hot states; not an operator-norm or all-trajectory bound."
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/local_physics_independent_pilot/intervention/jobs/867e544c77289f92/nominal_N16_smooth/bayes_gaussian_finite_ancilla.npz",
+      "raw_sha256": "9f893b5a2e9d4480e5f40d99f21c63861423e8110f775075bffcecad224d3c0e",
+      "bins": [
+        192,
+        384,
+        768
+      ],
+      "tolerance": 0.001,
+      "trace_tolerance": 1e-07,
+      "coverage": "all_cycles",
+      "checks": [
+        {
+          "cycle": 0,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  1.6653345369377348e-16
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  1.6653345369377348e-16
+                ],
+                "ci95_high": [
+                  1.6653345369377348e-16
+                ]
+              },
+              "max_absolute_difference": 4.440892098500626e-16,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008687791961253188,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -3.8900640301579394e-08
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -3.8900640301579394e-08
+                ],
+                "ci95_high": [
+                  -3.8900640301579394e-08
+                ]
+              },
+              "max_absolute_difference": 2.565863519432554e-07,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008688048546766969,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -9.74150795215086e-09
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -9.74150795215086e-09
+                ],
+                "ci95_high": [
+                  -9.74150795215086e-09
+                ]
+              },
+              "max_absolute_difference": 6.414405773202958e-08,
+              "trace_error": 2.220446049250313e-16,
+              "minimum_logical_eigenvalue": 0.008688112690614924,
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "cycle": 1,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  2.4517425127138875e-16
+                ],
+                "se": [
+                  6.084459990454661e-17
+                ],
+                "ci95_low": [
+                  1.2592102680473147e-16
+                ],
+                "ci95_high": [
+                  3.6442747573804603e-16
+                ]
+              },
+              "max_absolute_difference": 5.551115123125783e-16,
+              "trace_error": 8.881784197001252e-16,
+              "minimum_logical_eigenvalue": 0.07575678512113165,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -9.155868001033592e-07
+                ],
+                "se": [
+                  6.013750958448251e-07
+                ],
+                "ci95_low": [
+                  -2.094260329158507e-06
+                ],
+                "ci95_high": [
+                  2.630867289517886e-07
+                ]
+              },
+              "max_absolute_difference": 4.671729963212634e-06,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 0.07575686393695918,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -2.288811217452761e-07
+                ],
+                "se": [
+                  1.503218342617696e-07
+                ],
+                "ci95_low": [
+                  -5.235065029883355e-07
+                ],
+                "ci95_high": [
+                  6.574425949778334e-08
+                ]
+              },
+              "max_absolute_difference": 1.1677310194357915e-06,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 0.07575688364217087,
+              "pass": true
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "sample_checks_pass": true,
+      "all_cycle_snapshots_pass": true,
+      "note": "Representative samples and selected hot states; not an operator-norm or all-trajectory bound."
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/local_physics_independent_pilot/intervention/jobs/867e544c77289f92/nominal_N16_smooth/bayes_gaussian_replayed_corrections.npz",
+      "raw_sha256": "7372542f9722428579a1b2d91c2fff554cd1d04a560c526c81cdaf6803e6d8ab",
+      "bins": [
+        192,
+        384,
+        768
+      ],
+      "tolerance": 0.001,
+      "trace_tolerance": 1e-07,
+      "coverage": "all_cycles",
+      "checks": [
+        {
+          "cycle": 0,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  1.6653345369377348e-16
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  1.6653345369377348e-16
+                ],
+                "ci95_high": [
+                  1.6653345369377348e-16
+                ]
+              },
+              "max_absolute_difference": 4.440892098500626e-16,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008687791961253188,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -3.8900640301579394e-08
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -3.8900640301579394e-08
+                ],
+                "ci95_high": [
+                  -3.8900640301579394e-08
+                ]
+              },
+              "max_absolute_difference": 2.565863519432554e-07,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008688048546766969,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -9.74150795215086e-09
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -9.74150795215086e-09
+                ],
+                "ci95_high": [
+                  -9.74150795215086e-09
+                ]
+              },
+              "max_absolute_difference": 6.414405773202958e-08,
+              "trace_error": 2.220446049250313e-16,
+              "minimum_logical_eigenvalue": 0.008688112690614924,
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "cycle": 1,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  1.3877787807814457e-16
+                ],
+                "se": [
+                  5.777783805466598e-17
+                ],
+                "ci95_low": [
+                  2.5535396386414593e-17
+                ],
+                "ci95_high": [
+                  2.520203597698745e-16
+                ]
+              },
+              "max_absolute_difference": 4.440892098500626e-16,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 0.008987203362031015,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -1.4779543978012585e-07
+                ],
+                "se": [
+                  2.807515318840842e-07
+                ],
+                "ci95_low": [
+                  -6.980583308773644e-07
+                ],
+                "ci95_high": [
+                  4.0246745131711267e-07
+                ]
+              },
+              "max_absolute_difference": 2.872272959919542e-06,
+              "trace_error": 8.881784197001252e-16,
+              "minimum_logical_eigenvalue": 0.008987624046299825,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -3.6960399944311696e-08
+                ],
+                "se": [
+                  7.019112983863069e-08
+                ],
+                "ci95_low": [
+                  -1.7453248646219878e-07
+                ],
+                "ci95_high": [
+                  1.006116865735754e-07
+                ]
+              },
+              "max_absolute_difference": 7.180667440653821e-07,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008987729257010857,
+              "pass": true
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "sample_checks_pass": true,
+      "all_cycle_snapshots_pass": true,
+      "note": "Representative samples and selected hot states; not an operator-norm or all-trajectory bound."
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/local_physics_independent_pilot/intervention/jobs/867e544c77289f92/nominal_N16_smooth/lstm_256x3_s0_finite_ancilla.npz",
+      "raw_sha256": "9f893b5a2e9d4480e5f40d99f21c63861423e8110f775075bffcecad224d3c0e",
+      "bins": [
+        192,
+        384,
+        768
+      ],
+      "tolerance": 0.001,
+      "trace_tolerance": 1e-07,
+      "coverage": "all_cycles",
+      "checks": [
+        {
+          "cycle": 0,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  1.6653345369377348e-16
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  1.6653345369377348e-16
+                ],
+                "ci95_high": [
+                  1.6653345369377348e-16
+                ]
+              },
+              "max_absolute_difference": 4.440892098500626e-16,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008687791961253188,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -3.8900640301579394e-08
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -3.8900640301579394e-08
+                ],
+                "ci95_high": [
+                  -3.8900640301579394e-08
+                ]
+              },
+              "max_absolute_difference": 2.565863519432554e-07,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008688048546766969,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -9.74150795215086e-09
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -9.74150795215086e-09
+                ],
+                "ci95_high": [
+                  -9.74150795215086e-09
+                ]
+              },
+              "max_absolute_difference": 6.414405773202958e-08,
+              "trace_error": 2.220446049250313e-16,
+              "minimum_logical_eigenvalue": 0.008688112690614924,
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "cycle": 1,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  2.4517425127138875e-16
+                ],
+                "se": [
+                  6.084459990454661e-17
+                ],
+                "ci95_low": [
+                  1.2592102680473147e-16
+                ],
+                "ci95_high": [
+                  3.6442747573804603e-16
+                ]
+              },
+              "max_absolute_difference": 5.551115123125783e-16,
+              "trace_error": 8.881784197001252e-16,
+              "minimum_logical_eigenvalue": 0.07575678512113165,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -9.155868001033592e-07
+                ],
+                "se": [
+                  6.013750958448251e-07
+                ],
+                "ci95_low": [
+                  -2.094260329158507e-06
+                ],
+                "ci95_high": [
+                  2.630867289517886e-07
+                ]
+              },
+              "max_absolute_difference": 4.671729963212634e-06,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 0.07575686393695918,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -2.288811217452761e-07
+                ],
+                "se": [
+                  1.503218342617696e-07
+                ],
+                "ci95_low": [
+                  -5.235065029883355e-07
+                ],
+                "ci95_high": [
+                  6.574425949778334e-08
+                ]
+              },
+              "max_absolute_difference": 1.1677310194357915e-06,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 0.07575688364217087,
+              "pass": true
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "sample_checks_pass": true,
+      "all_cycle_snapshots_pass": true,
+      "note": "Representative samples and selected hot states; not an operator-norm or all-trajectory bound."
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/local_physics_independent_pilot/intervention/jobs/867e544c77289f92/nominal_N16_smooth/lstm_256x3_s0_replayed_corrections.npz",
+      "raw_sha256": "7372542f9722428579a1b2d91c2fff554cd1d04a560c526c81cdaf6803e6d8ab",
+      "bins": [
+        192,
+        384,
+        768
+      ],
+      "tolerance": 0.001,
+      "trace_tolerance": 1e-07,
+      "coverage": "all_cycles",
+      "checks": [
+        {
+          "cycle": 0,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  1.6653345369377348e-16
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  1.6653345369377348e-16
+                ],
+                "ci95_high": [
+                  1.6653345369377348e-16
+                ]
+              },
+              "max_absolute_difference": 4.440892098500626e-16,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008687791961253188,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -3.8900640301579394e-08
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -3.8900640301579394e-08
+                ],
+                "ci95_high": [
+                  -3.8900640301579394e-08
+                ]
+              },
+              "max_absolute_difference": 2.565863519432554e-07,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008688048546766969,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -9.74150795215086e-09
+                ],
+                "se": [
+                  0.0
+                ],
+                "ci95_low": [
+                  -9.74150795215086e-09
+                ],
+                "ci95_high": [
+                  -9.74150795215086e-09
+                ]
+              },
+              "max_absolute_difference": 6.414405773202958e-08,
+              "trace_error": 2.220446049250313e-16,
+              "minimum_logical_eigenvalue": 0.008688112690614924,
+              "pass": true
+            }
+          ],
+          "pass": true
+        },
+        {
+          "cycle": 1,
+          "representative_per_state": 2,
+          "snapshots_including_hot": 12,
+          "refinements": [
+            {
+              "bins": 192,
+              "difference_from": "saved_operator_score",
+              "difference": {
+                "mean": [
+                  1.3877787807814457e-16
+                ],
+                "se": [
+                  5.777783805466598e-17
+                ],
+                "ci95_low": [
+                  2.5535396386414593e-17
+                ],
+                "ci95_high": [
+                  2.520203597698745e-16
+                ]
+              },
+              "max_absolute_difference": 4.440892098500626e-16,
+              "trace_error": 6.661338147750939e-16,
+              "minimum_logical_eigenvalue": 0.008987203362031015,
+              "pass": true
+            },
+            {
+              "bins": 384,
+              "difference_from": 192,
+              "difference": {
+                "mean": [
+                  -1.4779543978012585e-07
+                ],
+                "se": [
+                  2.807515318840842e-07
+                ],
+                "ci95_low": [
+                  -6.980583308773644e-07
+                ],
+                "ci95_high": [
+                  4.0246745131711267e-07
+                ]
+              },
+              "max_absolute_difference": 2.872272959919542e-06,
+              "trace_error": 8.881784197001252e-16,
+              "minimum_logical_eigenvalue": 0.008987624046299825,
+              "pass": true
+            },
+            {
+              "bins": 768,
+              "difference_from": 384,
+              "difference": {
+                "mean": [
+                  -3.6960399944311696e-08
+                ],
+                "se": [
+                  7.019112983863069e-08
+                ],
+                "ci95_low": [
+                  -1.7453248646219878e-07
+                ],
+                "ci95_high": [
+                  1.006116865735754e-07
+                ]
+              },
+              "max_absolute_difference": 7.180667440653821e-07,
+              "trace_error": 4.440892098500626e-16,
+              "minimum_logical_eigenvalue": 0.008987729257010857,
+              "pass": true
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "sample_checks_pass": true,
+      "all_cycle_snapshots_pass": true,
+      "note": "Representative samples and selected hot states; not an operator-norm or all-trajectory bound."
+    }
+  ],
+  "all_sample_checks_pass": true,
+  "all_cycles_checked": true
+}

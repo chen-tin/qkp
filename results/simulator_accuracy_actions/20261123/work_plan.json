@@ -1,0 +1,15 @@
+{
+  "started_utc": "2026-11-24T07:26:19.583500+00:00",
+  "status": "completed_scoped_repairs_and_directed_checks",
+  "authorization": "User explicitly requested parallel action and source-directed spot tests.",
+  "workstreams": {
+    "execution": "drain/logger, local status reconciliation, raw checkpoint ordering",
+    "measurement": "independent instrument audit and finite-gate input/numerical guards",
+    "analysis": "cutoff diagnosis, instrument coverage provenance, pending/invalid acceptance",
+    "root": "noise/controller directed regression, archive access/integrity spot check, integration and notebook"
+  },
+  "limits": "Bounded source-directed software tests and saved-data analysis only; no production trajectories/training, frozen evidence edits, AWS resource mutations or Solar writes.",
+  "decision_rule": "Each actual defect needs a reproducer that fails before correction and passes after; model limitations and unexecuted validation remain explicitly open.",
+  "completed_utc": "2026-11-24T07:31:10.025311+00:00",
+  "summary": "summary.json"
+}

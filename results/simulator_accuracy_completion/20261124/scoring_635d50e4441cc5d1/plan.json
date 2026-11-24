@@ -1,0 +1,155 @@
+{
+  "registered_utc": "2026-11-24T08:19:03.493975+00:00",
+  "classification": "saved-state deterministic rescoring; no trajectories",
+  "status": "planned",
+  "input_directory": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1",
+  "output_directory": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/scoring_635d50e4441cc5d1",
+  "recovery_receipt": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261123/root/recovery/remote_recovery_receipt.json",
+  "recovery_receipt_sha256": "16ec63a48e5aef063b9beec06485250667d12cf77b999e3428c2e0d33b7a9092",
+  "input_sha256": {
+    "result.json": "f88b023f771d6512f8f3dff57283b58fd423b929329ea6858f578efd8024030b",
+    "nominal_N5120_smooth/nearest_replayed_corrections.npz": "5ce3d29a52fd7d8ca2a5931430ac4227a1ecb0f0e2c0d80318f024e0bd0606e0",
+    "nominal_N5120_smooth/nearest_finite_ancilla.npz": "5b1bb450211521173501f92060bb5d30916eb9a833d01e2cdaec5a5abbef0997",
+    "nominal_N5120_smooth/bayes_gaussian_replayed_corrections.npz": "933c0f5b324d7da31bed298ea042642459862e300a15ae9e90204a4662d17a01",
+    "nominal_N5120_smooth/bayes_gaussian_finite_ancilla.npz": "3e9d2de5368254896442aa31c910ae0a12bb35a7ebcadf17e3170e4e123eb8c1",
+    "nominal_N5120_smooth/lstm_256x3_s0_replayed_corrections.npz": "cda672332d693e2b04895ef83f6b854031cdbbdd2eb31b0d183ca4942e6ed491",
+    "nominal_N5120_smooth/lstm_256x3_s0_finite_ancilla.npz": "8690689acf51e38016a7035031b164cd5a7c622a7132278f570b12acd9ed9a6e"
+  },
+  "config": {
+    "schema": 2,
+    "profile": "quality_physics",
+    "seed": 4138287304,
+    "data_delta": 0.3,
+    "per_state": 512,
+    "rounds": 8,
+    "measurement_resource": "smooth",
+    "dx": null,
+    "logical_bins": 192,
+    "cutoffs": [
+      5120
+    ],
+    "points": {
+      "nominal": [
+        0.2,
+        0.05,
+        0.9
+      ]
+    },
+    "decoders": [
+      "nearest",
+      "bayes_gaussian",
+      "lstm_256x3_s0"
+    ],
+    "physics": {
+      "cycle_time": 1.0,
+      "gate_duration": 0.0,
+      "feedback_delay": 0.0,
+      "loss_rate": 0.0,
+      "dephasing_rate": 0.0,
+      "detector_efficiency": 1.0,
+      "detector_std": 0.0,
+      "coupling": 1.0,
+      "feedback_gain": 1.0,
+      "control_rotation": 0.001,
+      "cooling_transmissivity": 1.0,
+      "displacement_provenance": "independent",
+      "gate_backend": "lumped",
+      "gate_ancilla_cutoff": 512,
+      "ancilla_loss_rate": 0.0,
+      "ancilla_dephasing_rate": 0.0,
+      "homodyne_radius": 60.0,
+      "homodyne_dy": 0.01,
+      "max_joint_dimension": 2000000,
+      "max_gate_scratch_mb": 512.0
+    },
+    "noise_extension": {},
+    "gates": {
+      "mean_edge": 0.0001,
+      "individual_edge": 0.01,
+      "norm": 1e-07,
+      "energy_limit": 1000.0,
+      "energy_jump": 1000.0
+    },
+    "score_snapshot_per_state": 8,
+    "hot_snapshot_per_state": 2,
+    "snapshot_cycles": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source_hashes": {
+      "experiments/quality_benchmark.py": "571e9bc8c5f8e64d794f7da1491b8fff08962d0cc62e9b5e8802f1585d6149c9",
+      "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+      "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+      "experiments/refine_logical_scores.py": "18366abc2a339bbb0f26accda6deb90cd5ff2a4d5fad8ec9f9e91c9b5fd616f0",
+      "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+      "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+      "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+      "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+      "quantum/scoring.py": "8771961d052d55fc8614775647745a0a901cf46d83f3a495ab06b8ef4dffcf20",
+      "quantum/finite_gate.py": "d49c602d6ead26d659df44a6ab6c2044af1fdabb62fc8b19ff4bf462a02f47e2",
+      "quantum/measurement_benchmark.py": "a3609bd2dce0525d46d885083e791b6cc5447eb338741f235216c90df06c3730",
+      "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+      "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+      "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+      "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+      "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+      "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+      "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+      "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+      "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+      "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+      "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+      "experiments/validate_reference_states.py": "865f5b923891781aea6ed3a876e13083b885593ece935198d0ade487a5d799ef"
+    },
+    "checkpoint_sha256": "5f4486abe6368d0e071722923c85cfee829b0583b75e0655da2c52e891a115af"
+  },
+  "job_id": "635d50e4441cc5d1",
+  "bins": [
+    192,
+    384,
+    768
+  ],
+  "tolerance": 0.001,
+  "trace_tolerance": 1e-07,
+  "chunk": 128,
+  "backend": "local",
+  "cycles": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "all_raw_files_required": 6,
+  "all_cycle_banks_required": 54,
+  "decision_rule": "Pass only if every representative/hot snapshot score difference<=.001, trace error<=1e-7 and minimum logical eigenvalue>=-1e-7, across all9cycles of all6files. Missing coverage or numerical failure remains nonpassing.",
+  "uncertainty": "Deterministic quadrature sensitivity has no Monte Carlo confidence interval; existing paired representative difference summaries remain descriptive.",
+  "capacity": {
+    "max_seconds": 1800,
+    "blas_threads": 2,
+    "max_concatenated_state_bytes": 268435456,
+    "rss_target_bytes": 2147483648
+  },
+  "source_sha256": {
+    "experiments/local_accuracy_completion.py": "a5fca2e58ee1352b6ec049ac2a640226f29ee6b54cbcb2b605321f58e9a9a51f",
+    "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+    "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876"
+  },
+  "environment": {
+    "python": "3.13.13 | packaged by conda-forge | (main, Apr  8 2026, 02:29:07) [Clang 19.1.7 ]",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "device": "CPU"
+  },
+  "preservation": "Inputs and frozen historical result/quality directories are read only; output is a new local analysis."
+}

@@ -1,0 +1,46 @@
+{
+  "scipy_eigh_tridiagonal_source_sha256": "d808d98c75d94de86d267824ec660023fa8913f02c9affe18273ee78cee39608",
+  "source_observation": "STEMR branch returns v[:, :m] view; no full-eigenvector sort/copy. Workspace queried without eigenvector allocation.",
+  "workspace": [
+    {
+      "na": 12288,
+      "lwork_reals": 221184,
+      "liwork_integers": 122880,
+      "info": 0
+    },
+    {
+      "na": 16384,
+      "lwork_reals": 294912,
+      "liwork_integers": 163840,
+      "info": 0
+    }
+  ],
+  "union_preflight": [
+    {
+      "estimated_scratch_bytes": 3292471168,
+      "estimated_build_bytes": 1500454784,
+      "estimated_grid_bytes": 3292471168,
+      "outcome_nodes": 32319,
+      "lambda_rows": 9216,
+      "resident_grid_rows": 5120,
+      "na": 12288,
+      "chunk": 128,
+      "grid_chunk": 512,
+      "transfer_file_bytes": 1811939456,
+      "scope": "Conservative live-array/solver-free work estimate; RSS guard still required"
+    },
+    {
+      "estimated_scratch_bytes": 4231995264,
+      "estimated_build_bytes": 2491359104,
+      "estimated_grid_bytes": 4231995264,
+      "outcome_nodes": 32319,
+      "lambda_rows": 9216,
+      "resident_grid_rows": 5120,
+      "na": 16384,
+      "chunk": 128,
+      "grid_chunk": 512,
+      "transfer_file_bytes": 2415919232,
+      "scope": "Conservative live-array/solver-free work estimate; RSS guard still required"
+    }
+  ]
+}

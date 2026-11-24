@@ -1,0 +1,178 @@
+{
+  "checked_utc": "2026-11-24T09:18:50.247461+00:00",
+  "classification": "Read-only mounted local volume capacity inspection",
+  "commands": [
+    "df -kP",
+    "ls -la /Volumes",
+    "diskutil list -plist",
+    "diskutil info -plist /System/Volumes/Data",
+    "diskutil info -plist disk0"
+  ],
+  "requested_minimum_free_bytes": 322122547200,
+  "requested_minimum_free_GiB": 300,
+  "disk_information": {
+    "/System/Volumes/Data": {
+      "DeviceIdentifier": "disk3s1",
+      "ParentWholeDisk": "disk3",
+      "VolumeName": "Macintosh HD - Data",
+      "MountPoint": "/System/Volumes/Data",
+      "Writable": true,
+      "Internal": true,
+      "BusProtocol": "Apple Fabric",
+      "TotalSize": 994610155520,
+      "VolumeSize": 0,
+      "FreeSpace": 0,
+      "APFSContainerFree": 66280488960,
+      "APFSContainerReference": "disk3",
+      "APFSPhysicalStores": [
+        {
+          "APFSPhysicalStore": "disk0s2"
+        }
+      ],
+      "FilesystemType": "apfs"
+    },
+    "disk0": {
+      "DeviceIdentifier": "disk0",
+      "ParentWholeDisk": "disk0",
+      "VolumeName": "",
+      "MountPoint": "",
+      "Writable": true,
+      "Internal": true,
+      "VirtualOrPhysical": "Unknown",
+      "BusProtocol": "Apple Fabric",
+      "TotalSize": 1000555581440,
+      "VolumeSize": 0,
+      "FreeSpace": 0
+    }
+  },
+  "mounted_apfs_volumes": [
+    {
+      "mount_point": "/System/Volumes/iSCPreboot",
+      "volume_name": "iSCPreboot",
+      "device": "disk1s1",
+      "container": "disk1",
+      "physical_stores": [
+        "disk0s1"
+      ],
+      "free_bytes": 554905600,
+      "free_GiB": 0.5167961120605469,
+      "candidate_for_archive": false,
+      "reason": "System/boot volume or shared main APFS container with less than300GiB free."
+    },
+    {
+      "mount_point": "/System/Volumes/xarts",
+      "volume_name": "xART",
+      "device": "disk1s2",
+      "container": "disk1",
+      "physical_stores": [
+        "disk0s1"
+      ],
+      "free_bytes": 554905600,
+      "free_GiB": 0.5167961120605469,
+      "candidate_for_archive": false,
+      "reason": "System/boot volume or shared main APFS container with less than300GiB free."
+    },
+    {
+      "mount_point": "/System/Volumes/Hardware",
+      "volume_name": "Hardware",
+      "device": "disk1s3",
+      "container": "disk1",
+      "physical_stores": [
+        "disk0s1"
+      ],
+      "free_bytes": 554905600,
+      "free_GiB": 0.5167961120605469,
+      "candidate_for_archive": false,
+      "reason": "System/boot volume or shared main APFS container with less than300GiB free."
+    },
+    {
+      "mount_point": "/System/Volumes/Data",
+      "volume_name": "Macintosh HD - Data",
+      "device": "disk3s1",
+      "container": "disk3",
+      "physical_stores": [
+        "disk0s2"
+      ],
+      "free_bytes": 66280488960,
+      "free_GiB": 61.728515625,
+      "candidate_for_archive": false,
+      "reason": "System/boot volume or shared main APFS container with less than300GiB free."
+    },
+    {
+      "mount_point": "/System/Volumes/Update",
+      "volume_name": "Update",
+      "device": "disk3s2",
+      "container": "disk3",
+      "physical_stores": [
+        "disk0s2"
+      ],
+      "free_bytes": 66280488960,
+      "free_GiB": 61.728515625,
+      "candidate_for_archive": false,
+      "reason": "System/boot volume or shared main APFS container with less than300GiB free."
+    },
+    {
+      "mount_point": "/System/Volumes/Update/mnt1",
+      "volume_name": "Macintosh HD",
+      "device": "disk3s3",
+      "container": "disk3",
+      "physical_stores": [
+        "disk0s2"
+      ],
+      "free_bytes": 66280488960,
+      "free_GiB": 61.728515625,
+      "candidate_for_archive": false,
+      "reason": "System/boot volume or shared main APFS container with less than300GiB free."
+    },
+    {
+      "mount_point": "/",
+      "volume_name": "Macintosh HD",
+      "device": "disk3s3s1",
+      "container": "disk3",
+      "physical_stores": [
+        "disk0s2"
+      ],
+      "free_bytes": 66280488960,
+      "free_GiB": 61.728515625,
+      "candidate_for_archive": false,
+      "reason": "System/boot volume or shared main APFS container with less than300GiB free."
+    },
+    {
+      "mount_point": "/System/Volumes/Preboot",
+      "volume_name": "Preboot",
+      "device": "disk3s4",
+      "container": "disk3",
+      "physical_stores": [
+        "disk0s2"
+      ],
+      "free_bytes": 66280488960,
+      "free_GiB": 61.728515625,
+      "candidate_for_archive": false,
+      "reason": "System/boot volume or shared main APFS container with less than300GiB free."
+    },
+    {
+      "mount_point": "/System/Volumes/VM",
+      "volume_name": "VM",
+      "device": "disk3s6",
+      "container": "disk3",
+      "physical_stores": [
+        "disk0s2"
+      ],
+      "free_bytes": 66280488960,
+      "free_GiB": 61.728515625,
+      "candidate_for_archive": false,
+      "reason": "System/boot volume or shared main APFS container with less than300GiB free."
+    }
+  ],
+  "Volumes_directory_entries": [
+    {
+      "name": "Macintosh HD",
+      "symlink": true,
+      "resolved": "/"
+    }
+  ],
+  "eligible_local_archive_volumes": [],
+  "finding": "No feasible mounted local archive volume with at least300GiB free exists. Only the main1TB internal device and its system/recovery containers are listed; /Volumes has only the MacintoshHD symlink to root. No external or network archive destination was selected.",
+  "apfs_caution": "Main root/data/VM/preboot/update mounts share disk3 backed by disk0s2. Their repeated free-space numbers are the same container capacity, not additive storage.",
+  "actions": "No volume mounted, no unrelated folders inspected, and no writes/deletes outside this assessment file."
+}

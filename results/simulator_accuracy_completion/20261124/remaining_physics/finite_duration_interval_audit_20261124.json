@@ -1,0 +1,317 @@
+{
+  "source": "results/simulator_accuracy_completion/20261124/remaining_physics/summary.json",
+  "source_sha256": "2bb88d3bb36880de822f056305e07b0527c21ffb5e8ab08f66fe7a768aae766f",
+  "completed_jobs": 2,
+  "expected_jobs": 4,
+  "comparisons": {
+    "nominal/finite_duration_lumped/nearest": {
+      "status": "complete",
+      "tolerance": 0.01,
+      "interpretation": "inconclusive",
+      "registered_pass": false,
+      "cycles": [
+        {
+          "cycle": 0,
+          "mean": -1.295260195396016e-16,
+          "ci95": [
+            -1.295260195396016e-16,
+            -1.295260195396016e-16
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 1,
+          "mean": 3.105662470905757e-05,
+          "ci95": [
+            -0.0019570529256001373,
+            0.0020191661750182527
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 2,
+          "mean": 0.0009767267514389077,
+          "ci95": [
+            -0.002412080056805002,
+            0.004365533559682817
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 3,
+          "mean": 0.0014654193665397137,
+          "ci95": [
+            -0.0036313792693821074,
+            0.006562218002461534
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 4,
+          "mean": -0.00039348682031579854,
+          "ci95": [
+            -0.006074563436893842,
+            0.005287589796262246
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 5,
+          "mean": -0.0036582940523928824,
+          "ci95": [
+            -0.010256171846051076,
+            0.002939583741265311
+          ],
+          "classification": "inconclusive",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 6,
+          "mean": -0.0028135557802472047,
+          "ci95": [
+            -0.010227412036291876,
+            0.0046003004757974655
+          ],
+          "classification": "inconclusive",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 7,
+          "mean": -0.0038744592849159266,
+          "ci95": [
+            -0.012217176097057048,
+            0.004468257527225196
+          ],
+          "classification": "inconclusive",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 8,
+          "mean": -0.0005749285577712342,
+          "ci95": [
+            -0.009787698190466813,
+            0.008637841074924345
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        }
+      ]
+    },
+    "nominal/finite_duration_lumped/bayes_gaussian": {
+      "status": "complete",
+      "tolerance": 0.01,
+      "interpretation": "within_tolerance",
+      "registered_pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "mean": -1.295260195396016e-16,
+          "ci95": [
+            -1.295260195396016e-16,
+            -1.295260195396016e-16
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 1,
+          "mean": 3.105662470905757e-05,
+          "ci95": [
+            -0.0019570529256001373,
+            0.0020191661750182527
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 2,
+          "mean": 0.00075356552812011,
+          "ci95": [
+            -0.001559187639948893,
+            0.003066318696189113
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 3,
+          "mean": 0.0007301930885843377,
+          "ci95": [
+            -0.0015970358594094946,
+            0.0030574220365781704
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 4,
+          "mean": 0.0005286001384908096,
+          "ci95": [
+            -0.0018472445030339804,
+            0.0029044447800156
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 5,
+          "mean": 0.0011817783010542266,
+          "ci95": [
+            -0.0015167616670762848,
+            0.0038803182691847377
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 6,
+          "mean": 0.0008183243276669709,
+          "ci95": [
+            -0.001641934069889302,
+            0.003278582725223244
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 7,
+          "mean": 0.00046233508449941416,
+          "ci95": [
+            -0.002523509024352711,
+            0.0034481791933515396
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 8,
+          "mean": -0.0005968500181373241,
+          "ci95": [
+            -0.003364153115208552,
+            0.002170453078933904
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        }
+      ]
+    },
+    "nominal/finite_duration_lumped/lstm_256x3_s0": {
+      "status": "complete",
+      "tolerance": 0.01,
+      "interpretation": "within_tolerance",
+      "registered_pass": true,
+      "cycles": [
+        {
+          "cycle": 0,
+          "mean": -1.295260195396016e-16,
+          "ci95": [
+            -1.295260195396016e-16,
+            -1.295260195396016e-16
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 1,
+          "mean": 3.105662470905757e-05,
+          "ci95": [
+            -0.0019570529256001373,
+            0.0020191661750182527
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 2,
+          "mean": 0.0016557637634182385,
+          "ci95": [
+            -0.0008717992648195837,
+            0.004183326791656061
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 3,
+          "mean": 0.00010836986626557557,
+          "ci95": [
+            -0.003312706788509159,
+            0.0035294465210403097
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 4,
+          "mean": 0.00011475366906519992,
+          "ci95": [
+            -0.002673413059725748,
+            0.002902920397856148
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 5,
+          "mean": 0.0014281582840830157,
+          "ci95": [
+            -0.0021271627132977275,
+            0.004983479281463759
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 6,
+          "mean": 0.000783643663391537,
+          "ci95": [
+            -0.0024022532687943358,
+            0.00396954059557741
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 7,
+          "mean": 0.0008327026317482049,
+          "ci95": [
+            -0.0028271918587742507,
+            0.004492597122270661
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        },
+        {
+          "cycle": 8,
+          "mean": -0.001533777965977673,
+          "ci95": [
+            -0.0050161640213195954,
+            0.00194860808936425
+          ],
+          "classification": "within_tolerance",
+          "point_estimate_inside_band": true
+        }
+      ]
+    },
+    "nominal/passive_cooling/nearest": {
+      "status": "pending",
+      "interpretation": "unmeasured"
+    },
+    "nominal/passive_cooling/bayes_gaussian": {
+      "status": "pending",
+      "interpretation": "unmeasured"
+    },
+    "nominal/passive_cooling/lstm_256x3_s0": {
+      "status": "pending",
+      "interpretation": "unmeasured"
+    }
+  },
+  "scope": "Saved pointwise intervals only; no new samples, causal attribution, simultaneous inference or all-state certification.",
+  "generated_utc": "2026-11-24T09:55:15.658874+00:00",
+  "generator_sha256": "05d302b97bab64e82e0174b8717bd3d622f71ab82f546d4af5d477c006002cb4"
+}

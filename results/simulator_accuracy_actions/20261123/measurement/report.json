@@ -1,0 +1,140 @@
+{
+  "created_utc": "2026-11-24T07:29:05.167511+00:00",
+  "classification": "bounded directed software regression verification; not production-state validation or a new physics benchmark",
+  "environment": {
+    "python": "3.13.13",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "device": "CPU",
+    "packages": {
+      "numpy": "2.5.5",
+      "scipy": "1.18.1",
+      "qutip": "5.3.1",
+      "pytest": "9.2.0"
+    },
+    "blas_threads": 1,
+    "omp_threads": 1
+  },
+  "confirmed_defects": [
+    {
+      "source": "quantum/finite_gate.py:FiniteGate.measure",
+      "before": "Invalid or endpoint homodyne quantiles were passed to evolution/interpolation; np.interp could silently clamp them.",
+      "fix": "Reject nonfinite or non-interior quantiles before evolution."
+    },
+    {
+      "source": "experiments/validate_reference_states.py:audit_report",
+      "before": "Audit verified two scalar discrepancies and raw/source hashes but trusted stored numerical gate metrics, pass flag and ancillary refinement coverage. Forged metrics/flags or deleted refinements could survive audit.",
+      "fix": "Recompute probability, norm, ancilla boundary, fine/coarse grid and ancillary refinement checks from sealed raw arrays; require complete declared q/p/input/cutoff coverage; compare stored pass to shared unchanged acceptance rule."
+    }
+  ],
+  "verification": [
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_accuracy_measurement_directed.py",
+      "stage": "before fixes; initial seven-test version",
+      "result": "4 failed, 3 passed in5.59s",
+      "log": "before.log"
+    },
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_accuracy_measurement_directed.py tests/test_qutip_engine_benchmark.py tests/test_simulation_quality.py",
+      "stage": "final source and eleven directed tests",
+      "result": "42 passed in 7.71s",
+      "log": "final_regressions.log"
+    },
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m experiments.validate_reference_states --output results/simulation_quality_infrastructure/v1/instrument --audit-only",
+      "result": {
+        "raw_and_sources_verified": true,
+        "pass": true
+      },
+      "scope": "Read-only audit of existing six-level ideal-instrument control. Original data/source snapshot unmodified.",
+      "log": "historical_audit.log"
+    }
+  ],
+  "directed_fixture": {
+    "data_cutoff": 6,
+    "input": "Fock vacuum |0>",
+    "input_count": 1,
+    "sigma_absolute_q_units": 0.5,
+    "hbar": 1,
+    "L": "sqrt(pi)",
+    "ancilla_cutoffs": [
+      64,
+      96
+    ],
+    "outcome_radius": 12.0,
+    "max_outcome_step": 0.04,
+    "axes": [
+      "q",
+      "p"
+    ],
+    "extractions_per_case": 1,
+    "rounds": "not a memory trajectory; independent single-instrument conditionals",
+    "random_seeds": "none, deterministic quadrature fixture",
+    "training": "none"
+  },
+  "negative_controls": [
+    "Invalid finite-gate ancilla boundary diagnostics remain invalid in stage_gates.",
+    "101-level |100> supplied state retains all101 levels despite CLI cutoff6; inadequate budget is rejected before Oscillator allocation.",
+    "Numerical-gate/refinement/pass corruption cannot survive report audit."
+  ],
+  "grid_assessment": "validate() already enforced fine/coarse metric changes against acceptance tolerances; previous missing enforcement was audit_report trusting stored evidence. FiniteGate.measure still needs separate cross-grid/reference convergence controls; normalization alone is not grid convergence.",
+  "full_cutoff_preflight": {
+    "settings": {
+      "ancilla_cutoff": 768,
+      "outcome_radius": 60.0,
+      "max_outcome_step": 0.005,
+      "default_joint_budget": 2000000,
+      "default_scratch_bytes": 512000000
+    },
+    "estimates": [
+      {
+        "data_cutoff": 4096,
+        "input_count": 1,
+        "grid_nodes": 24173,
+        "joint_dimension": 3145728,
+        "scratch_bytes": 10317674496
+      },
+      {
+        "data_cutoff": 4096,
+        "input_count": 6,
+        "grid_nodes": 24173,
+        "joint_dimension": 3145728,
+        "scratch_bytes": 26159691776
+      },
+      {
+        "data_cutoff": 5120,
+        "input_count": 1,
+        "grid_nodes": 24173,
+        "joint_dimension": 3932160,
+        "scratch_bytes": 13531052032
+      },
+      {
+        "data_cutoff": 5120,
+        "input_count": 6,
+        "grid_nodes": 24173,
+        "joint_dimension": 3932160,
+        "scratch_bytes": 33333573632
+      }
+    ],
+    "recommendation": "Keep full data cutoff and preflight an explicitly budgeted sequential-input control or implement streaming conditional/grid calculations. Do not silently truncate states, relax accuracy tolerances, or raise capacity limits without a resource budget."
+  },
+  "remaining_gaps": [
+    "No4096/5120 production-state independent QuTiP validation executed.",
+    "The eight frozen small-basis finite-gate controls remain numerically invalid; no new converged finite-duration control study executed.",
+    "Conditional-state agreement does not validate shared preparation, feedback or scoring or hardware performance."
+  ],
+  "source_sha256": {
+    "experiments/validate_reference_states.py": "49bd3afefe09c70da72d9c154bb3aec6e7f1b32786ed0cb7ef3237024f7d41a4",
+    "quantum/measurement_benchmark.py": "a3609bd2dce0525d46d885083e791b6cc5447eb338741f235216c90df06c3730",
+    "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+    "tests/test_accuracy_measurement_directed.py": "1d2ca81097c4b566c3cad04effa119fc3f19623e434b20bfa0e9514e61af0a3f",
+    "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+    "tests/test_qutip_engine_benchmark.py": "d95f66697d47fee6ccf4417accb8078b396163172dcff158b4f3693e4276f80c"
+  },
+  "logs_sha256": {
+    "historical_audit.log": "adb175ccf9ac160a7a971e63f0a1c6e9b867bf29701a2f2b64b97faf79d9f7ec",
+    "final_regressions.log": "2ebcabf9f910226244deeea09b03363cf8909d365f317402639230079ed11169",
+    "before.log": "b7dcb2d6ac01c738f0da5695f3a98cc86869599735cf1f6ecb2e224513361c1d",
+    "directed_final.log": "2a57f0af8fcf7c69a8633e35f0506b1e3adac019f1a23733cffccfb52cd45ea4",
+    "after.log": "de3d870d3512850e7eace6d3f7ec9438e6113717ec9099a0a6e69abea9f640e6"
+  }
+}

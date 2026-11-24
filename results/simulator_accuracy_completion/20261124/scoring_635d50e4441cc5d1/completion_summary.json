@@ -1,0 +1,93 @@
+{
+  "created_utc": "2026-11-24T08:25:03.214650+00:00",
+  "result": {
+    "finished_utc": "2026-11-24T08:24:52.298243+00:00",
+    "classification": "saved-state deterministic rescoring; no trajectories",
+    "plan_sha256": "e5d14f3ee97193bcffd19840faef8180459bdada6dde8dc0902e5c47c4e59684",
+    "report": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/scoring_635d50e4441cc5d1/quality/logical_refinement_b429f66fc41bd6c9.json",
+    "report_sha256": "90a49f3d614f315bc027d6f3ecd72be1bc38c8603366b39a4c33ec14688e1e11",
+    "all_six_files_nine_cycles_present": true,
+    "all_sample_checks_pass": true,
+    "all_cycles_checked": true,
+    "elapsed_seconds": 178.7919721250073,
+    "peak_rss_bytes": 1195196416,
+    "numpy": "2.5.5",
+    "inputs_unchanged": true
+  },
+  "bins": {
+    "192": {
+      "max_absolute_score_difference": 1.474598221307133e-12,
+      "max_trace_error": 2.949640531824116e-12,
+      "minimum_logical_eigenvalue": 1.915436698141093e-10,
+      "checks": 54,
+      "failed_checks": 0
+    },
+    "384": {
+      "max_absolute_score_difference": 1.6579723699505777e-06,
+      "max_trace_error": 2.949196442614266e-12,
+      "minimum_logical_eigenvalue": 1.9154389185871423e-10,
+      "checks": 54,
+      "failed_checks": 0
+    },
+    "768": {
+      "max_absolute_score_difference": 4.1458543675876314e-07,
+      "max_trace_error": 2.9487523534044158e-12,
+      "minimum_logical_eigenvalue": 1.9154389185871423e-10,
+      "checks": 54,
+      "failed_checks": 0
+    }
+  },
+  "six_raw_checks": [
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/nearest_finite_ancilla.npz",
+      "raw_sha256": "5b1bb450211521173501f92060bb5d30916eb9a833d01e2cdaec5a5abbef0997",
+      "cycle_count": 9,
+      "coverage": "all_cycles",
+      "sample_checks_pass": true
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/nearest_replayed_corrections.npz",
+      "raw_sha256": "5ce3d29a52fd7d8ca2a5931430ac4227a1ecb0f0e2c0d80318f024e0bd0606e0",
+      "cycle_count": 9,
+      "coverage": "all_cycles",
+      "sample_checks_pass": true
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/bayes_gaussian_finite_ancilla.npz",
+      "raw_sha256": "3e9d2de5368254896442aa31c910ae0a12bb35a7ebcadf17e3170e4e123eb8c1",
+      "cycle_count": 9,
+      "coverage": "all_cycles",
+      "sample_checks_pass": true
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/bayes_gaussian_replayed_corrections.npz",
+      "raw_sha256": "933c0f5b324d7da31bed298ea042642459862e300a15ae9e90204a4662d17a01",
+      "cycle_count": 9,
+      "coverage": "all_cycles",
+      "sample_checks_pass": true
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/lstm_256x3_s0_finite_ancilla.npz",
+      "raw_sha256": "8690689acf51e38016a7035031b164cd5a7c622a7132278f570b12acd9ed9a6e",
+      "cycle_count": 9,
+      "coverage": "all_cycles",
+      "sample_checks_pass": true
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/lstm_256x3_s0_replayed_corrections.npz",
+      "raw_sha256": "cda672332d693e2b04895ef83f6b854031cdbbdd2eb31b0d183ca4942e6ed491",
+      "cycle_count": 9,
+      "coverage": "all_cycles",
+      "sample_checks_pass": true
+    }
+  ],
+  "sources_still_match_registered_plan": true,
+  "scope": "Saved representative and selected hot snapshots for recovered job635d50e4441cc5d1 only; no trajectories/training/highercutoff simulation, no all-state bound and no MonteCarloCI for deterministic quadrature differences.",
+  "evidence_sha256": {
+    "plan.json": "e5d14f3ee97193bcffd19840faef8180459bdada6dde8dc0902e5c47c4e59684",
+    "result.json": "eccfef980e86cb3488841c023fd5010b5f1dcb1122e94b9e8092581c75291ae7",
+    "execution_environment.json": "fc6f5cdd7375dad145f95c5d57d293bc0814b7fde7d6fdae59a39e546a376f47",
+    "execution.log": "98d2964d25a03cdfad5664ac4817922b70af90aaecc64cb941b9ebcc6887c595",
+    "logical_refinement_b429f66fc41bd6c9.json": "90a49f3d614f315bc027d6f3ecd72be1bc38c8603366b39a4c33ec14688e1e11"
+  }
+}

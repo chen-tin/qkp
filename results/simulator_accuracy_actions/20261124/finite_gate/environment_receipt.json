@@ -1,0 +1,16 @@
+{
+  "recorded_utc": "2026-11-24T08:37:12.978781+00:00",
+  "python_executable": "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+  "python": "3.13.13",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "device": "local CPU",
+  "packages": {
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "qutip": "5.3.1",
+    "pytest": "9.2.0"
+  },
+  "scope": "Version receipt from the same local .venv used by all finite-gate audit commands; supplements frozen plans which name NumPy/QuTiP but omit SciPy version. No package changes performed.",
+  "deterministic": true,
+  "noise": "No classical displacement/detector noise. Loss/dephasing averaged deterministically by Lindblad density evolution; no Monte Carlo trajectories or confidence intervals."
+}

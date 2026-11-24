@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-11-24T14:30:38.282627+00:00",
+  "classification": "Numerical-domain failure in the registered3072trajectory8cyclepassive-loss model; no softwaredefect attribution or reruns",
+  "metric": "Sumof|psi_n|^2inuppermax(4,N//10)Focklevels ateachrecordedprimitive stage",
+  "source_locators": [
+    "quantum/reference_runner.py:69",
+    "quantum/quality.py:96"
+  ],
+  "threshold": "Eachtrajectoryedgepopulationmustbe strictlyless than0.01; equalityalsofails. Separatemeanedge<1e-4andnorm<1e-7 remainpassing.",
+  "arm": "nearest_finite_ancilla",
+  "report_by_cutoff": {
+    "4096": {
+      "raw": "results/simulator_accuracy_completion/20261124/remaining_physics/jobs/9e5e12cf5817874b/nominal_N4096_smooth/nearest_finite_ancilla.npz",
+      "raw_sha256": "5d166a956bbda66b784a6c5e09c2d54b19e321634520ed1d8188f20afd5597c6",
+      "seal_sha256": "d081a8cc8611d55255dbf6e2d125b2e72e9553a30abddec63925a28efbdcf7d6",
+      "max_edge_probability": 0.04949983503153259,
+      "violating_trajectory_count": 1,
+      "trajectory_denominator": 3072,
+      "violating_primitive_checks": 4,
+      "primitive_check_denominator": 614400,
+      "violating_stages": [
+        {
+          "cycle": 8,
+          "stage": "p_feedback",
+          "affected_trajectories": 1,
+          "denominator": 3072,
+          "maximum_edge_probability": 0.011258775347224338,
+          "indices_zero_based": [
+            2832
+          ],
+          "cardinal_labels": [
+            "Y-"
+          ]
+        },
+        {
+          "cycle": 8,
+          "stage": "p_control_rotation",
+          "affected_trajectories": 1,
+          "denominator": 3072,
+          "maximum_edge_probability": 0.011258775347224338,
+          "indices_zero_based": [
+            2832
+          ],
+          "cardinal_labels": [
+            "Y-"
+          ]
+        },
+        {
+          "cycle": 8,
+          "stage": "explicit_cooling_loss",
+          "affected_trajectories": 1,
+          "denominator": 3072,
+          "maximum_edge_probability": 0.04949983503153259,
+          "indices_zero_based": [
+            2832
+          ],
+          "cardinal_labels": [
+            "Y-"
+          ]
+        },
+        {
+          "cycle": 8,
+          "stage": "explicit_cooling_dephasing",
+          "affected_trajectories": 1,
+          "denominator": 3072,
+          "maximum_edge_probability": 0.04949983503153259,
+          "indices_zero_based": [
+            2832
+          ],
+          "cardinal_labels": [
+            "Y-"
+          ]
+        }
+      ],
+      "same_noise_cardinal_index2832_cycle8_stages": {
+        "p_feedback": 0.011258775347224338,
+        "p_control_rotation": 0.011258775347224338,
+        "explicit_cooling_loss": 0.04949983503153259,
+        "explicit_cooling_dephasing": 0.04949983503153259
+      }
+    },
+    "5120": {
+      "raw": "results/simulator_accuracy_completion/20261124/remaining_physics/jobs/fbd4d6119d795bd8/nominal_N5120_smooth/nearest_finite_ancilla.npz",
+      "raw_sha256": "515a0de6339a0113bcbcf3c2b3ac52fa9a01793fd39b98c7f154be3a8df719ad",
+      "seal_sha256": "b0fd236afefb2b1876ea0ae69e8b99dd65cc61af5695911a26ff116b869e32dc",
+      "max_edge_probability": 9.22108010790082e-10,
+      "violating_trajectory_count": 0,
+      "trajectory_denominator": 3072,
+      "violating_primitive_checks": 0,
+      "primitive_check_denominator": 614400,
+      "violating_stages": [],
+      "same_noise_cardinal_index2832_cycle8_stages": {
+        "p_feedback": 4.811104675659041e-25,
+        "p_control_rotation": 4.811104675659041e-25,
+        "explicit_cooling_loss": 7.485877005971707e-41,
+        "explicit_cooling_dephasing": 7.485877005971707e-41
+      }
+    }
+  },
+  "correlation": "FourviolatingprimitivechecksbelongtoonesingleY-minuspath,1/3072overalland1/512Yminusinputs; theyarenotfourindependentfailures.",
+  "interpretation": "4096nearestvalidonlythroughcycle7; 5120allrecordedstagespass. ThepairedmeanCIcomparisonremainsinconclusiveanddoesnotrestore4096numericalvalidity."
+}

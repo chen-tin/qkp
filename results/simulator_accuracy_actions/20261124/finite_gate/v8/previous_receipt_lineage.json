@@ -1,0 +1,82 @@
+[
+  {
+    "folder": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v7",
+    "receipts": [
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v7/plan.json",
+        "copy": "previous_receipt_lineage/v7/plan.json",
+        "sha256": "04848dc690e8c3575e15a04e2c31f81aa98fa97bf0aceae876af04699910284e"
+      },
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v7/result.json",
+        "copy": "previous_receipt_lineage/v7/result.json",
+        "sha256": "146a639b3bfa4bec621893e1d1ab05a400904edc720c382bd576ac499371f4d7"
+      },
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v7/resource_usage.json",
+        "copy": "previous_receipt_lineage/v7/resource_usage.json",
+        "sha256": "41f5c611556050edafd08723ea1cc353c42871a9ed66d24040ec1ff07307983b"
+      },
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v7/resume_receipt.json",
+        "copy": "previous_receipt_lineage/v7/resume_receipt.json",
+        "sha256": "c57fd6d45f8fd70280989fe0e83417aaebdc54113e67713732538d17d24b104d"
+      },
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v7/runtime_preflight.json",
+        "copy": "previous_receipt_lineage/v7/runtime_preflight.json",
+        "sha256": "421911ed7db53aa8913d5d10303081cf8ca9726a522c69458dafc360f06f6736"
+      }
+    ]
+  },
+  {
+    "folder": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v5",
+    "receipts": [
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v5/plan.json",
+        "copy": "previous_receipt_lineage/v5/plan.json",
+        "sha256": "317ff908216ed95bbd25cd2b0a0349c30a97b919c200a6c80349cb3b286ba8aa"
+      },
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v5/result.json",
+        "copy": "previous_receipt_lineage/v5/result.json",
+        "sha256": "020d365d2cd64b5925fe3d9a5eac375660ffbebf8cf38c5b9c97fa3b7b7786ee"
+      },
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v5/resource_usage.json",
+        "copy": "previous_receipt_lineage/v5/resource_usage.json",
+        "sha256": "5c87a7a6240280eae2bd6272fc759352e85af51123b4840f323813dd8b2e1aa6"
+      },
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v5/resume_receipt.json",
+        "copy": "previous_receipt_lineage/v5/resume_receipt.json",
+        "sha256": "93cbb37a01e6312a132b0abb2e49123095530c08243da4477be5293769de57e7"
+      },
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v5/runtime_preflight.json",
+        "copy": "previous_receipt_lineage/v5/runtime_preflight.json",
+        "sha256": "09b9f6110c33c4c5596a235db17d6d87818bd9bc9787de90ebc0d8b702575ccf"
+      }
+    ]
+  },
+  {
+    "folder": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v4",
+    "receipts": [
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v4/plan.json",
+        "copy": "previous_receipt_lineage/v4/plan.json",
+        "sha256": "318c41067ee284a75f436bfee5fa53446902936e36d536144aa5abac228374d8"
+      },
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v4/result.json",
+        "copy": "previous_receipt_lineage/v4/result.json",
+        "sha256": "c1b66686bfeb7b8b919286d343e53384cb266d2c44122b8cd272be0d3d5cc17d"
+      },
+      {
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261124/finite_gate/v4/resource_usage.json",
+        "copy": "previous_receipt_lineage/v4/resource_usage.json",
+        "sha256": "cda46ac3adaad715576ca043eb98dda1cb6732e7b5c65afe01d09b52d941fc13"
+      }
+    ]
+  }
+]

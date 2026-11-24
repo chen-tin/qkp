@@ -1,0 +1,204 @@
+{
+  "completed_utc": "2026-11-24T08:53:31.196962+00:00",
+  "classification": "local_numerical_GKP_finite_gate_pilot",
+  "completed_jobs": 8,
+  "expected_jobs": 8,
+  "stage_failures": 0,
+  "registered_numerical_sample_checks_pass": false,
+  "explicit_refinement_pass": true,
+  "numerical_checks_pass": false,
+  "decision": "inconclusive",
+  "comparisons": [
+    {
+      "cutoff": 128,
+      "candidate": "qutip",
+      "reference": "qutip_refined",
+      "kind": "explicit_refinement",
+      "paired_difference": {
+        "mean": [
+          0.0,
+          4.239087274968134e-06,
+          3.4482584941504988e-06
+        ],
+        "se": [
+          0.0,
+          4.3124492050568114e-06,
+          4.240352213712102e-06
+        ],
+        "ci95_low": [
+          0.0,
+          -4.21315785210137e-06,
+          -4.862679126489682e-06
+        ],
+        "ci95_high": [
+          0.0,
+          1.2691332402037638e-05,
+          1.175919611479068e-05
+        ]
+      },
+      "verdict": "supports"
+    },
+    {
+      "cutoff": 128,
+      "candidate": "lumped",
+      "reference": "qutip_refined",
+      "kind": "approximation",
+      "paired_difference": {
+        "mean": [
+          0.0,
+          0.04208307788987159,
+          -0.054769365906229696
+        ],
+        "se": [
+          0.0,
+          0.06931922024781256,
+          0.061800149452899446
+        ],
+        "ci95_low": [
+          0.0,
+          -0.09378009723223699,
+          -0.175895433073102
+        ],
+        "ci95_high": [
+          0.0,
+          0.17794625301198017,
+          0.06635670126064261
+        ]
+      },
+      "verdict": "inconclusive"
+    },
+    {
+      "cutoff": 192,
+      "candidate": "qutip",
+      "reference": "qutip_refined",
+      "kind": "explicit_refinement",
+      "paired_difference": {
+        "mean": [
+          0.0,
+          4.239083766927054e-06,
+          3.447989469560856e-06
+        ],
+        "se": [
+          0.0,
+          4.312451961558921e-06,
+          4.240386868754163e-06
+        ],
+        "ci95_low": [
+          0.0,
+          -4.213166762787307e-06,
+          -4.863016073713648e-06
+        ],
+        "ci95_high": [
+          0.0,
+          1.2691334296641416e-05,
+          1.175899501283536e-05
+        ]
+      },
+      "verdict": "supports"
+    },
+    {
+      "cutoff": 192,
+      "candidate": "lumped",
+      "reference": "qutip_refined",
+      "kind": "approximation",
+      "paired_difference": {
+        "mean": [
+          0.0,
+          0.043637341113398176,
+          5.462660370030015e-05
+        ],
+        "se": [
+          0.0,
+          0.07077634253314437,
+          0.08749350553879154
+        ],
+        "ci95_low": [
+          0.0,
+          -0.09508174120903135,
+          -0.17142949313348216
+        ],
+        "ci95_high": [
+          0.0,
+          0.1823564234358277,
+          0.17153874634088273
+        ]
+      },
+      "verdict": "inconclusive"
+    }
+  ],
+  "invalid_or_missing_jobs": [],
+  "scope": "Two-cycle broad-noise GKP control only; not nominal8cycle memory, hardware accuracy, or all-state certification.",
+  "uncertainty": "Existing paired state-stratified normal95%fidelity intervals; pilot2/state has limited statistical power and is a numerical/timingpreflight, not a confirmatory equivalence claim. Deterministic quadrature gets no MCinterval.",
+  "source_sha256": {
+    "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+    "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+    "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+    "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+    "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+    "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+    "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+    "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+    "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+    "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+    "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+    "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+    "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+    "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+    "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+    "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+    "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+    "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+    "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+    "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+    "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+    "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+    "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62"
+  },
+  "resource_usage": {
+    "created_utc": "2026-11-24T08:53:30.414482+00:00",
+    "returncode": 0,
+    "interruption_reason": null,
+    "population_preflight_pass": true,
+    "elapsed_seconds": 99.87675154200406,
+    "max_tree_rss_bytes": 1304543232,
+    "samples": [],
+    "commands": [
+      [
+        "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+        "-u",
+        "-m",
+        "experiments.quality_benchmark",
+        "run",
+        "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/pilot_128_192/plans/finite_gate",
+        "--max-jobs",
+        "4"
+      ],
+      [
+        "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+        "-u",
+        "/Users/christopherbabayan/programs/QUANTUM/qkp/ops/ec2/parallel_worker.py",
+        "run",
+        "--root",
+        "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/pilot_128_192",
+        "--run-id",
+        "pilot_128_192",
+        "--presets",
+        "finite_gate",
+        "--workers",
+        "1",
+        "--threads",
+        "1",
+        "--no-sync",
+        "--no-shutdown"
+      ]
+    ],
+    "cwd": "/Users/christopherbabayan/programs/QUANTUM/qkp",
+    "thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "projected_full16_state_seconds": 799.0140123360325,
+  "full_budget_preflight_pass": false
+}

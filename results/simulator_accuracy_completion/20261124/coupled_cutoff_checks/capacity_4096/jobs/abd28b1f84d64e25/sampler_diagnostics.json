@@ -1,0 +1,119 @@
+{
+  "contract": {
+    "backend": "direct_full_outcome_inverse_CDF",
+    "uniform_index": 1,
+    "quantile_stream": "uniforms[1]",
+    "unused_auxiliary_streams": [
+      "uniforms[0] eigenvalue draw",
+      "uniforms[2] historical jitter"
+    ],
+    "coupling_scope": "Common quantiles across cutoffs and explicit QuTiP; also changes coupling to classical replay, whose readout uses uniforms[1]. Marginals unchanged within declared numerical error.",
+    "max_step": 0.00025,
+    "cdf_tolerance": 1e-10,
+    "shot_batch": 64,
+    "node_chunk": 256,
+    "tail_probability": 1e-15,
+    "float_budget": 5e-12,
+    "max_table_bytes": 67108864,
+    "floating_bound_status": "Explicit engineering allowance; not a proved special-function ULP guarantee."
+  },
+  "calls": [
+    {
+      "axis": "q",
+      "cutoff": 4096,
+      "trajectories": 12,
+      "max_declared_exact_cdf_residual_bound": 1.292406377751918e-11,
+      "max_iterations": 10,
+      "minimum_conditional_norm": 0.03138933379764684,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "p",
+      "cutoff": 4096,
+      "trajectories": 12,
+      "max_declared_exact_cdf_residual_bound": 1.3423830672054194e-11,
+      "max_iterations": 11,
+      "minimum_conditional_norm": 0.03817777962362527,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "q",
+      "cutoff": 4096,
+      "trajectories": 12,
+      "max_declared_exact_cdf_residual_bound": 1.2810487962100027e-11,
+      "max_iterations": 17,
+      "minimum_conditional_norm": 0.08103224727062434,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    },
+    {
+      "axis": "p",
+      "cutoff": 4096,
+      "trajectories": 12,
+      "max_declared_exact_cdf_residual_bound": 1.2886482728135619e-11,
+      "max_iterations": 17,
+      "minimum_conditional_norm": 0.041555326953650364,
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      }
+    }
+  ],
+  "scope": "New process-local experimental sampler; production defaults restored on context exit."
+}

@@ -1,0 +1,77 @@
+{
+  "number": 1,
+  "attached_utc": "2026-11-24T08:48:13.225209+00:00",
+  "started_utc": "2026-11-24T08:36:50.615390+00:00",
+  "parent_pid": 54762,
+  "observed_command": ".venv/bin/python -u -m experiments.continue_local_physics run results/simulator_accuracy_completion/20261124/remaining_physics --max-seconds 3600 --threads 2 --max-rss-gib 12 --reserve-disk-gib 8 --no-sync --no-shutdown",
+  "scope": "Root-launched successful first session; previous rejected preflight does not count.",
+  "terminal_observed_utc": "2026-11-24T09:44:13.276794+00:00",
+  "terminal_status": {
+    "started_utc": "2026-11-24T08:36:50.615390+00:00",
+    "status": "interrupted",
+    "jobs": {
+      "dcd0f4d8452e1fb5": {
+        "status": "completed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/jobs/dcd0f4d8452e1fb5/quality/logical_refinement_52e8e1885c4d2165.json",
+          "sha256": "cedf4d7ae12683e151c2eeabc654c23be7593cb0b18bb15db57603351e9e922d",
+          "pass": true
+        }
+      }
+    },
+    "max_seconds": 3600,
+    "local_only": true,
+    "updated_utc": "2026-11-24T09:36:51.864651+00:00",
+    "active_rss_bytes": 2554839040,
+    "elapsed_seconds": 3601.7194434580015,
+    "error": "TimeoutError('Registered local deadline reached')",
+    "finished_utc": "2026-11-24T09:36:52.336470+00:00"
+  },
+  "cumulative_job_summary": {
+    "dcd0f4d8452e1fb5": {
+      "variant": "finite_duration_lumped",
+      "cutoff": 4096,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true,
+      "row_stage_passes": [
+        true,
+        true,
+        true
+      ]
+    },
+    "0643eef0fa378878": {
+      "variant": "finite_duration_lumped",
+      "cutoff": 5120,
+      "observations_saved": true,
+      "scoring_status": "pending_required_refinement",
+      "scoring_pass": false,
+      "processed": false,
+      "row_stage_passes": [
+        true,
+        true,
+        true
+      ]
+    },
+    "9e5e12cf5817874b": {
+      "variant": "passive_cooling",
+      "cutoff": 4096,
+      "observations_saved": false,
+      "scoring_status": "pending",
+      "scoring_pass": false,
+      "processed": false,
+      "row_stage_passes": null
+    },
+    "fbd4d6119d795bd8": {
+      "variant": "passive_cooling",
+      "cutoff": 5120,
+      "observations_saved": false,
+      "scoring_status": "pending",
+      "scoring_pass": false,
+      "processed": false,
+      "row_stage_passes": null
+    }
+  }
+}

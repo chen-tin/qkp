@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-24T08:30:13.958614+00:00",
+  "classification": "Local continuation implementation and software safety checks; no production launch",
+  "tests": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_continue_local_physics.py",
+    "passed": 9,
+    "seconds": 2.01,
+    "log": "tests.log"
+  },
+  "production_scope": "Exactly finite_duration_lumped/passive_cooling at4096/5120;512/state,8cycles,3controllers,base_seed26112001,all original scientific config including checkpoint hash preserved excluding only source_hashes. Fresh active environment/source snapshots/jobIDs and original migration provenance.",
+  "execution_safety": [
+    "Default draft generation cannot execute",
+    "Explicit --freeze --sources-final before source snapshots",
+    "Run requires finite --max-seconds plus --no-sync --no-shutdown",
+    "Thread/RSS/memory/disk preflight, sampled child RSS, interrupt/terminate cleanup",
+    "Local per-raw SHA receipts before whole-job result or refinement",
+    "Resume reuses sealed raw and checked refinement; original sources/raw remain immutable",
+    "Shared-basis scoring after each completed new local job",
+    "SIGTERM/SIGINT become catchable interruptions with prior signal handlers restored; child cleanup retains raw checkpoints"
+  ],
+  "draft": "results/simulator_accuracy_completion/20261124/local_physics_draft/draft_plan.json",
+  "independent_software_check": "smoke_commands.sh (documented but not run by author; root/independent agent must run after measurement source freeze)",
+  "source_sha256": {
+    "experiments/continue_local_physics.py": "40edf5b8657d73cf8bcfaf1b99e0da985d0508fe3cc45332dafd323bc80f0b44",
+    "tests/test_continue_local_physics.py": "53b48fabc5fea9eaf8c74d7671970071611c7dabd0286292cfe7d3b29b27a2dd"
+  },
+  "status": "Ready for integration; production remains Planned and no cloud actions occurred."
+}

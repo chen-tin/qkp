@@ -1,0 +1,46 @@
+{
+  "identity": {
+    "config": {
+      "data_cutoff": 8,
+      "data_cutoffs": [
+        6,
+        8
+      ],
+      "ancilla_cutoffs": [
+        64,
+        96
+      ],
+      "sigma": 0.5,
+      "coupling": 1.0,
+      "radius": 12.0,
+      "dy": 0.04,
+      "chunk": 7,
+      "grid_chunk": 64,
+      "max_scratch_bytes": 4294967296,
+      "reference_wave_basis": "scaled_generalized_laguerre_v1",
+      "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+      "source_hashes": {
+        "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+        "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+        "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+        "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+        "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+      },
+      "environment": {
+        "python": "3.13.13",
+        "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+        "device": "CPU",
+        "packages": {
+          "numpy": "2.5.5",
+          "scipy": "1.18.1",
+          "qutip": "5.3.1"
+        }
+      }
+    },
+    "data_cutoff": 8,
+    "ancilla_cutoff": 64,
+    "transfer_sha256": "8d71dd45dc7419b39dcc3ee2d4eb8e5812bb1ec0f37803b1466dbd324726f3bf",
+    "previous_transfer_sha256": null
+  },
+  "sha256": "83b95ab320ea5a2a63b5e1a1f05e04f88357b36eaec012cd67204055400a75cf"
+}

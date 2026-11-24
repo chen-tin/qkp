@@ -1,0 +1,112 @@
+{
+  "registered_utc": "2026-11-24T08:27:16.385336+00:00",
+  "supersedes_attempt": "ODE attempts preserved as interrupted, no completed joint/accuracy result. This is a new exact finite-operator spectral-circuit method and stable generalized-Laguerre reference evaluator, validated against independent small-data sesolve and arbitrary-precision controls before launch.",
+  "status": "Planned",
+  "classification": "local production-snapshot single-instrument accuracy control, not multicycle/hardware/all-state certification",
+  "question": "Does the independent full-Fock circuit agree with the scalable ideal instrument on a saved representative and hot production state?",
+  "inputs": {
+    "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261123/root/archive_spot_check/nearest_finite_ancilla.npz",
+    "sha256": "419564e205e6fcef5ed602ddce2dbebd19e12a14f4695db5979f81fcccb60e0b",
+    "cycle": 8,
+    "snapshot_columns": [
+      0,
+      8
+    ],
+    "original_trial_ids": [
+      0,
+      211
+    ],
+    "cardinal_ids": [
+      0,
+      0
+    ],
+    "mean_photon_numbers": [
+      196.1440220035597,
+      1892.8939145178729
+    ],
+    "data_cutoff": 4096
+  },
+  "fixed": {
+    "sigma_absolute_q": 0.0886226925452758,
+    "hbar": 1,
+    "L": "sqrt(pi)",
+    "coupling": 1.0,
+    "axes": [
+      "q",
+      "p"
+    ],
+    "rounds": "one conditional extraction on each saved state",
+    "random_seeds": "none, deterministic sesolve and quadrature",
+    "training_seeds": "none",
+    "chunk": 64,
+    "max_wall_seconds": 1200,
+    "max_rss_bytes": 4294967296,
+    "blas_threads": 2,
+    "omp_threads": 2,
+    "no_cloud": true
+  },
+  "numerical_refinement_ladder": {
+    "ancilla_cutoffs": [
+      4096,
+      8192
+    ],
+    "radii": [
+      120.0
+    ],
+    "dy": [
+      0.01,
+      0.005
+    ],
+    "sequence": "Use fulldataN4096,Na4096/8192,radius120,dy.01; compare nested coarse/fine quadrature and if needed refine to.005 using sealed circuitjoints. These ancilla sizes are justified by hotinput meanphotons1893. Nocondition/tolerance changes or forced pass; any inadequateancilla/window/grid remains explicit."
+  },
+  "hypothesis": "At adequate ancillary cutoff/window/grid, representative and hot state instrument differences satisfy unchanged empirical numerical criteria. StageA may expose unsupported ancillary/window coverage.",
+  "decision_rule": {
+    "support": "Final ancillary control passes all fixed TV<=1e-4,conditionalinfidelity<=1e-5,masserror<=1e-5,norm<=1e-7,ancillaryedge<1e-4,gridinfidelitychange<=1e-6,gridTVchange<=1e-4 and ancillary refinement discrepancies.",
+    "contradict": "Converged numerical controls show a discrepancy above these fixed tolerances.",
+    "inconclusive": "Any capacity/time limit, missing window mass, failing ancillary boundary/refinement or unconverged grid prevents support; retain exact failing check and scope."
+  },
+  "command": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-u",
+    "-m",
+    "experiments.validate_reference_states",
+    "--states",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261123/root/archive_spot_check/nearest_finite_ancilla.npz",
+    "--cycle",
+    "8",
+    "--columns",
+    "0",
+    "8",
+    "--streaming",
+    "--chunk",
+    "64",
+    "--circuit-backend",
+    "spectral",
+    "--ancilla-cutoffs",
+    "4096",
+    "8192",
+    "--sigma",
+    "0.0886226925452758",
+    "--radius",
+    "120",
+    "--dy",
+    ".01",
+    "--max-joint",
+    "35000000",
+    "--max-scratch-mb",
+    "4000",
+    "--output",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/full4096_cycle8_spectral_v1"
+  ],
+  "source_sha256": {
+    "quantum/streaming_measurement.py": "2a29be80f22466028711aa721f905b8708bd2408fbb6c4b21f571c4f0cf3f55d",
+    "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+    "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+    "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+    "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62"
+  },
+  "reference_wave_basis": "scaled_generalized_laguerre_v1",
+  "circuit_backend": "exact_finite_operator_spectral",
+  "control_evidence": "final_small_controls.log:75 passed in13.55s; highorder mpmath gold in high_energy_evaluator_reference.json; no localHermite fallback",
+  "estimated_joint_disk_bytes": 3221225472
+}

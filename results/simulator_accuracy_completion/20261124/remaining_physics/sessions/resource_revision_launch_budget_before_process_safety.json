@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-24T09:51:22.527966+00:00",
+  "classification": "Authorized resource-only scheduling correction; no scientific setting/source/job/seed changes",
+  "manager_sha256": "90e79a47642d090e14aa76457b5a7806b7a0b0383afa03ce978e6a78d6be77f7",
+  "guard_sha256": "c9a8e902046f5cb80f50102254c2580d11a11f9d4d0e9ee5f93592b7e3bedea6",
+  "prior_registry_sha256": "c25dbb2c269a63ec71355bc704f72fc447388db6c44297e6ebcabf5813da8471",
+  "maximum_parent_launches_including_prior_two": 6,
+  "maximum_cumulative_parent_active_seconds": 10800,
+  "maximum_seconds_per_launch": 3600,
+  "inherited_active_seconds": 3722.6873929160065,
+  "inherited_conservative_overhead_seconds": 20,
+  "extra_headroom_bytes": 536870912,
+  "mandatory_estimated_peak_bytes": 9730785280,
+  "child_sampled_rss_cap_bytes": 12884901888,
+  "disk_reserve_bytes": 8589934592,
+  "retry_policy": "Clean registered timeout or exact next-job memory-preflight failure before new child only. All other errors stop. Real availability, frozen source/raw guards before every launch.",
+  "prior_session2_error": "ValueError('Local memory preflight failed: estimate=9730785280, cap=12884901888, available=9568649216')",
+  "test": "5 directed retry classifiers passed; actual reservation snapshot recorded",
+  "reservation_snapshot": {
+    "density_root_pids": [
+      69553
+    ],
+    "density_tree_pids": [
+      69553
+    ],
+    "density_sampled_tree_rss_bytes": 2477621248,
+    "density_committed_bytes": 4294967296,
+    "density_remaining_growth_bytes": 1817346048,
+    "density_final_release_marker": false,
+    "scope": "Sampled process-tree RSS; full4GiB reservation persists between v7/v8."
+  },
+  "status_reporting_correction_utc": "2026-11-24T09:52:03.548851+00:00"
+}

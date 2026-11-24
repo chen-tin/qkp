@@ -1,0 +1,22 @@
+{
+  "checked_utc": "2026-11-24T15:32:12.854924+00:00",
+  "integrated_tests": "263 passed in21.70s; exact source versions and command in integration_final_reporting_manifest.json",
+  "current_source_hashes_match_tested_versions": true,
+  "source_files": 138,
+  "git_diff_check": {
+    "command": "git diff --check",
+    "exit_code": 0
+  },
+  "document_links": {
+    "checked_utc": "2026-11-24T15:31:21.580870+00:00",
+    "documents": [
+      "docs/simulator_accuracy_local_20261124.md",
+      "docs/local_finite_gate_accuracy_2026-11-24.md"
+    ],
+    "local_links_checked": 41,
+    "missing": [],
+    "pass": true
+  },
+  "frozen_evidence_and_post_run_reporting_version": "See final_state_validation.json; old producer snapshots are preserved and the single intentional active reporting change is documented.",
+  "user_notes_git_diff_empty": true
+}

@@ -1,0 +1,28 @@
+{
+  "run_id": "pilot_256_384",
+  "started": "2026-11-24T08:56:05.001033+00:00",
+  "stages": {
+    "finite_gate": {
+      "jobs": 8,
+      "completed_jobs": 8,
+      "scored_jobs": 8,
+      "stage_failures": 0,
+      "registered_numerical_sample_checks_pass": false,
+      "analysis_updated": "2026-11-24T09:00:37.642685+00:00",
+      "status": "completed",
+      "processed_in_epoch": 8
+    }
+  },
+  "execution": {
+    "epoch": "20261124T085605000396Z",
+    "workers": 1,
+    "threads_per_job": 1,
+    "cpu_budget": 1,
+    "orchestrator_sha256": "9d765e4c6ede107016f0e9280084ad0650f22001f6d7e19454dc50073829e7f2",
+    "started": "2026-11-24T08:56:05.001315+00:00",
+    "scope": "job scheduling only; frozen science and registered checks unchanged"
+  },
+  "active_jobs": [],
+  "status": "all_scheduled_observations_completed",
+  "updated": "2026-11-24T09:00:37.649207+00:00"
+}

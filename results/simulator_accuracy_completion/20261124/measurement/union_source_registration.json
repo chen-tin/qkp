@@ -1,0 +1,15 @@
+{
+  "registered_utc": "2026-11-24T08:46:25.032018+00:00",
+  "shared_sources_unchanged_since_sample": true,
+  "sha256": {
+    "quantum/streaming_measurement.py": "2a29be80f22466028711aa721f905b8708bd2408fbb6c4b21f571c4f0cf3f55d",
+    "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+    "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+    "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+    "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+    "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+    "tests/test_instrument_operator_bound.py": "e7587211f23c52080c9f1a0f3a82aeb5e930f5dab48b7603846e6727a4633775",
+    "tests/test_reference_wave_basis.py": "03192b1772cf4d1123ac1f0de3a6ffe5994de8275b9e73f0c10ad6b30340e905"
+  },
+  "new_source_scope": "row-tiled union9216lambda implementation and prospective16384 controls, before full uniform launch"
+}

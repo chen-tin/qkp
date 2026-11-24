@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-11-24T14:35:10.773382+00:00",
+  "status": "all_density_and_readback_reservations_released",
+  "no_density_scientific_or_readback_processes": true,
+  "no_continuation_or_guard_processes": true,
+  "no_future_density_evolution_queued": true,
+  "process_query": [
+    "pgrep",
+    "-fl",
+    "local_finite_gate_audit|run_after_v7.py|readback_completed_density.py|guard_readback.py"
+  ],
+  "release_heavy_scientific_bytes": 4294967296,
+  "release_separate_readonly_audit_bytes": 1073741824,
+  "scientific_result": "v8/result.json",
+  "audit_result": "v8/independent_readback.json",
+  "audit_status": "passed",
+  "authoritative_terminal_receipts": {
+    "v7": "v7/resource_usage.json",
+    "v8": "v8/resource_usage.json",
+    "readback": "v8/readback_resource_guard.json"
+  },
+  "historical_status_correction": "v7/result.json retains its frozen last checkpoint status running; v7/resource_usage.json is authoritative: clean3600s wall-time interruption, returncode-2. It was not an active process after2026-11-24T10:18:40Z. No archived bytes overwritten."
+}

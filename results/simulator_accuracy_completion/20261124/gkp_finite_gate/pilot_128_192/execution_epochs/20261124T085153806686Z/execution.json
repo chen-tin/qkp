@@ -1,0 +1,20 @@
+{
+  "epoch": "20261124T085153806686Z",
+  "workers": 1,
+  "threads_per_job": 1,
+  "cpu_budget": 1,
+  "orchestrator_sha256": "9d765e4c6ede107016f0e9280084ad0650f22001f6d7e19454dc50073829e7f2",
+  "started": "2026-11-24T08:51:53.813958+00:00",
+  "scope": "job scheduling only; frozen science and registered checks unchanged",
+  "run_id": "pilot_128_192",
+  "plan_hashes": {
+    "finite_gate": "5e167f870ac2d1d4898e93ee4768008d8c18168b84243cbccf268678f2dc6121"
+  },
+  "remaining_estimated_bytes": 983040.0,
+  "available_cpus": 10,
+  "parent_thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

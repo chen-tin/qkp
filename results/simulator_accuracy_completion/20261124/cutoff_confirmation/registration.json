@@ -1,0 +1,49 @@
+{
+  "registered_utc": "2026-11-24T08:26:42.102240+00:00",
+  "status": "Planned_not_launched",
+  "purpose": "Prospective fixed-budget local confirmation of four currently inconclusive nearest-lattice cutoff comparisons; design informed by original results, future noise independent.",
+  "prior_evidence": "../cutoff_diagnosis/result.json",
+  "fixed_settings": {
+    "data_delta": 0.3,
+    "rounds": 8,
+    "cardinal_states": 6,
+    "decoders": [
+      "nearest"
+    ],
+    "cutoffs": [
+      4096,
+      5120
+    ],
+    "sigma_q_over_L": 0.2,
+    "sigma_m_over_L": 0.05,
+    "rho": 0.9,
+    "distribution": "stationary Gaussian AR(1) displacement and smooth finite-energy measurement resource; independent q/p streams",
+    "resource": "smooth",
+    "base_seed": 26112401,
+    "training": "none; fixed controller",
+    "cutoff_tolerance": 0.01,
+    "scoring_bins": [
+      192,
+      384,
+      768
+    ],
+    "scoring_tolerance": 0.001,
+    "stage_gates": "unchanged original physics contract"
+  },
+  "per_state_fixed_budget": {
+    "loss": 640,
+    "loss_dephasing": 640,
+    "coupling_error": 2048,
+    "control_rotation": 640
+  },
+  "rationale": "Planning-only original same-mean/variance projections620/553/1799/530 perstate rounded upward. These are not guarantees; no optional stopping or post-hoc criterion change.",
+  "hypothesis": "At the declared cutoffs, new paired mean logical-fidelity differences are within\u00b1.01 throughout eightcycles for these four fixedconditions.",
+  "decision_rule": {
+    "support": "Each cyclewise95%paired six-state stratified interval wholly inside\u00b1.01 with all stage/scoring gates passing.",
+    "contradict": "Any interval wholly outside\u00b1.01 under valid numerics, retain discrepancy.",
+    "inconclusive": "Any band-crossing interval or missing/invalid numerical check; report as such, no automatic extension."
+  },
+  "uncertainty": "Pointwise95%paired MonteCarlo normal intervals across independent trajectories equally weighting sixstates; not simultaneous coverage, deterministic scorer sensitivity separate.",
+  "runtime_storage": "Not launched pending local runtime/storage selection and completion of independent full-state/finite-gate validation. Original broad550jobs remain separate.",
+  "source_freeze": "Generate new hashed plan identities after active sources freeze; preserve original plans and raw observations."
+}

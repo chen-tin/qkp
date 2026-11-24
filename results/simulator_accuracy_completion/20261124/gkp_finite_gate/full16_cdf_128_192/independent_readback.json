@@ -1,0 +1,379 @@
+{
+  "created_utc": "2026-11-24T09:19:20.218781+00:00",
+  "classification": "Independent fresh-process raw readback and deterministic rescoring; no new trajectories",
+  "pass": true,
+  "jobs": 8,
+  "trajectories_per_cardinal_state": 16,
+  "cardinal_states": 6,
+  "trajectories_per_job_per_arm": 96,
+  "cycles": 2,
+  "sealed_raw_arms": 16,
+  "stage_checks": [
+    {
+      "job_id": "4798e4e6b326ccb1",
+      "variant": "ideal",
+      "cutoff": 128,
+      "arm": "replayed_corrections",
+      "raw_sha256": "afc0deef92f0d0ff5730eb452e0024c5248bcfaf9b3ce1004e9e58b6d189fec3",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 1.177946629127291e-13,
+      "max_mean_edge": 3.991738307099112e-09,
+      "max_individual_edge": 4.756443904916261e-08
+    },
+    {
+      "job_id": "4798e4e6b326ccb1",
+      "variant": "ideal",
+      "cutoff": 128,
+      "arm": "finite_ancilla",
+      "raw_sha256": "28970e0bc0ab27cfb591b7e122a269f6543f62d0890058a0f6386eb5e59629ed",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 6.650235917504688e-14,
+      "max_mean_edge": 1.7922915488523555e-09,
+      "max_individual_edge": 8.95736582512582e-09
+    },
+    {
+      "job_id": "56559a7609d5bd21",
+      "variant": "ideal",
+      "cutoff": 192,
+      "arm": "replayed_corrections",
+      "raw_sha256": "a2cbe6f739580d95b682c5cb6986ef1f45af0712a9833e21d229fd5e0b37d9f2",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 9.059419880941277e-14,
+      "max_mean_edge": 3.3884740041561734e-13,
+      "max_individual_edge": 1.2353277694397787e-11
+    },
+    {
+      "job_id": "56559a7609d5bd21",
+      "variant": "ideal",
+      "cutoff": 192,
+      "arm": "finite_ancilla",
+      "raw_sha256": "36bcb23858e195d41913cab7587a56ab2b99315a4b1395b5b732bddc8921b8e2",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 6.283862319378386e-14,
+      "max_mean_edge": 4.1442614837237304e-13,
+      "max_individual_edge": 2.4217924993179683e-12
+    },
+    {
+      "job_id": "37d8357d2c187f72",
+      "variant": "lumped",
+      "cutoff": 128,
+      "arm": "replayed_corrections",
+      "raw_sha256": "a7e926d2093026cd0421157432eaeb620f1b809f1115ad492a0aa8d43a71a0a3",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 3.2085445411667024e-14,
+      "max_mean_edge": 1.3098244154058006e-09,
+      "max_individual_edge": 3.8395492678980603e-08
+    },
+    {
+      "job_id": "37d8357d2c187f72",
+      "variant": "lumped",
+      "cutoff": 128,
+      "arm": "finite_ancilla",
+      "raw_sha256": "152e860d9dce95d193d3c613fd7674093d9922f96c9fa4f395f104d7ac9a4442",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 3.83026943495679e-14,
+      "max_mean_edge": 2.9705846824941966e-08,
+      "max_individual_edge": 2.670764791719615e-06
+    },
+    {
+      "job_id": "f2dd17287b5dfeb5",
+      "variant": "lumped",
+      "cutoff": 192,
+      "arm": "replayed_corrections",
+      "raw_sha256": "f26acd5b0fd778658dfc2ef24b67facd4b4f2fbb66aa1017b8f72dd5b1ce2ad2",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 4.063416270128073e-14,
+      "max_mean_edge": 3.8232233837787655e-14,
+      "max_individual_edge": 1.8905944909046218e-12
+    },
+    {
+      "job_id": "f2dd17287b5dfeb5",
+      "variant": "lumped",
+      "cutoff": 192,
+      "arm": "finite_ancilla",
+      "raw_sha256": "f4238dfc473de7f885d68527cf6bd3047594eab8bddf064394829508d5edbee4",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 3.907985046680551e-14,
+      "max_mean_edge": 4.433920758166081e-12,
+      "max_individual_edge": 3.913722320776172e-10
+    },
+    {
+      "job_id": "976f254f4ef9b241",
+      "variant": "qutip",
+      "cutoff": 128,
+      "arm": "replayed_corrections",
+      "raw_sha256": "bb56e9f3303d68487a9722444037b1847dd796629be89faad378664c6b20c606",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 3.2085445411667024e-14,
+      "max_mean_edge": 1.3098244154058006e-09,
+      "max_individual_edge": 3.8395492678980603e-08
+    },
+    {
+      "job_id": "976f254f4ef9b241",
+      "variant": "qutip",
+      "cutoff": 128,
+      "arm": "finite_ancilla",
+      "raw_sha256": "f1dabad4acd4e0811ddf47c7d05ebc2c768abc121f77c252eed0437728463018",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 3.68594044175552e-14,
+      "max_mean_edge": 9.349930615902573e-08,
+      "max_individual_edge": 8.975928611299261e-06
+    },
+    {
+      "job_id": "88ab14a2c9ae22cd",
+      "variant": "qutip",
+      "cutoff": 192,
+      "arm": "replayed_corrections",
+      "raw_sha256": "68b8793a1abd6d5b906b051edb7b55e345bc69dba5fe5c3b8407e5d89f5fae00",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 4.063416270128073e-14,
+      "max_mean_edge": 3.8232233837787655e-14,
+      "max_individual_edge": 1.8905944909046218e-12
+    },
+    {
+      "job_id": "88ab14a2c9ae22cd",
+      "variant": "qutip",
+      "cutoff": 192,
+      "arm": "finite_ancilla",
+      "raw_sha256": "7e046cc2b3f0f3b30e912efd9cc4be6109e1208fa336082547c2ec5ca0d41a36",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 3.863576125695545e-14,
+      "max_mean_edge": 3.3599922876021927e-13,
+      "max_individual_edge": 1.92138202177521e-11
+    },
+    {
+      "job_id": "2e31888b906bbc86",
+      "variant": "qutip_refined",
+      "cutoff": 128,
+      "arm": "replayed_corrections",
+      "raw_sha256": "bb56e9f3303d68487a9722444037b1847dd796629be89faad378664c6b20c606",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 3.2085445411667024e-14,
+      "max_mean_edge": 1.3098244154058006e-09,
+      "max_individual_edge": 3.8395492678980603e-08
+    },
+    {
+      "job_id": "2e31888b906bbc86",
+      "variant": "qutip_refined",
+      "cutoff": 128,
+      "arm": "finite_ancilla",
+      "raw_sha256": "46c1a698bdc3671524fbb4a00b9da846d2a7d7d4667c0ceeb8e9945ef7b561dc",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 3.730349362740526e-14,
+      "max_mean_edge": 9.350572460888602e-08,
+      "max_individual_edge": 8.976544783093857e-06
+    },
+    {
+      "job_id": "0773147476712698",
+      "variant": "qutip_refined",
+      "cutoff": 192,
+      "arm": "replayed_corrections",
+      "raw_sha256": "68b8793a1abd6d5b906b051edb7b55e345bc69dba5fe5c3b8407e5d89f5fae00",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 4.063416270128073e-14,
+      "max_mean_edge": 3.8232233837787655e-14,
+      "max_individual_edge": 1.8905944909046218e-12
+    },
+    {
+      "job_id": "0773147476712698",
+      "variant": "qutip_refined",
+      "cutoff": 192,
+      "arm": "finite_ancilla",
+      "raw_sha256": "8a2219634c01f392dd98cf57e62adea7d8a7f4077d8898a16730aa8fbcd7b945",
+      "stage_recomputed_pass": true,
+      "max_norm_error": 3.885780586188048e-14,
+      "max_mean_edge": 3.3597935974982377e-13,
+      "max_individual_edge": 1.9213962823059783e-11
+    }
+  ],
+  "rescoring": [
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/4798e4e6b326ccb1/broad_control_N128_smooth/nearest_replayed_corrections.npz",
+      "cutoff": 128,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 1.403826595058888e-05
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/4798e4e6b326ccb1/broad_control_N128_smooth/nearest_finite_ancilla.npz",
+      "cutoff": 128,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 3.0699046509319317e-06
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/37d8357d2c187f72/broad_control_N128_smooth/nearest_replayed_corrections.npz",
+      "cutoff": 128,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 1.3287035632303379e-05
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/37d8357d2c187f72/broad_control_N128_smooth/nearest_finite_ancilla.npz",
+      "cutoff": 128,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 3.061879710331006e-06
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/976f254f4ef9b241/broad_control_N128_smooth/nearest_replayed_corrections.npz",
+      "cutoff": 128,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 1.3287035632303379e-05
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/976f254f4ef9b241/broad_control_N128_smooth/nearest_finite_ancilla.npz",
+      "cutoff": 128,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 3.069535326805095e-06
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/2e31888b906bbc86/broad_control_N128_smooth/nearest_replayed_corrections.npz",
+      "cutoff": 128,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 1.3287035632303379e-05
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/2e31888b906bbc86/broad_control_N128_smooth/nearest_finite_ancilla.npz",
+      "cutoff": 128,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 3.0695385206946924e-06
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/56559a7609d5bd21/broad_control_N192_smooth/nearest_replayed_corrections.npz",
+      "cutoff": 192,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 1.4037825640134116e-05
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/56559a7609d5bd21/broad_control_N192_smooth/nearest_finite_ancilla.npz",
+      "cutoff": 192,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 3.069901812646769e-06
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/f2dd17287b5dfeb5/broad_control_N192_smooth/nearest_replayed_corrections.npz",
+      "cutoff": 192,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 1.328705427472432e-05
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/f2dd17287b5dfeb5/broad_control_N192_smooth/nearest_finite_ancilla.npz",
+      "cutoff": 192,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 3.061877656307388e-06
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/88ab14a2c9ae22cd/broad_control_N192_smooth/nearest_replayed_corrections.npz",
+      "cutoff": 192,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 1.328705427472432e-05
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/88ab14a2c9ae22cd/broad_control_N192_smooth/nearest_finite_ancilla.npz",
+      "cutoff": 192,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 3.069535426281078e-06
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/0773147476712698/broad_control_N192_smooth/nearest_replayed_corrections.npz",
+      "cutoff": 192,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 1.328705427472432e-05
+    },
+    {
+      "raw_file": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/0773147476712698/broad_control_N192_smooth/nearest_finite_ancilla.npz",
+      "cutoff": 192,
+      "pass": true,
+      "max_metric_readback_difference": 0.0,
+      "max_quadrature_score_sensitivity": 3.0695386231682775e-06
+    }
+  ],
+  "paired_statistics": [
+    {
+      "kind": "explicit_refinement",
+      "cutoff": 128,
+      "max_statistic_difference": 0.0,
+      "verdict": "supports"
+    },
+    {
+      "kind": "approximation",
+      "cutoff": 128,
+      "max_statistic_difference": 0.0,
+      "verdict": "inconclusive"
+    },
+    {
+      "kind": "explicit_refinement",
+      "cutoff": 192,
+      "max_statistic_difference": 0.0,
+      "verdict": "supports"
+    },
+    {
+      "kind": "approximation",
+      "cutoff": 192,
+      "max_statistic_difference": 0.0,
+      "verdict": "inconclusive"
+    },
+    {
+      "kind": "data_cutoff",
+      "variant": "ideal",
+      "max_statistic_difference": 0.0
+    },
+    {
+      "kind": "data_cutoff",
+      "variant": "lumped",
+      "max_statistic_difference": 0.0
+    },
+    {
+      "kind": "data_cutoff",
+      "variant": "qutip",
+      "max_statistic_difference": 0.0
+    },
+    {
+      "kind": "data_cutoff",
+      "variant": "qutip_refined",
+      "max_statistic_difference": 0.0
+    }
+  ],
+  "elapsed_seconds": 2.3996897079923656,
+  "source_sha256": {
+    "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+    "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+    "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+    "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+    "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+    "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+    "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+    "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+    "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+    "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+    "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+    "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+    "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+    "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+    "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+    "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+    "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+    "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+    "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+    "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+    "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+    "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+    "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+    "quantum/coupled_measurement.py": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8",
+    "experiments/local_gkp_gate_pilot.py": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c"
+  },
+  "analysis_script_sha256": "76e06fe92adabd5d6b11c39cb00d7f400f6210591e7f0cf028f9315ed25b7f6b",
+  "scope": "Stage/gate arrays, raw hashes and saved scoring samples rechecked; not all-state/hardware certification. Independent reconstruction of pairedstatistics uses fixed6\u00d716stratification and existing normal95%rule. Representative/hot snapshots only for quadrature."
+}

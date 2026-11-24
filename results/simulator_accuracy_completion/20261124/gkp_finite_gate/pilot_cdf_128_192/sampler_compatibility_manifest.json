@@ -1,0 +1,22 @@
+{
+  "registered_utc": "2026-11-24T09:02:53.699377+00:00",
+  "scope": "Static single-width smoothresource only; dynamicwidth/noiseextensions are excluded from this study. Exactlyone distinct resourceCDFtable per scientificchildcontext is expected.",
+  "sigma_m_over_L": [
+    0.28209479177387814
+  ],
+  "sigma_m_absolute_q": 0.5,
+  "noise_extensions": {},
+  "max_distinct_resource_tables": 1,
+  "benchmark_plan_sha256": "0edcf2ae6d2f4bebfc6fcdac51b7388a9bb3ccabdc8a4a8d5ec661817bbcc4d7",
+  "job_ids": [
+    "480e3a6cc36ae2b9",
+    "b0bb4f40cd859d32",
+    "60673c6df365c87e",
+    "289d7f3c192b9fc3",
+    "f789317c389284c0",
+    "eb6a8f1c2c1e0a69",
+    "8c4f1cbab8a7c692",
+    "c441dc68a3a99ea7"
+  ],
+  "evidence": "These restrictions are already enforced by the frozen hashed job configurations and fixedmatrix driver; no physical settings were changed."
+}

@@ -1,0 +1,14 @@
+{
+  "checked_utc": "2026-11-24T08:36:09.164432+00:00",
+  "n": 12287,
+  "x": 150.0,
+  "mpmath_version": "1.3.0",
+  "decimal_precision": 80,
+  "golden": "-0.0283785457053346948203984374266610593368796104622514152132010677422027884654",
+  "actual": -0.028378545705757367,
+  "absolute_error": 4.2267231381565296e-13,
+  "backend": "scaled_generalized_laguerre_v1",
+  "method": "mp.hermite(n,x)*exp(-x*x/2)/sqrt(sqrt(pi)*2**n*factorial(n))",
+  "source_sha256": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+  "classification": "deterministic scalar software control, no Monte Carlo uncertainty"
+}

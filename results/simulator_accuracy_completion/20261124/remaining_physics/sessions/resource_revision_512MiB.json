@@ -1,0 +1,21 @@
+{
+  "registered_utc": "2026-11-24T09:44:12.976130+00:00",
+  "status": "Registered before scientific resume",
+  "authority": "Root explicitly authorized a resource-only extra-headroom revision, with no scientific settings/source changes.",
+  "old_extra_headroom_bytes": 1073741824,
+  "new_extra_headroom_bytes": 536870912,
+  "mandatory_core_estimate_bytes": 9730785280,
+  "actual_availability_required_bytes": 10267656192,
+  "unchanged_sampled_child_rss_cap_bytes": 12884901888,
+  "unchanged_seconds_per_session": 3600,
+  "unchanged_max_sessions_total": 3,
+  "evidence_largest_retained_sample_bytes": 4638490624,
+  "evidence_qualification": "Largest retained monitor sample only, not a whole-session certified peak.",
+  "earlier_measured_saved_state_rescore_peak_bytes": 1195196416,
+  "core_preflight_available_memory_argument": "The actual measured available_memory value; additional headroom compared explicitly, not subtracted or represented as actual availability.",
+  "manager_source_sha256": "1d13058d6938dc1b44dbb52a923e1a38d87ddf5d6437ce2bce2f9dd41de03cd4",
+  "plan_file_sha256": "aec015d75eb3fa95eba8ef589f9374f4c6a05d97aec3593d21f3ac422fb749d6",
+  "scientific_change": false,
+  "main_study_extra_headroom_unchanged_bytes": 1073741824,
+  "priority": "Finish pending5120scoring then enter passive4096trajectory child with settledRSS before releasingmain."
+}

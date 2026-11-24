@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-11-24T08:23:30.502377+00:00",
+  "classification": "read-only local continuation assessment; not executed",
+  "historical_run_id": "qkp-20261120-003030-d2292a",
+  "pending": "Recovered16th physics refinement plus4unexecuted physics observations (finite_duration_lumped/passive_cooling at4096/5120).",
+  "command": [
+    "<frozen-workspace>/.venv/bin/python",
+    "<frozen-workspace>/ops/ec2/parallel_worker.py",
+    "run",
+    "--root",
+    "<local-run-copy>",
+    "--run-id",
+    "qkp-20261120-003030-d2292a",
+    "--presets",
+    "physics",
+    "--workers",
+    "1",
+    "--threads",
+    "1",
+    "--no-sync",
+    "--no-shutdown"
+  ],
+  "prerequisites": [
+    "Restore complete unchanged original source/checkpoint bundle into an isolated local workspace.",
+    "Copy reviewed new orchestration modules into that workspace; leave scientific files frozen.",
+    "Restore local plans/raw files and verify seals.",
+    "Cold start: omit historical --drain-pid.",
+    "current_sources=True rejects changed active scientific modules; do not rewrite frozen plan hashes.",
+    "Alternatively register a separately identified migrated plan with explicit source changes and comparisons."
+  ],
+  "limitations": [
+    "No remaining production jobs started by this worker.",
+    "Existing fullphysics resource budgets remain large; root chooses authorized local runtime.",
+    "No AWS calls or remote deployment required for no-sync/no-shutdown mode."
+  ]
+}

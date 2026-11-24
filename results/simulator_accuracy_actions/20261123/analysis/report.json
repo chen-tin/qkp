@@ -1,0 +1,66 @@
+{
+  "classification": "bounded software regression and saved-summary reanalysis; no production simulation",
+  "created_utc": "2026-11-24T07:29:30.435145+00:00",
+  "scope": "Analysis/report/cache integrity source checks. No trajectories or rescoring initiated by new directed tests. Existing simulation_quality regressions include bounded tiny-basis numerical controls.",
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_accuracy_analysis_directed.py",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_accuracy_analysis_directed.py tests/test_simulation_quality.py",
+    ".venv/bin/python -m experiments.audit_accuracy_results results/ec2_runs/production_20261119/status_checks/20261123T222312Z/metrics_snapshot/physics/summary.json --output results/simulator_accuracy_actions/20261123/analysis/physics_cutoff_diagnosis.json"
+  ],
+  "red_phase": {
+    "passed": 6,
+    "failed": 9,
+    "log": "red_tests.log",
+    "interpretation": "3 failures reproduce incomplete cached job coverage; 1 empty scoring acceptance; 1 missing production-state/parameter-coverage distinction; 4 intentionally absent diagnostic utility before implementation, not pre-existing simulator bugs."
+  },
+  "first_green_phase": {
+    "passed": 15,
+    "log": "green_tests.log"
+  },
+  "final_phase": {
+    "passed": 48,
+    "directed_tests": 26,
+    "existing_simulation_quality_tests": 22,
+    "log": "regression_tests.log"
+  },
+  "fixes": [
+    "verify_job rejects empty/duplicate/missing decoder rows and missing paired raw-arm seals, retaining hash checks.",
+    "scoring_status requires exact nonempty paired raw coverage matching saved result, finite positive tolerance <= .001, and nested all-cycle/sample-check flags.",
+    "instrument_status separates matching cutoff/resource/coupling controls from exact production-state coverage. Production inputs require sealed finite_ancilla raw SHA and exact snapshot array/key/columns match; output lists selections and no all-state/all-cycle scope."
+  ],
+  "saved_summary_result": {
+    "unresolved_comparisons": 4,
+    "interpretation": "All four remain inconclusive under registered band. Every offending-cycle point estimate is inside +/- .01, while intervals cross its edge. No interval wholly excludes the equivalence band; this reanalysis does not establish absence of systematic bias.",
+    "evidence": "physics_cutoff_diagnosis.json",
+    "ci_scope": "Existing pointwise 95% intervals, unchanged; no new uncertainty calculation or sampling."
+  },
+  "remaining_gaps": [
+    "Production snapshot independent instrument checks still unrun; arbitrary parameter-matched Fock tests cannot fill them.",
+    "Four physics comparisons need targeted numerical/statistical follow-up, not acceptance retuning.",
+    "Last physics scoring refinement and 4 jobs incomplete.",
+    "Rare/coverage budgets unrun; tiny software checks do not close them."
+  ],
+  "configuration_provenance": "Original exact noise, model, units, temporal schedules, 8-cycle/512-per-cardinal budgets, seeds, checkpoint/source hashes and CPU environment: results/ec2_runs/production_20261119/status_checks/20261123T222312Z/metrics_snapshot/{suite}/plan.json and environment.json. This task does not modify those files.",
+  "environment": {
+    "python": "3.13.13 | packaged by conda-forge | (main, Apr  8 2026, 02:29:07) [Clang 19.1.7 ]",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "device": "CPU",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "qutip": "5.3.1",
+    "torch": "2.15.0",
+    "blas_threads": 1
+  },
+  "source_sha256": {
+    "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+    "experiments/audit_accuracy_results.py": "05d302b97bab64e82e0174b8717bd3d622f71ab82f546d4af5d477c006002cb4",
+    "tests/test_accuracy_analysis_directed.py": "2826c52f3c473feba30a23944e7350961b398fcaa6b41e6a09a60b1b30ca14c1"
+  },
+  "evidence_sha256": {
+    "physics_cutoff_diagnosis.json": "81b515148320e6f0521d369838e676ded6607301ffbdce0019ac79acf73885ec",
+    "green_tests.log": "2c84e529f234b38e1a415add127d1f222553c7e116e7338c5544a3892db2eabd",
+    "red_tests.log": "05d124999ab1b9a29166f94b66850fb6de14d8dd3d6b694ce2f290c28e7f6816",
+    "regression_tests.log": "32c6364d9e20de13e1db1f3eea1010070e528372310c4e29aa919e23dc7b9d9e"
+  },
+  "frozen_evidence_modified": false
+}

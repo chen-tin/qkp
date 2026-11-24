@@ -1,0 +1,20 @@
+{
+  "epoch": "20261120T224325852373Z",
+  "workers": 2,
+  "threads_per_job": 1,
+  "cpu_budget": 2,
+  "orchestrator_sha256": "c37b7fc4d1e92e9dd52cf596a1938f3c73acaf3edec14239b4a39abce2877566",
+  "started": "2026-11-20T22:43:25.853209+00:00",
+  "scope": "job scheduling only; frozen science and registered checks unchanged",
+  "run_id": "parallelism-parallel",
+  "plan_hashes": {
+    "smoke": "8fe9cae3075f62aaa80af58e59adfc0f546bc7c867a1931a52a30ce308703913"
+  },
+  "remaining_estimated_bytes": 0.0,
+  "available_cpus": 10,
+  "parent_thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

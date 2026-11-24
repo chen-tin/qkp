@@ -1,0 +1,113 @@
+{
+  "completed_utc": "2026-11-24T07:31:10.025311+00:00",
+  "classification": "Source-directed software fixes, regression checks, original-data spot audit, and recovery; incomplete scientific accuracy audit.",
+  "environment": {
+    "python": "3.13.13",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "device": "local CPU",
+    "packages": {
+      "numpy": "2.5.5",
+      "scipy": "1.18.1",
+      "qutip": "5.3.1",
+      "torch": "2.15.0",
+      "pytest": "9.2.0"
+    },
+    "blas_omp_threads": 1
+  },
+  "integration": {
+    "counts": {
+      "tests": 121,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_reported_seconds": 9.41,
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_ec2_parallel.py tests/test_ec2_monitoring.py tests/test_accuracy_analysis_directed.py tests/test_accuracy_measurement_directed.py tests/test_accuracy_noise_controller_directed.py tests/test_simulation_quality.py tests/test_qutip_reference.py tests/test_qutip_engine_benchmark.py tests/test_quantum_channels.py tests/test_continuous_ancilla.py --junitxml=results/simulator_accuracy_actions/20261123/integration_tests.xml",
+    "log": "integration_tests.log",
+    "xml": "integration_tests.xml",
+    "note": "One combined run; sub-agent test counts overlap and are not added."
+  },
+  "source_sha256": {
+    "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+    "experiments/validate_reference_states.py": "49bd3afefe09c70da72d9c154bb3aec6e7f1b32786ed0cb7ef3237024f7d41a4",
+    "experiments/audit_accuracy_results.py": "05d302b97bab64e82e0174b8717bd3d622f71ab82f546d4af5d477c006002cb4",
+    "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+    "ops/ec2/worker.py": "1a9bb91f181c02e35af335f4e211d58a52bbcfba7674311e4623fed0794b33e3",
+    "ops/ec2/parallel_worker.py": "9d765e4c6ede107016f0e9280084ad0650f22001f6d7e19454dc50073829e7f2",
+    "ops/ec2/manage.py": "6517f17873111339b280fc986580cd50196d309eef4b67188a552902ed129593",
+    "ops/ec2/fetch_metrics.py": "57077f614ad22df2b0217182ca6eab75e9109fb32a777bba3e12cdf6f2fdae43",
+    "ops/ec2/monitoring.py": "96176a6477c69cdd6294eee0d32b8187675aa8d330a06f66f79bcfd6652c3969",
+    "tests/test_ec2_parallel.py": "13e7c01cbab166ffd8a4eebce6cd0dbd6bb7129d3d4384ba436e6accd2c0f8dd",
+    "tests/test_ec2_monitoring.py": "018b6cb8b7c11ef9a27ef4dbaf96288043e16b29d45648e7a743b792543b08e9",
+    "tests/test_accuracy_analysis_directed.py": "2826c52f3c473feba30a23944e7350961b398fcaa6b41e6a09a60b1b30ca14c1",
+    "tests/test_accuracy_measurement_directed.py": "1d2ca81097c4b566c3cad04effa119fc3f19623e434b20bfa0e9514e61af0a3f",
+    "tests/test_accuracy_noise_controller_directed.py": "b5d814778e634dd9cb4d3d8d32126f27fb208d7d47cf765b1a6a7a63c1a86f7f",
+    "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+    "tests/test_qutip_reference.py": "90dc057bbbc7ee2b2f3b2172e9c8528886bede7e933afd122a300b6de0ef98f5",
+    "tests/test_qutip_engine_benchmark.py": "d95f66697d47fee6ccf4417accb8078b396163172dcff158b4f3693e4276f80c",
+    "tests/test_quantum_channels.py": "b235270b1d57f5e6a67053b36ab21aaab8e3b3df79225f00422d84ac242f2d91",
+    "tests/test_continuous_ancilla.py": "080958f6d2956a14b1466e32a61a4c0017fc68a9bf3f80e259a7d885bfc7c2c7"
+  },
+  "scope": {
+    "noise_controller_fixture": {
+      "data_cutoff": 24,
+      "per_state": 2,
+      "cardinal_states": 6,
+      "cycles": [
+        1,
+        2
+      ],
+      "sigma_q_over_L": 0.08,
+      "resource_sigma_absolute_q": 0.5,
+      "rho": 0.3,
+      "gaussian_stationary_displacements": true,
+      "seed_roots": [
+        26112301,
+        26112302,
+        26112303,
+        26112304
+      ],
+      "training": "none",
+      "interpretation": "software interface/negative controls; tiny basis cannot establish finite-energy accuracy"
+    },
+    "original_data_spot_check": "root/archive_spot_check/report.json",
+    "original_registered_configuration": "../../ec2_runs/production_20261119/status_checks/20261123T222312Z/metrics_snapshot/"
+  },
+  "fixed_local_defects": [
+    "Scheduler waits on persistent bootstrap logging tee",
+    "Raw archive delayed until after expensive refinement",
+    "Stale application heartbeat presented as current running status",
+    "Finite gate accepts invalid/endpoint/nonfinite homodyne quantile",
+    "Independent instrument audit trusts pass/gate/refinement summaries instead of rechecking raw evidence",
+    "Saved job can be complete with absent/duplicate decoder rows or missing arm",
+    "Empty or incomplete scoring refinement evidence can pass",
+    "Unrelated parameter-matched Fock inputs can count as production-state validation"
+  ],
+  "cutoff_interpretations": {
+    "within_tolerance": 20,
+    "inconclusive": 4,
+    "unmeasured": 6
+  },
+  "recovery": {
+    "job_id": "635d50e4441cc5d1",
+    "verified_raw_files": 6,
+    "archived_object_count": 16,
+    "archived_bytes": 321106522,
+    "receipt": "root/recovery/remote_recovery_receipt.json",
+    "ssm_command_id": "8d6cf75c-7193-4e0c-8a94-4d5caea27e3d",
+    "final_state": {
+      "checked_utc": "2026-11-24T07:29:46.478308+00:00",
+      "state": "stopped"
+    },
+    "scientific_processes_started": false
+  },
+  "remaining": [
+    "Production-state full-cutoff independent QuTiP checks remain unrun; capacity preflight in measurement/report.json",
+    "Original8/8 small-basis finite-gate controls remain invalid; need separately planned converged controls",
+    "Four physics cutoff comparisons remain inconclusive",
+    "16th job scoring refinement plus four unsimulated physics jobs remain pending",
+    "Coverage0/250 and rare0/300 remain unrun",
+    "Source fixes are local, not deployed; frozen worker sources/plans remain unchanged"
+  ],
+  "frozen_evidence": "Original45 saved evidence hashes verified unchanged. Historical results/reports not rewritten. Recovered existing missing raw job added to original archive prefix."
+}

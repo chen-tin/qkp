@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-11-24T15:25:41.898328+00:00",
+  "status": "Fresh active reporting sources frozen for integration; completed scientific sources remain historical",
+  "source_sha256": {
+    "experiments/refine_logical_scores.py": "5f63badfcc3a7d732e4b8c5f2b2439cac530edb2254916597cd80225f6eb0b02",
+    "tests/test_local_score_refinement.py": "f858fdc8aa09d5dde044062ede7cc807bbc0c57f803e271a5186200990c2401d",
+    "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+    "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e"
+  },
+  "correction_sha256": "a8df9e325399faac3fb4f07d6a44626c7bf990ab4217d9cdaf85a3cf13b84547",
+  "scientific_execution_performed": false
+}

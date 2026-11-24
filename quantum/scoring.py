@@ -51,3 +51,57 @@ def logical_fidelity(psi, state_ids, bins=384, chunk=128, backend="local"):
     signs = np.array([CARDINAL[k][3] for k in state_ids])
     result["fidelity"] = (result["trace"]+signs*result["bloch"][axes, np.arange(len(state_ids))])/2
     return result
+
+
+def logical_fidelity_many(states, labels, bins=384, chunk=128, backend="local",
+                          max_batch_bytes=256*1024**2):
+    """Score banks together, sharing quadrature evaluation within a memory cap.
+
+    The nodes, integration order per column and logical convention are those
+    of logical_fidelity. The cap bounds each concatenated state matrix; input
+    banks and the streamed basis/output arrays remain additional live storage.
+    No cutoff-squared operator or full quadrature basis is cached.
+    """
+    states=list(states);labels=list(labels)
+    if len(states)!=len(labels) or not states:
+        raise ValueError("Nonempty matching state/label banks required")
+    if not isinstance(max_batch_bytes,int) or max_batch_bytes<1:
+        raise ValueError("Positive integer batch-memory budget required")
+    arrays=[];ids=[]
+    for bank,state_ids in zip(states,labels):
+        psi=np.asarray(bank,dtype=complex)
+        state_ids=np.asarray(state_ids,dtype=int)
+        if psi.ndim!=2 or psi.shape[1]<1:
+            raise ValueError("Nonempty two-dimensional state banks required")
+        if state_ids.shape!=(psi.shape[1],) or np.any((state_ids<0)|(state_ids>5)):
+            raise ValueError("Each snapshot needs its true cardinal input label")
+        if psi.shape[0]*psi.dtype.itemsize>max_batch_bytes:
+            raise ValueError("Batch budget cannot hold even one full-cutoff state")
+        arrays.append(psi);ids.append(state_ids)
+    if len({a.shape[0] for a in arrays})!=1:
+        raise ValueError("Shared-basis scoring requires one common full cutoff")
+    n=arrays[0].shape[0];columns=max_batch_bytes//(n*np.dtype(complex).itemsize)
+    output=[{key:[] for key in ("bloch","trace","minimum_eigenvalue","fidelity")} for _ in arrays]
+    pieces=[];count=0
+    def flush():
+        if not pieces:return
+        combined=np.concatenate([arrays[i][:,lo:hi] for i,lo,hi in pieces],axis=1)
+        joined=np.concatenate([ids[i][lo:hi] for i,lo,hi in pieces])
+        score=logical_fidelity(combined,joined,bins,chunk,backend)
+        offset=0
+        for i,lo,hi in pieces:
+            width=hi-lo
+            for key,value in score.items():
+                output[i][key].append(value[:,offset:offset+width] if key=="bloch" else value[offset:offset+width])
+            offset+=width
+        pieces.clear()
+    for i,bank in enumerate(arrays):
+        start=0
+        while start<bank.shape[1]:
+            take=min(columns-count,bank.shape[1]-start)
+            pieces.append((i,start,start+take));count+=take;start+=take
+            if count==columns:
+                flush();count=0
+    flush()
+    return [{key:np.concatenate(value,axis=1 if key=="bloch" else 0)
+             for key,value in score.items()} for score in output]

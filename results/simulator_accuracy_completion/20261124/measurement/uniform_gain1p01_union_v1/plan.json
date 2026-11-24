@@ -1,0 +1,44 @@
+{
+  "registered_utc": "2026-11-24T09:21:07.362190+00:00",
+  "status": "Planned",
+  "config": {
+    "data_cutoff": 5120,
+    "data_cutoffs": [
+      4096,
+      5120
+    ],
+    "ancilla_cutoffs": [
+      12288,
+      16384
+    ],
+    "sigma": 0.0886226925452758,
+    "coupling": 1.01,
+    "radius": 160.0,
+    "dy": 0.01,
+    "chunk": 128,
+    "grid_chunk": 512,
+    "max_scratch_bytes": 5368709120,
+    "reference_wave_basis": "scaled_generalized_laguerre_v1",
+    "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+    "source_hashes": {
+      "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+      "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+      "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+      "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+      "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+    },
+    "environment": {
+      "python": "3.13.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+      "device": "CPU",
+      "packages": {
+        "numpy": "2.5.5",
+        "scipy": "1.18.1",
+        "qutip": "5.3.1"
+      }
+    }
+  },
+  "metric": "For EACH declared data cutoff, max over ALL finite-data quadrature eigenvalues of sqrt(sum_y w|m_ref-m_local|^2). This is the exact operator-norm identity for the discrete grid, evaluated in floating point.",
+  "decision_rule": "Finallevel delta<=2.5e-4,masserrors<=1e-5,normerror<=1e-7,ancillaryboundary<1e-4,gridnormsensitivity<=1e-6,gridmasssensitivity<=1e-5,and ancillaryrefinementdelta<=2.5e-4. Failures/time/capacity remain inconclusive for continuum accuracy.",
+  "scope": "Uniform finite-operator/discrete-grid ideal instrument; p follows exact finite-Fourier conjugacy tested against direct small q/p circuits; no physical cutoff,hardware or rigorous continuum certificate."
+}

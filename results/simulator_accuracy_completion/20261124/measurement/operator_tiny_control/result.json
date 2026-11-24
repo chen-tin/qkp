@@ -1,0 +1,104 @@
+{
+  "complete": true,
+  "config": {
+    "data_cutoff": 6,
+    "ancilla_cutoffs": [
+      64,
+      96
+    ],
+    "sigma": 0.5,
+    "coupling": 1.0,
+    "radius": 12.0,
+    "dy": 0.04,
+    "chunk": 7,
+    "max_scratch_bytes": 4294967296,
+    "reference_wave_basis": "scaled_generalized_laguerre_v1",
+    "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+    "source_hashes": {
+      "experiments/validate_instrument_operator.py": "3c70098e9c1660c3e7c8a70afcd52a0e2eecd15147bc0c38d84543599c106e3b",
+      "quantum/instrument_operator_bound.py": "43a6f5fe59a55e14e6dbe137a7b1c1d7ed7ec06a36047be4a3b9b526195f6e2d",
+      "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+      "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+      "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+    },
+    "environment": {
+      "python": "3.13.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+      "device": "CPU",
+      "packages": {
+        "numpy": "2.5.5",
+        "scipy": "1.18.1",
+        "qutip": "5.3.1"
+      }
+    }
+  },
+  "rows": [
+    {
+      "ancilla_cutoff": 64,
+      "finite_grid_stinespring_operator_norm": 1.7268706443334853e-10,
+      "finite_grid_channel_trace_norm_upper_bound": 3.453741288666967e-10,
+      "grid_norm_sensitivity": 2.354680095700516e-15,
+      "max_reference_mass_error": 6.5503158452884236e-15,
+      "max_candidate_mass_error": 2.220446049250313e-16,
+      "grid_mass_sensitivity": 4.440892098500626e-16,
+      "max_joint_norm_error": 6.217248937900877e-15,
+      "max_ancilla_boundary_mass": 7.35448986664432e-20,
+      "worst_lambda_index": 5,
+      "worst_lambda": 2.350604973674492,
+      "all_lambdas_tested": 6,
+      "sample_checks_pass": true
+    },
+    {
+      "ancilla_cutoff": 96,
+      "finite_grid_stinespring_operator_norm": 2.516384801320673e-14,
+      "finite_grid_channel_trace_norm_upper_bound": 5.03276960264135e-14,
+      "grid_norm_sensitivity": 8.431888021525486e-18,
+      "max_reference_mass_error": 4.218847493575595e-15,
+      "max_candidate_mass_error": 2.220446049250313e-16,
+      "grid_mass_sensitivity": 4.440892098500626e-16,
+      "max_joint_norm_error": 3.774758283725532e-15,
+      "max_ancilla_boundary_mass": 4.248027795196491e-29,
+      "worst_lambda_index": 0,
+      "ancilla_refinement_operator_norm": 1.7268705276974184e-10,
+      "ancilla_refinement_grid_sensitivity": 2.3723594912976035e-15,
+      "worst_lambda": -2.350604973674492,
+      "all_lambdas_tested": 6,
+      "sample_checks_pass": true
+    }
+  ],
+  "pass": true,
+  "raw_hashes": {
+    "transfer_Na64.npy": "2d93430e99dcb421d6b8f3531e93f6fa9f5d0e9fd7c2493569d4cf40bb486da6",
+    "transfer_Na64.json": "ba8790b7cd04b707f992add18591a22c276fccc0383957e2bc0d0d7a55fe5f27",
+    "curves_Na64.npz": "fe8d58624efec9dd7bd21e4c6493a800c6e90624936305be6a8fdf4756cb7518",
+    "transfer_Na96.npy": "20ba6dc8c228f46964774aa252ca2abc4de61cd88f65d881d9fd62607fac772a",
+    "transfer_Na96.json": "1be2d97c403849d6345f21a6e091f1199fe003a3acf2d85d2c41d68b64d8d14f",
+    "curves_Na96.npz": "a3dde5b84ac1ecbce7685403bc7fd1a6b444da478d35fdd94aa39cf59f92942c"
+  },
+  "capacity": [
+    {
+      "estimated_scratch_bytes": 67299584,
+      "estimated_build_bytes": 67299584,
+      "estimated_grid_bytes": 67265408,
+      "outcome_nodes": 637,
+      "nd": 6,
+      "na": 64,
+      "chunk": 7,
+      "transfer_file_bytes": 6272,
+      "scope": "Conservative live-array/solver-free work estimate; RSS guard still required"
+    },
+    {
+      "estimated_scratch_bytes": 67401984,
+      "estimated_build_bytes": 67401984,
+      "estimated_grid_bytes": 67300224,
+      "outcome_nodes": 637,
+      "nd": 6,
+      "na": 96,
+      "chunk": 7,
+      "transfer_file_bytes": 9344,
+      "scope": "Conservative live-array/solver-free work estimate; RSS guard still required"
+    }
+  ],
+  "data_eigenvalues_sha256": "45b6737d9dc134db7a379023afb4237e4125096c456bfbc913d3c4e3b7d8cfd3",
+  "scope": "Uniform declared finite-data operator and discrete outcome grid. Window/grid/ancilla convergence empirical; no physical Fock-cutoff/hardware/rigorous continuum certification."
+}

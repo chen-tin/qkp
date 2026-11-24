@@ -1,0 +1,74 @@
+{
+  "created_utc": "2026-11-24T15:25:41.898328+00:00",
+  "status": "Active reporting correction complete; no physical recomputation",
+  "old_active_producer_sha256": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+  "new_active_producer_sha256": "5f63badfcc3a7d732e4b8c5f2b2439cac530edb2254916597cd80225f6eb0b02",
+  "new_test_source_sha256": "f858fdc8aa09d5dde044062ede7cc807bbc0c57f803e271a5186200990c2401d",
+  "superseded_fields": [
+    "checks[raw].checks[cycle].refinements[resolution].difference.se",
+    "checks[raw].checks[cycle].refinements[resolution].difference.ci95_low",
+    "checks[raw].checks[cycle].refinements[resolution].difference.ci95_high"
+  ],
+  "reason": "Quadrature changes evaluated on fixed saved states are deterministic numerical sensitivities. Their cross-state spread must not be reported as Monte Carlo uncertainty; selected hot states are diagnostic selections.",
+  "new_difference_fields": [
+    "kind=deterministic_quadrature_delta",
+    "mean (compatible representative-only equal-state reduction and list shape)",
+    "representative_snapshot_count",
+    "selected_hot_snapshot_count",
+    "range_including_hot",
+    "scope"
+  ],
+  "unchanged_semantics": [
+    "Representative-only mean uses the identical reshape(6, representative_per_state, -1).mean(axis=(0,1)) reduction. Hot states are excluded from this mean.",
+    "max_absolute_difference includes every selected state, including hot snapshots.",
+    "Logical scoring calls, trace errors, minimum logical eigenvalues, previous-resolution comparisons, all-cycle coverage and pass/fail expressions are unchanged."
+  ],
+  "structural_verification": "AST equality for scorer call arguments, maximum/gate expressions in serial/shared paths, and complete refine_run/main functions; quantum/scoring.py remains identical to the completed main-study snapshot.",
+  "regression": {
+    "red_command": ".venv/bin/python -m pytest tests/test_local_score_refinement.py -k quadrature_deltas -q",
+    "red_result": "4 expected failures on old SE/CI fields",
+    "red_log_sha256": "a64d9a6240afb6ba89402d8b1b962b2ae71cab0fcff0885a75863efc6274edac",
+    "green_command": ".venv/bin/python -m pytest tests/test_local_score_refinement.py tests/test_simulation_quality.py -q",
+    "green_result": "33 passed in 3.08s",
+    "green_log_sha256": "cbc8e060e79b1c2b700c90234e9327ecb099872f33a13336b65c99823e7df954",
+    "scope": "Four new synthetic fixed-state report cases plus existing scorer and small software controls; no historical trajectory generation or physical rescoring."
+  },
+  "frozen_report_count_checked": 21,
+  "frozen_reports_unchanged": {
+    "results/simulator_accuracy_completion/20261124/remaining_physics/jobs/9e5e12cf5817874b/quality/logical_refinement_4f3d9fe134d19b45.json": true,
+    "results/simulator_accuracy_completion/20261124/remaining_physics/jobs/0643eef0fa378878/quality/logical_refinement_c366df9aefde7641.json": true,
+    "results/simulator_accuracy_completion/20261124/remaining_physics/jobs/dcd0f4d8452e1fb5/quality/logical_refinement_52e8e1885c4d2165.json": true,
+    "results/simulator_accuracy_completion/20261124/remaining_physics/jobs/fbd4d6119d795bd8/quality/logical_refinement_c1c58a2aba5d7c4c.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/c4e26c27fc60933a/quality/logical_refinement_f449472ae90ece68.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/374046b315eb9ff4/quality/logical_refinement_bb52a41578dd911e.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/39789e8d77effe9d/quality/logical_refinement_d01f47ea582acb28.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/8dd7ad895c13dff6/quality/logical_refinement_c513b75cccf374ac.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/3d19c02dc243b798/quality/logical_refinement_82fa7f1d9d4fb370.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/0170b68cea15fce1/quality/logical_refinement_a330f4ea845dde33.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/a31677ca0ca3e2f4/quality/logical_refinement_99352865c9d0c891.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/a5616bfd9131408e/quality/logical_refinement_0bb2c8645e86e0d8.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/4c1fa64a42a61958/quality/logical_refinement_01b2b247310b0856.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/41d25538d93cce6b/quality/logical_refinement_dcfca251e92d4989.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/a1999d87dc2a61be/quality/logical_refinement_c609182207c5564f.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/27f4d0d86be964df/quality/logical_refinement_d04a32f03f266cff.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/cd07ce8ae47f9fcb/quality/logical_refinement_b0afc7c3346f7a2d.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/f84b4a357af68eba/quality/logical_refinement_8ea4fffbafaaef1d.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/b883abbae5ba74ae/quality/logical_refinement_95c729dfca40921d.json": true,
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/580de81d92c3d854/quality/logical_refinement_cf25770cac385886.json": true,
+    "results/simulator_accuracy_completion/20261124/scoring_635d50e4441cc5d1/quality/logical_refinement_b429f66fc41bd6c9.json": true
+  },
+  "completed_scientific_identities": {
+    "results/simulator_accuracy_completion/20261124/remaining_physics": {
+      "plan_file_unchanged": true,
+      "snapshot_producer_unchanged": true,
+      "frozen_producer_sha256": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f"
+    },
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned": {
+      "plan_file_unchanged": true,
+      "snapshot_producer_unchanged": true,
+      "frozen_producer_sha256": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f"
+    }
+  },
+  "historical_source_identity_note": "Completed runs remain attributed to their original producer hashes and frozen source snapshots. Their old difference.se/ci95_* fields must not be interpreted as quadrature confidence intervals. No archived bytes, plan hashes or snapshot hashes were repaired. The active producer has a new identity and future reports receive that identity; current-source validation of an old plan intentionally rejects this reporting-version difference.",
+  "execution": "No scientific jobs launched; no old run rescored; no raw data, completed report or frozen snapshot modified."
+}

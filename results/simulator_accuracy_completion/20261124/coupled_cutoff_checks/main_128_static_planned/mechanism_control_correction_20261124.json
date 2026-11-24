@@ -1,0 +1,41 @@
+{
+  "registered_utc": "2026-11-24T09:47:29.426212+00:00",
+  "status": "Correction registered before main scientific launch",
+  "supersedes": "Only the auditor coverage implementation/source hashes in the earlier mechanism-control registration; original scientific controls and plan remain unchanged.",
+  "original_registration": "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/mechanism_control_registration.json",
+  "original_registration_sha256": "02c485957e080c0d31a587024250748858e9d956bfb858d78ad58a2a8f49cc4d",
+  "prior_source_sha256": {
+    "experiments/audit_coupled_mechanisms.py": "84721523d3c29a6aa2904db14d3ab418c09c245ab5de8b65fe8f43772b7756dd",
+    "tests/test_coupled_mechanisms.py": "2599702fe1a6ec087b514d94f61056a90a690c3ee3bb7ad5b09a986384950d56"
+  },
+  "new_source_sha256": {
+    "experiments/audit_coupled_mechanisms.py": "040f44925f346391eac192bfd16a762da2f729a61d97616dfe22f5b9b200e4b2",
+    "tests/test_coupled_mechanisms.py": "61765395f8736c6db81cc98b77611de2d599465cde5ddaf9f083a4d90be29b07"
+  },
+  "defect": "Original audit took conditions from plan metadata and used sampler dictionary comprehensions; empty conditions could produce vacuous all()success and duplicate cells could collapse silently.",
+  "repair": [
+    "Require exact registered4conditions\u00d72cutoffs\u00d72samplers,16jobs,uniqueIDs andonejobpercell before indexing.",
+    "Require exact fixed_design counts,seed,budgets,controller,cutoffs andsamplers andcross-checkeachjobconfig.",
+    "Bind outeraudit toapprovedcanonical scientificplan digest andrequire8nonemptycomparison/reconstructionpairs.",
+    "No rawarray exclusions or numerical acceptance tolerances added; mismatchreportingunchanged."
+  ],
+  "directed_negative_controls": [
+    "Empty condition list",
+    "0/15/17jobs",
+    "Duplicate jobID",
+    "Duplicate cell with uniqueID",
+    "Extra condition",
+    "Missing/extra designconditions",
+    "Incorrect shots/rounds/seed/controller",
+    "Incorrect designcount/cutoffs/samplers/optionalstopping",
+    "Structurallyvalid unregisteredphysicalparameterchange"
+  ],
+  "tests": {
+    "passed": 9,
+    "seconds": 1.7,
+    "log": "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/mechanism_tests_after_coverage_fix.log"
+  },
+  "approved_main_plan_canonical_sha256": "eb995962bfa7e47ca1e360fca56699e4a3c27699323a72a03792338c880a3032",
+  "scientific_plan_edited": false,
+  "trajectories_rerun": false
+}

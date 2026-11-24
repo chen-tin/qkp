@@ -1,0 +1,698 @@
+{
+  "plan_sha256": "8fe9cae3075f62aaa80af58e59adfc0f546bc7c867a1931a52a30ce308703913",
+  "expected_jobs": 2,
+  "completed_jobs": 2,
+  "all_jobs_executed": true,
+  "stage_failures": 2,
+  "groups": {
+    "broad_control/baseline/nearest/N32": {
+      "expected_chunks": 1,
+      "completed_chunks": 1,
+      "stage_pass": false,
+      "trials": 12,
+      "fixed_budget_complete": true,
+      "interval_interpretation": "fixed_budget",
+      "events": {
+        "energy_limit": {
+          "errors": 0,
+          "trials": 12,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.9736476861652635
+          ],
+          "one_sided_upper": 0.9627322003750036,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "energy_jump": {
+          "errors": 0,
+          "trials": 12,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.9736476861652635
+          ],
+          "one_sided_upper": 0.9627322003750036,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "boundary_failure": {
+          "errors": 6,
+          "trials": 12,
+          "rate": 0.5,
+          "states": [
+            {
+              "errors": 2,
+              "trials": 2,
+              "rate": 1.0,
+              "interval": [
+                0.026352313834736494,
+                1.0
+              ],
+              "one_sided_upper": 1.0,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 2,
+              "trials": 2,
+              "rate": 1.0,
+              "interval": [
+                0.026352313834736494,
+                1.0
+              ],
+              "one_sided_upper": 1.0,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 1,
+              "trials": 2,
+              "rate": 0.5,
+              "interval": [
+                0.00034728252479823734,
+                0.9996527174752018
+              ],
+              "one_sided_upper": 0.9993053142614179,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 1,
+              "trials": 2,
+              "rate": 0.5,
+              "interval": [
+                0.00034728252479823734,
+                0.9996527174752018
+              ],
+              "one_sided_upper": 0.9993053142614179,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.008899865453178243,
+            0.9911001345468219
+          ],
+          "one_sided_upper": 0.9873458382121406,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        }
+      },
+      "mean_logical_fidelity": [
+        0.975983540306211,
+        0.7023369317396004,
+        0.5180446403073192
+      ],
+      "pointwise_fidelity_ci95": [
+        [
+          0.975983540306211,
+          0.6064871521168043,
+          0.3632331345936328
+        ],
+        [
+          0.975983540306211,
+          0.7981867113623966,
+          0.6728561460210056
+        ]
+      ],
+      "mean_energy": [
+        4.990320680894414,
+        7.676161049163723,
+        8.437798507514946
+      ],
+      "maximum_energy": [
+        4.990685973315368,
+        25.749383719966776,
+        28.704708005861495
+      ]
+    },
+    "broad_control/baseline/nearest/N48": {
+      "expected_chunks": 1,
+      "completed_chunks": 1,
+      "stage_pass": false,
+      "trials": 12,
+      "fixed_budget_complete": true,
+      "interval_interpretation": "fixed_budget",
+      "events": {
+        "energy_limit": {
+          "errors": 0,
+          "trials": 12,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.9736476861652635
+          ],
+          "one_sided_upper": 0.9627322003750036,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "energy_jump": {
+          "errors": 0,
+          "trials": 12,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.9736476861652635
+          ],
+          "one_sided_upper": 0.9627322003750036,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "boundary_failure": {
+          "errors": 1,
+          "trials": 12,
+          "rate": 0.08333333333333333,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 1,
+              "trials": 2,
+              "rate": 0.5,
+              "interval": [
+                0.00034728252479823734,
+                0.9996527174752018
+              ],
+              "one_sided_upper": 0.9993053142614179,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 2,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.9736476861652635
+              ],
+              "one_sided_upper": 0.9627322003750036,
+              "alpha": 0.05,
+              "comparisons": 36,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            5.7880420799706225e-05,
+            0.9779818580502533
+          ],
+          "one_sided_upper": 0.9688277193560727,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        }
+      },
+      "mean_logical_fidelity": [
+        0.977121548617056,
+        0.7398627281527702,
+        0.7124758546222237
+      ],
+      "pointwise_fidelity_ci95": [
+        [
+          0.977121548617056,
+          0.685331140098854,
+          0.6307710206167462
+        ],
+        [
+          0.977121548617056,
+          0.7943943162066864,
+          0.7941806886277013
+        ]
+      ],
+      "mean_energy": [
+        5.062412036059566,
+        6.8755002086062404,
+        7.560116379977633
+      ],
+      "maximum_energy": [
+        5.077098600607989,
+        18.940484094398066,
+        26.750253680212857
+      ]
+    }
+  },
+  "classification": "infrastructure_smoke",
+  "numerically_certified": false,
+  "registered_numerical_sample_checks_pass": false,
+  "scoring_refinement": {
+    "4c826c547a2c2d5e": {
+      "status": "checked",
+      "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulation_quality_infrastructure/parallelism_pilot_20261120/parallel/plans/smoke/jobs/4c826c547a2c2d5e/quality/logical_refinement_f4413cdc2d1642e9.json",
+      "sha256": "be810cff8b589bd9e831e6992e64724f3557f9781fe3842ac0b4efd4063b8421",
+      "pass": true
+    },
+    "403a326ff1c92766": {
+      "status": "checked",
+      "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulation_quality_infrastructure/parallelism_pilot_20261120/parallel/plans/smoke/jobs/403a326ff1c92766/quality/logical_refinement_04cd94d2a88b8ac8.json",
+      "sha256": "205f7fca607e8ac470213b643f8534c60a84492d53aff26805077b88c5c7df40",
+      "pass": true
+    }
+  },
+  "cutoff_equivalence": {
+    "broad_control/baseline/nearest": {
+      "status": "complete",
+      "from_cutoff": 32,
+      "to_cutoff": 48,
+      "difference": {
+        "mean": [
+          0.0011380083108450771,
+          0.03752579641316986,
+          0.19443121431490465
+        ],
+        "se": [
+          0.0,
+          0.03442229314074639,
+          0.09575971309562896
+        ],
+        "ci95_low": [
+          0.0011380083108450771,
+          -0.02994065840797136,
+          0.006745625477588474
+        ],
+        "ci95_high": [
+          0.0011380083108450771,
+          0.10499225123431108,
+          0.38211680315222085
+        ]
+      },
+      "within_tolerance": [
+        true,
+        false,
+        false
+      ],
+      "tolerance": 0.01,
+      "pass": false
+    }
+  },
+  "independent_instrument_checks": {
+    "scope": "ideal single-instrument checks on supplied finite-cutoff states; no all-state bound",
+    "coverage": {
+      "32/0.49999999999999994/1": {
+        "pass": false,
+        "input_hashes": []
+      },
+      "48/0.49999999999999994/1": {
+        "pass": false,
+        "input_hashes": []
+      }
+    },
+    "pass": false
+  },
+  "all_registered_empirical_checks_pass": false,
+  "note": "Passing sample checks is not a rigorous channel-error bound or validation of a lumped physical approximation."
+}

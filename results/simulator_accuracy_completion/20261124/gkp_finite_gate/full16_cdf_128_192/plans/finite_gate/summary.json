@@ -1,0 +1,2732 @@
+{
+  "plan_sha256": "aad69b5d6b4aa277a09576e52a8d998d89cfe8db1e5675b8b80be91f83b41203",
+  "expected_jobs": 8,
+  "completed_jobs": 8,
+  "all_jobs_executed": true,
+  "stage_failures": 0,
+  "groups": {
+    "broad_control/ideal/nearest/N128": {
+      "expected_chunks": 1,
+      "completed_chunks": 1,
+      "stage_pass": true,
+      "trials": 96,
+      "fixed_budget_complete": true,
+      "interval_interpretation": "fixed_budget",
+      "events": {
+        "energy_limit": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "energy_jump": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "boundary_failure": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        }
+      },
+      "mean_logical_fidelity": [
+        0.9772475368030733,
+        0.6829469591124028,
+        0.5973782408305739
+      ],
+      "pointwise_fidelity_ci95": [
+        [
+          0.9772475331388597,
+          0.6555140508678737,
+          0.5600748456897479
+        ],
+        [
+          0.9772475404672869,
+          0.7103798673569318,
+          0.6346816359713999
+        ]
+      ],
+      "mean_energy": [
+        5.070557150145186,
+        5.176230918883519,
+        5.862007375598222
+      ],
+      "maximum_energy": [
+        5.085877574544635,
+        34.92824015680252,
+        34.638965327734596
+      ]
+    },
+    "broad_control/ideal/nearest/N192": {
+      "expected_chunks": 1,
+      "completed_chunks": 1,
+      "stage_pass": true,
+      "trials": 96,
+      "fixed_budget_complete": true,
+      "interval_interpretation": "fixed_budget",
+      "events": {
+        "energy_limit": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "energy_jump": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "boundary_failure": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        }
+      },
+      "mean_logical_fidelity": [
+        0.9772475462949307,
+        0.6829469602745041,
+        0.5973782411281127
+      ],
+      "pointwise_fidelity_ci95": [
+        [
+          0.9772475432163755,
+          0.6555140522579732,
+          0.5600748460921382
+        ],
+        [
+          0.9772475493734859,
+          0.7103798682910349,
+          0.6346816361640871
+        ]
+      ],
+      "mean_energy": [
+        5.070557170684993,
+        5.176230902498836,
+        5.862007376131075
+      ],
+      "maximum_energy": [
+        5.085877604938049,
+        34.92823876317122,
+        34.63896525335572
+      ]
+    },
+    "broad_control/lumped/nearest/N128": {
+      "expected_chunks": 1,
+      "completed_chunks": 1,
+      "stage_pass": true,
+      "trials": 96,
+      "fixed_budget_complete": true,
+      "interval_interpretation": "fixed_budget",
+      "events": {
+        "energy_limit": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "energy_jump": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "boundary_failure": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        }
+      },
+      "mean_logical_fidelity": [
+        0.9772475368030733,
+        0.6785450843019416,
+        0.5981917135472438
+      ],
+      "pointwise_fidelity_ci95": [
+        [
+          0.9772475331388597,
+          0.6490322580339074,
+          0.5603110173166918
+        ],
+        [
+          0.9772475404672869,
+          0.7080579105699758,
+          0.6360724097777958
+        ]
+      ],
+      "mean_energy": [
+        5.070557150145186,
+        5.309967675982002,
+        5.843769745361999
+      ],
+      "maximum_energy": [
+        5.085877574544635,
+        38.33333709394148,
+        25.319383326824912
+      ]
+    },
+    "broad_control/lumped/nearest/N192": {
+      "expected_chunks": 1,
+      "completed_chunks": 1,
+      "stage_pass": true,
+      "trials": 96,
+      "fixed_budget_complete": true,
+      "interval_interpretation": "fixed_budget",
+      "events": {
+        "energy_limit": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "energy_jump": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "boundary_failure": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        }
+      },
+      "mean_logical_fidelity": [
+        0.9772475462949307,
+        0.6785450851735771,
+        0.5981917134418248
+      ],
+      "pointwise_fidelity_ci95": [
+        [
+          0.9772475432163755,
+          0.6490322588113295,
+          0.5603110171694694
+        ],
+        [
+          0.9772475493734859,
+          0.7080579115358248,
+          0.6360724097141801
+        ]
+      ],
+      "mean_energy": [
+        5.070557170684993,
+        5.309967575614354,
+        5.843769744417444
+      ],
+      "maximum_energy": [
+        5.085877604938049,
+        38.33332661364709,
+        25.31938319259634
+      ]
+    },
+    "broad_control/qutip/nearest/N128": {
+      "expected_chunks": 1,
+      "completed_chunks": 1,
+      "stage_pass": true,
+      "trials": 96,
+      "fixed_budget_complete": true,
+      "interval_interpretation": "fixed_budget",
+      "events": {
+        "energy_limit": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "energy_jump": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "boundary_failure": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        }
+      },
+      "mean_logical_fidelity": [
+        0.9772475368030733,
+        0.6797683124084971,
+        0.6103522002160607
+      ],
+      "pointwise_fidelity_ci95": [
+        [
+          0.9772475331388597,
+          0.651830696832992,
+          0.5773375660879616
+        ],
+        [
+          0.9772475404672869,
+          0.7077059279840022,
+          0.6433668343441599
+        ]
+      ],
+      "mean_energy": [
+        5.070557150145186,
+        5.484211565264012,
+        5.835473602354089
+      ],
+      "maximum_energy": [
+        5.085877574544635,
+        45.67902009840516,
+        55.39959402819486
+      ]
+    },
+    "broad_control/qutip/nearest/N192": {
+      "expected_chunks": 1,
+      "completed_chunks": 1,
+      "stage_pass": true,
+      "trials": 96,
+      "fixed_budget_complete": true,
+      "interval_interpretation": "fixed_budget",
+      "events": {
+        "energy_limit": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "energy_jump": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "boundary_failure": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        }
+      },
+      "mean_logical_fidelity": [
+        0.9772475462949307,
+        0.6797682940735944,
+        0.6103522867319883
+      ],
+      "pointwise_fidelity_ci95": [
+        [
+          0.9772475432163755,
+          0.6518306808952343,
+          0.5773376214600054
+        ],
+        [
+          0.9772475493734859,
+          0.7077059072519545,
+          0.6433669520039711
+        ]
+      ],
+      "mean_energy": [
+        5.070557170684993,
+        5.484213616460821,
+        5.835476100271869
+      ],
+      "maximum_energy": [
+        5.085877604938049,
+        45.6792234033182,
+        55.39984545138106
+      ]
+    },
+    "broad_control/qutip_refined/nearest/N128": {
+      "expected_chunks": 1,
+      "completed_chunks": 1,
+      "stage_pass": true,
+      "trials": 96,
+      "fixed_budget_complete": true,
+      "interval_interpretation": "fixed_budget",
+      "events": {
+        "energy_limit": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "energy_jump": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "boundary_failure": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        }
+      },
+      "mean_logical_fidelity": [
+        0.9772475368030733,
+        0.6797692385816313,
+        0.6103483311752649
+      ],
+      "pointwise_fidelity_ci95": [
+        [
+          0.9772475331388597,
+          0.6518311391403765,
+          0.5773329446279903
+        ],
+        [
+          0.9772475404672869,
+          0.7077073380228861,
+          0.6433637177225394
+        ]
+      ],
+      "mean_energy": [
+        5.070557150145186,
+        5.484211932384014,
+        5.835495674821849
+      ],
+      "maximum_energy": [
+        5.085877574544635,
+        45.67849839058685,
+        55.398872971643584
+      ]
+    },
+    "broad_control/qutip_refined/nearest/N192": {
+      "expected_chunks": 1,
+      "completed_chunks": 1,
+      "stage_pass": true,
+      "trials": 96,
+      "fixed_budget_complete": true,
+      "interval_interpretation": "fixed_budget",
+      "events": {
+        "energy_limit": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "energy_jump": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        },
+        "boundary_failure": {
+          "errors": 0,
+          "trials": 96,
+          "rate": 0.0,
+          "states": [
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            },
+            {
+              "errors": 0,
+              "trials": 16,
+              "rate": 0.0,
+              "interval": [
+                0.0,
+                0.4179321731755651
+              ],
+              "one_sided_upper": 0.3921618288527425,
+              "alpha": 0.05,
+              "comparisons": 144,
+              "method": "fixed_n_Clopper_Pearson_Bonferroni"
+            }
+          ],
+          "interval": [
+            0.0,
+            0.417932173175565
+          ],
+          "one_sided_upper": 0.3921618288527425,
+          "method": "equal_state_average_of_Bonferroni_Clopper_Pearson_bounds"
+        }
+      },
+      "mean_logical_fidelity": [
+        0.9772475462949307,
+        0.679769364137646,
+        0.6103474932774156
+      ],
+      "pointwise_fidelity_ci95": [
+        [
+          0.9772475432163755,
+          0.651831288697148,
+          0.5773319800069263
+        ],
+        [
+          0.9772475493734859,
+          0.707707439578144,
+          0.6433630065479048
+        ]
+      ],
+      "mean_energy": [
+        5.070557170684993,
+        5.484214040983653,
+        5.835503613321524
+      ],
+      "maximum_energy": [
+        5.085877604938049,
+        45.67870197184875,
+        55.39912466622389
+      ]
+    }
+  },
+  "classification": "benchmark_observations",
+  "numerically_certified": false,
+  "registered_numerical_sample_checks_pass": true,
+  "scoring_refinement": {
+    "4798e4e6b326ccb1": {
+      "status": "checked",
+      "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/4798e4e6b326ccb1/quality/logical_refinement_fe512875e069fa5a.json",
+      "sha256": "890b5e4a634709603f2a9cd2330031007f527f2e00bf4dce0e552d4890e05021",
+      "pass": true
+    },
+    "56559a7609d5bd21": {
+      "status": "checked",
+      "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/56559a7609d5bd21/quality/logical_refinement_55337c87ea3bfd38.json",
+      "sha256": "1c3825e4994f15d3fe09f68b3aa89331591971718f6dea7c2f6e20793a0572ea",
+      "pass": true
+    },
+    "37d8357d2c187f72": {
+      "status": "checked",
+      "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/37d8357d2c187f72/quality/logical_refinement_cdec8794bce4892a.json",
+      "sha256": "1ec5e9cd487b1471736969f082e2e1b2cb5cfa21877c8470ab7c18f67b13a2bf",
+      "pass": true
+    },
+    "f2dd17287b5dfeb5": {
+      "status": "checked",
+      "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/f2dd17287b5dfeb5/quality/logical_refinement_12247eb2e1f1936d.json",
+      "sha256": "81677170b572d9540df3574d4f7f77a89132a912a4686b62ceb9ba913d2aaf4e",
+      "pass": true
+    },
+    "976f254f4ef9b241": {
+      "status": "checked",
+      "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/976f254f4ef9b241/quality/logical_refinement_7036f93cb2fe7701.json",
+      "sha256": "a1afb240b21c3c4a30c437f3f5f2850af1450f4a7c9997d0a5d0075794fe5514",
+      "pass": true
+    },
+    "88ab14a2c9ae22cd": {
+      "status": "checked",
+      "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/88ab14a2c9ae22cd/quality/logical_refinement_2f7d7b6b4af2e978.json",
+      "sha256": "58e776a3bdbcb0df91d57f0007f38849d313251cdf947a45b3b390873d7cc4c1",
+      "pass": true
+    },
+    "2e31888b906bbc86": {
+      "status": "checked",
+      "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/2e31888b906bbc86/quality/logical_refinement_f3cbb3ea752b718a.json",
+      "sha256": "de9a8ac4f436eca590e9d9e5d714f794a1a39e0ef7969e5261674e551ec31949",
+      "pass": true
+    },
+    "0773147476712698": {
+      "status": "checked",
+      "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/0773147476712698/quality/logical_refinement_438e3917812e16aa.json",
+      "sha256": "8cc0ace70d8230c9686a5a0ec496ad434285d2fc2a8340f1b123bf790df2d356",
+      "pass": true
+    }
+  },
+  "cutoff_equivalence": {
+    "broad_control/ideal/nearest": {
+      "status": "complete",
+      "from_cutoff": 128,
+      "to_cutoff": 192,
+      "difference": {
+        "mean": [
+          9.491858576904377e-09,
+          1.1621014567309018e-09,
+          2.9753828394152304e-10
+        ],
+        "se": [
+          0.0,
+          1.197424139508623e-09,
+          3.360341586742124e-10
+        ],
+        "ci95_low": [
+          9.491858576904377e-09,
+          -1.1848067309248002e-09,
+          -3.6107656463513286e-10
+        ],
+        "ci95_high": [
+          9.491858576904377e-09,
+          3.509009644386604e-09,
+          9.561531325181788e-10
+        ]
+      },
+      "within_tolerance": [
+        true,
+        true,
+        true
+      ],
+      "tolerance": 0.01,
+      "pass": true
+    },
+    "broad_control/lumped/nearest": {
+      "status": "complete",
+      "from_cutoff": 128,
+      "to_cutoff": 192,
+      "difference": {
+        "mean": [
+          9.491858576904377e-09,
+          8.716358745886055e-10,
+          -1.0541916240410416e-10
+        ],
+        "se": [
+          0.0,
+          2.0276497473235393e-09,
+          1.2551357260499924e-10
+        ],
+        "ci95_low": [
+          9.491858576904377e-09,
+          -3.102484603427163e-09,
+          -3.5142124428084905e-10
+        ],
+        "ci95_high": [
+          9.491858576904377e-09,
+          4.845756352604374e-09,
+          1.4058291947264075e-10
+        ]
+      },
+      "within_tolerance": [
+        true,
+        true,
+        true
+      ],
+      "tolerance": 0.01,
+      "pass": true
+    },
+    "broad_control/qutip/nearest": {
+      "status": "complete",
+      "from_cutoff": 128,
+      "to_cutoff": 192,
+      "difference": {
+        "mean": [
+          9.491858576904377e-09,
+          -1.8334903065705028e-08,
+          8.651592751408865e-08
+        ],
+        "se": [
+          0.0,
+          1.9206897749097227e-07,
+          2.0710105971134944e-07
+        ],
+        "ci95_low": [
+          9.491858576904377e-09,
+          -3.947831814954346e-07,
+          -3.193946906802243e-07
+        ],
+        "ci95_high": [
+          9.491858576904377e-09,
+          3.5811337536402457e-07,
+          4.924265457084016e-07
+        ]
+      },
+      "within_tolerance": [
+        true,
+        true,
+        true
+      ],
+      "tolerance": 0.01,
+      "pass": true
+    },
+    "broad_control/qutip_refined/nearest": {
+      "status": "complete",
+      "from_cutoff": 128,
+      "to_cutoff": 192,
+      "difference": {
+        "mean": [
+          9.491858576904377e-09,
+          1.2555601450423928e-07,
+          -8.37897849149255e-07
+        ],
+        "se": [
+          0.0,
+          1.2686322931898448e-07,
+          1.0369216670824946e-06
+        ],
+        "ci95_low": [
+          9.491858576904377e-09,
+          -1.2309134592340928e-07,
+          -2.8702269714201205e-06
+        ],
+        "ci95_high": [
+          9.491858576904377e-09,
+          3.7420337493188787e-07,
+          1.1944312731216104e-06
+        ]
+      },
+      "within_tolerance": [
+        true,
+        true,
+        true
+      ],
+      "tolerance": 0.01,
+      "pass": true
+    }
+  },
+  "independent_instrument_checks": {
+    "scope": "ideal single-instrument checks on explicitly selected production snapshots; no all-state or all-cycle bound",
+    "coverage": {
+      "128/0.49999999999999994/1": {
+        "pass": false,
+        "input_hashes": []
+      },
+      "192/0.49999999999999994/1": {
+        "pass": false,
+        "input_hashes": []
+      }
+    },
+    "parameter_checks_pass": false,
+    "production_state_coverage": {
+      "4798e4e6b326ccb1/nearest": {
+        "pass": false,
+        "selections": []
+      },
+      "56559a7609d5bd21/nearest": {
+        "pass": false,
+        "selections": []
+      },
+      "37d8357d2c187f72/nearest": {
+        "pass": false,
+        "selections": []
+      },
+      "f2dd17287b5dfeb5/nearest": {
+        "pass": false,
+        "selections": []
+      },
+      "976f254f4ef9b241/nearest": {
+        "pass": false,
+        "selections": []
+      },
+      "88ab14a2c9ae22cd/nearest": {
+        "pass": false,
+        "selections": []
+      },
+      "2e31888b906bbc86/nearest": {
+        "pass": false,
+        "selections": []
+      },
+      "0773147476712698/nearest": {
+        "pass": false,
+        "selections": []
+      }
+    },
+    "production_state_checks_pass": false,
+    "pass": false
+  },
+  "all_registered_empirical_checks_pass": false,
+  "note": "Passing sample checks is not a rigorous channel-error bound or validation of a lumped physical approximation."
+}

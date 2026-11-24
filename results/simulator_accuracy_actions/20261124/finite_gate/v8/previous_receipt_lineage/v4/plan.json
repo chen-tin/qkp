@@ -1,0 +1,127 @@
+{
+  "classification": "local_bounded_deterministic_finite_gate_audit",
+  "created_utc": "2026-11-24T08:22:36.752361+00:00",
+  "question": "Does symmetric lumped data dissipation approximate simultaneous gate dissipation for these low-energy single-extraction inputs?",
+  "hypothesis": "The declared weak loss/dephasing settings give a classical-quantum instrument trace distance <= .01 once numerical gates and refinements pass.",
+  "scope": "Vacuum and coherent alpha=.25+.15i; q and p single extractions; no multicycle GKP memory, hardware, or all-state claim.",
+  "input_states": {
+    "vacuum": [
+      0.0,
+      0.0
+    ],
+    "coherent": [
+      0.25,
+      0.15
+    ]
+  },
+  "density_cutoffs": [
+    [
+      16,
+      64
+    ],
+    [
+      24,
+      96
+    ]
+  ],
+  "ideal_ket_cutoffs": [
+    [
+      64,
+      64
+    ],
+    [
+      96,
+      96
+    ]
+  ],
+  "axes": [
+    "q",
+    "p"
+  ],
+  "sigma_absolute_q": 0.5,
+  "rates_per_declared_time_unit": {
+    "ideal": [
+      0.0,
+      0.0
+    ],
+    "loss": [
+      0.01,
+      0.0
+    ],
+    "dephasing": [
+      0.0,
+      0.001
+    ],
+    "combined": [
+      0.01,
+      0.001
+    ]
+  },
+  "gate_duration_time_units": 0.1,
+  "ancilla_loss_rate": 0.0,
+  "ancilla_dephasing_rate": 0.0,
+  "coupling": 1.0,
+  "classical_displacement_noise": "none",
+  "detector_noise": "none",
+  "horizon": "one extraction; before feedback",
+  "training_seeds": [],
+  "trial_count": "deterministic density evolution; no sampled trajectories",
+  "solver_time_nodes": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "solver": {
+    "method": "matrix_free_expm_multiply",
+    "segment_subdivisions": 1,
+    "tolerance": "SciPy machine precision"
+  },
+  "tight_solver": {
+    "method": "matrix_free_expm_multiply",
+    "segment_subdivisions": 2,
+    "tolerance": "SciPy machine precision"
+  },
+  "outcome_radius": 10.0,
+  "grid_dy": [
+    0.08,
+    0.04
+  ],
+  "gates": {
+    "mean_edge": 0.0001,
+    "individual_edge": 0.01,
+    "norm": 1e-07,
+    "outcome_mass": 1e-05,
+    "cutoff_instrument_distance": 0.001,
+    "grid_metric_change": 0.0001,
+    "solver_instrument_distance": 1e-06
+  },
+  "primary_metric": "0.5 integral dy ||sigma_explicit(y)-sigma_lumped(y)||_1, including outcome probabilities and conditional density matrices; lower is better",
+  "decision_rule": {
+    "supports": "All numerical gates/refinements pass and primary distance <= .01 for every declared dissipative input/axis/variant.",
+    "contradicts": "All numerical gates/refinements pass and at least one primary distance exceeds .01 by more than measured numerical refinement sensitivity.",
+    "inconclusive": "Any numerical gate/refinement fails, resource/time cap interrupts coverage, or threshold status is unresolved within numerical sensitivity. Preserve failed controls and do not relax tolerances."
+  },
+  "uncertainty": "Deterministic numerical sensitivities only; no Monte Carlo confidence intervals.",
+  "resource_correction": "v2 exceeded1.5GB estimate; v3 full QuTiP Liouvillian exceeded4GiB watchdog. v4 uses a matrix-free Lindblad generator, retaining same physical inputs/cutoffs and4GiB watchdog.",
+  "limits": {
+    "wall_seconds": 1200,
+    "soft_rss_target_bytes": 3221225472,
+    "hard_rss_bytes": 4294967296,
+    "max_density_joint_dimension": 2304
+  },
+  "environment": {
+    "python": "3.13.13",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "numpy": "2.5.5",
+    "qutip": "5.3.1",
+    "device": "local CPU"
+  },
+  "source_sha256": {
+    "experiments/local_finite_gate_audit.py": "66644273f2abc66d1b6fa49db22129e49077ccfa72e49864b67a6ee5b8d92eea",
+    "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+    "quantum/measurement_benchmark.py": "845df5476e7793e393b977ffd29ede10eb100f9e2a01a6a462ee2a0b3b493cca",
+    "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e"
+  }
+}

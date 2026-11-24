@@ -1,0 +1,34 @@
+{
+  "corrected_utc": "2026-11-24T09:24:12.292071+00:00",
+  "classification": "metadata-only generator correction; frozen results preserved",
+  "old_study_sha256": "1c0f114f6efe902d3fab3c46e9410c2ee451ebb01d7cdd033120deea8fd136eb",
+  "old_analysis_sha256": "9f6f3e250fa3b59538dc1e8f6d1ec6b3c347058289718fe4cfc97e1ad103d331",
+  "old_source_path": "results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/source_snapshot/experiments/local_gkp_gate_pilot.py",
+  "old_source_sha256": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c",
+  "new_active_source_path": "experiments/local_gkp_gate_pilot.py",
+  "new_active_source_sha256": "215feb3e4ab4e27bf8ca998f05d6594d065bd5b8e84e1f40230949c304b2397b",
+  "supersedes_fields": {
+    "uncertainty": "Existing paired state-stratified normal95%fidelity intervals; pilot2/state has limited statistical power and is a numerical/timingpreflight, not a confirmatory equivalence claim. Deterministic quadrature gets no MCinterval.",
+    "projected_full16_state_seconds": 629.8978380420012
+  },
+  "corrected_interpretation": {
+    "uncertainty": "Paired state-stratified normal95% logical-fidelity intervals; 16 trajectories/cardinalstate \u00d76 =96 total/job/arm, pointwise bycycle. Deterministic quadrature receives no MonteCarlointerval. Original fixed16/state control budget on the registered base stream; not independent confirmation of the diagnosticpilot. No nested-shot claim follows from seed equality.",
+    "actual_fixed16_state_seconds": 629.8978380420012,
+    "trajectories_per_cardinal_state": 16,
+    "cardinal_states": 6,
+    "total_trajectories_per_job_per_arm": 96,
+    "scope": "629.897838seconds is MEASURED full execution time, not a future full-budget projection. Pilot2/state text referred to the earlier pilot and should not describe this full fixed16/state result."
+  },
+  "unchanged_numerical_helper_AST_sha256": {
+    "build_plan": "3d57c73bf699cb5a49c3bc1caa1c2549d2f8613e07172cf5fbb0d84965b7b42b",
+    "interval_verdict": "552bd84e1eed49588b564d57fcaf1833ee30b1cc1d51843aaad0c340fc5997dc",
+    "backend_evidence": "e13ded8350929c61fe4a969e5ef61c60c585de908955791b3459eb06a5300293",
+    "direct_cdf_spec": "b7d3648ac96c17ddfe39d36955d891710093828b9e16499b0b887390b3029a39",
+    "execute": "025d3f7eb11da641cbccd773a5f782051c7c36d667761291e6955932e52218b6"
+  },
+  "numerical_result_unchanged": {
+    "numerical_checks_pass": true,
+    "approximation_decision": "inconclusive"
+  },
+  "evidence": "Frozen analysis.json, study.json, raw files and source snapshots were not edited. New active generator emits mode-appropriate uncertainty/counts and distinct actual-vs-projected runtime fields. Regression in test_local_gkp_gate_pilot.py."
+}

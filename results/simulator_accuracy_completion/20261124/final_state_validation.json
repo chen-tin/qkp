@@ -1,0 +1,41 @@
+{
+  "checked_utc": "2026-11-24T15:30:33.239920+00:00",
+  "current_test_result": "263 passed in 21.70s",
+  "current_source_files_hashed": 138,
+  "completed_study_snapshot_checks": [
+    {
+      "plan": "results/simulator_accuracy_completion/20261124/remaining_physics/plan.json",
+      "source_count": 24,
+      "changed_frozen_snapshots": [],
+      "pass": true
+    },
+    {
+      "plan": "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/plan.json",
+      "source_count": 27,
+      "changed_frozen_snapshots": [],
+      "pass": true
+    }
+  ],
+  "intentional_post_run_working_source_changes": [
+    {
+      "plan": "results/simulator_accuracy_completion/20261124/remaining_physics/plan.json",
+      "path": "experiments/refine_logical_scores.py",
+      "frozen_sha256": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+      "active_sha256": "5f63badfcc3a7d732e4b8c5f2b2439cac530edb2254916597cd80225f6eb0b02",
+      "documented_reporting_correction": true
+    },
+    {
+      "plan": "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/plan.json",
+      "path": "experiments/refine_logical_scores.py",
+      "frozen_sha256": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+      "active_sha256": "5f63badfcc3a7d732e4b8c5f2b2439cac530edb2254916597cd80225f6eb0b02",
+      "documented_reporting_correction": true
+    }
+  ],
+  "analysis_packet_artifact_changes": [],
+  "historical_evidence_checked": 45,
+  "changed_historical_evidence": [],
+  "active_targeted_processes": [],
+  "reporting_correction": "results/simulator_accuracy_completion/20261124/scoring_reporting_correction/correction_20261124.md",
+  "pass": true
+}

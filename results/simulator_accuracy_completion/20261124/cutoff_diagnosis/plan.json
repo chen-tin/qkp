@@ -1,0 +1,15 @@
+{
+  "registered_utc": "2026-11-24T08:14:40.931583+00:00",
+  "status": "planned",
+  "purpose": "Recompute original paired confidence intervals and inspect influence/energy/boundary association for four inconclusive comparisons, before choosing new local runs.",
+  "input": "../inputs/cutoff_pairs/import_manifest.json",
+  "configuration": "Original nearest-lattice noise/physics,4096/5120,512perstate\u00d76states,8cycles,seeds unchanged; exact imported job configs in manifest.",
+  "metric": "Per-cycle paired higher-minus-lower logical fidelity, equal six-state mean and independent-trajectory stratified95%normal interval; retain \u00b1.01 criterion.",
+  "secondary": "Descriptive per-trajectory absolute differences, boundary population and photon-energy maxima. Post-hoc sample-size projection assumes same variance/mean and is planning-only, not a promised equivalence result.",
+  "decision_rule": {
+    "support": "All original paired intervals wholly in\u00b1.01 -> supported within registered scope",
+    "contradict": "Interval wholly outside tolerance -> discrepancy under fixed criterion",
+    "inconclusive": "Boundary-crossing interval -> retain inconclusive; no threshold tuning or causal claim from correlations."
+  },
+  "execution": "Local saved-array calculations only, no new trajectory/randomnoise/training."
+}

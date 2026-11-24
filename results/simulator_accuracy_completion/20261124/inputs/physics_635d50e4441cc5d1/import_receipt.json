@@ -1,0 +1,38 @@
+{
+  "imported_utc": "2026-11-24T08:18:19.852371+00:00",
+  "scope": "Read-only archive import; all testing/analysis local; no cloud changes.",
+  "result_sha256": "f88b023f771d6512f8f3dff57283b58fd423b929329ea6858f578efd8024030b",
+  "source_receipt": "results/simulator_accuracy_actions/20261123/root/recovery/remote_recovery_receipt.json",
+  "files": [
+    {
+      "path": "results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/nearest_replayed_corrections.npz",
+      "sha256": "5ce3d29a52fd7d8ca2a5931430ac4227a1ecb0f0e2c0d80318f024e0bd0606e0",
+      "bytes": 52805555
+    },
+    {
+      "path": "results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/nearest_finite_ancilla.npz",
+      "sha256": "5b1bb450211521173501f92060bb5d30916eb9a833d01e2cdaec5a5abbef0997",
+      "bytes": 54061694
+    },
+    {
+      "path": "results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/bayes_gaussian_replayed_corrections.npz",
+      "sha256": "933c0f5b324d7da31bed298ea042642459862e300a15ae9e90204a4662d17a01",
+      "bytes": 52724587
+    },
+    {
+      "path": "results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/bayes_gaussian_finite_ancilla.npz",
+      "sha256": "3e9d2de5368254896442aa31c910ae0a12bb35a7ebcadf17e3170e4e123eb8c1",
+      "bytes": 54221876
+    },
+    {
+      "path": "results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/lstm_256x3_s0_replayed_corrections.npz",
+      "sha256": "cda672332d693e2b04895ef83f6b854031cdbbdd2eb31b0d183ca4942e6ed491",
+      "bytes": 52963081
+    },
+    {
+      "path": "results/simulator_accuracy_completion/20261124/inputs/physics_635d50e4441cc5d1/nominal_N5120_smooth/lstm_256x3_s0_finite_ancilla.npz",
+      "sha256": "8690689acf51e38016a7035031b164cd5a7c622a7132278f570b12acd9ed9a6e",
+      "bytes": 54222329
+    }
+  ]
+}

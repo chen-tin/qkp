@@ -1,0 +1,39 @@
+{
+  "registered_utc": "2026-11-24T08:35:12.052264+00:00",
+  "status": "Planned",
+  "config": {
+    "data_cutoff": 6,
+    "ancilla_cutoffs": [
+      64,
+      96
+    ],
+    "sigma": 0.5,
+    "coupling": 1.0,
+    "radius": 12.0,
+    "dy": 0.04,
+    "chunk": 7,
+    "max_scratch_bytes": 4294967296,
+    "reference_wave_basis": "scaled_generalized_laguerre_v1",
+    "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+    "source_hashes": {
+      "experiments/validate_instrument_operator.py": "88a654ef644731b3ca606f0b7ea108d1f1039ffaa0f8f9c2d09b6ae2e3d50d63",
+      "quantum/instrument_operator_bound.py": "43a6f5fe59a55e14e6dbe137a7b1c1d7ed7ec06a36047be4a3b9b526195f6e2d",
+      "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+      "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+      "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+    },
+    "environment": {
+      "python": "3.13.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+      "device": "CPU",
+      "packages": {
+        "numpy": "2.5.5",
+        "scipy": "1.18.1",
+        "qutip": "5.3.1"
+      }
+    }
+  },
+  "metric": "Maximum over ALL finite-data quadrature eigenvalues of sqrt(sum_y w|m_ref-m_local|^2); exact operator-norm identity on this discrete grid, evaluated in floating point.",
+  "decision_rule": "Support finite-grid agreement only if delta<=2.5e-4, mass errors<=1e-5,normerror<=1e-7,ancillaryboundary<1e-4,grid normsensitivity<=1e-6,gridmasssensitivity<=1e-5,and ancillaryrefinementdelta<=2.5e-4. Numerical gate/time/capacity failure remains inconclusive for continuum accuracy.",
+  "scope": "Uniform finite-operator/discrete-grid ideal instrument; p follows exact finite-Fourier conjugacy tested against direct small q/p circuits; no physical cutoff,hardware or rigorous continuum certificate."
+}

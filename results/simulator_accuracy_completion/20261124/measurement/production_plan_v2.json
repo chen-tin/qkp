@@ -1,0 +1,107 @@
+{
+  "registered_utc": "2026-11-24T08:21:07.809764+00:00",
+  "supersedes_attempt": "Initial28.19second attempt interrupted before solver output; v2 adds sealed circuit-joint checkpoint before grid reduction and avoids unused-axis Hamiltonian allocation. Numerical settings unchanged.",
+  "status": "Planned",
+  "classification": "local production-snapshot single-instrument accuracy control, not multicycle/hardware/all-state certification",
+  "question": "Does the independent full-Fock circuit agree with the scalable ideal instrument on a saved representative and hot production state?",
+  "inputs": {
+    "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261123/root/archive_spot_check/nearest_finite_ancilla.npz",
+    "sha256": "419564e205e6fcef5ed602ddce2dbebd19e12a14f4695db5979f81fcccb60e0b",
+    "cycle": 8,
+    "snapshot_columns": [
+      0,
+      8
+    ],
+    "original_trial_ids": [
+      0,
+      211
+    ],
+    "cardinal_ids": [
+      0,
+      0
+    ],
+    "mean_photon_numbers": [
+      196.1440220035597,
+      1892.8939145178729
+    ],
+    "data_cutoff": 4096
+  },
+  "fixed": {
+    "sigma_absolute_q": 0.0886226925452758,
+    "hbar": 1,
+    "L": "sqrt(pi)",
+    "coupling": 1.0,
+    "axes": [
+      "q",
+      "p"
+    ],
+    "rounds": "one conditional extraction on each saved state",
+    "random_seeds": "none, deterministic sesolve and quadrature",
+    "training_seeds": "none",
+    "chunk": 64,
+    "max_wall_seconds": 1200,
+    "max_rss_bytes": 4294967296,
+    "blas_threads": 2,
+    "omp_threads": 2,
+    "no_cloud": true
+  },
+  "numerical_refinement_ladder": {
+    "ancilla_cutoffs": [
+      768,
+      1024,
+      1536
+    ],
+    "radii": [
+      60.0,
+      120.0
+    ],
+    "dy": [
+      0.01,
+      0.005
+    ],
+    "sequence": "StageA usesNa768/1024,radius60,dy.01. If outcome mass is incomplete, expand radius to120; comparedy.005. If ancillary convergence/boundary fails, addNa1536 only within the same wall/RSS cap. No condition or tolerance changes; all failed controls retained."
+  },
+  "hypothesis": "At adequate ancillary cutoff/window/grid, representative and hot state instrument differences satisfy unchanged empirical numerical criteria. StageA may expose unsupported ancillary/window coverage.",
+  "decision_rule": {
+    "support": "Final ancillary control passes all fixed TV<=1e-4,conditionalinfidelity<=1e-5,masserror<=1e-5,norm<=1e-7,ancillaryedge<1e-4,gridinfidelitychange<=1e-6,gridTVchange<=1e-4 and ancillary refinement discrepancies.",
+    "contradict": "Converged numerical controls show a discrepancy above these fixed tolerances.",
+    "inconclusive": "Any capacity/time limit, missing window mass, failing ancillary boundary/refinement or unconverged grid prevents support; retain exact failing check and scope."
+  },
+  "command": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-u",
+    "-m",
+    "experiments.validate_reference_states",
+    "--states",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_actions/20261123/root/archive_spot_check/nearest_finite_ancilla.npz",
+    "--cycle",
+    "8",
+    "--columns",
+    "0",
+    "8",
+    "--streaming",
+    "--chunk",
+    "64",
+    "--ancilla-cutoffs",
+    "768",
+    "1024",
+    "--sigma",
+    "0.0886226925452758",
+    "--radius",
+    "60",
+    "--dy",
+    ".01",
+    "--max-joint",
+    "7000000",
+    "--max-scratch-mb",
+    "3500",
+    "--output",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/full4096_cycle8_stage_a_v2"
+  ],
+  "source_sha256": {
+    "quantum/streaming_measurement.py": "bf7358762a01e229d88eb6b7674f6049cd20781f91f219de2d39059cb825bf67",
+    "quantum/measurement_benchmark.py": "845df5476e7793e393b977ffd29ede10eb100f9e2a01a6a462ee2a0b3b493cca",
+    "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+    "experiments/validate_reference_states.py": "e1b43df755358dff55ea40da4cc7f188507cf88f3c89468f4179a1e130c9d2a4"
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "created_utc": "2026-11-24T09:17:02.065943+00:00",
+  "classification": "Read-only local resource assessment; no new jobs or scientific settings",
+  "unrun_scope": {
+    "coverage_jobs": 250,
+    "coverage_settings": 125,
+    "rare_jobs": 300,
+    "total_jobs": 550,
+    "cutoff_job_counts": {
+      "4096": 275,
+      "5120": 275
+    },
+    "per_state_per_job": 512,
+    "cardinal_states": 6,
+    "rounds": 8,
+    "controllers": [
+      "nearest",
+      "bayes_gaussian",
+      "lstm_256x3_s0"
+    ],
+    "base_noise_seeds": [
+      26112001
+    ],
+    "training_seed_note": "FrozenLSTMseed0; no new independent training seeds are implied.",
+    "rare_chunks": 150,
+    "rare_target": 0.0001,
+    "status": "Both originalplans remain Planned/unrun; no launch or completion claim."
+  },
+  "storage": {
+    "coverage_uncompressed_bytes": 118849536000,
+    "rare_uncompressed_bytes": 142619443200,
+    "combined_uncompressed_bytes": 261468979200,
+    "combined_GiB": 243.511962890625,
+    "actual_disk_total_bytes": 994610155520,
+    "actual_disk_free_bytes": 68401377280,
+    "actual_disk_free_GiB": 63.7037467956543,
+    "registered_disk_reserve_bytes": 8589934592,
+    "shortfall_before_other_queued_work_bytes": 201657536512,
+    "other_fixed_local_work_estimated_remaining_bytes": 3206676480.0,
+    "shortfall_including_other_fixed_local_work_bytes": 204864212992.0,
+    "rule": "Use original conservative persistent uncompressed budgets. No assumed compression, raw deletion, reduced trials, streaming-discard retention or changed scientific storage contract.",
+    "other_fixed_local_estimate_scope": "Remaining selected physics plus the fixed16 paired-cutoff study only; excludes unknown future measurement/GKP archival growth, so the aggregate shortfall is a lower bound on all queued work."
+  },
+  "runtime_anchor": {
+    "job_id": "dcd0f4d8452e1fb5",
+    "variant": "finite_duration_lumped",
+    "cutoff": 4096,
+    "configuration": {
+      "schema": 2,
+      "profile": "quality_physics",
+      "seed": 4138287304,
+      "data_delta": 0.3,
+      "per_state": 512,
+      "rounds": 8,
+      "measurement_resource": "smooth",
+      "dx": null,
+      "logical_bins": 192,
+      "cutoffs": [
+        4096
+      ],
+      "points": {
+        "nominal": [
+          0.2,
+          0.05,
+          0.9
+        ]
+      },
+      "decoders": [
+        "nearest",
+        "bayes_gaussian",
+        "lstm_256x3_s0"
+      ],
+      "physics": {
+        "cycle_time": 1.0,
+        "gate_duration": 0.1,
+        "feedback_delay": 0.0,
+        "loss_rate": 0.001,
+        "dephasing_rate": 1e-05,
+        "detector_efficiency": 1.0,
+        "detector_std": 0.0,
+        "coupling": 1.0,
+        "feedback_gain": 1.0,
+        "control_rotation": 0.0,
+        "cooling_transmissivity": 1.0,
+        "displacement_provenance": "independent",
+        "gate_backend": "lumped",
+        "gate_ancilla_cutoff": 512,
+        "ancilla_loss_rate": 0.0,
+        "ancilla_dephasing_rate": 0.0,
+        "homodyne_radius": 60.0,
+        "homodyne_dy": 0.01,
+        "max_joint_dimension": 2000000,
+        "max_gate_scratch_mb": 512.0
+      },
+      "noise_extension": {},
+      "gates": {
+        "mean_edge": 0.0001,
+        "individual_edge": 0.01,
+        "norm": 1e-07,
+        "energy_limit": 1000.0,
+        "energy_jump": 1000.0
+      },
+      "score_snapshot_per_state": 8,
+      "hot_snapshot_per_state": 2,
+      "snapshot_cycles": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_hashes": {
+        "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+        "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+        "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+        "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+        "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+        "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+        "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+        "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+        "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+        "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+        "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+        "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+        "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+        "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+        "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+        "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+        "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+        "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+        "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+        "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+        "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+        "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+        "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+        "experiments/continue_local_physics.py": "40edf5b8657d73cf8bcfaf1b99e0da985d0508fe3cc45332dafd323bc80f0b44"
+      },
+      "checkpoint_sha256": "5f4486abe6368d0e071722923c85cfee829b0583b75e0655da2c52e891a115af"
+    },
+    "row_evolution_seconds_sum": 1370.7409799999878,
+    "session_started_utc": "2026-11-24T08:36:50.615390+00:00",
+    "scoring_report_mtime_utc": "2026-11-24T09:01:43.979601+00:00",
+    "start_to_scoring_report_seconds": 1493.364211320877,
+    "first_monitor_observed_complete_utc": "2026-11-24T09:02:00.168529+00:00",
+    "start_to_observed_complete_seconds": 1509.5531389713287,
+    "rounded_planning_seconds_per4096job": 1510,
+    "scoring_pass": true,
+    "qualification": "One completed localjob, not a benchmark of550jobs. Timestamp-derived end-to-end walltime includes setup/evolution/refinement and monitoringlag. Parent serialization/report overhead and other-noise work can differ."
+  },
+  "runtime_scenarios": {
+    "flat4096cost_for_all": {
+      "assumed_5120_to4096_wall_ratio": 1.0,
+      "sequential_wall_seconds": 830500.0,
+      "sequential_days": 9.612268518518519,
+      "requested_thread_hours": 461.3888888888889,
+      "qualification": "Planning sensitivity scenario, not a measured forecast, confidence interval or guaranteed upper bound."
+    },
+    "linear_cutoff_sensitivity": {
+      "assumed_5120_to4096_wall_ratio": 1.25,
+      "sequential_wall_seconds": 934312.5,
+      "sequential_days": 10.813802083333334,
+      "requested_thread_hours": 519.0625,
+      "qualification": "Planning sensitivity scenario, not a measured forecast, confidence interval or guaranteed upper bound."
+    },
+    "quadratic_cutoff_sensitivity": {
+      "assumed_5120_to4096_wall_ratio": 1.5625,
+      "sequential_wall_seconds": 1064078.125,
+      "sequential_days": 12.315719039351851,
+      "requested_thread_hours": 591.1545138888889,
+      "qualification": "Planning sensitivity scenario, not a measured forecast, confidence interval or guaranteed upper bound."
+    },
+    "rounded_cubic_conservative_planning": {
+      "assumed_5120_to4096_wall_ratio": 2.0,
+      "sequential_wall_seconds": 1245750.0,
+      "sequential_days": 14.418402777777779,
+      "requested_thread_hours": 692.0833333333334,
+      "qualification": "Planning sensitivity scenario, not a measured forecast, confidence interval or guaranteed upper bound."
+    }
+  },
+  "runtime_limits": [
+    "One physics intervention with loss/dephasing is not representative of every coverage/noise or rare-event job.",
+    "4096/5120 ratio assumptions span idealized scaling; dense transforms, cubic eigensystem setup, sampler iterations, channels, scoring, I/O, resume and OS contention have different costs.",
+    "Measurements ran alongside other local validators on this host; requested2threads does not establish2fullyusedcores or isolate throughput.",
+    "550jobs are fixed budgets, including invalid/inconclusive outcomes. Do not truncate budgets or rerununtilpass.",
+    "No parallel speedup or compression factor is assumed; safe concurrency would need a separate memory/storage/runtime plan.",
+    "Historical frozenLinuxsource plans cannot be silently overwritten with Mac/current-source identities; execution would need a separate semantic-preserving migration."
+  ],
+  "environment": {
+    "python": "3.13.13 | packaged by conda-forge | (main, Apr  8 2026, 02:29:07) [Clang 19.1.7 ]",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "device": "CPU",
+    "logical_cpu_count": 10,
+    "requested_threads_per_job": 2,
+    "thread_scope": "AppleAccelerate limitenvironmentrequested,notindependentlyverified."
+  },
+  "source_sha256": {
+    "results/ec2_runs/production_20261119/status_checks/20261123T222312Z/metrics_snapshot/coverage/plan.json": "618ff5a2f26bc447b3490e26437bc8bd9baba3dc4a0cf585b8e3b360d3299076",
+    "results/ec2_runs/production_20261119/status_checks/20261123T222312Z/metrics_snapshot/rare/plan.json": "df49380db3e86896e67fec8793280e34310851202d726938e874e7367e859da7",
+    "results/simulator_accuracy_completion/20261124/remaining_physics/jobs/dcd0f4d8452e1fb5/result.json": "a46843d97b34a7616667dff3bc9bc228900d63a9a5eefc633e7ee2d7201c0765",
+    "results/simulator_accuracy_completion/20261124/remaining_physics/jobs/dcd0f4d8452e1fb5/quality/logical_refinement_52e8e1885c4d2165.json": "cedf4d7ae12683e151c2eeabc654c23be7593cb0b18bb15db57603351e9e922d",
+    "results/simulator_accuracy_completion/20261124/remaining_physics/plan.json": "aec015d75eb3fa95eba8ef589f9374f4c6a05d97aec3593d21f3ac422fb749d6",
+    "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/plan.json": "52c926cb4316a968f77152b4103a361cd31cfce9c600bb1caf32170968137919"
+  },
+  "decision": "The full550job persistentuncompressed archive does not fit currentlocalfree space even before reserves/queuedwork. Keep Planned. Runtime scenarios are multi-day and cannot be represented as finishing within current bounded sessions."
+}

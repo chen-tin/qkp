@@ -1,0 +1,15 @@
+{
+  "tested_utc": "2026-11-24T09:24:26.499326+00:00",
+  "classification": "directed software regressions after metadata-only generator correction",
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_local_finite_gate_audit.py tests/test_local_gkp_gate_pilot.py",
+  "passed": 26,
+  "seconds": 2.69,
+  "log": "software_checks_after_metadata.log",
+  "source_sha256": {
+    "experiments/local_finite_gate_audit.py": "b19fab6e6785cf359d4c0bed8f0f2a0aa35ecb19221c30e55889316f7c3e0f7f",
+    "experiments/local_gkp_gate_pilot.py": "215feb3e4ab4e27bf8ca998f05d6594d065bd5b8e84e1f40230949c304b2397b",
+    "tests/test_local_finite_gate_audit.py": "e28213d0dd5a7ea2923991e73560e57de3638da9f62f584c9de83c20ef8b2a19",
+    "tests/test_local_gkp_gate_pilot.py": "eda8e520c4e5b6563e29c1c4a3aaf875af69686d22727cc5b10a3ac77e271423"
+  },
+  "note": "Preserves earlier25-test receipt; this fresh26-test check adds modeappropriate full16-count/runtime regression. No scientific observations rerun."
+}

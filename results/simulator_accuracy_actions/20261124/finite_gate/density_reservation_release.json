@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-11-24T14:32:27.012902+00:00",
+  "status": "heavy_scientific_reservation_released",
+  "release_full_density_reservation_bytes": 4294967296,
+  "no_density_evolution_processes": true,
+  "no_future_density_evolution_queued": true,
+  "verified_process_query": [
+    "pgrep",
+    "-fl",
+    "local_finite_gate_audit|run_after_v7.py"
+  ],
+  "final_scientific_result": "v8/result.json",
+  "final_scientific_result_sha256": "4c877134c09526f39998f980deab62fd21dc9d7404e87370662607732f5c85e1",
+  "scientific_completed_rows": 32,
+  "scientific_completed_refinements": 36,
+  "separate_readonly_audit": {
+    "status": "running_not_yet_completed",
+    "pid": 32514,
+    "hard_rss_bytes": 1073741824,
+    "total_wall_seconds": 1200,
+    "controller": "33626 .venv/bin/python -u results/simulator_accuracy_actions/20261124/finite_gate/v8/guard_readback.py",
+    "guard_source": "v8/guard_readback.py",
+    "guard_source_sha256": "0bea5cb146328060e6a73b92e8b0711ae8a969ec257e91528f99cb0335cfbbf7",
+    "guard_receipt": "v8/readback_resource_guard.json",
+    "scope": "Sealed raw/CQ readback only; no trajectories/evolution"
+  }
+}

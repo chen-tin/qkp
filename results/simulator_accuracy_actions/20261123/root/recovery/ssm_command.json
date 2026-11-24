@@ -1,0 +1,49 @@
+{
+  "Command": {
+    "CommandId": "8d6cf75c-7193-4e0c-8a94-4d5caea27e3d",
+    "DocumentName": "AWS-RunShellScript",
+    "DocumentVersion": "$DEFAULT",
+    "Comment": "Recover existing QKP job only; no scientific compute",
+    "ExpiresAfter": "2026-11-23T23:56:08.763000-08:00",
+    "Parameters": {
+      "commands": [
+        "/opt/qkp/.venv/bin/python - <<'QKP_RECOVERY_PY'\n\nimport hashlib, json, os, subprocess\nfrom pathlib import Path\nfrom datetime import datetime, timezone\nrun = \"qkp-20261120-003030-d2292a\"\nbucket = \"qkp-bench-882574060060-20261120-003030-d2292a\"\njob_id = \"635d50e4441cc5d1\"\nscientific = []\nfor proc in Path('/proc').glob('[0-9]*'):\n    try:\n        argv = (proc/'cmdline').read_bytes().decode().strip('\\0').split('\\0')\n    except (OSError, UnicodeDecodeError):\n        continue\n    if any(a in ('experiments.quality_benchmark','experiments.refine_logical_scores') or\n           a.endswith('/ops/ec2/worker.py') or a == 'ops/ec2/worker.py' or\n           a.endswith('/ops/ec2/parallel_worker.py') for a in argv):\n        scientific.append({'pid': proc.name, 'argv': argv})\nif scientific:\n    raise RuntimeError('Unexpected scientific processes; recovery aborted: '+json.dumps(scientific))\nsubprocess.run(['shutdown','-h','+15'],check=True)\nroot = Path('/opt/qkp/results/ec2_production')/run/'plans/physics'\nplan = json.loads((root/'plan.json').read_text())\njob = next(j for j in plan['jobs'] if j['id'] == job_id)\nfolder = root/'jobs'/job_id\nresult = json.loads((folder/'result.json').read_text())\nassert result['complete'] and result['config'] == job['config']\nrows = result['rows']\nassert sorted(r['decoder'] for r in rows) == sorted(job['config']['decoders'])\ndef sha(p):\n    h=hashlib.sha256()\n    with p.open('rb') as stream:\n        for block in iter(lambda:stream.read(2**20),b''): h.update(block)\n    return h.hexdigest()\nverified = {}\nfor row in rows:\n    assert row['point'] == job['point'] and row['cutoff'] == job['cutoff']\n    expected = {row['decoder']+'_'+arm+'.npz' for arm in ('finite_ancilla','replayed_corrections')}\n    assert set(row['raw_hashes']) == expected\n    for name, digest in row['raw_hashes'].items():\n        matches = list(folder.rglob(name))\n        assert len(matches) == 1\n        path = matches[0]\n        assert sha(path) == digest == json.loads(path.with_suffix('.sha256.json').read_text())['sha256']\n        verified[str(path.relative_to(folder))] = {'sha256':digest,'bytes':path.stat().st_size}\nbefore = sha(folder/'result.json')\nprefix = f's3://{bucket}/{run}/raw/physics/jobs/{job_id}/'\nsubprocess.run(['aws','s3','sync',str(folder),prefix,'--region','us-east-1',\n    '--exclude','*.tmp','--exclude','*.tmp.npz','--no-progress','--only-show-errors'],check=True,timeout=600)\nassert before == sha(folder/'result.json')\nfor name, record in verified.items(): assert sha(folder/name) == record['sha256']\nrecord = {'checked_utc':datetime.now(timezone.utc).isoformat(),'job_id':job_id,'result_sha256':before,\n          'verified_raw':verified,'destination':prefix,'scientific_processes_at_start':scientific,\n          'scope':'Existing observations recovered without simulation, scoring, source edits or changed raw bytes.'}\nreceipt = Path('/tmp/qkp-recovery-'+job_id+'.json')\nreceipt.write_text(json.dumps(record,indent=2)+'\\n')\nsubprocess.run(['aws','s3','cp',str(receipt),f's3://{bucket}/{run}/recovery/20261123/{job_id}.json',\n    '--region','us-east-1','--only-show-errors'],check=True,timeout=60)\nprint(json.dumps(record))\n\nQKP_RECOVERY_PY"
+      ],
+      "executionTimeout": [
+        "720"
+      ]
+    },
+    "InstanceIds": [
+      "i-0be3c3be10368ba15"
+    ],
+    "Targets": [],
+    "RequestedDateTime": "2026-11-23T23:29:08.763000-08:00",
+    "Status": "Pending",
+    "StatusDetails": "Pending",
+    "OutputS3Region": "us-east-1",
+    "OutputS3BucketName": "",
+    "OutputS3KeyPrefix": "",
+    "MaxConcurrency": "50",
+    "MaxErrors": "0",
+    "TargetCount": 1,
+    "CompletedCount": 0,
+    "ErrorCount": 0,
+    "DeliveryTimedOutCount": 0,
+    "ServiceRole": "",
+    "NotificationConfig": {
+      "NotificationArn": "",
+      "NotificationEvents": [],
+      "NotificationType": ""
+    },
+    "CloudWatchOutputConfig": {
+      "CloudWatchLogGroupName": "",
+      "CloudWatchOutputEnabled": false
+    },
+    "TimeoutSeconds": 900,
+    "AlarmConfiguration": {
+      "IgnorePollAlarmFailure": false,
+      "Alarms": []
+    },
+    "TriggeredAlarms": []
+  }
+}

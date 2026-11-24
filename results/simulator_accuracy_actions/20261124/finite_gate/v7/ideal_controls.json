@@ -1,0 +1,233 @@
+{
+  "rows": [
+    {
+      "input": "vacuum",
+      "axis": "q",
+      "data_cutoff": 64,
+      "ancilla_cutoff": 64,
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.581268532253489e-13,
+          "data_boundary_mass": 4.350416460453668e-19,
+          "ancilla_boundary_mass": 3.714278179516558e-19
+        }
+      ],
+      "integrated_mass": 0.9999999999997417,
+      "pass": true,
+      "raw_path": "raw/ideal_vacuum_q_Nd64_Na64.npz",
+      "raw_sha256": "0498eb67b708d827b7d39b3474aab4de4f2c79a9b84243e32b1b26aabc51836a"
+    },
+    {
+      "input": "vacuum",
+      "axis": "p",
+      "data_cutoff": 64,
+      "ancilla_cutoff": 64,
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.581268532253489e-13,
+          "data_boundary_mass": 4.350416460453668e-19,
+          "ancilla_boundary_mass": 3.714278179516558e-19
+        }
+      ],
+      "integrated_mass": 0.9999999999997417,
+      "pass": true,
+      "raw_path": "raw/ideal_vacuum_p_Nd64_Na64.npz",
+      "raw_sha256": "8424314fa97c10deb956a38c27f2d57e9707ef0dc5301f480980ca5790aea79c"
+    },
+    {
+      "input": "coherent",
+      "axis": "q",
+      "data_cutoff": 64,
+      "ancilla_cutoff": 64,
+      "stage_diagnostics": [
+        {
+          "norm_error": 1.1446399383885364e-12,
+          "data_boundary_mass": 1.063446065585311e-18,
+          "ancilla_boundary_mass": 2.4555531870026277e-18
+        }
+      ],
+      "integrated_mass": 1.000000000001143,
+      "pass": true,
+      "raw_path": "raw/ideal_coherent_q_Nd64_Na64.npz",
+      "raw_sha256": "d43343af2fae842c2e2651d6f93d309611cc5a62a888b558038f4dcb5a0c5be4"
+    },
+    {
+      "input": "coherent",
+      "axis": "p",
+      "data_cutoff": 64,
+      "ancilla_cutoff": 64,
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.2675195054944197e-12,
+          "data_boundary_mass": 2.5850107761143777e-18,
+          "ancilla_boundary_mass": 1.1323306825603037e-18
+        }
+      ],
+      "integrated_mass": 1.0000000000022666,
+      "pass": true,
+      "raw_path": "raw/ideal_coherent_p_Nd64_Na64.npz",
+      "raw_sha256": "1e881d64fde1324e6e971ccbd459256b7980c3c2704a6e35bfccaf15ae60074c"
+    },
+    {
+      "input": "vacuum",
+      "axis": "q",
+      "data_cutoff": 96,
+      "ancilla_cutoff": 96,
+      "stage_diagnostics": [
+        {
+          "norm_error": 1.5376588891058418e-12,
+          "data_boundary_mass": 3.7234729559864304e-20,
+          "ancilla_boundary_mass": 2.3879198877050824e-19
+        }
+      ],
+      "integrated_mass": 1.0000000000015372,
+      "pass": true,
+      "raw_path": "raw/ideal_vacuum_q_Nd96_Na96.npz",
+      "raw_sha256": "8d20b1437c64260e6e6b8634346ec252be296c6ff80353f254543a315fbf7741"
+    },
+    {
+      "input": "vacuum",
+      "axis": "p",
+      "data_cutoff": 96,
+      "ancilla_cutoff": 96,
+      "stage_diagnostics": [
+        {
+          "norm_error": 1.5376588891058418e-12,
+          "data_boundary_mass": 3.7234729559864304e-20,
+          "ancilla_boundary_mass": 2.3879198877050824e-19
+        }
+      ],
+      "integrated_mass": 1.0000000000015372,
+      "pass": true,
+      "raw_path": "raw/ideal_vacuum_p_Nd96_Na96.npz",
+      "raw_sha256": "149fe611f6945f4ad5e8e90dda708bdb1594e253253d66d30860da6e5cf76f33"
+    },
+    {
+      "input": "coherent",
+      "axis": "q",
+      "data_cutoff": 96,
+      "ancilla_cutoff": 96,
+      "stage_diagnostics": [
+        {
+          "norm_error": 3.3639757646142243e-14,
+          "data_boundary_mass": 5.045296728668177e-21,
+          "ancilla_boundary_mass": 5.800349511277316e-20
+        }
+      ],
+      "integrated_mass": 0.9999999999999645,
+      "pass": true,
+      "raw_path": "raw/ideal_coherent_q_Nd96_Na96.npz",
+      "raw_sha256": "ba0b8574dd929dc680a69777686bb8c057f1319b723cdbae276b32c0f51ef8c7"
+    },
+    {
+      "input": "coherent",
+      "axis": "p",
+      "data_cutoff": 96,
+      "ancilla_cutoff": 96,
+      "stage_diagnostics": [
+        {
+          "norm_error": 1.3242740237728867e-12,
+          "data_boundary_mass": 9.987153321226507e-20,
+          "ancilla_boundary_mass": 5.409635922499088e-19
+        }
+      ],
+      "integrated_mass": 1.0000000000013234,
+      "pass": true,
+      "raw_path": "raw/ideal_coherent_p_Nd96_Na96.npz",
+      "raw_sha256": "5951fb03d38713bb56025c9c736027732ad896e3746994ec2f28ca3e87ca9bcd"
+    }
+  ],
+  "cutoff_refinements": [
+    {
+      "input": "vacuum",
+      "axis": "q",
+      "outcome_tv": 4.504715940368321e-12,
+      "weighted_conditional_infidelity": 3.599975313032259e-16,
+      "worst_conditional_infidelity_relevant": 7.105427357601002e-15,
+      "relevant_reference_probability_mass": 0.9999998836899288,
+      "reference_integrated_mass": 1.0000000000015372,
+      "candidate_integrated_mass": 0.9999999999997417,
+      "pass": true
+    },
+    {
+      "input": "vacuum",
+      "axis": "p",
+      "outcome_tv": 4.504715940368321e-12,
+      "weighted_conditional_infidelity": 3.599975313032259e-16,
+      "worst_conditional_infidelity_relevant": 7.105427357601002e-15,
+      "relevant_reference_probability_mass": 0.9999998836899288,
+      "reference_integrated_mass": 1.0000000000015372,
+      "candidate_integrated_mass": 0.9999999999997417,
+      "pass": true
+    },
+    {
+      "input": "coherent",
+      "axis": "q",
+      "outcome_tv": 3.732795446797594e-11,
+      "weighted_conditional_infidelity": 2.690952101455849e-16,
+      "worst_conditional_infidelity_relevant": 2.4646951146678475e-14,
+      "relevant_reference_probability_mass": 0.9999998836370843,
+      "reference_integrated_mass": 0.9999999999999645,
+      "candidate_integrated_mass": 1.000000000001143,
+      "pass": true
+    },
+    {
+      "input": "coherent",
+      "axis": "p",
+      "outcome_tv": 3.1892558423519197e-11,
+      "weighted_conditional_infidelity": 3.118190811232613e-16,
+      "worst_conditional_infidelity_relevant": 4.1300296516055823e-14,
+      "relevant_reference_probability_mass": 0.9999998792304857,
+      "reference_integrated_mass": 1.0000000000013234,
+      "candidate_integrated_mass": 1.0000000000022666,
+      "pass": true
+    }
+  ],
+  "solver_refinements": [
+    {
+      "input": "vacuum",
+      "axis": "q",
+      "outcome_tv": 4.2819769225123566e-11,
+      "weighted_conditional_infidelity": 2.7196200934822036e-16,
+      "worst_conditional_infidelity_relevant": 2.653433028854124e-14,
+      "relevant_reference_probability_mass": 0.9999998836899316,
+      "reference_integrated_mass": 0.9999999999999981,
+      "candidate_integrated_mass": 1.0000000000015372,
+      "pass": true
+    },
+    {
+      "input": "vacuum",
+      "axis": "p",
+      "outcome_tv": 4.2819769225123566e-11,
+      "weighted_conditional_infidelity": 2.7196200934822036e-16,
+      "worst_conditional_infidelity_relevant": 2.653433028854124e-14,
+      "relevant_reference_probability_mass": 0.9999998836899316,
+      "reference_integrated_mass": 0.9999999999999981,
+      "candidate_integrated_mass": 1.0000000000015372,
+      "pass": true
+    },
+    {
+      "input": "coherent",
+      "axis": "q",
+      "outcome_tv": 5.508663581286296e-11,
+      "weighted_conditional_infidelity": 2.7821108836233614e-16,
+      "worst_conditional_infidelity_relevant": 4.463096558993129e-14,
+      "relevant_reference_probability_mass": 0.9999998836370869,
+      "reference_integrated_mass": 0.9999999999999982,
+      "candidate_integrated_mass": 0.9999999999999645,
+      "pass": true
+    },
+    {
+      "input": "coherent",
+      "axis": "p",
+      "outcome_tv": 4.505204490146896e-11,
+      "weighted_conditional_infidelity": 3.3214660983454264e-16,
+      "worst_conditional_infidelity_relevant": 5.10702591327572e-14,
+      "relevant_reference_probability_mass": 0.9999998792304883,
+      "reference_integrated_mass": 0.9999999999999978,
+      "candidate_integrated_mass": 1.0000000000013234,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

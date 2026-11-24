@@ -1,0 +1,76 @@
+{
+  "checked_utc": "2026-11-24T07:27:20.377316+00:00",
+  "s3_key": "qkp-20261120-003030-d2292a/raw/numerical/jobs/218b860942996076/nominal_N4096_smooth/nearest_finite_ancilla.npz",
+  "bytes": 44561759,
+  "actual_sha256": "419564e205e6fcef5ed602ddce2dbebd19e12a14f4695db5979f81fcccb60e0b",
+  "expected_sha256": "419564e205e6fcef5ed602ddce2dbebd19e12a14f4695db5979f81fcccb60e0b",
+  "integrity_pass": true,
+  "stage_gates_recomputed": {
+    "coverage": "every_recorded_primitive_stage",
+    "stage_checks_complete": true,
+    "valid_by_cycle": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "valid_through_cycle": 8,
+    "pass": true,
+    "instrument_pass": true,
+    "max_edge": 9.911148360734818e-05,
+    "max_mean_edge": 3.461267469799468e-08,
+    "max_norm_error": 2.297051437949449e-13,
+    "thresholds": {
+      "mean_edge": 0.0001,
+      "individual_edge": 0.01,
+      "norm": 1e-07,
+      "energy_limit": 1000.0,
+      "energy_jump": 1000.0
+    },
+    "continuous_gate_bound": false
+  },
+  "snapshot_shapes": {
+    "snapshot_cycle_0": [
+      4096,
+      60
+    ],
+    "snapshot_cycle_1": [
+      4096,
+      72
+    ],
+    "snapshot_cycle_2": [
+      4096,
+      71
+    ],
+    "snapshot_cycle_3": [
+      4096,
+      71
+    ],
+    "snapshot_cycle_4": [
+      4096,
+      68
+    ],
+    "snapshot_cycle_5": [
+      4096,
+      69
+    ],
+    "snapshot_cycle_6": [
+      4096,
+      67
+    ],
+    "snapshot_cycle_7": [
+      4096,
+      66
+    ],
+    "snapshot_cycle_8": [
+      4096,
+      65
+    ]
+  },
+  "scope": "One original numerical N4096 nearest finite-ancilla raw archive; integrity and original stage gates only, no new trajectories or QuTiP validation."
+}

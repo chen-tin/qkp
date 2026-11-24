@@ -1,0 +1,36 @@
+{
+  "recorded_utc": "2026-11-24T08:21:50.499446+00:00",
+  "python": "3.13.13 | packaged by conda-forge | (main, Apr  8 2026, 02:29:07) [Clang 19.1.7 ]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "numpy": "2.5.5",
+  "scipy": "1.18.1",
+  "qutip": "5.3.1",
+  "torch": "2.15.0",
+  "threadpoolctl": "3.6.0",
+  "threadpoolctl_path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/local_dependencies/threadpoolctl.py",
+  "threadpoolctl_sha256": "12fb9526b6a74d2e686b7ec148dc165c3587999b14fa86984aa180e10802400b",
+  "dependency_origin": "https://raw.githubusercontent.com/joblib/threadpoolctl/3.6.0/threadpoolctl.py",
+  "dependency_note": "PyPI registry download timed out; official tagged source module loaded via task-local PYTHONPATH, without modifying registered scoring source or global environment.",
+  "numpy_configuration": "{\n  \"Compilers\": {\n    \"c\": {\n      \"name\": \"clang\",\n      \"linker\": \"ld64\",\n      \"version\": \"17.0.0\",\n      \"commands\": \"cc\"\n    },\n    \"cython\": {\n      \"name\": \"cython\",\n      \"linker\": \"cython\",\n      \"version\": \"3.3.1\",\n      \"commands\": \"cython\"\n    },\n    \"c++\": {\n      \"name\": \"clang\",\n      \"linker\": \"ld64\",\n      \"version\": \"17.0.0\",\n      \"commands\": \"c++\"\n    }\n  },\n  \"Machine Information\": {\n    \"host\": {\n      \"cpu\": \"aarch64\",\n      \"family\": \"aarch64\",\n      \"endian\": \"little\",\n      \"system\": \"darwin\"\n    },\n    \"build\": {\n      \"cpu\": \"aarch64\",\n      \"family\": \"aarch64\",\n      \"endian\": \"little\",\n      \"system\": \"darwin\"\n    }\n  },\n  \"Build Dependencies\": {\n    \"blas\": {\n      \"name\": \"accelerate\",\n      \"found\": true,\n      \"version\": \"unknown\",\n      \"detection method\": \"system\",\n      \"include directory\": \"unknown\",\n      \"lib directory\": \"unknown\",\n      \"openblas configuration\": \"unknown\",\n      \"pc file directory\": \"unknown\"\n    },\n    \"lapack\": {\n      \"name\": \"accelerate\",\n      \"found\": true,\n      \"version\": \"unknown\",\n      \"detection method\": \"system\",\n      \"include directory\": \"unknown\",\n      \"lib directory\": \"unknown\",\n      \"openblas configuration\": \"unknown\",\n      \"pc file directory\": \"unknown\"\n    }\n  },\n  \"Python Information\": {\n    \"path\": \"/private/var/folders/2s/vty41l455yv698g4xkgfv7z00000gn/T/build-env-r7z3ovln/bin/python\",\n    \"version\": \"3.13\"\n  },\n  \"SIMD Extensions\": {\n    \"baseline\": [\n      \"NEON\",\n      \"NEON_FP16\",\n      \"NEON_VFPV4\",\n      \"ASIMD\"\n    ],\n    \"found\": [\n      \"ASIMDHP\",\n      \"ASIMDDP\"\n    ],\n    \"not found\": [\n      \"ASIMDFHM\",\n      \"SVE\"\n    ]\n  }\n}\n",
+  "threadpools": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 2,
+      "prefix": "libomp",
+      "filepath": "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/lib/python3.13/site-packages/torch/lib/libomp.dylib",
+      "version": null
+    }
+  ],
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "VECLIB_MAXIMUM_THREADS": "2"
+  },
+  "thread_limit_scope": "Environment requests2threads before import. threadpoolctl enforces supported libraries only; Apple Accelerate active thread count is not verified.",
+  "supporting_source_sha256": {
+    "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+    "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e"
+  }
+}

@@ -1,0 +1,544 @@
+{
+  "schema": 1,
+  "classification": "planned_local_continuation",
+  "preset": "physics",
+  "jobs": [
+    {
+      "point": "nominal",
+      "variant": "finite_duration_lumped",
+      "chunk": 0,
+      "base_seed": 26112001,
+      "cutoff": 4096,
+      "config": {
+        "schema": 2,
+        "profile": "quality_physics",
+        "seed": 4138287304,
+        "data_delta": 0.3,
+        "per_state": 512,
+        "rounds": 8,
+        "measurement_resource": "smooth",
+        "dx": null,
+        "logical_bins": 192,
+        "cutoffs": [
+          4096
+        ],
+        "points": {
+          "nominal": [
+            0.2,
+            0.05,
+            0.9
+          ]
+        },
+        "decoders": [
+          "nearest",
+          "bayes_gaussian",
+          "lstm_256x3_s0"
+        ],
+        "physics": {
+          "cycle_time": 1.0,
+          "gate_duration": 0.1,
+          "feedback_delay": 0.0,
+          "loss_rate": 0.001,
+          "dephasing_rate": 1e-05,
+          "detector_efficiency": 1.0,
+          "detector_std": 0.0,
+          "coupling": 1.0,
+          "feedback_gain": 1.0,
+          "control_rotation": 0.0,
+          "cooling_transmissivity": 1.0,
+          "displacement_provenance": "independent",
+          "gate_backend": "lumped",
+          "gate_ancilla_cutoff": 512,
+          "ancilla_loss_rate": 0.0,
+          "ancilla_dephasing_rate": 0.0,
+          "homodyne_radius": 60.0,
+          "homodyne_dy": 0.01,
+          "max_joint_dimension": 2000000,
+          "max_gate_scratch_mb": 512.0
+        },
+        "noise_extension": {},
+        "gates": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "score_snapshot_per_state": 8,
+        "hot_snapshot_per_state": 2,
+        "snapshot_cycles": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "source_hashes": {
+          "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+          "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+          "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+          "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+          "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+          "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+          "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+          "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+          "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+          "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+          "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+          "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+          "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+          "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+          "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+          "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+          "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+          "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+          "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+          "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+          "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+          "experiments/continue_local_physics.py": "40edf5b8657d73cf8bcfaf1b99e0da985d0508fe3cc45332dafd323bc80f0b44"
+        },
+        "checkpoint_sha256": "5f4486abe6368d0e071722923c85cfee829b0583b75e0655da2c52e891a115af"
+      },
+      "id": "dcd0f4d8452e1fb5"
+    },
+    {
+      "point": "nominal",
+      "variant": "finite_duration_lumped",
+      "chunk": 0,
+      "base_seed": 26112001,
+      "cutoff": 5120,
+      "config": {
+        "schema": 2,
+        "profile": "quality_physics",
+        "seed": 4138287304,
+        "data_delta": 0.3,
+        "per_state": 512,
+        "rounds": 8,
+        "measurement_resource": "smooth",
+        "dx": null,
+        "logical_bins": 192,
+        "cutoffs": [
+          5120
+        ],
+        "points": {
+          "nominal": [
+            0.2,
+            0.05,
+            0.9
+          ]
+        },
+        "decoders": [
+          "nearest",
+          "bayes_gaussian",
+          "lstm_256x3_s0"
+        ],
+        "physics": {
+          "cycle_time": 1.0,
+          "gate_duration": 0.1,
+          "feedback_delay": 0.0,
+          "loss_rate": 0.001,
+          "dephasing_rate": 1e-05,
+          "detector_efficiency": 1.0,
+          "detector_std": 0.0,
+          "coupling": 1.0,
+          "feedback_gain": 1.0,
+          "control_rotation": 0.0,
+          "cooling_transmissivity": 1.0,
+          "displacement_provenance": "independent",
+          "gate_backend": "lumped",
+          "gate_ancilla_cutoff": 512,
+          "ancilla_loss_rate": 0.0,
+          "ancilla_dephasing_rate": 0.0,
+          "homodyne_radius": 60.0,
+          "homodyne_dy": 0.01,
+          "max_joint_dimension": 2000000,
+          "max_gate_scratch_mb": 512.0
+        },
+        "noise_extension": {},
+        "gates": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "score_snapshot_per_state": 8,
+        "hot_snapshot_per_state": 2,
+        "snapshot_cycles": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "source_hashes": {
+          "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+          "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+          "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+          "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+          "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+          "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+          "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+          "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+          "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+          "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+          "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+          "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+          "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+          "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+          "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+          "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+          "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+          "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+          "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+          "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+          "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+          "experiments/continue_local_physics.py": "40edf5b8657d73cf8bcfaf1b99e0da985d0508fe3cc45332dafd323bc80f0b44"
+        },
+        "checkpoint_sha256": "5f4486abe6368d0e071722923c85cfee829b0583b75e0655da2c52e891a115af"
+      },
+      "id": "0643eef0fa378878"
+    },
+    {
+      "point": "nominal",
+      "variant": "passive_cooling",
+      "chunk": 0,
+      "base_seed": 26112001,
+      "cutoff": 4096,
+      "config": {
+        "schema": 2,
+        "profile": "quality_physics",
+        "seed": 4138287304,
+        "data_delta": 0.3,
+        "per_state": 512,
+        "rounds": 8,
+        "measurement_resource": "smooth",
+        "dx": null,
+        "logical_bins": 192,
+        "cutoffs": [
+          4096
+        ],
+        "points": {
+          "nominal": [
+            0.2,
+            0.05,
+            0.9
+          ]
+        },
+        "decoders": [
+          "nearest",
+          "bayes_gaussian",
+          "lstm_256x3_s0"
+        ],
+        "physics": {
+          "cycle_time": 1.0,
+          "gate_duration": 0.0,
+          "feedback_delay": 0.0,
+          "loss_rate": 0.0,
+          "dephasing_rate": 0.0,
+          "detector_efficiency": 1.0,
+          "detector_std": 0.0,
+          "coupling": 1.0,
+          "feedback_gain": 1.0,
+          "control_rotation": 0.0,
+          "cooling_transmissivity": 0.99,
+          "displacement_provenance": "independent",
+          "gate_backend": "lumped",
+          "gate_ancilla_cutoff": 512,
+          "ancilla_loss_rate": 0.0,
+          "ancilla_dephasing_rate": 0.0,
+          "homodyne_radius": 60.0,
+          "homodyne_dy": 0.01,
+          "max_joint_dimension": 2000000,
+          "max_gate_scratch_mb": 512.0
+        },
+        "noise_extension": {},
+        "gates": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "score_snapshot_per_state": 8,
+        "hot_snapshot_per_state": 2,
+        "snapshot_cycles": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "source_hashes": {
+          "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+          "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+          "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+          "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+          "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+          "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+          "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+          "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+          "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+          "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+          "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+          "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+          "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+          "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+          "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+          "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+          "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+          "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+          "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+          "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+          "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+          "experiments/continue_local_physics.py": "40edf5b8657d73cf8bcfaf1b99e0da985d0508fe3cc45332dafd323bc80f0b44"
+        },
+        "checkpoint_sha256": "5f4486abe6368d0e071722923c85cfee829b0583b75e0655da2c52e891a115af"
+      },
+      "id": "9e5e12cf5817874b"
+    },
+    {
+      "point": "nominal",
+      "variant": "passive_cooling",
+      "chunk": 0,
+      "base_seed": 26112001,
+      "cutoff": 5120,
+      "config": {
+        "schema": 2,
+        "profile": "quality_physics",
+        "seed": 4138287304,
+        "data_delta": 0.3,
+        "per_state": 512,
+        "rounds": 8,
+        "measurement_resource": "smooth",
+        "dx": null,
+        "logical_bins": 192,
+        "cutoffs": [
+          5120
+        ],
+        "points": {
+          "nominal": [
+            0.2,
+            0.05,
+            0.9
+          ]
+        },
+        "decoders": [
+          "nearest",
+          "bayes_gaussian",
+          "lstm_256x3_s0"
+        ],
+        "physics": {
+          "cycle_time": 1.0,
+          "gate_duration": 0.0,
+          "feedback_delay": 0.0,
+          "loss_rate": 0.0,
+          "dephasing_rate": 0.0,
+          "detector_efficiency": 1.0,
+          "detector_std": 0.0,
+          "coupling": 1.0,
+          "feedback_gain": 1.0,
+          "control_rotation": 0.0,
+          "cooling_transmissivity": 0.99,
+          "displacement_provenance": "independent",
+          "gate_backend": "lumped",
+          "gate_ancilla_cutoff": 512,
+          "ancilla_loss_rate": 0.0,
+          "ancilla_dephasing_rate": 0.0,
+          "homodyne_radius": 60.0,
+          "homodyne_dy": 0.01,
+          "max_joint_dimension": 2000000,
+          "max_gate_scratch_mb": 512.0
+        },
+        "noise_extension": {},
+        "gates": {
+          "mean_edge": 0.0001,
+          "individual_edge": 0.01,
+          "norm": 1e-07,
+          "energy_limit": 1000.0,
+          "energy_jump": 1000.0
+        },
+        "score_snapshot_per_state": 8,
+        "hot_snapshot_per_state": 2,
+        "snapshot_cycles": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "source_hashes": {
+          "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+          "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+          "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+          "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+          "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+          "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+          "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+          "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+          "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+          "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+          "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+          "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+          "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+          "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+          "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+          "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+          "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+          "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+          "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+          "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+          "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+          "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+          "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+          "experiments/continue_local_physics.py": "40edf5b8657d73cf8bcfaf1b99e0da985d0508fe3cc45332dafd323bc80f0b44"
+        },
+        "checkpoint_sha256": "5f4486abe6368d0e071722923c85cfee829b0583b75e0655da2c52e891a115af"
+      },
+      "id": "fbd4d6119d795bd8"
+    }
+  ],
+  "fixed_budget": {
+    "per_state_per_job": 512,
+    "chunks": 1,
+    "base_seeds": [
+      26112001
+    ],
+    "rounds": 8,
+    "target_zero_event_probability": null,
+    "optional_stopping": false
+  },
+  "expected_jobs": 4,
+  "estimated_uncompressed_output_bytes": 1901592576,
+  "source_hashes": {
+    "experiments/quality_benchmark.py": "4acc63875c909fc45031a89fce1bbe654773a242cc8d6046fc1f6550cf70aa68",
+    "experiments/qutip_reference.py": "f4c3639de84f148b075e3437df0a034b6e5f3a8accfe16df41ea92da2c8abd4e",
+    "experiments/noise_heatmaps.py": "671604b7565a9c4acbd11d40f65033a8c46809dee263a918ce90836527a8b30d",
+    "experiments/refine_logical_scores.py": "eb80abca3ab464605298492cd11d0af9e5f254fb0798e2922e628167d185837f",
+    "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+    "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+    "quantum/reference_noise.py": "110f966222e8075f026300c5968eb4b0bfd3763b34c0ce85d50dd1741382ec6d",
+    "quantum/quality.py": "7620dd543356ef14fe93f2c805bc308aa727a1e25e0cc000110c849709c6546e",
+    "quantum/scoring.py": "dc99f7a61c58886f67f59b34ef4fcac10e030a278ae9a74586edffc0a2a14876",
+    "quantum/finite_gate.py": "ab22c73754afcde84fd341798551300faf58b659d31560e85530b71f3cdc2444",
+    "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+    "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616",
+    "quantum/channels.py": "f1c889ffa0823a6281006ad3b39eb99f844a046fb935840ddbb0b4aeaa6abc61",
+    "simulator/noise.py": "e2986290931c3fafa8574b73666540bc47a6a8f6c656853fb2c9fd28dde5d2a3",
+    "simulator/nonstationary.py": "9fb2a29722c8adaf3c901408977d6825d6f0707d25511d0e1e5adab265a1ce1b",
+    "simulator/sim.py": "90cf8a88cd14fe7f75e5bea7c64b8cedf98a8c7621d9d3487f699e55ac01d89e",
+    "decoders/bayesian/grid_filter.py": "3a6befd5377552089d0b633a0689f043cd2dab9514d05cc0d6fa5acd877d7e06",
+    "decoders/LSTM/model.py": "e928f6c3210485983a442b1c70735fa98d6aa0c50bddaad3df59c01bdc497227",
+    "decoders/base.py": "1c8f2d6ca79ef39a3b52125737b0e7b6b7007b7de4b84889b7d96696fa692321",
+    "docs/simulation_quality.md": "4d4bf1a3ea6d1e7c5e313e3438d29dfaf5060ded3ac44855ffd15a500bb88418",
+    "tests/test_simulation_quality.py": "a05acf3b8d638f1a6c6c7295cefe1246c24005968796781e6c31aec207133212",
+    "experiments/calibrate_reference_noise.py": "33b0068875179a4fc2e5fb2134c2b8b9297dcd29f213eaeec6ce97342e2e3631",
+    "experiments/validate_reference_states.py": "3b8128ac1c89b8db62f0d1b834dab8b5c9d18359ae0e15ac1af043bce90a0b62",
+    "experiments/continue_local_physics.py": "40edf5b8657d73cf8bcfaf1b99e0da985d0508fe3cc45332dafd323bc80f0b44"
+  },
+  "environment": {
+    "python": "3.13.13",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "qutip": "5.3.1",
+    "torch": "2.15.0",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O"
+  },
+  "metric_contract": {
+    "primary": "six_cardinal_mean_logical_fidelity_by_cycle",
+    "events": [
+      "energy_limit",
+      "energy_jump",
+      "boundary_failure"
+    ],
+    "interval": "state_stratified_fixed_n_Clopper_Pearson_with_Bonferroni",
+    "energy_thresholds": "diagnostic predefined event definitions, separate from numerical gates",
+    "numerical_checks": [
+      "all_stage_population_and_norm",
+      "cutoff_equivalence",
+      "saved_state_scoring_refinement",
+      "independent_instrument_checks"
+    ],
+    "cutoff_tolerance": 0.01,
+    "scoring_bins": [
+      192,
+      384,
+      768
+    ],
+    "scoring_tolerance": 0.001,
+    "hardware_claim": false
+  },
+  "method_sources": [
+    "https://doi.org/10.1103/PRXQuantum.2.020101",
+    "https://doi.org/10.1103/PhysRevLett.125.040501"
+  ],
+  "decision": "No benchmark verdict until scheduled jobs and required numerical checks complete; report failures and incomplete checks.",
+  "note": "Physics values are project-selected interventions, not calibrated hardware. Passive cooling is not GKP stabilization.",
+  "migration": {
+    "original_plan": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/ec2_runs/production_20261119/status_checks/20261123T222312Z/metrics_snapshot/physics/plan.json",
+    "original_plan_sha256": "59a44fb97f98fe9726a661fde11809c64defb5faa2b294646bcf74565d8509f2",
+    "selected_original_jobs": [
+      {
+        "original_job_id": "c8b32211b377eb4f",
+        "local_job_id": "dcd0f4d8452e1fb5",
+        "variant": "finite_duration_lumped",
+        "original_cutoff": 4096,
+        "local_cutoff": 4096,
+        "semantic_config_equal_excluding_only_source_hashes": true,
+        "declared_software_budget_departures": {}
+      },
+      {
+        "original_job_id": "83b8f69757796f5a",
+        "local_job_id": "0643eef0fa378878",
+        "variant": "finite_duration_lumped",
+        "original_cutoff": 5120,
+        "local_cutoff": 5120,
+        "semantic_config_equal_excluding_only_source_hashes": true,
+        "declared_software_budget_departures": {}
+      },
+      {
+        "original_job_id": "7cbe8592e09263f3",
+        "local_job_id": "9e5e12cf5817874b",
+        "variant": "passive_cooling",
+        "original_cutoff": 4096,
+        "local_cutoff": 4096,
+        "semantic_config_equal_excluding_only_source_hashes": true,
+        "declared_software_budget_departures": {}
+      },
+      {
+        "original_job_id": "45e9db65460c71ee",
+        "local_job_id": "fbd4d6119d795bd8",
+        "variant": "passive_cooling",
+        "original_cutoff": 5120,
+        "local_cutoff": 5120,
+        "semantic_config_equal_excluding_only_source_hashes": true,
+        "declared_software_budget_departures": {}
+      }
+    ],
+    "software_smoke": false,
+    "source_hash_policy": "Fresh active sources/environment; original hashes retained in source record and never substituted.",
+    "scope": "Four selected physics jobs only; does not complete original20-job plan or full accuracy audit."
+  }
+}

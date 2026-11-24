@@ -11,6 +11,7 @@ import time
 import numpy as np
 import qutip as qt
 from qutip._distributions import psi_n_single_fock_multiple_position_complex
+from scipy.special import gammaln
 
 from quantum.qutip_reference import L
 from simulator.sim import wrap
@@ -64,29 +65,51 @@ class SmoothMehler:
         return value/self.norm
 
 
-def qutip_wave_basis(n, positions, chunk_size=256):
-    """QuTiP's oscillator evaluator, independently of our Hermite recurrence.
+REFERENCE_WAVE_BASIS = "scaled_generalized_laguerre_v1"
 
-    Pinned QuTiP 5.3.1 internal kernel, also used by its public
-    HarmonicOscillatorWaveFunction.update. Positions are real; strip only
-    numerically negligible imaginary parts, and reject nonfinite values.
+
+def qutip_wave_basis(n, positions, chunk_size=256):
+    """Stable independent reference basis; legacy API name is preserved.
+
+    QuTiP's Gaussian-seeded kernel underflows at large |x| even when a
+    high-order oscillator function is appreciable. Evaluate even/odd rows
+    via generalized Laguerre polynomials, dynamically scaled in log space.
+    This is separate from the local normalized-Hermite recurrence, and is
+    tested against arbitrary-precision Hermite values. QuTiP still supplies
+    the independent circuit operators/evolution, not this scalar evaluator.
     """
     x = np.asarray(positions, dtype=np.complex128)
-    result = np.empty((n, len(x)))
-    # Bound the kernel's scratch allocations on long position vectors. Every
-    # coordinate is independent; chunking changes neither nodes nor physics.
-    for start in range(0, len(x), chunk_size):
-        stop = min(start+chunk_size, len(x))
-        for k in range(n):
-            row = psi_n_single_fock_multiple_position_complex(k, x[start:stop])
-            if not np.isfinite(row).all() or np.max(np.abs(row.imag)) > 1e-13:
-                raise FloatingPointError("Invalid QuTiP oscillator wavefunction")
-            result[k, start:stop] = row.real
+    if (not isinstance(n,(int,np.integer)) or n<1 or chunk_size<1 or x.ndim!=1 or
+            not np.isfinite(x).all() or np.any(np.abs(x.imag)>1e-13)):
+        raise ValueError("Positive Fock size/chunk and finite real coordinates required")
+    x=x.real
+    result=np.empty((n,len(x)))
+    for start in range(0,len(x),chunk_size):
+        stop=min(start+chunk_size,len(x));xx=x[start:stop];z=xx*xx
+        for parity,alpha in ((0,-.5),(1,.5)):
+            orders=np.arange((n+1-parity)//2)
+            log_coeff=(-.25*math.log(math.pi)+(orders+parity*.5)*math.log(2)+
+                       gammaln(orders+1)-.5*gammaln(2*orders+parity+1))
+            previous=np.zeros_like(xx);current=np.ones_like(xx);scale=np.zeros_like(xx)
+            for order,coefficient in enumerate(log_coeff):
+                sign=(-1 if order%2 else 1)*np.sign(current)
+                if parity:sign*=np.sign(xx)
+                exponent=np.log(np.maximum(np.abs(current),np.finfo(float).tiny))+scale-z/2+coefficient
+                if parity:exponent+=np.log(np.maximum(np.abs(xx),np.finfo(float).tiny))
+                result[2*order+parity,start:stop]=sign*np.exp(exponent)
+                following=((2*order+alpha+1-z)*current-(order+alpha)*previous)/(order+1)
+                previous,current=current,following
+                large=np.maximum(np.abs(previous),np.abs(current))>1e100
+                if np.any(large):
+                    previous[large]*=1e-100;current[large]*=1e-100
+                    scale[large]+=100*math.log(10)
+    if not np.isfinite(result).all():
+        raise FloatingPointError("Invalid scaled-Laguerre reference oscillator function")
     return result
 
 
 def qutip_ancilla(n, sigma):
-    """exp(-t n)|+ideal> using QuTiP's recurrence at all j sqrt(pi)."""
+    """exp(-t n)|+ideal> using the independent stable reference evaluator."""
     t = float(np.arctanh(2*sigma*sigma))
     jmax = math.ceil((math.sqrt(2*n)+10)/L)+1
     coefficients = qutip_wave_basis(n, np.arange(-jmax, jmax+1)*L).sum(axis=1)
@@ -96,7 +119,7 @@ def qutip_ancilla(n, sigma):
 
 
 class ExplicitQutip:
-    def __init__(self, nd, na, sigma, y, *, tight=False, wrong_sign=False, wave_basis=None, coupling=1.):
+    def __init__(self, nd, na, sigma, y, *, tight=False, wrong_sign=False, wave_basis=None, coupling=1., axes=("q", "p")):
         if not np.isfinite(coupling) or coupling <= 0:
             raise ValueError("Positive finite SUM coupling required")
         start = time.perf_counter()
@@ -106,7 +129,13 @@ class ExplicitQutip:
         qd, pd = (ad+ad.dag())/math.sqrt(2), -1j*(ad-ad.dag())/math.sqrt(2)
         qa, pa = (aa+aa.dag())/math.sqrt(2), -1j*(aa-aa.dag())/math.sqrt(2)
         sign = (-1 if wrong_sign else 1)*coupling
-        self.hamiltonians = {"q": sign*qt.tensor(qd, pa), "p": -sign*qt.tensor(pd, qa)}
+        if not axes or any(axis not in ("q", "p") for axis in axes):
+            raise ValueError("Explicit circuit axes must be q and/or p")
+        self.hamiltonians = {}
+        if "q" in axes:
+            self.hamiltonians["q"] = sign*qt.tensor(qd, pa)
+        if "p" in axes:
+            self.hamiltonians["p"] = -sign*qt.tensor(pd, qa)
         self.phase = (1j)**np.arange(na)
         self.phi = qutip_wave_basis(na, y) if wave_basis is None else wave_basis
         self.options = {"method": "vern9", "atol": 1e-13 if tight else 1e-11,
@@ -115,8 +144,8 @@ class ExplicitQutip:
                         "store_final_state": True, "progress_bar": ""}
         self.setup_seconds = time.perf_counter()-start
 
-    def conditional(self, data, axis):
-        """Return unnormalized columns <y|U|data,ancilla>, via full circuit."""
+    def evolve(self, data, axis):
+        """Evolve the independent circuit without allocating an outcome grid."""
         if axis not in self.hamiltonians:
             raise ValueError(axis)
         anc = self.ancilla.astype(complex)
@@ -125,6 +154,11 @@ class ExplicitQutip:
         initial = qt.tensor(qt.Qobj(np.asarray(data)[:, None]), qt.Qobj(anc[:, None]))
         evolved = qt.sesolve(self.hamiltonians[axis], initial, [0., 1.], options=self.options).final_state
         joint = evolved.full().reshape(self.nd, self.na)
+        return joint
+
+    def conditional(self, data, axis):
+        """Return unnormalized columns <y|U|data,ancilla>, via full circuit."""
+        joint = self.evolve(data, axis)
         # p-space bra <p|n> = (-i)^n h_n(p); q-space h_n is real.
         weighted_joint = joint if axis == "q" else joint*self.phase.conj()[None, :]
         conditional = weighted_joint@self.phi

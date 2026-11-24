@@ -39,6 +39,31 @@ def s3_sync(source, destination):
                           stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True, timeout=3600)
 
 
+def checkpoint_job(path, destination):
+    """Publish a sealed observation before starting expensive derived analysis."""
+    result = s3_sync(path, destination)
+    if result.returncode:
+        raise RuntimeError("Raw S3 checkpoint failed: " + result.stderr[-1000:])
+
+
+def run_job_steps(folder, job, command, checkpoint, before_refine=None):
+    """Execute/reuse an observation, checkpoint it, then refine saved scores."""
+    from experiments.quality_benchmark import verify_job, scoring_status
+    folder = Path(folder)
+    if verify_job(folder, job) is None:
+        command([sys.executable, "-u", "-m", "experiments.quality_benchmark",
+                 "run", str(folder), "--max-jobs", "1"], "run")
+    if verify_job(folder, job) is None:
+        raise RuntimeError("Observation did not publish a sealed complete result")
+    job_path = folder / "jobs" / job["id"]
+    checkpoint(job_path)
+    if scoring_status(folder, job, [192, 384, 768])["status"] != "checked":
+        if before_refine:
+            before_refine()
+        command([sys.executable, "-u", "-m", "experiments.refine_logical_scores",
+                 str(job_path)], "score")
+
+
 def write_dashboard(metrics, state):
     rows = []
     for preset in PRESETS:
@@ -124,12 +149,12 @@ def main():
         plan=json.loads((plans/preset/"plan.json").read_text())
         with lock:state["stages"][preset]["status"]="running"
         for job in plan["jobs"]:
-            if verify_job(plans/preset,job) is None:
-                command([sys.executable,"-u","-m","experiments.quality_benchmark","run",str(plans/preset),"--max-jobs","1"],preset+"_run")
-            job_path=plans/preset/"jobs"/job["id"]
-            if scoring_status(plans/preset,job,[192,384,768])["status"]!="checked":
+            def before_refine():
                 with lock:state["stages"][preset]["status"]="refining_saved_scores"
-                command([sys.executable,"-u","-m","experiments.refine_logical_scores",str(job_path)],preset+"_score")
+            run_job_steps(plans/preset, job,
+                lambda argv, label: command(argv, preset+"_"+label),
+                lambda path: checkpoint_job(path, prefix+"/raw/"+preset+"/jobs/"+job["id"]+"/"),
+                before_refine=before_refine)
             report=analyze_plan(plans/preset)
             with lock:
                 state["stages"][preset].update(status="running",completed_jobs=report["completed_jobs"])

@@ -1,0 +1,18 @@
+{
+  "started_utc": "2026-11-24T09:33:56.624538+00:00",
+  "pid": 74794,
+  "command": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "results/simulator_accuracy_completion/20261124/measurement/audit_uniform_fine_pair.py",
+    "--source",
+    "results/simulator_accuracy_completion/20261124/measurement/uniform_gain1p01_union_v1",
+    "--output",
+    "results/simulator_accuracy_completion/20261124/measurement/uniform_gain1p01_fine_pair_audit.json"
+  ],
+  "requested_threads": 2,
+  "observed_prelaunch_available_bytes": 8857354240,
+  "target_rss_bytes": 4294967296.0,
+  "sampled_rss_trigger_bytes": 5368709120.0,
+  "max_seconds": 1200.0,
+  "guard_sha256": "116098aa75addda8e69308c6bde1b8fdbda2765d98872e748363bcc93042910b"
+}

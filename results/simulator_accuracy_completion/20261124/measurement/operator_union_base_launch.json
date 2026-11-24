@@ -1,0 +1,33 @@
+{
+  "started_utc": "2026-11-24T08:50:03.464208+00:00",
+  "pid": 60168,
+  "command": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-u",
+    "-m",
+    "experiments.validate_instrument_operator",
+    "--data-cutoffs",
+    "4096",
+    "5120",
+    "--ancilla-cutoffs",
+    "8192",
+    "12288",
+    "--sigma",
+    ".0886226925452758",
+    "--coupling",
+    "1",
+    "--radius",
+    "160",
+    "--dy",
+    "0.01",
+    "--chunk",
+    "128",
+    "--grid-chunk",
+    "512",
+    "--max-scratch-gib",
+    "5",
+    "--output",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_v1"
+  ],
+  "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_v1"
+}

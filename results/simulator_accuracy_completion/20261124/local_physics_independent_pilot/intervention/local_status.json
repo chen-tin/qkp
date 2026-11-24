@@ -1,0 +1,46 @@
+{
+  "started_utc": "2026-11-24T08:31:43.846449+00:00",
+  "status": "all_selected_jobs_processed",
+  "jobs": {
+    "38e3cde4e0add8c3": {
+      "status": "reused",
+      "scoring": {
+        "status": "checked",
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/local_physics_independent_pilot/intervention/jobs/38e3cde4e0add8c3/quality/logical_refinement_1b01fcfa9c4422e6.json",
+        "sha256": "dcdb30a84fc9eeda3d87f3dd14496020a6457a963a97d47a950327e2ffc0a1b2",
+        "pass": true
+      }
+    },
+    "58cba207aad8b4c3": {
+      "status": "reused",
+      "scoring": {
+        "status": "checked",
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/local_physics_independent_pilot/intervention/jobs/58cba207aad8b4c3/quality/logical_refinement_a719e1bcac34f485.json",
+        "sha256": "4df1c7b5a4c971aa02a9ce845a23e8a0b8cf3657b7a8e2c985476ba00e92df5d",
+        "pass": true
+      }
+    },
+    "867e544c77289f92": {
+      "status": "reused",
+      "scoring": {
+        "status": "checked",
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/local_physics_independent_pilot/intervention/jobs/867e544c77289f92/quality/logical_refinement_b42e3553df2e71dd.json",
+        "sha256": "126455a0aa8cc0b92742a4efed58c91c3bebe819ae75cceb0bd07de364dce415",
+        "pass": true
+      }
+    },
+    "a99d3e490c2a9e91": {
+      "status": "reused",
+      "scoring": {
+        "status": "checked",
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/local_physics_independent_pilot/intervention/jobs/a99d3e490c2a9e91/quality/logical_refinement_cee6a4174b1388c6.json",
+        "sha256": "040c4c78ea714d8aa95bd23e1e847eac5e02f7b10f90d28f36a0b41bf98c4550",
+        "pass": true
+      }
+    }
+  },
+  "max_seconds": 180,
+  "local_only": true,
+  "finished_utc": "2026-11-24T08:31:43.922426+00:00",
+  "elapsed_seconds": 0.09307624999200925
+}

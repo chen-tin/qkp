@@ -1,0 +1,16 @@
+[
+  {
+    "arm": "control",
+    "workers": 1,
+    "threads": 1,
+    "seconds": 4.649875125003746,
+    "returncode": 0
+  },
+  {
+    "arm": "parallel",
+    "workers": 2,
+    "threads": 1,
+    "seconds": 3.703891333003412,
+    "returncode": 0
+  }
+]

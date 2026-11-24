@@ -1,0 +1,894 @@
+{
+  "created_utc": "2026-11-24T08:53:30.414482+00:00",
+  "returncode": 0,
+  "interruption_reason": null,
+  "population_preflight_pass": true,
+  "elapsed_seconds": 99.87675154200406,
+  "max_tree_rss_bytes": 1304543232,
+  "samples": [
+    {
+      "phase": "population_preflight",
+      "seconds": 0.06770437500381377,
+      "tree_rss_bytes": 11960320,
+      "pids": [
+        60542
+      ]
+    },
+    {
+      "phase": "population_preflight",
+      "seconds": 1.1204816670069704,
+      "tree_rss_bytes": 278528000,
+      "pids": [
+        60542
+      ]
+    },
+    {
+      "phase": "population_preflight",
+      "seconds": 2.1779683329950785,
+      "tree_rss_bytes": 375308288,
+      "pids": [
+        60542
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 3.2339187920006225,
+      "tree_rss_bytes": 8404992,
+      "pids": [
+        60556
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 4.277125749998959,
+      "tree_rss_bytes": 251609088,
+      "pids": [
+        60556
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 5.319339167006547,
+      "tree_rss_bytes": 351354880,
+      "pids": [
+        60556
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 6.3756876249972265,
+      "tree_rss_bytes": 607682560,
+      "pids": [
+        60556,
+        60569
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 7.431133374993806,
+      "tree_rss_bytes": 675201024,
+      "pids": [
+        60556,
+        60569
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 8.476903417002177,
+      "tree_rss_bytes": 489635840,
+      "pids": [
+        60556,
+        60578
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 9.540125041996362,
+      "tree_rss_bytes": 679526400,
+      "pids": [
+        60556,
+        60578
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 10.602232167002512,
+      "tree_rss_bytes": 372899840,
+      "pids": [
+        60556,
+        60590
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 11.659158708003815,
+      "tree_rss_bytes": 636223488,
+      "pids": [
+        60556,
+        60590
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 12.69791037500545,
+      "tree_rss_bytes": 676478976,
+      "pids": [
+        60556,
+        60590
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 13.753478083002847,
+      "tree_rss_bytes": 610942976,
+      "pids": [
+        60556,
+        60600
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 14.809664250002243,
+      "tree_rss_bytes": 676773888,
+      "pids": [
+        60556,
+        60600
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 15.856040458005737,
+      "tree_rss_bytes": 446824448,
+      "pids": [
+        60556,
+        60611
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 16.91678666700318,
+      "tree_rss_bytes": 665616384,
+      "pids": [
+        60556,
+        60611
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 17.951199457995244,
+      "tree_rss_bytes": 760692736,
+      "pids": [
+        60556,
+        60611
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 19.002350624999963,
+      "tree_rss_bytes": 827637760,
+      "pids": [
+        60556,
+        60611
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 20.051889291993575,
+      "tree_rss_bytes": 913784832,
+      "pids": [
+        60556,
+        60611
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 21.111035124995396,
+      "tree_rss_bytes": 937820160,
+      "pids": [
+        60556,
+        60611
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 22.149974041996757,
+      "tree_rss_bytes": 944816128,
+      "pids": [
+        60556,
+        60611
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 23.19521329199779,
+      "tree_rss_bytes": 1010237440,
+      "pids": [
+        60556,
+        60611
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 24.25966804199561,
+      "tree_rss_bytes": 1020887040,
+      "pids": [
+        60556,
+        60611
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 25.321470666996902,
+      "tree_rss_bytes": 1039581184,
+      "pids": [
+        60556,
+        60611
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 26.384069958003238,
+      "tree_rss_bytes": 1070235648,
+      "pids": [
+        60556,
+        60611
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 27.4289018749987,
+      "tree_rss_bytes": 350961664,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 28.484062207993702,
+      "tree_rss_bytes": 564903936,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 29.527648167000734,
+      "tree_rss_bytes": 719536128,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 30.58728679199703,
+      "tree_rss_bytes": 780713984,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 31.625575957994442,
+      "tree_rss_bytes": 879951872,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 32.67435870799818,
+      "tree_rss_bytes": 937803776,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 33.71627350000199,
+      "tree_rss_bytes": 982859776,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 34.76618104199588,
+      "tree_rss_bytes": 1063108608,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 35.809543042007135,
+      "tree_rss_bytes": 1068630016,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 36.87332670799515,
+      "tree_rss_bytes": 1115406336,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 37.9183206250018,
+      "tree_rss_bytes": 1116192768,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 38.96510204199876,
+      "tree_rss_bytes": 1154236416,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 40.01945262499794,
+      "tree_rss_bytes": 1276297216,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 41.066740875001415,
+      "tree_rss_bytes": 1283391488,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 42.14826654200442,
+      "tree_rss_bytes": 1302495232,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 43.20207091700286,
+      "tree_rss_bytes": 1224048640,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 44.24848483300593,
+      "tree_rss_bytes": 1250689024,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 45.29552166699432,
+      "tree_rss_bytes": 1201569792,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 46.370766666994314,
+      "tree_rss_bytes": 1122664448,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 47.41899391700281,
+      "tree_rss_bytes": 808550400,
+      "pids": [
+        60556,
+        60681
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 48.46977808300289,
+      "tree_rss_bytes": 387481600,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 49.51770520799619,
+      "tree_rss_bytes": 575438848,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 50.593470082996646,
+      "tree_rss_bytes": 764690432,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 51.6362111250055,
+      "tree_rss_bytes": 859357184,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 52.69109074999869,
+      "tree_rss_bytes": 947552256,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 53.73955287500576,
+      "tree_rss_bytes": 1007878144,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 54.79621058299381,
+      "tree_rss_bytes": 1080213504,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 55.83060341699456,
+      "tree_rss_bytes": 1096777728,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 56.888455167005304,
+      "tree_rss_bytes": 1156005888,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 57.937847249995684,
+      "tree_rss_bytes": 1271169024,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 58.99234583300131,
+      "tree_rss_bytes": 1304543232,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 60.05618041699927,
+      "tree_rss_bytes": 1302757376,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 61.0956530830008,
+      "tree_rss_bytes": 1114554368,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 62.14010487499763,
+      "tree_rss_bytes": 1146241024,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 63.19894133300113,
+      "tree_rss_bytes": 1145356288,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 64.24724066699855,
+      "tree_rss_bytes": 975814656,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 65.30394558300031,
+      "tree_rss_bytes": 1057406976,
+      "pids": [
+        60556,
+        61080
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 66.34331758299959,
+      "tree_rss_bytes": 470286336,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 67.40552562499943,
+      "tree_rss_bytes": 691159040,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 68.44981970799563,
+      "tree_rss_bytes": 818774016,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 69.51880533300573,
+      "tree_rss_bytes": 860798976,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 70.5724637920066,
+      "tree_rss_bytes": 944455680,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 71.63486429200566,
+      "tree_rss_bytes": 941965312,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 72.67256929200084,
+      "tree_rss_bytes": 901070848,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 73.72355999999854,
+      "tree_rss_bytes": 976044032,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 74.76848012499977,
+      "tree_rss_bytes": 1060241408,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 75.80694045800192,
+      "tree_rss_bytes": 1100677120,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 76.84914970799582,
+      "tree_rss_bytes": 1137393664,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 77.89874779200181,
+      "tree_rss_bytes": 1127612416,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 78.9426865830028,
+      "tree_rss_bytes": 1097760768,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 79.99646283300535,
+      "tree_rss_bytes": 1051590656,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 81.04153637500713,
+      "tree_rss_bytes": 1055621120,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 82.0840899580071,
+      "tree_rss_bytes": 1077329920,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 83.13722212500579,
+      "tree_rss_bytes": 1107443712,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 84.18885408299684,
+      "tree_rss_bytes": 1052262400,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 85.23300150000432,
+      "tree_rss_bytes": 1074675712,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 86.2850582079991,
+      "tree_rss_bytes": 1070514176,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 87.32690258299408,
+      "tree_rss_bytes": 1004912640,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 88.37899858299352,
+      "tree_rss_bytes": 1028063232,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 89.41804458299885,
+      "tree_rss_bytes": 1013039104,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 90.47403245800524,
+      "tree_rss_bytes": 1048035328,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 91.52219408299425,
+      "tree_rss_bytes": 1053065216,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 92.56989262500429,
+      "tree_rss_bytes": 1067319296,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 93.62263079200056,
+      "tree_rss_bytes": 1127923712,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 94.68242204199487,
+      "tree_rss_bytes": 1139113984,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 95.71975916699739,
+      "tree_rss_bytes": 1214283776,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 96.76984091699705,
+      "tree_rss_bytes": 1214087168,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 97.82324425000115,
+      "tree_rss_bytes": 1161560064,
+      "pids": [
+        60556,
+        61294
+      ]
+    },
+    {
+      "phase": "run",
+      "seconds": 98.86654158300371,
+      "tree_rss_bytes": 260210688,
+      "pids": [
+        60556
+      ]
+    }
+  ],
+  "commands": [
+    [
+      "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+      "-u",
+      "-m",
+      "experiments.quality_benchmark",
+      "run",
+      "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/pilot_128_192/plans/finite_gate",
+      "--max-jobs",
+      "4"
+    ],
+    [
+      "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+      "-u",
+      "/Users/christopherbabayan/programs/QUANTUM/qkp/ops/ec2/parallel_worker.py",
+      "run",
+      "--root",
+      "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/pilot_128_192",
+      "--run-id",
+      "pilot_128_192",
+      "--presets",
+      "finite_gate",
+      "--workers",
+      "1",
+      "--threads",
+      "1",
+      "--no-sync",
+      "--no-shutdown"
+    ]
+  ],
+  "cwd": "/Users/christopherbabayan/programs/QUANTUM/qkp",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

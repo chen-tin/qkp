@@ -1,0 +1,12 @@
+{
+  "parent": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_v1",
+  "parent_result_sha256": "4842454837c2aab380369fc14663a39fc2e904d58b20b2005a4b724f3da0bf35",
+  "new_ancilla_cutoffs": [
+    8192,
+    12288,
+    16384
+  ],
+  "new_dy": 0.01,
+  "raw_bytes_preserved": true,
+  "curve_cache_reuse": true
+}

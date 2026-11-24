@@ -1,0 +1,116 @@
+{
+  "number": 2,
+  "launched_utc": "2026-11-24T09:44:16.015731+00:00",
+  "parent_pid": 77372,
+  "argv": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-u",
+    "-m",
+    "experiments.continue_local_physics",
+    "run",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics",
+    "--max-seconds",
+    "3600",
+    "--threads",
+    "2",
+    "--max-rss-gib",
+    "12",
+    "--reserve-disk-gib",
+    "8",
+    "--no-sync",
+    "--no-shutdown"
+  ],
+  "log": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/sessions/session_2.log",
+  "before_resume_preflight": {
+    "estimated_peak_bytes": 9730785280,
+    "available_memory_bytes": 10279534592,
+    "remaining_output_bytes": 950796288.0,
+    "available_disk_bytes": 54165954560,
+    "thread_environment_requested": 2,
+    "scope": "Estimates/preflight only; parent also samples child RSS and enforces deadline. Accelerate thread count remains environment-requested."
+  },
+  "available_memory_headroom_bytes": 536870912,
+  "prior_terminal_session": 1,
+  "prior_terminal_status": "clean TimeoutError",
+  "prior_started_utc": "2026-11-24T08:36:50.615390+00:00",
+  "plan_sha256": "aec015d75eb3fa95eba8ef589f9374f4c6a05d97aec3593d21f3ac422fb749d6",
+  "process_returncode": 1,
+  "terminal_observed_utc": "2026-11-24T09:46:19.167208+00:00",
+  "terminal_status": {
+    "started_utc": "2026-11-24T09:44:17.504221+00:00",
+    "status": "failed",
+    "jobs": {
+      "dcd0f4d8452e1fb5": {
+        "status": "reused",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/jobs/dcd0f4d8452e1fb5/quality/logical_refinement_52e8e1885c4d2165.json",
+          "sha256": "cedf4d7ae12683e151c2eeabc654c23be7593cb0b18bb15db57603351e9e922d",
+          "pass": true
+        }
+      },
+      "0643eef0fa378878": {
+        "status": "completed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/jobs/0643eef0fa378878/quality/logical_refinement_c366df9aefde7641.json",
+          "sha256": "a3c412bfa201e2f66c12f5f5798dea1ae18fba2a77501d9da2c534212b992293",
+          "pass": true
+        }
+      }
+    },
+    "max_seconds": 3600,
+    "local_only": true,
+    "updated_utc": "2026-11-24T09:46:13.662825+00:00",
+    "active_rss_bytes": 1070006272,
+    "elapsed_seconds": 120.96794945800502,
+    "error": "ValueError('Local memory preflight failed: estimate=9730785280, cap=12884901888, available=9568649216')",
+    "finished_utc": "2026-11-24T09:46:18.182211+00:00"
+  },
+  "cumulative_job_summary": {
+    "dcd0f4d8452e1fb5": {
+      "variant": "finite_duration_lumped",
+      "cutoff": 4096,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true,
+      "row_stage_passes": [
+        true,
+        true,
+        true
+      ]
+    },
+    "0643eef0fa378878": {
+      "variant": "finite_duration_lumped",
+      "cutoff": 5120,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true,
+      "row_stage_passes": [
+        true,
+        true,
+        true
+      ]
+    },
+    "9e5e12cf5817874b": {
+      "variant": "passive_cooling",
+      "cutoff": 4096,
+      "observations_saved": false,
+      "scoring_status": "pending",
+      "scoring_pass": false,
+      "processed": false,
+      "row_stage_passes": null
+    },
+    "fbd4d6119d795bd8": {
+      "variant": "passive_cooling",
+      "cutoff": 5120,
+      "observations_saved": false,
+      "scoring_status": "pending",
+      "scoring_pass": false,
+      "processed": false,
+      "row_stage_passes": null
+    }
+  }
+}

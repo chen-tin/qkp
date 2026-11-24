@@ -1,0 +1,18 @@
+{
+  "checked_utc": "2026-11-24T16:30:53.735763+00:00",
+  "staged_files_before_this_receipt": 1573,
+  "staged_bytes": 22476313,
+  "credential_pattern_findings": [],
+  "staged_whitespace_check": "git diff --cached --check passed",
+  "tested_python_sources": 138,
+  "staged_source_versions_match_recorded_263_test_run": true,
+  "new_scientific_tests_or_runs_executed": false,
+  "raw_array_checkpoint_runtime_lock_files_staged": false,
+  "maximum_file_size_policy_bytes": 52428800,
+  "sealed_notebook_hash_preserved": {
+    "expected": "50b4a102b24f014c406ae10132586df8f33c18eac3d787ec33511a4fe64e7c6b",
+    "snapshot": "results/github_publication/20261124/RESEARCH_NOTES_before_publication.md",
+    "actual": "50b4a102b24f014c406ae10132586df8f33c18eac3d787ec33511a4fe64e7c6b"
+  },
+  "limitations": "Raw data/logs remain local or in the existing private archive; compact evidence preserves original file hashes and locations."
+}

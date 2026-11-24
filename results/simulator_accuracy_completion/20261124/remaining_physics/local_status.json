@@ -1,0 +1,48 @@
+{
+  "started_utc": "2026-11-24T10:36:14.063118+00:00",
+  "status": "all_selected_jobs_processed",
+  "jobs": {
+    "dcd0f4d8452e1fb5": {
+      "status": "reused",
+      "scoring": {
+        "status": "checked",
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/jobs/dcd0f4d8452e1fb5/quality/logical_refinement_52e8e1885c4d2165.json",
+        "sha256": "cedf4d7ae12683e151c2eeabc654c23be7593cb0b18bb15db57603351e9e922d",
+        "pass": true
+      }
+    },
+    "0643eef0fa378878": {
+      "status": "reused",
+      "scoring": {
+        "status": "checked",
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/jobs/0643eef0fa378878/quality/logical_refinement_c366df9aefde7641.json",
+        "sha256": "a3c412bfa201e2f66c12f5f5798dea1ae18fba2a77501d9da2c534212b992293",
+        "pass": true
+      }
+    },
+    "9e5e12cf5817874b": {
+      "status": "completed",
+      "scoring": {
+        "status": "checked",
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/jobs/9e5e12cf5817874b/quality/logical_refinement_4f3d9fe134d19b45.json",
+        "sha256": "d5451f872430e4957ad8e1393791d87ec89ebfbc835e7e42fb487f65f41c7cd0",
+        "pass": true
+      }
+    },
+    "fbd4d6119d795bd8": {
+      "status": "completed",
+      "scoring": {
+        "status": "checked",
+        "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/jobs/fbd4d6119d795bd8/quality/logical_refinement_c1c58a2aba5d7c4c.json",
+        "sha256": "01ce6efbb721273eada0d746e2ba95629c0b4513776998a206e4070636f4e857",
+        "pass": true
+      }
+    }
+  },
+  "max_seconds": 3540,
+  "local_only": true,
+  "updated_utc": "2026-11-24T11:09:02.833591+00:00",
+  "active_rss_bytes": 5344067584,
+  "elapsed_seconds": 1974.2909340839979,
+  "finished_utc": "2026-11-24T11:09:08.067872+00:00"
+}

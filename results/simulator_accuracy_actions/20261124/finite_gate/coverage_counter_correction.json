@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-11-24T09:11:41.914906+00:00",
+  "classification": "audit-driver false-negative coverage accounting correction",
+  "old_source_path": "results/simulator_accuracy_actions/20261124/finite_gate/v5/source_snapshot/experiments/local_finite_gate_audit.py",
+  "old_source_sha256": "72d6c47f0b4eaac9852f9d8c9fcc29002f51fd7b5cc31d252c910a4655283bb5",
+  "old_actual_predicate": "len(refinements) == 20",
+  "expected_refinements": 36,
+  "formula": "(2rungs-1)\u00d72inputs\u00d72axes\u00d74physicalvariants\u00d72arms +2inputs\u00d72axes solver=36",
+  "old_predicate_on_complete36_records": false,
+  "corrected_rule": "Exact expectedkeyset,unique keys,32cutoff+4solver; missing/duplicate/unexpected records reject.",
+  "preserved_original_protocols": [
+    "v4",
+    "v5",
+    "v6"
+  ],
+  "v6": "Never launched; cancelledwaitingwatcher andrecordedPlanned/deprioritized before correction.",
+  "science_impact": "Numericalobservations/helpers unchanged. v5still scientificallyinconclusive because16\u219224 cutoffdifferences exceed.001. Newv7prospectiveextension usescorrectedcoverage withoutchangingphysical/numerical thresholds.",
+  "directed_test": "tests/test_local_finite_gate_audit.py::test_exact_refinement_coverage_requires_all_36_distinct_configurations"
+}

@@ -1,0 +1,26 @@
+{
+  "recorded_utc": "2026-11-24T08:48:57.016342+00:00",
+  "monitor_source_sha256": "c1cd8895bca9a6ba46122afac8eb4f0bc29a07ffc9d3685e687c452e296b6fcc",
+  "command": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-u",
+    "results/simulator_accuracy_completion/20261124/remaining_physics/sessions/monitor_fixed_jobs.py",
+    "--repo",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp",
+    "--folder",
+    "results/simulator_accuracy_completion/20261124/remaining_physics",
+    "--initial-parent",
+    "54762",
+    "--resume-monitor"
+  ],
+  "authorization": "Root-authorized total3successfulboundedone-hoursessions including alreadyrunningrootfirst; fixed4jobs only; resume onlycleanTimeoutError/freshterminalstatus/source+seal validation/memoryestimate+1GiBheadroom; noAWS/no settings or source changes.",
+  "operational_corrections": "Initial monitor attachment rejected relative-versus-absolute parent path; fixed within monitoring artifact only. Then monitor-only restart added explicit stale-status startup refusal for any later resume. Original scientific supervisor/child unaffected. Monitor-only restart also refuses any unsealed non-temporary raw before resuming; scientific first session remained uninterrupted.",
+  "stop_control": "results/simulator_accuracy_completion/20261124/remaining_physics/sessions/STOP",
+  "logs": [
+    "monitor.log",
+    "monitor_resumed.log",
+    "registry.json",
+    "session_1.json",
+    "monitor_guarded.log"
+  ]
+}

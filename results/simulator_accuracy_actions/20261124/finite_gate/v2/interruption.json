@@ -1,0 +1,9 @@
+{
+  "observed_utc": "2026-11-24T08:19:21.115156+00:00",
+  "status": "interrupted_resource_preflight",
+  "pid": 21108,
+  "observed_rss_kib": 2896304,
+  "declared_estimated_peak_bytes": 1500000000,
+  "action": "SIGINT sent immediately after observing RSS above declared estimate; no subsequent density result accepted as full study",
+  "scope": "Local deterministic control; original historical controls unchanged"
+}

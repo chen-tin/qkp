@@ -1,0 +1,14 @@
+{
+  "registered_utc": "2026-11-24T08:14:02.331202+00:00",
+  "status": "implementation_and_preflight_running",
+  "scope": "Local-only source implementation, streamed independent instrument validation, shared-basis saved-state scoring, valid bounded finite-gate controls and unresolved cutoff diagnosis. No EC2 start, remote execution/deployment or cloud writes. Read-only existing S3 archive input downloads permitted as data provenance, all computation/output local.",
+  "budget": "32GiB RAM;39GiB disk free at preflight. Full original550coverage/rare jobs not launched pending user runtime/storage preference.",
+  "immutable_original": "results/simulator_accuracy_actions/20261123/evidence_manifest.json",
+  "workstreams": [
+    "measurement_checks: streamed full-Fock independent instrument",
+    "analysis_checks: shared-basis score refinement of recoveredjob",
+    "execution_fixes: converged bounded finite-duration controls",
+    "root: import sealed inputs, local cutoff diagnosis, integrated validation/recordkeeping"
+  ],
+  "decision": "Preserve all original tolerances and numerical failures; never equate software-test passes or new bounded controls with full production certification."
+}

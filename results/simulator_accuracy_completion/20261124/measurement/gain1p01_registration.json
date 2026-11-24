@@ -1,0 +1,156 @@
+{
+  "registered_utc": "2026-11-24T09:21:05.616267+00:00",
+  "status": "Planned",
+  "question": "Does the independent finite-ancilla ideal instrument agree uniformly for the actual coupling-error gain1.01 condition at both production data cutoffs?",
+  "baseline_evidence": {
+    "g1_fine_pair_audit": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_g1_fine_pair_audit.json",
+    "sha256": "b13cf65aaef57d0d96ca45e64faf0e78b17d265b83536a2d53e6e13fc72a1284"
+  },
+  "condition_provenance": [
+    {
+      "job_id": "d4ffedd0f0a8d1fb",
+      "cutoff": 4096,
+      "variant": "coupling_error",
+      "physics": {
+        "cycle_time": 1.0,
+        "gate_duration": 0.0,
+        "feedback_delay": 0.0,
+        "loss_rate": 0.0,
+        "dephasing_rate": 0.0,
+        "detector_efficiency": 1.0,
+        "detector_std": 0.0,
+        "coupling": 1.01,
+        "feedback_gain": 1.0,
+        "control_rotation": 0.0,
+        "cooling_transmissivity": 1.0,
+        "displacement_provenance": "independent",
+        "gate_backend": "lumped",
+        "gate_ancilla_cutoff": 512,
+        "ancilla_loss_rate": 0.0,
+        "ancilla_dephasing_rate": 0.0,
+        "homodyne_radius": 60.0,
+        "homodyne_dy": 0.01,
+        "max_joint_dimension": 2000000,
+        "max_gate_scratch_mb": 512.0
+      },
+      "points": {
+        "nominal": [
+          0.2,
+          0.05,
+          0.9
+        ]
+      },
+      "source_plan_sha256": "59a44fb97f98fe9726a661fde11809c64defb5faa2b294646bcf74565d8509f2"
+    },
+    {
+      "job_id": "7579ef166929cc3e",
+      "cutoff": 5120,
+      "variant": "coupling_error",
+      "physics": {
+        "cycle_time": 1.0,
+        "gate_duration": 0.0,
+        "feedback_delay": 0.0,
+        "loss_rate": 0.0,
+        "dephasing_rate": 0.0,
+        "detector_efficiency": 1.0,
+        "detector_std": 0.0,
+        "coupling": 1.01,
+        "feedback_gain": 1.0,
+        "control_rotation": 0.0,
+        "cooling_transmissivity": 1.0,
+        "displacement_provenance": "independent",
+        "gate_backend": "lumped",
+        "gate_ancilla_cutoff": 512,
+        "ancilla_loss_rate": 0.0,
+        "ancilla_dephasing_rate": 0.0,
+        "homodyne_radius": 60.0,
+        "homodyne_dy": 0.01,
+        "max_joint_dimension": 2000000,
+        "max_gate_scratch_mb": 512.0
+      },
+      "points": {
+        "nominal": [
+          0.2,
+          0.05,
+          0.9
+        ]
+      },
+      "source_plan_sha256": "59a44fb97f98fe9726a661fde11809c64defb5faa2b294646bcf74565d8509f2"
+    }
+  ],
+  "fixed": {
+    "coupling": 1.01,
+    "data_cutoffs": [
+      4096,
+      5120
+    ],
+    "all_lambda_rows": 9216,
+    "ancilla_cutoffs": [
+      12288,
+      16384
+    ],
+    "sigma_absolute_q": 0.0886226925452758,
+    "hbar": 1,
+    "L": "sqrt(pi)",
+    "outcome_radius": 160.0,
+    "dy": 0.01,
+    "coarse_dy": "nestedabout.02",
+    "row_chunk": 128,
+    "outcome_chunk": 512,
+    "axes": "q and exact finite-Fourier-conjugate p instrument",
+    "trajectories": "none, deterministic operator comparison",
+    "training_seeds": "none",
+    "threads": 2
+  },
+  "hypothesis": "The tested finer ancillary pair satisfies unchanged finite-grid engineering error criteria atgain1.01; this is tested independently, not inferred fromgain1.0.",
+  "decision_rule": {
+    "support": "BOTHfinestlevels direct\u03b4<=2.5e-4,masserrors<=1e-5,normerror<=1e-7,boundary<1e-4,gridnormsensitivity<=1e-6,gridmasssensitivity<=1e-5,and12288\u219216384refinement\u03b4<=2.5e-4.",
+    "contradict": "Converged independent checks exceed thefixed errorcriterion.",
+    "inconclusive": "Any remaining numericalgate, missingcoverage, capacity or walltime failure; no tolerance/physics retuning."
+  },
+  "resources": {
+    "max_seconds": 1200,
+    "target_rss_bytes": 4294967296,
+    "sampled_rss_trigger_bytes": 5368709120,
+    "poll_seconds": 2,
+    "min_available_prelaunch_bytes": 6979321856.0,
+    "scope": "Sampled guard, not kernelhardlimit; transient samplingovershoot possible."
+  },
+  "reuse": "No g1physicaltransfers or curves are reused; freshg1.01 evolution fromunchanged mathematicalancillarybasis formulas. Known8192coarsefailure remains visible in g1parent; no g1.01failure is invented forunrun8192.",
+  "command": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-u",
+    "-m",
+    "experiments.validate_instrument_operator",
+    "--data-cutoffs",
+    "4096",
+    "5120",
+    "--ancilla-cutoffs",
+    "12288",
+    "16384",
+    "--sigma",
+    ".0886226925452758",
+    "--coupling",
+    "1.01",
+    "--radius",
+    "160",
+    "--dy",
+    ".01",
+    "--chunk",
+    "128",
+    "--grid-chunk",
+    "512",
+    "--max-scratch-gib",
+    "5",
+    "--output",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_gain1p01_union_v1"
+  ],
+  "source_sha256": {
+    "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+    "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+    "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+    "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+    "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+  },
+  "scope": "Uniform declared finite-data operators and finite outcome grid; empirical window/grid/ancilla checks, no physicalFockcutoff/hardware/rigorouscontinuum certificate."
+}

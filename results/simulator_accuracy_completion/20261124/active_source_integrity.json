@@ -1,0 +1,18 @@
+{
+  "checked_utc": "2026-11-24T09:29:57.263025+00:00",
+  "checks": [
+    {
+      "plan": "results/simulator_accuracy_completion/20261124/remaining_physics/plan.json",
+      "checked_sources": 24,
+      "changed_sources": [],
+      "pass": true
+    },
+    {
+      "plan": "results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/plan.json",
+      "checked_sources": 27,
+      "changed_sources": [],
+      "pass": true
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,57 @@
+{
+  "Commands": [
+    {
+      "CommandId": "9f1ee4f5-30b7-4148-9e31-f431456e4052",
+      "DocumentName": "AWS-RunShellScript",
+      "DocumentVersion": "$DEFAULT",
+      "Comment": "",
+      "ExpiresAfter": "2026-11-20T16:45:34.512000-08:00",
+      "Parameters": {
+        "commands": [
+          "set -e",
+          "cd /opt/qkp",
+          "test ! -e /opt/qkp/ops/ec2/parallel_worker.py",
+          "aws s3 cp s3://qkp-bench-882574060060-20261120-003030-d2292a/qkp-20261120-003030-d2292a/source/parallelism/c37b7fc4d1e92e9dd52cf596a1938f3c73acaf3edec14239b4a39abce2877566/parallel_worker.py /opt/qkp/ops/ec2/parallel_worker.py --only-show-errors",
+          "echo 'c37b7fc4d1e92e9dd52cf596a1938f3c73acaf3edec14239b4a39abce2877566  /opt/qkp/ops/ec2/parallel_worker.py' | sha256sum -c -",
+          "test ! -e /opt/qkp/tests/test_ec2_parallel.py",
+          "aws s3 cp s3://qkp-bench-882574060060-20261120-003030-d2292a/qkp-20261120-003030-d2292a/source/parallelism/c4343e14879d46052e2eb07718d5392c29bebe679f1aba71025dc7cb0c928370/test_ec2_parallel.py /opt/qkp/tests/test_ec2_parallel.py --only-show-errors",
+          "echo 'c4343e14879d46052e2eb07718d5392c29bebe679f1aba71025dc7cb0c928370  /opt/qkp/tests/test_ec2_parallel.py' | sha256sum -c -",
+          "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_ec2_parallel.py",
+          "systemd-run --unit=qkp-parallel-c37b7fc4 --description=\"QKP validated parallel scheduler\" --property=WorkingDirectory=/opt/qkp --setenv=OPENBLAS_NUM_THREADS=1 --setenv=OMP_NUM_THREADS=1 --setenv=MKL_NUM_THREADS=1 /opt/qkp/.venv/bin/python -u /opt/qkp/ops/ec2/parallel_worker.py run --root /opt/qkp/results/ec2_production/qkp-20261120-003030-d2292a --run-id qkp-20261120-003030-d2292a --bucket qkp-bench-882574060060-20261120-003030-d2292a --workers 4 --threads 2 --drain-pid 3358"
+        ]
+      },
+      "InstanceIds": [
+        "i-0be3c3be10368ba15"
+      ],
+      "Targets": [],
+      "RequestedDateTime": "2026-11-20T14:45:34.512000-08:00",
+      "Status": "Success",
+      "StatusDetails": "Success",
+      "OutputS3Region": "us-east-1",
+      "OutputS3BucketName": "",
+      "OutputS3KeyPrefix": "",
+      "MaxConcurrency": "50",
+      "MaxErrors": "0",
+      "TargetCount": 1,
+      "CompletedCount": 1,
+      "ErrorCount": 0,
+      "DeliveryTimedOutCount": 0,
+      "ServiceRole": "",
+      "NotificationConfig": {
+        "NotificationArn": "",
+        "NotificationEvents": [],
+        "NotificationType": ""
+      },
+      "CloudWatchOutputConfig": {
+        "CloudWatchLogGroupName": "",
+        "CloudWatchOutputEnabled": false
+      },
+      "TimeoutSeconds": 3600,
+      "AlarmConfiguration": {
+        "IgnorePollAlarmFailure": false,
+        "Alarms": []
+      },
+      "TriggeredAlarms": []
+    }
+  ]
+}

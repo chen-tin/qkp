@@ -1,0 +1,69 @@
+{
+  "captured_utc": "2026-11-24T09:37:56.894512+00:00",
+  "phase": "After clean session1timeout, before session2 scientific resume",
+  "raw_files": {
+    "jobs/0643eef0fa378878/nominal_N5120_smooth/bayes_gaussian_finite_ancilla.npz": {
+      "sha256": "a1c0357cf4eda2df64d8b42003c64ccb210f0eb1cf9f34e2c702986c5aa0c899",
+      "bytes": 56345168,
+      "seal_sha256": "ee17dcc6e32ddc388e1d743c8f2734d651b1e5dc4791f53e25a4c375ab33852c"
+    },
+    "jobs/0643eef0fa378878/nominal_N5120_smooth/bayes_gaussian_replayed_corrections.npz": {
+      "sha256": "4aa87be6df9718478b9e5187db6bb82ee4e1353659498bcb52f7447c7e71152f",
+      "bytes": 55985402,
+      "seal_sha256": "13de0d909b81423d7fa2ea087d5727a35199eb853caf6eb03aee12477998d1d8"
+    },
+    "jobs/0643eef0fa378878/nominal_N5120_smooth/lstm_256x3_s0_finite_ancilla.npz": {
+      "sha256": "2bb9b6556f1e8db28045c8a1f38acec35b5460f255e7722de407b6e7a3e34294",
+      "bytes": 56266754,
+      "seal_sha256": "634ed87355d70cb12dff5ee1b3059c65300252f57a851edfd84d5889447bd71f"
+    },
+    "jobs/0643eef0fa378878/nominal_N5120_smooth/lstm_256x3_s0_replayed_corrections.npz": {
+      "sha256": "7e30d917bcc81df770a95c575670619c79d3f24a318466b3882e964506e49412",
+      "bytes": 55273955,
+      "seal_sha256": "e28f126d4fe41a88c03c796e8f8105b5b53943179427472a020f36db6c667368"
+    },
+    "jobs/0643eef0fa378878/nominal_N5120_smooth/nearest_finite_ancilla.npz": {
+      "sha256": "563b21a12056a0c91f0d563277064ce4293c4d59875c2bd9bc454b0be2f80b0c",
+      "bytes": 56422126,
+      "seal_sha256": "aaea8bd10d38f109ce242980c6bcbdf43398e5386e1c6c2eec46780900a1717b"
+    },
+    "jobs/0643eef0fa378878/nominal_N5120_smooth/nearest_replayed_corrections.npz": {
+      "sha256": "5eb912d3c0784f40f13b63d37ac62d6405b379322368d3101e8ea0275da51f44",
+      "bytes": 55669045,
+      "seal_sha256": "22571ebffe7797beac47945935f9dcf8f30a1f63140ea94a57d97bcb076e9960"
+    },
+    "jobs/dcd0f4d8452e1fb5/nominal_N4096_smooth/bayes_gaussian_finite_ancilla.npz": {
+      "sha256": "8e40989747b789dd09daa0e33c0804f1ace2e53298edd256204119afca5b10f1",
+      "bytes": 46588968,
+      "seal_sha256": "5fba6bf879c080a25064f0c05465c6a11a9ddc67b8773b68263ba56a7ba3fe28"
+    },
+    "jobs/dcd0f4d8452e1fb5/nominal_N4096_smooth/bayes_gaussian_replayed_corrections.npz": {
+      "sha256": "3798ef5f73c502f4fcba496107294ed51cd42d20f96b7a065a0a1a866f20f00c",
+      "bytes": 46108176,
+      "seal_sha256": "3c6bf3379507ad22cbc1e8cbd58227b99f7337aa5366ef497d44a02c5c582ff5"
+    },
+    "jobs/dcd0f4d8452e1fb5/nominal_N4096_smooth/lstm_256x3_s0_finite_ancilla.npz": {
+      "sha256": "8bec4a5f2300d282b5396bfbdf1d3585be0a656c7c8b3280db9c156410b958d5",
+      "bytes": 46593826,
+      "seal_sha256": "aa4f0a7e6e4b62e4a4101cfc6beea6889f9e279f4ab474da0065e355c84439a1"
+    },
+    "jobs/dcd0f4d8452e1fb5/nominal_N4096_smooth/lstm_256x3_s0_replayed_corrections.npz": {
+      "sha256": "d8c60ea6beb7cfd63e4b45fb36381702242e8b5c4f4bc3565ed565b8a6d6d90b",
+      "bytes": 45673535,
+      "seal_sha256": "f87522e1d9a680ec2c8dc3771d8469876799a1ccb802d52cc0ac2ddee09f4a9e"
+    },
+    "jobs/dcd0f4d8452e1fb5/nominal_N4096_smooth/nearest_finite_ancilla.npz": {
+      "sha256": "812533f6424162b7b1a1b344b33b9b1b72e824006d39252e799dd1b2675f56dd",
+      "bytes": 46975431,
+      "seal_sha256": "7d496d08aa232a1002f3c679b8906f55bcfc23c045494357ab59cea613f6981f"
+    },
+    "jobs/dcd0f4d8452e1fb5/nominal_N4096_smooth/nearest_replayed_corrections.npz": {
+      "sha256": "59445ac89ea3e3976331024768e4af539feeb5e72b5d6e180373d0276dce35c6",
+      "bytes": 45974600,
+      "seal_sha256": "2cb695c9b77a9d2c25011ced47764ebc30adc817f96a4852870dc233e5e9a0b7"
+    }
+  },
+  "count": 12,
+  "all_seals_verified": true,
+  "note": "Raw observations remain immutable; pending5120logicalrefinement may be recomputed without changing these12files."
+}

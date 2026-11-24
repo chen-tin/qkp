@@ -1,0 +1,53 @@
+{
+  "registered_utc": "2026-11-24T08:13:47.156550+00:00",
+  "status": "Planned",
+  "classification": "local bounded deterministic implementation control; full-cutoff production validation remains unlaunched",
+  "question": "Does streamed independent instrument validation match the existing dense independent circuit calculation while preserving full Fock dimension?",
+  "hypothesis": "For identical input bytes, grids and circuit settings, streamed and dense scalar metrics agree within1e-10 absolute; neither implementation may promote a known failing numerical control to a pass.",
+  "decision_rule": {
+    "support": "All declared q/p controls agree within1e-10 and audit rederives numerical status; memory and cutoff guards reject before evolution.",
+    "contradict": "Any discrepancy above tolerance, truncated input, stale pass, or uncontrolled output-shape allocation occurs.",
+    "inconclusive": "Solver/infrastructure failure is retained separately; do not infer accuracy."
+  },
+  "settings": {
+    "data_cutoffs": [
+      6,
+      8
+    ],
+    "inputs": "fixed normalized complex coherent-like superposition, constructed in test source; one column each",
+    "sigma_absolute_q": 0.5,
+    "hbar": 1,
+    "L": "sqrt(pi)",
+    "ancilla_cutoffs": [
+      64,
+      96
+    ],
+    "axes": [
+      "q",
+      "p"
+    ],
+    "outcome_radius": 12.0,
+    "outcome_dy": 0.04,
+    "grid_chunk_values": [
+      7,
+      64
+    ],
+    "rounds": "single conditional extraction, no multicycle trajectory",
+    "seeds": "none, deterministic sesolve/quadrature",
+    "training_seeds": "none",
+    "normalization_tolerance": 1e-07,
+    "ancilla_boundary_mass_tolerance": 0.0001,
+    "outcome_mass_tolerance": 1e-05,
+    "outcome_tv_tolerance": 0.0001,
+    "conditional_infidelity_tolerance": 1e-05,
+    "grid_tv_change_tolerance": 0.0001,
+    "grid_infidelity_change_tolerance": 1e-06,
+    "refinement": "same TV/infidelity tolerances, unchanged from dense validator"
+  },
+  "evidence_directory": "results/simulator_accuracy_completion/20261124/measurement/",
+  "limitations": [
+    "No production-state/hardware/all-state claim.",
+    "Runtime preflight is a conservative memory model, not guaranteed RSS.",
+    "Local-only; no cloud/Solar writes."
+  ]
+}

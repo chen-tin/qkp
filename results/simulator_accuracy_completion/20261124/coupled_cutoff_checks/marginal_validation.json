@@ -1,0 +1,110 @@
+{
+  "recorded_utc": "2026-11-24T09:04:42.370863+00:00",
+  "classification": "Deterministic sampler-marginal and source-contract validation; no scientific trajectory benchmark",
+  "tests": {
+    "passed": 20,
+    "seconds": 9.51,
+    "log": "unit_tests.log",
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_coupled_measurement.py"
+  },
+  "cases": [
+    {
+      "resource_sigma_absolute_q": 0.5,
+      "quantiles_per_case": 10,
+      "synthetic_probability_seed": 42,
+      "coupling": 1.01,
+      "metric": "maximum absolute source-CDF quantile residual; lower is better",
+      "max_reference_resource_cdf_residual": 1e-12,
+      "inverse_diagnostics": {
+        "iterations": 23,
+        "max_approximate_cdf_residual": 1e-12,
+        "conditional_sum_roundoff_budget": 4.973799150320724e-14,
+        "table_cdf_error_bound": 5.000754964733726e-12,
+        "max_declared_exact_cdf_residual_bound": 6.050492956236933e-12,
+        "target_tolerance": 1e-10,
+        "normalization_error_before_cdf": 3.3306690738754696e-16
+      },
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212773e-16,
+          "monotone_slope_adjustment": 6.153312075438394e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "raw_file": "marginal_sigma_0.500000000.npz",
+      "raw_sha256": "7acfef3d3ac635a830a6463fa5dc3da1178fa428ca2b784f446ea037bbc87aff"
+    },
+    {
+      "resource_sigma_absolute_q": 0.0886226925452758,
+      "quantiles_per_case": 10,
+      "synthetic_probability_seed": 42,
+      "coupling": 1.01,
+      "metric": "maximum absolute source-CDF quantile residual; lower is better",
+      "max_reference_resource_cdf_residual": 9.347986683148796e-13,
+      "inverse_diagnostics": {
+        "iterations": 12,
+        "max_approximate_cdf_residual": 9.34798668314881e-13,
+        "conditional_sum_roundoff_budget": 4.973799150320724e-14,
+        "table_cdf_error_bound": 5.196522948062854e-12,
+        "max_declared_exact_cdf_residual_bound": 6.181059607880942e-12,
+        "target_tolerance": 1e-10,
+        "normalization_error_before_cdf": 3.3306690738754696e-16
+      },
+      "table": {
+        "step": 0.00024999958705584186,
+        "intervals": 586985,
+        "left": -73.37300380398666,
+        "right": 73.37300380398666,
+        "persistent_bytes": 9391776,
+        "error_terms": {
+          "hermite_remainder": 1.9598744397710267e-13,
+          "monotone_slope_adjustment": 3.550408575213559e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.196522948062854e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "raw_file": "marginal_sigma_0.088622693.npz",
+      "raw_sha256": "c90b16f944fd3ac97bbe1316ca29db6982c6623c7083821d6b3012a28f29e61f"
+    }
+  ],
+  "source_sha256": {
+    "quantum/coupled_measurement.py": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8",
+    "experiments/coupled_cutoff_check.py": "ea4d53067ec55c5e839b0cb17e9a84b231968080688245105b8da2c1eac6351f",
+    "tests/test_coupled_measurement.py": "a7554b017bdbd311f96e4dd47c86f9755710e90df4fb502923375ee3e3e5fcb6",
+    "quantum/reference_runner.py": "db2af175242a1ba8ad03db5f2939536aa559982d05ec4923180e167cf8fb8f1e",
+    "quantum/qutip_reference.py": "c01d7112d3a47f1e68970ed374b25811d4f28463dfbf56983b6bc38e24545de5",
+    "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+  },
+  "generator_sha256": "7bc84e870e3de864e3eb75b06525ac9b8afb1033f49e93fb42482bd93fe04ce5",
+  "environment": {
+    "python": "3.13.13 | packaged by conda-forge | (main, Apr  8 2026, 02:29:07) [Clang 19.1.7 ]",
+    "numpy": "2.5.5",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "device": "CPU"
+  },
+  "mathematics": {
+    "outcome_cdf": "G(y)=sum_i p_i F_resource(y-g*lambda_i), p_i=|a_i|^2/sum|a_i|^2",
+    "conditional_update": "Existing full Kraus amplitude phi(y-g*lambda_i) times every amplitude; normalization positive; no extra eigenstate projection.",
+    "gaussian_derivative_bound": "Supremum absolute fourth derivative <=(3sqrt(3)exp(-3/2)+3exp(-1/2))/sqrt(2pi)/sigma^4 <1.19/sigma^4 for the normalized common-width Gaussian mixture.",
+    "hermite_remainder": "M4*h^4/384 for exact endpoint CDF/derivatives.",
+    "slope_limiting_bound": "Endpoint derivatives capped in[0,3*adjacent_secant]; add (4h/27)*max_i(|delta_d_i|+|delta_d_(i+1)|) to account for limiter.",
+    "endpoint_projection_bound": "Add max|projected_monotone_CDF-original_CDF|; Hermite value basis is nonnegative and sums to1.",
+    "tail_bound": "Gaussian mixture means bounded; lo=minmu-zsigma,hi=maxmu+zsigma, z=-Phi^-1(tail/2), each omitted tail<=tail/2.",
+    "float_qualification": "5e-12 table allowance and8gamma_N+32epsilon conditional sum/normalization allowance are explicit conservative engineering budgets, not a formal special-function/BLAS roundoff certificate."
+  },
+  "scope": "Both source-resource widths, deterministic probability banks/quantiles, q/p, gain1/1.01, positive tails, context restore and nonconvergence rejection. No all-state channel bound or production cutoff-equivalence result follows. No MonteCarloCI for deterministic errors.",
+  "study": "main_128_static_planned/plan.json is Planned/unlaunched pending root approval and pilot; previous main_128_planned is preserved but superseded by static-resource restriction.",
+  "production_source_changes": "None: new modules/new tests only; legacy4-job workers unaffected."
+}

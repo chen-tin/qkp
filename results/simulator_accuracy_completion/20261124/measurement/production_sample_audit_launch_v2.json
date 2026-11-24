@@ -1,0 +1,14 @@
+{
+  "started_utc": "2026-11-24T08:39:33.976700+00:00",
+  "pid": 55679,
+  "command": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-u",
+    "-m",
+    "experiments.validate_reference_states",
+    "--output",
+    "results/simulator_accuracy_completion/20261124/measurement/full4096_cycle8_spectral_v1",
+    "--audit-only"
+  ],
+  "classification": "sealed-raw audit; no repeated solver evolution"
+}

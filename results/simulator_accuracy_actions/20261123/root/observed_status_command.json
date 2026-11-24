@@ -1,0 +1,14 @@
+{
+  "checked_utc": "2026-11-24T07:30:19.681548+00:00",
+  "instance_state": "stopped",
+  "effective_status": "interrupted_instance_stopped",
+  "archived_status": "running_production_sweeps",
+  "archived_updated": "2026-11-21T00:31:45.394957+00:00",
+  "heartbeat_age_seconds": 284314.286591,
+  "heartbeat_stale": true,
+  "stale_after_seconds": 180,
+  "scope": "Local EC2/heartbeat observation; archived metrics are unchanged. A recent heartbeat is not a direct process inspection.",
+  "instance_id": "i-0be3c3be10368ba15",
+  "state": "stopped",
+  "ssm_status": "not_registered"
+}

@@ -1,0 +1,26 @@
+{
+  "finished_utc": "2026-11-24T09:07:47.970291+00:00",
+  "elapsed_seconds": 1064.5037112080026,
+  "peak_sampled_rss_bytes": 3277897728,
+  "rss_sampling_seconds": 2,
+  "rss_limit_scope": "Sampled trigger, not kernel-enforced bound",
+  "stop_reason": null,
+  "attempts": [
+    {
+      "phase": "operator_union_base",
+      "exit_code": 0,
+      "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_v1",
+      "elapsed_total_seconds": 511.54537220801285,
+      "stop_reason": null
+    },
+    {
+      "phase": "operator_union_extended",
+      "exit_code": 0,
+      "output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_extended_v1",
+      "elapsed_total_seconds": 1064.5025929160038,
+      "stop_reason": null
+    }
+  ],
+  "last_output": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/measurement/uniform_operator_union_extended_v1",
+  "last_exit_code": 0
+}

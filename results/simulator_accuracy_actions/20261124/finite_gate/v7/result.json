@@ -1,0 +1,3569 @@
+{
+  "status": "running",
+  "plan_sha256": "04848dc690e8c3575e15a04e2c31f81aa98fa97bf0aceae876af04699910284e",
+  "rows": [
+    {
+      "key": "vacuum_q_ideal",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "ideal",
+      "metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 1.0000000000000004,
+        "candidate_integrated_mass": 1.0000000000000004
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 1.0,
+        "candidate_integrated_mass": 1.0
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 6.1569203380624366e-27,
+          "ancilla_boundary_mass": 2.651285427937736e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 3.59312937840936e-16,
+          "ancilla_boundary_mass": 6.802487123200945e-38
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 1.262335452099779e-10,
+          "ancilla_boundary_mass": 5.261039952520358e-33
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.9726645085268788e-07,
+          "ancilla_boundary_mass": 5.211507801488949e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 6.1569203380624366e-27,
+          "ancilla_boundary_mass": 2.651285427937736e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 3.59312937840936e-16,
+          "ancilla_boundary_mass": 6.802487123200945e-38
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 1.262335452099779e-10,
+          "ancilla_boundary_mass": 5.261039952520358e-33
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.9726645085268788e-07,
+          "ancilla_boundary_mass": 5.211507801488949e-28
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "37d799ed26b4ecc3a6d09dde43b54e69521027f9bcceaa7d5f3e3e55ad613d76",
+      "raw_path": "raw/vacuum_q_ideal_Nd24_Na96.npz"
+    },
+    {
+      "key": "vacuum_q_loss",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "loss",
+      "metric": {
+        "instrument_trace_distance": 4.112638824559106e-05,
+        "outcome_tv_unnormalized": 1.4031300982253753e-05,
+        "reference_integrated_mass": 1.0000000000000018,
+        "candidate_integrated_mass": 0.9999999999999999
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 4.112638824559977e-05,
+        "outcome_tv_unnormalized": 1.4029113231659967e-05,
+        "reference_integrated_mass": 1.0000000000000018,
+        "candidate_integrated_mass": 0.9999999999999997
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 6.041253806364969e-27,
+          "ancilla_boundary_mass": 2.6509475373645326e-41
+        },
+        {
+          "norm_error": 1.3322676295501878e-15,
+          "data_boundary_mass": 3.5780223462755624e-16,
+          "ancilla_boundary_mass": 6.794980891835909e-38
+        },
+        {
+          "norm_error": 1.9984014443252818e-15,
+          "data_boundary_mass": 1.255605019104128e-10,
+          "ancilla_boundary_mass": 5.24544785672072e-33
+        },
+        {
+          "norm_error": 1.9984014443252818e-15,
+          "data_boundary_mass": 1.9618165755264808e-07,
+          "ancilla_boundary_mass": 5.4255148459781625e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 6.0554609410881474e-27,
+          "ancilla_boundary_mass": 2.651285388734009e-41
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 3.5931277514325246e-16,
+          "ancilla_boundary_mass": 6.802492988103062e-38
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.2623354519963287e-10,
+          "ancilla_boundary_mass": 5.257779007605096e-33
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.972664508526654e-07,
+          "ancilla_boundary_mass": 5.448926000785643e-28
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.972664508526654e-07,
+          "ancilla_boundary_mass": 5.448926000785643e-28
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.9620750912693527e-07,
+          "ancilla_boundary_mass": 5.448926000785643e-28
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "7807f39019dde04bb2c350a2c5e5a11897a5e0c9bae738f03214a8ea0f105016",
+      "raw_path": "raw/vacuum_q_loss_Nd24_Na96.npz"
+    },
+    {
+      "key": "vacuum_q_dephasing",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "dephasing",
+      "metric": {
+        "instrument_trace_distance": 3.6928248744983266e-05,
+        "outcome_tv_unnormalized": 1.1875911481279875e-06,
+        "reference_integrated_mass": 1.0000000000000009,
+        "candidate_integrated_mass": 1.0
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 3.692824874498323e-05,
+        "outcome_tv_unnormalized": 1.188172459060766e-06,
+        "reference_integrated_mass": 1.0000000000000004,
+        "candidate_integrated_mass": 0.9999999999999998
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 6.0549456472168116e-27,
+          "ancilla_boundary_mass": 2.6512580213967793e-41
+        },
+        {
+          "norm_error": 1.1102230246251565e-15,
+          "data_boundary_mass": 3.592623852711486e-16,
+          "ancilla_boundary_mass": 6.80247979316992e-38
+        },
+        {
+          "norm_error": 1.1102230246251565e-15,
+          "data_boundary_mass": 1.2621125887787796e-10,
+          "ancilla_boundary_mass": 5.257871692049503e-33
+        },
+        {
+          "norm_error": 1.5543122344752192e-15,
+          "data_boundary_mass": 1.9723243556151822e-07,
+          "ancilla_boundary_mass": 5.4462983235784885e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 6.0554609410881496e-27,
+          "ancilla_boundary_mass": 2.6512853887340087e-41
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.5931277514325246e-16,
+          "ancilla_boundary_mass": 6.802492988103047e-38
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.2623354519963287e-10,
+          "ancilla_boundary_mass": 5.257779007605059e-33
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.972664508526654e-07,
+          "ancilla_boundary_mass": 5.448926000785563e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.972664508526654e-07,
+          "ancilla_boundary_mass": 5.448926000785563e-28
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 1.972664508526654e-07,
+          "ancilla_boundary_mass": 5.448926000785562e-28
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "82f80a7454fabbd450fc4b50c85aa34c824d8bd903aebc015ae2952097575ab0",
+      "raw_path": "raw/vacuum_q_dephasing_Nd24_Na96.npz"
+    },
+    {
+      "key": "vacuum_q_combined",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "combined",
+      "metric": {
+        "instrument_trace_distance": 7.1013283714311e-05,
+        "outcome_tv_unnormalized": 1.5194205536852267e-05,
+        "reference_integrated_mass": 1.0000000000000013,
+        "candidate_integrated_mass": 1.0
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 7.101328371429604e-05,
+        "outcome_tv_unnormalized": 1.519761050839529e-05,
+        "reference_integrated_mass": 1.0,
+        "candidate_integrated_mass": 0.9999999999999996
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 6.040739708313372e-27,
+          "ancilla_boundary_mass": 2.6509201752163216e-41
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 3.5775205499775734e-16,
+          "ancilla_boundary_mass": 6.794967889581843e-38
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 1.2553833089381647e-10,
+          "ancilla_boundary_mass": 5.24553999835588e-33
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 1.961478070088956e-07,
+          "ancilla_boundary_mass": 5.4228916155289345e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318603e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318603e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 6.0554609410881474e-27,
+          "ancilla_boundary_mass": 2.6512853887340087e-41
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 3.5931277514325246e-16,
+          "ancilla_boundary_mass": 6.802492988103061e-38
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.2623354519963287e-10,
+          "ancilla_boundary_mass": 5.2577790076050456e-33
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 1.9726645085266543e-07,
+          "ancilla_boundary_mass": 5.448926000786178e-28
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 1.9726645085266543e-07,
+          "ancilla_boundary_mass": 5.448926000786178e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.9620750912693527e-07,
+          "ancilla_boundary_mass": 5.448926000786178e-28
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "88417d6a01358817b1b56cceab8f6eb3163747e90a1fbaec7ba733281b4653a4",
+      "raw_path": "raw/vacuum_q_combined_Nd24_Na96.npz"
+    },
+    {
+      "key": "vacuum_p_ideal",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "ideal",
+      "metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 1.0000000000000004,
+        "candidate_integrated_mass": 1.0000000000000004
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 1.0,
+        "candidate_integrated_mass": 1.0
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 6.1569203380624366e-27,
+          "ancilla_boundary_mass": 2.651285427937736e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 3.59312937840936e-16,
+          "ancilla_boundary_mass": 6.802487123200945e-38
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 1.262335452099779e-10,
+          "ancilla_boundary_mass": 5.261039952520358e-33
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.9726645085268788e-07,
+          "ancilla_boundary_mass": 5.211507801488949e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 6.1569203380624366e-27,
+          "ancilla_boundary_mass": 2.651285427937736e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 3.59312937840936e-16,
+          "ancilla_boundary_mass": 6.802487123200945e-38
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 1.262335452099779e-10,
+          "ancilla_boundary_mass": 5.261039952520358e-33
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.9726645085268788e-07,
+          "ancilla_boundary_mass": 5.211507801488949e-28
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "d5328a2048bbd4d4258093304079695a988a612ff72bf3e590a824a654093b3e",
+      "raw_path": "raw/vacuum_p_ideal_Nd24_Na96.npz"
+    },
+    {
+      "key": "vacuum_p_loss",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "loss",
+      "metric": {
+        "instrument_trace_distance": 4.112638824559108e-05,
+        "outcome_tv_unnormalized": 1.4031300982253753e-05,
+        "reference_integrated_mass": 1.0000000000000018,
+        "candidate_integrated_mass": 0.9999999999999999
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 4.11263882455998e-05,
+        "outcome_tv_unnormalized": 1.4029113231659967e-05,
+        "reference_integrated_mass": 1.0000000000000018,
+        "candidate_integrated_mass": 0.9999999999999997
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 6.041253806364969e-27,
+          "ancilla_boundary_mass": 2.6509475373645326e-41
+        },
+        {
+          "norm_error": 1.3322676295501878e-15,
+          "data_boundary_mass": 3.5780223462755624e-16,
+          "ancilla_boundary_mass": 6.794980891835909e-38
+        },
+        {
+          "norm_error": 1.9984014443252818e-15,
+          "data_boundary_mass": 1.255605019104128e-10,
+          "ancilla_boundary_mass": 5.24544785672072e-33
+        },
+        {
+          "norm_error": 1.9984014443252818e-15,
+          "data_boundary_mass": 1.9618165755264808e-07,
+          "ancilla_boundary_mass": 5.4255148459781625e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 6.0554609410881474e-27,
+          "ancilla_boundary_mass": 2.651285388734009e-41
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 3.5931277514325246e-16,
+          "ancilla_boundary_mass": 6.802492988103062e-38
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.2623354519963287e-10,
+          "ancilla_boundary_mass": 5.257779007605096e-33
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.972664508526654e-07,
+          "ancilla_boundary_mass": 5.448926000785643e-28
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.972664508526654e-07,
+          "ancilla_boundary_mass": 5.448926000785643e-28
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.9620750912693527e-07,
+          "ancilla_boundary_mass": 5.448926000785643e-28
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "dc99cf284ae80c349f12e03506a7b1f5e617a7714860a02dad186c428ba0d809",
+      "raw_path": "raw/vacuum_p_loss_Nd24_Na96.npz"
+    },
+    {
+      "key": "vacuum_p_dephasing",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "dephasing",
+      "metric": {
+        "instrument_trace_distance": 3.6928248744983286e-05,
+        "outcome_tv_unnormalized": 1.1875911481279875e-06,
+        "reference_integrated_mass": 1.0000000000000009,
+        "candidate_integrated_mass": 1.0
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 3.692824874498321e-05,
+        "outcome_tv_unnormalized": 1.188172459060766e-06,
+        "reference_integrated_mass": 1.0000000000000004,
+        "candidate_integrated_mass": 0.9999999999999998
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 6.0549456472168116e-27,
+          "ancilla_boundary_mass": 2.6512580213967793e-41
+        },
+        {
+          "norm_error": 1.1102230246251565e-15,
+          "data_boundary_mass": 3.592623852711486e-16,
+          "ancilla_boundary_mass": 6.80247979316992e-38
+        },
+        {
+          "norm_error": 1.1102230246251565e-15,
+          "data_boundary_mass": 1.2621125887787796e-10,
+          "ancilla_boundary_mass": 5.257871692049503e-33
+        },
+        {
+          "norm_error": 1.5543122344752192e-15,
+          "data_boundary_mass": 1.9723243556151822e-07,
+          "ancilla_boundary_mass": 5.4462983235784885e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 6.0554609410881496e-27,
+          "ancilla_boundary_mass": 2.6512853887340087e-41
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.5931277514325246e-16,
+          "ancilla_boundary_mass": 6.802492988103047e-38
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.2623354519963287e-10,
+          "ancilla_boundary_mass": 5.257779007605059e-33
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.972664508526654e-07,
+          "ancilla_boundary_mass": 5.448926000785563e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.972664508526654e-07,
+          "ancilla_boundary_mass": 5.448926000785563e-28
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 1.972664508526654e-07,
+          "ancilla_boundary_mass": 5.448926000785562e-28
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "6d09e7dee337827835064d78fa7c71f9c1d7ff0b4765253904260e6179f19421",
+      "raw_path": "raw/vacuum_p_dephasing_Nd24_Na96.npz"
+    },
+    {
+      "key": "vacuum_p_combined",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "combined",
+      "metric": {
+        "instrument_trace_distance": 7.101328371431106e-05,
+        "outcome_tv_unnormalized": 1.5194205536852202e-05,
+        "reference_integrated_mass": 1.0000000000000013,
+        "candidate_integrated_mass": 1.0
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 7.101328371429611e-05,
+        "outcome_tv_unnormalized": 1.5197610508395022e-05,
+        "reference_integrated_mass": 1.0,
+        "candidate_integrated_mass": 0.9999999999999996
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 6.040739708313372e-27,
+          "ancilla_boundary_mass": 2.6509201752163216e-41
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 3.5775205499775734e-16,
+          "ancilla_boundary_mass": 6.794967889581843e-38
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 1.2553833089381647e-10,
+          "ancilla_boundary_mass": 5.24553999835588e-33
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 1.961478070088956e-07,
+          "ancilla_boundary_mass": 5.4228916155289345e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318603e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318603e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 6.0554609410881474e-27,
+          "ancilla_boundary_mass": 2.6512853887340087e-41
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 3.5931277514325246e-16,
+          "ancilla_boundary_mass": 6.802492988103061e-38
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.2623354519963287e-10,
+          "ancilla_boundary_mass": 5.2577790076050456e-33
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 1.9726645085266543e-07,
+          "ancilla_boundary_mass": 5.448926000786178e-28
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 1.9726645085266543e-07,
+          "ancilla_boundary_mass": 5.448926000786178e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.9620750912693527e-07,
+          "ancilla_boundary_mass": 5.448926000786178e-28
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "b167b24c31d507968059dff8b3f1a252a9232067004dfc6e87bb4e296cc0d4bd",
+      "raw_path": "raw/vacuum_p_combined_Nd24_Na96.npz"
+    },
+    {
+      "key": "coherent_q_ideal",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "ideal",
+      "metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 0.9999999999999981,
+        "candidate_integrated_mass": 0.9999999999999981
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 0.9999999999999979,
+        "candidate_integrated_mass": 0.9999999999999979
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915101e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.223138115354457e-24,
+          "ancilla_boundary_mass": 4.982816896226567e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 4.2063834411713075e-15,
+          "ancilla_boundary_mass": 4.466704980175192e-37
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 4.1114444799500483e-10,
+          "ancilla_boundary_mass": 5.746835758980684e-32
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.4137902268943236e-07,
+          "ancilla_boundary_mass": 6.78310944225856e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915101e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.223138115354457e-24,
+          "ancilla_boundary_mass": 4.982816896226567e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 4.2063834411713075e-15,
+          "ancilla_boundary_mass": 4.466704980175192e-37
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 4.1114444799500483e-10,
+          "ancilla_boundary_mass": 5.746835758980684e-32
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.4137902268943236e-07,
+          "ancilla_boundary_mass": 6.78310944225856e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "cac8d03fa20f78b74c32835b38c78c6fefe22dfe88932e4a3c6edda133d27a85",
+      "raw_path": "raw/coherent_q_ideal_Nd24_Na96.npz"
+    },
+    {
+      "key": "coherent_q_loss",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "loss",
+      "metric": {
+        "instrument_trace_distance": 4.1126913418788515e-05,
+        "outcome_tv_unnormalized": 1.4030824427377889e-05,
+        "reference_integrated_mass": 1.0,
+        "candidate_integrated_mass": 0.999999999999999
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 4.1126913418789464e-05,
+        "outcome_tv_unnormalized": 1.4032996376333572e-05,
+        "reference_integrated_mass": 0.9999999999999991,
+        "candidate_integrated_mass": 0.9999999999999986
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915103e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.213481245916264e-24,
+          "ancilla_boundary_mass": 4.981811705337311e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 4.18707887183689e-15,
+          "ancilla_boundary_mass": 4.460781853843827e-37
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 4.088776157653694e-10,
+          "ancilla_boundary_mass": 5.717578064561658e-32
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 3.3948839335292874e-07,
+          "ancilla_boundary_mass": 6.984757171331282e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915103e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 1.454703864489149e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 1.454703864489149e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 2.215560704665316e-24,
+          "ancilla_boundary_mass": 4.981488930785909e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 4.20287382562304e-15,
+          "ancilla_boundary_mass": 4.4641696728266e-37
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 4.1095862898773074e-10,
+          "ancilla_boundary_mass": 5.730124165524631e-32
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 3.4129838330791456e-07,
+          "ancilla_boundary_mass": 7.005385717590097e-27
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 3.4129838330791456e-07,
+          "ancilla_boundary_mass": 7.005385717590097e-27
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 3.3953106331531364e-07,
+          "ancilla_boundary_mass": 7.005385717590097e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "9b2c53fd11525a8ec833851cb338549f185ac6ce5fa9d849e28142a42aa15d1e",
+      "raw_path": "raw/coherent_q_loss_Nd24_Na96.npz"
+    },
+    {
+      "key": "coherent_q_dephasing",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "dephasing",
+      "metric": {
+        "instrument_trace_distance": 3.818253565642864e-05,
+        "outcome_tv_unnormalized": 1.3115955306401972e-06,
+        "reference_integrated_mass": 0.9999999999999989,
+        "candidate_integrated_mass": 0.9999999999999987
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 3.8182535656434696e-05,
+        "outcome_tv_unnormalized": 1.3115169363971838e-06,
+        "reference_integrated_mass": 0.9999999999999988,
+        "candidate_integrated_mass": 0.9999999999999982
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915103e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.2201083951273952e-24,
+          "ancilla_boundary_mass": 4.982741984382876e-41
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 4.206342272449954e-15,
+          "ancilla_boundary_mass": 4.466763643245203e-37
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 4.111024332855987e-10,
+          "ancilla_boundary_mass": 5.734290836270491e-32
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 3.413334147727166e-07,
+          "ancilla_boundary_mass": 7.011818397680615e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915103e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915101e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915101e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.2225678554728697e-24,
+          "ancilla_boundary_mass": 4.982756452276785e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 4.207844256695525e-15,
+          "ancilla_boundary_mass": 4.466961396234455e-37
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 4.1119285111449237e-10,
+          "ancilla_boundary_mass": 5.734577189656095e-32
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 3.4139335861249574e-07,
+          "ancilla_boundary_mass": 7.011191981318803e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 3.4139335861249574e-07,
+          "ancilla_boundary_mass": 7.011191981318803e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 3.4139335861249574e-07,
+          "ancilla_boundary_mass": 7.0111919813188e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "1681b32b49fa40758e757f200353b5cce1df2303932ba1d142ad538869cddae1",
+      "raw_path": "raw/coherent_q_dephasing_Nd24_Na96.npz"
+    },
+    {
+      "key": "coherent_q_combined",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "combined",
+      "metric": {
+        "instrument_trace_distance": 7.176002551584491e-05,
+        "outcome_tv_unnormalized": 1.531993633775589e-05,
+        "reference_integrated_mass": 0.9999999999999984,
+        "candidate_integrated_mass": 0.999999999999999
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 7.176002551585678e-05,
+        "outcome_tv_unnormalized": 1.5316534201584244e-05,
+        "reference_integrated_mass": 0.999999999999998,
+        "candidate_integrated_mass": 0.9999999999999977
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915103e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 2.2138014376193776e-24,
+          "ancilla_boundary_mass": 4.981737134821114e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 4.187037891396433e-15,
+          "ancilla_boundary_mass": 4.460561689766372e-37
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 4.088358209608749e-10,
+          "ancilla_boundary_mass": 5.717342778613058e-32
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.3944300608217535e-07,
+          "ancilla_boundary_mass": 6.98542310507381e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915103e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4547038644891489e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4547038644891489e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 2.218335026399428e-24,
+          "ancilla_boundary_mass": 4.981428835367099e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 4.204332858111592e-15,
+          "ancilla_boundary_mass": 4.464146862731211e-37
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 4.110069881783459e-10,
+          "ancilla_boundary_mass": 5.730173426722465e-32
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.4131270947545474e-07,
+          "ancilla_boundary_mass": 7.005485770049455e-27
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.4131270947545474e-07,
+          "ancilla_boundary_mass": 7.005485770049455e-27
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.395453263054298e-07,
+          "ancilla_boundary_mass": 7.005485770049455e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "2ea5450c9ff061ed6eb718a6ccdf5e3af500864a8281b0b3c00db6a37843ec39",
+      "raw_path": "raw/coherent_q_combined_Nd24_Na96.npz"
+    },
+    {
+      "key": "coherent_p_ideal",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "ideal",
+      "metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 0.9999999999999986,
+        "candidate_integrated_mass": 0.9999999999999986
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 0.9999999999999981,
+        "candidate_integrated_mass": 0.9999999999999981
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915101e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.753330971888227e-23,
+          "ancilla_boundary_mass": 3.418882440781275e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.0533492581266533e-14,
+          "ancilla_boundary_mass": 1.665992780870249e-37
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 1.0690525814585567e-09,
+          "ancilla_boundary_mass": 1.7078034414963916e-32
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 5.847270677286454e-07,
+          "ancilla_boundary_mass": 1.8831557837215467e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915101e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.753330971888227e-23,
+          "ancilla_boundary_mass": 3.418882440781275e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.0533492581266533e-14,
+          "ancilla_boundary_mass": 1.665992780870249e-37
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 1.0690525814585567e-09,
+          "ancilla_boundary_mass": 1.7078034414963916e-32
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 5.847270677286454e-07,
+          "ancilla_boundary_mass": 1.8831557837215467e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "905413bd90da0540fbd48a608a22d15e50a48eca827e5405497b326634a95225",
+      "raw_path": "raw/coherent_p_ideal_Nd24_Na96.npz"
+    },
+    {
+      "key": "coherent_p_loss",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "loss",
+      "metric": {
+        "instrument_trace_distance": 4.112777251365128e-05,
+        "outcome_tv_unnormalized": 1.4029421369970162e-05,
+        "reference_integrated_mass": 1.0000000000000007,
+        "candidate_integrated_mass": 0.9999999999999986
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 4.1127772513653186e-05,
+        "outcome_tv_unnormalized": 1.4029341003862974e-05,
+        "reference_integrated_mass": 1.0000000000000004,
+        "candidate_integrated_mass": 0.9999999999999979
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915103e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.739499383651441e-23,
+          "ancilla_boundary_mass": 3.4183349440731026e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 2.0437015129253235e-14,
+          "ancilla_boundary_mass": 1.663874470917113e-37
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 1.0631086102721795e-09,
+          "ancilla_boundary_mass": 1.701200290837835e-32
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 5.815151618943811e-07,
+          "ancilla_boundary_mass": 2.0194223588379307e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915103e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 1.454703864489149e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 1.454703864489149e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.741751164466982e-23,
+          "ancilla_boundary_mass": 3.4184792638159226e-41
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 2.0509950775500203e-14,
+          "ancilla_boundary_mass": 1.6654102291262028e-37
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 1.0683336795169623e-09,
+          "ancilla_boundary_mass": 1.7050384033717908e-32
+        },
+        {
+          "norm_error": 5.551115123125783e-16,
+          "data_boundary_mass": 5.844961082533324e-07,
+          "ancilla_boundary_mass": 2.0287501388747862e-27
+        },
+        {
+          "norm_error": 5.551115123125783e-16,
+          "data_boundary_mass": 5.844961082533324e-07,
+          "ancilla_boundary_mass": 2.0287501388747862e-27
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 5.816092307794493e-07,
+          "ancilla_boundary_mass": 2.0287501388747862e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "0afc44426bcef36afb55536a4e9b7fa56ec006f01206baa93cee3a325d67a198",
+      "raw_path": "raw/coherent_p_loss_Nd24_Na96.npz"
+    },
+    {
+      "key": "coherent_p_dephasing",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "dephasing",
+      "metric": {
+        "instrument_trace_distance": 3.9600501642308287e-05,
+        "outcome_tv_unnormalized": 1.5326296022523624e-06,
+        "reference_integrated_mass": 1.0000000000000002,
+        "candidate_integrated_mass": 0.9999999999999983
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 3.9600501642310014e-05,
+        "outcome_tv_unnormalized": 1.532621781314812e-06,
+        "reference_integrated_mass": 0.9999999999999989,
+        "candidate_integrated_mass": 0.9999999999999979
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915103e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.7504220414878715e-23,
+          "ancilla_boundary_mass": 3.41885843502045e-41
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 2.0531239488964804e-14,
+          "ancilla_boundary_mass": 1.6660175665130522e-37
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 1.0688852947627775e-09,
+          "ancilla_boundary_mass": 1.7059483092584852e-32
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 5.846365913672589e-07,
+          "ancilla_boundary_mass": 2.0284528883631373e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915103e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915101e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915101e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.7512921227717454e-23,
+          "ancilla_boundary_mass": 3.4189759628597307e-41
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 2.053404104137648e-14,
+          "ancilla_boundary_mass": 1.666212003643639e-37
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.0690390758572929e-09,
+          "ancilla_boundary_mass": 1.7061216818123595e-32
+        },
+        {
+          "norm_error": 7.771561172376096e-16,
+          "data_boundary_mass": 5.847170771721486e-07,
+          "ancilla_boundary_mass": 2.0301840445065594e-27
+        },
+        {
+          "norm_error": 7.771561172376096e-16,
+          "data_boundary_mass": 5.847170771721486e-07,
+          "ancilla_boundary_mass": 2.0301840445065594e-27
+        },
+        {
+          "norm_error": 7.771561172376096e-16,
+          "data_boundary_mass": 5.847170771721486e-07,
+          "ancilla_boundary_mass": 2.0301840445065594e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "7823df2df4cd45987d776b22fd81890cbdafa2cf71c88189a9dccd748e91cb22",
+      "raw_path": "raw/coherent_p_dephasing_Nd24_Na96.npz"
+    },
+    {
+      "key": "coherent_p_combined",
+      "data_cutoff": 24,
+      "ancilla_cutoff": 96,
+      "variant": "combined",
+      "metric": {
+        "instrument_trace_distance": 7.283204238566247e-05,
+        "outcome_tv_unnormalized": 1.554400701211968e-05,
+        "reference_integrated_mass": 1.0000000000000002,
+        "candidate_integrated_mass": 0.9999999999999979
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 7.283204238565062e-05,
+        "outcome_tv_unnormalized": 1.5544090427243437e-05,
+        "reference_integrated_mass": 1.0000000000000009,
+        "candidate_integrated_mass": 0.9999999999999973
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915103e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 3.739405592770525e-23,
+          "ancilla_boundary_mass": 3.4183110891356054e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 2.043477225145927e-14,
+          "ancilla_boundary_mass": 1.663895591826851e-37
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 1.0629422142751223e-09,
+          "ancilla_boundary_mass": 1.7013584618723417e-32
+        },
+        {
+          "norm_error": 1.3322676295501878e-15,
+          "data_boundary_mass": 5.814251007062165e-07,
+          "ancilla_boundary_mass": 2.01815344689711e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4692644357915103e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4547038644891489e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.4547038644891489e-40,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.742525086892907e-23,
+          "ancilla_boundary_mass": 3.4185728712908597e-41
+        },
+        {
+          "norm_error": 5.551115123125783e-16,
+          "data_boundary_mass": 2.0510497907527706e-14,
+          "ancilla_boundary_mass": 1.6656256037624687e-37
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 1.0683201771870884e-09,
+          "ancilla_boundary_mass": 1.705370318890881e-32
+        },
+        {
+          "norm_error": 1.1102230246251565e-15,
+          "data_boundary_mass": 5.844861229678154e-07,
+          "ancilla_boundary_mass": 2.029210971507337e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-15,
+          "data_boundary_mass": 5.844861229678154e-07,
+          "ancilla_boundary_mass": 2.029210971507337e-27
+        },
+        {
+          "norm_error": 1.2212453270876722e-15,
+          "data_boundary_mass": 5.815992950855688e-07,
+          "ancilla_boundary_mass": 2.029210971507337e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "44fddab6a05f5721a8b35122639b5c3e5d5a9747b2825526b1a03fd2eec2a9a3",
+      "raw_path": "raw/coherent_p_combined_Nd24_Na96.npz"
+    },
+    {
+      "key": "vacuum_q_ideal",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "ideal",
+      "metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 0.9999999999999992,
+        "candidate_integrated_mass": 0.9999999999999992
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 0.9999999999999999,
+        "candidate_integrated_mass": 0.9999999999999999
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 3.0023758311666965e-36,
+          "ancilla_boundary_mass": 2.651285427837767e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.0879213700367045e-21,
+          "ancilla_boundary_mass": 6.802165428613937e-38
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 6.190750731052243e-15,
+          "ancilla_boundary_mass": 5.2478767718797904e-33
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.9573822515474108e-10,
+          "ancilla_boundary_mass": 5.078053438557347e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 3.0023758311666965e-36,
+          "ancilla_boundary_mass": 2.651285427837767e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.0879213700367045e-21,
+          "ancilla_boundary_mass": 6.802165428613937e-38
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 6.190750731052243e-15,
+          "ancilla_boundary_mass": 5.2478767718797904e-33
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.9573822515474108e-10,
+          "ancilla_boundary_mass": 5.078053438557347e-28
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "43bfa06ecdd4d6072474e2482bad1245ffd17407ffa16f8d1171e31541195b0c",
+      "raw_path": "raw/vacuum_q_ideal_Nd32_Na96.npz"
+    },
+    {
+      "key": "vacuum_q_loss",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "loss",
+      "metric": {
+        "instrument_trace_distance": 4.112617102403771e-05,
+        "outcome_tv_unnormalized": 1.403131048948343e-05,
+        "reference_integrated_mass": 0.9999999999999991,
+        "candidate_integrated_mass": 0.999999999999999
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 4.112617102404331e-05,
+        "outcome_tv_unnormalized": 1.4029126879732143e-05,
+        "reference_integrated_mass": 0.9999999999999993,
+        "candidate_integrated_mass": 0.9999999999999999
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 2.3214210946107536e-36,
+          "ancilla_boundary_mass": 2.6509476566381214e-41
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 1.0821371225922455e-21,
+          "ancilla_boundary_mass": 6.79465719909065e-38
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 6.148813954248758e-15,
+          "ancilla_boundary_mass": 5.2436247280666565e-33
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 1.9411391824685643e-10,
+          "ancilla_boundary_mass": -7.380983943227011e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.329142853102121e-36,
+          "ancilla_boundary_mass": 2.6512855083330894e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.08790648257684e-21,
+          "ancilla_boundary_mass": 6.802165000819321e-38
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 6.190750582140863e-15,
+          "ancilla_boundary_mass": 5.2555908974089686e-33
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.9573822515164502e-10,
+          "ancilla_boundary_mass": -6.954743565090442e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.9573822515164502e-10,
+          "ancilla_boundary_mass": -6.954743565090442e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.9414555958975028e-10,
+          "ancilla_boundary_mass": -6.954743565090444e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "fa094a7dde5c2c12e3592c5e7a0060b0f5d346cbd541bbf21903647ca8cf1085",
+      "raw_path": "raw/vacuum_q_loss_Nd32_Na96.npz"
+    },
+    {
+      "key": "vacuum_q_dephasing",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "dephasing",
+      "metric": {
+        "instrument_trace_distance": 3.69303456969908e-05,
+        "outcome_tv_unnormalized": 1.1875930100820825e-06,
+        "reference_integrated_mass": 0.9999999999999994,
+        "candidate_integrated_mass": 0.999999999999999
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 3.6930345696995024e-05,
+        "outcome_tv_unnormalized": 1.1881746867402272e-06,
+        "reference_integrated_mass": 1.0000000000000004,
+        "candidate_integrated_mass": 0.9999999999999998
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 2.32867028385522e-36,
+          "ancilla_boundary_mass": 2.65125814091382e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.0877144019054724e-21,
+          "ancilla_boundary_mass": 6.802152269621989e-38
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 6.189389017489611e-15,
+          "ancilla_boundary_mass": 5.255911179277511e-33
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.9568587901965865e-10,
+          "ancilla_boundary_mass": -7.279672058829433e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.329142853102121e-36,
+          "ancilla_boundary_mass": 2.65128550833309e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.0879064825768402e-21,
+          "ancilla_boundary_mass": 6.802165000819311e-38
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 6.1907505821408665e-15,
+          "ancilla_boundary_mass": 5.255590897404703e-33
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.95738225151645e-10,
+          "ancilla_boundary_mass": -6.954743561412901e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.95738225151645e-10,
+          "ancilla_boundary_mass": -6.954743561412901e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.95738225151645e-10,
+          "ancilla_boundary_mass": -6.954743561412899e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "700e97015bacbe79382de712d6d6501b2a5e96592a8eef5d4795d4fbbcd8fa23",
+      "raw_path": "raw/vacuum_q_dephasing_Nd32_Na96.npz"
+    },
+    {
+      "key": "vacuum_q_combined",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "combined",
+      "metric": {
+        "instrument_trace_distance": 7.101452246491562e-05,
+        "outcome_tv_unnormalized": 1.5194216953649465e-05,
+        "reference_integrated_mass": 1.0000000000000004,
+        "candidate_integrated_mass": 0.9999999999999989
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 7.101452246492889e-05,
+        "outcome_tv_unnormalized": 1.5197626509519294e-05,
+        "reference_integrated_mass": 0.9999999999999993,
+        "candidate_integrated_mass": 0.9999999999999997
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.3209500591292146e-36,
+          "ancilla_boundary_mass": 2.6509202944073576e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.0819460454562e-21,
+          "ancilla_boundary_mass": 6.794644654557842e-38
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 6.147461555378503e-15,
+          "ancilla_boundary_mass": 5.243937834382307e-33
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.940619842869612e-10,
+          "ancilla_boundary_mass": -7.694619809712986e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.329142853102121e-36,
+          "ancilla_boundary_mass": 2.65128550833309e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.0879064825768405e-21,
+          "ancilla_boundary_mass": 6.802165000819302e-38
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 6.1907505821408665e-15,
+          "ancilla_boundary_mass": 5.2555908974106614e-33
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.957382251516451e-10,
+          "ancilla_boundary_mass": -6.954743566577698e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.957382251516451e-10,
+          "ancilla_boundary_mass": -6.954743566577698e-27
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 1.941455595897503e-10,
+          "ancilla_boundary_mass": -6.954743566577702e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "a83524f0800933fbaff1dc48a562b682f0a8e6fdfc7d91a3814fcbc0d9023575",
+      "raw_path": "raw/vacuum_q_combined_Nd32_Na96.npz"
+    },
+    {
+      "key": "vacuum_p_ideal",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "ideal",
+      "metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 0.9999999999999992,
+        "candidate_integrated_mass": 0.9999999999999992
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 0.9999999999999999,
+        "candidate_integrated_mass": 0.9999999999999999
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 3.0023758311666965e-36,
+          "ancilla_boundary_mass": 2.651285427837767e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.0879213700367045e-21,
+          "ancilla_boundary_mass": 6.802165428613937e-38
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 6.190750731052243e-15,
+          "ancilla_boundary_mass": 5.2478767718797904e-33
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.9573822515474108e-10,
+          "ancilla_boundary_mass": 5.078053438557347e-28
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 3.0023758311666965e-36,
+          "ancilla_boundary_mass": 2.651285427837767e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.0879213700367045e-21,
+          "ancilla_boundary_mass": 6.802165428613937e-38
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 6.190750731052243e-15,
+          "ancilla_boundary_mass": 5.2478767718797904e-33
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.9573822515474108e-10,
+          "ancilla_boundary_mass": 5.078053438557347e-28
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "cef6ca9cbc3456dc203600700b1da75187684710da445376f8497dd22c5dd65f",
+      "raw_path": "raw/vacuum_p_ideal_Nd32_Na96.npz"
+    },
+    {
+      "key": "vacuum_p_loss",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "loss",
+      "metric": {
+        "instrument_trace_distance": 4.112617102403773e-05,
+        "outcome_tv_unnormalized": 1.4031310489483413e-05,
+        "reference_integrated_mass": 0.9999999999999991,
+        "candidate_integrated_mass": 0.999999999999999
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 4.112617102404339e-05,
+        "outcome_tv_unnormalized": 1.4029126879732143e-05,
+        "reference_integrated_mass": 0.9999999999999993,
+        "candidate_integrated_mass": 0.9999999999999999
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 2.3214210946107536e-36,
+          "ancilla_boundary_mass": 2.6509476566381214e-41
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 1.0821371225922455e-21,
+          "ancilla_boundary_mass": 6.79465719909065e-38
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 6.148813954248758e-15,
+          "ancilla_boundary_mass": 5.2436247280666565e-33
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 1.9411391824685643e-10,
+          "ancilla_boundary_mass": -7.380983943227011e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.329142853102121e-36,
+          "ancilla_boundary_mass": 2.6512855083330894e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.08790648257684e-21,
+          "ancilla_boundary_mass": 6.802165000819321e-38
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 6.190750582140863e-15,
+          "ancilla_boundary_mass": 5.2555908974089686e-33
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.9573822515164502e-10,
+          "ancilla_boundary_mass": -6.954743565090442e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.9573822515164502e-10,
+          "ancilla_boundary_mass": -6.954743565090442e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.9414555958975028e-10,
+          "ancilla_boundary_mass": -6.954743565090444e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "7dc57390eb900179ff3e2cf71db887f40697a563fabf2fbc30e741abdf927660",
+      "raw_path": "raw/vacuum_p_loss_Nd32_Na96.npz"
+    },
+    {
+      "key": "vacuum_p_dephasing",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "dephasing",
+      "metric": {
+        "instrument_trace_distance": 3.693034569699079e-05,
+        "outcome_tv_unnormalized": 1.1875930100820825e-06,
+        "reference_integrated_mass": 0.9999999999999994,
+        "candidate_integrated_mass": 0.999999999999999
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 3.693034569699501e-05,
+        "outcome_tv_unnormalized": 1.1881746867402272e-06,
+        "reference_integrated_mass": 1.0000000000000004,
+        "candidate_integrated_mass": 0.9999999999999998
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 2.32867028385522e-36,
+          "ancilla_boundary_mass": 2.65125814091382e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.0877144019054724e-21,
+          "ancilla_boundary_mass": 6.802152269621989e-38
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 6.189389017489611e-15,
+          "ancilla_boundary_mass": 5.255911179277511e-33
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.9568587901965865e-10,
+          "ancilla_boundary_mass": -7.279672058829433e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.329142853102121e-36,
+          "ancilla_boundary_mass": 2.65128550833309e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.0879064825768402e-21,
+          "ancilla_boundary_mass": 6.802165000819311e-38
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 6.1907505821408665e-15,
+          "ancilla_boundary_mass": 5.255590897404703e-33
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.95738225151645e-10,
+          "ancilla_boundary_mass": -6.954743561412901e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.95738225151645e-10,
+          "ancilla_boundary_mass": -6.954743561412901e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.95738225151645e-10,
+          "ancilla_boundary_mass": -6.954743561412899e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "e08877b24c32a22208af0945b960fdc6ba16059f957e00bf62a03a8ac8c859f8",
+      "raw_path": "raw/vacuum_p_dephasing_Nd32_Na96.npz"
+    },
+    {
+      "key": "vacuum_p_combined",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "combined",
+      "metric": {
+        "instrument_trace_distance": 7.101452246491565e-05,
+        "outcome_tv_unnormalized": 1.5194216953649465e-05,
+        "reference_integrated_mass": 1.0000000000000004,
+        "candidate_integrated_mass": 0.9999999999999989
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 7.101452246492889e-05,
+        "outcome_tv_unnormalized": 1.5197626509519294e-05,
+        "reference_integrated_mass": 0.9999999999999993,
+        "candidate_integrated_mass": 0.9999999999999997
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.3209500591292146e-36,
+          "ancilla_boundary_mass": 2.6509202944073576e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.0819460454562e-21,
+          "ancilla_boundary_mass": 6.794644654557842e-38
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 6.147461555378503e-15,
+          "ancilla_boundary_mass": 5.243937834382307e-33
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.940619842869612e-10,
+          "ancilla_boundary_mass": -7.694619809712986e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 0.0,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.329142853102121e-36,
+          "ancilla_boundary_mass": 2.65128550833309e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.0879064825768405e-21,
+          "ancilla_boundary_mass": 6.802165000819302e-38
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 6.1907505821408665e-15,
+          "ancilla_boundary_mass": 5.2555908974106614e-33
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.957382251516451e-10,
+          "ancilla_boundary_mass": -6.954743566577698e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.957382251516451e-10,
+          "ancilla_boundary_mass": -6.954743566577698e-27
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 1.941455595897503e-10,
+          "ancilla_boundary_mass": -6.954743566577702e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "7c863da5c9a1f9c85e7834bcf118b31b2723b9e5c6486fe588d7f2c6fdff6885",
+      "raw_path": "raw/vacuum_p_combined_Nd32_Na96.npz"
+    },
+    {
+      "key": "coherent_q_ideal",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "ideal",
+      "metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 0.9999999999999991,
+        "candidate_integrated_mass": 0.9999999999999991
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 0.9999999999999974,
+        "candidate_integrated_mass": 0.9999999999999974
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.1911508405767886e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 7.348816470159666e-34,
+          "ancilla_boundary_mass": 4.98281689997492e-41
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 7.403905516470288e-21,
+          "ancilla_boundary_mass": 4.465112382647778e-37
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 2.5035735866354875e-14,
+          "ancilla_boundary_mass": 5.722029730570128e-32
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 4.788979083265136e-10,
+          "ancilla_boundary_mass": 6.7274105673632e-27
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.1911508405767886e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 7.348816470159666e-34,
+          "ancilla_boundary_mass": 4.98281689997492e-41
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 7.403905516470288e-21,
+          "ancilla_boundary_mass": 4.465112382647778e-37
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 2.5035735866354875e-14,
+          "ancilla_boundary_mass": 5.722029730570128e-32
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 4.788979083265136e-10,
+          "ancilla_boundary_mass": 6.7274105673632e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "1e677cb59236b987ae8098d1ec8665ae02c097f99f0fabea96a657c1b3048ec7",
+      "raw_path": "raw/coherent_q_ideal_Nd32_Na96.npz"
+    },
+    {
+      "key": "coherent_q_loss",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "loss",
+      "metric": {
+        "instrument_trace_distance": 4.112617208138236e-05,
+        "outcome_tv_unnormalized": 1.4030826479302322e-05,
+        "reference_integrated_mass": 0.9999999999999982,
+        "candidate_integrated_mass": 0.9999999999999969
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 4.112617208137162e-05,
+        "outcome_tv_unnormalized": 1.4032995503774259e-05,
+        "reference_integrated_mass": 0.9999999999999981,
+        "candidate_integrated_mass": 0.9999999999999977
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 7.113021067205519e-34,
+          "ancilla_boundary_mass": 4.981812117287614e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 7.362503124181993e-21,
+          "ancilla_boundary_mass": 4.458919429138373e-37
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 2.4846623609307718e-14,
+          "ancilla_boundary_mass": 5.705169430029252e-32
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 4.748574299687286e-10,
+          "ancilla_boundary_mass": 6.731230635025364e-27
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.146915087619678e-60,
+          "ancilla_boundary_mass": 2.967445283318605e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.146915087619678e-60,
+          "ancilla_boundary_mass": 2.967445283318605e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 7.12713719979818e-34,
+          "ancilla_boundary_mass": 4.981489343666258e-41
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 7.398780379479504e-21,
+          "ancilla_boundary_mass": 4.46229919984215e-37
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 2.5022048461547926e-14,
+          "ancilla_boundary_mass": 5.717635905789773e-32
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 4.787260133894071e-10,
+          "ancilla_boundary_mass": 6.755656090447689e-27
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 4.787260133894071e-10,
+          "ancilla_boundary_mass": 6.755656090447689e-27
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 4.749324325305731e-10,
+          "ancilla_boundary_mass": 6.755656090447689e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "a9b32d37daabd34e71b3bc71ce2f9dfa5216aed5c35f362a042ad0059489c54f",
+      "raw_path": "raw/coherent_q_loss_Nd32_Na96.npz"
+    },
+    {
+      "key": "coherent_q_dephasing",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "dephasing",
+      "metric": {
+        "instrument_trace_distance": 3.8186702341152925e-05,
+        "outcome_tv_unnormalized": 1.3115975274661424e-06,
+        "reference_integrated_mass": 0.9999999999999983,
+        "candidate_integrated_mass": 0.9999999999999987
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 3.8186702341160406e-05,
+        "outcome_tv_unnormalized": 1.3115189500700937e-06,
+        "reference_integrated_mass": 0.9999999999999979,
+        "candidate_integrated_mass": 0.9999999999999982
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 7.139852354632603e-34,
+          "ancilla_boundary_mass": 4.982742397109645e-41
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 7.40341226155595e-21,
+          "ancilla_boundary_mass": 4.464893200693501e-37
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.50326157883314e-14,
+          "ancilla_boundary_mass": 5.721798904144468e-32
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 4.788059528048693e-10,
+          "ancilla_boundary_mass": 6.760105512582069e-27
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 7.1485630017365845e-34,
+          "ancilla_boundary_mass": 4.982756865400493e-41
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 7.406077247330194e-21,
+          "ancilla_boundary_mass": 4.465089440664654e-37
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.5040654925918762e-14,
+          "ancilla_boundary_mass": 5.72208015207362e-32
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 4.789405443275726e-10,
+          "ancilla_boundary_mass": 6.761272361378201e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 4.789405443275726e-10,
+          "ancilla_boundary_mass": 6.761272361378201e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 4.789405443275726e-10,
+          "ancilla_boundary_mass": 6.761272361378201e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "a6bf99b7c108a1866a0814072909e8b43333f612cd03840c94806e325b3bbd7b",
+      "raw_path": "raw/coherent_q_dephasing_Nd32_Na96.npz"
+    },
+    {
+      "key": "coherent_q_combined",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "combined",
+      "metric": {
+        "instrument_trace_distance": 7.176170195917153e-05,
+        "outcome_tv_unnormalized": 1.5319938733691495e-05,
+        "reference_integrated_mass": 0.9999999999999969,
+        "candidate_integrated_mass": 0.9999999999999983
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 7.176170195917279e-05,
+        "outcome_tv_unnormalized": 1.5316533291484737e-05,
+        "reference_integrated_mass": 0.9999999999999968,
+        "candidate_integrated_mass": 0.9999999999999988
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 7.113810776115947e-34,
+          "ancilla_boundary_mass": 4.981737546367724e-41
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 7.362020976001173e-21,
+          "ancilla_boundary_mass": 4.458700770656735e-37
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 2.4843525728301468e-14,
+          "ancilla_boundary_mass": 5.704938354852597e-32
+        },
+        {
+          "norm_error": 9.992007221626409e-16,
+          "data_boundary_mass": 4.747662002759536e-10,
+          "ancilla_boundary_mass": 6.687394603507422e-27
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.146915087619678e-60,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.146915087619678e-60,
+          "ancilla_boundary_mass": 2.967445283318604e-44
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 7.1366207339509895e-34,
+          "ancilla_boundary_mass": 4.98142924824155e-41
+        },
+        {
+          "norm_error": 8.881784197001252e-16,
+          "data_boundary_mass": 7.400958092101816e-21,
+          "ancilla_boundary_mass": 4.462276383388477e-37
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 2.5026962250844464e-14,
+          "ancilla_boundary_mass": 5.717685220147099e-32
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 4.787686137463022e-10,
+          "ancilla_boundary_mass": 6.755755288479553e-27
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 4.787686137463022e-10,
+          "ancilla_boundary_mass": 6.755755288479553e-27
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 4.749747186153496e-10,
+          "ancilla_boundary_mass": 6.755755288479553e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "47027a8c3e924239fa97d3dfd23009ff875ef70e235b48c064971234b61c56ba",
+      "raw_path": "raw/coherent_q_combined_Nd32_Na96.npz"
+    },
+    {
+      "key": "coherent_p_ideal",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "ideal",
+      "metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 0.9999999999999992,
+        "candidate_integrated_mass": 0.9999999999999992
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 0.0,
+        "outcome_tv_unnormalized": 0.0,
+        "reference_integrated_mass": 0.9999999999999988,
+        "candidate_integrated_mass": 0.9999999999999988
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.1911508405767886e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 1.383618092886816e-32,
+          "ancilla_boundary_mass": 3.418882437873949e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.2715429121717615e-20,
+          "ancilla_boundary_mass": 1.665568914168978e-37
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 8.432953268279446e-14,
+          "ancilla_boundary_mass": 1.701525259964259e-32
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 1.0909648013433794e-09,
+          "ancilla_boundary_mass": 1.8504593610648497e-27
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.1911508405767886e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 1.383618092886816e-32,
+          "ancilla_boundary_mass": 3.418882437873949e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.2715429121717615e-20,
+          "ancilla_boundary_mass": 1.665568914168978e-37
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 8.432953268279446e-14,
+          "ancilla_boundary_mass": 1.701525259964259e-32
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 1.0909648013433794e-09,
+          "ancilla_boundary_mass": 1.8504593610648497e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "a2ca410d95631887f4db104590e309d51795e96101b53dfbfc27aca6c45495c8",
+      "raw_path": "raw/coherent_p_ideal_Nd32_Na96.npz"
+    },
+    {
+      "key": "coherent_p_loss",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "loss",
+      "metric": {
+        "instrument_trace_distance": 4.112617419518953e-05,
+        "outcome_tv_unnormalized": 1.4029416285428135e-05,
+        "reference_integrated_mass": 0.9999999999999992,
+        "candidate_integrated_mass": 0.9999999999999992
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 4.112617419519566e-05,
+        "outcome_tv_unnormalized": 1.4029336272911656e-05,
+        "reference_integrated_mass": 0.9999999999999986,
+        "candidate_integrated_mass": 0.9999999999999987
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.3571346249660617e-32,
+          "ancilla_boundary_mass": 3.4183351262699623e-41
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.252583898515968e-20,
+          "ancilla_boundary_mass": 1.6634498271525059e-37
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 8.366622007690274e-14,
+          "ancilla_boundary_mass": 1.696838974682822e-32
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.0817407950128585e-09,
+          "ancilla_boundary_mass": 2.4258429308876483e-27
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.146915087619678e-60,
+          "ancilla_boundary_mass": 2.967445283318605e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.146915087619678e-60,
+          "ancilla_boundary_mass": 2.967445283318605e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.3592138003681164e-32,
+          "ancilla_boundary_mass": 3.41847944680243e-41
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 3.268050505535687e-20,
+          "ancilla_boundary_mass": 1.664982919362405e-37
+        },
+        {
+          "norm_error": 3.3306690738754696e-16,
+          "data_boundary_mass": 8.425735334925696e-14,
+          "ancilla_boundary_mass": 1.7007088383623842e-32
+        },
+        {
+          "norm_error": 5.551115123125783e-16,
+          "data_boundary_mass": 1.0903404158743056e-09,
+          "ancilla_boundary_mass": 2.4347323544367048e-27
+        },
+        {
+          "norm_error": 5.551115123125783e-16,
+          "data_boundary_mass": 1.0903404158743056e-09,
+          "ancilla_boundary_mass": 2.4347323544367048e-27
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.0819494316934287e-09,
+          "ancilla_boundary_mass": 2.4347323544367048e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "2e6ccc1974ba7ca16b89178f91d7286237750e1721b39a01ca71abf9c9c55340",
+      "raw_path": "raw/coherent_p_loss_Nd32_Na96.npz"
+    },
+    {
+      "key": "coherent_p_dephasing",
+      "data_cutoff": 32,
+      "ancilla_cutoff": 96,
+      "variant": "dephasing",
+      "metric": {
+        "instrument_trace_distance": 3.960853096056668e-05,
+        "outcome_tv_unnormalized": 1.5326259600632144e-06,
+        "reference_integrated_mass": 0.9999999999999997,
+        "candidate_integrated_mass": 0.9999999999999987
+      },
+      "coarse_grid_metric": {
+        "instrument_trace_distance": 3.960853096056349e-05,
+        "outcome_tv_unnormalized": 1.5326180732799134e-06,
+        "reference_integrated_mass": 0.9999999999999998,
+        "candidate_integrated_mass": 0.9999999999999992
+      },
+      "stage_diagnostics": [
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 1.3621962986385678e-32,
+          "ancilla_boundary_mass": 3.4188586177546666e-41
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 3.271055949122868e-20,
+          "ancilla_boundary_mass": 1.6655906550248033e-37
+        },
+        {
+          "norm_error": 4.440892098500626e-16,
+          "data_boundary_mass": 8.431142302894562e-14,
+          "ancilla_boundary_mass": 1.7015814255468172e-32
+        },
+        {
+          "norm_error": 6.661338147750939e-16,
+          "data_boundary_mass": 1.0906998070583015e-09,
+          "ancilla_boundary_mass": 2.435652622203707e-27
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 3.19115084057679e-60,
+          "ancilla_boundary_mass": 2.9674452833186047e-44
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 1.362620975678969e-32,
+          "ancilla_boundary_mass": 3.4189761459433537e-41
+        },
+        {
+          "norm_error": 0.0,
+          "data_boundary_mass": 3.27163643525069e-20,
+          "ancilla_boundary_mass": 1.6657843605847677e-37
+        },
+        {
+          "norm_error": 2.220446049250313e-16,
+          "data_boundary_mass": 8.432994038660143e-14,
+          "ancilla_boundary_mass": 1.7017891629286517e-32
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.090948678190863e-09,
+          "ancilla_boundary_mass": 2.4367451960685885e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.090948678190863e-09,
+          "ancilla_boundary_mass": 2.4367451960685885e-27
+        },
+        {
+          "norm_error": 1.1102230246251565e-16,
+          "data_boundary_mass": 1.090948678190863e-09,
+          "ancilla_boundary_mass": 2.4367451960685885e-27
+        }
+      ],
+      "stage_pass": true,
+      "mass_pass": true,
+      "grid_pass": true,
+      "raw_sha256": "471245fe8876173c18ad3f99027424444820259677c8664524cc517b0e7771f5",
+      "raw_path": "raw/coherent_p_dephasing_Nd32_Na96.npz"
+    }
+  ],
+  "refinements": [
+    {
+      "key": "vacuum_q_ideal",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.880868236597031e-05,
+      "outcome_tv_unnormalized": 1.8699691765749958e-08,
+      "reference_integrated_mass": 0.9999999999999992,
+      "candidate_integrated_mass": 1.0000000000000004,
+      "pass": true
+    },
+    {
+      "key": "vacuum_q_ideal",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.880868236597031e-05,
+      "outcome_tv_unnormalized": 1.8699691765749958e-08,
+      "reference_integrated_mass": 0.9999999999999992,
+      "candidate_integrated_mass": 1.0000000000000004,
+      "pass": true
+    },
+    {
+      "key": "vacuum_q_loss",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.830646036072552e-05,
+      "outcome_tv_unnormalized": 1.8516431817255418e-08,
+      "reference_integrated_mass": 0.9999999999999991,
+      "candidate_integrated_mass": 1.0000000000000018,
+      "pass": true
+    },
+    {
+      "key": "vacuum_q_loss",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.827423090907509e-05,
+      "outcome_tv_unnormalized": 1.8699691758165076e-08,
+      "reference_integrated_mass": 0.999999999999999,
+      "candidate_integrated_mass": 0.9999999999999999,
+      "pass": true
+    },
+    {
+      "key": "vacuum_q_dephasing",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.798990580085732e-05,
+      "outcome_tv_unnormalized": 1.8674484784234002e-08,
+      "reference_integrated_mass": 0.9999999999999994,
+      "candidate_integrated_mass": 1.0000000000000009,
+      "pass": true
+    },
+    {
+      "key": "vacuum_q_dephasing",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.740852664015064e-05,
+      "outcome_tv_unnormalized": 1.869969176109484e-08,
+      "reference_integrated_mass": 0.999999999999999,
+      "candidate_integrated_mass": 1.0,
+      "pass": true
+    },
+    {
+      "key": "vacuum_q_combined",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.749153497141991e-05,
+      "outcome_tv_unnormalized": 1.8491431542536552e-08,
+      "reference_integrated_mass": 1.0000000000000004,
+      "candidate_integrated_mass": 1.0000000000000013,
+      "pass": true
+    },
+    {
+      "key": "vacuum_q_combined",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.688164826837568e-05,
+      "outcome_tv_unnormalized": 1.8699691776205292e-08,
+      "reference_integrated_mass": 0.9999999999999989,
+      "candidate_integrated_mass": 1.0,
+      "pass": true
+    },
+    {
+      "key": "vacuum_p_ideal",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.880868236597035e-05,
+      "outcome_tv_unnormalized": 1.8699691765758312e-08,
+      "reference_integrated_mass": 0.9999999999999992,
+      "candidate_integrated_mass": 1.0000000000000004,
+      "pass": true
+    },
+    {
+      "key": "vacuum_p_ideal",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.880868236597035e-05,
+      "outcome_tv_unnormalized": 1.8699691765758312e-08,
+      "reference_integrated_mass": 0.9999999999999992,
+      "candidate_integrated_mass": 1.0000000000000004,
+      "pass": true
+    },
+    {
+      "key": "vacuum_p_loss",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.83064603607255e-05,
+      "outcome_tv_unnormalized": 1.8516431817255418e-08,
+      "reference_integrated_mass": 0.9999999999999991,
+      "candidate_integrated_mass": 1.0000000000000018,
+      "pass": true
+    },
+    {
+      "key": "vacuum_p_loss",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.827423090907504e-05,
+      "outcome_tv_unnormalized": 1.8699691758181785e-08,
+      "reference_integrated_mass": 0.999999999999999,
+      "candidate_integrated_mass": 0.9999999999999999,
+      "pass": true
+    },
+    {
+      "key": "vacuum_p_dephasing",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.798990580085731e-05,
+      "outcome_tv_unnormalized": 1.8674484784234002e-08,
+      "reference_integrated_mass": 0.9999999999999994,
+      "candidate_integrated_mass": 1.0000000000000009,
+      "pass": true
+    },
+    {
+      "key": "vacuum_p_dephasing",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.740852664015064e-05,
+      "outcome_tv_unnormalized": 1.869969176109484e-08,
+      "reference_integrated_mass": 0.999999999999999,
+      "candidate_integrated_mass": 1.0,
+      "pass": true
+    },
+    {
+      "key": "vacuum_p_combined",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.74915349714199e-05,
+      "outcome_tv_unnormalized": 1.8491431542603392e-08,
+      "reference_integrated_mass": 1.0000000000000004,
+      "candidate_integrated_mass": 1.0000000000000013,
+      "pass": true
+    },
+    {
+      "key": "vacuum_p_combined",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 9.68816482683757e-05,
+      "outcome_tv_unnormalized": 1.8699691776071577e-08,
+      "reference_integrated_mass": 0.9999999999999989,
+      "candidate_integrated_mass": 1.0,
+      "pass": true
+    },
+    {
+      "key": "coherent_q_ideal",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.0001425195232506117,
+      "outcome_tv_unnormalized": 2.025368985841034e-08,
+      "reference_integrated_mass": 0.9999999999999991,
+      "candidate_integrated_mass": 0.9999999999999981,
+      "pass": true
+    },
+    {
+      "key": "coherent_q_ideal",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.0001425195232506117,
+      "outcome_tv_unnormalized": 2.025368985841034e-08,
+      "reference_integrated_mass": 0.9999999999999991,
+      "candidate_integrated_mass": 0.9999999999999981,
+      "pass": true
+    },
+    {
+      "key": "coherent_q_loss",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.00014178156276207409,
+      "outcome_tv_unnormalized": 2.005696110944547e-08,
+      "reference_integrated_mass": 0.9999999999999982,
+      "candidate_integrated_mass": 1.0,
+      "pass": true
+    },
+    {
+      "key": "coherent_q_loss",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.00014173335132616467,
+      "outcome_tv_unnormalized": 2.0252910778676906e-08,
+      "reference_integrated_mass": 0.9999999999999969,
+      "candidate_integrated_mass": 0.999999999999999,
+      "pass": true
+    },
+    {
+      "key": "coherent_q_dephasing",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.0001413094703344727,
+      "outcome_tv_unnormalized": 2.0223601728082805e-08,
+      "reference_integrated_mass": 0.9999999999999983,
+      "candidate_integrated_mass": 0.9999999999999989,
+      "pass": true
+    },
+    {
+      "key": "coherent_q_dephasing",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.00014051617712487985,
+      "outcome_tv_unnormalized": 2.0252857517572898e-08,
+      "reference_integrated_mass": 0.9999999999999987,
+      "candidate_integrated_mass": 0.9999999999999987,
+      "pass": true
+    },
+    {
+      "key": "coherent_q_combined",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.00014057742378845148,
+      "outcome_tv_unnormalized": 2.0027118367286766e-08,
+      "reference_integrated_mass": 0.9999999999999969,
+      "candidate_integrated_mass": 0.9999999999999984,
+      "pass": true
+    },
+    {
+      "key": "coherent_q_combined",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.00013973998232223804,
+      "outcome_tv_unnormalized": 2.0252078338097046e-08,
+      "reference_integrated_mass": 0.9999999999999983,
+      "candidate_integrated_mass": 0.999999999999999,
+      "pass": true
+    },
+    {
+      "key": "coherent_p_ideal",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.00020313727070223444,
+      "outcome_tv_unnormalized": 1.9224790606468653e-08,
+      "reference_integrated_mass": 0.9999999999999992,
+      "candidate_integrated_mass": 0.9999999999999986,
+      "pass": true
+    },
+    {
+      "key": "coherent_p_ideal",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.00020313727070223444,
+      "outcome_tv_unnormalized": 1.9224790606468653e-08,
+      "reference_integrated_mass": 0.9999999999999992,
+      "candidate_integrated_mass": 0.9999999999999986,
+      "pass": true
+    },
+    {
+      "key": "coherent_p_loss",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.00020208195268334923,
+      "outcome_tv_unnormalized": 1.9041914410162035e-08,
+      "reference_integrated_mass": 0.9999999999999992,
+      "candidate_integrated_mass": 1.0000000000000007,
+      "pass": true
+    },
+    {
+      "key": "coherent_p_loss",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.00020199455945014056,
+      "outcome_tv_unnormalized": 1.922466377243119e-08,
+      "reference_integrated_mass": 0.9999999999999992,
+      "candidate_integrated_mass": 0.9999999999999986,
+      "pass": true
+    },
+    {
+      "key": "coherent_p_dephasing",
+      "kind": "cutoff",
+      "arm": "explicit",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.00020136314268783494,
+      "outcome_tv_unnormalized": 1.919107060960504e-08,
+      "reference_integrated_mass": 0.9999999999999997,
+      "candidate_integrated_mass": 1.0000000000000002,
+      "pass": true
+    },
+    {
+      "key": "coherent_p_dephasing",
+      "kind": "cutoff",
+      "arm": "lumped",
+      "from": [
+        24,
+        96
+      ],
+      "to": [
+        32,
+        96
+      ],
+      "instrument_trace_distance": 0.0002002706786708063,
+      "outcome_tv_unnormalized": 1.9222760709082163e-08,
+      "reference_integrated_mass": 0.9999999999999987,
+      "candidate_integrated_mass": 0.9999999999999983,
+      "pass": true
+    }
+  ],
+  "ideal_controls": {
+    "rows": [
+      {
+        "input": "vacuum",
+        "axis": "q",
+        "data_cutoff": 64,
+        "ancilla_cutoff": 64,
+        "stage_diagnostics": [
+          {
+            "norm_error": 2.581268532253489e-13,
+            "data_boundary_mass": 4.350416460453668e-19,
+            "ancilla_boundary_mass": 3.714278179516558e-19
+          }
+        ],
+        "integrated_mass": 0.9999999999997417,
+        "pass": true,
+        "raw_path": "raw/ideal_vacuum_q_Nd64_Na64.npz",
+        "raw_sha256": "0498eb67b708d827b7d39b3474aab4de4f2c79a9b84243e32b1b26aabc51836a"
+      },
+      {
+        "input": "vacuum",
+        "axis": "p",
+        "data_cutoff": 64,
+        "ancilla_cutoff": 64,
+        "stage_diagnostics": [
+          {
+            "norm_error": 2.581268532253489e-13,
+            "data_boundary_mass": 4.350416460453668e-19,
+            "ancilla_boundary_mass": 3.714278179516558e-19
+          }
+        ],
+        "integrated_mass": 0.9999999999997417,
+        "pass": true,
+        "raw_path": "raw/ideal_vacuum_p_Nd64_Na64.npz",
+        "raw_sha256": "8424314fa97c10deb956a38c27f2d57e9707ef0dc5301f480980ca5790aea79c"
+      },
+      {
+        "input": "coherent",
+        "axis": "q",
+        "data_cutoff": 64,
+        "ancilla_cutoff": 64,
+        "stage_diagnostics": [
+          {
+            "norm_error": 1.1446399383885364e-12,
+            "data_boundary_mass": 1.063446065585311e-18,
+            "ancilla_boundary_mass": 2.4555531870026277e-18
+          }
+        ],
+        "integrated_mass": 1.000000000001143,
+        "pass": true,
+        "raw_path": "raw/ideal_coherent_q_Nd64_Na64.npz",
+        "raw_sha256": "d43343af2fae842c2e2651d6f93d309611cc5a62a888b558038f4dcb5a0c5be4"
+      },
+      {
+        "input": "coherent",
+        "axis": "p",
+        "data_cutoff": 64,
+        "ancilla_cutoff": 64,
+        "stage_diagnostics": [
+          {
+            "norm_error": 2.2675195054944197e-12,
+            "data_boundary_mass": 2.5850107761143777e-18,
+            "ancilla_boundary_mass": 1.1323306825603037e-18
+          }
+        ],
+        "integrated_mass": 1.0000000000022666,
+        "pass": true,
+        "raw_path": "raw/ideal_coherent_p_Nd64_Na64.npz",
+        "raw_sha256": "1e881d64fde1324e6e971ccbd459256b7980c3c2704a6e35bfccaf15ae60074c"
+      },
+      {
+        "input": "vacuum",
+        "axis": "q",
+        "data_cutoff": 96,
+        "ancilla_cutoff": 96,
+        "stage_diagnostics": [
+          {
+            "norm_error": 1.5376588891058418e-12,
+            "data_boundary_mass": 3.7234729559864304e-20,
+            "ancilla_boundary_mass": 2.3879198877050824e-19
+          }
+        ],
+        "integrated_mass": 1.0000000000015372,
+        "pass": true,
+        "raw_path": "raw/ideal_vacuum_q_Nd96_Na96.npz",
+        "raw_sha256": "8d20b1437c64260e6e6b8634346ec252be296c6ff80353f254543a315fbf7741"
+      },
+      {
+        "input": "vacuum",
+        "axis": "p",
+        "data_cutoff": 96,
+        "ancilla_cutoff": 96,
+        "stage_diagnostics": [
+          {
+            "norm_error": 1.5376588891058418e-12,
+            "data_boundary_mass": 3.7234729559864304e-20,
+            "ancilla_boundary_mass": 2.3879198877050824e-19
+          }
+        ],
+        "integrated_mass": 1.0000000000015372,
+        "pass": true,
+        "raw_path": "raw/ideal_vacuum_p_Nd96_Na96.npz",
+        "raw_sha256": "149fe611f6945f4ad5e8e90dda708bdb1594e253253d66d30860da6e5cf76f33"
+      },
+      {
+        "input": "coherent",
+        "axis": "q",
+        "data_cutoff": 96,
+        "ancilla_cutoff": 96,
+        "stage_diagnostics": [
+          {
+            "norm_error": 3.3639757646142243e-14,
+            "data_boundary_mass": 5.045296728668177e-21,
+            "ancilla_boundary_mass": 5.800349511277316e-20
+          }
+        ],
+        "integrated_mass": 0.9999999999999645,
+        "pass": true,
+        "raw_path": "raw/ideal_coherent_q_Nd96_Na96.npz",
+        "raw_sha256": "ba0b8574dd929dc680a69777686bb8c057f1319b723cdbae276b32c0f51ef8c7"
+      },
+      {
+        "input": "coherent",
+        "axis": "p",
+        "data_cutoff": 96,
+        "ancilla_cutoff": 96,
+        "stage_diagnostics": [
+          {
+            "norm_error": 1.3242740237728867e-12,
+            "data_boundary_mass": 9.987153321226507e-20,
+            "ancilla_boundary_mass": 5.409635922499088e-19
+          }
+        ],
+        "integrated_mass": 1.0000000000013234,
+        "pass": true,
+        "raw_path": "raw/ideal_coherent_p_Nd96_Na96.npz",
+        "raw_sha256": "5951fb03d38713bb56025c9c736027732ad896e3746994ec2f28ca3e87ca9bcd"
+      }
+    ],
+    "cutoff_refinements": [
+      {
+        "input": "vacuum",
+        "axis": "q",
+        "outcome_tv": 4.504715940368321e-12,
+        "weighted_conditional_infidelity": 3.599975313032259e-16,
+        "worst_conditional_infidelity_relevant": 7.105427357601002e-15,
+        "relevant_reference_probability_mass": 0.9999998836899288,
+        "reference_integrated_mass": 1.0000000000015372,
+        "candidate_integrated_mass": 0.9999999999997417,
+        "pass": true
+      },
+      {
+        "input": "vacuum",
+        "axis": "p",
+        "outcome_tv": 4.504715940368321e-12,
+        "weighted_conditional_infidelity": 3.599975313032259e-16,
+        "worst_conditional_infidelity_relevant": 7.105427357601002e-15,
+        "relevant_reference_probability_mass": 0.9999998836899288,
+        "reference_integrated_mass": 1.0000000000015372,
+        "candidate_integrated_mass": 0.9999999999997417,
+        "pass": true
+      },
+      {
+        "input": "coherent",
+        "axis": "q",
+        "outcome_tv": 3.732795446797594e-11,
+        "weighted_conditional_infidelity": 2.690952101455849e-16,
+        "worst_conditional_infidelity_relevant": 2.4646951146678475e-14,
+        "relevant_reference_probability_mass": 0.9999998836370843,
+        "reference_integrated_mass": 0.9999999999999645,
+        "candidate_integrated_mass": 1.000000000001143,
+        "pass": true
+      },
+      {
+        "input": "coherent",
+        "axis": "p",
+        "outcome_tv": 3.1892558423519197e-11,
+        "weighted_conditional_infidelity": 3.118190811232613e-16,
+        "worst_conditional_infidelity_relevant": 4.1300296516055823e-14,
+        "relevant_reference_probability_mass": 0.9999998792304857,
+        "reference_integrated_mass": 1.0000000000013234,
+        "candidate_integrated_mass": 1.0000000000022666,
+        "pass": true
+      }
+    ],
+    "solver_refinements": [
+      {
+        "input": "vacuum",
+        "axis": "q",
+        "outcome_tv": 4.2819769225123566e-11,
+        "weighted_conditional_infidelity": 2.7196200934822036e-16,
+        "worst_conditional_infidelity_relevant": 2.653433028854124e-14,
+        "relevant_reference_probability_mass": 0.9999998836899316,
+        "reference_integrated_mass": 0.9999999999999981,
+        "candidate_integrated_mass": 1.0000000000015372,
+        "pass": true
+      },
+      {
+        "input": "vacuum",
+        "axis": "p",
+        "outcome_tv": 4.2819769225123566e-11,
+        "weighted_conditional_infidelity": 2.7196200934822036e-16,
+        "worst_conditional_infidelity_relevant": 2.653433028854124e-14,
+        "relevant_reference_probability_mass": 0.9999998836899316,
+        "reference_integrated_mass": 0.9999999999999981,
+        "candidate_integrated_mass": 1.0000000000015372,
+        "pass": true
+      },
+      {
+        "input": "coherent",
+        "axis": "q",
+        "outcome_tv": 5.508663581286296e-11,
+        "weighted_conditional_infidelity": 2.7821108836233614e-16,
+        "worst_conditional_infidelity_relevant": 4.463096558993129e-14,
+        "relevant_reference_probability_mass": 0.9999998836370869,
+        "reference_integrated_mass": 0.9999999999999982,
+        "candidate_integrated_mass": 0.9999999999999645,
+        "pass": true
+      },
+      {
+        "input": "coherent",
+        "axis": "p",
+        "outcome_tv": 4.505204490146896e-11,
+        "weighted_conditional_infidelity": 3.3214660983454264e-16,
+        "worst_conditional_infidelity_relevant": 5.10702591327572e-14,
+        "relevant_reference_probability_mass": 0.9999998792304883,
+        "reference_integrated_mass": 0.9999999999999978,
+        "candidate_integrated_mass": 1.0000000000013234,
+        "pass": true
+      }
+    ],
+    "pass": true
+  },
+  "elapsed_seconds": 3478.509923042002,
+  "scope": "Vacuum and coherent alpha=.25+.15i; q and p single extractions; no multicycle GKP memory, hardware, or all-state claim.",
+  "uncertainty": "Deterministic numerical sensitivities only; no Monte Carlo confidence intervals."
+}

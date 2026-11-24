@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-11-24T07:28:17.606032+00:00",
+  "status": "planned_recovery_start",
+  "instance_id": "i-0be3c3be10368ba15",
+  "run_id": "qkp-20261120-003030-d2292a",
+  "job_id": "635d50e4441cc5d1",
+  "max_session_seconds": 1200,
+  "scope": "User-authorized all-issues action: recover existing raw data only, no scientific source deployment, trajectories, rescoring or training. Verified historical benchmark service was transient systemd-run; bootstrap is cloud-init per-instance. Abort if scientific workers are unexpectedly active. Finally stop instance, including on failure."
+}

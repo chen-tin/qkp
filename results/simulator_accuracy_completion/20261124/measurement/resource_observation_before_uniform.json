@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-11-24T08:42:51.656014+00:00",
+  "memory_available_estimate_bytes": 9595273216,
+  "method": "macOS vm_stat free+inactive+speculative pages; same conservative estimator as local physics preflight",
+  "page_size": 16384,
+  "counts": {
+    "Pages free": 73976,
+    "Pages inactive": 511195,
+    "Pages speculative": 478
+  },
+  "physics_pid": 54772,
+  "physics_rss_bytes": 2837413888
+}

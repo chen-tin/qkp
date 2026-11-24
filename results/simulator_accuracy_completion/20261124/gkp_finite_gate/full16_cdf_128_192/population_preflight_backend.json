@@ -1,0 +1,457 @@
+{
+  "declared_sampler": {
+    "kind": "direct_conditional_cdf_experimental",
+    "uniform_index": 1,
+    "parameters": {
+      "max_step": 0.00025,
+      "tolerance": 1e-10,
+      "shot_batch": 64,
+      "node_chunk": 256,
+      "tail_probability": 1e-15,
+      "float_budget": 5e-12,
+      "max_table_bytes": 67108864
+    },
+    "scope": "Same marginal conditional instrument; new cross-cutoff and replay common-random-number coupling. Legacy mixture uses auxiliaryuniform0+resourceuniform1; directCDFusesonlyuniform1 forphysicaloutcome. Explicitqutipbranch unchanged."
+  },
+  "contract": {
+    "backend": "direct_full_outcome_inverse_CDF",
+    "uniform_index": 1,
+    "quantile_stream": "uniforms[1]",
+    "unused_auxiliary_streams": [
+      "uniforms[0] eigenvalue draw",
+      "uniforms[2] historical jitter"
+    ],
+    "coupling_scope": "Common quantiles across cutoffs and explicit QuTiP; also changes coupling to classical replay, whose readout uses uniforms[1]. Marginals unchanged within declared numerical error.",
+    "max_step": 0.00025,
+    "cdf_tolerance": 1e-10,
+    "shot_batch": 64,
+    "node_chunk": 256,
+    "tail_probability": 1e-15,
+    "float_budget": 5e-12,
+    "max_table_bytes": 67108864,
+    "floating_bound_status": "Explicit engineering allowance; not a proved special-function ULP guarantee."
+  },
+  "calls": [
+    {
+      "axis": "q",
+      "cutoff": 128,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 5.99298903741685e-12,
+      "max_iterations": 5,
+      "minimum_conditional_norm": 0.051146708953596444,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "4798e4e6b326ccb1",
+      "variant": "ideal"
+    },
+    {
+      "axis": "p",
+      "cutoff": 128,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 5.9203526960307495e-12,
+      "max_iterations": 5,
+      "minimum_conditional_norm": 0.03542077429761666,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "4798e4e6b326ccb1",
+      "variant": "ideal"
+    },
+    {
+      "axis": "q",
+      "cutoff": 128,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 6.115030303398771e-12,
+      "max_iterations": 6,
+      "minimum_conditional_norm": 0.11096025990956378,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "4798e4e6b326ccb1",
+      "variant": "ideal"
+    },
+    {
+      "axis": "p",
+      "cutoff": 128,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 5.985134209517627e-12,
+      "max_iterations": 5,
+      "minimum_conditional_norm": 0.129256161889353,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "4798e4e6b326ccb1",
+      "variant": "ideal"
+    },
+    {
+      "axis": "q",
+      "cutoff": 192,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 6.1068146530165526e-12,
+      "max_iterations": 5,
+      "minimum_conditional_norm": 0.05114670812196685,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "56559a7609d5bd21",
+      "variant": "ideal"
+    },
+    {
+      "axis": "p",
+      "cutoff": 192,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 6.034483622962224e-12,
+      "max_iterations": 5,
+      "minimum_conditional_norm": 0.03542077067602806,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "56559a7609d5bd21",
+      "variant": "ideal"
+    },
+    {
+      "axis": "q",
+      "cutoff": 192,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 6.2288836745740885e-12,
+      "max_iterations": 6,
+      "minimum_conditional_norm": 0.11096025992860412,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "56559a7609d5bd21",
+      "variant": "ideal"
+    },
+    {
+      "axis": "p",
+      "cutoff": 192,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 6.098710024936789e-12,
+      "max_iterations": 5,
+      "minimum_conditional_norm": 0.12925616193037892,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "56559a7609d5bd21",
+      "variant": "ideal"
+    },
+    {
+      "axis": "q",
+      "cutoff": 128,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 5.976641003379245e-12,
+      "max_iterations": 6,
+      "minimum_conditional_norm": 0.038709989561388145,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "37d8357d2c187f72",
+      "variant": "lumped"
+    },
+    {
+      "axis": "p",
+      "cutoff": 128,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 5.936228885282889e-12,
+      "max_iterations": 5,
+      "minimum_conditional_norm": 0.03421333003626071,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "37d8357d2c187f72",
+      "variant": "lumped"
+    },
+    {
+      "axis": "q",
+      "cutoff": 128,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 6.046251987023242e-12,
+      "max_iterations": 6,
+      "minimum_conditional_norm": 0.10674980887903818,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "37d8357d2c187f72",
+      "variant": "lumped"
+    },
+    {
+      "axis": "p",
+      "cutoff": 128,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 5.929234480227751e-12,
+      "max_iterations": 5,
+      "minimum_conditional_norm": 0.12829044151988145,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "37d8357d2c187f72",
+      "variant": "lumped"
+    },
+    {
+      "axis": "q",
+      "cutoff": 192,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 6.090327841100869e-12,
+      "max_iterations": 6,
+      "minimum_conditional_norm": 0.03870997920619792,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "f2dd17287b5dfeb5",
+      "variant": "lumped"
+    },
+    {
+      "axis": "p",
+      "cutoff": 192,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 6.050359812214363e-12,
+      "max_iterations": 5,
+      "minimum_conditional_norm": 0.034213334080219336,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "f2dd17287b5dfeb5",
+      "variant": "lumped"
+    },
+    {
+      "axis": "q",
+      "cutoff": 192,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 6.160271891652254e-12,
+      "max_iterations": 6,
+      "minimum_conditional_norm": 0.10674980891581816,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "f2dd17287b5dfeb5",
+      "variant": "lumped"
+    },
+    {
+      "axis": "p",
+      "cutoff": 192,
+      "trajectories": 96,
+      "max_declared_exact_cdf_residual_bound": 6.043254384856762e-12,
+      "max_iterations": 5,
+      "minimum_conditional_norm": 0.12829046410218856,
+      "table": {
+        "step": 0.00024999950918893146,
+        "intervals": 142627,
+        "left": -17.828339998544863,
+        "right": 17.828339998544863,
+        "persistent_bytes": 2282048,
+        "error_terms": {
+          "hermite_remainder": 1.9343161297212783e-16,
+          "monotone_slope_adjustment": 6.15331207543842e-17,
+          "cdf_projection": 0.0,
+          "outside_grid_tail": 5e-16,
+          "declared_floating_budget": 5e-12
+        },
+        "declared_uniform_cdf_error_bound": 5.000754964733726e-12,
+        "bound_scope": "Analytic approximation bounds plus an explicit unproved floating-point allowance."
+      },
+      "job_id": "f2dd17287b5dfeb5",
+      "variant": "lumped"
+    }
+  ],
+  "restored_original_measurement": true,
+  "error": null,
+  "phase": "population_preflight",
+  "driver_sha256": "bc29a7b585776336fd31c6b2053d99f659e8b36418dd3f4b3e8bbf9c766fe99c",
+  "backend_sha256": "38d85c5d465599f65eac1f0ed7ece87b0a18f8fc12a655eb2ecbd4a9f0bad1b8"
+}

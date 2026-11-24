@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-11-24T09:59:00.554951+00:00",
+  "command": ".venv/bin/python -m pytest tests/test_local_process_safety.py tests/test_coupled_mechanisms.py -q",
+  "result": "18 passed in 2.53s",
+  "log": "results/simulator_accuracy_completion/20261124/resource_coordination/safety_tests_20261124.log",
+  "log_sha256": "d91c1ceb48d361914c06c29ad9c0e7b759d2e336e39b7580802ec68471afc552",
+  "source_hashes": {
+    "experiments/local_process_safety.py": "4d1f796ccbdf63540676b8bb64f0138c60e3b7fd015b8de20b632123d8e0f2ea",
+    "tests/test_local_process_safety.py": "12ea5b899d83ab836ff8d1979f468db43aec3a58780dfd6f6cab7d50cb40bb36",
+    "experiments/audit_coupled_mechanisms.py": "040f44925f346391eac192bfd16a762da2f729a61d97616dfe22f5b9b200e4b2",
+    "tests/test_coupled_mechanisms.py": "63ea26d63f74c4025bf697d9e63b17d478802f20c57743184915b8f83f8544f2"
+  }
+}

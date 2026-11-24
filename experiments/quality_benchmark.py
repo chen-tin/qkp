@@ -192,8 +192,17 @@ def verify_job(folder, job):
     result=json.loads(path.read_text())
     if result["config"] != json.loads(json.dumps(job["config"])) or not result.get("complete"):
         raise ValueError(f"Incomplete or mismatched saved job {job['id']}")
+    rows=result.get("rows",[])
+    expected=job["config"]["decoders"]
+    if sorted(row.get("decoder","") for row in rows) != sorted(expected):
+        raise ValueError("Saved job decoder coverage differs from the frozen plan")
     case=path.parent/case_directory(job["point"],job["cutoff"],None,"smooth")
-    for row in result["rows"]:
+    for row in rows:
+        required={f'{row["decoder"]}_{arm}.npz' for arm in ("finite_ancilla","replayed_corrections")}
+        if set(row.get("raw_hashes",{})) != required:
+            raise ValueError("Saved job raw-arm coverage differs from the frozen plan")
+        if row.get("point") != job["point"] or row.get("cutoff") != job["cutoff"]:
+            raise ValueError("Saved job row configuration coverage differs from the frozen plan")
         for filename,digest in row["raw_hashes"].items():
             if sha(case/filename) != digest:raise ValueError("Job raw hash mismatch")
     return result
@@ -244,12 +253,25 @@ def scoring_status(folder, job, required_bins):
         report=json.loads(path.read_text())
         if report["settings"]["run_result_sha256"] != sha(result):
             continue
-        if report["settings"]["bins"] != required_bins or report["settings"]["tolerance"] > .001:
+        tolerance=report["settings"]["tolerance"]
+        if (report["settings"]["bins"] != required_bins or
+                not np.isfinite(tolerance) or not 0 < tolerance <= .001):
             continue
-        if any(sha(check["raw_file"])!=check["raw_sha256"] for check in report["checks"]):
+        saved=json.loads(result.read_text())
+        expected={str((run/case_directory(row["point"],row["cutoff"],None,"smooth")/filename).resolve()):digest
+                  for row in saved["rows"] for filename,digest in row["raw_hashes"].items()}
+        checks=report.get("checks",[])
+        supplied=[str(Path(check["raw_file"]).resolve()) for check in checks]
+        if not expected or len(supplied)!=len(expected) or set(supplied)!=set(expected):
+            continue
+        if any(check["raw_sha256"]!=expected[str(Path(check["raw_file"]).resolve())] for check in checks):
+            raise ValueError("Scoring report raw coverage differs from saved observations")
+        if any(sha(check["raw_file"])!=check["raw_sha256"] for check in checks):
             raise ValueError("Scoring report refers to changed observations")
         return {"status":"checked","path":str(path),"sha256":sha(path),
-                "pass":report["all_sample_checks_pass"] and report["all_cycles_checked"]}
+                "pass":bool(report["all_sample_checks_pass"] and report["all_cycles_checked"] and
+                            all(check.get("sample_checks_pass") and check.get("all_cycle_snapshots_pass") and
+                                check.get("coverage")=="all_cycles" for check in checks))}
     return {"status":"pending_required_refinement","pass":False}
 
 
@@ -302,29 +324,68 @@ def attach_instrument(folder, report_folder):
 
 
 def instrument_status(folder,plan):
+    """Keep parameter controls distinct from checks on actual production states.
+
+    Even matched production snapshots are bounded supplied-state checks. A
+    matching cutoff/resource/coupling on arbitrary Fock states cannot fill a
+    missing production-state validation requirement.
+    """
     from experiments.validate_reference_states import audit_report
-    evidence=[]
-    for path in (Path(folder)/"instrument_checks").glob("*.json"):
+    folder=Path(folder);evidence=[]
+    for path in (folder/"instrument_checks").glob("*.json"):
         ref=json.loads(path.read_text())
         if sha(Path(ref["path"])/"result.json")!=ref["result_sha256"]:
             raise ValueError("Attached independent control changed")
-        evidence.append((audit_report(ref["path"]),Path(ref["path"])))
-    coverage={}
+        location=Path(ref["path"])
+        result=audit_report(location)
+        with np.load(location/"inputs.npz") as z:
+            states=z["states"]
+        evidence.append((result,states))
+    coverage={};production={}
     for job in plan["jobs"]:
         config=job["config"];n=job["cutoff"];sigma=config["points"][job["point"]][1]*L
         coupling=config["physics"]["coupling"]
         key=f"{n}/{sigma:.17g}/{coupling:.17g}"
-        found=[]
-        for result,folder_path in evidence:
+        matching=[]
+        for result,states in evidence:
             c=result["config"]
-            with np.load(folder_path/"inputs.npz") as z:
-                dimension=z["states"].shape[0]
-            if (dimension==n and np.isclose(c["sigma"],sigma,rtol=1e-12,atol=1e-14) and
+            if (len(states)==n and np.isclose(c["sigma"],sigma,rtol=1e-12,atol=1e-14) and
                 np.isclose(c["coupling"],coupling,rtol=1e-12,atol=1e-14) and result["pass"]):
-                found.append(result["input_sha256"])
-        coverage[key]={"pass":bool(found),"input_hashes":found}
-    return {"scope":"ideal single-instrument checks on supplied finite-cutoff states; no all-state bound",
-            "coverage":coverage,"pass":bool(coverage) and all(c["pass"] for c in coverage.values())}
+                matching.append((result,states))
+        coverage[key]={"pass":bool(matching),"input_hashes":[r["input_sha256"] for r,_ in matching]}
+        saved=verify_job(folder,job) if matching else None
+        for name in config["decoders"]:
+            selections=[]
+            if saved is not None:
+                row=next(row for row in saved["rows"] if row["decoder"]==name)
+                filename=f"{name}_finite_ancilla.npz"
+                raw=folder/"jobs"/job["id"]/case_directory(job["point"],n,None,"smooth")/filename
+                for result,states in matching:
+                    provenance=result["config"].get("inputs",{})
+                    if (provenance.get("kind")!="saved_states" or
+                            provenance.get("sha256")!=row["raw_hashes"][filename]):
+                        continue
+                    snapshot_key=provenance.get("key","");columns=provenance.get("columns",[])
+                    if not columns or not (snapshot_key=="score_snapshot" or re.fullmatch(r"snapshot_cycle_\d+",snapshot_key)):
+                        continue
+                    with np.load(raw,allow_pickle=False) as bank:
+                        if snapshot_key not in bank:
+                            continue
+                        bank_states=bank[snapshot_key]
+                        if (any(not isinstance(i,int) or i<0 or i>=bank_states.shape[1] for i in columns) or
+                                not np.array_equal(bank_states[:,columns],states)):
+                            raise ValueError("Independent production inputs differ from their declared raw snapshot")
+                    selections.append({"input_sha256":result["input_sha256"],"raw_sha256":provenance["sha256"],
+                                       "snapshot_key":snapshot_key,"columns":columns,
+                                       "original_trial_ids":provenance.get("original_trial_ids"),
+                                       "cardinal_input_ids":provenance.get("cardinal_input_ids")})
+            production[f'{job["id"]}/{name}']={"pass":bool(selections),"selections":selections}
+    parameters_pass=bool(coverage) and all(c["pass"] for c in coverage.values())
+    production_pass=bool(production) and all(c["pass"] for c in production.values())
+    return {"scope":"ideal single-instrument checks on explicitly selected production snapshots; no all-state or all-cycle bound",
+            "coverage":coverage,"parameter_checks_pass":parameters_pass,
+            "production_state_coverage":production,"production_state_checks_pass":production_pass,
+            "pass":parameters_pass and production_pass}
 
 
 def write_plots(folder,groups):

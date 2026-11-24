@@ -1,0 +1,36 @@
+{
+  "started_utc": "2026-11-24T08:21:53.506526+00:00",
+  "status": "completed",
+  "plan_sha256": "e5d14f3ee97193bcffd19840faef8180459bdada6dde8dc0902e5c47c4e59684",
+  "pid": 22194,
+  "phase": "finished",
+  "threadpools": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 2,
+      "prefix": "libomp",
+      "filepath": "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/lib/python3.13/site-packages/torch/lib/libomp.dylib",
+      "version": null
+    }
+  ],
+  "updated_utc": "2026-11-24T08:24:52.443523+00:00",
+  "elapsed_seconds": 178.93670258299971,
+  "bins": 768,
+  "banks": 54,
+  "state_columns": 3680,
+  "result": {
+    "finished_utc": "2026-11-24T08:24:52.298243+00:00",
+    "classification": "saved-state deterministic rescoring; no trajectories",
+    "plan_sha256": "e5d14f3ee97193bcffd19840faef8180459bdada6dde8dc0902e5c47c4e59684",
+    "report": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/scoring_635d50e4441cc5d1/quality/logical_refinement_b429f66fc41bd6c9.json",
+    "report_sha256": "90a49f3d614f315bc027d6f3ecd72be1bc38c8603366b39a4c33ec14688e1e11",
+    "all_six_files_nine_cycles_present": true,
+    "all_sample_checks_pass": true,
+    "all_cycles_checked": true,
+    "elapsed_seconds": 178.7919721250073,
+    "peak_rss_bytes": 1195196416,
+    "numpy": "2.5.5",
+    "inputs_unchanged": true
+  }
+}

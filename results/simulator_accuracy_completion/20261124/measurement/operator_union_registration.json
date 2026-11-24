@@ -1,0 +1,112 @@
+{
+  "registered_utc": "2026-11-24T08:50:03.461544+00:00",
+  "status": "Planned",
+  "question": "Do independent finite-ancilla SUM Kraus functions agree uniformly on both complete production data-operator spectra?",
+  "fixed": {
+    "data_cutoffs": [
+      4096,
+      5120
+    ],
+    "all_lambda_rows": 9216,
+    "sigma_absolute_q": 0.0886226925452758,
+    "hbar": 1,
+    "L": "sqrt(pi)",
+    "coupling": 1.0,
+    "radius": 160.0,
+    "dy": 0.01,
+    "transfer_row_chunk": 128,
+    "outcome_chunk": 512,
+    "axes": "q directly, p by exact finite-Fourier conjugacy independently controlled against small q/p sesolve",
+    "trajectories": "none; deterministic operator calculation",
+    "training_seeds": "none",
+    "threads": 2
+  },
+  "hypothesis": "At adequate ancillary cutoff the diagonal finite-grid Stinespring difference is below2.5e-4 for every represented data eigenvalue at BOTH cutoffs.",
+  "decision_rule": {
+    "support": "Each final cutoff delta<=2.5e-4,masserrors<=1e-5,normerror<=1e-7,boundary<1e-4,gridnormsensitivity<=1e-6,gridmasssensitivity<=1e-5,and ancillaryrefinementdelta<=2.5e-4.",
+    "contradict": "A converged independent finite-grid calculation exceeds the error criterion.",
+    "inconclusive": "Unconvergedwindow/grid/ancilla, timeout, capacity or missingcoverage; retain failed levels and partial evidence."
+  },
+  "conditional_refinement_ladder": {
+    "ancilla_initial": [
+      8192,
+      12288
+    ],
+    "conditional_third": 16384,
+    "third_trigger": "Onlyif8192\u219212288refinementfails while finalreference-candidate delta<=2.5e-4; same\u03b4threshold and newoutputidentity.",
+    "dy_refinement": 0.005,
+    "dy_trigger": "Onlyif fixedgridnorm/masssensitivitygates fail and within remaining shared wall/RSS budget.",
+    "optional_coupling_1_01": {
+      "status": "Planned",
+      "reason": "Mandatory bothdatacutoffs atgain1.0 takepriority; no inference to1.01."
+    }
+  },
+  "capacity": [
+    {
+      "estimated_scratch_bytes": 2352947072,
+      "estimated_build_bytes": 777985920,
+      "estimated_grid_bytes": 2352947072,
+      "outcome_nodes": 32319,
+      "lambda_rows": 9216,
+      "resident_grid_rows": 5120,
+      "na": 8192,
+      "chunk": 128,
+      "grid_chunk": 512,
+      "transfer_file_bytes": 1207959680,
+      "scope": "Conservative live-array/solver-free work estimate; RSS guard still required"
+    },
+    {
+      "estimated_scratch_bytes": 3292471168,
+      "estimated_build_bytes": 1500454784,
+      "estimated_grid_bytes": 3292471168,
+      "outcome_nodes": 32319,
+      "lambda_rows": 9216,
+      "resident_grid_rows": 5120,
+      "na": 12288,
+      "chunk": 128,
+      "grid_chunk": 512,
+      "transfer_file_bytes": 1811939456,
+      "scope": "Conservative live-array/solver-free work estimate; RSS guard still required"
+    },
+    {
+      "estimated_scratch_bytes": 4231995264,
+      "estimated_build_bytes": 2491359104,
+      "estimated_grid_bytes": 4231995264,
+      "outcome_nodes": 32319,
+      "lambda_rows": 9216,
+      "resident_grid_rows": 5120,
+      "na": 16384,
+      "chunk": 128,
+      "grid_chunk": 512,
+      "transfer_file_bytes": 2415919232,
+      "scope": "Conservative live-array/solver-free work estimate; RSS guard still required"
+    }
+  ],
+  "resources": {
+    "max_total_seconds": 1200,
+    "target_rss_bytes": 4294967296,
+    "sampled_rss_kill_trigger_bytes": 5368709120,
+    "rss_poll_seconds": 2,
+    "rss_limit_scope": "Sampled guard, not kernel hardlimit; transient overshoot between polls is possible.",
+    "required_prelaunch_reclaimable_bytes": 6979321856.0,
+    "observed_available_bytes": 9787162624,
+    "physical_ram_bytes": 34359738368,
+    "local_only": true
+  },
+  "source_sha256": {
+    "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+    "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+    "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+    "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+    "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+  },
+  "orchestrator_sha256": "738ed5546f7af06765092fc737c0c4cf11a3de9bb8bb3c51f5780404f2b332d2",
+  "control_evidence": [
+    "operator_union_gold_tests_final.log",
+    "operator_union_tiny_v2.log",
+    "operator_union_tiny_v2_audit.log",
+    "additional_basis_reference_12288.json",
+    "high_energy_evaluator_reference.json"
+  ],
+  "scope": "Computed exact operator-norm identity on the declared finite grids, evaluated in floating point. Grid/window/ancilla refinements empirical; no rigorous continuum,physical Fockcutoff orhardwarecertificate."
+}

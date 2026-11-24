@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-11-24T14:36:02.075118+00:00",
+  "classification": "Operational correction attempt safely rejected; no scientific failure or rerun",
+  "observation": "Temporary substringrootmatching conservatively counted both readbacklaunchingshellandactualchild as separate1GiBreservations whileauditwasrunning. This coulddelaylaunch,notrelaxmemoryguard.",
+  "attempt_outcome": "Beforeanyguardedit,0scientificsessionsassertionfailedbecauseauthorizedmainhadalreadylaunchedafterreadbackfinished. No source/registration edit wasapplied. Subsequent accidentalduplicatewrapperstartwasrejectedbyexclusiveflock; no duplicate numericalprocess.",
+  "active_session_started_utc": "2026-11-24T14:33:37.094224+00:00",
+  "actual_launch_readback_reservation": {
+    "readback_root_pids": [],
+    "readback_sampled_tree_rss_bytes": 0,
+    "readback_committed_bytes": 0,
+    "readback_remaining_growth_bytes": 0,
+    "density_root_pids": [],
+    "density_tree_pids": [],
+    "density_sampled_tree_rss_bytes": 0,
+    "density_committed_bytes": 0,
+    "density_remaining_growth_bytes": 0,
+    "density_final_release_marker": true,
+    "scope": "Sampled process-tree RSS; full4GiB reservation persists between v7/v8."
+  },
+  "scope": "Allreadbackworkhasfinishedandnofuturequeueexists,sothesubstringoverreservationhasnoeffectonremainingfixedstudy."
+}

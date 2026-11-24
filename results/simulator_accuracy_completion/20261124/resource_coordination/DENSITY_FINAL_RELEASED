@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-11-24T14:35:37.948248+00:00",
+  "scope": "Both4GiBscienceand1GiBread-onlyauditfullyreleased; no futureprocessqueued",
+  "final_receipt": "results/simulator_accuracy_actions/20261124/finite_gate/density_final_release.json",
+  "final_receipt_sha256": "0da450b842319b983355a4f58a16b408b78482f4f2312dad98b895e0f8a296e8",
+  "earlier_heavy_release": {
+    "created_utc": "2026-11-24T14:33:04.238246+00:00",
+    "scope": "Heavy scientific4GiB released; read-only1GiB audit separately accounted by current PID tree",
+    "source_receipt": "results/simulator_accuracy_actions/20261124/finite_gate/density_reservation_release.json",
+    "source_receipt_sha256": "6e085296560661fd6e291d3fbf46e666c124b3b459986d389092e6e5e7fc7189"
+  }
+}

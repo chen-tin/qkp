@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-24T09:52:44.128163+00:00",
+  "scope": "Test portability correction only; no scientific/production auditor source changes",
+  "supersedes": "Unit test fixture loading ignored local plan evidence",
+  "change": "Use explicit portable structural16-cell fixture; actual approved productionplan identity was independently verified in the earlier review and remains sealed by productionaudit.",
+  "test_source_sha256": "63ea26d63f74c4025bf697d9e63b17d478802f20c57743184915b8f83f8544f2",
+  "tests": "9passed; fresh local pytest test_coupled_mechanisms.py",
+  "scientific_sources_changed": false
+}

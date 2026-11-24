@@ -1,0 +1,164 @@
+{
+  "number": 3,
+  "launched_utc": "2026-11-24T10:36:12.219247+00:00",
+  "parent_pid": 16402,
+  "argv": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-u",
+    "-m",
+    "experiments.continue_local_physics",
+    "run",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics",
+    "--max-seconds",
+    "3540",
+    "--threads",
+    "2",
+    "--max-rss-gib",
+    "12",
+    "--reserve-disk-gib",
+    "8",
+    "--no-sync",
+    "--no-shutdown"
+  ],
+  "preflight": {
+    "estimated_peak_bytes": 9730785280,
+    "available_memory_bytes": 10732601344,
+    "remaining_output_bytes": 950796288.0,
+    "available_disk_bytes": 60027633664,
+    "thread_environment_requested": 2,
+    "scope": "Estimates/preflight only; parent also samples child RSS and enforces deadline. Accelerate thread count remains environment-requested."
+  },
+  "resource_reservation": {
+    "observed_utc": "2026-11-24T10:36:11.666198+00:00",
+    "actual_available_memory_bytes": 10732601344,
+    "effective_available_memory_bytes": 10373857280,
+    "extra_headroom_bytes": 536870912,
+    "density_root_pids": [
+      14405
+    ],
+    "density_tree_pids": [
+      14405
+    ],
+    "density_sampled_tree_rss_bytes": 3936223232,
+    "density_committed_bytes": 4294967296,
+    "density_remaining_growth_bytes": 358744064,
+    "density_final_release_marker": false,
+    "scope": "Sampled process-tree RSS; full4GiB reservation persists between v7/v8."
+  },
+  "cumulative_seconds_before_launch": 3742.6873929160065,
+  "parent_work_deadline_seconds": 3600,
+  "scientific_cooperative_deadline_seconds": 3540,
+  "plan_sha256": "aec015d75eb3fa95eba8ef589f9374f4c6a05d97aec3593d21f3ac422fb749d6",
+  "log": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/sessions/session_3.log",
+  "returncode": 0,
+  "parent_wall_seconds": 1976.0986829999893,
+  "external_stop_reason": null,
+  "group_cleanup": null,
+  "external_work_deadline_seconds": 3600,
+  "graceful_cleanup_allowance_seconds": 50,
+  "kill_verification_allowance_seconds": 5.0,
+  "terminal_observed_utc": "2026-11-24T11:09:08.317622+00:00",
+  "terminal_status": {
+    "started_utc": "2026-11-24T10:36:14.063118+00:00",
+    "status": "all_selected_jobs_processed",
+    "jobs": {
+      "dcd0f4d8452e1fb5": {
+        "status": "reused",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/jobs/dcd0f4d8452e1fb5/quality/logical_refinement_52e8e1885c4d2165.json",
+          "sha256": "cedf4d7ae12683e151c2eeabc654c23be7593cb0b18bb15db57603351e9e922d",
+          "pass": true
+        }
+      },
+      "0643eef0fa378878": {
+        "status": "reused",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/jobs/0643eef0fa378878/quality/logical_refinement_c366df9aefde7641.json",
+          "sha256": "a3c412bfa201e2f66c12f5f5798dea1ae18fba2a77501d9da2c534212b992293",
+          "pass": true
+        }
+      },
+      "9e5e12cf5817874b": {
+        "status": "completed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/jobs/9e5e12cf5817874b/quality/logical_refinement_4f3d9fe134d19b45.json",
+          "sha256": "d5451f872430e4957ad8e1393791d87ec89ebfbc835e7e42fb487f65f41c7cd0",
+          "pass": true
+        }
+      },
+      "fbd4d6119d795bd8": {
+        "status": "completed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/remaining_physics/jobs/fbd4d6119d795bd8/quality/logical_refinement_c1c58a2aba5d7c4c.json",
+          "sha256": "01ce6efbb721273eada0d746e2ba95629c0b4513776998a206e4070636f4e857",
+          "pass": true
+        }
+      }
+    },
+    "max_seconds": 3540,
+    "local_only": true,
+    "updated_utc": "2026-11-24T11:09:02.833591+00:00",
+    "active_rss_bytes": 5344067584,
+    "elapsed_seconds": 1974.2909340839979,
+    "finished_utc": "2026-11-24T11:09:08.067872+00:00"
+  },
+  "cumulative_job_summary": {
+    "dcd0f4d8452e1fb5": {
+      "variant": "finite_duration_lumped",
+      "cutoff": 4096,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true,
+      "row_stage_passes": [
+        true,
+        true,
+        true
+      ]
+    },
+    "0643eef0fa378878": {
+      "variant": "finite_duration_lumped",
+      "cutoff": 5120,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true,
+      "row_stage_passes": [
+        true,
+        true,
+        true
+      ]
+    },
+    "9e5e12cf5817874b": {
+      "variant": "passive_cooling",
+      "cutoff": 4096,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true,
+      "row_stage_passes": [
+        false,
+        true,
+        true
+      ]
+    },
+    "fbd4d6119d795bd8": {
+      "variant": "passive_cooling",
+      "cutoff": 5120,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true,
+      "row_stage_passes": [
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "retry_classification": null
+}

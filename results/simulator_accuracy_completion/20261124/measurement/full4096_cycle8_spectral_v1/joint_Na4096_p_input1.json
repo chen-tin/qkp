@@ -1,0 +1,19 @@
+{
+  "config": {
+    "data_cutoff": 4096,
+    "ancilla_cutoff": 4096,
+    "axis": "p",
+    "column": 1,
+    "sigma": 0.0886226925452758,
+    "coupling": 1.0,
+    "circuit_backend": "spectral",
+    "reference_wave_basis": "scaled_generalized_laguerre_v1",
+    "input_state_sha256": "39e35a8bf6102ebde5d66e85d17866845fba0c6f66d55f63f56431771ca8070b",
+    "source_sha256": {
+      "quantum/streaming_measurement.py": "2a29be80f22466028711aa721f905b8708bd2408fbb6c4b21f571c4f0cf3f55d",
+      "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+      "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258"
+    }
+  },
+  "sha256": "ffd96ff39bd212a6048e38005f5d6502543b01d9c3db90485f198ab21d9c770d"
+}

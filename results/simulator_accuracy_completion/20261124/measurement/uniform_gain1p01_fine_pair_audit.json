@@ -1,0 +1,151 @@
+{
+  "completed_utc": "2026-11-24T09:41:22.096440+00:00",
+  "audit_complete": true,
+  "pass": true,
+  "fine_ancilla_pair": [
+    12288,
+    16384
+  ],
+  "data_cutoffs": [
+    4096,
+    5120
+  ],
+  "all_declared_lambdas": 9216,
+  "rows": [
+    {
+      "data_cutoff": 4096,
+      "ancilla_cutoff": 12288,
+      "all_lambdas_tested": 4096,
+      "refinement_from": null,
+      "finite_grid_stinespring_operator_norm": 2.4102336714812787e-12,
+      "finite_grid_channel_trace_norm_upper_bound": 4.8204673429647926e-12,
+      "grid_norm_sensitivity": 1.9249524134913747e-16,
+      "max_reference_mass_error": 1.8385293287792592e-12,
+      "max_candidate_mass_error": 2.919886554764162e-14,
+      "grid_mass_sensitivity": 8.215650382226158e-15,
+      "max_joint_norm_error": 8.282263763703668e-14,
+      "max_ancilla_boundary_mass": 6.169126334193752e-25,
+      "worst_lambda_index": 4092,
+      "secondary_grid_diagnostics": {
+        "max_per_lambda_grid_norm_sensitivity": 2.049166290028776e-15,
+        "max_per_lambda_reference_mass_sensitivity": 8.215650382226158e-15,
+        "max_per_lambda_candidate_mass_sensitivity": 4.6629367034256575e-15
+      },
+      "pass": true
+    },
+    {
+      "data_cutoff": 5120,
+      "ancilla_cutoff": 12288,
+      "all_lambdas_tested": 5120,
+      "refinement_from": null,
+      "finite_grid_stinespring_operator_norm": 2.1869843014168707e-11,
+      "finite_grid_channel_trace_norm_upper_bound": 4.373968602835777e-11,
+      "grid_norm_sensitivity": 1.812455572028526e-16,
+      "max_reference_mass_error": 1.8463008899516353e-12,
+      "max_candidate_mass_error": 2.930988785010413e-14,
+      "grid_mass_sensitivity": 9.992007221626409e-15,
+      "max_joint_norm_error": 8.282263763703668e-14,
+      "max_ancilla_boundary_mass": 3.397612542324813e-17,
+      "worst_lambda_index": 5119,
+      "secondary_grid_diagnostics": {
+        "max_per_lambda_grid_norm_sensitivity": 3.1672859747770215e-15,
+        "max_per_lambda_reference_mass_sensitivity": 9.992007221626409e-15,
+        "max_per_lambda_candidate_mass_sensitivity": 4.440892098500626e-15
+      },
+      "pass": true
+    },
+    {
+      "data_cutoff": 4096,
+      "ancilla_cutoff": 16384,
+      "all_lambdas_tested": 4096,
+      "refinement_from": 12288,
+      "finite_grid_stinespring_operator_norm": 3.5391887604843407e-12,
+      "finite_grid_channel_trace_norm_upper_bound": 7.0783775209718576e-12,
+      "grid_norm_sensitivity": 4.803461911032984e-16,
+      "max_reference_mass_error": 1.779687508474126e-12,
+      "max_candidate_mass_error": 2.919886554764162e-14,
+      "grid_mass_sensitivity": 8.215650382226158e-15,
+      "max_joint_norm_error": 4.951594689828198e-14,
+      "max_ancilla_boundary_mass": 2.538545926776658e-26,
+      "worst_lambda_index": 4095,
+      "ancilla_refinement_operator_norm": 2.195178228858062e-12,
+      "ancilla_refinement_grid_sensitivity": 5.9206336311983265e-18,
+      "secondary_grid_diagnostics": {
+        "max_per_lambda_grid_norm_sensitivity": 1.4333639260709349e-15,
+        "max_per_lambda_reference_mass_sensitivity": 8.215650382226158e-15,
+        "max_per_lambda_candidate_mass_sensitivity": 4.6629367034256575e-15,
+        "max_per_lambda_refinement_grid_norm_sensitivity": 9.504526587888798e-17
+      },
+      "pass": true
+    },
+    {
+      "data_cutoff": 5120,
+      "ancilla_cutoff": 16384,
+      "all_lambdas_tested": 5120,
+      "refinement_from": 12288,
+      "finite_grid_stinespring_operator_norm": 4.7316373358061424e-12,
+      "finite_grid_channel_trace_norm_upper_bound": 9.46327467161655e-12,
+      "grid_norm_sensitivity": 1.5693213382891048e-15,
+      "max_reference_mass_error": 1.786792935831727e-12,
+      "max_candidate_mass_error": 2.930988785010413e-14,
+      "grid_mass_sensitivity": 9.992007221626409e-15,
+      "max_joint_norm_error": 4.929390229335695e-14,
+      "max_ancilla_boundary_mass": 2.54654899796664e-26,
+      "worst_lambda_index": 5119,
+      "ancilla_refinement_operator_norm": 2.186795887212473e-11,
+      "ancilla_refinement_grid_sensitivity": 4.5669774597997914e-18,
+      "secondary_grid_diagnostics": {
+        "max_per_lambda_grid_norm_sensitivity": 2.445935827162448e-15,
+        "max_per_lambda_reference_mass_sensitivity": 9.992007221626409e-15,
+        "max_per_lambda_candidate_mass_sensitivity": 4.440892098500626e-15,
+        "max_per_lambda_refinement_grid_norm_sensitivity": 8.775595805156051e-17
+      },
+      "pass": true
+    }
+  ],
+  "source_result": "results/simulator_accuracy_completion/20261124/measurement/uniform_gain1p01_union_v1/result.json",
+  "source_result_sha256": "368d292074f81c0fda6fffd713f1cfae2bef827f617c99ba636a356407736a94",
+  "source_config": {
+    "data_cutoff": 5120,
+    "data_cutoffs": [
+      4096,
+      5120
+    ],
+    "ancilla_cutoffs": [
+      12288,
+      16384
+    ],
+    "sigma": 0.0886226925452758,
+    "coupling": 1.01,
+    "radius": 160.0,
+    "dy": 0.01,
+    "chunk": 128,
+    "grid_chunk": 512,
+    "max_scratch_bytes": 5368709120,
+    "reference_wave_basis": "scaled_generalized_laguerre_v1",
+    "circuit_backend": "exact_finite_ancilla_spectral_transfer",
+    "source_hashes": {
+      "experiments/validate_instrument_operator.py": "be243fa0cbf2df11f28d67db44a0fa65ea750a3dae013e25d24ffed9fe1d8716",
+      "quantum/instrument_operator_bound.py": "3d5ff0d2f4e227c2b41dd5b6f1840f6d3a1f2cde1e72a35e9c6c8b1db3fa477d",
+      "quantum/spectral_circuit.py": "fb50ceada73a11c174d058227693fcedfd017d33a0a8f763e6ab499380df7258",
+      "quantum/measurement_benchmark.py": "d2d9ddcf51fdbfc3994e4dd497ea30330fb5699e506407a247881e19ddda76c0",
+      "quantum/continuous_ancilla.py": "32a50a47a8ba8bb90686920a7fd0aa9cd0fdeb861d79367c406da234b8299616"
+    },
+    "environment": {
+      "python": "3.13.13",
+      "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+      "device": "CPU",
+      "packages": {
+        "numpy": "2.5.5",
+        "scipy": "1.18.1",
+        "qutip": "5.3.1"
+      }
+    }
+  },
+  "coarse_evidence_retained": true,
+  "coarse_scope": "Any lower-level refinement to8192 remains in the original source record; this audit recomputes BOTH finest levels primarychecks and their mutual refinement, without altering parent evidence.",
+  "classification": "derived sealed-readback numerical audit; no fresh physical evolution",
+  "secondary_diagnostic_status": "Posthoc source-directed per-lambda grid sensitivity diagnostic requested during audit; original registered numerical acceptance criteria unchanged.",
+  "scope": "Uniform EACH declared finite-data operator and discrete outcome grid. Window/grid/ancilla convergence empirical; no physical Fock-cutoff/hardware/rigorous continuum certification.",
+  "audit_script_sha256": "ad6d59fe0d9f34e5dc09b47796fff14857f9155166e1312b00ef6fc81ba69096"
+}

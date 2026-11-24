@@ -1,0 +1,41 @@
+[
+  {
+    "estimated_scratch_bytes": 2352947072,
+    "estimated_build_bytes": 777985920,
+    "estimated_grid_bytes": 2352947072,
+    "outcome_nodes": 32319,
+    "lambda_rows": 9216,
+    "resident_grid_rows": 5120,
+    "na": 8192,
+    "chunk": 128,
+    "grid_chunk": 512,
+    "transfer_file_bytes": 1207959680,
+    "scope": "Conservative live-array/solver-free work estimate; RSS guard still required"
+  },
+  {
+    "estimated_scratch_bytes": 3292471168,
+    "estimated_build_bytes": 1500454784,
+    "estimated_grid_bytes": 3292471168,
+    "outcome_nodes": 32319,
+    "lambda_rows": 9216,
+    "resident_grid_rows": 5120,
+    "na": 12288,
+    "chunk": 128,
+    "grid_chunk": 512,
+    "transfer_file_bytes": 1811939456,
+    "scope": "Conservative live-array/solver-free work estimate; RSS guard still required"
+  },
+  {
+    "estimated_scratch_bytes": 4231995264,
+    "estimated_build_bytes": 2491359104,
+    "estimated_grid_bytes": 4231995264,
+    "outcome_nodes": 32319,
+    "lambda_rows": 9216,
+    "resident_grid_rows": 5120,
+    "na": 16384,
+    "chunk": 128,
+    "grid_chunk": 512,
+    "transfer_file_bytes": 2415919232,
+    "scope": "Conservative live-array/solver-free work estimate; RSS guard still required"
+  }
+]

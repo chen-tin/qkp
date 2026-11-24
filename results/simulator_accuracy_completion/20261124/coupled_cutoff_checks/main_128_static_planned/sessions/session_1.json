@@ -1,0 +1,383 @@
+{
+  "number": 1,
+  "launched_utc": "2026-11-24T14:33:37.094224+00:00",
+  "parent_pid": 33891,
+  "argv": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-u",
+    "-m",
+    "experiments.coupled_cutoff_check",
+    "run",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned",
+    "--approved-plan-sha",
+    "eb995962bfa7e47ca1e360fca56699e4a3c27699323a72a03792338c880a3032",
+    "--max-seconds",
+    "3540",
+    "--threads",
+    "2",
+    "--max-rss-gib",
+    "8",
+    "--reserve-disk-gib",
+    "8",
+    "--no-sync",
+    "--no-shutdown"
+  ],
+  "preflight": {
+    "estimated_peak_bytes": 7465861120,
+    "available_memory_bytes": 8606646272,
+    "remaining_output_bytes": 1780482048.0,
+    "available_disk_bytes": 38979072000,
+    "thread_environment_requested": 2,
+    "scope": "Estimates/preflight only; parent also samples child RSS and enforces deadline. Accelerate thread count remains environment-requested."
+  },
+  "plan_file_sha256": "52c926cb4316a968f77152b4103a361cd31cfce9c600bb1caf32170968137919",
+  "approved_canonical_plan_sha256": "eb995962bfa7e47ca1e360fca56699e4a3c27699323a72a03792338c880a3032",
+  "prior_started_utc": null,
+  "available_memory_before_headroom_bytes": 9680388096,
+  "effective_available_memory_before_headroom_bytes": 9680388096,
+  "density_reservation": {
+    "readback_root_pids": [],
+    "readback_sampled_tree_rss_bytes": 0,
+    "readback_committed_bytes": 0,
+    "readback_remaining_growth_bytes": 0,
+    "density_root_pids": [],
+    "density_tree_pids": [],
+    "density_sampled_tree_rss_bytes": 0,
+    "density_committed_bytes": 0,
+    "density_remaining_growth_bytes": 0,
+    "density_final_release_marker": true,
+    "scope": "Sampled process-tree RSS; full4GiB reservation persists between v7/v8."
+  },
+  "log": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/sessions/session_1.log",
+  "returncode": 0,
+  "parent_wall_seconds": 2350.7845121660066,
+  "external_stop_reason": null,
+  "group_cleanup": null,
+  "external_work_deadline_seconds": 3600,
+  "graceful_cleanup_allowance_seconds": 50,
+  "kill_verification_allowance_seconds": 5.0,
+  "terminal_observed_utc": "2026-11-24T15:12:47.879441+00:00",
+  "terminal_status": {
+    "started_utc": "2026-11-24T14:33:38.425554+00:00",
+    "status": "all_fixed_study_jobs_processed",
+    "jobs": {
+      "3d19c02dc243b798": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/3d19c02dc243b798/quality/logical_refinement_82fa7f1d9d4fb370.json",
+          "sha256": "7165954029d59b3b7fd77b24c72b2de7844fd9d4b839a2289d6431f79b410120",
+          "pass": true
+        }
+      },
+      "c4e26c27fc60933a": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/c4e26c27fc60933a/quality/logical_refinement_f449472ae90ece68.json",
+          "sha256": "931cd716ecf8d70774399c111b05193928e41d623f40324b33b6d31a92291da7",
+          "pass": true
+        }
+      },
+      "b883abbae5ba74ae": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/b883abbae5ba74ae/quality/logical_refinement_95c729dfca40921d.json",
+          "sha256": "bef118f3fc9c12c95a38648252d7de6c1e7f891cc15099e29bbf74f1ec11ece8",
+          "pass": true
+        }
+      },
+      "8dd7ad895c13dff6": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/8dd7ad895c13dff6/quality/logical_refinement_c513b75cccf374ac.json",
+          "sha256": "bd60dcbbe2de218167f44d4ec0f98248b3c7e04ece9650d2e969d17fee3afb54",
+          "pass": true
+        }
+      },
+      "cd07ce8ae47f9fcb": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/cd07ce8ae47f9fcb/quality/logical_refinement_b0afc7c3346f7a2d.json",
+          "sha256": "5846d268ed79149c58e0ea3ac87ab3bb5c23425a4d18963137f8dfc751bf9053",
+          "pass": true
+        }
+      },
+      "374046b315eb9ff4": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/374046b315eb9ff4/quality/logical_refinement_bb52a41578dd911e.json",
+          "sha256": "c5257a0369fad8ebf6618e073aefd73a0666831d4a8407a457a442827bfb172a",
+          "pass": true
+        }
+      },
+      "a5616bfd9131408e": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/a5616bfd9131408e/quality/logical_refinement_0bb2c8645e86e0d8.json",
+          "sha256": "8712cf257c7c9ad88904e9d6255c76f8b6b43ff5c7382050b744d39761859966",
+          "pass": true
+        }
+      },
+      "a31677ca0ca3e2f4": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/a31677ca0ca3e2f4/quality/logical_refinement_99352865c9d0c891.json",
+          "sha256": "4409e06740735914d147aa482ca3d1c5a10c4bd6e5c6fdcce4b719f9b49177fe",
+          "pass": true
+        }
+      },
+      "580de81d92c3d854": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/580de81d92c3d854/quality/logical_refinement_cf25770cac385886.json",
+          "sha256": "df43d48a483ba42f92e9849dbba91452c525f4db9cc7c5093170f21ee328f8a9",
+          "pass": true
+        }
+      },
+      "39789e8d77effe9d": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/39789e8d77effe9d/quality/logical_refinement_d01f47ea582acb28.json",
+          "sha256": "919fcf4ffb68f9763777f5114dd352505988e7132de84a1060e6c4d8989d3a0a",
+          "pass": true
+        }
+      },
+      "0170b68cea15fce1": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/0170b68cea15fce1/quality/logical_refinement_a330f4ea845dde33.json",
+          "sha256": "6d8669a06923ed9450e6a3d6b2a841aedaff1d2a5213f90d6d56a48161d591bc",
+          "pass": true
+        }
+      },
+      "a1999d87dc2a61be": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/a1999d87dc2a61be/quality/logical_refinement_c609182207c5564f.json",
+          "sha256": "bfd2e628cdc4b6f38ac4d85e9d4f68ce75e475e3448645bd5527fc32793562ae",
+          "pass": true
+        }
+      },
+      "41d25538d93cce6b": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/41d25538d93cce6b/quality/logical_refinement_dcfca251e92d4989.json",
+          "sha256": "66996678857e7e454e2cf7f7b711540a26f0a8617e21404a99e6534e913e234a",
+          "pass": true
+        }
+      },
+      "27f4d0d86be964df": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/27f4d0d86be964df/quality/logical_refinement_d04a32f03f266cff.json",
+          "sha256": "0b6e0841d2d82365a2103ebf50471cc90b1626ce0c257a61b256481d39aed14c",
+          "pass": true
+        }
+      },
+      "f84b4a357af68eba": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/f84b4a357af68eba/quality/logical_refinement_8ea4fffbafaaef1d.json",
+          "sha256": "f1e30f104756b230877af7de3b604f169efebd39a4c431e91d97e723056137e8",
+          "pass": true
+        }
+      },
+      "4c1fa64a42a61958": {
+        "status": "processed",
+        "scoring": {
+          "status": "checked",
+          "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/jobs/4c1fa64a42a61958/quality/logical_refinement_01b2b247310b0856.json",
+          "sha256": "6f5fdbab8bb4b37ce1286ed58cbf403f6ef1b01771136df378d471bacc9f9279",
+          "pass": true
+        }
+      }
+    },
+    "study_plan_sha256": "eb995962bfa7e47ca1e360fca56699e4a3c27699323a72a03792338c880a3032",
+    "max_seconds": 3540,
+    "max_rss_bytes": 8589934592,
+    "reserve_disk_bytes": 8589934592,
+    "thread_environment_requested": 2,
+    "thread_scope": "Accelerate count environment-requested, not independently verified.",
+    "updated_utc": "2026-11-24T15:12:42.473054+00:00",
+    "active_rss_bytes": 2652749824,
+    "elapsed_seconds": 2348.6166645409976,
+    "finished_utc": "2026-11-24T15:12:47.048345+00:00"
+  },
+  "cumulative_job_summary": {
+    "3d19c02dc243b798": {
+      "variant": "loss",
+      "sampler": "legacy_mixture",
+      "cutoff": 4096,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "c4e26c27fc60933a": {
+      "variant": "loss",
+      "sampler": "direct_cdf",
+      "cutoff": 4096,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "b883abbae5ba74ae": {
+      "variant": "loss",
+      "sampler": "legacy_mixture",
+      "cutoff": 5120,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "8dd7ad895c13dff6": {
+      "variant": "loss",
+      "sampler": "direct_cdf",
+      "cutoff": 5120,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "cd07ce8ae47f9fcb": {
+      "variant": "loss_dephasing",
+      "sampler": "legacy_mixture",
+      "cutoff": 4096,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "374046b315eb9ff4": {
+      "variant": "loss_dephasing",
+      "sampler": "direct_cdf",
+      "cutoff": 4096,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "a5616bfd9131408e": {
+      "variant": "loss_dephasing",
+      "sampler": "legacy_mixture",
+      "cutoff": 5120,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "a31677ca0ca3e2f4": {
+      "variant": "loss_dephasing",
+      "sampler": "direct_cdf",
+      "cutoff": 5120,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "580de81d92c3d854": {
+      "variant": "coupling_error",
+      "sampler": "legacy_mixture",
+      "cutoff": 4096,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "39789e8d77effe9d": {
+      "variant": "coupling_error",
+      "sampler": "direct_cdf",
+      "cutoff": 4096,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "0170b68cea15fce1": {
+      "variant": "coupling_error",
+      "sampler": "legacy_mixture",
+      "cutoff": 5120,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "a1999d87dc2a61be": {
+      "variant": "coupling_error",
+      "sampler": "direct_cdf",
+      "cutoff": 5120,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "41d25538d93cce6b": {
+      "variant": "control_rotation",
+      "sampler": "legacy_mixture",
+      "cutoff": 4096,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "27f4d0d86be964df": {
+      "variant": "control_rotation",
+      "sampler": "direct_cdf",
+      "cutoff": 4096,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "f84b4a357af68eba": {
+      "variant": "control_rotation",
+      "sampler": "legacy_mixture",
+      "cutoff": 5120,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    },
+    "4c1fa64a42a61958": {
+      "variant": "control_rotation",
+      "sampler": "direct_cdf",
+      "cutoff": 5120,
+      "observations_saved": true,
+      "scoring_status": "checked",
+      "scoring_pass": true,
+      "processed": true
+    }
+  },
+  "postrun_mechanism_audit_command": [
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/.venv/bin/python",
+    "-m",
+    "experiments.audit_coupled_mechanisms",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned",
+    "--output",
+    "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/coupled_cutoff_checks/main_128_static_planned/mechanism_audit.json"
+  ],
+  "postrun_mechanism_audit_execution": {
+    "returncode": 0,
+    "parent_wall_seconds": 6.129238624998834,
+    "external_stop_reason": null,
+    "group_cleanup": null,
+    "external_work_deadline_seconds": 300,
+    "graceful_cleanup_allowance_seconds": 50,
+    "kill_verification_allowance_seconds": 5.0
+  }
+}

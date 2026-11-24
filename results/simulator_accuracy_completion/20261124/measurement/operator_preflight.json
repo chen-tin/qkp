@@ -1,0 +1,24 @@
+[
+  {
+    "estimated_scratch_bytes": 2319392640,
+    "estimated_build_bytes": 2319392640,
+    "estimated_grid_bytes": 1346314112,
+    "outcome_nodes": 32319,
+    "nd": 4096,
+    "na": 8192,
+    "chunk": 128,
+    "transfer_file_bytes": 536871040,
+    "scope": "Conservative live-array/solver-free work estimate; RSS guard still required"
+  },
+  {
+    "estimated_scratch_bytes": 4231995264,
+    "estimated_build_bytes": 4231995264,
+    "estimated_grid_bytes": 1950293888,
+    "outcome_nodes": 32319,
+    "nd": 4096,
+    "na": 12288,
+    "chunk": 128,
+    "transfer_file_bytes": 805306496,
+    "scope": "Conservative live-array/solver-free work estimate; RSS guard still required"
+  }
+]

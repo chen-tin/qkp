@@ -57,6 +57,8 @@ class FiniteGate:
         return joint
 
     def measure(self, data, axis, quantile, seed):
+        if not np.isfinite(quantile) or not 0 < quantile < 1:
+            raise ValueError("Homodyne quantile must be finite and strictly inside (0, 1)")
         joint = self.evolve(data, axis, seed)
         norm_error = float(abs(np.vdot(joint, joint).real-1))
         ancilla_edge = float((np.abs(joint[:, -max(4, self.na//10):])**2).sum())

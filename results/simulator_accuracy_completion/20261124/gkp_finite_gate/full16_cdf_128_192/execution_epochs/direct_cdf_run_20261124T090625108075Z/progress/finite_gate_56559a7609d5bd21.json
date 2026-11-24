@@ -1,0 +1,26 @@
+{
+  "suite": "finite_gate",
+  "job_id": "56559a7609d5bd21",
+  "started": "2026-11-24T09:06:26.297623+00:00",
+  "pid": 64997,
+  "orchestrator_sha256": "9d765e4c6ede107016f0e9280084ad0650f22001f6d7e19454dc50073829e7f2",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "reused_observations": true,
+  "observation_step_seconds": 0.0007884160004323348,
+  "result_sha256": "f4aefa304c8d5a0df4a59856e5ba9aa9fa28c3a1cdea6c53643ae94bbdde262e",
+  "reused_refinement": false,
+  "status": "completed",
+  "finished": "2026-11-24T09:06:27.310052+00:00",
+  "refinement_step_seconds": 1.0111989169963636,
+  "sample_checks_pass": true,
+  "scoring": {
+    "status": "checked",
+    "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulator_accuracy_completion/20261124/gkp_finite_gate/full16_cdf_128_192/plans/finite_gate/jobs/56559a7609d5bd21/quality/logical_refinement_55337c87ea3bfd38.json",
+    "sha256": "1c3825e4994f15d3fe09f68b3aa89331591971718f6dea7c2f6e20793a0572ea",
+    "pass": true
+  }
+}

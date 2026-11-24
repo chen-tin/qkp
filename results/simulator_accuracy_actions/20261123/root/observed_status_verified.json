@@ -1,0 +1,17 @@
+{
+  "observed_status": {
+    "checked_utc": "2026-11-24T07:30:19.681548+00:00",
+    "instance_state": "stopped",
+    "effective_status": "interrupted_instance_stopped",
+    "archived_status": "running_production_sweeps",
+    "archived_updated": "2026-11-21T00:31:45.394957+00:00",
+    "heartbeat_age_seconds": 284314.286591,
+    "heartbeat_stale": true,
+    "stale_after_seconds": 180,
+    "scope": "Local EC2/heartbeat observation; archived metrics are unchanged. A recent heartbeat is not a direct process inspection."
+  },
+  "dashboard": "http://127.0.0.1:8765/results/ec2_runs/production_20261119/",
+  "http_status": 200,
+  "original_evidence_hashes_verified": 45,
+  "server_note": "Initial HTTP access found prior server stopped; restarted standard loopback-only server and verified full response."
+}

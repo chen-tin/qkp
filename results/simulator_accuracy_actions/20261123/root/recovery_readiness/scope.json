@@ -1,0 +1,5 @@
+{
+  "checked_utc": "2026-11-24T07:27:32.151601+00:00",
+  "scope": "Read-only recovery preflight; volume exists but data inaccessible while instance stopped. No restart, detach, snapshot or other AWS mutations.",
+  "next_step": "Controlled recovery session must prevent automatic scientific service continuation, verify raw seals, upload missing job to S3, then stop; historical PIDs must not be reused."
+}

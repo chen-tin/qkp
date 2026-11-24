@@ -1,0 +1,22 @@
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python ops/ec2/parallel_worker.py run --root results/simulation_quality_infrastructure/parallelism_pilot_20261120/control --run-id parallelism-control --presets smoke --workers 1 --threads 1 --no-sync --no-shutdown
+
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python ops/ec2/parallel_worker.py run --root results/simulation_quality_infrastructure/parallelism_pilot_20261120/parallel --run-id parallelism-parallel --presets smoke --workers 2 --threads 1 --no-sync --no-shutdown
+
+# Resume (same parallel command)
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python ops/ec2/parallel_worker.py run --root results/simulation_quality_infrastructure/parallelism_pilot_20261120/parallel --run-id parallelism-parallel --presets smoke --workers 2 --threads 1 --no-sync --no-shutdown
+
+# Targeted scheduler checks
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python -m pytest -q tests/test_ec2_parallel.py
+
+# Audit and resume verification
+PYTHONPATH=. OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python results/simulation_quality_infrastructure/parallelism_pilot_20261120/audit.py
+
+# Initial plan creation, before both worker arms
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python - <<'PY'
+from pathlib import Path
+from experiments.quality_benchmark import build_plan, write_plan
+root = Path('results/simulation_quality_infrastructure/parallelism_pilot_20261120')
+plan = build_plan('smoke')
+for arm in ('control', 'parallel'):
+    write_plan(plan, root / arm / 'plans' / 'smoke')
+PY

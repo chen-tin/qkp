@@ -1,0 +1,26 @@
+{
+  "suite": "smoke",
+  "job_id": "4c826c547a2c2d5e",
+  "started": "2026-11-20T22:42:29.243140+00:00",
+  "pid": 9774,
+  "orchestrator_sha256": "c37b7fc4d1e92e9dd52cf596a1938f3c73acaf3edec14239b4a39abce2877566",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "reused_observations": false,
+  "observation_step_seconds": 0.015430540996021591,
+  "result_sha256": "b45b60eead60be3c96543ec7de85fd6799963ab3956747fa4719bb173a14ea10",
+  "reused_refinement": false,
+  "status": "completed",
+  "finished": "2026-11-20T22:42:29.363158+00:00",
+  "refinement_step_seconds": 0.10399162500107195,
+  "sample_checks_pass": true,
+  "scoring": {
+    "status": "checked",
+    "path": "/Users/christopherbabayan/programs/QUANTUM/qkp/results/simulation_quality_infrastructure/parallelism_pilot_20261120/parallel/plans/smoke/jobs/4c826c547a2c2d5e/quality/logical_refinement_f4413cdc2d1642e9.json",
+    "sha256": "be810cff8b589bd9e831e6992e64724f3557f9781fe3842ac0b4efd4063b8421",
+    "pass": true
+  }
+}
